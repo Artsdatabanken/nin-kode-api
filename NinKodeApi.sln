@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.WebApi", "NinKode.WebApi\NinKode.WebApi.csproj", "{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.Common", "NinKode.Common\NinKode.Common.csproj", "{5FEC9411-96C6-4624-B822-97424F616CC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEC9411-96C6-4624-B822-97424F616CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEC9411-96C6-4624-B822-97424F616CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEC9411-96C6-4624-B822-97424F616CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEC9411-96C6-4624-B822-97424F616CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E11C2B2-96F2-4E82-BA4D-7D89391ADD01}
+	EndGlobalSection
+EndGlobal
