@@ -5,7 +5,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     using NinKode.Common.Models.Variety;
-    using NinKode.Database.Service.v2b;
+    using NinKode.Database.Service.v21;
 
     [ApiController]
     [Route("v2.1/variasjon")]
@@ -14,11 +14,11 @@
         private const string DatabaseUrl = "http://localhost:8080/";
         private const string DefaultDatabase = "SOSINiNv2.1";
 
-        private readonly VarietyV2BService _varietyService;
+        private readonly VarietyV21Service _varietyService;
 
         public VarietyV21Controller()
         {
-            _varietyService = new VarietyV2BService(DatabaseUrl, DefaultDatabase);
+            _varietyService = new VarietyV21Service(DatabaseUrl, DefaultDatabase);
         }
 
         [HttpGet]
