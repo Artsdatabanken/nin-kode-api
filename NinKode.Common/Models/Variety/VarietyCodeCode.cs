@@ -6,9 +6,10 @@
     public class VarietyCodeCode
     {
         [JsonPropertyName("Id")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string Id { get; set; }
 
         [JsonPropertyName("Definisjon")]
-        public Uri Definition { get; set; }
+        public string Definition { get; set; }
     }
 }

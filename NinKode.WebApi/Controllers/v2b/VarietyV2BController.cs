@@ -1,6 +1,7 @@
 ﻿namespace NinKode.WebApi.Controllers.v2b
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
     using System.Text.Json;
@@ -8,62 +9,46 @@
     using Microsoft.AspNetCore.Mvc;
 
     using NinKode.Common.Models.Variety;
+    using NinKode.Database.Service.v2b;
 
     [ApiController]
     [Route("v2b/variasjon")]
     public class VarietyV2BController : ControllerBase
     {
+        private const string DatabaseUrl = "http://localhost:8080/";
+        private const string DefaultDatabase = "SOSINiNv2.0b";
+
+        private readonly VarietyV2BService _varietyService;
+
+        public VarietyV2BController()
+        {
+            _varietyService = new VarietyV2BService(DatabaseUrl, DefaultDatabase);
+        }
+
         [HttpGet]
         [Route("allekoder")]
-        public async Task<VarietyAllCodes[]> GetAll()
+        public IEnumerable<VarietyAllCodes> GetAll()
         {
-            var client = new HttpClient();
-            var uriBuilder = new UriBuilder("https://webtjenester.artsdatabanken.no/NiN/v2b/variasjon/Allekoder");
-            var response = await client.GetAsync(uriBuilder.Uri);
-            response.EnsureSuccessStatusCode();
-
-            return JsonSerializer.Deserialize<VarietyAllCodes[]>(await response.Content.ReadAsStringAsync());
+            var result = _varietyService.GetAll(GetHostPath());
+            foreach (var variety in result)
+            {
+                yield return variety;
+            }
         }
 
         [HttpGet]
         [Route("hentkode/{id}")]
-        public async Task<VarietyCode> GetCode(string id)
+        public VarietyCode GetCode(string id)
         {
-            if (string.IsNullOrEmpty(id)) return null;
-            var client = new HttpClient();
-            var uriBuilder = new UriBuilder("https://webtjenester.artsdatabanken.no/NiN/v2b/variasjon/Allekoder");
-            var response = await client.GetAsync(uriBuilder.Uri);
-            response.EnsureSuccessStatusCode();
-
-            var allCodes = JsonSerializer.Deserialize<VarietyAllCodes[]>(await response.Content.ReadAsStringAsync());
-            var code = GetVariasjonCodeById(allCodes, id);
-
-            if (code == null) return null;
-
-            uriBuilder = new UriBuilder(code.Definition);
-            response = await client.GetAsync(uriBuilder.Uri);
-            response.EnsureSuccessStatusCode();
-
-            return JsonSerializer.Deserialize<VarietyCode>(await response.Content.ReadAsStringAsync()); //.ToJson();
+            return _varietyService.GetByKode(id, GetHostPath());
         }
 
-        private static VarietyAllCodesCode GetVariasjonCodeById(VarietyAllCodes[] codes, string id)
+        private string GetHostPath()
         {
-            foreach (var code in codes)
-            {
-                if (code.Code != null && code.Code.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) return code.Code;
-                if (!string.IsNullOrEmpty(code.OverordnetKode.Id) && code.OverordnetKode.Id.Equals(id, StringComparison.OrdinalIgnoreCase)) return code.OverordnetKode;
-                if (code.UnderordnetKoder == null) continue;
-                var internalCode = GetVariasjonCodeById(code.UnderordnetKoder, id);
-                if (internalCode != null) return internalCode;
-            }
-
-            return null;
-        }
-
-        private static VarietyAllCodesCode GetVariasjonCodeById(VarietyAllCodesCode[] codes, string id)
-        {
-            return codes.FirstOrDefault(code => code.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
+            var path = Request.Path.Value;
+            path = path.Substring(0, path.LastIndexOf("/", StringComparison.Ordinal) + 1);
+            var protocol = Request.IsHttps ? "s" : "";
+            return $"http{protocol}://{Request.Host}{path}";
         }
     }
 }
