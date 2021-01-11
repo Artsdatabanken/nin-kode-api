@@ -1,6 +1,5 @@
 ﻿namespace NinKode.Common.Models.Variety
 {
-    using System;
     using System.Text.Json.Serialization;
 
     public class VarietyCodeCode

@@ -23,21 +23,4 @@
     {
         public static VarietyCode FromJson(string json) => JsonSerializer.Deserialize<VarietyCode>(json);
     }
-
-    //public static class Serialize
-    //{
-    //    public static string ToJson(this VarietyCode self) => JsonConvert.SerializeObject(self);
-    //}
-
-    //internal static class Converter
-    //{
-    //    public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-    //    {
-    //        MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-    //        DateParseHandling = DateParseHandling.None,
-    //        Converters = {
-    //            new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-    //        },
-    //    };
-    //}
 }
