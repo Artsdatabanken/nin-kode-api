@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.WebApi", "NinKode.WebApi\NinKode.WebApi.csproj", "{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.WebApi", "NinKode.WebApi\NinKode.WebApi.csproj", "{9FCE96E9-CF80-4C64-B30E-AEE9A3982C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.Common", "NinKode.Common\NinKode.Common.csproj", "{5FEC9411-96C6-4624-B822-97424F616CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.Common", "NinKode.Common\NinKode.Common.csproj", "{5FEC9411-96C6-4624-B822-97424F616CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.Database", "NinKode.Database\NinKode.Database.csproj", "{D4331E41-18F9-480C-9D1D-88682344A463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5FEC9411-96C6-4624-B822-97424F616CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FEC9411-96C6-4624-B822-97424F616CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FEC9411-96C6-4624-B822-97424F616CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4331E41-18F9-480C-9D1D-88682344A463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4331E41-18F9-480C-9D1D-88682344A463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4331E41-18F9-480C-9D1D-88682344A463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4331E41-18F9-480C-9D1D-88682344A463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

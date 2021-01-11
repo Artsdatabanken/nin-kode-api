@@ -11,7 +11,11 @@
         public string Navn { get; set; }
 
         [JsonPropertyName("Kategori")]
-        public Category Kategori { get; set; }
+        public string Kategori { get; set; }
+
+        [JsonIgnore]
+        [JsonPropertyName("Kategori_")]
+        public Category Kategori_ { get; set; }
 
         [JsonPropertyName("Kode")]
         public AllCodesCode Kode { get; set; }
@@ -30,18 +34,24 @@
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Uri Beskrivelse { get; set; }
 
-        [JsonPropertyName("Miljøvariabler")]
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public Environment[] Miljovariabler { get; set; }
-
         [JsonPropertyName("Kartleggingsenheter")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Dictionary<string, AllCodesCode[]> Kartleggingsenheter { get; set; }
+
+        [JsonPropertyName("Miljovariabler")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Environment[] Miljovariabler { get; set; }
     }
 
-    public enum Category { Grunntype, Hovedtype, Hovedtypegruppe, Kartleggingsenhet, Naturtypenivaa };
+    public enum Category {
+        Grunntype,
+        Hovedtype,
+        Hovedtypegruppe,
+        Kartleggingsenhet,
+        Naturtypenivaa
+    }
 
-    public enum TypeEnum { Miljøvariabel };
+    public enum TypeEnum { Miljøvariabel }
 
     public partial class Codes
     {
@@ -54,8 +64,9 @@
         public static string ToJson(this Codes[] self) => JsonSerializer.Serialize(self);
     }
 
-    internal static class Converter
+    internal class Converter : JsonConverterFactory
     {
+
         //public static readonly JsonSerializerOptions Settings = new JsonSerializerOptions
         //{
         //    MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
@@ -66,6 +77,15 @@
         //        new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
         //    },
         //};
+        public override bool CanConvert(Type typeToConvert)
+        {
+            return true;
+        }
+
+        public override JsonConverter? CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     //internal class CategoryConverter : JsonConverter

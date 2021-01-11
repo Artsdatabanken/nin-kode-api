@@ -11,7 +11,11 @@
         public string Kode { get; set; }
 
         [JsonPropertyName("Type")]
-        public TypeEnum Type { get; set; }
+        public string Type { get; set; }
+
+        [JsonIgnore]
+        [JsonPropertyName("Type_")]
+        public TypeEnum Type_ { get; set; }
 
         [JsonPropertyName("Trinn")]
         public Step[] Trinn { get; set; }
