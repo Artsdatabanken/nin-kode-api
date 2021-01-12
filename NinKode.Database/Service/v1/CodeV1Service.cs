@@ -4,8 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using NinKode.Common.Models.Code;
-    using NinKode.Database.Model.v2;
-    using NinKode.Database.Model.v2b;
+    using NinKode.Database.Model.v1;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
@@ -27,7 +26,7 @@
         {
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<NaturTypeV2>("NaturTypes/ByKode");
+                var query = session.Query<NaturTypeV1>("NaturTypes/ByKode");
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -46,7 +45,7 @@
 
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<NaturTypeV2>("NaturTypes/ByKode").Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                var query = session.Query<NaturTypeV1>("NaturTypes/ByKode").Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -61,7 +60,7 @@
 
         #region private methods
 
-        private static Codes CreateCodesByNaturtype(NaturTypeV2 naturType, string host)
+        private static Codes CreateCodesByNaturtype(NaturTypeV1 naturType, string host)
         {
             if (naturType == null) return null;
 
@@ -80,9 +79,7 @@
                     Id = naturType.OverordnetKode,
                     Definition = !string.IsNullOrEmpty(naturType.OverordnetKode) ? $"{host}{naturType.OverordnetKode.Replace(" ", "_")}" : ""
                 },
-                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, host).ToArray(),
-                //Kartleggingsenheter = naturType.Kartleggingsenheter == null ? null : CreateKartleggingsenheter(naturType.Kartleggingsenheter, host),
-                //Miljovariabler = naturType.Trinn == null ? null : CreateTrinn(naturType.Trinn).ToArray()
+                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, host).ToArray()
             };
         }
 
@@ -98,40 +95,6 @@
                     Definition = $"{host}{kode.Replace(" ", "_")}"
                 };
             }
-        }
-
-        private static Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(IDictionary<string, string[]> kartleggingsenheter, string host)
-        {
-            if (kartleggingsenheter == null) return null;
-
-            var result = new Dictionary<string, AllCodesCode[]>();
-
-            foreach (var kartlegging in kartleggingsenheter)
-            {
-                result.Add(kartlegging.Key, CreateCodesByNaturtype(kartlegging.Value, host).ToArray());
-            }
-
-            return result;
-        }
-
-        private static IEnumerable<EnvironmentVariable> CreateTrinn(IEnumerable<TrinnV2B> naturTypeTrinn)
-        {
-            return naturTypeTrinn.Select(x => new EnvironmentVariable
-            {
-                Kode = x.Kode,
-                Navn = x.Navn,
-                Type = x.Type,
-                Trinn = x.Trinn == null ? null : CreateTrinn(x.Trinn).ToArray()
-            });
-        }
-
-        private static IEnumerable<Step> CreateTrinn(IEnumerable<SubTrinnV2B> naturTypeTrinn)
-        {
-            return naturTypeTrinn.Select(x => new Step
-            {
-                Kode = x.Kode,
-                Navn = x.Navn
-            });
         }
 
         #endregion
