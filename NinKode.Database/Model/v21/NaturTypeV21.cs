@@ -12,7 +12,7 @@
         public string OverordnetKode { get; set; }
         public string[] UnderordnetKoder { get; set; }
         public string[] GrunntypeKoder { get; set; }
-        public IList<NaturTypeV21> Trinn { get; set; }
+        public TrinnV21[] Trinn { get; set; }
         public IDictionary<string, string[]> Kartleggingsenheter { get; set; }
         public string Malestokk { get; set; }
     }
