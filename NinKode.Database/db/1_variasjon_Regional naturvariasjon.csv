@@ -1,0 +1,28 @@
+col_0;col_1;Kode;K/T;Sammensatt_kode;Klasse/trinnbetegnelse;NiN 1;Alternative betegnelser etc.;Tags
+6;Regionale komplekse miljøvariable;HF;A;6HF_A;historisk forbindelse med Ancylus-sjøen;-;;Trinn
+6;Regionale komplekse miljøvariable;HF;B;6HF_B;uten historisk forbindelse med Ancylus-sjøen;-;;Trinn
+6;Regionale komplekse miljøvariable;KE;1;6KE_1;åpen kystlinje;2-5;;Trinn
+6;Regionale komplekse miljøvariable;KE;2;6KE_2;Skagerrak;1;;Trinn
+6;Regionale komplekse miljøvariable;KS;1;6KS_1;Nordsjøen og Skagerrak;1-2;;Trinn
+6;Regionale komplekse miljøvariable;KS;2;6KS_2;Norskehavet;3;inkludert Jan Mayen;Trinn
+6;Regionale komplekse miljøvariable;KS;3;6KS_3;Barentshavet sør;4;;Trinn
+6;Regionale komplekse miljøvariable;KS;4;6KS_4;Grønlandshavet;5;Spitsbergen vest, inkludert Bjørnøya;Trinn
+6;Regionale komplekse miljøvariable;KS;5;6KS_5;Barentshavet nord og Polhavet;5;Svalbard øst og nord;Trinn
+6;Regionale komplekse miljøvariable;SE;1;6SE_1;sterkt oseanisk seksjon (O3);1;;Trinn
+6;Regionale komplekse miljøvariable;SE;2;6SE_2;klart oseanisk seksjon (O2);2;;Trinn
+6;Regionale komplekse miljøvariable;SE;3;6SE_3;svakt oseanisk seksjon (O1);3;;Trinn
+6;Regionale komplekse miljøvariable;SE;4;6SE_4;overgangsseksjon (OC);4;;Trinn
+6;Regionale komplekse miljøvariable;SE;5;6SE_5;svakt kontinental seksjon (C1);5;;Trinn
+6;Regionale komplekse miljøvariable;SE;6;6SE_6;klart kontinental seksjon (C2);6;;Trinn
+6;Regionale komplekse miljøvariable;SO;1;6SO_1;boreonemoral sone (BN);A1;;Trinn
+6;Regionale komplekse miljøvariable;SO;2;6SO_2;sørboreal sone (SB);A2;;Trinn
+6;Regionale komplekse miljøvariable;SO;3;6SO_3;mellomboreal sone (MB);A3;;Trinn
+6;Regionale komplekse miljøvariable;SO;4;6SO_4;nordboreal sone (NB);A4;;Trinn
+6;Regionale komplekse miljøvariable;SO;5;6SO_5;lavalpin sone (LA);A5;;Trinn
+6;Regionale komplekse miljøvariable;SO;6;6SO_6;mellomalpin sone (MA);A6;;Trinn
+6;Regionale komplekse miljøvariable;SO;7;6SO_7;høgalpin sone (HA);A7;;Trinn
+6;Regionale komplekse miljøvariable;SX;1;6SX_1;arktisk kratt-tundrasone;B1;ASHTZ;Trinn
+6;Regionale komplekse miljøvariable;SX;2;6SX_2;sørarktisk tundrasone;B2;SATZ;Trinn
+6;Regionale komplekse miljøvariable;SX;3;6SX_3;mellomarktisk tundrasone;B3;MATZ;Trinn
+6;Regionale komplekse miljøvariable;SX;4;6SX_4;nordarktisk tundrasone;B4;NATZ;Trinn
+6;Regionale komplekse miljøvariable;SX;5;6SX_5;nordarktisk polarørkensone;B5;APDZ;Trinn

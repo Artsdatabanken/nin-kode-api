@@ -1,0 +1,283 @@
+col_0;col_1;Nivå 1 kode;col_3;Nivå 2 kode;col_5;Nivå 3 kode;Nivå2_kode;Navn;Trinn;Sammensattt kode;Verdi;Type;RS;Nivå 2 kode ny;Tags
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;X;;;5AB_X;;;5AB_X;ikke registerert;;;5AB_X;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier;0;Arealbrukskategorier - kategorisert;DO;5AB-AB-0;Driftsområder;;5AB-AB-0_DO;Til stede;;;5AB-0-DO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier;0;Arealbrukskategorier - kategorisert;FO;5AB-AB-0;Fritidsområder;;5AB-AB-0_FO;Til stede;;;5AB-0-FO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier;0;Arealbrukskategorier - kategorisert;KO;5AB-AB-0;Kulturområder;;5AB-AB-0_KO;Til stede;;;5AB-0-KO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier;0;Arealbrukskategorier - kategorisert;TO;5AB-AB-0;Transportområder;;5AB-AB-0_TO;Til stede;;;5AB-0-TO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;FY;5AB-DO-FY;Fyllplass;0;5AB-DO-FY_0;ikke registerert;B;6;5AB-DO-FY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;FY;5AB-DO-FY;Fyllplass;1;5AB-DO-FY_1;ikke registerert;B;6;5AB-DO-FY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;GR;5AB-DO-GR;Grustak;0;5AB-DO-GR_0;ikke registerert;B;5;5AB-DO-GR;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;GR;5AB-DO-GR;Grustak;1;5AB-DO-GR_1;Til stede;B;5;5AB-DO-GR;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;GU;5AB-DO-GU;Gruve;0;5AB-DO-GU_0;Ikke til stede;B;4;5AB-DO-GU;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;GU;5AB-DO-GU;Gruve;1;5AB-DO-GU_1;Til stede;B;4;5AB-DO-GU;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;IO;5AB-DO-IO;Industriområde;0;5AB-DO-IO_0;Ikke til stede;B;8;5AB-DO-IO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;IO;5AB-DO-IO;Industriområde;1;5AB-DO-IO_1;Til stede;B;8;5AB-DO-IO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;LT;5AB-DO-LT;Leirtak;0;5AB-DO-LT_0;Ikke til stede;B;3;5AB-DO-LT;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;LT;5AB-DO-LT;Leirtak;1;5AB-DO-LT_1;Til stede;B;3;5AB-DO-LT;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;SB;5AB-DO-SB;Steinbrudd;0;5AB-DO-SB_0;Ikke til stede;B;8;5AB-DO-SB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;SB;5AB-DO-SB;Steinbrudd;1;5AB-DO-SB_1;Til stede;B;8;5AB-DO-SB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;ST;5AB-DO-ST;Steintipp;0;5AB-DO-ST_0;Ikke til stede;B;5;5AB-DO-ST;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;ST;5AB-DO-ST;Steintipp;1;5AB-DO-ST_1;Til stede;B;5;5AB-DO-ST;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;TT;5AB-DO-TT;Torvtak;0;5AB-DO-TT_0;Ikke til stede;B;7;5AB-DO-TT;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;TT;5AB-DO-TT;Torvtak;1;5AB-DO-TT_1;Til stede;B;7;5AB-DO-TT;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;TØ;5AB-DO-TØ;Tømmervelte;0;5AB-DO-TØ_0;Ikke til stede;B;4;5AB-DO-TØ;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;TØ;5AB-DO-TØ;Tømmervelte;1;5AB-DO-TØ_1;Til stede;B;4;5AB-DO-TØ;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;XD;5AB-DO-XD;Annet driftsområde;0;5AB-DO-XD_0;Ikke til stede;B;6;5AB-DO-XD;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;DO;Driftsområder;XD;5AB-DO-XD;Annet driftsområde;1;5AB-DO-XD_1;Til stede;B;6;5AB-DO-XD;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;AL;5AB-FO-AL;Alpinbakke;0;5AB-FO-AL_0;Ikke til stede;B;9;5AB-FO-AL;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;AL;5AB-FO-AL;Alpinbakke;1;5AB-FO-AL_1;Til stede;B;9;5AB-FO-AL;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;CA;5AB-FO-CA;Campingplass;0;5AB-FO-CA_0;Ikke til stede;B;8;5AB-FO-CA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;CA;5AB-FO-CA;Campingplass;1;5AB-FO-CA_1;Til stede;B;8;5AB-FO-CA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;GO;5AB-FO-GO;Golfbane;0;5AB-FO-GO_0;Ikke til stede;B;10;5AB-FO-GO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;GO;5AB-FO-GO;Golfbane;1;5AB-FO-GO_1;Til stede;B;10;5AB-FO-GO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;LE;5AB-FO-LE;Lekeplass;0;5AB-FO-LE_0;Ikke til stede;B;4;5AB-FO-LE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;LE;5AB-FO-LE;Lekeplass;1;5AB-FO-LE_1;Til stede;B;4;5AB-FO-LE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;RA;5AB-FO-RA;Rasteplass;0;5AB-FO-RA_0;Ikke til stede;B;3;5AB-FO-RA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;RA;5AB-FO-RA;Rasteplass;1;5AB-FO-RA_1;Til stede;B;3;5AB-FO-RA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SB;5AB-FO-SB;Skytebane;0;5AB-FO-SB_0;Ikke til stede;B;6;5AB-FO-SB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SB;5AB-FO-SB;Skytebane;1;5AB-FO-SB_1;Til stede;B;6;5AB-FO-SB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SF;5AB-FO-SF;Skytefelt;0;5AB-FO-SF_0;Ikke til stede;B;12;5AB-FO-SF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SF;5AB-FO-SF;Skytefelt;1;5AB-FO-SF_1;Til stede;B;12;5AB-FO-SF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SI;5AB-FO-SI;Sports/idrettsplass;0;5AB-FO-SI_0;Ikke til stede;B;6;5AB-FO-SI;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;SI;5AB-FO-SI;Sports/idrettsplass;1;5AB-FO-SI_1;Til stede;B;6;5AB-FO-SI;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;XF;5AB-FO-XF;Annet fritidsområde;0;5AB-FO-XF_0;Ikke til stede;B;6;5AB-FO-XF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;FO;Fritidsområder;XF;5AB-FO-XF;Annet fritidsområde;1;5AB-FO-XF_1;Til stede;B;6;5AB-FO-XF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;BY;5AB-KO-BY;Bymessig bebyggelse;0;5AB-KO-BY_0;Ikke til stede;B;12;5AB-KO-BY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;BY;5AB-KO-BY;Bymessig bebyggelse;1;5AB-KO-BY_1;Til stede;B;12;5AB-KO-BY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;DM;5AB-KO-DM;Dyrket mark;0;5AB-KO-DM_0;Ikke til stede;B;8;5AB-KO-DM;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;DM;5AB-KO-DM;Dyrket mark;1;5AB-KO-DM_1;Til stede;B;8;5AB-KO-DM;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;FH;5AB-KO-FH;Frukthage;0;5AB-KO-FH_0;Ikke til stede;B;6;5AB-KO-FH;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;FH;5AB-KO-FH;Frukthage;1;5AB-KO-FH_1;Til stede;B;6;5AB-KO-FH;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;GP;5AB-KO-GP;Gravplass;0;5AB-KO-GP_0;Ikke til stede;B;5;5AB-KO-GP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;GP;5AB-KO-GP;Gravplass;1;5AB-KO-GP_1;Til stede;B;5;5AB-KO-GP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;GÅ;5AB-KO-GÅ;Gårdstun;0;5AB-KO-GÅ_0;Ikke til stede;B;4;5AB-KO-GÅ;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;GÅ;5AB-KO-GÅ;Gårdstun;1;5AB-KO-GÅ_1;Til stede;B;4;5AB-KO-GÅ;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;HY;5AB-KO-HY;Hyttefelt;0;5AB-KO-HY_0;Ikke til stede;B;7;5AB-KO-HY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;HY;5AB-KO-HY;Hyttefelt;1;5AB-KO-HY_1;Til stede;B;7;5AB-KO-HY;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;LO;5AB-KO-LO;Landbruksområde (som ikke faller inn under noen av kategoriene ‘dyrket mark’, ‘frukthage’ eller ‘setervoll’;0;5AB-KO-LO_0;Ikke til stede;B;6;5AB-KO-LO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;LO;5AB-KO-LO;Landbruksområde (som ikke faller inn under noen av kategoriene ‘dyrket mark’, ‘frukthage’ eller ‘setervoll’;1;5AB-KO-LO_1;Til stede;B;6;5AB-KO-LO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;PA;5AB-KO-PA;Park;0;5AB-KO-PA_0;Ikke til stede;B;8;5AB-KO-PA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;PA;5AB-KO-PA;Park;1;5AB-KO-PA_1;Til stede;B;8;5AB-KO-PA;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;SE;5AB-KO-SE;Setervoll;0;5AB-KO-SE_0;Ikke til stede;B;5;5AB-KO-SE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;SE;5AB-KO-SE;Setervoll;1;5AB-KO-SE_1;Til stede;B;5;5AB-KO-SE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;TE;5AB-KO-TE;Tettbebyggelse (som ikke faller inn under definisjonen av bymessig bebyggelse);0;5AB-KO-TE_0;Ikke til stede;B;8;5AB-KO-TE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;TE;5AB-KO-TE;Tettbebyggelse (som ikke faller inn under definisjonen av bymessig bebyggelse);1;5AB-KO-TE_1;Til stede;B;8;5AB-KO-TE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;XB;5AB-KO-XB;Annet bebygd område/kulturområde;0;5AB-KO-XB_0;Ikke til stede;B;6;5AB-KO-XB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;KO;Kulturområder;XB;5AB-KO-XB;Annet bebygd område/kulturområde;1;5AB-KO-XB_1;Til stede;B;6;5AB-KO-XB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;FP;5AB-TO-FP;Flyplassområde;0;5AB-TO-FP_0;Ikke til stede;B;10;5AB-TO-FP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;FP;5AB-TO-FP;Flyplassområde;1;5AB-TO-FP_1;Til stede;B;10;5AB-TO-FP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;JB;5AB-TO-JB;Jernbane, trikk (skinnegående transportmiddel);0;5AB-TO-JB_0;Ikke til stede;B;4;5AB-TO-JB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;JB;5AB-TO-JB;Jernbane, trikk (skinnegående transportmiddel);1;5AB-TO-JB_1;Til stede;B;4;5AB-TO-JB;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;KG;5AB-TO-KG;Antenne;0;5AB-TO-KG;Ikke til stede;B;;5AB-TO-KG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;KG;5AB-TO-KG;Antenne;1;5AB-TO-KG;Til stede;B;;5AB-TO-KG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;KL;5AB-TO-KL;Kraftlinje;0;5AB-TO-KL_0;Ikke til stede;B;2;5AB-TO-KL;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;KL;5AB-TO-KL;Kraftlinje;1;5AB-TO-KL_1;Til stede;B;2;5AB-TO-KL;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;RG;5AB-TO-RG;Rørgate;0;5AB-TO-RG_0;Ikke til stede;B;2;5AB-TO-RG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;RG;5AB-TO-RG;Rørgate;1;5AB-TO-RG_1;Til stede;B;2;5AB-TO-RG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;SM;5AB-TO-SM;Sti, merket;0;5AB-TO-SM_0;Ikke til stede;B;2;5AB-TO-SM;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;SM;5AB-TO-SM;Sti, merket;1;5AB-TO-SM_1;Til stede;B;2;5AB-TO-SM;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;SX;5AB-TO-SX;Sti, annen;0;5AB-TO-SX_0;Ikke til stede;B;1;5AB-TO-SX;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;SX;5AB-TO-SX;Sti, annen;1;5AB-TO-SX_1;Til stede;B;1;5AB-TO-SX;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;TS;5AB-TO-TS;Stasjonsområde for kollektivtransport;0;5AB-TO-TS_0;Ikke til stede;B;4;5AB-TO-TS;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;TS;5AB-TO-TS;Stasjonsområde for kollektivtransport;1;5AB-TO-TS_1;Til stede;B;4;5AB-TO-TS;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VE;5AB-TO-VE;Europaveg (E);0;5AB-TO-VE_0;Ikke til stede;B;7;5AB-TO-VE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VE;5AB-TO-VE;Europaveg (E);1;5AB-TO-VE_1;Til stede;B;7;5AB-TO-VE;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VF;5AB-TO-VF;Fylkesveg (F);0;5AB-TO-VF_0;Ikke til stede;B;4;5AB-TO-VF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VF;5AB-TO-VF;Fylkesveg (F);1;5AB-TO-VF_1;Til stede;B;4;5AB-TO-VF;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VG;5AB-TO-VG;Gang- og sykkelveg (G);0;5AB-TO-VG_0;Ikke til stede;B;2;5AB-TO-VG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VG;5AB-TO-VG;Gang- og sykkelveg (G);1;5AB-TO-VG_1;Til stede;B;2;5AB-TO-VG;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VK;5AB-TO-VK;Kommunal veg (K);0;5AB-TO-VK_0;Ikke til stede;B;3;5AB-TO-VK;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VK;5AB-TO-VK;Kommunal veg (K);1;5AB-TO-VK_1;Til stede;B;3;5AB-TO-VK;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VP;5AB-TO-VP;Privat veg (P);0;5AB-TO-VP_0;Ikke til stede;B;2;5AB-TO-VP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VP;5AB-TO-VP;Privat veg (P);1;5AB-TO-VP_1;Til stede;B;2;5AB-TO-VP;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VR;5AB-TO-VR;Riksveg (R);0;5AB_TO_0;Ikke til stede;B;5;5AB_TO;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VR;5AB-TO-VR;Riksveg (R);1;5AB-TO-VR_1;Til stede;B;5;5AB-TO-VR;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VS;5AB-TO-VS;Skogsbilveg (S);0;5AB-TO-VS_0;Ikke til stede;B;2;5AB-TO-VS;Trinn
+5;Menneskeskapte objekter;AB;Arealbrukskategorier ;TO;Transportområder;VS;5AB-TO-VS;Skogsbilveg (S);1;5AB-TO-VS_1;Til stede;B;2;5AB-TO-VS;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;FL;5BY-IL-FL;Fiskeri- og landbruksbygning;0;5BY-IL-FL_0;Ikke til stede;B/T1;5;5BY-IL-FL;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;X;;;5BY_X;;;5BY_X;ikke registerert;;;5BY-X-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;EN;5BY-BO-EN;Enebolig og tomannsbolig (inkludert rekkehus og andre småhus, garasje, uthus og annen boligbygning) ;0;5BY-BO-EN_0;Ikke til stede;B/T1;4;5BY-BO-EN;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;EN;5BY-BO-EN;Enebolig og tomannsbolig (inkludert rekkehus og andre småhus, garasje, uthus og annen boligbygning) ;1;5BY-BO-EN_1;Til stede;B/T1;4;5BY-BO-EN;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;HY;5BY-BO-HY;Hytte (sommerhus, fritidsbygg);0;5BY-BO-HY_0;Ikke til stede;B/T1;3;5BY-BO-HY;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;HY;5BY-BO-HY;Hytte (sommerhus, fritidsbygg);1;5BY-BO-HY_1;Til stede;B/T1;3;5BY-BO-HY;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;KS;5BY-BO-KS;Koie, seterhus etc. (knyttet til utmarksnæring, fiske, jakt etc.);0;5BY-BO-KS_0;Ikke til stede;B/T1;2;5BY-BO-KS;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;KS;5BY-BO-KS;Koie, seterhus etc. (knyttet til utmarksnæring, fiske, jakt etc.);1;5BY-BO-KS_1;Til stede;B/T1;2;5BY-BO-KS;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;SB;5BY-BO-SB;Stort boligbygg (blokk etc.);0;5BY-BO-SB_0;Ikke til stede;B/T1;6;5BY-BO-SB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;SB;5BY-BO-SB;Stort boligbygg (blokk etc.);1;5BY-BO-SB_1;Til stede;B/T1;6;5BY-BO-SB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;VÅ;5BY-BO-VÅ;Våningshus (på landbrukseiendom);0;5BY-BO-VÅ_0;Ikke til stede;B/T1;4;5BY-BO-VÅ;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;BO;Bolig;VÅ;5BY-BO-VÅ;Våningshus (på landbrukseiendom);1;5BY-BO-VÅ_1;Til stede;B/T1;4;5BY-BO-VÅ;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;BO;5BY-BY-0;Bolig;;5BY-BY-0_BO;Til stede;;;5BY-0-BO;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;FB;5BY-BY-0;Fengsels- og beregskapsbygning (inkludert forsvarsbygning);;5BY-BY-0_FB;Til stede;;;5BY-0-FB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;HE;5BY-BY-0;Helsebygning (sykehus, sykehjem, primærhelsebygning);;5BY-BY-0_HE;Til stede;;;5BY-0-HE;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;HR;5BY-BY-0;Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester);;5BY-BY-0_HR;Til stede;;;5BY_0;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;IL;5BY-BY-0;Industri-, lager- og primærnæringsbygning;;5BY-BY-0_IL;Til stede;;;5BY-0-IL;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;KB;5BY-BY-0;Kultur- og forskningsbygning;;5BY-BY-0_KB;Til stede;;;5BY-0-KB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;KF;5BY-BY-0;Kontor- og forretningsbygning;;5BY-BY-0_KF;Til stede;;;5BY-0-KF;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;SK;5BY-BY-0;Samferdsels- og kommunikasjonsbygning;;5BY-BY-0_SK;Til stede;;;5BY-0-SK;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;0;Bygningstyper - kategorisert;XB;5BY-BY-0;Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori);;5BY-BY-0_XB;Til stede;;;5BY-0-XB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;FB;Fengsels- og beregskapsbygning (inkludert forsvarsbygning);;5BY-FB;;0;5BY-FB-_0;Ikke til stede;B/T1;5;5BY-FB-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;FB;Fengsels- og beregskapsbygning (inkludert forsvarsbygning);;5BY-FB;;1;5BY-FB-_1;Til stede;B/T1;5;5BY-FB-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;HE;Helsebygning (sykehus, sykehjem, primærhelsebygning);;5BY-HE;;0;5BY-HE-_0;Ikke til stede;B/T1;6;5BY-HE-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;HE;Helsebygning (sykehus, sykehjem, primærhelsebygning);;5BY-HE;;1;5BY-HE-_1;Til stede;B/T1;6;5BY-HE-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;HR;Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester);;5BY-HR;;0;5BY-HR-_0;Ikke til stede;B/T1;5;5BY-HR-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;HR;Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester);;5BY-HR;;1;5BY-HR-_1;Til stede;B/T1;5;5BY-HR-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;EF;5BY-IL-EF;Energiforsyningsbygning (kraftstasjoner etc.);0;5BY-IL-EF_0;Ikke til stede;B/T1;4;5BY-IL-EF;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;EF;5BY-IL-EF;Energiforsyningsbygning (kraftstasjoner etc.);1;5BY-IL-EF_1;Til stede;B/T1;4;5BY-IL-EF;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;FL;5BY-IL-FL;Fiskeri- og landbruksbygning;1;5BY-IL-FL_1;Til stede;B/T1;5;5BY-IL-FL;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;IL;5BY-IL-IL;Industribygning og lagerbygning;0;5BY-IL-IL_0;Ikke til stede;B/T1;6;5BY-IL-IL;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;IL;5BY-IL-IL;Industribygning og lagerbygning;1;5BY-IL-IL_1;Til stede;B/T1;6;5BY-IL-IL;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;VM;5BY-IL-VM;Vindmølle;0;5BY-IL-VM_0;Ikke til stede;B/T1;;5BY-IL-VM;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;IL;Industri-, lager- og primærnæringsbygning;VM;5BY-IL-VM;Vindmølle;1;5BY-IL-VM_1;Til stede;B/T1;;5BY-IL-VM;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;IB;5BY-KB-IB;Idrettsbygning;0;5BY-KB-IB_0;Ikke til stede;B/T1;6;5BY-KB-IB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;IB;5BY-KB-IB;Idrettsbygning;1;5BY-KB-IB_1;Til stede;B/T1;6;5BY-KB-IB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;KU;5BY-KB-KU;Kulturhus;0;5BY-KB-KU_0;Ikke til stede;B/T1;5;5BY-KB-KU;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;KU;5BY-KB-KU;Kulturhus;1;5BY-KB-KU_1;Til stede;B/T1;5;5BY-KB-KU;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;RB;5BY-KB-RB;Bygg tilrettelagt for religiøse aktiviteter;0;5BY-KB-RB_0;Ikke til stede;B/T1;5;5BY-KB-RB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;RB;5BY-KB-RB;Bygg tilrettelagt for religiøse aktiviteter;1;5BY-KB-RB_1;Til stede;B/T1;5;5BY-KB-RB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;SU;5BY-KB-SU;Skole-, barnehage-, høgskole-, universitets-, museums- eller biblioteksbygning;0;5BY-KB-SU_0;Ikke til stede;B/T1;6;5BY-KB-SU;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KB;Kultur- og forskningsbygning;SU;5BY-KB-SU;Skole-, barnehage-, høgskole-, universitets-, museums- eller biblioteksbygning;1;5BY-KB-SU_1;Til stede;B/T1;6;5BY-KB-SU;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KF;Kontor- og forretningsbygning;;5BY-KF;;0;5BY-KF-_0;Ikke til stede;B/T1;6;5BY-KF-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;KF;Kontor- og forretningsbygning;;5BY-KF;;1;5BY-KF-_1;Til stede;B/T1;6;5KU_X;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;AN;5BY-SK-AN;Antenne;0;5BY-SK-AN_0;Ikke til stede;B/T1;;5BY-SK-AN;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;AN;5BY-SK-AN;Antenne;1;5BY-SK-AN_1;Til stede;B/T1;;5BY-SK-AN;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;EB;5BY-SK-EB;Ekspedisjonsbygning, terminalbygning, veg- og trafikktilsynsbygning etc. (bygning tilrettelagt for mennesker ifm tilrettelegging for, eller bruk av samferdselstjenester);0;5BY-SK-EB_0;Ikke til stede;B/T1;5;5BY-SK-EB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;EB;5BY-SK-EB;Ekspedisjonsbygning, terminalbygning, veg- og trafikktilsynsbygning etc. (bygning tilrettelagt for mennesker ifm tilrettelegging for, eller bruk av samferdselstjenester);1;5BY-SK-EB_1;Til stede;B/T1;5;5BY-SK-EB;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;FY;5BY-SK-FY;Fyrlykt;0;5BY-SK-FY_0;Ikke til stede;B/T1;;5BY-SK-FY;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;FY;5BY-SK-FY;Fyrlykt;1;5BY-SK-FY_1;Til stede;B/T1;;5BY-SK-FY;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;GH;5BY-SK-GH;Garasje- og hangarbygning (bygning tilrettelagt for lagring/oppbevaring av kollektive transportmidler);0;5BY-SK-GH_0;Ikke til stede;B/T1;6;5BY-SK-GH;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;GH;5BY-SK-GH;Garasje- og hangarbygning (bygning tilrettelagt for lagring/oppbevaring av kollektive transportmidler);1;5BY-SK-GH_1;Til stede;B/T1;6;5BY-SK-GH;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;TK;5BY-SK-TK;Telekommunikasjonsbygning (mottaksstasjoner for telesignaler, mobilnettverksmaster knyttet til bygning etc.);0;5BY-SK-TK_0;Ikke til stede;B/T1;5;5BY-SK-TK;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;SK;Samferdsels- og kommunikasjonsbygning;TK;5BY-SK-TK;Telekommunikasjonsbygning (mottaksstasjoner for telesignaler, mobilnettverksmaster knyttet til bygning etc.);1;5BY-SK-TK_1;Til stede;B/T1;5;5BY-SK-TK;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;XB;Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori);;5BY-XB;;0;5BY-XB-_0;Ikke til stede;B/T1;4;5BY-XB-;Trinn
+5;Menneskeskapte objekter;BY;Bygningstyper;XB;Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori);;5BY-XB;;1;5BY-XB-_1;Til stede;B/T1;4;5BY-XB-;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SK;5KU-AR-SK;Skanse;0;5KU-AR-SK_0;Ikke til stede;B/T1;5;5KU-AR-SK;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;X;;;5KU_X;;;5KU_X;ikke registerert;;;5KU-X-;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SL;5KU-AR-SL;Slaggforekomst, inkl. slagghaug;0;5KU-AR-SL_0;Ikke til stede;B/T1;3;5KU-AR-SL;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SP;5KU-AR-SP;Sperregjerde;0;5KU-AR-SP_0;Ikke til stede;B/T1;2;5KU-AR-SP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;ST;5KU-AR-ST;Steinbrudd (uspesifisert);0;5KU-AR-ST_0;Ikke til stede;B/T1;4;5KU-AR-ST;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SY;5KU-AR-SY;Skyttergrav/løpegrav;0;5KU-AR-SY_0;Ikke til stede;B/T1;3;5KU-AR-SY;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TI;5KU-AR-TI;Tipphaug/bruddmasser;0;5KU-AR-TI_0;Ikke til stede;B/T1;2;5KU-AR-TI;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TJ;5KU-AR-TJ;Tjæremile;0;5KU-AR-TJ_0;Ikke til stede;B/T1;1;5KU-AR-TJ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TP;5KU-AR-TP;Torvtørkeplass;0;5KU-AR-TP_0;Ikke til stede;B/T1;3;5KU-AR-TP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TT;5KU-AR-TT;Torvuttak;0;5KU-AR-TT_0;Ikke til stede;B/T1;4;5KU-AR-TT;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TU;5KU-AR-TU;Tuft;0;5KU-AR-TU_0;Ikke til stede;B/T1;2;5KU-AR-TU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VA;5KU-AR-VA;Vanningsanlegg/renne;0;5KU-AR-VA_0;Ikke til stede;B/T1;5;5KU-AR-VA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VO;5KU-AR-VO;Vollgrav;0;5KU-AR-VO_0;Ikke til stede;B/T1;3;5KU-AR-VO;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SK;5KU-AR-SK;Skanse;1;5KU-AR-SK_1;Til stede;B/T1;5;5KU-AR-SK;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SL;5KU-AR-SL;Slaggforekomst, inkl. slagghaug;1;5KU-AR-SL_1;Til stede;B/T1;3;5KU-AR-SL;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SP;5KU-AR-SP;Sperregjerde;1;5KU-AR-SP_1;Til stede;B/T1;2;5KU-AR-SP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;ST;5KU-AR-ST;Steinbrudd (uspesifisert);1;5KU-AR-ST_1;Til stede;B/T1;4;5KU-AR-ST;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SY;5KU-AR-SY;Skyttergrav/løpegrav;1;5KU-AR-SY_1;Til stede;B/T1;3;5KU-AR-SY;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TI;5KU-AR-TI;Tipphaug/bruddmasser;1;5KU-AR-TI_1;Til stede;B/T1;2;5KU-AR-TI;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TJ;5KU-AR-TJ;Tjæremile;1;5KU-AR-TJ_1;Til stede;B/T1;1;5KU-AR-TJ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TP;5KU-AR-TP;Torvtørkeplass;1;5KU-AR-TP_1;Til stede;B/T1;3;5KU-AR-TP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TT;5KU-AR-TT;Torvuttak;1;5KU-AR-TT_1;Til stede;B/T1;4;5KU-AR-TT;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;TU;5KU-AR-TU;Tuft;1;5KU-AR-TU_1;Til stede;B/T1;2;5KU-AR-TU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VA;5KU-AR-VA;Vanningsanlegg/renne;1;5KU-AR-VA_1;Til stede;B/T1;5;5KU-AR-VA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VO;5KU-AR-VO;Vollgrav;1;5KU-AR-VO_1;Til stede;B/T1;3;5KU-AR-VO;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BR;5KU-AR-BR;Bru/brukar;0;5KU-AR-BR_0;Ikke til stede;B/T1;4;5KU-AR-BR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BR;5KU-AR-BR;Bru/brukar;1;5KU-AR-BR_1;Til stede;B/T1;4;5KU-AR-BR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BV;5KU-AR-BV;Brønn/vannpost;0;5KU-AR-BV_0;Ikke til stede;B/T1;1;5KU-AR-BV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BV;5KU-AR-BV;Brønn/vannpost;1;5KU-AR-BV_1;Til stede;B/T1;1;5KU-AR-BV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BÅ;5KU-AR-BÅ;Båtstø;0;5KU-AR-BÅ_0;Ikke til stede;B/T1;2;5KU-AR-BÅ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;BÅ;5KU-AR-BÅ;Båtstø;1;5KU-AR-BÅ_1;Til stede;B/T1;2;5KU-AR-BÅ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;DA;5KU-AR-DA;Dam/demning;0;5KU-AR-DA_0;Ikke til stede;B/T1;6;5KU-AR-DA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;DA;5KU-AR-DA;Dam/demning;1;5KU-AR-DA_1;Til stede;B/T1;6;5KU-AR-DA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;DE;5KU-AR-DE;Delerøys;0;5KU-AR-DE_0;Ikke til stede;B/T1;2;5KU-AR-DE;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;DE;5KU-AR-DE;Delerøys;1;5KU-AR-DE_1;Til stede;B/T1;2;5KU-AR-DE;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;FA;5KU-AR-FA;Fangstgrav;0;5KU-AR-FA_0;Ikke til stede;B/T1;1;5KU-AR-FA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;FA;5KU-AR-FA;Fangstgrav;1;5KU-AR-FA_1;Til stede;B/T1;1;5KU-AR-FA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;FX;5KU-AR-FX;Fangstinnretning (annen enn fangsgrav) og fangstinnretning for fisk;0;5KU-AR-FX_0;Ikke til stede;B/T1;2;5KU-AR-FX;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;FX;5KU-AR-FX;Fangstinnretning (annen enn fangsgrav) og fangstinnretning for fisk;1;5KU-AR-FX_1;Til stede;B/T1;2;5KU-AR-FX;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GA;5KU-AR-GA;Gamme/Gammetuft;0;5KU-AR-GA_0;Ikke til stede;B/T1;1;5KU-AR-GA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GA;5KU-AR-GA;Gamme/Gammetuft;1;5KU-AR-GA_1;Til stede;B/T1;1;5KU-AR-GA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GP;5KU-AR-GP;Gravplass;0;5KU-AR-GP_0;Ikke til stede;B/T1;3;5KU-AR-GP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GP;5KU-AR-GP;Gravplass;1;5KU-AR-GP_1;Til stede;B/T1;3;5KU-AR-GP;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GR;5KU-AR-GR;Grenserøys/grensestein;0;5KU-AR-GR_0;Ikke til stede;B/T1;0;5KU-AR-GR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GR;5KU-AR-GR;Grenserøys/grensestein;1;5KU-AR-GR_1;Til stede;B/T1;0;5KU-AR-GR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GU;5KU-AR-GU;Gruve, alle typer;0;5KU-AR-GU_0;Ikke til stede;B/T1;4;5KU-AR-GU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GU;5KU-AR-GU;Gruve, alle typer;1;5KU-AR-GU_1;Til stede;B/T1;4;5KU-AR-GU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GÅ;5KU-AR-GÅ;Gårdshaug;0;5KU-AR-GÅ_0;Ikke til stede;B/T1;3;5KU-AR-GÅ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;GÅ;5KU-AR-GÅ;Gårdshaug;1;5KU-AR-GÅ_1;Til stede;B/T1;3;5KU-AR-GÅ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;HT;5KU-AR-HT;Hustuft;0;5KU-AR-HT_0;Ikke til stede;B/T1;4;5KU-AR-HT;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;HT;5KU-AR-HT;Hustuft;1;5KU-AR-HT_1;Til stede;B/T1;4;5KU-AR-HT;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;HV;5KU-AR-HV;Hulveg;0;5KU-AR-HV_0;Ikke til stede;B/T1;2;5KU-AR-HV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;HV;5KU-AR-HV;Hulveg;1;5KU-AR-HV_1;Til stede;B/T1;2;5KU-AR-HV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KA;5KU-AR-KA;Kai/brygge;0;5KU-AR-KA_0;Ikke til stede;B/T1;4;5KU-AR-KA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KA;5KU-AR-KA;Kai/brygge;1;5KU-AR-KA_1;Til stede;B/T1;4;5KU-AR-KA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KN;5KU-AR-KN;Kanal;0;5KU-AR-KN_0;Ikke til stede;B/T1;3;5KU-AR-KN;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KN;5KU-AR-KN;Kanal;1;5KU-AR-KN_1;Til stede;B/T1;3;5KU-AR-KN;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KO;5KU-AR-KO;Kalkovn;0;5KU-AR-KO_0;Ikke til stede;B/T1;2;5KU-AR-KO;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KO;5KU-AR-KO;Kalkovn;1;5KU-AR-KO_1;Til stede;B/T1;2;5KU-AR-KO;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KU;5KU-AR-KU;Kullmile;0;5KU-AR-KU_0;Ikke til stede;B/T1;1;5KU-AR-KU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;KU;5KU-AR-KU;Kullmile;1;5KU-AR-KU_1;Til stede;B/T1;1;5KU-AR-KU;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;LG;5KU-AR-LG;Ledegjerde;0;5KU-AR-LG_0;Ikke til stede;B/T1;2;5KU-AR-LG;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;LG;5KU-AR-LG;Ledegjerde;1;5KU-AR-LG_1;Til stede;B/T1;2;5KU-AR-LG;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MA;5KU-AR-MA;Malmlager;0;5KU-AR-MA_0;Ikke til stede;B/T1;3;5KU-AR-MA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MA;5KU-AR-MA;Malmlager;1;5KU-AR-MA_1;Til stede;B/T1;3;5KU-AR-MA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;ML;5KU-AR-ML;Molo;0;5KU-AR-ML_0;Ikke til stede;B/T1;4;5KU-AR-ML;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;ML;5KU-AR-ML;Molo;1;5KU_AR_1;Til stede;B/T1;4;5KU_AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MM;5KU-AR-MM;Monument/minnesmerke;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MM;5KU-AR-MM;Monument/minnesmerke;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MO;5KU-AR-MO;Masovn;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MO;5KU-AR-MO;Masovn;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MØ;5KU-AR-MØ;Mølleruin/kvernstein;0;5KU-AR_0;Ikke til stede;B/T1;1;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;MØ;5KU-AR-MØ;Mølleruin/kvernstein;1;5KU-AR_1;Til stede;B/T1;1;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;NB;5KU-AR-NB;Naust/båthus;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;NB;5KU-AR-NB;Naust/båthus;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;NT;5KU-AR-NT;Nausttuft;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;NT;5KU-AR-NT;Nausttuft;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;OV;5KU-AR-OV;Ovn;0;5KU-AR_0;Ikke til stede;B/T1;1;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;OV;5KU-AR-OV;Ovn;1;5KU-AR_1;Til stede;B/T1;1;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;PO;5KU-AR-PO;Port/portal;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;PO;5KU-AR-PO;Port/portal;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RE;5KU-AR-RE;Rettersted;0;5KU-AR_0;Ikke til stede;B/T1;3;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RE;5KU-AR-RE;Rettersted;1;5KU-AR_1;Til stede;B/T1;3;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RI;5KU-AR-RI;Rideveg;0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RI;5KU-AR-RI;Rideveg;1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RS;5KU-AR-RS;Ristning;0;5KU-AR_0;Ikke til stede;B/T1;0;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RS;5KU-AR-RS;Ristning;1;5KU-AR_1;Til stede;B/T1;0;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RU;5KU-AR-RU;Ruin (bygningsrest);0;5KU-AR_0;Ikke til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RU;5KU-AR-RU;Ruin (bygningsrest);1;5KU-AR_1;Til stede;B/T1;2;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RY;5KU-AR-RY;Rydningsrøys;0;5KU-AR_0;Ikke til stede;B/T1;1;5KU-AR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RY;5KU-AR-RY;Rydningsrøys;1;5KU-AR-RY_1;Til stede;B/T1;1;5KU-AR-RY;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RØ;5KU-AR-RØ;Røsteplass;0;5KU-AR-RØ_0;Ikke til stede;B/T1;2;5KU-AR-RØ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;RØ;5KU-AR-RØ;Røsteplass;1;5KU-AR-RØ_1;Til stede;B/T1;2;5KU-AR-RØ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SA;5KU-AR-SA;Sagtuft/ruin;0;5KU-AR-SA_0;Ikke til stede;B/T1;3;5KU-AR-SA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SA;5KU-AR-SA;Sagtuft/ruin;1;5KU-AR-SA_1;Til stede;B/T1;3;5KU-AR-SA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SB;5KU-AR-SB;Steinbu;0;5KU-AR-SB_0;Ikke til stede;B/T1;1;5KU-AR-SB;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SB;5KU-AR-SB;Steinbu;1;5KU-AR-SB_1;Til stede;B/T1;1;5KU-AR-SB;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SE;5KU-AR-SE;Seilingsmerke;0;5KU-AR-SE_0;Ikke til stede;B/T1;1;5KU-AR-SE;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SE;5KU-AR-SE;Seilingsmerke;1;5KU-AR-SE_1;Til stede;B/T1;1;5KU-AR-SE;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SG;5KU-AR-SG;Steingard/steingjerde;0;5KU-AR-SG_0;Ikke til stede;B/T1;0;5KU-AR-SG;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SG;5KU-AR-SG;Steingard/steingjerde;1;5KU-AR-SG_1;Til stede;B/T1;0;5KU-AR-SG;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SJ;5KU-AR-SJ;Skjerp;0;5KU-AR-SJ_0;Ikke til stede;B/T1;0;5KU-AR-SJ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;SJ;5KU-AR-SJ;Skjerp;1;5KU-AR-SJ_1;Til stede;B/T1;0;5KU-AR-SJ;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VR;5KU-AR-VR;Varde;0;5KU-AR-VR_0;Ikke til stede;B/T1;1;5KU-AR-VR;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VR;5KU-AR-VR;Varde;1;5KU-AR-VR_1;Til stede;B/T1;1;5XG_X;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VV;5KU-AR-VV;Veg/vegfar;0;5KU-AR-VV_0;Ikke til stede;B/T1;2;5KU-AR-VV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;AR;Arkeologisk minne;VV;5KU-AR-VV;Veg/vegfar;1;5KU-AR-VV_1;Til stede;B/T1;2;5KU-AR-VV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;BE;Bergkunst;;5KU-BE;;0;5KU-BE-_0;Ikke til stede;B/T1;3;5KU-BE-;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;BE;Bergkunst;;5KU-BE;;1;5KU-BE_1;Registrert;B/T1;3;5KU-BE;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;BY;Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-BY;;0;5KU-BY_0;Ikke til stede;B/T1;3;5KU-BY;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;BY;Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-BY;;1;5KU-BY_1;Registrert;B/T1;3;5KU-BY;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;FA;Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land);;5KU-FA;;0;5KU-FA_0;Ikke til stede;B/T1;2;5KU-FA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;FA;Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land);;5KU-FA;;1;5KU-FA_1;Registrert;B/T1;2;5KU-FA;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;KI;Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-KI;;0;5KU-KI_0;Ikke til stede;B/T1;5;5KU-KI;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;KI;Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-KI;;1;5KU-KI_1;Registrert;B/T1;5;5KU-KI;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;0;Kulturminner -  kategorisert;AR;5KU-KU-0;Arkeologisk minne;;5KU-KU-0_AR;Til stede;;;5KU-KU-0;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;0;Kulturminner -  kategorisert;BE;5KU-KU-0;Bergkunst;;5KU-KU-0_BE;Til stede;;;5KU-KU-0;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;0;Kulturminner -  kategorisert;BY;5KU-KU-0;Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-KU-0_BY;Til stede;;;5KU-KU-0;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;0;Kulturminner -  kategorisert;FA;5KU-KU-0;Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land);;5KU-KU-0_FA;Til stede;;;5KU-KU-0;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;0;Kulturminner -  kategorisert;KI;5KU-KU-0;Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK);;5KU-KU-0_KI;Til stede;;;5KU-KU-0;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;KV;Kulturminne under vann (inkl. skipsvrak etc.);;5KU-KV;;0;5KU-KV_0;Ikke til stede;B/T1;4;5KU-KV;Trinn
+5;Menneskeskapte objekter;KU;Kulturminner;KV;Kulturminne under vann (inkl. skipsvrak etc.);;5KU-KV;;1;5KU-KV_1;Registrert;B/T1;4;5KU-KV;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;X;;;5XG_X;;;5XG_X;ikke registerert;;;5XG_X;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;SM;Små objekter;;5XG-SM;0;0;5XG-SM_0;0;B/A8/T;2;5XG-SM;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;SM;Små objekter;;5XG-SM;0 – 1/16;1;5XG-SM_1;0 – 1/16;B/A8/T;2;5XG-SM;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;SM;Små objekter;;5XG-SM;1/16 - 1/2;2;5XG-SM_2;1/16 - 1/2;B/A8/T;2;5XG-SM;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;SM;Små objekter;;5XG-SM;>1/2;3;5XG-SM_3;>1/2;B/A8/T;2;5XG-SM;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;ST;Store objekter;;5XG-ST;0;0;5XG-ST_0;0;B/A8/T;2;5XG-ST;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;ST;Store objekter;;5XG-ST;0 – 1/16;1;5XG-ST_1;0 – 1/16;B/A8/T;2;5XG-ST;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;ST;Store objekter;;5XG-ST;1/16 - 1/2;2;5XG-ST_2;1/16 - 1/2;B/A8/T;2;5XG-ST;Trinn
+5;Menneskeskapte objekter;XG;Annen løs gjenstand;ST;Store objekter;;5XG-ST;>1/2;3;5XG-ST_3;>1/2;B/A8/T;2;5XG-ST;Trinn

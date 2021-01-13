@@ -1,0 +1,373 @@
+HT;Hovedtypenavn;LKM kategori;Gradientkodedefinisjon;Gradientkode;Trinn1;Trinn1 csv;Trinn1 navn;Trinn2;Trinn2 csv;Trinn2 navn;Trinn3;Trinn3 csv;Trinn3 navn;Trinn4;Trinn4 csv;Trinn4 navn;Trinn5;Trinn5 csv;Trinn5 navn;Trinn6;Trinn6 csv;Trinn6 navn;Tags
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];hLKM;VF-0ab|cd|ef|gh;VF;M1-VF_1;VF-0,VF-a,VF-b;;M1-VF_2;VF-c,VF-d;;M1-VF_3;VF-e,VF-f;;M1-VF_4;VF-g,VF-h;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];hLKM;DL-a|bc|d;DL;M1-DL_1;DL-a;;M1-DL_2;DL-b,DL-c;;M1-DL_3;DL-d;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];hLKM;SA-a|bc|def;SA;M1-SA_1;SA-a;;M1-SA_2;SA-b,SA-c;;M1-SA_3;SA-d,SA-e,SA-f;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];tLKM;HF-0ab|+;HF;M1-HF_1;HF-0,HF-a,HF-b;;M1-HF_2;HF-+;;;;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];tLKM;S1-a|b;S1;M1-S1_1;S1-a;;M1-S1_2;S1-b;;;;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];tLKM;IF-0ab|¤;IF;M1-IF_1;IF-0,IF-a,IF-b;;M1-IF_2;IF-¤;;;;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];uLKM;VR-a|b;VR;M1-VR_1;VR-a;bølgepåvirkning;M1-VR_2;VR-b;tidevannsstrøm;;;;;;;;;;;;;Trinn
+M1;Eufotisk fast saltvannsbunn [grunn marin fastbunn];uLKM;RU-0ab|cde;RU;M1-RU_1;RU-0,RU-a,RU-b;uten raspreg til litt raspreget;M1-RU_2;RU-c,RU-d,RU-e;temmelig til svært sterkt raspreget;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];hLKM;DM-0|a|b|cd|ef;DM;M2-DM_1;DM-0;;M2-DM_2;DM-a;;M2-DM_3;DM-b;;M2-DM_4;DM-c,DM-d;;M2-DM_5;DM-e,DM-f;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];tLKM;VF-a|bc;VF;M2-VF_1;VF-a;;M2-VF_2;VF-b,VF-c;;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];tLKM;HF-0ab|+;HF;M2-HF_1;HF-0,HF-a,HF-b;;M2-HF_2;HF-+;;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];tLKM;BK-0|a;BK;M2-BK_1;BK-0;;M2-BK_2;BK-a;;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];uLKM;SA-bc|def;SA;M2-SA_1;SA-b,SA-c;temmelig brakt;M2-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];uLKM;S1-a|b;S1;M2-S1_1;S1-a;fast fjell;M2-S1_2;S1-b;blokker;;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];uLKM;DD-0|a;DD;M2-DD_1;DD-0;atlantisk vann i nedre sublitoral (< 700 m);M2-DD_2;DD-a;atlantisk vann i bathypelagial og bathyal (> 700 m);;;;;;;;;;;;;Trinn
+M2;Afotisk fast saltvannsbunn [dyp marin fastbunn];uLKM;RU-0ab|cde;RU;M2-RU_1;RU-0,RU-a,RU-b;uten raspreg til litt raspreget;M2-RU_2;RU-c,RU-d,RU-e;temmelig til svært sterkt raspreget;;;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;hLKM;VF-0ab|cd|efg|h;VF;M3-VF_1;VF-0,VF-a,VF-b;;M3-VF_2;VF-c,VF-d;;M3-VF_3;VF-e,VF-f,VF-g;;M3-VF_4;VF-h;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;hLKM;TV-ab|cde|fgh;TV;M3-TV_1;TV-a,TV-b;;M3-TV_2;TV-c,TV-d,TV-e;;M3-TV_3;TV-f,TV-g,TV-h;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;hLKM;SA-a|bc|def;SA;M3-SA_1;SA-a;;M3-SA_2;SA-b,SA-c;;M3-SA_3;SA-d,SA-e,SA-f;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;tLKM;IF-0ab|¤;IF;M3-IF_1;IF-0,IF-a,IF-b;;M3-IF_2;IF-¤;;;;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;tLKM;HF-0ab|+;HF;M3-HF_1;HF-0,HF-a,HF-b;;M3-HF_2;HF-+;;;;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;uLKM;S1-a|b;S1;M3-S1_1;S1-a;fast fjell;M3-S1_2;S1-b;blokker;;;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;uLKM;VR-a|b;VR;M3-VR_1;VR-a;bølgepåvirkning;M3-VR_2;VR-b;tidevannsstrøm;;;;;;;;;;;;;Trinn
+M3;Fast fjærebelte-bunn;uLKM;RU-0ab|cde;RU;M3-RU_1;RU-0,RU-a,RU-b;uten raspreg til litt raspreget;M3-RU_2;RU-c,RU-d,RU-e;temmelig til svært sterkt raspreget;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];hLKM;S3E-0a|b|c|d|e;S3E;M4-S3E_1;S3E-0,S3E-a;;M4-S3E_2;S3E-b;;M4-S3E_3;S3E-c;;M4-S3E_4;S3E-d;;M4-S3E_5;S3E-e;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];hLKM;S3F-0a|bc|¤;S3F;M4-S3F_1;S3F-0,S3F-a;;M4-S3F_2;S3F-b,S3F-c;;M4-S3F_3;S3F-¤;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];hLKM;S3S-0|a|b;S3S;M4-S3S_1;S3S-0;;M4-S3S_2;S3S-a;;M4-S3S_3;S3S-b;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;DL-abc|d;DL;M4-DL_1;DL-a,DL-b,DL-c;;M4-DL_2;DL-d;;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;SA-abc|de;SA;M4-SA_1;SA-a,SA-b,SA-c;;M4-SA_2;SA-d,SA-e;;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;TV-0|ab;TV;M4-TV_1;TV-0;;M4-TV_2;TV-a,TV-b;;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;IO-0ab|¤;IO;M4-IO_1;IO-0,IO-a,IO-b;;M4-IO_2;IO-¤;;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;KA-efg|hi;KA;M4-KA_1;KA-e,KA-f,KA-g;;M4-KA_2;KA-h,KA-i;;;;;;;;;;;;;;Trinn
+M4;Eufotisk marin sedimentbunn [grunn marin sedimentbunn];tLKM;SE-0ab|¤;SE;M4-SE_1;SE-0,SE-a,SE-b;;M4-SE_2;SE-¤;;;;;;;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];hLKM;S3E-0a|b|cd|e;S3E;M5-S3E_1;S3E-0,S3E-a;;M5-S3E_2;S3E-b;;M5-S3E_3;S3E-c,S3E-d;;M5-S3E_4;S3E-e;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];hLKM;S3F-0a|bc|¤;S3F;M5-S3F_1;S3F-0,S3F-a;;M5-S3F_2;S3F-b,S3F-c;;M5-S3F_3;S3F-¤;;;;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];hLKM;S3S-0|a|c|d;S3S;M5-S3S_1;S3S-0;;M5-S3S_2;S3S-a;;M5-S3S_3;S3S-c;;M5-S3S_4;S3S-d;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];hLKM;DM-0|a|b|cd|ef;DM;M5-DM_1;DM-0;;M5-DM_2;DM-a;;M5-DM_3;DM-b;;M5-DM_4;DM-c,DM-d;;M5-DM_5;DM-e,DM-f;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];tLKM;IO-0ab|¤;IO;M5-IO_1;IO-0,IO-a,IO-b;;M5-IO_2;IO-¤;;;;;;;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];uLKM;VF-a|bc;VF;M5-VF_1;VF-a;svært beskyttet;M5-VF_2;VF-b,VF-c;temmelig og litt beskyttet;;;;;;;;;;;;;Trinn
+M5;Afotisk marin sedimentbunn [dyp marin sedimentbunn];uLKM;DD-0|a;DD;M5-DD_1;DD-0;atlantisk vann i nedre sublitoral (< 700 m);M5-DD_2;DD-a;atlantisk vann i bathypelagial og bathyal (> 700 m);;;;;;;;;;;;;Trinn
+M6;Korallrev;tLKM;KY-0|a;KY;M6-KY_1;KY-0;;M6-KY_2;KY-a;;;;;;;;;;;;;;Trinn
+M6;Korallrev;uLKM;LK-0|+;LK;M6-LK_1;LK-0;levende korallrev;M6-LK_2;LK-+;dødt korallrev;;;;;;;;;;;;;Trinn
+M6;Korallrev;uLKM;DM-0|a;DM;M6-DM_1;DM-0;øvre sublitoral (< 200 m);M6-DM_2;DM-a;atlantisk vann, typisk i nedre sublitoral 200-700 m;;;;;;;;;;;;;Trinn
+M7;Marin undervannseng;tLKM;SA-abc|def;SA;M7-SA_1;SA-a,SA-b,SA-c;;M7-SA_2;SA-d,SA-e,SA-f;;;;;;;;;;;;;;Trinn
+M7;Marin undervannseng;tLKM;TV-0|ab;TV;M7-TV_1;TV-0;;M7-TV_2;TV-a,TV-b;;;;;;;;;;;;;;Trinn
+M7;Marin undervannseng;uLKM;S3E0a|b;S3E;M7-S3E_1;S3E-0, S3E-a;ingen og svært liten erosjonsmotstand;M7-S3E_2;S3E-b;temmelig liten erosjonsmotstand;;;;;;;;;;;;;Trinn
+M7;Marin undervannseng;uLKM;S3Fbc|¤;S3F;M7-S3F_1;S3F-b,S3F-c;litt og temmelig finmaterialrik;M7-S3F_2;S3F-¤;finmaterialdominert;;;;;;;;;;;;;Trinn
+M8;Helofytt-saltvannssump;uLKM;SA-abc|def;SA;M8-SA_1;SA-a,SA-b,SA-c;brakt;M8-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+M8;Helofytt-saltvannssump;uLKM;IO-0a|b¤;IO;M8-IO_1;IO-0,IO-a;overveiende uorganisk bunn og bunn med litt organisk materiale;M8-IO_2;IO-b,IO-¤;bunn med mye organisk materiale og overveiende organisk bunn;;;;;;;;;;;;;Trinn
+M8;Helofytt-saltvannssump;uLKM;TV-0|ab;TV;M8-TV_1;TV-0;sublitoral;M8-TV_2;TV-a,TV-b;vannstrand (hydrolitoral);;;;;;;;;;;;;Trinn
+M9;Litoralbasseng-bunn ;hLKM;SM-gh|i|¤;SM;M9-SM_1;SM-g,SM-h;;M9-SM_2;SM-i;;M9-SM_3;SM-¤;;;;;;;;;;;Trinn
+M9;Litoralbasseng-bunn ;hLKM;TV-cdefgh|ij|k;TV;M9-TV_1;TV-c,TV-d,TV-e,TV-f,TV-g,TV-h;;M9-TV_2;TV-i,TV-j;;M9-TV_3;TV-k;;;;;;;;;;;Trinn
+M9;Litoralbasseng-bunn ;tLKM;SE-0a|b;SE;M9-SE_1;SE-0,SE-a;;M9-SE_2;SE-b;;;;;;;;;;;;;;Trinn
+M10;Marin grotte og overheng ;hLKM;DL-0|abcd|e+;DL;M10-DL_1;DL-0;;M10-DL_2;DL-a,DL-b,DL-c,DL-d;;M10-DL_3;DL-e,DL-+;;;;;;;;;;;Trinn
+M10;Marin grotte og overheng ;tLKM;GS-ab|cd¤;GS;M10-GS_1;GS-a,GS-b;;M10-GS_2;GS-c,GS-d,GS-¤;;;;;;;;;;;;;;Trinn
+M11;Kaldt gassoppkomme ;hLKM;DM-0|a|bcdef;DM;M11-DM_1;DM-0;;M11-DM_2;DM-a;;M11-DM_3;DM-b,DM-c,DM-d,DM-e,DM-f;;;;;;;;;;;Trinn
+M11;Kaldt gassoppkomme ;tLKM;KI-e|¤;KI;M11-KI_1;KI-e;;M11-KI_2;KI-¤;;;;;;;;;;;;;;Trinn
+M11;Kaldt gassoppkomme ;tLKM;KT-d|e;KT;M11-KT_1;KT-d;;M11-KT_2;KT-e;;;;;;;;;;;;;;Trinn
+M12;Varm havkilde ;hLKM;JV-ab|cd|e¤;JV;M12-JV_1;JV-a,JV-b;;M12-JV_2;JV-c,JV-d;;M12-JV_3;JV-e,JV-¤;;;;;;;;;;;Trinn
+M12;Varm havkilde ;hLKM;DM-0|a|bcdef;DM;M12-DM_1;DM-0;;M12-DM_2;DM-a;;M12-DM_3;DM-b,DM-c,DM-d,DM-e,DM-f;;;;;;;;;;;Trinn
+M12;Marin sedimentbunn preget av oksygenmangel [oksygenfattig marin sedimentbunn] ;tLKM;OM-b|¤;OM;M12-OM_1;OM-b;;M12-OM_2;OM-¤;;;;;;;;;;;;;;Trinn
+M13;Marin sedimentbunn preget av oksygenmangel [oksygenfattig marin sedimentbunn] ;tLKM;DL-abcd|e+;DL;M13-DL_1;DL-a,DL-b,DL-c;;M13-DL_2;DL-e,DL-+;;;;;;;;;;;;;;Trinn
+M14;Sterkt endret eller ny fast saltvannsbunn [sterkt endret marin fastbunn] ;hLKM;DL-0|abcd|e+;DL;M14-DL_1;DL-0;;M14-DL_2;DL-a,DL-b,DL-c,DL-d;;M14-DL_3;DL-e,DL-+;;;;;;;;;;;Trinn
+M14;Sterkt endret eller ny fast saltvannsbunn [sterkt endret marin fastbunn] ;uLKM;SA-abc|def;SA;M14-SA_1;SA-a,SA-b,SA-c;brakt;M14-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+M14;Sterkt endret eller ny fast saltvannsbunn [sterkt endret marin fastbunn] ;uLKM;VF0abcd|efgh¤;VF;M14-VF_1;VF-0,VF-a,VF-b,VF-c,VF-d;beskyttet;M14-VF_2;VF-e,VF-f,VF-g,VF-h,VF-¤;eksponert;;;;;;;;;;;;;Trinn
+M15;Sterkt endret eller ny marin sedimentbunn [sterkt endret marin sedimentbunn] ;tLKM;S3F-0ab|c¤;S3F;M15-S3F_1;S3F-0,S3F-a,S3F-b;;M15-S3F_2;S3F-c,S3F-¤;;;;;;;;;;;;;;Trinn
+M15;Sterkt endret eller ny marin sedimentbunn [sterkt endret marin sedimentbunn] ;tLKM;S3E-0abcd|e;S3E;M15-S3E_1;S3E-0,S3E-a,S3E-b,S3E-c,S3E-d;;M15-S3E_2;S3E-e;;;;;;;;;;;;;;Trinn
+M15;Sterkt endret eller ny marin sedimentbunn [sterkt endret marin sedimentbunn] ;tLKM;HS-A|B;HS;M15-HS_1;HS-A;;M15-HS_2;HS-B;;;;;;;;;;;;;;Trinn
+M15;Sterkt endret eller ny marin sedimentbunn [sterkt endret marin sedimentbunn] ;uLKM;SA-abc|def;SA;M15-SA_1;SA-a,SA-b,SA-c;brakt;M15-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+M15;Sterkt endret eller ny marin sedimentbunn [sterkt endret marin sedimentbunn] ;uLKM;DL-0|abcd|e+;DL;M15-DL_1;DL-0;tidevannsbeltet;M15-DL_2;DL-a,DL-b,DL-c,DL-d;eufotisk belte;M15-DL_3;DL-e,DL-+;afotisk belte;;;;;;;;;;Trinn
+L1;Eufotisk fast ferskvannsbunn [grunn limnisk fastbunn];hLKM;KA-abc|def|ghi;KA;L1-KA_1;KA-a,KA-b,KA-c;;L1-KA_2;KA-d,KA-e,KA-f;;L1-KA_3;KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+L1;Eufotisk fast ferskvannsbunn [grunn limnisk fastbunn];tLKM;HU-0|abcd;HU;L1-HU_1;HU-0;;L1-HU_2;HU-a,HU-b,HU-c,HU-d;;;;;;;;;;;;;;Trinn
+L1;Eufotisk fast ferskvannsbunn [grunn limnisk fastbunn];tLKM;VF-0abcde|fgh¤;VF;L1-VF_1;VF-0,VF-a,VF-b,VF-c,VF-d,VF-e;;L1-VF_2;VF-f,VF-g,VF-h,VF-¤;;;;;;;;;;;;;;Trinn
+L1;Eufotisk fast ferskvannsbunn [grunn limnisk fastbunn];uLKM;IF-0|ab;IF;L1-IF_1;IF-0;uten isforstyrrelsespreg;L1-IF_2;IF-a,IF-b;isforstyrrelsespreg;;;;;;;;;;;;;Trinn
+L1;Eufotisk fast ferskvannsbunn [grunn limnisk fastbunn];uLKM;DL-ab|c;DL;L1-DL_1;DL-a,DL-b;karplantebeltet;L1-DL_2;DL-c;mosebeltet;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];hLKM;S3E-0abc|d|e;S3E;L2-S3E_1;S3E-0,S3E-a,S3E-b,S3E-c;;L2-S3E_2;S3E-d;;L2-S3E_3;S3E-e;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];hLKM;S3F-0ab|c¤;S3F;L2-S3F_1;S3F-0,S3F-a,S3F-b;;L2-S3F_2;S3F-c,S3F-¤;;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];hLKM;S3S-0|e;S3S;L2-S3S_1;S3S-0;;L2-S3S_2;S3S-e;;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];hLKM;KA - ab|cde|fghi;KA;L2-KA_1;KA-a,KA-b;;L2-KA_2;KA-c,KA-d,KA-d;;L2-KA_3;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];tLKM;VT-ab|c;VT;L2-VT_1;VT-a,VT-b;;L2-VT_2;VT-c;;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];tLKM;SE-0ab|¤;SE;L2-SE_1;SE-0,SE-a,SE-b;;L2-SE_2;SE-¤;;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];tLKM;IO-0a|b¤;IO;L2-IO_1;IO-0,IO-a;;L2-IO_2;IO-b,IO-¤;;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];uLKM;VF-0abcde|fgh¤;VF;L2-VF_1;VF-0,VF-a,VF-b,VF-c,VF-d,VF-e;stille vann til elv med intermediær strøm (energi);L2-VF_2;VF-f,VF-g,VF-h,VF-¤;elv med sterk til disruptiv strøm (energi);;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];uLKM;HU-0|abcd;HU;L2-HU_1;HU-0;svært klar;L2-HU_2;HU-a,HU-b,HU-c,HU-d;klar -humøs;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];uLKM;IF-0|ab;IF;L2-IF_1;IF-0;uten isforstyrrelsespreg;L2-IF_2;IF-a,IF-b;isforstyrrelsespreg;;;;;;;;;;;;;Trinn
+L2;Eufotisk limnisk sedimentbunn [grunn limnisk sedimentbunn];uLKM;DL-ab|c;DL;L2-DL_1;DL-a,DL-b;karplantebeltet;L2-DL_2;DL-c;mosebeltet;;;;;;;;;;;;;Trinn
+L3;Afotisk limnisk sedimentbunn [dyp limnisk sedimentbunn];tLKM;KA-abcde|fghi;KA;L3-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;;L3-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+L3;Afotisk limnisk sedimentbunn [dyp limnisk sedimentbunn];uLKM;IO-0a|b¤;IO;L3-IO_1;IO-0,IO-a;overveiende uorganisk bunn og bunn med litt organisk materiale;L3-IO_2;IO-b,IO-¤;bunn med mye organisk materiale og overveiende organisk bunn;;;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;hLKM;KA-ab|cde|fghi;KA;L4-KA_1;KA-a,KA-b;;L4-KA_2;KA-c,KA-d,KA-e;;L4-KA_3;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;uLKM;S3E-0abc|d;S3E;L4-S3E_1;S3E-0,S3E-a,S3E-b,S3E-c;ingen til intermediær erosjonsmotstand;L4-S3E_2;S3E-d;temmelig stor erosjonsmotstand;;;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;uLKM;S3F-0ab|c¤;S3F;L4-S3F_1;S3F-0,S3F-a,S3F-b;uten finmateriale til litt finmaterialrik;L4-S3F_2;S3F-c,S3F-¤;temmelig finmaterialrik til finmaterialdominert;;;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;uLKM;S3S-0|e;S3S;L4-S3S_1;S3S-0;normalt, sortert sediment;L4-S3S_2;S3S-e;myrtorv;;;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;uLKM;IF-0|ab;IF;L4-IF_1;IF-0;uten isforstyrrelsespreg;L4-IF_2;IF-a,IF-b;isforstyrrelsespreg;;;;;;;;;;;;;Trinn
+L4;Helofytt-ferskvannssump;uLKM;IO-0a|b¤;IO;L4-IO_1;IO-0,IO-a;overveiende uorganisk bunn og bunn med litt organisk materiale;L4-IO_2;IO-b,IO-¤;bunn med mye organisk materiale og overveiende organisk bunn;;;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;tLKM;KT-a|b|c;KT;L5-KT_1;KT-a;;L5-KT_2;KT-b;;L5-KT_3;KT-c;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;tLKM;KA-cde|fghi;KA;L5-KA_1;KA-c,KA-d,KA-e;;L5-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;uLKM;S3E-0abc|d;S3E;L5-S3E_1;S3E-0,S3E-a,S3E-b,S3E-c;ingen til intermediær erosjonsmotstand;L5-S3E_2;S3E-d;temmelig stor erosjonsmotstand;;;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;uLKM;S3F-0ab|c¤;S3F;L5-S3F_1;S3F-0,S3F-a,S3F-b;uten finmateriale til litt finmaterialrik;L5-S3F_2;S3F-c,S3F-¤;temmelig finmaterialrik til finmaterialdominert;;;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;uLKM;S3S-0|e;S3S;L5-S3S_1;S3S-0;normalt, sortert sediment;L5-S3S_2;S3S-e;myrtorv;;;;;;;;;;;;;Trinn
+L5;Ferskvannskildebunn ;uLKM;VF-0abcde|fgh¤;VF;L5-VF_1;VF-0,VF-a,VF-b,VF-c,VF-d,VF-e;stille vann til elv med intermediær strøm (energi);L5-VF_2;VF-f,VF-g,VF-h,VF-¤;elv med sterk til disruptiv strøm (energi);;;;;;;;;;;;;Trinn
+L6;Afotisk limnisk sedimentbunn preget av oksygenmangel [oksygenfattig limnisk sedimentbunn] ;tLKM;OM-b|¤;OM;L6-OM_1;OM-b;;L6-OM_2;OM-¤;;;;;;;;;;;;;;Trinn
+L6;Afotisk limnisk sedimentbunn preget av oksygenmangel [oksygenfattig limnisk sedimentbunn] ;uLKM;KA-abcde|fghi;KA;L6-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;kalkfattig;L6-KA_2;KA-f,KA-g,KA-h,KA-i;kalkrik;;;;;;;;;;;;;Trinn
+L7;Sterkt endret eller ny fast ferskvannsbunn [sterkt endret limnisk fastbunn] ;tLKM;HS-A|B|C;HS;L7-HS_1;HS-A;;L7-HS_2;HS-B;;L7-HS_3;HS-C;;;;;;;;;;;Trinn
+L7;Sterkt endret eller ny fast ferskvannsbunn [sterkt endret limnisk fastbunn] ;uLKM;DL-abc|de+;DL;L7-DL_1;DL-a,DL-b,DL-c;eufotisk belte;L7-DL_2;DL-d,DL-e,DL-+;afotisk belte;;;;;;;;;;;;;Trinn
+L8;Sterkt endret eller ny limnisk sedimentbunn [sterkt endret limnisk sedimentbunn] ;tLKM;HS-A|B|C|D|E|F|G|H;HS;L8-HS_1;HS-A;;L8-HS_2;HS-B;;L8-HS_3;HS-C;;L8-HS_4;HS-D;;L8-HS_5;HS-E;;L8-HS_6;HS-F;;Trinn
+L8;Sterkt endret eller ny limnisk sedimentbunn [sterkt endret limnisk sedimentbunn] ;uLKM;DL-abc|de+;DL;L8-DL_1;DL-a,DL-b,DL-c;eufotisk belte;L8-DL_2;DL-d,DL-e,DL-+;afotisk belte;;;;;;;;;;;;;Trinn
+T1;Nakent berg;hLKM;KA-ab|cd|ef|gh|i;KA;T1-KA_1;KA-a,KA-b;;T1-KA_2;KA-c,KA-d;;T1-KA_3;KA-e,KA-f;;T1-KA_4;KA-g,KA-h;;T1-KA_5;KA-i;;;;;Trinn
+T1;Nakent berg;hLKM;UE-0a|bc|de|fg;UE;T1-UE_1;UE-0,UE-a;;T1-UE_2;UE-b,UE-c;;T1-UE_3;UE-d,UE-e;;T1-UE_4;UE-f,UE-g;;;;;;;;Trinn
+T1;Nakent berg;hLKM;OR-0|ab|c;OR;T1-OR_1;OR-0;;T1-OR_2;OR-a,OR-b;;T1-OR_3;OR-c;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;HF-0ab|+;HF;T1-HF_1;HF-0,HF-a,HF-b;;T1-HF_2;HF-+;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;VS-0abcd|e;VS;T1-VS_1;VS-0,VS-a,VS-b,VS-c,VS-d;;T1-VS_2;VS-e;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;VF-a|bcdef;VF;T1-VF_1;VF-a;;T1-VF_2;VF-b,VF-c,VF-d,VF-e,VF-f;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;LA-0abcd|ef+;LA;T1-LA_1;LA-0,LA-a,LA-b,LA-c,LA-d;;T1-LA_2;LA-e,LA-f,LA-+;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;VI-0a|bc;VI;T1-VI_1;VI-0,VI-a;;T1-VI_2;VI-b,VI-c;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;NG-0a|bcd¤;NG;T1-NG_1;NG-0,NG-a;;T1-NG_2;NG-b,NG-c,NG-d,NG-¤;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;tLKM;SV-0|abcd;SV;T1-SV_1;SV-0;;T1-SV_2;SV-a,SV-b,SV-c,SV-d;;;;;;;;;;;;;;Trinn
+T1;Nakent berg;uLKM;BK-0|a|b|c|d;BK;T1-BK_1;BK-0;‘normal’ berggrunn;T1-BK_2;BK-a;ultramafisk;T1-BK_3;BK-b;jern-rikt;T1-BK_4;BK-c;kobber-rikt;T1-BK_5;BK-d;lavamark;;;;Trinn
+T1;Nakent berg;uLKM;IF-0a|b¤;IF;T1-IF_1;IF-0,IF-a;uten isforstyrrelsespreg og litt isforstyrrelsespreget;T1-IF_2;IF-b,IF-¤;klart isforstyrrelsespreget og preget av disruptiv isforstyrrelse;;;;;;;;;;;;;Trinn
+T2;Åpen grunnlendt mark;hLKM;KA-abc|de|fg|hi;KA;T2-KA_1;KA-a,KA-b,KA-c;;T2-KA_2;KA-d,KA-e;;T2-KA_3;KA-f,KA-g;;T2-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T2;Åpen grunnlendt mark;tLKM;UF-def|gh;UF;T2-UF_1;UF-d,UF-e,UF-f;;T2-UF_2;UF-g,UF-h;;;;;;;;;;;;;;Trinn
+T2;Åpen grunnlendt mark;uLKM;BK-0|a;BK;T2-BK_1;BK-0;‘normal’ berggrunn;T2-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T2;Åpen grunnlendt mark;uLKM;HI-0|a;HI;T2-HI_1;HI-0;uten hevdpreg;T2-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T2;Åpen grunnlendt mark;uLKM;VM-0a|b;VM;T2-VM_1;VM-0, VM-a;veldrenert mark;T2-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;hLKM;KA-abc|de|fg|hi;KA;T3-KA_1;KA-a,KA-b,KA-c;;T3-KA_2;KA-d,KA-e;;T3-KA_3;KA-f,KA-g;;T3-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;hLKM;UF-bc|de|fg;UF;T3-UF_1;UF-b,UF-c;;T3-UF_2;UF-d,UF-e;;T3-UF_3;UF-f,UF-g;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;tLKM;KI-0a|bc;KI;T3-KI_1;KI-0,KI-a;;T3-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;uLKM;BK-0|a;BK;T3-BK_1;BK-0;‘normal’ berggrunn;T3-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;uLKM;HI-0|a;HI;T3-HI_1;HI-0;uten hevdpreg;T3-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;uLKM;RU-0|a;RU;T3-RU_1;RU-0;uten raspreg;T3-RU_2;RU-a;observerbart raspreget;;;;;;;;;;;;;Trinn
+T3;Fjellhei, leside og tundra;uLKM;VM-0a|b;VM;T3-VM_1;VM-0, VM-a;veldrenert mark;T3-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];hLKM;UF-ab|cd|ef|gh;UF;T4-UF_1;UF-a,UF-b;;T4-UF_2;UF-c,UF-d;;T4-UF_3;UF-e,UF-f;;T4-UF_4;UF-g,UF-h;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];hLKM;KA-abc|de|fg|hi;KA;T4-KA_1;KA-a,KA-b,KA-c;;T4-KA_2;KA-d,KA-e;;T4-KA_3;KA-f,KA-g;;T4-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];tLKM;KI-0a|bc;KI;T4-KI_1;KI-0,KI-a;;T4-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;BK-0|a;BK;T4-BK_1;BK-0;normal skogsmark;T4-BK_2;BK-a;ultramafisk (olivinskogsmark);;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;HI-0|a;HI;T4-HI_1;HI-0;uten hevdpreg;T4-HI_2;HI-a;tydelig beitepreget (beiteskog);;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;SU-0|a;SU;T4-SU_1;SU-0;uten skredpreg;T4-SU_2;SU-a;litt skredpreget;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;S1-0|bc|de|fg|hi|j;S1;T4-S1_1;S1-0;usortert sediment og/eller uten preg av kornstørrelse;T4-S1_2;S1-b,S1-c;stein- og blokkdominert;T4-S1_3;S1-d,S1-e;grusdominert;T4-S1_4;S1-f,S1-g;sand-dominert;T4-S1_5;S1-h,S1-i;silt- og leirdominert;T4-S1_6;S1-j;skjellsand;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;SS-h|i|+;SS;T4-SS_1;SS-h;dyneskogsmark;T4-SS_2;SS-i;sandskogsmark;T4-SS_3;SS-+;normal skogsmark;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;VS-0|a;VS;T4-VS_1;VS-0;uten fosserøykpreg;T4-VS_2;VS-a;fosserøyk-skogsmark;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;RU-0|a;RU;T4-RU_1;RU-0;uten raspreg;T4-RU_2;RU-a;observerbart raspreget;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;UE-0a|bcdefg;UE;T4-UE_1;UE-0, UE-a;ikke eller svært lite uttørkingseksponert;T4-UE_2;UE-b,UE-c,UE-d,UE-e,UE-f,UE-g;temmelig lite eller sterkere uttørkingseksponert;;;;;;;;;;;;;Trinn
+T4;Fastmarksskogsmark [skogsmark];uLKM;VM-0a|b;VM;T4-VM_1;VM-0, VM-a;veldrenert mark;T4-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T5;Grotte og overheng ;hLKM;GS-a|bcd|¤;GS;T5-GS_1;GS-a;;T5-GS_2;GS-b,GS-c,GS-d;;T5-GS_3;GS-¤;;;;;;;;;;;Trinn
+T5;Grotte og overheng ;hLKM;KA-abc|defg|hi;KA;T5-KA_1;KA-a,KA-b,KA-c;;T5-KA_2;KA-d,KA-e,KA-f,KA-g;;T5-KA_3;KA-h,KA-i;;;;;;;;;;;Trinn
+T5;Grotte og overheng ;tLKM;UE-0abc|defg;UE;T5-UE_1;UE-0,UE-a,UE-b,UE-c;;T5-UE_2;UE-d,UE-e,UE-f,UE-g;;;;;;;;;;;;;;Trinn
+T5;Grotte og overheng ;uLKM;LA-0abcd|ef+;LA;T5-LA_1;LA-0,LA-a,LA-b,LA-c,LA-d;pionérfase;T5-LA_2;LA-e,LA-f,LA-+;konsoliderings- og ettersuksesjonsfase;;;;;;;;;;;;;Trinn
+T5;Grotte og overheng ;uLKM;BK-0|a|b|c;BK;T5-BK_1;BK-0;‘normal’ berggrunn;T5-BK_2;BK-a;ultramafisk;T5-BK_3;BK-b;jern-rikt;T5-BK_4;BK-c;kobber-rikt;;;;;;;Trinn
+T6;Strandberg ;hLKM;TV-i|j|k;TV;T6-TV_1;TV-i;;T6-TV_2;TV-j;;T6-TV_3;TV-k;;;;;;;;;;;Trinn
+T6;Strandberg ;tLKM;VF-0abcde|fgh¤;VF;T6-VF_1;VF-0,VF-a,VF-b,VF-c,VF-d,VF-e;;T6-VF_2;VF-f,VF-g,VF-h,VF-¤;;;;;;;;;;;;;;Trinn
+T6;Strandberg ;tLKM;KA-bcde|fghi;KA;T6-KA_1;KA-b,KA-c,KA-d,KA-e;;T6-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+T6;Strandberg ;tLKM;IF-0ab|¤;IF;T6-IF_1;IF-0,IF-a,IF-b;;T6-IF_2;IF-¤;;;;;;;;;;;;;;Trinn
+T6;Strandberg ;tLKM;HF-0ab|+;HF;T6-HF_1;HF-0,HF-a,HF-b;;T6-HF_2;HF-+;;;;;;;;;;;;;;Trinn
+T7;Snøleie ;hLKM;KA-a|bc|de|fg|hi;KA;T7-KA_1;KA-a;;T7-KA_2;KA-b,KA-c;;T7-KA_3;KA-d,KA-e;;T7-KA_4;KA-f,KA-g;;T7-KA_5;KA-h,KA-i;;;;;Trinn
+T7;Snøleie ;hLKM;SV-ab|cd|ef|g;SV;T7-SV_1;SV-a,SV-b;;T7-SV_2;SV-c,SV-d;;T7-SV_3;SV-e,SV-f;;T7-SV_4;SV-g;;;;;;;;Trinn
+T7;Snøleie ;tLKM;KI-0a|bc;KI;T7-KI_1;KI-0,KI-a;;T7-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T7;Snøleie ;uLKM;S1-bc|defg;S1;T7-S1_1;S1-b,S1-c;stein og blokker;T7-S1_2;S1-d,S1-e,S1-f,S1-g;dominert av grus og finere materiale;;;;;;;;;;;;;Trinn
+T7;Snøleie ;uLKM;HI-0|a;HI;T7-HI_1;HI-0;uten hevdpreg;T7-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T7;Snøleie ;uLKM;VM-0a|b;VM;T7-VM_1;VM-0, VM-a;veldrenert mark;T7-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T8;Fuglefjell-eng og fugletopp ;hLKM;NG-ab|cd|¤;NG;T8-NG_1;NG-a,NG-b;;T8-NG_2;NG-c,NG-d;;T8-NG_3;NG-¤;;;;;;;;;;;Trinn
+T8;Fuglefjell-eng og fugletopp ;tLKM;UF-abcd|efgh;UF;T8-UF_1;UF-a,UF-b,UF-c,UF-d;;T8-UF_2;UF-e,UF-f,UF-g,UF-h;;;;;;;;;;;;;;Trinn
+T8;Fuglefjell-eng og fugletopp ;tLKM;KI-0a|bc;KI;T8-KI_1;KI-0,KI-a;;T8-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T8;Fuglefjell-eng og fugletopp ;uLKM;HI-0|a;HI;T8-HI_1;HI-0;uten hevdpreg;T8-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T8;Fuglefjell-eng og fugletopp ;uLKM;KA-cde|fghi;KA;T8-KA_1;KA-c,KA-d,KA-e;litt kalkfattig og intermediær;T8-KA_2;KA-f,KA-g,KA-h,KA-i;kalkrik;;;;;;;;;;;;;Trinn
+T9;Mosetundra ;tLKM;KA-cde|fghi;KA;T9-KA_1;KA-c,KA-d,KA-e;;T9-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+T9;Mosetundra ;uLKM;VM-0a|b;VM;T9-VM_1;VM-0, VM-a;veldrenert mark;T9-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T10;Arktisk steppe ;tLKM;VI-0|abc;VI;T10-VI_1;VI-0;;T10-VI_2;VI-a,VI-b,VI-c;;;;;;;;;;;;;;Trinn
+T11;Saltanrikingsmark i fjæresonen ;tLKM;S1-de|hi;S1;T11-S1_1;S1-d,S1-e;;T11-S1_2;S1-h,S1-i;;;;;;;;;;;;;;Trinn
+T11;Saltanrikingsmark i fjæresonen ;tLKM;TV-cdefgh|ijk;TV;T11-TV_1;TV-c,TV-d,TV-e,TV-f,TV-g,TV-h;;T11-TV_2;TV-i,TV-j,TV-k;;;;;;;;;;;;;;Trinn
+T12;Strandeng ;hLKM;TV-cd|ef|gh|ijk;TV;T12-TV_1;TV-c,TV-d;;T12-TV_2;TV-e,TV-f;;T12-TV_3;TV-g,TV-h;;T12-TV_4;TV-i,TV-j,TV-k;;;;;;;;Trinn
+T12;Strandeng ;uLKM;HI-0|a;HI;T12-HI_1;HI-0;uten hevdpreg;T12-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T12;Strandeng ;uLKM;S1-de|hi|j;S1;T12-S1_1;S1-d,S1-e;grus;T12-S1_2;S1-h,S1-i;silt- og leirdominert;T12-S1_3;S1-j;skjellsand;;;;;;;;;;Trinn
+T12;Strandeng ;uLKM;SA-abc|def;SA;T12-SA_1;SA-a,SA-b,SA-c;brakt;T12-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+T12;Strandeng ;uLKM;KA-efg|hi;KA;T12-KA_1;KA-e,KA-f,KA-g;sterkt intermediær og svakt kalkrik;T12-KA_2;KA-h,KA-i;sterkt kalkrik;;;;;;;;;;;;;Trinn
+T12;Strandeng ;uLKM;VM-0a|b;VM;T12-VM_1;VM-0, VM-a;veldrenert mark;T12-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T13;Rasmark ;hLKM;KA-abc|defg|hi;KA;T13-KA_1;KA-a,KA-b,KA-c;;T13-KA_2;KA-d,KA-e,KA-f,KA-g;;T13-KA_3;KA-h,KA-i;;;;;;;;;;;Trinn
+T13;Rasmark ;hLKM;S1-b|c|def;S1;T13-S1_1;S1-b;;T13-S1_2;S1-c;;T13-S1_3;S1-d,S1-e,S1-f;;;;;;;;;;;Trinn
+T13;Rasmark ;tLKM;UE-abc|defg;UE;T13-UE_1;UE-a,UE-b,UE-c;;T13-UE_2;UE-d,UE-e,UE-f,UE-g;;;;;;;;;;;;;;Trinn
+T13;Rasmark ;tLKM;RU-bcde|¤;RU;T13-RU_1;RU-b,RU-c,RU-d,RU-e;;T13-RU_2;RU-¤;;;;;;;;;;;;;;Trinn
+T13;Rasmark ;uLKM;VI-0a|bc;VI;T13-VI_1;VI-0,VI-a;uten vindpreg til temmelig sterkt vindpreget;T13-VI_2;VI-b,VI-c;svært sterkt vindpreget;;;;;;;;;;;;;Trinn
+T13;Rasmark ;uLKM;BK-0|a;BK;T13-BK_1;BK-0;‘normal’ berggrunn;T13-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T14;Rabbe ;tLKM;KA-abcde|fghi;KA;T14-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;;T14-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+T14;Rabbe ;tLKM;VI-abc|¤;VI;T14-VI_1;VI-a,VI-b,VI-c;;T14-VI_2;VI-¤;;;;;;;;;;;;;;Trinn
+T15;Fosse-eng ;tLKM;KA-cde|fgh;KA;T15-KA_1;KA-c,KA-d,KA-e;;T15-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+T15;Fosse-eng ;uLKM;KI-0a|bc;KI;T15-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;T15-KI_2;KI-b,KI-c;svak kildevannspåvirkning (storbregne- og høgstaudemark);;;;;;;;;;;;;Trinn
+T15;Fosse-eng ;uLKM;HI-0|a;HI;T15-HI_1;HI-0;uten hevdpreg;T15-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T15;Fosse-eng ;uLKM;VS-bc|d;VS;T15-VS_1;VS-b,VS-c;fossestøvpreget;T15-VS_2;VS-d;fosseyrpreget;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;hLKM;KA-abc|de|fg|hi;KA;T16-KA_1;KA-a,KA-b,KA-c;;T16-KA_2;KA-d,KA-e;;T16-KA_3;KA-f,KA-g;;T16-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;tLKM;RU-bc|de;RU;T16-RU_1;RU-b,RU-c;;T16-RU_2;RU-d,RU-e;;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;tLKM;KI-0a|bc;KI;T16-KI_1;KI-0,KI-a;;T16-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;uLKM;HI-0|a;HI;T16-HI_1;HI-0;uten hevdpreg;T16-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;uLKM;BK-0|a;BK;T16-BK_1;BK-0;‘normal’ berggrunn;T16-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;uLKM;UF-bcd|efgh;UF;T16-UF_1;UF-b,UF-c,UF-d;temmelig frisk til intermediær;T16-UF_2;UF-e,UF-f,UF-g,UF-h;tørkeutsatt ;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;uLKM;VM-0a|b;VM;T16-VM_1;VM-0, VM-a;veldrenert mark;T16-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T16;Rasmarkhei og -eng ;uLKM;VI-0a|bc;VI;T16-VI_1;VI-0,VI-a;uten vindpreg til temmelig sterkt vindpreget;T16-VI_2;VI-b,VI-c;svært sterkt vindpreget;;;;;;;;;;;;;Trinn
+T17;Aktiv skredmark ;hLKM;S1-0|de|fg|hi;S1;T17-S1_1;S1-0;;T17-S1_2;S1-d,S1-e;;T17-S1_3;S1-f,S1-g;;T17-S1_4;S1-h,S1-i;;;;;;;;Trinn
+T17;Aktiv skredmark ;uLKM;KA-bcde|fgh;KA;T17-KA_1;KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;T17-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T17;Aktiv skredmark ;uLKM;SU-b|c;SU;T17-SU_1;SU-b;temmelig sterkt skredpreg;T17-SU_2;SU-c;svært sterkt skredpreg;;;;;;;;;;;;;Trinn
+T17;Aktiv skredmark ;uLKM;KI-0a|bc;KI;T17-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;T17-KI_2;KI-b,KI-c;svak kildevannspåvirkning;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;hLKM;S1-cde|fg|hi;S1;T18-S1_1;S1-c,S1-d,S1-e;;T18-S1_2;S1-f,S1-g;;T18-S1_3;S1-h,S1-i;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;tLKM;KA-bcde|fgh;KA;T18-KA_1;KA-b,KA-c,KA-d,KA-e;;T18-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;tLKM;VF-f|gh¤;VF;T18-VF_1;VF-f;;T18-VF_2;VF-g,VF-h,VF-¤;;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;tLKM;FR-0|a;FR;T18-FR_1;FR-0;;T18-FR_2;FR-a;;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;uLKM;HI-0|a;HI;T18-HI_1;HI-0;uten hevdpreg;T18-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;uLKM;KI-0a|bc;KI;T18-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;T18-KI_2;KI-b,KI-c;svak kildevannspåvirkning;;;;;;;;;;;;;Trinn
+T18;Åpen flomfastmark ;uLKM;IF-0|ab;IF;T18-IF_1;IF-0;uten isforstyrrelsespreg;T18-IF_2;IF-a,IF-b;litt eller klart isforstyrrelsespreget;;;;;;;;;;;;;Trinn
+T19;Oppfrysingsmark ;hLKM;S1-cd|h;S1;T19-S1_1;S1-c,S1-d;;T19-S1_2;S1-h;;;;;;;;;;;;;;Trinn
+T19;Oppfrysingsmark ;tLKM;KA-bcde|fgh;KA;T19-KA_1;KA-b,KA-c,KA-d,KA-e;;T19-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+T20;Isinnfrysingsmark ;tLKM;KA-cde|fgh;KA;T20-KA_1;KA-c,KA-d,KA-e;;T20-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+T21;Sanddynemark ;hLKM;SS-a|bc|d|ef|gh|i;SS;T21-SS_1;SS-a;;T21-SS_2;SS-b,SS-c;;T21-SS_3;SS-d;;T21-SS_4;SS-e,SS-f;;T21-SS_5;SS-g,SS-h;;T21-SS_6;SS-i;;Trinn
+T22;Sanddynemark ;tLKM;VM-0|ab;VM;T22-VM_1;VM-0;;T22-VM_2;VM-a,VM-b;;;;;;;;;;;;;;Trinn
+T21;Sanddynemark ;tLKM;VI-abc|¤;VI;T21-VI_1;VI-a,VI-b,VI-c;;T21-VI_2;VI-¤;;;;;;;;;;;;;;Trinn
+T21;Sanddynemark ;uLKM;HI-0|a;HI;T21-HI_1;HI-0;uten hevdpreg;T21-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T22;Fjellgrashei og grastundra ;tLKM;KA-bcde|fgh;KA;T22-KA_1;KA-b,KA-c,KA-d,KA-e;;T22-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+T22;Fjellgrashei og grastundra ;tLKM;SV-0|ab;SV;T22-SV_1;SV-0;;T22-SV_2;SV-a,SV-b;;;;;;;;;;;;;;Trinn
+T22;Fjellgrashei og grastundra ;uLKM;VM-0a|b;VM;T22-VM_1;VM-0,VM-a;veldrenert eller vekselfuktig;T22-VM_2;VM-b;fuktig;;;;;;;;;;;;;Trinn
+T23;Ferskvannsdriftvoll ;;;;;;;;;;;;;;;;;;;;;;
+T24;Driftvoll ;hLKM;VF-cd|e|f;VF;T24-VF_1;VF-c,VF-d;;T24-VF_2;VF-e;;T24-VF_3;VF-f;;;;;;;;;;;Trinn
+T24;Driftvoll ;uLKM;VM-0a|b;VM;T24-VM_1;VM-0,VM-a;veldrenert eller vekselfuktig;T24-VM_2;VM-b;fuktig;;;;;;;;;;;;;Trinn
+T25;Historisk skredmark ;hLKM;S1-0|de|fg|hi;S1;T25-S1_1;S1-0;;T25-S1_2;S1-d,S1-e;;T25-S1_3;S1-f,S1-g;;T25-S1_4;S1-h,S1-i;;;;;;;;Trinn
+T25;Historisk skredmark ;uLKM;KI-0a|bc;KI;T25-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;T25-KI_2;KI-b,KI-c;svak kildevannspåvirkning (storbregne- og høgstaudemark);;;;;;;;;;;;;Trinn
+T25;Historisk skredmark ;uLKM;KA-bcde|fgh;KA;T25-KA_1;KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;T25-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;tLKM;SV-0|abcd;SV;T26-SV_1;SV-0;;T26-SV_2;SV-a,SV-b,SV-c,SV-d;;;;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;tLKM;VM-0a|b;VM;T26-VM_1;VM-0,VM-a;;T26-VM_2;VM-b;;;;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;tLKM;S1-cd|efg|hi;S1;T26-S1_1;S1-c,S1-d;;T26-S1_2;S1-e,S1-f,S1-g;;T26-S1_3;S1-h,S1-i;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;tLKM;LA-0ab|cdef;LA;T26-LA_1;LA-0,LA-a,LA-b;;T26-LA_2;LA-c,LA-d,LA-e,LA-f;;;;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;uLKM;KI-0a|bc;KI;T26-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;T26-KI_2;KI-b,KI-c;kildevannspåvirkning (kildemyr-, kilde- og våtsnøleieinitialer);;;;;;;;;;;;;Trinn
+T26;Breforland og snøavsmeltingsområde ;uLKM;KA-cde|fghi;KA;T26-KA_1;KA-c,KA-d,KA-e;litt kalkfattig og intermediær;T26-KA_2;KA-f,KA-g,KA-h,KA-i;kalkrik;;;;;;;;;;;;;Trinn
+T27;Blokkmark ;hLKM;SV-0|abcdef|g;SV;T27-SV_1;SV-0;;T27-SV_2;SV-a,SV-b,SV-c,SV-d,SV-e,SV-f;;T27-SV_3;SV-g;;;;;;;;;;;Trinn
+T27;Blokkmark ;tLKM;KA-abcde|fghi;KA;T27-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;;T27-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+T27;Blokkmark ;tLKM;VI-0a|bc;VI;T27-VI_1;VI-0,VI-a;;T27-VI_2;VI-b,VI-c;;;;;;;;;;;;;;Trinn
+T27;Blokkmark ;tLKM;LA-0abcd|ef+;LA;T27-LA_1;LA-0,LA-a,LA-b,LA-c,LA-d;;T27-LA_2;LA-e,LA-f,LA-+;;;;;;;;;;;;;;Trinn
+T27;Blokkmark ;uLKM;BK-0|a|b;BK;T27-BK_1;BK-0;‘normal’ berggrunn;T27-BK_2;BK-a;ultramafisk;T27-BK_3;BK-b;jern-rikt;;;;;;;;;;Trinn
+T27;Blokkmark ;uLKM;S1-b|c;S1;T27-S1_1;S1-b;blokkdominert;T27-S1_2;S1-c;steindominert;;;;;;;;;;;;;Trinn
+T27;Blokkmark ;uLKM;UE-abc|defg;UE;T27-UE_1;UE-a,UE-b,UE-c;lite uttørkingseksponert;T27-UE_2;UE-d,UE-e,UE-f,UE-g;uttørkingseksponert;;;;;;;;;;;;;Trinn
+T28;Polarørken ;hLKM;KA-abc|defg|hi;KA;T28-KA_1;KA-a,KA-b,KA-c;;T28-KA_2;KA-d,KA-e,KA-f,KA-g;;T28-KA_3;KA-h,KA-i;;;;;;;;;;;Trinn
+T29;Grus- og steindominert strand og strandlinje ;tLKM;S1-c|de|j;S1;T29-S1_1;S1-c;;T29-S1_2;S1-d,S1-e;;T29-S1_3;S1-j;;;;;;;;;;;Trinn
+T29;Grus- og steindominert strand og strandlinje ;tLKM;LA-0ab|cdef;LA;T29-LA_1;LA-0,LA-a,LA-b;;T29-LA_2;LA-c,LA-d,LA-e,LA-f;;;;;;;;;;;;;;Trinn
+T29;Grus- og steindominert strand og strandlinje ;tLKM;VI-abc|¤;VI;T29-VI_1;VI-a,VI-b,VI-c;;T29-VI_2;VI-¤;;;;;;;;;;;;;;Trinn
+T29;Grus- og steindominert strand og strandlinje ;tLKM;TV-ijk|l+;TV;T29-TV_1;TV-i,TV-j,TV-k;;T29-TV_2;TV-l,TV-+;;;;;;;;;;;;;;Trinn
+T29;Grus- og steindominert strand og strandlinje ;uLKM;HI-0|a;HI;T29-HI_1;HI-0;uten hevdpreg;T29-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;tLKM;S1-cde|fghi;S1;T30-S1_1;S1-c,S1-d,S1-e;;T30-S1_2;S1-f,S1-g,S1-h,S1-i;;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;tLKM;VF-bc|de;VF;T30-VF_1;VF-b,VF-c;;T30-VF_2;VF-d,VF-e;;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;tLKM;ER-0a|b;ER;T30-ER_1;ER-0,ER-a;;T30-ER_2;ER-b;;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;tLKM;KI-0a|bc;KI;T30-KI_1;KI-0,KI-a;;T30-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;uLKM;HI-0|a;HI;T30-HI_1;HI-0;uten hevdpreg;T30-HI_2;HI-a;tydelig beitepreget (beiteskog);;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;uLKM;SA-0|ab;SA;T30-SA_1;SA-0;ikke saltpåvirket;T30-SA_2;SA-a,SA-b;saltpåvirket;;;;;;;;;;;;;Trinn
+T30;Flomskogsmark ;uLKM;KA-bcde|fgh;KA;T30-KA_1;KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;T30-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T31;Boreal hei ;hLKM;KA-abc|de|fg|hi;KA;T31-KA_1;KA-a,KA-b,KA-c;;T31-KA_2;KA-d,KA-e;;T31-KA_3;KA-f,KA-g;;T31-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T31;Boreal hei ;hLKM;UF-bc|de|fgh;UF;T31-UF_1;UF-b,UF-c;;T31-UF_2;UF-d,UF-e;;T31-UF_3;UF-f,UF-g,UF-h;;;;;;;;;;;Trinn
+T31;Boreal hei ;tLKM;KI-0a|bc;KI;T31-KI_1;KI-0,KI-a;;T31-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T31;Boreal hei ;uLKM;VM-0a|b;VM;T31-VM_1;VM-0, VM-a;veldrenert mark;T31-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T31;Boreal hei ;uLKM;HI-0|a;HI;T31-HI_1;HI-0;uten hevdpreg;T31-HI_2;HI-a;tydelig beitepreget;;;;;;;;;;;;;Trinn
+T31;Boreal hei ;uLKM;BK-0|a;BK;T31-BK_1;BK-0;‘normal’ berggrunn;T31-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;hLKM;KA-bc|de|fg|hi;KA;T32-KA_1;KA-b,KA-c;;T32-KA_2;KA-d,KA-e;;T32-KA_3;KA-f,KA-g;;T32-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T32;Semi-naturlig eng ;hLKM;HI-b|cd|e;HI;T32-HI_1;HI-b;;T32-HI_2;HI-c,HI-d;;T32-HI_3;HI-e;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;tLKM;KI-0a|bc;KI;T32-KI_1;KI-0,KI-a;;T32-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;tLKM;UF-ab|cde;UF;T32-UF_1;UF-a,UF-b;;T32-UF_2;UF-c,UF-d,UF-e;;;;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;tLKM;SS-fghi|jk+;SS;T32-SS_1;SS-f,SS-g,SS-h,SS-i;;T32-SS_2;SS-j,SS-k,SS-+;;;;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;uLKM;VM-0a|b;VM;T32-VM_1;VM-0, VM-a;veldrenert mark;T32-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T32;Semi-naturlig eng ;uLKM;SP-0|a;SP;T32-SP_1;SP-0;beitepreget;T32-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;tLKM;TV-fgh|ijk;TV;T33-TV_1;TV-f,TV-g,TV-h;;T33-TV_2;TV-i,TV-j,TV-k;;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;SA-abc|def;SA;T33-SA_1;SA-a,SA-b,SA-c;brakt;T33-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;SP-0|a;SP;T33-SP_1;SP-0;beitepreget;T33-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;VM-0a|b;VM;T33-VM_1;VM-0, VM-a;veldrenert mark;T33-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;HI-bc|de;HI;T33-HI_1;HI-b,HI-c;svært - typisk ekstensivt hevdpreg;T33-HI_2;HI-d,HI-e;typisk ekstensivt hevdpreg - ekstensivt hevdpreg med svakt preg av gjødsling;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;KA-efg|hi;KA;T33-KA_1;KA-e,KA-f,KA-g;sterkt intermediær og svakt kalkrik;T33-KA_2;KA-h,KA-i;sterkt kalkrik;;;;;;;;;;;;;Trinn
+T33;Semi-naturlig strandeng ;uLKM;S1-de|hi|j;S1;T33-S1_1;S1-d,S1-e;grus;T33-S1_2;S1-h,S1-i;silt- og leirdominert;T33-S1_3;S1-j;skjellsand;;;;;;;;;;Trinn
+T34;Kystlynghei ;hLKM;KA-abc|de|fg|hi;KA;T34-KA_1;KA-a,KA-b,KA-c;;T34-KA_2;KA-d,KA-e;;T34-KA_3;KA-f,KA-g;;T34-KA_4;KA-h,KA-i;;;;;;;;Trinn
+T34;Kystlynghei ;hLKM;UF-bc|de|fgh;UF;T34-UF_1;UF-b,UF-c;;T34-UF_2;UF-d,UF-e;;T34-UF_3;UF-f,UF-g,UF-h;;;;;;;;;;;Trinn
+T34;Kystlynghei ;tLKM;VM-0a|b;VM;T34-VM_1;VM-0,VM-a;;T34-VM_2;VM-b;;;;;;;;;;;;;;Trinn
+T34;Kystlynghei ;uLKM;BK-0|a;BK;T34-BK_1;BK-0;‘normal’ berggrunn;T34-BK_2;BK-a;ultramafisk;;;;;;;;;;;;;Trinn
+T35;Sterkt endret fastmark med løsmassedekke [løs sterkt endret fastmark] ;tLKM;S1-0|cde|fg|hi;S1;T35-S1_1;S1-0;;T35-S1_2;S1-c,S1-d,S1-e;;T35-S1_3;S1-f,S1-g;;T35-S1_4;S1-h,S1-i;;;;;;;;Trinn
+T35;Sterkt endret fastmark med løsmassedekke [løs sterkt endret fastmark] ;uLKM;KA-bcde|fgh;KA;T35-KA_1;KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;T35-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T36;Ny fastmark på tidligere våtmarks- og ferskvannsbunn [tørrlagte våtmarks- og ferskvannssystemer] ;tLKM;HS-A|B|C;HS;T36-HS_1;HS-A;;T36-HS_2;HS-B;;T36-HS_3;HS-C;;;;;;;;;;;Trinn
+T36;Ny fastmark på tidligere våtmarks- og ferskvannsbunn [tørrlagte våtmarks- og ferskvannssystemer] ;uLKM;KA-abcd|efgh;KA;T36-KA_1;KA-a,KA-b,KA-c,KA-d;kalkfattig og svak intermediær;T36-KA_2;KA-e,KA-f,KA-g,KA-h;sterk intermediær og kalkrik;;;;;;;;;;;;;Trinn
+T37;Ny fastmark på sterkt endrete og syntetiske substrater, i rask suksesjon [ny løs fastmark] ;tLKM;HS-A|B|C;HS;T37-HS_1;HS-A;;T37-HS_2;HS-B;;T37-HS_3;HS-C;;;;;;;;;;;Trinn
+T38;Treplantasje ;uLKM;KA-bcde|fgh;KA;T38-KA_1;KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;T38-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T38;Treplantasje ;uLKM;UF-ab|cde;UF;T38-UF_1;UF-a,UF-b;temmelig frisk og frisk;T38-UF_2;UF-c,UF-d,UF-e;litt frisk til litt tørkeutsatt;;;;;;;;;;;;;Trinn
+T39;Hard sterkt endret og ny fastmark i langsom suksesjon [hard sterkt endret fastmark] ;tLKM;KA-ab|cdef;KA;T39-KA_1;KA-a,KA-b;;T39-KA_2;KA-c,KA-d,KA-e,KA-f;;;;;;;;;;;;;;Trinn
+T39;Hard sterkt endret og ny fastmark i langsom suksesjon [hard sterkt endret fastmark] ;tLKM;HS-A|B|C|D;HS;T39-HS_1;HS-A;;T39-HS_2;HS-B;;T39-HS_3;HS-C;;T39-HS_4;HS-D;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;UF-ab|cde;UF;T40-UF_1;UF-a,UF-b;temmelig frisk og frisk;T40-UF_2;UF-c,UF-d,UF-e;litt frisk til litt tørkeutsatt;;;;;;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;KA-cde|fgh;KA;T40-KA_1;KA-c,KA-d,KA-e;litt kalkfattig og intermediær;T40-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;VM-0a|b;VM;T40-VM_1;VM-0, VM-a;veldrenert mark;T40-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;SP-0|a;SP;T40-SP_1;SP-0;beitepreget;T40-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;SA-0|abcdef;SA;T40-SA_1;SA-0;ikke saltpåvirket (fersk);T40-SA_2;SA-a,SA-b,SA-c,SA-d,SA-e,SA-f;saltpåvirket (svært brakt til salt);;;;;;;;;;;;;Trinn
+T40;Sterkt endret fastmark med preg av semi-naturlig eng [vegkanter, plener, parker og liknende med semi-naturlig engpreg] ;uLKM;SS-fghi|jk+;SS;T40-SS_1;SS-f,SS-g,SS-h,SS-i;stabilisert sand;T40-SS_2;SS-j,SS-k,SS-+;uten preg av sandmark;;;;;;;;;;;;;Trinn
+T41;Oppdyrket mark med preg av semi-naturlig eng [oppdyret mark med semi-naturlig engpreg] ;uLKM;HI-d|e;HI;T41-HI_1;HI-d;typisk ekstensivt hevdpreg;T41-HI_2;HI-e;ekstensivt hevdpreg med svakt preg av gjødsling;;;;;;;;;;;;;Trinn
+T41;Oppdyrket mark med preg av semi-naturlig eng [oppdyret mark med semi-naturlig engpreg] ;uLKM;SP-0|a;SP;T41-SP_1;SP-0;beitepreget;T41-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+T41;Oppdyrket mark med preg av semi-naturlig eng [oppdyret mark med semi-naturlig engpreg] ;uLKM;VM-0a|b;VM;T41-VM_1;VM-0, VM-a;veldrenert mark;T41-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T41;Oppdyrket mark med preg av semi-naturlig eng [oppdyret mark med semi-naturlig engpreg] ;uLKM;KA-cde|fgh;KA;T41-KA_1;KA-c,KA-d,KA-e;kalkfattig og intermediær;T41-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T42;Sterkt endret, hyppig bearbeidet fastmark med intensivt hevdpreg [blomsterbed og annen hyppig bearbeidet mark] ;;;;;;;;;;;;;;;;;;;;;;
+T43;Sterkt endret, varig fastmark med intensivt hevdpreg [plener, parker og liknende uten semi-naturlig engpreg] ;uLKM;KA-cde|fgh;KA;T43-KA_1;KA-c,KA-d,KA-e;kalkfattig og intermediær;T43-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T43;Sterkt endret, varig fastmark med intensivt hevdpreg [plener, parker og liknende uten semi-naturlig engpreg] ;uLKM;HI-fg|hi|j;HI;T43-HI_1;HI-f,HI-g;litt intensivt hevdpreg;T43-HI_2;HI-h,HI-i;temmelig intensivt hevdpreg;T43-HI_3;HI-j;svært intensivt hevdpreg;;;;;;;;;;Trinn
+T43;Sterkt endret, varig fastmark med intensivt hevdpreg [plener, parker og liknende uten semi-naturlig engpreg] ;uLKM;VM-0a|b;VM;T43-VM_1;VM-0, VM-a;veldrenert mark;T43-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T44;Åker ;uLKM;KA-cde|fgh;KA;T44-KA_1;KA-c,KA-d,KA-e;kalkfattig og intermediær;T44-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T44;Åker ;uLKM;S1-0|efg|hi;S1;T44-S1_1;S1-0;mineraljordfattig jord;T44-S1_2;S1-e,S1-f,S1-g;jord med høyt innhold av fin grus og sand;T44-S1_3;S1-h,S1-i;jord med høyt silt- og leirinnhold;;;;;;;;;;Trinn
+T44;Åker ;uLKM;VM-0a|b;VM;T44-VM_1;VM-0, VM-a;veldrenert mark;T44-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+T45;Oppdyrket varig eng ;hLKM;HI-gh|hi|j;HI;T45-HI_1;HI-g,HI-h;;T45-HI_2;HI-h,HI-i;;T45-HI_3;HI-j;;;;;;;;;;;Trinn
+T45;Oppdyrket varig eng ;tLKM;SP-0|a;SP;T45-SP_1;SP-0;;T45-SP_2;SP-a;;;;;;;;;;;;;;Trinn
+T45;Oppdyrket varig eng ;uLKM;S1-0|efg|hi;S1;T45-S1_1;S1-0;mineraljordfattig jord;T45-S1_2;S1-e,S1-f,S1-g;jord med høyt innhold av fin grus og sand;T45-S1_3;S1-h,S1-i;jord med høyt silt- og leirinnhold;;;;;;;;;;Trinn
+T45;Oppdyrket varig eng ;uLKM;KA-cde|fgh;KA;T45-KA_1;KA-c,KA-d,KA-e;litt kalkfattig og intermediær;T45-KA_2;KA-f,KA-g,KA-h;kalkrik;;;;;;;;;;;;;Trinn
+T45;Oppdyrket varig eng ;uLKM;VM-0a|b;VM;T45-VM_1;VM-0, VM-a;veldrenert mark;T45-VM_2;VM-b;fuktmark;;;;;;;;;;;;;Trinn
+V1;Åpen jordvannsmyr;hLKM;KA-ab|cd|ef|gh|i;KA;V1-KA_1;KA-a,KA-b;;V1-KA_2;KA-c,KA-d;;V1-KA_3;KA-e,KA-f;;V1-KA_4;KA-g,KA-h;;V1-KA_5;KA-i;;;;;Trinn
+V1;Åpen jordvannsmyr;hLKM;TV-cd|ef|gh|ij|k;TV;V1-TV_1;TV-c,TV-d;;V1-TV_2;TV-e,TV-f;;V1-TV_3;TV-g,TV-h;;V1-TV_4;TV-i,TV-j;;V1-TV_5;TV-k;;;;;Trinn
+V1;Åpen jordvannsmyr;tLKM;KI-0|bc;KI;V1-KI_1;KI-0;;V1-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+V1;Åpen jordvannsmyr;tLKM;MF-cd|ef;MF;V1-MF_1;MF-c,MF-d;;V1-MF_2;MF-e,MF-f;;;;;;;;;;;;;;Trinn
+V1;Åpen jordvannsmyr;tLKM;SA-0a|bcd;SA;V1-SA_1;SA-0,SA-a;;V1-SA_2;SA-b,SA-c,SA-d;;;;;;;;;;;;;;Trinn
+V1;Åpen jordvannsmyr;uLKM;TE-0|¤;TE;V1-TE_1;TE-0;torvakkumulering;V1-TE_2;TE-¤;torvakkumuleringsstillstand;;;;;;;;;;;;;Trinn
+V1;Åpen jordvannsmyr;uLKM;VT-0|b;VT;V1-VT_1;VT-0;jordvannsmyr;V1-VT_2;VT-b;elvevannsflommyr;;;;;;;;;;;;;Trinn
+V2;Myr- og sumpskogsmark;hLKM;KA-abcd|ef|ghi;KA;V2-KA_1;KA-a,KA-b,KA-c,KA-d;;V2-KA_2;KA-e,KA-f;;V2-KA_3;KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+V2;Myr- og sumpskogsmark;tLKM;KI-0a|bc;KI;V2-KI_1;KI-0,KI-a;;V2-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+V2;Myr- og sumpskogsmark;tLKM;TV-cdef|ghijk;TV;V2-TV_1;TV-c,TV-d,TV-e,TV-f;;V2-TV_2;TV-g,TV-h,TV-i,TV-j,TV-k;;;;;;;;;;;;;;Trinn
+V3;Nedbørsmyr ;hLKM;TV-cd|ef|gh|ij|k;TV;V3-TV_1;TV-c,TV-d;;V3-TV_2;TV-e,TV-f;;V3-TV_3;TV-g,TV-h;;V3-TV_4;TV-i,TV-j;;V3-TV_5;TV-k;;;;;Trinn
+V3;Nedbørsmyr ;tLKM;VI-0|ab;VI;V3-VI_1;VI-0;;V3-VI_2;VI-a,VI-b;;;;;;;;;;;;;;Trinn
+V3;Nedbørsmyr ;tLKM;MF-cd|ef;MF;V3-MF_1;MF-c,MF-d;;V3-MF_2;MF-e,MF-f;;;;;;;;;;;;;;Trinn
+V3;Nedbørsmyr ;uLKM;TE-0|¤;TE;V3-TE_1;TE-0;torvakkumulering;V3-TE_2;TE-¤;torvakkumuleringsstillstand;;;;;;;;;;;;;Trinn
+V4;Kaldkilde ;hLKM;KA-cd|ef|ghi;KA;V4-KA_1;KA-c,KA-d;;V4-KA_2;KA-e,KA-f;;V4-KA_3;KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+V4;Kaldkilde ;tLKM;KT-a|b;KT;V4-KT_1;KT-a;;V4-KT_2;KT-b;;;;;;;;;;;;;;Trinn
+V4;Kaldkilde ;tLKM;KI-de|¤;KI;V4-KI_1;KI-d,KI-e;;V4-KI_2;KI-¤;;;;;;;;;;;;;;Trinn
+V4;Kaldkilde ;uLKM;HI-0|a;HI;V4-HI_1;HI-0;uten hevdpreg;V4-HI_2;HI-a;beitepreget;;;;;;;;;;;;;Trinn
+V5;Varm kilde ;tLKM;JV-a|b;JV;V5-JV_1;JV-a;;V5-JV_2;JV-b;;;;;;;;;;;;;;Trinn
+V6;Våtsnøleie og snøleiekilde ;hLKM;SV-ab|cd|ef;SV;V6-SV_1;SV-a,SV-b;;V6-SV_2;SV-c,SV-d;;V6-SV_3;SV-e,SV-f;;;;;;;;;;;Trinn
+V6;Våtsnøleie og snøleiekilde ;tLKM;KI-bc|de;KI;V6-KI_1;KI-b,KI-c;;V6-KI_2;KI-d,KI-e;;;;;;;;;;;;;;Trinn
+V6;Våtsnøleie og snøleiekilde ;tLKM;KA-cdef|ghi;KA;V6-KA_1;KA-c,KA-d,KA-e,KA-f;;V6-KA_2;KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+V7;Arktisk permafrost-våtmark ;tLKM;KA-cdef|ghi;KA;V7-KA_1;KA-c,KA-d,KA-e,KA-f;;V7-KA_2;KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+V7;Arktisk permafrost-våtmark ;uLKM;TV-c|d;TV;V7-TV_1;TV-c;nedre mykmatte;V7-TV_2;TV-d;øvre mykmatte;;;;;;;;;;;;;Trinn
+V8;Strandsumpskogsmark ;tLKM;SA-0a|bcd;SA;V8-SA_1;SA-0,SA-a;;V8-SA_2;SA-b,SA-c,SA-d;;;;;;;;;;;;;;Trinn
+V8;Strandsumpskogsmark ;tLKM;KA-cde|fgh;KA;V8-KA_1;KA-c,KA-d,KA-e;;V8-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+V9;Semi-naturlig myr ;hLKM;KA-bcd|ef|ghi;KA;V9-KA_1;KA-b,KA-c,KA-d;;V9-KA_2;KA-e,KA-f;;V9-KA_3;KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+V9;Semi-naturlig myr ;uLKM;SP-0|a;SP;V9-SP_1;SP-0;beitepreget;V9-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+V9;Semi-naturlig myr ;uLKM;KI-0a|bc;KI;V9-KI_1;KI-0,KI-a;uten eller bare med observerbar kildevannspåvirkning;V9-KI_2;KI-b,KI-c;svak kildevannspåvirkning;;;;;;;;;;;;;Trinn
+V9;Semi-naturlig myr ;uLKM;TV-def|ghi;TV;V9-TV_1;TV-d,TV-e,TV-f;mykmatte/ nedre fastmatte;V9-TV_2;TV-g,TV-h,TV-i;øvre fastmatte/ nedre tue;;;;;;;;;;;;;Trinn
+V10;Semi-naturlig våteng ;tLKM;KA-cde|fgh;KA;V10-KA_1;KA-c,KA-d,KA-e;;V10-KA_2;KA-f,KA-g,KA-h;;;;;;;;;;;;;;Trinn
+V10;Semi-naturlig våteng ;uLKM;SP-0|a;SP;V10-SP_1;SP-0;beitepreget;V10-SP_2;SP-a;slåttepreget;;;;;;;;;;;;;Trinn
+V10;Semi-naturlig våteng ;tLKM;KI-0a|bc;KI;V10-KI_1;KI-0,KI-a;;V10-KI_2;KI-b,KI-c;;;;;;;;;;;;;;Trinn
+V11;Torvtak ;tLKM;KA-abcd|efghi;KA;V11-KA_1;KA-a,KA-b,KA-c,KA-d;;V11-KA_2;KA-e,KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+V12;Grøftet torvmark ;tLKM;KA-abcd|efghi;KA;V12-KA_1;KA-a,KA-b,KA-c,KA-d;;V12-KA_2;KA-e,KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+V12;Grøftet torvmark ;tLKM;VT-0|a;VT;V12-VT_1;VT-0;;V12-VT_2;VT-a;;;;;;;;;;;;;;Trinn
+V13;Ny våtmark ;tLKM;IO-0a|b¤;IO;V13-IO_1;IO-0,IO-a;;V13-IO_2;IO-b,IO-¤;;;;;;;;;;;;;;Trinn
+V13;Ny våtmark ;tLKM;HS-A|B|C|D;HS;V13-HS_1;HS-A;;V13-HS_2;HS-B;;V13-HS_3;HS-C;;V13-HS_4;HS-D;;;;;;;;Trinn
+V13;Ny våtmark ;uLKM;KA-abcd|efgh;KA;V13-KA_1;KA-a,KA-b,KA-c,KA-d;kalkfattig og svak intermediær;V13-KA_2;KA-e,KA-f,KA-g,KA-h;sterk intermediær og kalkrik;;;;;;;;;;;;;Trinn
+H1;Havvannmasser;hLKM;DM-0|a|bcd|ef;DM;H1-DM_1;DM-0;;H1-DM_2;DM-a;;H1-DM_3;DM-b,DM-c,DM-d;;H1-DM_4;DM-e,DM-f;;;;;;;;Trinn
+H1;Havvannmasser;tLKM;KY-0|a;KY;H1-KY_1;KY-0;;H1-KY_2;KY-a;;;;;;;;;;;;;;Trinn
+H1;Havvannmasser;uLKM;JV-0a|bcde¤;JV;H1-JV_1;JV-0,JV-a;ikke eller observerbart jordvarmeinfluert;H1-JV_2;JV-b,JV-c,JV-d,JV-e,JV-¤;litt til disruptivt jordvarmeinfluert;;;;;;;;;;;;;Trinn
+H2;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster [vannmasser i fjorder, poller og litoralbasseng] ;hLKM;SM-a|bc|def|gh|i|¤;SM;H2-SM_1;SM-a;;H2-SM_2;SM-b,SM-c;;H2-SM_3;SM-d,SM-e,SM-f;;H2-SM_4;SM-g,SM-h;;H2-SM_5;SM-i;;H2-SM_6;SM-¤;;Trinn
+H2;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster [vannmasser i fjorder, poller og litoralbasseng] ;tLKM;SA-abc|def;SA;H2-SA_1;SA-a,SA-b,SA-c;;H2-SA_2;SA-d,SA-e,SA-f;;;;;;;;;;;;;;Trinn
+H3;Ikke-sirkulerende marine vannmasser i fysisk avgrensete saltvannsforekomster [ikke-sirkulerende vannmasser i fjorder og poller];dLKM;OM∙¤;OM;H3-OM_1;OM-¤;;H3-OM_2;;;;;;;;;;;;;;;Trinn
+H4;Sterkt endrete marine vannmasser ;tLKM;SY-A|B|C|D;SY;H4-SY_1;SY-A;;H4-SY_2;SY-B;;H4-SY_3;SY-C;;H4-SY_4;SY-D;;;;;;;;Trinn
+H4;Sterkt endrete marine vannmasser ;uLKM;SA-abc|def;SA;H4-SA_1;SA-a,SA-b,SA-c;brakt;H4-SA_2;SA-d,SA-e,SA-f;salt;;;;;;;;;;;;;Trinn
+H4;Sterkt endrete marine vannmasser ;uLKM;SM-abcdef|ghi;SM;H4-SM_1;SM-a,SM-b,SM-c,SM-d,SM-e,SM-f;fjord eller poll;H4-SM_2;SM-g,SM-h,SM-i;(litoral)basseng;;;;;;;;;;;;;Trinn
+F1;Elvevannmasser;tLKM;VF-bcde|fgh¤;VF;F1-VF_1;VF-b,VF-c,VF-d,VF-e;;F1-VF_2;VF-f,VF-g,VF-h,VF-¤;;;;;;;;;;;;;;Trinn
+F1;Elvevannmasser;tLKM;HU-0a|bcd;HU;F1-HU_1;HU-0,HU-a;;F1-HU_2;HU-b,HU-c,HU-d;;;;;;;;;;;;;;Trinn
+F1;Elvevannmasser;tLKM;KA-abcde|fghi;KA;F1-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;;F1-KA_2;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;;;;Trinn
+F1;Elvevannmasser;uLKM;TU-0|a;TU;F1-TU_1;TU-0;klar;F1-TU_2;TU-a;turbid;;;;;;;;;;;;;Trinn
+F2;Sirkulerende innsjøvannmasser;hLKM;SM-bc|def|ghi|¤;SM;F2-SM_1;SM-b,SM-c;;F2-SM_2;SM-d,SM-e,SM-f;;F2-SM_3;SM-g,SM-h,SM-i;;F2-SM_4;SM-¤;;;;;;;;Trinn
+F2;Sirkulerende innsjøvannmasser;hLKM;KA-ab|cde|fghi;KA;F2-KA_1;KA-a,KA-b;;F2-KA_2;KA-c,KA-d,KA-e;;F2-KA_3;KA-f,KA-g,KA-h,KA-i;;;;;;;;;;;Trinn
+F2;Sirkulerende innsjøvannmasser;tLKM;HU-0a|bcd;HU;F2-HU_1;HU-0,HU-a;;F2-HU_2;HU-b,HU-c,HU-d;;;;;;;;;;;;;;Trinn
+F2;Sirkulerende innsjøvannmasser;tLKM;TU-0|a;TU;F2-TU_1;TU-0;;F2-TU_2;TU-a;;;;;;;;;;;;;;Trinn
+F2;Sirkulerende innsjøvannmasser;uLKM;KO-0|¤;KO;F2-KO_1;KO-0;isolert;F2-KO_2;KO-¤;del av større vannsystem;;;;;;;;;;;;;Trinn
+F3;Ikke-sirkulerende innsjøvannmasser ;uLKM;FK-a|b|c|d|e ;FK;F3-FK_1;FK-a;ektogen meromiksis; bunnvann som inneholder med 'fossilt' saltvann;F3-FK_2;FK-b;krenogen meromiksis; bunnvann som tilføres saltholdig kildevann;F3-FK_3;FK-c;biogen/endogen meromiksis; bunnvann med reduserende forhold og høye konsentrasjoner av oppløste jernsalter;F3-FK_4;FK-d;biogen/endogen meromiksis; høye saltkonsentrasjoner og CO2- og CH4-rikt bunnvann etter utfelling av kalk;F3-FK_5;FK-e;biogen/endogen meromiksis; høye saltkonsentrasjoner og CO2- og CH4-rikt bunnvann pga. stor tilførsel av humus;;;;Trinn
+F4;Sterkt endrete elvevannmasser ;tLKM;SY-a|b|c;SY;F4-SY_1;SY-a;;F4-SY_2;SY-b;;F4-SY_3;SY-c;;;;;;;;;;;Trinn
+F4;Sterkt endrete elvevannmasser ;uLKM;HU-0a|bcd;HU;F4-HU_1;HU-0,HU-a;klar;F4-HU_2;HU-b,HU-c,HU-d;humøs;;;;;;;;;;;;;Trinn
+F4;Sterkt endrete elvevannmasser ;uLKM;TU-0|a ;TU;F4-TU_1;TU-0;klar;F4-TU_2;TU-a;turbid;;;;;;;;;;;;;Trinn
+F4;Sterkt endrete elvevannmasser ;uLKM;VF-bcde|fgh¤;VF;F4-VF_1;VF-b,VF-c,VF-d,VF-e;meget svak til intermediær strøm (roligflytende eller hurtigstrømmende elv);F4-VF_2;VF-f,VF-g,VF-h,VF-¤;sterk til disruptiv energi (elv i stryk, fossestryk og foss);;;;;;;;;;;;;Trinn
+F4;Sterkt endrete elvevannmasser ;uLKM;KA-abcde|fghi;KA;F4-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;kalkfattig og intermediær;F4-KA_2;KA-f,KA-g,KA-h,KA-i;kalkrik;;;;;;;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;tLKM;SY-a|b|c|d;SY;F5-SY_1;SY-a;;F5-SY_2;SY-b;;F5-SY_3;SY-c;;F5-SY_4;SY-d;;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;uLKM;SM-bc|def|ghi|¤;SM;F5-SM_1;SM-b,SM-c;dyp innsjø med sjiktete vannmasser;F5-SM_2;SM-d,SM-e,SM-f;liten og/eller grunn innsjø;F5-SM_3;SM-g,SM-h,SM-i;dam og pytt;F5-SM_4;SM-¤;temporær vannforekomst;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;uLKM;KO-0|¤;KO;F5-KO_1;KO-0;isolert;F5-KO_2;KO-¤;del av større vannsystem;;;;;;;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;uLKM;TU-0|a;TU;F5-TU_1;TU-0;klar;F5-TU_2;TU-a;turbid;;;;;;;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;uLKM;HU-0a|bcd;HU;F5-HU_1;HU-0,HU-a;klar;F5-HU_2;HU-b,HU-c,HU-d;humøs;;;;;;;;;;;;;Trinn
+F5;Sterkt endrete innsjøvannmasser ;uLKM;KA-abcde|fghi;KA;F5-KA_1;KA-a,KA-b,KA-c,KA-d,KA-e;kalkfattig;F5-KA_2;KA-f,KA-g,KA-h,KA-i;kalkrik;;;;;;;;;;;;;Trinn
+I1;Snø- og isdekt fastmark;;;;;;;;;;;;;;;;;;;;;;
