@@ -1,0 +1,142 @@
+col_0;Variabelgruppe;Nivå 1 Kode;;Nivå 2 Kode;;Nivå 3 Kode;Sammensatt kode;Navn;Variabeltype;Nivå 2 Kode ny;Tags
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);1;2BE-1_1;Alkalifeltspatgranitt (alkali feldspar granite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);2;2BE-1_2;Granitt (granite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);3;2BE-1_3;Granodioritt (granodiorite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);4;2BE-1_4;Tonalitt (tonalite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);5;2BE-1_5;Trondhjemitt (trondhjemite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);6;2BE-1_6;Alkalifeltspatsyenitt (alkali feldspar syenite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);7;2BE-1_7;Syenitt (syenite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);8;2BE-1_8;Monzonitt (monzonite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);9;2BE-1_9;Monzodioritt (monzodiorite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);10;2BE-1_10;Larvikitt (larvikite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);11;2BE-1_11;Kvartsdioritt (quartz diorite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);12;2BE-1_12;Dioritt (diorite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);13;2BE-1_13;Gabbro (gabbro);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);14;2BE-1_14;Noritt (norite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);20;2BE-1_20;Nefelinførende bergart (nephelin-bearing rock);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);30;2BE-1_30;Peridotitt  (peridotite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);31;2BE-1_31;Dunitt (dunite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);32;2BE-1_32;Harzburgitt (harzburgite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);33;2BE-1_33;Wehrlitt (wehrlite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);34;2BE-1_34;Lherzolitt (lherzolite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);35;2BE-1_35;Websteritt (websterite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);36;2BE-1_36;Pyroksenitt (pyroksenite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);40;2BE-1_40;Charnockitt (charnockite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);41;2BE-1_41;Mangeritt (mangerite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);42;2BE-1_42;Enderbitt (enderbite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);43;2BE-1_43;Anortositt (anorthosite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);44;2BE-1_44;Karbonatitt (carbonatite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);50;2BE-1_50;Diabas (diabase);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);51;2BE-1_51;Lamprofyr (lamprophyre);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);60;2BE-1_60;Pegmatitt (pegmatite);B;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;1;Dypbergart (plutonic rock);61;2BE-1_61;Aplitt (aplite);;2BE-1;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);;2BE_2;Vulkansk bergart (volcanic rock);M;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);1;2BE-2_1;Ryolitt (rhyolite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);2;2BE-2_2;Ryodacitt (rhyodacite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);3;2BE-2_3;Dacitt (dacite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);4;2BE-2_4;Intermediær vulkansk bergart (intermediate volcanic rock);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);10;2BE-2_10;Trakytt (trachyte);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);11;2BE-2_11;Rombeporfyr (rhombporphyry);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);12;2BE-2_12;Latitt (latite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);13;2BE-2_13;Andesitt (andesite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);14;2BE-2_14;Mafisk vulkansk bergart (mafic volcanic rock);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);20;2BE-2_20;Basalt (basalt);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);21;2BE-2_21;Komatiitt (komatiite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);22;2BE-2_22;Nefelinførende lava (nepheline-bearing  lava);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);30;2BE-2_30;Pyroklastisk bergart (pyroclastic rock);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);40;2BE-2_40;Vulkanske breksje (volcanic breccia);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);41;2BE-2_41;Lapillituff (lapillituff);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);42;2BE-2_42;Tuff (tuff);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;2;Vulkansk bergart (volcanic rock);43;2BE-2_43;Ryolitt (rhyolite);B;2BE-2;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);;2BE_3;Sedimentær bergart (sedimentary rock);M;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);1;2BE-3_1;Leirstein (claystone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);2;2BE-3_2;Slamstein (mudstone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);3;2BE-3_3;Siltstein (siltstone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);4;2BE-3_4;Sandstein (sandstone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);5;2BE-3_5;Gråvakke (greywacke);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);6;2BE-3_6;Arkose (arkose);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);7;2BE-3_7;Konglomerat (konglomerate);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);10;2BE-3_10;Sedimentær breksje (sedimentary breccia);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);11;2BE-3_11;Tillitt (tillite);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);12;2BE-3_12;Diamiktitt (diamictite);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);20;2BE-3_20;Mergelstein (marl);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);21;2BE-3_21;Kalkstein (limestone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);22;2BE-3_22;Dolomittstein (dolostone);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);30;2BE-3_30;Kiselstein (chert);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);40;2BE-3_40;Tuffitt (tuffite);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;3;Sedimentær bergart (sedimentary rock);50;2BE-3_50;Båndet jernmalm (banded iron formation);B;2BE-3;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);;2BE_4;Metamorf bergart (metamorphic rock);M;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);1;2BE-4_1;Leirskifer (shale);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);2;2BE-4_2;Fyllitt (phyllite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);3;2BE-4_3;Glimmerskifer (mica schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);4;2BE-4_4;Granatglimmerskifer (garnet mica schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);5;2BE-4_5;Kalkfyllitt (calcareous phyllite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);6;2BE-4_6;Kalkglimmerskifer (calcareous mica schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);7;2BE-4_7;Skarn (skarn);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);10;2BE-4_10;Hornblendeskifer (hornblende schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);11;2BE-4_11;Grafittskifer (graphitic schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);15;2BE-4_15;Kalkspatmarmor (calcite marble);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);16;2BE-4_16;Dolomittmarmor (dolomite marble);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);20;2BE-4_20;Metasandstein (metasandstone);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);21;2BE-4_21;Metagråvakke (metagreywacke);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);22;2BE-4_22;Meta-arkose (meta-arkose);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);23;2BE-4_23;Kvartsitt (quartzite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);24;2BE-4_24;Kvartsskifer (quartz schist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);25;2BE-4_25;Kiselstein (metachert);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);26;2BE-4_26;Glimmergneis (mica gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);27;2BE-4_27;Kalksilikatbergart (calc-silicate rock);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);30;2BE-4_30;Granittisk gneis (granitic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);31;2BE-4_31;Granodiorittisk gneis (granodioritic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);32;2BE-4_32;Tonalittisk gneis (tonalitic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);33;2BE-4_33;Kvartsdiorittisk gneis (quartz dioritic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);34;2BE-4_34;Monzonittisk gneis (monzonitic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);35;2BE-4_35;Diorittisk gneis (dioritic gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);40;2BE-4_40;Migmatitt (migmatite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);41;2BE-4_41;Øyegneis  (augengneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);42;2BE-4_42;Båndgneis (banded gneiss);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);50;2BE-4_50;Grønnskifer (greenschist);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);51;2BE-4_51;Grønnstein (greenstone);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);52;2BE-4_52;Amfibolitt (amphibolite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);53;2BE-4_53;Granatamfibolitt (garnet amphibolite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);54;2BE-4_54;Metagabbro (metagabbro);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);55;2BE-4_55;Eklogitt (eclogite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);56;2BE-4_56;Serpentinitt (serpentinite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);57;2BE-4_57;Kleberstein (soapstone);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);60;2BE-4_60;Albititt (albitite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);61;2BE-4_61;Hydrotermalkvarts (hydrothermal quartz);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);70;2BE-4_70;Mylonitt (mylonite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);71;2BE-4_71;Kataklasitt (cataclasite);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);72;2BE-4_72;Tektonisk breksje (tectonic breccia);B;2BE-4;Trinn
+2;Geologisk sammensetning;BE;Bergartsforekomst;4;Metamorf bergart (metamorphic rock);73;2BE-4_73;Nedslagsbreksje (impact breccia);B;2BE-4;Trinn
+2;Geologisk sammensetning;FO;Fossilforekomst;X;Observert forekomst av fossil;;2FO_X;Fossilforekomst [observert forekomst av fossil];B;2FO-X;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;1;Jordartsforekomst;;2JA_1;Breelvavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;2;Jordartsforekomst;;2JA_2;Flomavsetning (mjæle) ;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;3;Jordartsforekomst;;2JA_3;Flomskredavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;4;Jordartsforekomst;;2JA_4;Elveavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;5;Jordartsforekomst;;2JA_5;Forvitringsjord;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;6;Jordartsforekomst;;2JA_6;Havavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;7;Jordartsforekomst;;2JA_7;Innsjøavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;8;Jordartsforekomst;;2JA_8;Morenejord;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;9;Jordartsforekomst;;2JA_9;Organisk materiale;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;10;Jordartsforekomst;;2JA_10;Planert jord;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;11;Jordartsforekomst;;2JA_11;Skredjord;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;12;Jordartsforekomst;;2JA_12;Strandavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;13;Jordartsforekomst;;2JA_13;Vindavsetning;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;14;Jordartsforekomst;;2JA_14;Påfylt/påkjørt jord ;B;2JA;Trinn
+2;Geologisk sammensetning;JA;Jordartsforekomst;15;Jordartsforekomst;;2JA_15;Bresjøavsetning ;B;2JA;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;AB;Jordsmonnforekomst;;2JM_AB;Albeluvisol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;AR;Jordsmonnforekomst;;2JM_AR;Arenosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;AT;Jordsmonnforekomst;;2JM_AT;Antrosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;CM;Jordsmonnforekomst;;2JM_CM;Cambisol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;CR;Jordsmonnforekomst;;2JM_CR;Cryosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;FL;Jordsmonnforekomst;;2JM_FL;Fluvisol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;GL;Jordsmonnforekomst;;2JM_GL;Gleysol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;HS;Jordsmonnforekomst;;2JM_HS;Histosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;LP;Jordsmonnforekomst;;2JM_LP;Leptosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;LU;Jordsmonnforekomst;;2JM_LU;Luvisol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;PH;Jordsmonnforekomst;;2JM_PH;Phaeosem;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;PZ;Jordsmonnforekomst;;2JM_PZ;Podzol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;RG;Jordsmonnforekomst;;2JM_RG;Regosol;B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;RH;Jordsmonnforekomst;;2JM_RH;Dyrka fylling/påfylt jord (= RGah);B;2JM;Trinn
+2;Geologisk sammensetning;JM;Jordsmonnforekomst;UM;Jordsmonnforekomst;;2JM_UM;Umbrisol;B;2JM;Trinn
+2;Geologisk sammensetning;MI;Mineralforekomst;X;Mineralforekomst ;;2MI_X;Mineral [observert forekomst av mineral med kode XXXX];B;2MI;Trinn

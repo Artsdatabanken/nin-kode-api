@@ -1,0 +1,542 @@
+col_0;Variabelgruppe;kode;Variabeltema;Nivå 2 kode;Variabel;Nivå 3 kode;Sammensatt_kode;Trinnbeskrivelse;PMG;VM;Variabeltype;K/TMåleskala;RS;KG;Nivå 2 kode ny;Tags
+7;Tilstandsvariasjon;BU;Spor etter bunntråling;;;0;7BU_0;0;F;g;A;A4b;5;2;;Trinn
+7;Tilstandsvariasjon;BU;Spor etter bunntråling;;;1;7BU_1;0 - 6,25;F;g;A;A4b;5;2;;Trinn
+7;Tilstandsvariasjon;BU;Spor etter bunntråling;;;2;7BU_2;3,25-50;F;g;A;A4b;5;2;;Trinn
+7;Tilstandsvariasjon;BU;Spor etter bunntråling;;;3;7BU_3;> 50;F;g;A;A4b;5;2;;Trinn
+7;Tilstandsvariasjon;BU;Spor etter bunntråling;;;X;7BU_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;0;7EU_0;Ingen eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;1;7EU_1;Svak eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;2;7EU_2;Nokså svak eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;3;7EU_3;Middels sterk eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;4;7EU_4;Nokså sterk eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;5;7EU_5;Sterk eutrofieringseffekt ;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;6;7EU_6;Ekstremtrinn;R;g;R;R7;15;4;;Trinn
+7;Tilstandsvariasjon;EU;Eutrofiering;;;X;7EU_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;0;7FA_0;Uten fremmedarter;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;1;7FA_1;Svak effekt;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;2;7FA_2;Nokså svak effekt;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;3;7FA_3;Middels sterk effekt;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;4;7FA_4;Nokså sterk effekt;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;5;7FA_5;Sterk effekt;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;6;7FA_6;Ekstremtrinn - kun fremmedarter;B;g;R;R7;3;4;;Trinn
+7;Tilstandsvariasjon;FA;Fremmedartsinnslag;;;X;7FA_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;;;X;7GR_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;EG;Endringsgjeld;1;7GR-EG_1;ubetydelig endringsgjeld;;gs;O;4;;;7GR-EG;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;EG;Endringsgjeld;2;7GR-EG_2;observerbar endringsgjeld;;gs;O;5;;;7GR-EG;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;EG;Endringsgjeld;3;7GR-EG_3;betydelig endringsgjeld;;gs;O;6;;;7GR-EG;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;EG;Endringsgjeld;4;7GR-EG_4;stor endringsgjeld;;gs;O;7;;;7GR-EG;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;EG;Endringsgjeld;X;7GR-EG_X;ikke registrert;;;;;;;7GR-EG;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;1;7GR-GI_1;intakt;;g;O;4;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;2;7GR-GI_2;ubetydelig;;g;O;5;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;3;7GR-GI_3;nokså lite grøftingsinngrep;;g;O;6;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;4;7GR-GI_4;omfattende grøfting;;;;;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;5;7GR-GI_5;gjennomgripende grøfting;;;;;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;GR;Grøfting;GI;Grøftingsintensitet;X;7GR-GI_X;ikke registrert;;;;;;;7GR-GI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);VA;Vanning;;7JB_VA;Vanning;;f;B;8;;;7JB-VA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);;;X;7JB_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;1;7JB-KU-PI_1;0 - 12,5 % dekning;;g;A;A5;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;2;7JB-KU-PI_2;12,5 - 25 % dekning;;g;A;A5;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;3;7JB-KU-PI_3;25 - 50 % dekning;;g;A;A5;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;4;7JB-KU-PI_4;50 - 75 % dekning;;g;A;A5;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;5;7JB-KU-PI_5;> 75 % dekning;;g;A;A5;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-PI;Kystlyngheias utviklingsfaser -  Pionérfasen;X;7JB-KU-PI_X;Ikke registrert;;;;;;;7JB-KU-PI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;1;7JB-KU-BY_1;0 - 12,5 % dekning;;g;A;A5;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;2;7JB-KU-BY_2;12,5 - 25 % dekning;;g;A;A5;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;3;7JB-KU-BY_3;25 - 50 % dekning;;g;A;A5;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;4;7JB-KU-BY_4;50 - 75 % dekning;;g;A;A5;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;5;7JB-KU-BY_5;> 75 % dekning;;g;A;A5;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-BY;Kystlyngheias utviklingsfaser -  Byggefasen;X;7JB-KU-BY_X;Ikke registrert;;;;;;;7JB-KU-BY;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;1;7JB-KU-MO_1;0 - 12,5 % dekning;;g;A;A5;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;2;7JB-KU-MO_2;12,5 - 25 % dekning;;g;A;A5;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;3;7JB-KU-MO_3;25 - 50 % dekning;;g;A;A5;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;4;7JB-KU-MO_4;50 - 75 % dekning;;g;A;A5;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;5;7JB-KU-MO_5;> 75 % dekning;;g;A;A5;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-MO;Kystlyngheias utviklingsfaser - Moden fase;X;7JB-KU-MO_X;Ikke registrert;;;;;;;7JB-KU-MO;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;1;7JB-KU-DE_1;0 - 12,5 % dekning;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;2;7JB-KU-DE_2;12,5 - 25 % dekning;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;3;7JB-KU-DE_3;25 - 50 % dekning;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;4;7JB-KU-DE_4;50 - 75 % dekning;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;5;7JB-KU-DE_5;> 75 % dekning;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);KU-DE;Kystlyngheias utviklingsfaser - Degenereringsfase;X;7JB-KU-DE_X;Ikke registrert;;g;A;A5;;;7JB-KU-DE;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;1;7JB-BA_1;ikke i bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;2;7JB-BA_2;svært ekstensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;3;7JB-BA_3;nokså ekstensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;4;7JB-BA_4;ekstensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;5;7JB-BA_5;svakt intensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;6;7JB-BA_6;nokså intensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;7;7JB-BA_7;intensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;8;7JB-BA_8;svært intensiv bruk;;g;O;8;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BA;Aktuell bruksintensitet;X;7JB-BA_X;ikke registrert;;;;;;;7JB-BA;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;FJ;7JB-BD_FJ;Fjørfe;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;GE;7JB-BD_GE;Geit;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;GJ;7JB-BD_GJ;Gjess;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;GR;7JB-BD_GR;Gris;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;HE;7JB-BD_HE;Hest;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;HJ;7JB-BD_HJ;Hjortevilt;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;RE;7JB-BD_RE;Rein;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;SA;7JB-BD_SA;Sau;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;ST;7JB-BD_ST;Storfe;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;X;7JB-BD_X;ikke registrert;;;;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BD;Beitedyr;XD;7JB-BD_XD;Andre dyreslag;;f;B;;;;7JB-BD;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BR;Brenning;A;7JB-BR_A;Ingen brenning;;f;F;4;;;7JB-BR;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BR;Brenning;B;7JB-BR_B;Sporadisk brenning;;f;F;4;;;7JB-BR;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BR;Brenning;C;7JB-BR_C;Lyngbrenning;;f;F;4;;;7JB-BR;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BR;Brenning;D;7JB-BR_D;Intensiv brenning;;f;F;4;;;7JB-BR;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BR;Brenning;X;7JB-BR_X;ikke registrert;;;;;;;7JB-BR;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;1;7JB-BT_1;Ingen beitespr;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;2;7JB-BT_2;Lavt beitetrykk;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;3;7JB-BT_3;Moderat beitetrykk;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;4;7JB-BT_4;Nokså høyt beitetrykk;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;5;7JB-BT_5;Høyt beitetrykk;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;6;7JB-BT_6;Overbeitet;;g;O;5;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);BT;Beitetrykk;X;7JB-BT_X;ikke registrert;;;;;;;7JB-BT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;1;7JB-GJ_1;Ingen gjødsling;;g;O;5;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;2;7JB-GJ_2;Svært lett gjødsling;;g;O;5;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;3;7JB-GJ_3;Lett gjødsling;;g;O;5;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;4;7JB-GJ_4;Middels intensiv gjødsling;;g;O;5;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;5;7JB-GJ_5;Intensiv gjødsling;;g;O;5;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);GJ;Gjødsling;X;7JB-GJ_X;ikke registrert;;;;;;;7JB-GJ;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);HT;Høsting av tresjiktet;SL;7JB-HT_SL;Stubbelauving;;f;B;;;;7JB-HT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);HT;Høsting av tresjiktet;ST;7JB-HT_ST;Lauving av styvingstrær;;f;B;;;;7JB-HT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);HT;Høsting av tresjiktet;X;7JB-HT_X;ikke registrert;;;;;;;7JB-HT;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;1;7JB-JB_1;ikke jordbearbeidet;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;2;7JB-JB_2;overflateryddet;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;3;7JB-JB_3;sporadisk jord­bearbeiding;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;4;7JB-JB_4;regelmessig, men sjelden, grunn pløying ;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;5;7JB-JB_5;regelmessig, hyppig grunn pløying;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;6;7JB-JB_6;regelmessig dyppløying;;g;O;6;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);JB;Jordbearbeiding;X;7JB-JB_X;ikke registrert;;;;;;;7JB-JB;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;1;7JB-SI_1;slås ikke;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;2;7JB-SI_2;sporadisk utmarksslått;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;3;7JB-SI_3;regelmessig utmarksslått;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;4;7JB-SI_4;årlig sein slått på innmark;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;5;7JB-SI_5;årlig tidlig slått på innmark;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;6;7JB-SI_6;gjentatt slått på innmark;;g;O;5;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SI;Slåtteintensitet;X;7JB-SI_X;ikke registrert;;;;;;;7JB-SI;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SP;Sprøyting;1;7JB-SP_1;sprøytes ikke;;g;O;4;;;7JB-SP;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SP;Sprøyting;2;7JB-SP_2;sporadisk sprøyting;;g;O;4;;;7JB-SP;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SP;Sprøyting;3;7JB-SP_3;regelmessig sprøyting med moderat intensitet;;g;O;4;;;7JB-SP;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SP;Sprøyting;4;7JB-SP_4;intensiv sprøyting;;g;O;4;;;7JB-SP;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SP;Sprøyting;X;7JB-SP_X;ikke registrert;;;;;;;7JB-SP;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;A;7JB-SU_A;Korn;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;B;7JB-SU_B;Grovfor;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;C;7JB-SU_C;Kløver;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;D;7JB-SU_D;Bær og grønnsaker i årsrotasjon;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;E;7JB-SU_E;Bær og grønnsaker i flerårige plantasjer;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;F;7JB-SU_F;Frukt og bær på busker og trær;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;G;7JB-SU_G;Prydvekster og andre nyttevekster;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;H;7JB-SU_H;Andre jordbruksvekster;;f;F;8;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);SU;Såing og utplanting;X;7JB-SU_X;ikke registrert;;;;;;;7JB-SU;Trinn
+7;Tilstandsvariasjon;JB;Jord-bruk (aktuell bruk av jord);VA;Vanning;X;7JB-VA_X;ikke registrert;;;;;;;7JB-VA;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;;;X;7MG_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;BI;Biocider;1;7MG-BI_1;Nulltrinn (ingen effekt);;g;R;R4;20;;7MG-BI;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;BI;Biocider;2;7MG-BI_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-BI;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;BI;Biocider;3;7MG-BI_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-BI;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;BI;Biocider;4;7MG-BI_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-BI;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;BI;Biocider;X;7MG-BI_X;ikke registrert;;;;;;;7MG-BI;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OL;Olje og andre petroleumsprodukter;1;7MG-OL_1;Nulltrinn (ingen effekt);;g;R;R4;17;;7MG-OL;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OL;Olje og andre petroleumsprodukter;2;7MG-OL_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-OL;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OL;Olje og andre petroleumsprodukter;3;7MG-OL_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-OL;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OL;Olje og andre petroleumsprodukter;4;7MG-OL_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-OL;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OL;Olje og andre petroleumsprodukter;X;7MG-OL_X;ikke registrert;;;;;;;7MG-OL;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OM;Organiske miljøgifter;1;7MG-OM_1;Nulltrinn (ingen effekt);;g;R;R4;20;;7MG-OM;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OM;Organiske miljøgifter;2;7MG-OM_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-OM;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OM;Organiske miljøgifter;3;7MG-OM_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-OM;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OM;Organiske miljøgifter;4;7MG-OM_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-OM;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;OM;Organiske miljøgifter;X;7MG-OM_X;ikke registrert;;;;;;;7MG-OM;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;RF;Radioaktiv forurensning;1;7MG-RF_1;Nulltrinn (ingen effekt);;g;R;R4;18;;7MG-RF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;RF;Radioaktiv forurensning;2;7MG-RF_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-RF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;RF;Radioaktiv forurensning;3;7MG-RF_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-RF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;RF;Radioaktiv forurensning;4;7MG-RF_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-RF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;RF;Radioaktiv forurensning;X;7MG-RF_X;ikke registrert;;;;;;;7MG-RF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;UO;Uorganiske miljøgifter;1;7MG-UO_1;Nulltrinn (ingen effekt);;g;R;R4;8;;7MG-UO;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;UO;Uorganiske miljøgifter;2;7MG-UO_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-UO;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;UO;Uorganiske miljøgifter;3;7MG-UO_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-UO;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;UO;Uorganiske miljøgifter;4;7MG-UO_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-UO;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;UO;Uorganiske miljøgifter;X;7MG-UO_X;ikke registrert;;;;;;;7MG-UO;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;XF;Annen forurensning;1;7MG-XF_1;Nulltrinn (ingen effekt);;g;R;R4;-;;7MG-XF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;XF;Annen forurensning;2;7MG-XF_2;Svak/ Nokså svak effekt;;g;R;R4;;;7MG-XF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;XF;Annen forurensning;3;7MG-XF_3;Middels/Nokså sterk/ Sterk effekt;;g;R;R4;;;7MG-XF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;XF;Annen forurensning;4;7MG-XF_4;Ekstremtrinn (gjennomgripende effekt);;g;R;R4;;;7MG-XF;Trinn
+7;Tilstandsvariasjon;MG;Miljøgifter og annen forurensning;XF;Annen forurensning;X;7MG-XF_X;ikke registrert;;;;;;;7MG-XF;Trinn
+7;Tilstandsvariasjon;OB;Overbeskatning;;;1;7OB_1;ingen sikre tegn på overbeskatning;B;g;O;4;16;2;;Trinn
+7;Tilstandsvariasjon;OB;Overbeskatning;;;2;7OB_2;observerbar overbeskatning;B;g;O;4;16;2;;Trinn
+7;Tilstandsvariasjon;OB;Overbeskatning;;;3;7OB_3;obetydelig verbeskatning;B;g;O;4;16;2;;Trinn
+7;Tilstandsvariasjon;OB;Overbeskatning;;;4;7OB_4;stor verbeskatning;B;g;O;4;16;2;;Trinn
+7;Tilstandsvariasjon;OB;Overbeskatning;;;X;7OB_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;;;X;7RA_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;BH;Rask suksesjon i boreal hei;1;7RA-BH_1;intakt boreal hei;;s;O/R;O/R4b;7;;7RA-BH;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;BH;Rask suksesjon i boreal hei;2;7RA-BH_2;tidlig suksesjonsfase;;;;;;;7RA-BH;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;BH;Rask suksesjon i boreal hei;3;7RA-BH_3;sein suksesjonsfase;;;;;;;7RA-BH;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;BH;Rask suksesjon i boreal hei;X;7RA-BH_X;ikke registrert;;;;;;;7RA-BH;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SJ;Rask gjenvekstsuksesjon i semi-naturlig jordbruksmark inkludert våteng;1;7RA-SJ_1;intakt semi-naturlig mark;;s;O/R;O/R5b;6;;7RA-SJ;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SJ;Rask gjenvekstsuksesjon i semi-naturlig jordbruksmark inkludert våteng;2;7RA-SJ_2;brakkleggingsfase;;s;O/R;O/R5b;6;;7RA-SJ;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SJ;Rask gjenvekstsuksesjon i semi-naturlig jordbruksmark inkludert våteng;3;7RA-SJ_3;tidlig gjenvekst­suksesjonsfase;;s;O/R;O/R5b;6;;7RA-SJ;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SJ;Rask gjenvekstsuksesjon i semi-naturlig jordbruksmark inkludert våteng;4;7RA-SJ_4;sein gjenvekst­suksesjonsfase;;s;O/R;O/R5b;6;;7RA-SJ;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SJ;Rask gjenvekstsuksesjon i semi-naturlig jordbruksmark inkludert våteng;X;7RA-SJ_X;ikke registrert;;;;;;;7RA-SJ;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SM;Rask gjenvekstsuksesjon i semi-naturlig myr;1;7RA-SM_1;intakt semi-naturlig myr;;s;O/R;O/R3b;6;;7RA-SM;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SM;Rask gjenvekstsuksesjon i semi-naturlig myr;2;7RA-SM_2;suksesjonsfase;;s;O/R;O/R3b;6;;7RA-SM;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;SM;Rask gjenvekstsuksesjon i semi-naturlig myr;X;7RA-SM_X;ikke registrert;;;;;;;7RA-SM;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;TP;Rask suksesjon i treplantasje;1;7RA-TP_1;intakt treplantasje;;s;O/R;O/R3b;7;;7RA-TP;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;TP;Rask suksesjon i treplantasje;2;7RA-TP_2;suksesjonsfase;;s;O/R;O/R3b;7;;7RA-TP;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;TP;Rask suksesjon i treplantasje;X;7RA-TP_X;ikke registrert;;;;;;;7RA-TP;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;US;Rask suksesjon på naturlig og sterkt endret mark;1;7RA-US_1;initialfase;;s;O/R;O/R4b;6;;7RA-US;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;US;Rask suksesjon på naturlig og sterkt endret mark;2;7RA-US_2;tidlig suksesjonsfase;;s;O/R;O/R4b;6;;7RA-US;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;US;Rask suksesjon på naturlig og sterkt endret mark;3;7RA-US_3;sein suksesjonsfase;;s;O/R;O/R4b;6;;7RA-US;Trinn
+7;Tilstandsvariasjon;RA;Rask suksesjon;US;Rask suksesjon på naturlig og sterkt endret mark;X;7RA-US_X;ikke registrert;;;;;;;7RA-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);KA;Terrengkalking;;7SB_KA;Terrengkalking;;f;B;;;;7SB-KA;Trinn
+7;;SB;Skog-bruk (bruk av tresatt areal);KA;Terrengkalking;X;7SB-KA_X;ikke registrert;;;;;;;7SB-KA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;0;7SB-FT-MA_0;0 - 1/16;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;1;7SB-FT-MA_1;1/16 - 1/8;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;2;7SB-FT-MA_2;1/8 - 1/4;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;3;7SB-FT-MA_3;1/4 - 1/2;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;4;7SB-FT-MA_4;1/2 - 3/4;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;5;7SB-FT-MA_5;> 3/4;;A;A6;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-MA;Foryngelsestiltak - Markberedning/pløying;X;7SB-FT-MA_X;ikke registrert;;;;;;;7SB-FT-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;0;7SB-FT-NF_0;0 - 1/16;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;1;7SB-FT-NF_1;1/16 - 1/8;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;2;7SB-FT-NF_2;1/8 - 1/4;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;3;7SB-FT-NF_3;1/4 - 1/2;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;4;7SB-FT-NF_4;1/2 - 3/4;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;5;7SB-FT-NF_5;> 3/4;;A;A6;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-NF;Foryngelsestiltak - Naturlig foryngelse;X;7SB-FT-NF_X;ikke registrert;;;;;;;7SB-FT-NF;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;0;7SB-FT-TS_0;0 - 1/16;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;1;7SB-FT-TS_1;1/16 - 1/8;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;2;7SB-FT-TS_2;1/8 - 1/4;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;3;7SB-FT-TS_3;1/4 - 1/2;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;4;7SB-FT-TS_4;1/2 - 3/4;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;5;7SB-FT-TS_5;> 3/4;;A;A6;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FT-TS;Foryngelsestiltak - Tilplanting/såing;X;7SB-FT-TS_X;ikke registrert;;;;;;;7SB-FT-TS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FY;Foryngelsesmateriale;BL;7SB-FY_BL;Boreale lauvtrær;;f;B;;;;7SB-FY;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FY;Foryngelsesmateriale;EL;7SB-FY_EL;Edellauvtrær;;f;B;;;;7SB-FY;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FY;Foryngelsesmateriale;FB;7SB-FY_FB;Fremmede bartrær;;f;B;;;;7SB-FY;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FY;Foryngelsesmateriale;GF;7SB-FY_GF;Gran eller furu;;f;B;;;;7SB-FY;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);FY;Foryngelsesmateriale;X;7SB-FY_X;ikke registrert;;;;;;;7SB-FY;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;0;7SB-HI-GR_0;0 - 1/16;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;1;7SB-HI-GR_1;1/16 - 1/8;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;2;7SB-HI-GR_2;1/8 - 1/4;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;3;7SB-HI-GR_3;1/4 - 1/2;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;4;7SB-HI-GR_4;1/2 - 3/4;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;5;7SB-HI-GR_5;> 3/4;;A;A6;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-GR;Gjentatt rydningshogst;X;7SB-HI-GR_X;ikke registrert;;;;;;;7SB-HI-GR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;0;7SB-HI-IH-0_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;1;7SB-HI-IH-0_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;2;7SB-HI-IH-0_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;3;7SB-HI-IH-0_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;4;7SB-HI-IH-0_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;5;7SB-HI-IH-0_5;> 3/4;;A;A6;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-0;Hogstinngrep - Intermediær hogst;X;7SB-HI-IH-0_X;ikke registrert;;;;;;;7SB-HI-IH-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;0;7SB-HI-IH-DH_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;1;7SB-HI-IH-DH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;2;7SB-HI-IH-DH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;3;7SB-HI-IH-DH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;4;7SB-HI-IH-DH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;5;7SB-HI-IH-DH_5;> 3/4;;A;A6;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-DH;Hogstinngrep - Intermediær hogst - diverse hogst;X;7SB-HI-IH-DH_X;ikke registrert;;;;;;;7SB-HI-IH-DH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;0;7SB-HI-IH-FR_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;1;7SB-HI-IH-FR_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;2;7SB-HI-IH-FR_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;3;7SB-HI-IH-FR_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;4;7SB-HI-IH-FR_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;5;7SB-HI-IH-FR_5;> 3/4;;A;A6;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FR;Hogstinngrep - Intermediær hogst - forhåndsrydding;X;7SB-HI-IH-FR_X;ikke registrert;;;;;;;7SB-HI-IH-FR;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;0;7SB-HI-IH-FT_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;1;7SB-HI-IH-FT_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;2;7SB-HI-IH-FT_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;3;7SB-HI-IH-FT_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;4;7SB-HI-IH-FT_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;5;7SB-HI-IH-FT_5;> 3/4;;A;A6;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-FT;Hogstinngrep - Intermediær hogst - fri tynning;X;7SB-HI-IH-FT_X;ikke registrert;;;;;;;7SB-HI-IH-FT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;0;7SB-HI-IH-GH_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;1;7SB-HI-IH-GH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;2;7SB-HI-IH-GH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;3;7SB-HI-IH-GH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;4;7SB-HI-IH-GH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;5;7SB-HI-IH-GH_5;> 3/4;;A;A6;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-GH;Hogstinngrep - Intermediær hogst - gruppehogst;X;7SB-HI-IH-GH_X;ikke registrert;;;;;;;7SB-HI-IH-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;0;7SB-HI-IH-HT_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;1;7SB-HI-IH-HT_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;2;7SB-HI-IH-HT_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;3;7SB-HI-IH-HT_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;4;7SB-HI-IH-HT_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;5;7SB-HI-IH-HT_5;> 3/4;;A;A6;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-HT;Hogstinngrep - Intermediær hogst - høgtynning;X;7SB-HI-IH-HT_X;ikke registrert;;;;;;;7SB-HI-IH-HT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;0;7SB-HI-IH-MA_0;0 - 1/16;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;1;7SB-HI-IH-MA_1;1/16 - 1/8;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;2;7SB-HI-IH-MA_2;1/8 - 1/4;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;3;7SB-HI-IH-MA_3;1/4 - 1/2;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;4;7SB-HI-IH-MA_4;1/2 - 3/4;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;5;7SB-HI-IH-MA_5;> 3/4;;A;A6;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-IH-MA;Hogstinngrep - Intermediær hogst - manuell avstandsregulering;X;7SB-HI-IH-MA_X;ikke registrert;;;;;;;7SB-HI-IH-MA;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;0;7SB-HI-LG-0_0;0 - 1/16;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;1;7SB-HI-LG-0_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;2;7SB-HI-LG-0_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;3;7SB-HI-LG-0_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;4;7SB-HI-LG-0_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;5;7SB-HI-LG-0_5;> 3/4;;A;A6;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-0;Hogstinngrep - Lukket foryngelseshogst, gradvis;X;7SB-HI-LG-0_X;ikke registrert;;;;;;;7SB-HI-LG-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;0;7SB-HI-LG-GH_0;0 - 1/16;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;1;7SB-HI-LG-GH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;2;7SB-HI-LG-GH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;3;7SB-HI-LG-GH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;4;7SB-HI-LG-GH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;5;7SB-HI-LG-GH_5;> 3/4;;A;A6;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-GH;Hogstinngrep - Lukket foryngelseshogst, gradvis - gruppehogst;X;7SB-HI-LG-GH_X;ikke registrert;;;;;;;7SB-HI-LG-GH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;0;7SB-HI-LG-KH_0;0 - 1/16;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;1;7SB-HI-LG-KH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;2;7SB-HI-LG-KH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;3;7SB-HI-LG-KH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;4;7SB-HI-LG-KH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;5;7SB-HI-LG-KH_5;> 3/4;;A;A6;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-KH;Hogstinngrep - Lukket foryngelseshogst, gradvis - kanthogst;X;7SB-HI-LG-KH_X;ikke registrert;;;;;;;7SB-HI-LG-KH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;0;7SB-HI-LG-SH_0;0 - 1/16;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;1;7SB-HI-LG-SH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;2;7SB-HI-LG-SH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;3;7SB-HI-LG-SH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;4;7SB-HI-LG-SH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;5;7SB-HI-LG-SH_5;> 3/4;;A;A6;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LG-SH;Hogstinngrep - Lukket foryngelseshogst, gradvis - skjermstillingshogst;X;7SB-HI-LG-SH_X;ikke registrert;;;;;;;7SB-HI-LG-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;0;7SB-HI-LS-0_0;0 - 1/16;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;1;7SB-HI-LS-0_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;2;7SB-HI-LS-0_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;3;7SB-HI-LS-0_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;4;7SB-HI-LS-0_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;5;7SB-HI-LS-0_5;> 3/4;;A;A6;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-0;Hogstinngrep - Lukket hogst, selektiv;X;7SB-HI-LS-0_X;ikke registrert;;;;;;;7SB-HI-LS-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;0;7SB-HI-LS-BH_0;0 - 1/16;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;1;7SB-HI-LS-BH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;2;7SB-HI-LS-BH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;3;7SB-HI-LS-BH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;4;7SB-HI-LS-BH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;5;7SB-HI-LS-BH_5;> 3/4;;A;A6;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-BH;Hogstinngrep - Lukket hogst, selektiv - blendingsshogst;X;7SB-HI-LS-BH_X;ikke registrert;;;;;;;7SB-HI-LS-BH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;0;7SB-HI-LS-PH_0;0 - 1/16;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;1;7SB-HI-LS-PH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;2;7SB-HI-LS-PH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;3;7SB-HI-LS-PH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;4;7SB-HI-LS-PH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;5;7SB-HI-LS-PH_5;> 3/4;;A;A6;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-LS-PH;Hogstinngrep - Lukket hogst, selektiv - plukkhogst;X;7SB-HI-LS-PH_X;ikke registrert;;;;;;;7SB-HI-LS-PH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;0;7SB-HI-AAP-0_0;0 - 1/16;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;1;7SB-HI-AAP-0_1;1/16 - 1/8;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;2;7SB-HI-AAP-0_2;1/8 - 1/4;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;3;7SB-HI-AAP-0_3;1/4 - 1/2;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;4;7SB-HI-AAP-0_4;1/2 - 3/4;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;5;7SB-HI-AAP-0_5;> 3/4;;A;A6;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-0;Hogstinngrep - Åpen hogst;X;7SB-HI-AAP-0_X;ikke registrert;;;;;;;7SB-HI-AAP-0;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;0;7SB-HI-AAP-FH_0;0 - 1/16;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;1;7SB-HI-AAP-FH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;2;7SB-HI-AAP-FH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;3;7SB-HI-AAP-FH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;4;7SB-HI-AAP-FH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;5;7SB-HI-AAP-FH_5;> 3/4;;A;A6;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-FH;Hogstinngrep - Åpen hogst - frøstillingshogst;X;7SB-HI-AAP-FH_X;ikke registrert;;;;;;;7SB-HI-AAP-FH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;0;7SB-HI-AAP-SH_0;0 - 1/16;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;1;7SB-HI-AAP-SH_1;1/16 - 1/8;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;2;7SB-HI-AAP-SH_2;1/8 - 1/4;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;3;7SB-HI-AAP-SH_3;1/4 - 1/2;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;4;7SB-HI-AAP-SH_4;1/2 - 3/4;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;5;7SB-HI-AAP-SH_5;> 3/4;;A;A6;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HI-AAP-SH;Hogstinngrep - Åpen hogst - snauhogst;X;7SB-HI-AAP-SH_X;ikke registrert;;;;;;;7SB-HI-AAP-SH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;0;7SB-HS_0;0;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;1;7SB-HS_1;0 - 1/40;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;2;7SB-HS_2;1/40 - 1/20;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;3;7SB-HS_3;1/20 - 1/10;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;4;7SB-HS_4;1/10 - 1/4;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;5;7SB-HS_5;1/4 - 1/2;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;6;7SB-HS_6;1/2 - 3/4;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;7;7SB-HS_7;3/4 - 9/10;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;8;7SB-HS_8;> 9/10;;A;A9;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);HS;Hogststubbeandel;X;7SB-HS_X;ikke registrert;;;;;;;7SB-HS;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);0;7SB-UT-UG_0;0 - 1/16;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);1;7SB-UT-UG_1;1/16 - 1/8;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);2;7SB-UT-UG_2;1/8 - 1/4;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);3;7SB-UT-UG_3;1/4 - 1/2;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);4;7SB-UT-UG_4;1/2 - 3/4;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);5;7SB-UT-UG_5;> 3/4;;A;A6;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UG;Uttak av biomasse - Grot (ikke stubber);X;7SB-UT-UG_X;ikke registrert;;;;;;;7SB-UT-UG;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;0;7SB-UT-US_0;0 - 1/16;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;1;7SB-UT-US_1;1/16 - 1/8;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;2;7SB-UT-US_2;1/8 - 1/4;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;3;7SB-UT-US_3;1/4 - 1/2;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;4;7SB-UT-US_4;1/2 - 3/4;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;5;7SB-UT-US_5;> 3/4;;A;A6;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-US;Uttak av biomasse - Grot ;X;7SB-UT-US_X;ikke registrert;;;;;;;7SB-UT-US;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;0;7SB-UT-UT_0;0 - 1/16;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;1;7SB-UT-UT_1;1/16 - 1/8;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;2;7SB-UT-UT_2;1/8 - 1/4;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;3;7SB-UT-UT_3;1/4 - 1/2;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;4;7SB-UT-UT_4;1/2 - 3/4;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;5;7SB-UT-UT_5;> 3/4;;A;A6;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-UT;Uttak av biomasse - Tømmer;X;7SB-UT-UT_X;ikke registrert;;;;;;;7SB-UT-UT;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;0;7SB-UT-XH_0;0 - 1/16;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;1;7SB-UT-XH_1;1/16 - 1/8;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;2;7SB-UT-XH_2;1/8 - 1/4;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;3;7SB-UT-XH_3;1/4 - 1/2;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;4;7SB-UT-XH_4;1/2 - 3/4;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;5;7SB-UT-XH_5;> 3/4;;A;A6;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SB;Skog-bruk (bruk av tresatt areal);UT-XH;Uttaksmetode - Hauglegging av hogstavfall for fjerning;X;7SB-UT-XH_X;ikke registrert;;;;;;;7SB-UT-XH;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;0;Skogbestandsdynamikk;1;7SD-0_1;Normalskog;;B;O;;;;7SD-0;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;0;Skogbestandsdynamikk;2;7SD-0_2;Naturskog;;B;O;;;;7SD-0;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;0;Skogbestandsdynamikk;X;7SD-0_X;ikke registrert;;;;;;;7SD-0;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;1;7SD-NS_1;skog under fornying;;gs;O;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;2;7SD-NS_2;ungskog;;gs;O;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;3;7SD-NS_3;yngre produksjonsskog;;gs;O;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;4;7SD-NS_4;eldre produksjonsskog;;gs;O;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;5;7SD-NS_5;gammel normalskog;;gs;O;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NS;Normalskogens suksesjonsstadier;X;7SD-NS_X;ikke registrert;;;;;;;7SD-NS;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;0;7SD-NU-AF_0;0 - 1/8;;A;A5;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;1;7SD-NU-AF_1;1/8 - 1/4;;A;A5;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;2;7SD-NU-AF_2;1/4 - 1/2;;A;A5;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;3;7SD-NU-AF_3;1/2 - 3/4;;A;A5;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;4;7SD-NU-AF_4;>3 /4;;A;A5;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-AF;Naturskogens utvikling - Aldringsfase;X;7SD-NU-AF_X;ikke registrert;;;;;;;7SD-NU-AF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;0;7SD-NU-SF_0;0 - 1/8;;A;A5;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;1;7SD-NU-SF_1;1/8 - 1/4;;A;A5;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;2;7SD-NU-SF_2;1/4 - 1/2;;A;A5;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;3;7SD-NU-SF_3;1/2 - 3/4;;A;A5;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;4;7SD-NU-SF_4;>3 /4;;A;A5;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-SF;Naturskogens utvikling - Sammenbruddsfasen;X;7SD-NU-SF_X;ikke registrert;;;;;;;7SD-NU-SF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;0;7SD-NU-FY_0;0 - 1/8;;A;A5;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;1;7SD-NU-FY_1;1/8 - 1/4;;A;A5;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;2;7SD-NU-FY_2;1/4 - 1/2;;A;A5;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;3;7SD-NU-FY_3;1/2 - 3/4;;A;A5;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;4;7SD-NU-FY_4;>3 /4;;A;A5;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-FY;Naturskogens utvikling - Foryngelsesfase;X;7SD-NU-FY_X;ikke registrert;;;;;;;7SD-NU-FY;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;0;7SD-NU-OF_0;0 - 1/8;;A;A5;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;1;7SD-NU-OF_1;1/8 - 1/4;;A;A5;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;2;7SD-NU-OF_2;1/4 - 1/2;;A;A5;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;3;7SD-NU-OF_3;1/2 - 3/4;;A;A5;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;4;7SD-NU-OF_4;>3 /4;;A;A5;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SD;Skogbestandsdynamikk;NU-OF;Naturskogens utvikling - Optimalfase;X;7SD-NU-OF_X;ikke registrert;;;;;;;7SD-NU-OF;Trinn
+7;Tilstandsvariasjon;SE;Spor etter slitasje og slitasjebetinget erosjon;;;0;7SE_0;0;F;g;A;A4b;3;4;;Trinn
+7;Tilstandsvariasjon;SE;Spor etter slitasje og slitasjebetinget erosjon;;;1;7SE_1;0 - 1/16;;;;;;;;Trinn
+7;Tilstandsvariasjon;SE;Spor etter slitasje og slitasjebetinget erosjon;;;2;7SE_2;1/16 - 1/2;;;;;;;;Trinn
+7;Tilstandsvariasjon;SE;Spor etter slitasje og slitasjebetinget erosjon;;;3;7SE_3;>1/2;;;;;;;;Trinn
+7;Tilstandsvariasjon;SE;Spor etter slitasje og slitasjebetinget erosjon;;;X;7SE_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;;;X;7SN_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;0;7SN-BE_0;0;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;1;7SN-BE_1;0-2,5%  reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;2;7SN-BE_2;2,5-5% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;3;7SN-BE_3;5-10% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;4;7SN-BE_4;10-25% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;5;7SN-BE_5;25-50% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;6;7SN-BE_6;50-75% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;7;7SN-BE_7;75-90% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;8;7SN-BE_8;>90% reduksjon;;g;A;A9;5;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BE;Beverfelling;X;7SN-BE_X;ikke registrert;;;;;;;7SN-BE;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;0;7SN-BR_0;0;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;1;7SN-BR_1;0-2,5%  reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;2;7SN-BR_2;2,5-5% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;3;7SN-BR_3;5-10% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;4;7SN-BR_4;10-25% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;5;7SN-BR_5;25-50% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;6;7SN-BR_6;50-75% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;7;7SN-BR_7;75-90% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;8;7SN-BR_8;>90% reduksjon;;g;A;A9;8;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;BR;Skogbrann;X;7SN-BR_X;ikke registrert;;;;;;;7SN-BR;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;0;7SN-HJ_0;0;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;1;7SN-HJ_1;0-2,5%  reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;2;7SN-HJ_2;2,5-5% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;3;7SN-HJ_3;5-10% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;4;7SN-HJ_4;10-25% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;5;7SN-HJ_5;25-50% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;6;7SN-HJ_6;50-75% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;7;7SN-HJ_7;75-90% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;8;7SN-HJ_8;>90% reduksjon;;g;A;A9;4;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;HJ;Hjortevilt;X;7SN-HJ_X;ikke registrert;;;;;;;7SN-HJ;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;0;7SN-IN_0;0;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;1;7SN-IN_1;0-2,5%  reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;2;7SN-IN_2;2,5-5% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;3;7SN-IN_3;5-10% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;4;7SN-IN_4;10-25% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;5;7SN-IN_5;25-50% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;6;7SN-IN_6;50-75% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;7;7SN-IN_7;75-90% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;8;7SN-IN_8;>90% reduksjon;;g;A;A9;4;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;IN;Insektangrep;X;7SN-IN_X;ikke registrert;;;;;;;7SN-IN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;0;7SN-SN_0;0;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;1;7SN-SN_1;0-2,5%  reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;2;7SN-SN_2;2,5-5% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;3;7SN-SN_3;5-10% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;4;7SN-SN_4;10-25% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;5;7SN-SN_5;25-50% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;6;7SN-SN_6;50-75% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;7;7SN-SN_7;75-90% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;8;7SN-SN_8;>90% reduksjon;;g;A;A9;6;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SN;Snøras;X;7SN-SN_X;ikke registrert;;;;;;;7SN-SN;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;0;7SN-SO_0;0;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;1;7SN-SO_1;0-2,5%  reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;2;7SN-SO_2;2,5-5% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;3;7SN-SO_3;5-10% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;4;7SN-SO_4;10-25% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;5;7SN-SO_5;25-50% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;6;7SN-SO_6;50-75% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;7;7SN-SO_7;75-90% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;8;7SN-SO_8;>90% reduksjon;;g;A;A9;4;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;SO;Soppangrep;X;7SN-SO_X;ikke registrert;;;;;;;7SN-SO;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;0;7SN-TF_0;0;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;1;7SN-TF_1;0-2,5%  reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;2;7SN-TF_2;2,5-5% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;3;7SN-TF_3;5-10% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;4;7SN-TF_4;10-25% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;5;7SN-TF_5;25-50% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;6;7SN-TF_6;50-75% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;7;7SN-TF_7;75-90% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;8;7SN-TF_8;>90% reduksjon;;g;A;A9;7;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;TF;Annen tørke- og fuktighetsrelatert avgang;X;7SN-TF_X;ikke registrert;;;;;;;7SN-TF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;0;7SN-VI_0;0;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;1;7SN-VI_1;0-2,5%  reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;2;7SN-VI_2;2,5-5% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;3;7SN-VI_3;5-10% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;4;7SN-VI_4;10-25% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;5;7SN-VI_5;25-50% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;6;7SN-VI_6;50-75% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;7;7SN-VI_7;75-90% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;8;7SN-VI_8;>90% reduksjon;;g;A;A9;5;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;VI;Vindfelling;X;7SN-VI_X;ikke registrert;;;;;;;7SN-VI;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;0;7SN-XF_0;0;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;1;7SN-XF_1;0-2,5%  reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;2;7SN-XF_2;2,5-5% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;3;7SN-XF_3;5-10% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;4;7SN-XF_4;10-25% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;5;7SN-XF_5;25-50% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;6;7SN-XF_6;50-75% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;7;7SN-XF_7;75-90% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;8;7SN-XF_8;>90% reduksjon;;g;A;A9;5;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SN;Naturlig bestandsreduksjon på tresatt areal;XF;Avgang av andre eller ukjente årsaker;X;7SN-XF_X;ikke registrert;;;;;;;7SN-XF;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;1;7SU_1;Nulltrinn;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;2;7SU_2;Svak effekt;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;3;7SU_3;Nokså svak effekt;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;4;7SU_4;Middels sterk effekt;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;5;7SU_5;Nokså sterk effekt;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;6;7SU_6;Sterk effekt;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;7;7SU_7;Ekstremtrinn;R;g;R;R7;17;4;;Trinn
+7;Tilstandsvariasjon;SU;Forsuring;;;X;7SU_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;TK;Spor etter ferdsel med tunge kjøretøy;;;0;7TK_0;0;F;g;A;A4b;4;3;;Trinn
+7;Tilstandsvariasjon;TK;Spor etter ferdsel med tunge kjøretøy;;;1;7TK_1;0 - 1/16;F;g;A;A4b;4;3;;Trinn
+7;Tilstandsvariasjon;TK;Spor etter ferdsel med tunge kjøretøy;;;2;7TK_2;1/16 - 1/2;F;g;A;A4b;4;3;;Trinn
+7;Tilstandsvariasjon;TK;Spor etter ferdsel med tunge kjøretøy;;;3;7TK_3;>1/2;F;g;A;A4b;4;3;;Trinn
+7;Tilstandsvariasjon;TK;Spor etter ferdsel med tunge kjøretøy;;;X;7TK_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;UB;Ubalanse mellom trofiske nivåer;;;0;7UB_0;0;B;g;A;A4b;13;2;;Trinn
+7;Tilstandsvariasjon;UB;Ubalanse mellom trofiske nivåer;;;1;7UB_1;0 - 1/16;B;g;A;A4b;13;2;;Trinn
+7;Tilstandsvariasjon;UB;Ubalanse mellom trofiske nivåer;;;2;7UB_2;1/16 - 1/2;B;g;A;A4b;13;2;;Trinn
+7;Tilstandsvariasjon;UB;Ubalanse mellom trofiske nivåer;;;3;7UB_3;>1/2;B;g;A;A4b;13;2;;Trinn
+7;Tilstandsvariasjon;UB;Ubalanse mellom trofiske nivåer;;;X;7UB_X;ikke registrert;;;;;;;;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;Reguleringseffekt på vannsystemer;1;7VR-RE_1;Ingen effekt;F;gs;R;R5;12;4;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;Reguleringseffekt på vannsystemer;2;7VR-RE_2;Svak/nokså svak effekt;F;gs;R;R5;12;4;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;Reguleringseffekt på vannsystemer;3;7VR-RE_3;Middels sterk effekt;F;gs;R;R5;12;4;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;Reguleringseffekt på vannsystemer;4;7VR-RE_4;Nokså sterk/sterk effekt;F;gs;R;R5;12;4;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;Reguleringseffekt på vannsystemer;5;7VR-RE_5;Ekstremtrinn;F;gs;R;R5;12;4;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RE;;X;7VR-RE_X;ikke registrert;;;;;;;7VR-RE;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;EG;Endringsgjeld i landsystemer;1;7VR-EG_1;ubetydelig endringsgjeld;F;gs;O;4;;;7VR-EG;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;EG;Endringsgjeld i landsystemer;2;7VR-EG_2;observerbar endringsgjeld;F;gs;O;4;;;7VR-EG;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;EG;Endringsgjeld i landsystemer;3;7VR-EG_3;betydelig endringsgjeld;F;gs;O;4;;;7VR-EG;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;EG;Endringsgjeld i landsystemer;4;7VR-EG_4;stor endringsgjeld;F;gs;O;4;;;7VR-EG;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;1;7VR-RI_1;intakt;F;g;O;5;;;7VR-RI;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;2;7VR-RI_2;ubetydelig regulering;F;g;O;5;;;7VR-RI;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;3;7VR-RI_3;nokså liten regulering;F;g;O;5;;;7VR-RI;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;4;7VR-RI_4;omfattende regulering;F;g;O;5;;;7VR-RI;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;5;7VR-RI_5;gjennomgripende regulering;F;g;O;5;;;7VR-RI;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;EG;Endringsgjeld i landsystemer;X;7VR-EG_X;ikke registrert;;;;;;;7VR-EG;Trinn
+7;Tilstandsvariasjon;VR;Vassdragsreguleringseffekt;RI;Reguleringsintensitet;X;7VR-RI_X;ikke registrert;;;;;;;7VR-RI;Trinn
