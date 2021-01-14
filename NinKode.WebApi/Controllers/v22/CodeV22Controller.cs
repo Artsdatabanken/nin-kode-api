@@ -1,24 +1,24 @@
-﻿namespace NinKode.WebApi.Controllers.v2b
+﻿namespace NinKode.WebApi.Controllers.v22
 {
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
 
     using NinKode.Common.Models.Code;
-    using NinKode.Database.Service.v2b;
+    using NinKode.Database.Service.v21;
 
     [ApiController]
-    [Route("v2b/koder")]
-    public class CodeV2BController : ControllerBase
+    [Route("v2.2/koder")]
+    public class CodeV22Controller : ControllerBase
     {
         private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2.0b";
+        private const string DefaultDatabase = "SOSINiNv2.2";
 
-        private readonly CodeV2BService _codeService;
+        private readonly CodeV21Service _codeService;
 
-        public CodeV2BController()
+        public CodeV22Controller()
         {
-            _codeService = new CodeV2BService(DatabaseUrl, DefaultDatabase);
+            _codeService = new CodeV21Service(DatabaseUrl, DefaultDatabase);
         }
 
         [HttpGet]
