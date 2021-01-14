@@ -5,7 +5,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     using NinKode.Common.Models.Code;
-    using NinKode.Database.Service.v21;
+    using NinKode.Database.Service.v22;
 
     [ApiController]
     [Route("v2.2/koder")]
@@ -14,11 +14,11 @@
         private const string DatabaseUrl = "http://localhost:8080/";
         private const string DefaultDatabase = "SOSINiNv2.2";
 
-        private readonly CodeV21Service _codeService;
+        private readonly CodeV22Service _codeService;
 
         public CodeV22Controller()
         {
-            _codeService = new CodeV21Service(DatabaseUrl, DefaultDatabase);
+            _codeService = new CodeV22Service(DatabaseUrl, DefaultDatabase);
         }
 
         [HttpGet]

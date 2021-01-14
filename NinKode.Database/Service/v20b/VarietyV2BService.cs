@@ -5,11 +5,13 @@
     using System.Linq;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Model.v20b;
+    using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
     public class VarietyV2BService
     {
+        private const string IndexName = "Variasjons/ByKode";
         private readonly DocumentStore _store;
 
         public VarietyV2BService(string url, string databaseName)
@@ -20,13 +22,24 @@
                 DefaultDatabase = databaseName
             };
             _store.Initialize(true);
+
+            var index = _store.DatabaseCommands.GetIndex(IndexName);
+
+            if (index != null) return;
+
+            _store.DatabaseCommands.PutIndex(IndexName,
+                new IndexDefinition
+                {
+                    Map = "from doc in docs.Variasjons\nselect new\n{\n\tKode = doc.Kode\n}"
+                }
+            );
         }
 
         public IEnumerable<VarietyAllCodes> GetAll(string host)
         {
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<VariasjonV2B>("Variasjons/ByKode");
+                var query = session.Query<VariasjonV2B>(IndexName);
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -43,7 +56,7 @@
 
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<VariasjonV2B>("Variasjons/ByKode").Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                var query = session.Query<VariasjonV2B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())

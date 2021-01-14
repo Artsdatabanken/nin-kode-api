@@ -5,11 +5,13 @@
     using System.Linq;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Model.v20b;
+    using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
     public class CodeV2BService
     {
+        private const string IndexName = "NaturTypes/ByKode";
         private readonly DocumentStore _store;
 
         public CodeV2BService(string url, string databaseName)
@@ -20,13 +22,24 @@
                 DefaultDatabase = databaseName
             };
             _store.Initialize(true);
+
+            var index = _store.DatabaseCommands.GetIndex(IndexName);
+
+            if (index != null) return;
+
+            _store.DatabaseCommands.PutIndex(IndexName,
+                new IndexDefinition
+                {
+                    Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
+                }
+            );
         }
 
         public IEnumerable<Codes> GetAll(string host)
         {
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<NaturTypeV2B>("NaturTypes/ByKode");
+                var query = session.Query<NaturTypeV2B>(IndexName);
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -45,7 +58,7 @@
 
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<NaturTypeV2B>("NaturTypes/ByKode").Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                var query = session.Query<NaturTypeV2B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
