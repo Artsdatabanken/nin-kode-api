@@ -1,15 +1,10 @@
-﻿namespace NinKode.WebApi.Controllers.v2b
+﻿namespace NinKode.WebApi.Controllers.v20b
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Text.Json;
-    using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
-
     using NinKode.Common.Models.Variety;
-    using NinKode.Database.Service.v2b;
+    using NinKode.Database.Service.v20b;
 
     [ApiController]
     [Route("v2b/variasjon")]

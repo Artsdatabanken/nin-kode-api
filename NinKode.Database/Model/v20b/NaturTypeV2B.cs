@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Model.v2b
+﻿namespace NinKode.Database.Model.v20b
 {
     using System.Collections.Generic;
 
