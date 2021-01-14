@@ -6,6 +6,7 @@
     using System.Threading;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
+    using Raven.Abstractions.Extensions;
     using Raven.Client;
     using Raven.Client.Document;
     using Raven.Json.Linq;
@@ -109,14 +110,16 @@
 
             NaturtypeGrunntypeProcess(naturTypes, bulk, session, indexes);
             NinDefinisjonHovedtyperProcess(naturTypes, bulk, session, indexes);
+            
+            FixChildrenAndParents(store, naturTypes);
+
             NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "2500");
             NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "5000");
             NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "10000");
             NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "20000");
 
+            //FixChildrenAndParents(store, naturTypes);
             FixEnvironment(ref naturTypes, bulk, session, indexes);
-
-            FixChildrenAndParents(store, naturTypes);
         }
 
         private void FixEnvironment(
@@ -132,9 +135,205 @@
 
             Log2Console(index, true);
 
-            //var query = session.Query<HovedtypeTrinn>(index);
-            //using var enumerator = session.Advanced.Stream(query);
+            var query = session.Query<HovedtypeTrinn>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var hovedtypeTrinn = enumerator.Current.Document;
 
+                Log2Console($"docId: {hovedtypeTrinn.docId}");
+
+                var parent = naturTypes.ContainsKey($"NA {hovedtypeTrinn.HT}")
+                    ? naturTypes[$"NA {hovedtypeTrinn.HT}"]
+                    : null;
+
+                if (parent == null) continue;
+
+                var trinn = new TrinnV22
+                {
+                    Kode = hovedtypeTrinn.Gradientkode,
+                    Type = "Miljøvariabel",
+                    //Navn = hovedtypeTrinn.HovedtypeNavn
+                };
+
+                if (string.IsNullOrEmpty(trinn.Navn))
+                {
+                    switch (trinn.Kode.ToUpper())
+                    {
+                        case "":
+                        case "BK":
+                        case "DD":
+                        case "ER":
+                        case "FK":
+                        case "FR":
+                        case "HS":
+                        case "KO":
+                        case "KT":
+                        case "KY":
+                        case "LK":
+                        case "MF":
+                        case "NG":
+                        case "OM":
+                        case "S3S":
+                        case "SE":
+                        case "SP":
+                        case "SS":
+                        case "SY":
+                        case "TE":
+                        case "TU":
+                        case "VT":
+                            trinn.Navn = $"ukjent kode ({trinn.Kode})";
+                            break;
+
+                        case "DL":
+                            trinn.Navn = "Dybderelatert lyssvekking";
+                            break;
+                        case "DM":
+                            trinn.Navn = "Dybderelatert miljøstabilisering";
+                            break;
+                        case "GS":
+                            trinn.Navn = "Grottebetinget skjerming";
+                            break;
+                        case "HF":
+                            trinn.Navn = "Helningsbetinget forstyrrelsesintensitet";
+                            break;
+                        case "HI":
+                            trinn.Navn = "Hevdintensitet";
+                            break;
+                        case "HU":
+                            trinn.Navn = "Humusinnhold";
+                            break;
+                        case "IF":
+                            trinn.Navn = "Isbetinget forstyrrelse";
+                            break;
+                        case "IO":
+                            trinn.Navn = "Innhold av organisk materiale";
+                            break;
+                        case "JV":
+                            trinn.Navn = "Jordvarmeinnflytelse";
+                            break;
+                        case "KA":
+                            trinn.Navn = "Kalkinnhold";
+                            break;
+                        case "KI":
+                            trinn.Navn = "Kildevannspåvirkning";
+                            break;
+                        case "LA":
+                            trinn.Navn = "Langsom primær suksesjon";
+                            break;
+                        case "OR":
+                            trinn.Navn = "Overrisling";
+                            break;
+                        case "RU":
+                            trinn.Navn = "Rasutsatthet";
+                            break;
+                        case "S1":
+                            trinn.Navn = "Dominerende kornstørrelsesklasse";
+                            break;
+                        case "S3F":
+                            trinn.Navn = "Finmaterialinnhold";
+                            break;
+                        case "SA":
+                            trinn.Navn = "Marin salinitet";
+                            break;
+                        case "S3E":
+                            trinn.Navn = "Erosjonsmotstand";
+                            break;
+                        case "SM":
+                            trinn.Navn = "Størrelsesrelatert miljøvariabilitet (i vannsystemer)";
+                            break;
+                        case "SU":
+                            trinn.Navn = "Skredutsatthet";
+                            break;
+                        case "SV":
+                            trinn.Navn = "Snødekkebetinget vekstsesongreduksjon";
+                            break;
+                        case "TV":
+                            trinn.Navn = "Tørrleggingsvarighet";
+                            break;
+                        case "UE":
+                            trinn.Navn = "Uttørkingseksponering";
+                            break;
+                        case "UF":
+                            trinn.Navn = "Uttørkingsfare";
+                            break;
+                        case "VF":
+                            trinn.Navn = "Vannpåvirkningsintensitet";
+                            break;
+                        case "VI":
+                            trinn.Navn = "Vindutsatthet";
+                            break;
+                        case "VM":
+                            trinn.Navn = "Vannmetning";
+                            break;
+                        case "VR":
+                            trinn.Navn = "Vannpåvirkningsregime";
+                            break;
+                        case "VS":
+                            trinn.Navn = "Vannsprutintensitet";
+                            break;
+                        default:
+                            trinn.Navn = $"ukjent kode: {trinn.Kode}";
+                            break;
+                    }
+                }
+
+                var listSubTrinn = new List<SubTrinnV22>();
+                for (var i = 1; i < 6; i++)
+                {
+                    var subTrinn = new SubTrinnV22();
+                    switch (i)
+                    {
+                        case 1:
+                            subTrinn.Kode = hovedtypeTrinn.Trinn1;
+                            subTrinn.Navn = hovedtypeTrinn.Trinn1Navn;
+                            break;
+                        case 2:
+                            subTrinn.Kode = hovedtypeTrinn.Trinn2;
+                            subTrinn.Navn = hovedtypeTrinn.Trinn2Navn;
+                            break;
+                        case 3:
+                            subTrinn.Kode = hovedtypeTrinn.Trinn3;
+                            subTrinn.Navn = hovedtypeTrinn.Trinn3Navn;
+                            break;
+                        case 4:
+                            subTrinn.Kode = hovedtypeTrinn.Trinn4;
+                            subTrinn.Navn = hovedtypeTrinn.Trinn4Navn;
+                            break;
+                        case 5:
+                            subTrinn.Kode = hovedtypeTrinn.Trinn5;
+                            subTrinn.Navn = hovedtypeTrinn.Trinn5Navn;
+                            break;
+                    }
+                    if (string.IsNullOrEmpty(subTrinn.Kode)) continue;
+                    listSubTrinn.Add(subTrinn);
+                }
+
+                if (listSubTrinn.Count > 0) trinn.Trinn = listSubTrinn.ToArray();
+
+                if (parent.Trinn == null)
+                {
+                    parent.Trinn = new[] {trinn};
+                }
+                else if (parent.Trinn.Any(x => x.Kode.Equals(trinn.Kode, StringComparison.OrdinalIgnoreCase)))
+                {
+                    continue;
+                }
+                else
+                {
+                    var list = new List<TrinnV22>();
+                    list.AddRange(parent.Trinn);
+                    list.Add(trinn);
+                    parent.Trinn = list.ToArray();
+                }
+
+                bulk.Store(
+                    RavenJObject.FromObject(parent),
+                    RavenJObject.Parse("{'Raven-Entity-Name': 'Naturtypes'}"),
+                    $"Naturtype/{parent.Kode.Replace(" ", "_")}"
+                );
+                Thread.Sleep(1);
+            }
         }
 
         private void NaturtypeKartlegging(
@@ -158,7 +357,7 @@
                 var kartlegging = enumerator.Current.Document;
                 //Log2Console($"json: {JsonSerializer.Serialize(kartlegging, options)}", true);
 
-                Log2Console($"docId: {kartlegging.docId}", true);
+                Log2Console($"docId: {kartlegging.docId}");
 
                 var naturtype = new NaturTypeV22
                 {
@@ -245,7 +444,7 @@
                     RavenJObject.Parse("{'Raven-Entity-Name': 'Naturtypes'}"),
                     $"Naturtype/{naturtype.Kode.Replace(" ", "_")}"
                 );
-
+                Thread.Sleep(1);
             }
         }
 
@@ -269,7 +468,7 @@
                 var hovedtype = enumerator.Current.Document;
                 //Log2Console($"json: {JsonSerializer.Serialize(naturtypeGrunntype, options)}", true);
 
-                Log2Console($"docId: {hovedtype.docId}", true);
+                Log2Console($"docId: {hovedtype.docId}");
 
                 var naturtype = new NaturTypeV22
                 {
@@ -319,7 +518,7 @@
                 var naturtypeGrunntype = enumerator.Current.Document;
                 //Log2Console($"json: {JsonSerializer.Serialize(naturtypeGrunntype, options)}", true);
 
-                Log2Console($"docId: {naturtypeGrunntype.docId}", true);
+                Log2Console($"docId: {naturtypeGrunntype.docId}");
 
                 var naturtype = new NaturTypeV22
                 {
