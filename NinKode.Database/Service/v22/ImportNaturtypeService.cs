@@ -7,7 +7,6 @@
     using NinKode.Database.Model.common;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
-    using Raven.Abstractions.Extensions;
     using Raven.Client;
     using Raven.Client.Document;
     using Raven.Json.Linq;
@@ -30,7 +29,7 @@
             _codeV22Service = new CodeV22Service(_dbUrl, _dbToName);
         }
 
-        public void Import(IDocumentStore store, Miljovariabler miljovariabler, string rootName)
+        public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
             var codeV21Service = new v21.CodeV21Service(_dbUrl, _dbFromName);
             var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
@@ -109,23 +108,23 @@
             using var session = store.OpenSession();
             var indexes = GetIndexes(session.Advanced.DocumentStore).ToList();
 
-            NaturtypeGrunntypeProcess(naturTypes, bulk, session, indexes);
-            NinDefinisjonHovedtyperProcess(naturTypes, bulk, session, indexes);
+            ProcessNaturtypeGrunntype(naturTypes, bulk, session, indexes);
+            ProcessNinDefinisjonHovedtyper(naturTypes, bulk, session, indexes);
             
             FixChildrenAndParents(store, naturTypes);
 
-            NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "2500");
-            NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "5000");
-            NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "10000");
-            NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "20000");
+            ProcessNaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "2500");
+            ProcessNaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "5000");
+            ProcessNaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "10000");
+            ProcessNaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "20000");
 
             //FixChildrenAndParents(store, naturTypes);
-            FixEnvironment(ref naturTypes, miljovariabler, bulk, session, indexes);
+            FixEnvironment(ref naturTypes, miljovariabel, bulk, session, indexes);
         }
 
         private void FixEnvironment(
             ref Dictionary<string, NaturTypeV22> naturTypes,
-            Miljovariabler miljovariabler,
+            Miljovariabel miljovariabel,
             BulkInsertOperation bulk,
             IDocumentSession session,
             IEnumerable<string> indexes)
@@ -156,7 +155,7 @@
                     Kode = hovedtypeTrinn.Gradientkode,
                     Type = "Miljøvariabel",
                     LKMKategori = hovedtypeTrinn.LkmKategori,
-                    Navn = miljovariabler.GetTittelByKode(hovedtypeTrinn.Gradientkode)
+                    Navn = miljovariabel.GetTitleByKode(hovedtypeTrinn.Gradientkode)
                 };
 
                 if (string.IsNullOrEmpty(trinn.Navn)) continue;
@@ -224,7 +223,7 @@
             }
         }
 
-        private void NaturtypeKartlegging(
+        private void ProcessNaturtypeKartlegging(
             ref Dictionary<string, NaturTypeV22> naturTypes,
             BulkInsertOperation bulk,
             IDocumentSession session,
@@ -337,7 +336,7 @@
             }
         }
 
-        private void NinDefinisjonHovedtyperProcess(
+        private void ProcessNinDefinisjonHovedtyper(
             IDictionary<string, NaturTypeV22> naturTypes,
             BulkInsertOperation bulk,
             IDocumentSession session,
@@ -387,7 +386,7 @@
             }
         }
 
-        private void NaturtypeGrunntypeProcess(
+        private void ProcessNaturtypeGrunntype(
             IDictionary<string, NaturTypeV22> naturTypes,
             BulkInsertOperation bulk,
             IDocumentSession session,

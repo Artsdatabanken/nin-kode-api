@@ -1,0 +1,66 @@
+Nivå 1 Kode;Variabelgruppe;Nivå 2 kode;
+0;Beskrivelsessystem;BeSys1,BeSys2,BeSys3,BeSys4,BeSys5,BeSys6,BeSys7,BeSys8,BeSys9;
+1;Artssammensetning;1AE;Enkeltartssammensetning
+1;Artssammensetning;1AG;Artsgruppesammensetning
+1;Artssammensetning;1AR;Relativ del-artsgruppesammensetning
+2;Geologisk sammensetning;2BE;Bergartsforekomst
+2;Geologisk sammensetning;2FO;Fossilforekomst
+2;Geologisk sammensetning;2JA;Jordartsforekomst
+2;Geologisk sammensetning;2JM;Jordsmonnforekomst
+2;Geologisk sammensetning;2MI;Mineralforekomst
+3;Landform;3AB;Avsetningsformer knyttet til breer
+3;Landform;3AR;Avsetningsformer knyttet til rennende vann
+3;Landform;3BF;Breformer
+3;Landform;3EB;Erosjonsformer knyttet til breer
+3;Landform;3EL;Elveløpsformer
+3;Landform;3ER;Erosjonsformer knyttet til rennende vann
+3;Landform;3FP;Landformer knyttet til frostprosesser
+3;Landform;3IK;Landformer knyttet til jordas indre krefter
+3;Landform;3KJ;Kjemiske oppløsningsformer
+3;Landform;3KP;Landformer knyttet til kystprosesser
+3;Landform;3ML;Landformer knyttet til massebevegelse på land
+3;Landform;3MR;Landformer knyttet til marine strøm- og skredprosesser
+3;Landform;3TO;Torvmarksformer
+3;Landform;3VI;Landformer knyttet til vindprosesser
+4;Naturgitte objekter;4DG;Dødvedprofil for stående død ved (gadder)
+4;Naturgitte objekter;4DL;Dødvedprofil for liggende død ved (læger)
+4;Naturgitte objekter;4RV;Rotvelt
+4;Naturgitte objekter;4TG;Gammelt tre
+4;Naturgitte objekter;4TL;Tre med spesielt livsmedium
+4;Naturgitte objekter;4TS;Stort tre
+5;Menneskeskapte objekter;5XG;Annen løs gjenstand
+5;Menneskeskapte objekter;5AB;Arealbrukskategorier 
+5;Menneskeskapte objekter;5BY;Bygningstyper
+5;Menneskeskapte objekter;5KU;Kulturminner
+6;Regionale komplekse miljøvariable;6HF;
+6;Regionale komplekse miljøvariable;6KE;
+6;Regionale komplekse miljøvariable;6KS;
+6;Regionale komplekse miljøvariable;6SE;
+6;Regionale komplekse miljøvariable;6SO;
+6;Regionale komplekse miljøvariable;6SX;
+7;Tilstandsvariasjon;7BU;Spor etter bunntråling
+7;Tilstandsvariasjon;7EU;Eutrofiering
+7;Tilstandsvariasjon;7FA;Fremmedartsinnslag
+7;Tilstandsvariasjon;7GR;Grøfting
+7;Tilstandsvariasjon;7JB;Jord-bruk (aktuell bruk av jord)
+7;Tilstandsvariasjon;7MG;Miljøgifter og annen forurensning
+7;Tilstandsvariasjon;7OB;Overbeskatning
+7;Tilstandsvariasjon;7RA;Rask suksesjon
+7;Tilstandsvariasjon;7SB;Skog-bruk (bruk av tresatt areal)
+7;Tilstandsvariasjon;7SD;Skogbestandsdynamikk
+7;Tilstandsvariasjon;7SE;Spor etter slitasje og slitasjebetinget erosjon
+7;Tilstandsvariasjon;7SN;Naturlig bestandsreduksjon på tresatt areal
+7;Tilstandsvariasjon;7SU;Forsuring
+7;Tilstandsvariasjon;7TK;Spor etter ferdsel med tunge kjøretøy
+7;Tilstandsvariasjon;7UB;Ubalanse mellom trofiske nivåer
+7;Tilstandsvariasjon;7VR;Vassdragsreguleringseffekt
+8;Terrengformvariabler;8ER;Eksponeringsretning
+8;Terrengformvariabler;8RR;Relativt relieff
+8;Terrengformvariabler;8TH;Terrenghelning
+8;Terrengformvariabler;8TP;Terrengposisjon
+8;Terrengformvariabler;8TU;Terrenguro
+9;Romlige strukturvariabler;9NE;Nedbørfeltstørrelse
+9;Romlige strukturvariabler;9TD;Terskeldyp
+9;Romlige strukturvariabler;9TS;Tresjiktstruktur
+9;Romlige strukturvariabler;9VA;Vannflateareal
+9;Romlige strukturvariabler;9VD;Vanndybde

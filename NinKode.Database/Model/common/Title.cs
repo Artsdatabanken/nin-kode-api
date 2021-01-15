@@ -1,6 +1,6 @@
 ﻿namespace NinKode.Database.Model.common
 {
-    public class LkmTittel
+    public class Title
     {
         public string nb { get; set; }
     }
