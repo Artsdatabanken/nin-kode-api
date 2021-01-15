@@ -9,5 +9,8 @@
 
         [JsonPropertyName("Kode")]
         public string Kode { get; set; }
+
+        [JsonPropertyName("Basistrinn")]
+        public string Basistrinn { get; set; }
     }
 }

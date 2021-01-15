@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading;
+    using NinKode.Database.Model.common;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
     using Raven.Abstractions.Extensions;
@@ -29,7 +30,7 @@
             _codeV22Service = new CodeV22Service(_dbUrl, _dbToName);
         }
 
-        public void Import(IDocumentStore store, string rootName)
+        public void Import(IDocumentStore store, Miljovariabler miljovariabler, string rootName)
         {
             var codeV21Service = new v21.CodeV21Service(_dbUrl, _dbFromName);
             var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
@@ -119,11 +120,12 @@
             NaturtypeKartlegging(ref naturTypes, bulk, session, indexes, "20000");
 
             //FixChildrenAndParents(store, naturTypes);
-            FixEnvironment(ref naturTypes, bulk, session, indexes);
+            FixEnvironment(ref naturTypes, miljovariabler, bulk, session, indexes);
         }
 
         private void FixEnvironment(
             ref Dictionary<string, NaturTypeV22> naturTypes,
+            Miljovariabler miljovariabler,
             BulkInsertOperation bulk,
             IDocumentSession session,
             IEnumerable<string> indexes)
@@ -153,130 +155,11 @@
                 {
                     Kode = hovedtypeTrinn.Gradientkode,
                     Type = "Miljøvariabel",
-                    //Navn = hovedtypeTrinn.HovedtypeNavn
+                    LKMKategori = hovedtypeTrinn.LkmKategori,
+                    Navn = miljovariabler.GetTittelByKode(hovedtypeTrinn.Gradientkode)
                 };
 
-                if (string.IsNullOrEmpty(trinn.Navn))
-                {
-                    switch (trinn.Kode.ToUpper())
-                    {
-                        case "":
-                        case "BK":
-                        case "DD":
-                        case "ER":
-                        case "FK":
-                        case "FR":
-                        case "HS":
-                        case "KO":
-                        case "KT":
-                        case "KY":
-                        case "LK":
-                        case "MF":
-                        case "NG":
-                        case "OM":
-                        case "S3S":
-                        case "SE":
-                        case "SP":
-                        case "SS":
-                        case "SY":
-                        case "TE":
-                        case "TU":
-                        case "VT":
-                            trinn.Navn = $"ukjent kode ({trinn.Kode})";
-                            break;
-
-                        case "DL":
-                            trinn.Navn = "Dybderelatert lyssvekking";
-                            break;
-                        case "DM":
-                            trinn.Navn = "Dybderelatert miljøstabilisering";
-                            break;
-                        case "GS":
-                            trinn.Navn = "Grottebetinget skjerming";
-                            break;
-                        case "HF":
-                            trinn.Navn = "Helningsbetinget forstyrrelsesintensitet";
-                            break;
-                        case "HI":
-                            trinn.Navn = "Hevdintensitet";
-                            break;
-                        case "HU":
-                            trinn.Navn = "Humusinnhold";
-                            break;
-                        case "IF":
-                            trinn.Navn = "Isbetinget forstyrrelse";
-                            break;
-                        case "IO":
-                            trinn.Navn = "Innhold av organisk materiale";
-                            break;
-                        case "JV":
-                            trinn.Navn = "Jordvarmeinnflytelse";
-                            break;
-                        case "KA":
-                            trinn.Navn = "Kalkinnhold";
-                            break;
-                        case "KI":
-                            trinn.Navn = "Kildevannspåvirkning";
-                            break;
-                        case "LA":
-                            trinn.Navn = "Langsom primær suksesjon";
-                            break;
-                        case "OR":
-                            trinn.Navn = "Overrisling";
-                            break;
-                        case "RU":
-                            trinn.Navn = "Rasutsatthet";
-                            break;
-                        case "S1":
-                            trinn.Navn = "Dominerende kornstørrelsesklasse";
-                            break;
-                        case "S3F":
-                            trinn.Navn = "Finmaterialinnhold";
-                            break;
-                        case "SA":
-                            trinn.Navn = "Marin salinitet";
-                            break;
-                        case "S3E":
-                            trinn.Navn = "Erosjonsmotstand";
-                            break;
-                        case "SM":
-                            trinn.Navn = "Størrelsesrelatert miljøvariabilitet (i vannsystemer)";
-                            break;
-                        case "SU":
-                            trinn.Navn = "Skredutsatthet";
-                            break;
-                        case "SV":
-                            trinn.Navn = "Snødekkebetinget vekstsesongreduksjon";
-                            break;
-                        case "TV":
-                            trinn.Navn = "Tørrleggingsvarighet";
-                            break;
-                        case "UE":
-                            trinn.Navn = "Uttørkingseksponering";
-                            break;
-                        case "UF":
-                            trinn.Navn = "Uttørkingsfare";
-                            break;
-                        case "VF":
-                            trinn.Navn = "Vannpåvirkningsintensitet";
-                            break;
-                        case "VI":
-                            trinn.Navn = "Vindutsatthet";
-                            break;
-                        case "VM":
-                            trinn.Navn = "Vannmetning";
-                            break;
-                        case "VR":
-                            trinn.Navn = "Vannpåvirkningsregime";
-                            break;
-                        case "VS":
-                            trinn.Navn = "Vannsprutintensitet";
-                            break;
-                        default:
-                            trinn.Navn = $"ukjent kode: {trinn.Kode}";
-                            break;
-                    }
-                }
+                if (string.IsNullOrEmpty(trinn.Navn)) continue;
 
                 var listSubTrinn = new List<SubTrinnV22>();
                 for (var i = 1; i < 6; i++)
@@ -287,22 +170,27 @@
                         case 1:
                             subTrinn.Kode = hovedtypeTrinn.Trinn1;
                             subTrinn.Navn = hovedtypeTrinn.Trinn1Navn;
+                            subTrinn.Basistrinn = hovedtypeTrinn.Trinn1Csv;
                             break;
                         case 2:
                             subTrinn.Kode = hovedtypeTrinn.Trinn2;
                             subTrinn.Navn = hovedtypeTrinn.Trinn2Navn;
+                            subTrinn.Basistrinn = hovedtypeTrinn.Trinn2Csv;
                             break;
                         case 3:
                             subTrinn.Kode = hovedtypeTrinn.Trinn3;
                             subTrinn.Navn = hovedtypeTrinn.Trinn3Navn;
+                            subTrinn.Basistrinn = hovedtypeTrinn.Trinn3Csv;
                             break;
                         case 4:
                             subTrinn.Kode = hovedtypeTrinn.Trinn4;
                             subTrinn.Navn = hovedtypeTrinn.Trinn4Navn;
+                            subTrinn.Basistrinn = hovedtypeTrinn.Trinn4Csv;
                             break;
                         case 5:
                             subTrinn.Kode = hovedtypeTrinn.Trinn5;
                             subTrinn.Navn = hovedtypeTrinn.Trinn5Navn;
+                            subTrinn.Basistrinn = hovedtypeTrinn.Trinn5Csv;
                             break;
                     }
                     if (string.IsNullOrEmpty(subTrinn.Kode)) continue;

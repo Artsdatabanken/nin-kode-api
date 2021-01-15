@@ -10,6 +10,9 @@
         [JsonPropertyName("Kode")]
         public string Kode { get; set; }
 
+        [JsonPropertyName("LKM Kategori")]
+        public string LKMKategori { get; set; }
+
         [JsonPropertyName("Type")]
         public string Type { get; set; }
 
