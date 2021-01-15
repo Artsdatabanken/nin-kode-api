@@ -432,6 +432,7 @@
                             RavenJObject.Parse("{'Raven-Entity-Name': 'Naturtypes'}"),
                             $"Naturtype/{old.Kode.Replace(" ", "_")}"
                         );
+                        Thread.Sleep(1);
                     }
                 }
                 else if (!naturTypes.ContainsKey(naturtype.Kode))
@@ -494,7 +495,7 @@
                     RavenJObject.Parse("{'Raven-Entity-Name': 'Naturtypes'}"),
                     $"Naturtype/{naturtype.Kode.Replace(" ", "_")}"
                 );
-
+                Thread.Sleep(1);
             }
         }
 
@@ -537,7 +538,7 @@
                     RavenJObject.Parse("{'Raven-Entity-Name': 'Naturtypes'}"),
                     $"Naturtype/{naturtype.Kode.Replace(" ", "_")}"
                 );
-
+                Thread.Sleep(1);
             }
         }
 

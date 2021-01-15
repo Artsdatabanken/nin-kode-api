@@ -8,6 +8,7 @@
     using NinKode.Database.Service.v22;
 
     [ApiController]
+    [Route("koder")]
     [Route("v2.2/koder")]
     public class CodeV22Controller : ControllerBase
     {
