@@ -10,6 +10,6 @@
         public string trinnkode => string.IsNullOrEmpty(kode)
             ? ""
             : kode.Substring(kode.LastIndexOf("-", StringComparison.Ordinal) + 1);
-        public LkmTittel tittel { get; set; }
+        public Title tittel { get; set; }
     }
 }
