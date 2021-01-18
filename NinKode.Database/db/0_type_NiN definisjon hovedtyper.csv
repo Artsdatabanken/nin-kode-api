@@ -1,93 +1,93 @@
-HTK;Navn;PrK;PrK-tekst;GrL;Definisjonsgrunnlag-tekst;NiN[1] ;dLKM;hLKM;tLKM;uLKM;Kunnskapsgrunnlag - Hovedtypen generelt;Kunnskapsgrunnlag - Grunntypeinndelingen
-M1;Eufotisk fast saltvannsbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;M11 [1-5, pp];;VF,DL,SA;HF,S1,IF;VR,RU ;3;2
-M2;Afotisk fast saltvannsbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;M8 [1];;DM,VF;HF,BK;SA,S1,RU;1;2
-M3;Fast fjærebeltebunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;S4;;VF,TV,SA ;HF,IF ;S1,VR,RU;3;3
-M4;Eufotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;M4 pp., M13, M15;;S3 ;DL,SA,IO,KA,SE ;;2;2
-M5;Afotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;M4 pp, M12, M14 [1];;S3,DM ;IO ;VF;2;2
-M6;Korallrev-bunn;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;M6;;;DM ;LK;4;3
-M7;Marin undervannseng;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;M15 [3];;;SA,TV ;S3;4;3
-M8;Helofytt-saltvannsump;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A ;normal, strukturerende artsgruppe;S7 [10, 12];;;;SA,IO,TV ;2;2
-M9;Littoralbasseng-bunn;3;Preget av miljøstress;S;miljøstressbetinget;M11 [6,7];SM ;SM,TV ;SE;;2;2
-M10;Marin grotte og overheng;3;Preget av miljøstress;S;miljøstressbetinget;M8 [2] pp. M11 [5] pp.;GS;DL ;GS ;;1;2
-M11;Kaldt gassoppkomme;3;Preget av miljøstress;S;miljøstressbetinget;M2;KI;DM ;KI,KT ;;1;1
-M12;Varm havkilde;3;Preget av miljøstress;S ;miljøstressbetinget;M3;KI,JV ;JV,DM;;;1;1
-M13;Marin sedimentbunn preget av oksygenmangel;3;Preget av miljøstress;S;miljøstressbetinget;M5 [1] M14[2];OM;;OM,DL;;2;3
-M14;Sterkt endret eller ny fast saltvannsbunn;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;M1 pp. S1 [3,4];SX;DL ;;VF,SA;1;1
-M15;Sterkt endret eller ny marin sedimentbunn ;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;M1 pp. S1 [1,2];SX;;S3,HS;DL,SA;2;1
-L1;Eufotisk fast ferskvannsbunn ;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;F6;;KA ;VF,HU ;DL,IF;3;2
-L2;Eufotisk limnisk sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;F5 F7[1, 3,4];;S3,KA ;IO,VT,SE ;VF,HU,DL,IF;3;2
-L3;Afotisk limnisk sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;F4;;;KA ;IO;2;1
-L4;Helofytt-ferskvannssump;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;F7 [5, 6];;;KA ;S3,IO,IF;4;3
-L5;Ferskvannskildebunn;3;Preget av miljøstress;S ;miljøstressbetinget;F2;KI;;KT,KA ;S3,VF;2;1
-L6;Afotisk limnisk sedimentbunn preget av oksygenmangel;3;Preget av miljøstress;S;miljøstressbetinget;F3;OM;;OM ;KA;3;2
-L7;Sterkt endret eller ny fast ferskvannsbunn;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;F1 p.p.;SX;;HS;DL;1;1
-L8;Sterkt endret eller ny limnisk sedimentbunn;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;F1 p.p.;SX;;HS;DL;2;1
-T1;Nakent berg;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0L;normal, ikke jorddekt;T9, T14, T20;;KA,UE,OR ;HF,VF,VS,LA,NG,VI,SV ;IF,BK;3;2
-T2;Åpen grunnlendt mark ;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;T25;;KA ;UF ;VM,BK,HI;2;3
-T3;Fjellhei, leside og tundra;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;T29 [1-16];;KA,UF ;KI ;BK,HI,RU,VM;4;4
-T4;Fastmarksskogsmark;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;T23;;UF,KA ;KI ;BK,HI,SU,RU,SS,S1,VM,VS,UE;4;3
-T5;Grotte og overheng;3;Preget av miljøstress;SL ;miljøstressbetinget, ikke jorddekt;T19 T20 pp.;GS;GS,KA ;UE ;BK,LA;1;2
-T6;Strandberg;3;Preget av miljøstress;SL ;miljøstressbetinget, ikke jorddekt;S5;TV,SA ;TV ;KA,VF,HF,IF;;3;2
-T7;Snøleie;3;Preget av miljøstress;S;miljøstressbetinget;T30 pp.;SV ;KA,SV ;KI ;VM,HI,S1;4;4
-T8;Fuglefjell-eng og fugletopp;3;Preget av miljøstress;S;miljøstressbetinget;T15;NG;NG ;KI,UF ;KA,HI ;3;3
-T9;Mosetundra;3;Preget av miljøstress;S ;miljøstressbetinget;T16;NG,PF,IO;;KA ;VM;2;1
-T10;Arktisk steppe;3;Preget av miljøstress;S;miljøstressbetinget;T27 [2-3];AS;;VI;;2;1
-T11;Saltanrikingsmark i fjæresonen;3;Preget av miljøstress;S ;miljøstressbetinget;S7 [13, 7-8pp];TV,SF;;TV,S1;;3;2
-T12;Strandeng;3;Preget av miljøstress;S ;miljøstressbetinget;S7 [1-8] p.p.;TV,SA;TV ;;SA,HI,S1,VM,KA;3;3
-T13;Rasmark;4;Preget av aktiv regulerende forstyrrelse ;RL;betinget av regulerende forstyrrelse, ikke jorddekt;T17 [1-4];RU ;KA,S1 ;UE,RU ;BK,VI;3;2
-T14;Rabbe;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende forstyrrelse;T27 [1] T29 [23-25];VI;;VI,KA;;4;4
-T15;Fosse-eng;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende forstyrrelse;T10;VS;;KA ;VS,HI,KI;2;2
-T16;Rasmarkhei og -eng;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende forstyrrelse;T17 [5-14];RU;KA ;RU,KI ;UF,HI,BK,VI,VM;3;3
-T17;Aktiv skredmark;5;Preget av aktiv destabiliserende forstyrrelse;DL;betinget av destabiliserende forstyrrelse, ikke jorddekt;T18 [1-3];SU;S1 ;;SU,KA,KI;2;3
-T18;Åpen flomfastmark;5;Preget av aktiv destabiliserende forstyrrelse;DL;betinget av destabiliserende forstyrrelse, ikke jorddekt;T8;VF;S1 ;VF,KA,ER ;IF,KI,HI;2;2
-T19;Oppfrysingsmark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;T28 pp.;PF,OF;;KA;;2;2
-T20;Isinnfrysingsmark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;T24;IF;;KA;;3;3
-T21;Sanddynemark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;T13, S6[1,2];SS;SS ;VI,VM ;HI;4;3
-T22;Fjellgrashei og grastundra;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;T28 pp, T29 [17-22];JF;;KA,SV ;VM;3;3
-T23;Ferskvanns-driftvoll;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;-;TV,IO;;;;1;2
-T24;Driftvoll;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;S3;TV,IO,SA;VF ;;VM;3;2
-T25;Historisk skredmark;6a;Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Rask suksesjon;XD;betinget av destabiliserende historisk forstyrrelse;T18 p.p.;SH;S1 ;;KA,KI;1;1
-T26;Breforland og snøavsmeltingsområde;6b;Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon ;XSL ;betinget av historisk miljøstress, ikke jorddekt;T11;SH;;SV,VM,LA,S1 ;KA,KI ;4;2
-T27;Blokkmark;6b;Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon ;XRL;betinget av historisk regulerende forstyrrelse, ikke jorddekt;T22;SH;SV ;KA,VI,LA ;BK,S1,UE;1;1
-T28;Polarørken;6b;Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon ;XRL;betinget av historisk regulerende forstyrrelse, ikke jorddekt;T21;SH,PF;KA;;;2;3
-T29;Grus- og steindominert strand og strandlinje;6b;Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon ;XRL;betinget av historisk regulerende forstyrrelse, ikke jorddekt;T12;SH;;S1,LA,VI,TV ;HI;3;3
-T30;Flomskogsmark;9;Preget av aktiv destabiliserende forstyrrelse;AD;betinget av destabiliserende forstyrrelse, strukturerende artsgruppe;T7;VF;;S1,VF,KI,ER;KA,HI,SA;2;3
-T31;Boreal hei;10;Semi-naturlig system uten eller med svake spor av hevd;M;semi-naturlig mark uten hevdpreg;T26;MX;KA,UF ;KI ;BK,HI,VM;2;4
-T32;Semi-naturlig eng;11b;Semi-naturlig hevdpreget system ;MHJ;semi-naturlig jordbruksmark;T4;HI ;KA,HI ;KI,UF,SS ;SP,VM;4;4
-T33;Semi-naturlig strandeng;11b;Semi-naturlig hevdpreget system ;MHJ ;semi-naturlig jordbruksmark;S7 [1-6] p.p.;HI,TV,SA;;TV ;SA,SP,VM,S1,HI,KA;3;2
-T34;Kystlynghei;11b;Semi-naturlig hevdpreget system ;MHJ;semi-naturlig jordbruksmark;T5;HI,HR;KA,UF ;VM ;BK;4;4
-T35;Sterkt endret åpen fastmark med løsmassedekke;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;T2 pp.;SX;;S1 ;KA;2;3
-T36;Ny fastmark på tidligere våtmark og ferskvannsbunn;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;T2 pp.;SX;HS;;KA;2;2
-T37;Ny fastmark på sterkt modifi-serte og syntetiske substrater, i rask suksesjon;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;T2 pp.;SX;;HS;;2;3
-T38;Treplantasje;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;T23 pp.;SX;;;UF,KA;4;2
-T39;Sterkt endret eller ny fastmark i langsom suksesjon;12b;Sterkt endret system uten eller med svake spor etter av hevd - Langsom suksesjon;NL;sterk menneskebetinget forstyrrelse, i langsom suksesjon;T2 pp.;SX;;HS,LA;;2;2
-T40;Sterkt endret fastmark med preg av semi-naturlig eng;13a;Sterkt endret system uten jordbruksproduksjon som hovedformål;NH;sterk menneskebetinget forstyrrelse, med hevdpreg;T2 pp.;SX,MB ;;;KA,UF,SP,VM,SS,SA;1;1
-T41;Oppdyrket mark med preg av semi-naturlig eng;13b;Sterkt endret system preget av ekstensiv hevd - Oppdyrka mark;NHJ;sterkt endret jordbruksmark;T3 pp.;SX,MB ;;;KA,HI,SP,VM;2;2
-T42;Sterkt endret, hyppig bearbeidet fastmark med intensivt hevdpreg;14a;Sterkt endret system uten jordbruksproduksjon som hovedformål;NH;sterk menneskebetinget forstyrrelse, med hevdpreg;T2 pp.;SX,MB ;;;;1;1
-T43;Sterkt endret, varig fastmark med intensivt hevdpreg;14a;Sterkt endret system uten jordbruksproduksjon som hovedformål;NH;sterk menneskebetinget forstyrrelse, med hevdpreg;T2 pp.;SX,MB ;;;KA,HI,VM ;1;1
-T44;Åker;14b;Sterkt endret hevdpreget system - Oppdyrka mark;NHJ;sterkt endret jordbruksmark;T3 pp.;SX,MB ;;;KA,S1,VM;2;2
-T45;Oppdyrket varig eng;14b;Sterkt endret hevdpreget system - Oppdyrka mark;NHJ;sterkt endret jordbruksmark;T3 pp.;SX,MB ;HI ;SP ;KA,S1,VM;2;2
-V1;Åpen jordvannsmyr;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;V6[4-15], V7 [2-7] p.p.;;KA,TV ;MF,KI,SA ;VT,TE;3;3
-V2;Myr- og sumpskogsmark;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;V7 [2-7] p.p.;;KA ;TV,KI ;;3;4
-V3;Nedbørsmyr ;3;Preget av miljøstress;S;miljøstressbetinget;V6[1-3];VT;TV ;MF,VI ;TE;4;4
-V4;Kaldkilde;3;Preget av miljøstress;S ;miljøstressbetinget;V3, V4;KI;KA ;KI,KT;HI;2;4
-V5;Varm kilde;3;Preget av miljøstress;S ;miljøstressbetinget;V5;KI,JV;;JV;JV;1;1
-V6;Våtsnøleie og snøleiekilde;3;Preget av miljøstress;S;miljøstressbetinget;V9, T30 p.p.;SV,IO;SV ;KA,KI;;2;3
-V7;Arktisk permafrost-våtmark;3;Preget av miljøstress;S;miljøstressbetinget;V8;PF;;KA ;TV;3;3
-V8;Strandsumpskogsmark;7;Preget av miljøstress med strukturerende artsgruppe;AS;miljøstressbetinget, strukturerende artsgruppe;V7 p.p.;VT;;KA,SA;;2;4
-V9;Semi-naturlig myr ;11b;Semi-naturlig hevdpreget system ;MHJ;semi-naturlig jordbruksmark;V6, V7 p.p.;HI;KA ;;TV,KI,SP;3;1
-V10;Semi-naturlig våteng;11b;Semi-naturlig hevdpreget system ;MHJ;semi-naturlig jordbruksmark;T4 [9];HI,IO;;KA,KI;SP;2;2
-V11;Torvtak;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;V1[3];SX;;KA;;2;1
-V12;Grøftet torvmark;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;V1[1,2];;;;VT,KA;3;2
-V13;Ny våtmark;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;V2;SX;;HS,IO ;KA;1;1
-H1;Havvannmasser;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;-;;DM ;KY ;JV;3;2
-H2;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster ;3;Preget av miljøstress;S ;miljøstressbetinget;-;SM;SM ;SA ;;2;2
-H3;Ikke-sirkulerende marine vannmasser i fysisk avgrensete saltvannsforekomster;3;Preget av miljøstress;S;miljøstressbetinget;-;OM;;;;1;2
-H4;Sterkt endrete marine vannmasser;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;-;SY;;SY ;SM,SA;2;1
-F1;Elvevannmasser;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;-;;;VF,HU,KA ;TU;3;2
-F2;Sirkulerende innsjø-vannmasser;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;-;;SM ;KA,HU,TU ;KO;3;2
-F3;Ikke-sirkulerende innsjø-vannmasser;3;Preget av miljøstress;S ;miljøstressbetinget;-;OM;;;FK;1;2
-F4;Sterkt endrete elvevannmasser;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;-;SY;;SY ;VF,HU,KA,TU;2;1
-F5;Sterkt endrete innsjøvannmasser;12a;Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon;N;sterk menneskebetinget forstyrrelse;-;SY;;SY ;SM,KA,HU,TU,KO;2;1
-I1;Snø- og isdekt fastmark;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;T1;;;;;1;1
-I2;Polar havis;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;-;;;;;3;1
+HTK	Navn	PrK	PrK-tekst	GrL	Definisjonsgrunnlag-tekst	NiN[1] 	dLKM	hLKM	tLKM	uLKM	Kunnskapsgrunnlag - Hovedtypen generelt	Kunnskapsgrunnlag - Grunntypeinndelingen
+M1	Eufotisk fast saltvannsbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	M11 [1-5, pp]		VF,DL,SA	HF,S1,IF	VR,RU 	3	2
+M2	Afotisk fast saltvannsbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	M8 [1]		DM,VF	HF,BK	SA,S1,RU	1	2
+M3	Fast fjærebeltebunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	S4		VF,TV,SA 	HF,IF 	S1,VR,RU	3	3
+M4	Eufotisk marin sedimentbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	M4 pp., M13, M15		S3 	DL,SA,IO,KA,SE 		2	2
+M5	Afotisk marin sedimentbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	M4 pp, M12, M14 [1]		S3,DM 	IO 	VF	2	2
+M6	Korallrev-bunn	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A	normal, strukturerende artsgruppe	M6			DM 	LK	4	3
+M7	Marin undervannseng	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A	normal, strukturerende artsgruppe	M15 [3]			SA,TV 	S3	4	3
+M8	Helofytt-saltvannsump	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A 	normal, strukturerende artsgruppe	S7 [10, 12]				SA,IO,TV 	2	2
+M9	Littoralbasseng-bunn	3	Preget av miljøstress	S	miljøstressbetinget	M11 [6,7]	SM 	SM,TV 	SE		2	2
+M10	Marin grotte og overheng	3	Preget av miljøstress	S	miljøstressbetinget	M8 [2] pp. M11 [5] pp.	GS	DL 	GS 		1	2
+M11	Kaldt gassoppkomme	3	Preget av miljøstress	S	miljøstressbetinget	M2	KI	DM 	KI,KT 		1	1
+M12	Varm havkilde	3	Preget av miljøstress	S 	miljøstressbetinget	M3	KI,JV 	JV,DM			1	1
+M13	Marin sedimentbunn preget av oksygenmangel	3	Preget av miljøstress	S	miljøstressbetinget	M5 [1] M14[2]	OM		OM,DL		2	3
+M14	Sterkt endret eller ny fast saltvannsbunn	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	M1 pp. S1 [3,4]	SX	DL 		VF,SA	1	1
+M15	Sterkt endret eller ny marin sedimentbunn 	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	M1 pp. S1 [1,2]	SX		S3,HS	DL,SA	2	1
+L1	Eufotisk fast ferskvannsbunn 	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	F6		KA 	VF,HU 	DL,IF	3	2
+L2	Eufotisk limnisk sedimentbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	F5 F7[1, 3,4]		S3,KA 	IO,VT,SE 	VF,HU,DL,IF	3	2
+L3	Afotisk limnisk sedimentbunn	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	F4			KA 	IO	2	1
+L4	Helofytt-ferskvannssump	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A	normal, strukturerende artsgruppe	F7 [5, 6]			KA 	S3,IO,IF	4	3
+L5	Ferskvannskildebunn	3	Preget av miljøstress	S 	miljøstressbetinget	F2	KI		KT,KA 	S3,VF	2	1
+L6	Afotisk limnisk sedimentbunn preget av oksygenmangel	3	Preget av miljøstress	S	miljøstressbetinget	F3	OM		OM 	KA	3	2
+L7	Sterkt endret eller ny fast ferskvannsbunn	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	F1 p.p.	SX		HS	DL	1	1
+L8	Sterkt endret eller ny limnisk sedimentbunn	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	F1 p.p.	SX		HS	DL	2	1
+T1	Nakent berg	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0L	normal, ikke jorddekt	T9, T14, T20		KA,UE,OR 	HF,VF,VS,LA,NG,VI,SV 	IF,BK	3	2
+T2	Åpen grunnlendt mark 	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	T25		KA 	UF 	VM,BK,HI	2	3
+T3	Fjellhei, leside og tundra	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	T29 [1-16]		KA,UF 	KI 	BK,HI,RU,VM	4	4
+T4	Fastmarksskogsmark	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A	normal, strukturerende artsgruppe	T23		UF,KA 	KI 	BK,HI,SU,RU,SS,S1,VM,VS,UE	4	3
+T5	Grotte og overheng	3	Preget av miljøstress	SL 	miljøstressbetinget, ikke jorddekt	T19 T20 pp.	GS	GS,KA 	UE 	BK,LA	1	2
+T6	Strandberg	3	Preget av miljøstress	SL 	miljøstressbetinget, ikke jorddekt	S5	TV,SA 	TV 	KA,VF,HF,IF		3	2
+T7	Snøleie	3	Preget av miljøstress	S	miljøstressbetinget	T30 pp.	SV 	KA,SV 	KI 	VM,HI,S1	4	4
+T8	Fuglefjell-eng og fugletopp	3	Preget av miljøstress	S	miljøstressbetinget	T15	NG	NG 	KI,UF 	KA,HI 	3	3
+T9	Mosetundra	3	Preget av miljøstress	S 	miljøstressbetinget	T16	NG,PF,IO		KA 	VM	2	1
+T10	Arktisk steppe	3	Preget av miljøstress	S	miljøstressbetinget	T27 [2-3]	AS		VI		2	1
+T11	Saltanrikingsmark i fjæresonen	3	Preget av miljøstress	S 	miljøstressbetinget	S7 [13, 7-8pp]	TV,SF		TV,S1		3	2
+T12	Strandeng	3	Preget av miljøstress	S 	miljøstressbetinget	S7 [1-8] p.p.	TV,SA	TV 		SA,HI,S1,VM,KA	3	3
+T13	Rasmark	4	Preget av aktiv regulerende forstyrrelse 	RL	betinget av regulerende forstyrrelse, ikke jorddekt	T17 [1-4]	RU 	KA,S1 	UE,RU 	BK,VI	3	2
+T14	Rabbe	4	Preget av aktiv regulerende forstyrrelse 	R	betinget av regulerende forstyrrelse	T27 [1] T29 [23-25]	VI		VI,KA		4	4
+T15	Fosse-eng	4	Preget av aktiv regulerende forstyrrelse 	R	betinget av regulerende forstyrrelse	T10	VS		KA 	VS,HI,KI	2	2
+T16	Rasmarkhei og -eng	4	Preget av aktiv regulerende forstyrrelse 	R	betinget av regulerende forstyrrelse	T17 [5-14]	RU	KA 	RU,KI 	UF,HI,BK,VI,VM	3	3
+T17	Aktiv skredmark	5	Preget av aktiv destabiliserende forstyrrelse	DL	betinget av destabiliserende forstyrrelse, ikke jorddekt	T18 [1-3]	SU	S1 		SU,KA,KI	2	3
+T18	Åpen flomfastmark	5	Preget av aktiv destabiliserende forstyrrelse	DL	betinget av destabiliserende forstyrrelse, ikke jorddekt	T8	VF	S1 	VF,KA,ER 	IF,KI,HI	2	2
+T19	Oppfrysingsmark	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	T28 pp.	PF,OF		KA		2	2
+T20	Isinnfrysingsmark	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	T24	IF		KA		3	3
+T21	Sanddynemark	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	T13, S6[1,2]	SS	SS 	VI,VM 	HI	4	3
+T22	Fjellgrashei og grastundra	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	T28 pp, T29 [17-22]	JF		KA,SV 	VM	3	3
+T23	Ferskvanns-driftvoll	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	-	TV,IO				1	2
+T24	Driftvoll	5	Preget av aktiv destabiliserende forstyrrelse	D	betinget av destabiliserende forstyrrelse	S3	TV,IO,SA	VF 		VM	3	2
+T25	Historisk skredmark	6a	Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Rask suksesjon	XD	betinget av destabiliserende historisk forstyrrelse	T18 p.p.	SH	S1 		KA,KI	1	1
+T26	Breforland og snøavsmeltingsområde	6b	Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon 	XSL 	betinget av historisk miljøstress, ikke jorddekt	T11	SH		SV,VM,LA,S1 	KA,KI 	4	2
+T27	Blokkmark	6b	Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon 	XRL	betinget av historisk regulerende forstyrrelse, ikke jorddekt	T22	SH	SV 	KA,VI,LA 	BK,S1,UE	1	1
+T28	Polarørken	6b	Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon 	XRL	betinget av historisk regulerende forstyrrelse, ikke jorddekt	T21	SH,PF	KA			2	3
+T29	Grus- og steindominert strand og strandlinje	6b	Preget av historisk disruptivt miljøstress eller destabiliserende forstyrrelse - Langsom eller frosset suksesjon 	XRL	betinget av historisk regulerende forstyrrelse, ikke jorddekt	T12	SH		S1,LA,VI,TV 	HI	3	3
+T30	Flomskogsmark	9	Preget av aktiv destabiliserende forstyrrelse	AD	betinget av destabiliserende forstyrrelse, strukturerende artsgruppe	T7	VF		S1,VF,KI,ER	KA,HI,SA	2	3
+T31	Boreal hei	10	Semi-naturlig system uten eller med svake spor av hevd	M	semi-naturlig mark uten hevdpreg	T26	MX	KA,UF 	KI 	BK,HI,VM	2	4
+T32	Semi-naturlig eng	11b	Semi-naturlig hevdpreget system 	MHJ	semi-naturlig jordbruksmark	T4	HI 	KA,HI 	KI,UF,SS 	SP,VM	4	4
+T33	Semi-naturlig strandeng	11b	Semi-naturlig hevdpreget system 	MHJ 	semi-naturlig jordbruksmark	S7 [1-6] p.p.	HI,TV,SA		TV 	SA,SP,VM,S1,HI,KA	3	2
+T34	Kystlynghei	11b	Semi-naturlig hevdpreget system 	MHJ	semi-naturlig jordbruksmark	T5	HI,HR	KA,UF 	VM 	BK	4	4
+T35	Sterkt endret åpen fastmark med løsmassedekke	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	T2 pp.	SX		S1 	KA	2	3
+T36	Ny fastmark på tidligere våtmark og ferskvannsbunn	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	T2 pp.	SX	HS		KA	2	2
+T37	Ny fastmark på sterkt modifi-serte og syntetiske substrater, i rask suksesjon	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	T2 pp.	SX		HS		2	3
+T38	Treplantasje	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	T23 pp.	SX			UF,KA	4	2
+T39	Sterkt endret eller ny fastmark i langsom suksesjon	12b	Sterkt endret system uten eller med svake spor etter av hevd - Langsom suksesjon	NL	sterk menneskebetinget forstyrrelse, i langsom suksesjon	T2 pp.	SX		HS,LA		2	2
+T40	Sterkt endret fastmark med preg av semi-naturlig eng	13a	Sterkt endret system uten jordbruksproduksjon som hovedformål	NH	sterk menneskebetinget forstyrrelse, med hevdpreg	T2 pp.	SX,MB 			KA,UF,SP,VM,SS,SA	1	1
+T41	Oppdyrket mark med preg av semi-naturlig eng	13b	Sterkt endret system preget av ekstensiv hevd - Oppdyrka mark	NHJ	sterkt endret jordbruksmark	T3 pp.	SX,MB 			KA,HI,SP,VM	2	2
+T42	Sterkt endret, hyppig bearbeidet fastmark med intensivt hevdpreg	14a	Sterkt endret system uten jordbruksproduksjon som hovedformål	NH	sterk menneskebetinget forstyrrelse, med hevdpreg	T2 pp.	SX,MB 				1	1
+T43	Sterkt endret, varig fastmark med intensivt hevdpreg	14a	Sterkt endret system uten jordbruksproduksjon som hovedformål	NH	sterk menneskebetinget forstyrrelse, med hevdpreg	T2 pp.	SX,MB 			KA,HI,VM 	1	1
+T44	Åker	14b	Sterkt endret hevdpreget system - Oppdyrka mark	NHJ	sterkt endret jordbruksmark	T3 pp.	SX,MB 			KA,S1,VM	2	2
+T45	Oppdyrket varig eng	14b	Sterkt endret hevdpreget system - Oppdyrka mark	NHJ	sterkt endret jordbruksmark	T3 pp.	SX,MB 	HI 	SP 	KA,S1,VM	2	2
+V1	Åpen jordvannsmyr	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	V6[4-15], V7 [2-7] p.p.		KA,TV 	MF,KI,SA 	VT,TE	3	3
+V2	Myr- og sumpskogsmark	2	Med variasjon i artssammensetning betinget av strukturerende artsgruppe	A	normal, strukturerende artsgruppe	V7 [2-7] p.p.		KA 	TV,KI 		3	4
+V3	Nedbørsmyr 	3	Preget av miljøstress	S	miljøstressbetinget	V6[1-3]	VT	TV 	MF,VI 	TE	4	4
+V4	Kaldkilde	3	Preget av miljøstress	S 	miljøstressbetinget	V3, V4	KI	KA 	KI,KT	HI	2	4
+V5	Varm kilde	3	Preget av miljøstress	S 	miljøstressbetinget	V5	KI,JV		JV	JV	1	1
+V6	Våtsnøleie og snøleiekilde	3	Preget av miljøstress	S	miljøstressbetinget	V9, T30 p.p.	SV,IO	SV 	KA,KI		2	3
+V7	Arktisk permafrost-våtmark	3	Preget av miljøstress	S	miljøstressbetinget	V8	PF		KA 	TV	3	3
+V8	Strandsumpskogsmark	7	Preget av miljøstress med strukturerende artsgruppe	AS	miljøstressbetinget, strukturerende artsgruppe	V7 p.p.	VT		KA,SA		2	4
+V9	Semi-naturlig myr 	11b	Semi-naturlig hevdpreget system 	MHJ	semi-naturlig jordbruksmark	V6, V7 p.p.	HI	KA 		TV,KI,SP	3	1
+V10	Semi-naturlig våteng	11b	Semi-naturlig hevdpreget system 	MHJ	semi-naturlig jordbruksmark	T4 [9]	HI,IO		KA,KI	SP	2	2
+V11	Torvtak	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	V1[3]	SX		KA		2	1
+V12	Grøftet torvmark	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	V1[1,2]				VT,KA	3	2
+V13	Ny våtmark	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	V2	SX		HS,IO 	KA	1	1
+H1	Havvannmasser	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	-		DM 	KY 	JV	3	2
+H2	Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster 	3	Preget av miljøstress	S 	miljøstressbetinget	-	SM	SM 	SA 		2	2
+H3	Ikke-sirkulerende marine vannmasser i fysisk avgrensete saltvannsforekomster	3	Preget av miljøstress	S	miljøstressbetinget	-	OM				1	2
+H4	Sterkt endrete marine vannmasser	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	-	SY		SY 	SM,SA	2	1
+F1	Elvevannmasser	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	-			VF,HU,KA 	TU	3	2
+F2	Sirkulerende innsjø-vannmasser	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	-		SM 	KA,HU,TU 	KO	3	2
+F3	Ikke-sirkulerende innsjø-vannmasser	3	Preget av miljøstress	S 	miljøstressbetinget	-	OM			FK	1	2
+F4	Sterkt endrete elvevannmasser	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	-	SY		SY 	VF,HU,KA,TU	2	1
+F5	Sterkt endrete innsjøvannmasser	12a	Sterkt endret system uten eller med svake spor etter av hevd - Rask suksesjon	N	sterk menneskebetinget forstyrrelse	-	SY		SY 	SM,KA,HU,TU,KO	2	1
+I1	Snø- og isdekt fastmark	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	T1					1	1
+I2	Polar havis	1	Uten variasjon i artssammensetning betinget av strukturerende artsgruppe	0	normal hovedtype	-					3	1
