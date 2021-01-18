@@ -43,6 +43,8 @@
             ProcessNaturgitt(ref variasjoner, session, indexes);
             ProcessRegional(ref variasjoner, session, indexes);
             ProcessRomlig(ref variasjoner, session, indexes);
+            ProcessTerrengform(ref variasjoner, session, indexes);
+            ProcessTilstand(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -106,6 +108,89 @@
                 }
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessTilstand(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Tilstandsvariasjon";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonTilstand>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonTilstand = enumerator.Current?.Document;
+                if (variasjonTilstand == null) continue;
+
+                if (variasjoner.ContainsKey(variasjonTilstand.SammensattKode)) continue;
+
+                var parentKode = variasjonTilstand.Nivaa2KodeNy;
+                if (string.IsNullOrEmpty(parentKode))
+                {
+                    variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV22
+                    {
+                        Kode = variasjonTilstand.SammensattKode,
+                        Navn = variasjonTilstand.Trinnbeskrivelse,
+                        OverordnetKode = $"{variasjonTilstand.col_0}{variasjonTilstand.Kode}"
+                    });
+                    continue;
+                }
+
+                variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonTilstand.SammensattKode,
+                    Navn = variasjonTilstand.Trinnbeskrivelse,
+                    OverordnetKode = parentKode
+                });
+
+                if (variasjoner.ContainsKey(parentKode)) continue;
+
+                variasjoner.Add(parentKode, new VariasjonV22
+                {
+                    Kode = parentKode,
+                    Navn = variasjonTilstand.Variabel,
+                    OverordnetKode = $"{variasjonTilstand.col_0}{variasjonTilstand.Kode}"
+                });
+            }
+        }
+
+        private void ProcessTerrengform(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Terrengformvariasjon";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonTerrengform>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonTerrengform = enumerator.Current?.Document;
+                if (variasjonTerrengform == null) continue;
+
+                if (variasjoner.ContainsKey(variasjonTerrengform.SammensattKode)) continue;
+
+                variasjoner.Add(variasjonTerrengform.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonTerrengform.SammensattKode,
+                    Navn = variasjonTerrengform.Vaiabelnavn,
+                    OverordnetKode = $"BeSys{variasjonTerrengform.col_0}"
+                });
             }
         }
 
