@@ -8,6 +8,7 @@
     using NinKode.Database.Service.v22;
 
     [ApiController]
+    [Route("variasjon")]
     [Route("v2.2/variasjon")]
     public class VarietyV22Controller : ControllerBase
     {
@@ -42,6 +43,13 @@
             path = path.Substring(0, path.LastIndexOf("/", StringComparison.Ordinal) + 1);
             var protocol = Request.IsHttps ? "s" : "";
             return $"http{protocol}://{Request.Host}{path}";
+        }
+
+        [HttpGet]
+        [Route("ping")]
+        public string Ping()
+        {
+            return "VarietyV22Controller";
         }
     }
 }
