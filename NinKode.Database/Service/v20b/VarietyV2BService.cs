@@ -44,7 +44,7 @@
                 {
                     while (enumerator.MoveNext())
                     {
-                        yield return CreateVarietyAllCodes(enumerator.Current.Document, host);
+                        yield return CreateVarietyAllCodes(enumerator.Current?.Document, host);
                     }
                 }
             }
@@ -61,7 +61,7 @@
                 {
                     while (enumerator.MoveNext())
                     {
-                        return CreateVarietyCode(enumerator.Current.Document, host);
+                        return CreateVarietyCode(enumerator.Current?.Document, host);
                     }
                 }
             }

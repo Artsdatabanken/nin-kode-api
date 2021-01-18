@@ -140,7 +140,9 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var hovedtypeTrinn = enumerator.Current.Document;
+                var hovedtypeTrinn = enumerator.Current?.Document;
+
+                if (hovedtypeTrinn == null) continue;
 
                 Log2Console($"docId: {hovedtypeTrinn.docId}");
 
@@ -241,7 +243,9 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var kartlegging = enumerator.Current.Document;
+                var kartlegging = enumerator.Current?.Document;
+                if (kartlegging == null) continue;
+
                 //Log2Console($"json: {JsonSerializer.Serialize(kartlegging, options)}", true);
 
                 Log2Console($"docId: {kartlegging.docId}");
@@ -353,7 +357,9 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var hovedtype = enumerator.Current.Document;
+                var hovedtype = enumerator.Current?.Document;
+                if (hovedtype == null) continue;
+
                 //Log2Console($"json: {JsonSerializer.Serialize(naturtypeGrunntype, options)}", true);
 
                 Log2Console($"docId: {hovedtype.docId}");
@@ -403,7 +409,9 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var naturtypeGrunntype = enumerator.Current.Document;
+                var naturtypeGrunntype = enumerator.Current?.Document;
+                if (naturtypeGrunntype == null) continue;
+
                 //Log2Console($"json: {JsonSerializer.Serialize(naturtypeGrunntype, options)}", true);
 
                 Log2Console($"docId: {naturtypeGrunntype.docId}");

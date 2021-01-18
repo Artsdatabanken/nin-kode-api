@@ -36,6 +36,7 @@
 
             ProcessBeskrivelsessystem(ref variasjoner, session, indexes);
             ProcessArtssammensetning(ref variasjoner, session, indexes);
+            ProcessGeologisksammensetning(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -60,7 +61,8 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var beskrivelsesSystem = enumerator.Current.Document;
+                var beskrivelsesSystem = enumerator.Current?.Document;
+                if (beskrivelsesSystem == null) continue;
 
                 VariasjonV22 variasjon;
                 if (variasjoner.ContainsKey(beskrivelsesSystem.Kode))
@@ -101,6 +103,65 @@
             }
         }
 
+        private void ProcessGeologisksammensetning(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Geologisk_sammensetning";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonGeo>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonGeo = enumerator.Current?.Document;
+                if (variasjonGeo == null) continue;
+
+                if (variasjonGeo.Variabeltype.Equals("M", StringComparison.OrdinalIgnoreCase))
+                {
+                    variasjoner.Add(variasjonGeo.Nivaa2KodeNy, new VariasjonV22
+                    {
+                        Kode = variasjonGeo.Nivaa2KodeNy,
+                        Navn = variasjonGeo.col_5,
+                        OverordnetKode = $"{variasjonGeo.col_0}{variasjonGeo.Nivaa1kode}"
+                    });
+                    continue;
+                }
+
+                //Log2Console($"json: {JsonSerializer.Serialize(variasjonGeo, options)}", true);
+                var parentKode = $"{variasjonGeo.Nivaa2KodeNy}";
+                
+                if (!variasjoner.ContainsKey(parentKode))
+                {
+                    var parent = new VariasjonV22
+                    {
+                        Kode = parentKode,
+                        Navn = variasjonGeo.col_5,
+                        OverordnetKode = $"{variasjonGeo.col_0}{variasjonGeo.Nivaa1kode}"
+                    };
+                    variasjoner.Add($"{parent.Kode}", parent);
+                }
+
+                if (variasjoner.ContainsKey(variasjonGeo.SammensattKode)) continue;
+
+                var variasjon = new VariasjonV22
+                {
+                    Kode = $"{variasjonGeo.SammensattKode}",
+                    Navn = $"{variasjonGeo.Navn}",
+                    Type = $"{variasjonGeo.Variabeltype}",
+                    OverordnetKode = parentKode
+                };
+
+                variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
         private void ProcessArtssammensetning(
             ref Dictionary<string, VariasjonV22> variasjoner,
             IDocumentSession session,
@@ -127,7 +188,8 @@
             using var enumerator = session.Advanced.Stream(query);
             while (enumerator.MoveNext())
             {
-                var variasjonArt = enumerator.Current.Document;
+                var variasjonArt = enumerator.Current?.Document;
+                if (variasjonArt == null) continue;
 
                 //if (string.IsNullOrEmpty(variasjonArt.Trinn) || string.IsNullOrEmpty(variasjonArt.Type)) continue;
                 if (string.IsNullOrEmpty(variasjonArt.Trinn)) continue;
