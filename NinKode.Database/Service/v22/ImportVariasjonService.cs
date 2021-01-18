@@ -41,6 +41,7 @@
             ProcessLandform(ref variasjoner, session, indexes);
             ProcessMenneskeskapt(ref variasjoner, session, indexes);
             ProcessNaturgitt(ref variasjoner, session, indexes);
+            ProcessRegional(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -104,6 +105,52 @@
                 }
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessRegional(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Regional_naturvariasjon";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonRegional>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonRegional = enumerator.Current?.Document;
+                if (variasjonRegional == null) continue;
+
+                if (variasjoner.ContainsKey(variasjonRegional.SammensattKode)) continue;
+
+                var parentKode = $"{variasjonRegional.col_0}{variasjonRegional.Kode}";
+                variasjoner.Add(variasjonRegional.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonRegional.SammensattKode,
+                    Navn = variasjonRegional.KlasseTrinnbetegnelse,
+                    OverordnetKode = parentKode
+                });
+
+                if (variasjoner.ContainsKey(parentKode))
+                {
+                    var parent = variasjoner[parentKode];
+                    if (!string.IsNullOrEmpty(parent.Navn)) continue;
+                    variasjoner.Remove(parentKode);
+                }
+
+                variasjoner.Add(parentKode, new VariasjonV22
+                {
+                    Kode = parentKode,
+                    Navn = variasjonRegional.col_1,
+                    OverordnetKode = $"BeSys{variasjonRegional.col_0}"
+                });
             }
         }
 
