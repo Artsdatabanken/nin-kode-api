@@ -429,20 +429,13 @@ Besys1	Nivå 1 kode	col_2	Nivå 2 kode	Nivå 2 beskrivelse	Trinn	Sammensatt_kode
 1	AE	Enkeltartssammensetning	MB-S-XY	Mark- og bunnlevende art - Smårutefrekvens	4	1AE-MB-S-XY_4	3/8 – 4/5 (0,8) 	A	S6	1AE-MB-S-XY	Kilde til variasjon	Trinn	Scientificnameid	Scientificname
 1	AE	Enkeltartssammensetning	MB-S-XY	Mark- og bunnlevende art - Smårutefrekvens	5	1AE-MB-S-XY_5	4/5 – 1 	A	S6	1AE-MB-S-XY	Kilde til variasjon	Trinn	Scientificnameid	Scientificname
 1	AE	Enkeltartssammensetning	MO-O-XY	Mobil art - Forekomst		1AE-MO-O-XY		B		1AE-MO-O-XY	Kilde til variasjon		Scientificnameid	Scientificname
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	0	1AE-BV-D-Algae_0	0 - 6,25 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	1	1AE-BV-D-Algae_1	6,25 - 12,5 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	2	1AE-BV-D-Algae_2	12,5 - 25 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	3	1AE-BV-D-Algae_3	25 - 50 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	4	1AE-BV-D-Algae_4	50 - 75 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	5	1AE-BV-D-Algae_5	> 75 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
-1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og 
-Cyanobacteria)"	x	1AE-BV-D-Algae_x	Ikke registrert	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	0	1AE-BV-D-Algae_0	0 - 6,25 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	1	1AE-BV-D-Algae_1	6,25 - 12,5 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	2	1AE-BV-D-Algae_2	12,5 - 25 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	3	1AE-BV-D-Algae_3	25 - 50 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	4	1AE-BV-D-Algae_4	50 - 75 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	5	1AE-BV-D-Algae_5	> 75 % dekning	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
+1	AE	Enkeltartssammensetning	BV-D-Algae	"Bark- og vedboende art - Dekning - Alger (Chlorophyta og Cyanobacteria)"	x	1AE-BV-D-Algae_x	Ikke registrert	A	A6	1AE-BV-D-Algae	Kilde til variasjon	Trinn	1191,704	Chlorophyta, Cyanobacteria
 1	AE	Enkeltartssammensetning	MB-K-Coav	Mark- og bunnlevende art - Konsentrasjon -  Hassel (Corylus avellana)		1AE-MB-K-Coav	Antall per daa	T	T3	1AE-MB-D-XY	Kilde til variasjon	Trinn	102148	Corylus avellana
 1	AE	Enkeltartssammensetning	BV-0	Bark- og vedboende art- Forekomst		1AE-BV-0		B		1AE-BV-0-XY	Kilde til variasjon	Trinn	Scientificnameid	Scientificname
 1	AE	Enkeltartssammensetning	BV-D	Bark- og vedboende art - Dekning		1AE-BV-D		A	A6	1AE-BV-D	Kilde til variasjon	Trinn	Scientificnameid	Scientificname

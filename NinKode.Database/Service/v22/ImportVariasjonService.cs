@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Text.Json;
     using System.Threading;
+    using NinKode.Database.Extension;
     using NinKode.Database.Model.common;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
@@ -128,31 +129,31 @@
             {
                 var variasjonArt = enumerator.Current.Document;
 
-                if (string.IsNullOrEmpty(variasjonArt.Trinn) || string.IsNullOrEmpty(variasjonArt.Type)) continue;
+                //if (string.IsNullOrEmpty(variasjonArt.Trinn) || string.IsNullOrEmpty(variasjonArt.Type)) continue;
+                if (string.IsNullOrEmpty(variasjonArt.Trinn)) continue;
 
                 //Log2Console($"json: {JsonSerializer.Serialize(variasjonArt, options)}", true);
-                var parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa1kode}";
-                if (parentKode.Length > variasjonArt.SammensattKode.Length || parentKode.Equals(variasjonArt.SammensattKode))
-                {
-                    parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa1kode}";
-                }
+                var parentKode = $"{variasjonArt.Nivaa2KodeNy}";
+                //if (parentKode.Length > variasjonArt.SammensattKode.Length || parentKode.Equals(variasjonArt.SammensattKode))
+                //{
+                //    parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa1kode}";
+                //}
                 //parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa2kode}";
 
-                if (!string.IsNullOrEmpty(variasjonArt.Trinn) && variasjonArt.Trinn.Length > 0)
+                //parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa2KodeNy}";
+
+                if (!variasjoner.ContainsKey(parentKode))
                 {
-                    parentKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa2KodeNy}";
-
-                    if (!variasjoner.ContainsKey(parentKode))
+                    var parent = new VariasjonV22
                     {
-                        var parent = new VariasjonV22
-                        {
-                            Kode = parentKode,
-                            Navn = variasjonArt.Nivaa2beskrivelse
-                        };
-                        variasjoner.Add($"{parent.Kode}", parent);
-                    }
-
+                        Kode = parentKode,
+                        Navn = variasjonArt.Nivaa2beskrivelse,
+                        OverordnetKode = $"{variasjonArt.Besys1}{variasjonArt.Nivaa1kode}"
+                    };
+                    variasjoner.Add($"{parent.Kode}", parent);
                 }
+
+                if (variasjoner.ContainsKey(variasjonArt.SammensattKode)) continue;
 
                 var variasjon = new VariasjonV22
                 {
