@@ -1,11 +1,11 @@
-Kode;Vaiabelgruppe;Kode2;Navn;trinn;Sammensatt_kode;Forklaring;Måleintervall;Variabeltype;Tags
-9;Romlige strukturvariabler;NE;Nedbørfeltstørrelse;[0,≤∞];9NE;areal av landområde (inkludert eventuelle vannforekomster) som drenerer gjennom et gitt punkt, på land eller i et elveløp (km2);km2;K;Trinn
-9;Romlige strukturvariabler;TD;Terskeldyp;[0,≤∞];9TD;største dybde på terskelen ved munningen av en fjord (m);m;K;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;;9TS;antall veldefinerte vertikale kronesjikt i skog [et veldefinert kronesjikt er et høydeintervall over bakken som inneholder vesentlig flere trær (basert på faktisk trehøyde) enn tilgrensende høydeintervaller]; merk at antallet sjikt i en flersjiktet skog, det vil si en skog uten veldefinerte vertikale kronesjikt, skal settes = 4 mens antallet sjikt settes til ‘ikke relevant’ i en arealenhet uten skog; merk også at ‘busksjiktstruktur’ (forekomst av busksjikt) kommer til uttrykk gjennom variabelen busksjiktsdekning (1AG–B).;1–4;T;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;1;9TS_1;Ensjiktet skog;;T;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;2;9TS_2;Tosjiktet skog;;T;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;3;9TS_3;Flersjiktet skog;;T;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;4;9TS_4;Skog uten veldefinerte vertikale kronesjikt;;T;Trinn
-9;Romlige strukturvariabler;TS;Tresjiktstruktur;X;9TS_X;ikke registrert;;;Trinn
-9;Romlige strukturvariabler;VA;Vannflateareal;[0,≤∞];9VA;areal av en vannforekomsts overflate ved normalvannstand (km2);km2;K;Trinn
-9;Romlige strukturvariabler;VD;Vanndybde;[0,≤∞];9VD;største kjente dybde i en vannforekomst, målt med normalvannstanden som referanse (m);m;K;Trinn
+Kode	Vaiabelgruppe	Kode2	Navn	trinn	Sammensatt_kode	Forklaring	Måleintervall	Variabeltype	Tags
+9	Romlige strukturvariabler	NE	Nedbørfeltstørrelse	[0,≤∞]	9NE	areal av landområde (inkludert eventuelle vannforekomster) som drenerer gjennom et gitt punkt, på land eller i et elveløp (km2)	km2	K	Trinn
+9	Romlige strukturvariabler	TD	Terskeldyp	[0,≤∞]	9TD	største dybde på terskelen ved munningen av en fjord (m)	m	K	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur		9TS	antall veldefinerte vertikale kronesjikt i skog [et veldefinert kronesjikt er et høydeintervall over bakken som inneholder vesentlig flere trær (basert på faktisk trehøyde) enn tilgrensende høydeintervaller]; merk at antallet sjikt i en flersjiktet skog, det vil si en skog uten veldefinerte vertikale kronesjikt, skal settes = 4 mens antallet sjikt settes til ‘ikke relevant’ i en arealenhet uten skog; merk også at ‘busksjiktstruktur’ (forekomst av busksjikt) kommer til uttrykk gjennom variabelen busksjiktsdekning (1AG–B).	1–4	T	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur	1	9TS_1	Ensjiktet skog		T	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur	2	9TS_2	Tosjiktet skog		T	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur	3	9TS_3	Flersjiktet skog		T	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur	4	9TS_4	Skog uten veldefinerte vertikale kronesjikt		T	Trinn
+9	Romlige strukturvariabler	TS	Tresjiktstruktur	X	9TS_X	ikke registrert			Trinn
+9	Romlige strukturvariabler	VA	Vannflateareal	[0,≤∞]	9VA	areal av en vannforekomsts overflate ved normalvannstand (km2)	km2	K	Trinn
+9	Romlige strukturvariabler	VD	Vanndybde	[0,≤∞]	9VD	største kjente dybde i en vannforekomst, målt med normalvannstanden som referanse (m)	m	K	Trinn
