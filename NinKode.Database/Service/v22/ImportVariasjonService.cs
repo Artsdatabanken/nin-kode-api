@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.Design;
     using System.Linq;
     using System.Text.Json;
     using System.Threading;
@@ -38,6 +39,8 @@
             ProcessArtssammensetning(ref variasjoner, session, indexes);
             ProcessGeologisksammensetning(ref variasjoner, session, indexes);
             ProcessLandform(ref variasjoner, session, indexes);
+            ProcessMenneskeskapt(ref variasjoner, session, indexes);
+            //ProcessNaturgitt(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -101,6 +104,86 @@
                 }
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessMenneskeskapt(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Menneskeskapte_objekt";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonMenneskeskapt>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonMenneskeskapt = enumerator.Current?.Document;
+                if (variasjonMenneskeskapt == null) continue;
+
+                if (string.IsNullOrEmpty(variasjonMenneskeskapt.Type))
+                {
+                    if (string.IsNullOrEmpty(variasjonMenneskeskapt.Navn))
+                    {
+                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                        {
+                            Kode = variasjonMenneskeskapt.SammensattKode,
+                            Navn = variasjonMenneskeskapt.Verdi,
+                            OverordnetKode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}"
+                        });
+                    }
+                    else
+                    {
+                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                        {
+                            Kode = variasjonMenneskeskapt.SammensattKode,
+                            Navn = variasjonMenneskeskapt.Navn,
+                            OverordnetKode = variasjonMenneskeskapt.Nivaa2_Kode
+                        });
+                        if (variasjoner.ContainsKey(variasjonMenneskeskapt.Nivaa2_Kode)) continue;
+                        variasjoner.Add(variasjonMenneskeskapt.Nivaa2_Kode, new VariasjonV22
+                        {
+                            Kode = variasjonMenneskeskapt.Nivaa2_Kode,
+                            Navn = variasjonMenneskeskapt.col_5,
+                            OverordnetKode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}"
+                        });
+                    }
+                    continue;
+                }
+
+                if (variasjoner.ContainsKey(variasjonMenneskeskapt.SammensattKode)) continue;
+
+                variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonMenneskeskapt.SammensattKode,
+                    Navn = variasjonMenneskeskapt.Verdi,
+                    OverordnetKode = variasjonMenneskeskapt.Nivaa2KodeNy
+                });
+
+                if (!variasjoner.ContainsKey(variasjonMenneskeskapt.Nivaa2KodeNy))
+                {
+                    variasjoner.Add(variasjonMenneskeskapt.Nivaa2KodeNy, new VariasjonV22
+                    {
+                        Kode = variasjonMenneskeskapt.Nivaa2KodeNy,
+                        Navn = variasjonMenneskeskapt.Navn,
+                        OverordnetKode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}-{variasjonMenneskeskapt.Nivaa2Kode}"
+                    });
+                }
+
+                var kode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}-{variasjonMenneskeskapt.Nivaa2Kode}";
+                if (variasjoner.ContainsKey(kode)) continue;
+                variasjoner.Add(kode, new VariasjonV22
+                {
+                    Kode = kode,
+                    Navn = variasjonMenneskeskapt.col_5,
+                    OverordnetKode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}"
+                });
             }
         }
 

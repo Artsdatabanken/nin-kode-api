@@ -1,9 +1,9 @@
 col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	Trinn	Sammensatt_kode	Verdi	Type	RS	Nivå 2 kode ny	Tags
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	X			5AB_X			5AB_X	ikke registerert			5AB_X	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	DO	5AB-AB-0	Driftsområder		5AB-AB-0_DO	Til stede			5AB-0-DO	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	FO	5AB-AB-0	Fritidsområder		5AB-AB-0_FO	Til stede			5AB-0-FO	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	KO	5AB-AB-0	Kulturområder		5AB-AB-0_KO	Til stede			5AB-0-KO	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	TO	5AB-AB-0	Transportområder		5AB-AB-0_TO	Til stede			5AB-0-TO	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	DO	5AB-0	Driftsområder		5AB-0_DO	Til stede			5AB-0-DO	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	FO	5AB-0	Fritidsområder		5AB-0_FO	Til stede			5AB-0-FO	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	KO	5AB-0	Kulturområder		5AB-0_KO	Til stede			5AB-0-KO	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier	0	Arealbrukskategorier - kategorisert	TO	5AB-0	Transportområder		5AB-0_TO	Til stede			5AB-0-TO	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	DO	Driftsområder	FY	5AB-DO-FY	Fyllplass	0	5AB-DO-FY_0	ikke registerert	B	6	5AB-DO-FY	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	DO	Driftsområder	FY	5AB-DO-FY	Fyllplass	1	5AB-DO-FY_1	ikke registerert	B	6	5AB-DO-FY	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	DO	Driftsområder	GR	5AB-DO-GR	Grustak	0	5AB-DO-GR_0	ikke registerert	B	5	5AB-DO-GR	Trinn
@@ -68,8 +68,8 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	FP	5AB-TO-FP	Flyplassområde	1	5AB-TO-FP_1	Til stede	B	10	5AB-TO-FP	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	JB	5AB-TO-JB	Jernbane, trikk (skinnegående transportmiddel)	0	5AB-TO-JB_0	Ikke til stede	B	4	5AB-TO-JB	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	JB	5AB-TO-JB	Jernbane, trikk (skinnegående transportmiddel)	1	5AB-TO-JB_1	Til stede	B	4	5AB-TO-JB	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KG	5AB-TO-KG	Antenne	0	5AB-TO-KG	Ikke til stede	B		5AB-TO-KG	Trinn
-5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KG	5AB-TO-KG	Antenne	1	5AB-TO-KG	Til stede	B		5AB-TO-KG	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KG	5AB-TO-KG	Antenne	0	5AB-TO-KG_0	Ikke til stede	B		5AB-TO-KG	Trinn
+5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KG	5AB-TO-KG	Antenne	1	5AB-TO-KG_1	Til stede	B		5AB-TO-KG	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KL	5AB-TO-KL	Kraftlinje	0	5AB-TO-KL_0	Ikke til stede	B	2	5AB-TO-KL	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	KL	5AB-TO-KL	Kraftlinje	1	5AB-TO-KL_1	Til stede	B	2	5AB-TO-KL	Trinn
 5	Menneskeskapte objekter	AB	Arealbrukskategorier 	TO	Transportområder	RG	5AB-TO-RG	Rørgate	0	5AB-TO-RG_0	Ikke til stede	B	2	5AB-TO-RG	Trinn
@@ -115,12 +115,12 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	BY	Bygningstyper	0	Bygningstyper - kategorisert	KF	5BY-BY-0	Kontor- og forretningsbygning		5BY-BY-0_KF	Til stede			5BY-0-KF	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	0	Bygningstyper - kategorisert	SK	5BY-BY-0	Samferdsels- og kommunikasjonsbygning		5BY-BY-0_SK	Til stede			5BY-0-SK	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	0	Bygningstyper - kategorisert	XB	5BY-BY-0	Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori)		5BY-BY-0_XB	Til stede			5BY-0-XB	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	FB	Fengsels- og beregskapsbygning (inkludert forsvarsbygning)		5BY-FB		0	5BY-FB-_0	Ikke til stede	B/T1	5	5BY-FB-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	FB	Fengsels- og beregskapsbygning (inkludert forsvarsbygning)		5BY-FB		1	5BY-FB-_1	Til stede	B/T1	5	5BY-FB-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	HE	Helsebygning (sykehus, sykehjem, primærhelsebygning)		5BY-HE		0	5BY-HE-_0	Ikke til stede	B/T1	6	5BY-HE-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	HE	Helsebygning (sykehus, sykehjem, primærhelsebygning)		5BY-HE		1	5BY-HE-_1	Til stede	B/T1	6	5BY-HE-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	HR	Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester)		5BY-HR		0	5BY-HR-_0	Ikke til stede	B/T1	5	5BY-HR-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	HR	Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester)		5BY-HR		1	5BY-HR-_1	Til stede	B/T1	5	5BY-HR-	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	FB	Fengsels- og beregskapsbygning (inkludert forsvarsbygning)		5BY-FB		0	5BY-FB_0	Ikke til stede	B/T1	5	5BY-FB	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	FB	Fengsels- og beregskapsbygning (inkludert forsvarsbygning)		5BY-FB		1	5BY-FB_1	Til stede	B/T1	5	5BY-FB	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	HE	Helsebygning (sykehus, sykehjem, primærhelsebygning)		5BY-HE		0	5BY-HE_0	Ikke til stede	B/T1	6	5BY-HE	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	HE	Helsebygning (sykehus, sykehjem, primærhelsebygning)		5BY-HE		1	5BY-HE_1	Til stede	B/T1	6	5BY-HE-	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	HR	Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester)		5BY-HR		0	5BY-HR_0	Ikke til stede	B/T1	5	5BY-HR	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	HR	Hotell- og restaurantbygning (bygning tilrettelagt for salg av serverings- og overnattingstjenester)		5BY-HR		1	5BY-HR_1	Til stede	B/T1	5	5BY-HR	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	IL	Industri-, lager- og primærnæringsbygning	EF	5BY-IL-EF	Energiforsyningsbygning (kraftstasjoner etc.)	0	5BY-IL-EF_0	Ikke til stede	B/T1	4	5BY-IL-EF	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	IL	Industri-, lager- og primærnæringsbygning	EF	5BY-IL-EF	Energiforsyningsbygning (kraftstasjoner etc.)	1	5BY-IL-EF_1	Til stede	B/T1	4	5BY-IL-EF	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	IL	Industri-, lager- og primærnæringsbygning	FL	5BY-IL-FL	Fiskeri- og landbruksbygning	1	5BY-IL-FL_1	Til stede	B/T1	5	5BY-IL-FL	Trinn
@@ -136,8 +136,8 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	BY	Bygningstyper	KB	Kultur- og forskningsbygning	RB	5BY-KB-RB	Bygg tilrettelagt for religiøse aktiviteter	1	5BY-KB-RB_1	Til stede	B/T1	5	5BY-KB-RB	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	KB	Kultur- og forskningsbygning	SU	5BY-KB-SU	Skole-, barnehage-, høgskole-, universitets-, museums- eller biblioteksbygning	0	5BY-KB-SU_0	Ikke til stede	B/T1	6	5BY-KB-SU	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	KB	Kultur- og forskningsbygning	SU	5BY-KB-SU	Skole-, barnehage-, høgskole-, universitets-, museums- eller biblioteksbygning	1	5BY-KB-SU_1	Til stede	B/T1	6	5BY-KB-SU	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	KF	Kontor- og forretningsbygning		5BY-KF		0	5BY-KF-_0	Ikke til stede	B/T1	6	5BY-KF-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	KF	Kontor- og forretningsbygning		5BY-KF		1	5BY-KF-_1	Til stede	B/T1	6	5KU_X	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	KF	Kontor- og forretningsbygning		5BY-KF		0	5BY-KF_0	Ikke til stede	B/T1	6	5BY-KF	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	KF	Kontor- og forretningsbygning		5BY-KF		1	5BY-KF_1	Til stede	B/T1	6	5BY-KF	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	AN	5BY-SK-AN	Antenne	0	5BY-SK-AN_0	Ikke til stede	B/T1		5BY-SK-AN	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	AN	5BY-SK-AN	Antenne	1	5BY-SK-AN_1	Til stede	B/T1		5BY-SK-AN	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	EB	5BY-SK-EB	Ekspedisjonsbygning, terminalbygning, veg- og trafikktilsynsbygning etc. (bygning tilrettelagt for mennesker ifm tilrettelegging for, eller bruk av samferdselstjenester)	0	5BY-SK-EB_0	Ikke til stede	B/T1	5	5BY-SK-EB	Trinn
@@ -148,8 +148,8 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	GH	5BY-SK-GH	Garasje- og hangarbygning (bygning tilrettelagt for lagring/oppbevaring av kollektive transportmidler)	1	5BY-SK-GH_1	Til stede	B/T1	6	5BY-SK-GH	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	TK	5BY-SK-TK	Telekommunikasjonsbygning (mottaksstasjoner for telesignaler, mobilnettverksmaster knyttet til bygning etc.)	0	5BY-SK-TK_0	Ikke til stede	B/T1	5	5BY-SK-TK	Trinn
 5	Menneskeskapte objekter	BY	Bygningstyper	SK	Samferdsels- og kommunikasjonsbygning	TK	5BY-SK-TK	Telekommunikasjonsbygning (mottaksstasjoner for telesignaler, mobilnettverksmaster knyttet til bygning etc.)	1	5BY-SK-TK_1	Til stede	B/T1	5	5BY-SK-TK	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	XB	Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori)		5BY-XB		0	5BY-XB-_0	Ikke til stede	B/T1	4	5BY-XB-	Trinn
-5	Menneskeskapte objekter	BY	Bygningstyper	XB	Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori)		5BY-XB		1	5BY-XB-_1	Til stede	B/T1	4	5BY-XB-	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	XB	Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori)		5BY-XB		0	5BY-XB_0	Ikke til stede	B/T1	4	5BY-XB	Trinn
+5	Menneskeskapte objekter	BY	Bygningstyper	XB	Andre bygninger (bygninger som ikke lar seg tilordne noen annen kategori)		5BY-XB		1	5BY-XB_1	Til stede	B/T1	4	5BY-XB	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	SK	5KU-AR-SK	Skanse	0	5KU-AR-SK_0	Ikke til stede	B/T1	5	5KU-AR-SK	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	X			5KU_X			5KU_X	ikke registerert			5KU-X-	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	SL	5KU-AR-SL	Slaggforekomst, inkl. slagghaug	0	5KU-AR-SL_0	Ikke til stede	B/T1	3	5KU-AR-SL	Trinn
@@ -254,10 +254,10 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	SJ	5KU-AR-SJ	Skjerp	0	5KU-AR-SJ_0	Ikke til stede	B/T1	0	5KU-AR-SJ	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	SJ	5KU-AR-SJ	Skjerp	1	5KU-AR-SJ_1	Til stede	B/T1	0	5KU-AR-SJ	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	VR	5KU-AR-VR	Varde	0	5KU-AR-VR_0	Ikke til stede	B/T1	1	5KU-AR-VR	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	VR	5KU-AR-VR	Varde	1	5KU-AR-VR_1	Til stede	B/T1	1	5XG_X	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	VR	5KU-AR-VR	Varde	1	5KU-AR-VR_1	Til stede	B/T1	1	5KU-AR-VR	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	VV	5KU-AR-VV	Veg/vegfar	0	5KU-AR-VV_0	Ikke til stede	B/T1	2	5KU-AR-VV	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	AR	Arkeologisk minne	VV	5KU-AR-VV	Veg/vegfar	1	5KU-AR-VV_1	Til stede	B/T1	2	5KU-AR-VV	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	BE	Bergkunst		5KU-BE		0	5KU-BE-_0	Ikke til stede	B/T1	3	5KU-BE-	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	BE	Bergkunst		5KU-BE		0	5KU-BE_0	Ikke til stede	B/T1	3	5KU-BE	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	BE	Bergkunst		5KU-BE		1	5KU-BE_1	Registrert	B/T1	3	5KU-BE	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	BY	Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-BY		0	5KU-BY_0	Ikke til stede	B/T1	3	5KU-BY	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	BY	Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-BY		1	5KU-BY_1	Registrert	B/T1	3	5KU-BY	Trinn
@@ -265,11 +265,11 @@ col_0	col_1	Nivå 1 kode	col_3	Nivå 2 kode	col_5	Nivå 3 kode	Nivå2_kode	Navn	
 5	Menneskeskapte objekter	KU	Kulturminner	FA	Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land)		5KU-FA		1	5KU-FA_1	Registrert	B/T1	2	5KU-FA	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	KI	Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-KI		0	5KU-KI_0	Ikke til stede	B/T1	5	5KU-KI	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	KI	Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-KI		1	5KU-KI_1	Registrert	B/T1	5	5KU-KI	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	AR	5KU-KU-0	Arkeologisk minne		5KU-KU-0_AR	Til stede			5KU-KU-0	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	BE	5KU-KU-0	Bergkunst		5KU-KU-0_BE	Til stede			5KU-KU-0	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	BY	5KU-KU-0	Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-KU-0_BY	Til stede			5KU-KU-0	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	FA	5KU-KU-0	Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land)		5KU-KU-0_FA	Til stede			5KU-KU-0	Trinn
-5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	KI	5KU-KU-0	Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-KU-0_KI	Til stede			5KU-KU-0	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	AR	5KU-0	Arkeologisk minne		5KU-0_AR	Til stede			5KU-0	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	BE	5KU-0	Bergkunst		5KU-0_BE	Til stede			5KU-0	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	BY	5KU-0	Bygning (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-0_BY	Til stede			5KU-0	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	FA	5KU-0	Fartøy (omfatter hensatte fartøyer, bilvrak etc., på land)		5KU-0_FA	Til stede			5KU-0	Trinn
+5	Menneskeskapte objekter	KU	Kulturminner	0	Kulturminner -  kategorisert	KI	5KU-KU-0	Kirke (som er registrert i, eller tilfredsstiller krav til registrering i, SEFRAK)		5KU-0_KI	Til stede			5KU-0	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	KV	Kulturminne under vann (inkl. skipsvrak etc.)		5KU-KV		0	5KU-KV_0	Ikke til stede	B/T1	4	5KU-KV	Trinn
 5	Menneskeskapte objekter	KU	Kulturminner	KV	Kulturminne under vann (inkl. skipsvrak etc.)		5KU-KV		1	5KU-KV_1	Registrert	B/T1	4	5KU-KV	Trinn
 5	Menneskeskapte objekter	XG	Annen løs gjenstand	X			5XG_X			5XG_X	ikke registerert			5XG_X	Trinn
