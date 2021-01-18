@@ -40,7 +40,7 @@
             ProcessGeologisksammensetning(ref variasjoner, session, indexes);
             ProcessLandform(ref variasjoner, session, indexes);
             ProcessMenneskeskapt(ref variasjoner, session, indexes);
-            //ProcessNaturgitt(ref variasjoner, session, indexes);
+            ProcessNaturgitt(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -104,6 +104,71 @@
                 }
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessNaturgitt(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Naturgitte_objekt";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonNaturgitt>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonNaturgitt = enumerator.Current?.Document;
+                if (variasjonNaturgitt == null) continue;
+                
+                if (variasjoner.ContainsKey(variasjonNaturgitt.SammensattKode)) continue;
+
+                var parentKode = variasjonNaturgitt.Nivaa2KodeNy;
+                variasjoner.Add(variasjonNaturgitt.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonNaturgitt.SammensattKode,
+                    Navn = variasjonNaturgitt.Verdi,
+                    OverordnetKode = parentKode
+                });
+
+                if (variasjoner.ContainsKey(parentKode)) continue;
+
+                var kode = $"{variasjonNaturgitt.Besys}{variasjonNaturgitt.Nivaa1kode}-{variasjonNaturgitt.col_3}";
+                if (parentKode.Equals(kode))
+                {
+                    parentKode = $"{variasjonNaturgitt.Besys}{variasjonNaturgitt.Nivaa1kode}";
+                }
+                variasjoner.Add(kode, new VariasjonV22
+                {
+                    Kode = kode,
+                    Navn = variasjonNaturgitt.Nivaa2Beskrivelse,
+                    OverordnetKode = parentKode
+                });
+
+                if (variasjoner.ContainsKey(parentKode)) continue;
+
+                parentKode = $"{variasjonNaturgitt.Besys}{variasjonNaturgitt.Nivaa1kode}";
+                variasjoner.Add(parentKode, new VariasjonV22
+                {
+                    Kode = parentKode,
+                    Navn = variasjonNaturgitt.Nivaa2Beskrivelse,
+                    OverordnetKode = parentKode
+                });
+
+                if (variasjoner.ContainsKey(parentKode)) continue;
+
+                variasjoner.Add(parentKode, new VariasjonV22
+                {
+                    Kode = parentKode,
+                    Navn = variasjonNaturgitt.col_2,
+                    OverordnetKode = parentKode
+                });
             }
         }
 
