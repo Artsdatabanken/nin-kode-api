@@ -83,7 +83,8 @@
                         UnderordnetKoder = beskrivelsesSystem.UnderordnetKoder
                     };
 
-                    if (!variasjoner.ContainsKey(beskrivelsesSystem.Nivaa2Kode))
+                    if (!beskrivelsesSystem.Nivaa2Kode.Equals("BeSys1,BeSys2,BeSys3,BeSys4,BeSys5,BeSys6,BeSys7,BeSys8,BeSys9")
+                        && !variasjoner.ContainsKey(beskrivelsesSystem.Nivaa2Kode))
                     {
                         var child = new VariasjonV22
                         {
