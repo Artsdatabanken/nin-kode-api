@@ -49,7 +49,7 @@
         [Route("ping")]
         public string Ping()
         {
-            return "hello";
+            return "CodeV22Controller";
         }
     }
 }
