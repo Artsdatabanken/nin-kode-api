@@ -42,6 +42,7 @@
             ProcessMenneskeskapt(ref variasjoner, session, indexes);
             ProcessNaturgitt(ref variasjoner, session, indexes);
             ProcessRegional(ref variasjoner, session, indexes);
+            ProcessRomlig(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -105,6 +106,60 @@
                 }
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessRomlig(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Romlig_strukturvariasjon";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonRomlig>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonRomlig = enumerator.Current?.Document;
+                if (variasjonRomlig == null) continue;
+
+                if (variasjoner.ContainsKey(variasjonRomlig.SammensattKode)) continue;
+
+                if (string.IsNullOrEmpty(variasjonRomlig.Trinn))
+                {
+                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                    {
+                        Kode = variasjonRomlig.SammensattKode,
+                        Navn = variasjonRomlig.Navn,
+                        OverordnetKode = $"BeSys{variasjonRomlig.Kode}"
+                    });
+                    continue;
+                }
+
+                if (string.IsNullOrEmpty(variasjonRomlig.VariabelType) || variasjonRomlig.VariabelType.Equals("T", StringComparison.OrdinalIgnoreCase))
+                {
+                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                    {
+                        Kode = variasjonRomlig.SammensattKode,
+                        Navn = variasjonRomlig.Forklaring,
+                        OverordnetKode = $"{variasjonRomlig.Kode}{variasjonRomlig.Kode2}"
+                    });
+                    continue;
+                }
+
+                var parentKode = $"BeSys{variasjonRomlig.Kode}";
+                variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                {
+                    Kode = variasjonRomlig.SammensattKode,
+                    Navn = variasjonRomlig.Navn,
+                    OverordnetKode = parentKode
+                });
             }
         }
 
