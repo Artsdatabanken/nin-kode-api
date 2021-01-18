@@ -37,6 +37,7 @@
             ProcessBeskrivelsessystem(ref variasjoner, session, indexes);
             ProcessArtssammensetning(ref variasjoner, session, indexes);
             ProcessGeologisksammensetning(ref variasjoner, session, indexes);
+            ProcessLandform(ref variasjoner, session, indexes);
 
             FixChildrenAndParents(variasjoner);
 
@@ -98,6 +99,54 @@
                         variasjoner.Add($"{child.Kode}", child);
                     }
                 }
+
+                variasjoner.Add($"{variasjon.Kode}", variasjon);
+            }
+        }
+
+        private void ProcessLandform(
+            ref Dictionary<string, VariasjonV22> variasjoner,
+            IDocumentSession session,
+            IEnumerable<string> indexes)
+        {
+            var indexName = "_Variasjon_Landform";
+            var index = indexes.FirstOrDefault(x => x.StartsWith(indexName, StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrEmpty(index)) return;
+
+            Log2Console(index, true);
+
+            //var options = new JsonSerializerOptions {WriteIndented = true};
+            var query = session.Query<VariasjonLandform>(index);
+            using var enumerator = session.Advanced.Stream(query);
+            while (enumerator.MoveNext())
+            {
+                var variasjonGeo = enumerator.Current?.Document;
+                if (variasjonGeo == null) continue;
+
+                //Log2Console($"json: {JsonSerializer.Serialize(variasjonGeo, options)}", true);
+                var parentKode = $"{variasjonGeo.col_0}{variasjonGeo.Nivaa1kode}";
+
+                if (!variasjoner.ContainsKey(parentKode))
+                {
+                    var parent = new VariasjonV22
+                    {
+                        Kode = parentKode,
+                        Navn = variasjonGeo.col_3,
+                        OverordnetKode = $"{variasjonGeo.col_0}{variasjonGeo.Nivaa1kode}"
+                    };
+                    variasjoner.Add($"{parent.Kode}", parent);
+                }
+
+                if (variasjoner.ContainsKey(variasjonGeo.SammensattKode)) continue;
+
+                var variasjon = new VariasjonV22
+                {
+                    Kode = $"{variasjonGeo.SammensattKode}",
+                    Navn = $"{variasjonGeo.Navn}",
+                    Type = $"{variasjonGeo.Variabeltype}",
+                    OverordnetKode = parentKode
+                };
 
                 variasjoner.Add($"{variasjon.Kode}", variasjon);
             }
