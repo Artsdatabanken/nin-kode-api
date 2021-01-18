@@ -2,30 +2,23 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.Design;
     using System.Linq;
-    using System.Text.Json;
-    using System.Threading;
-    using NinKode.Database.Extension;
-    using NinKode.Database.Model.common;
+    using Microsoft.Extensions.Configuration;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
     using Raven.Client;
-    using Raven.Client.Document;
     using Raven.Json.Linq;
 
     public class ImportVariasjonService
     {
         private const string PrimaryIndex = "Raven/DocumentsByEntityName";
-        public readonly string _dbUrl;
         public readonly Action<string, bool> _logCallback;
         private readonly VarietyV22Service _varietyV22Service;
 
-        public ImportVariasjonService(string dbUrl, string dbName, Action<string, bool> logCallback)
+        public ImportVariasjonService(IConfiguration configuration, Action<string, bool> logCallback)
         {
-            _dbUrl = dbUrl;
             _logCallback = logCallback;
-            _varietyV22Service = new VarietyV22Service(_dbUrl, dbName);
+            _varietyV22Service = new VarietyV22Service(configuration);
         }
 
         public void Import(IDocumentStore store)
@@ -90,7 +83,9 @@
                     {
                         Kode = beskrivelsesSystem.Kode,
                         Navn = beskrivelsesSystem.Variabelgruppe,
-                        OverordnetKode = beskrivelsesSystem.OverordnetKode,
+                        OverordnetKode = string.IsNullOrEmpty(beskrivelsesSystem.OverordnetKode)
+                            ? null
+                            : beskrivelsesSystem.OverordnetKode,
                         UnderordnetKoder = beskrivelsesSystem.UnderordnetKoder
                     };
 

@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading;
+    using Microsoft.Extensions.Configuration;
     using NinKode.Database.Model.common;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
@@ -15,23 +16,21 @@
     {
         private const string PrimaryIndex = "Raven/DocumentsByEntityName";
         public readonly string _dbUrl;
-        public readonly string _dbFromName;
-        public readonly string _dbToName;
+        public readonly string _dbName;
         public readonly Action<string, bool> _logCallback;
         private readonly CodeV22Service _codeV22Service;
 
-        public ImportNaturtypeService(string dbUrl, string dbFromName, string dbToName, Action<string, bool> logCallback)
+        public ImportNaturtypeService(IConfiguration configuration, Action<string, bool> logCallback)
         {
-            _dbUrl = dbUrl;
-            _dbFromName = dbFromName;
-            _dbToName = dbToName;
+            _dbUrl = configuration["RavenDbUrl"];
+            _dbName = configuration["RavenDbNameV21"];
             _logCallback = logCallback;
-            _codeV22Service = new CodeV22Service(_dbUrl, _dbToName);
+            _codeV22Service = new CodeV22Service(configuration);
         }
 
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
-            var codeV21Service = new v21.CodeV21Service(_dbUrl, _dbFromName);
+            var codeV21Service = new v21.CodeV21Service(_dbUrl, _dbName);
             var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
 
             var rootNaturtype = new NaturTypeV22
@@ -41,7 +40,7 @@
                 Kategori = naKode.Kategori,
                 Kode = naKode.Kode.Id,
                 ElementKode = naKode.ElementKode,
-                OverordnetKode = ""
+                OverordnetKode = null
             };
 
             var naturTypes = new Dictionary<string, NaturTypeV22>
@@ -290,7 +289,7 @@
                     naturTypes.Add(naturtype.Kode, naturtype);
                 }
 
-                if (naturTypes.ContainsKey(naturtype.OverordnetKode))
+                if (!string.IsNullOrEmpty(naturtype.OverordnetKode) && naturTypes.ContainsKey(naturtype.OverordnetKode))
                 {
                     var old = naturTypes[naturtype.OverordnetKode];
 
@@ -455,8 +454,10 @@
                     }
                 }
 
-                var parent = naturTypes.ContainsKey(element.Value.OverordnetKode)
-                    ? naturTypes[element.Value.OverordnetKode]
+                var parent = !string.IsNullOrEmpty(element.Value.OverordnetKode)
+                    ? naturTypes.ContainsKey(element.Value.OverordnetKode)
+                        ? naturTypes[element.Value.OverordnetKode]
+                        : null
                     : null;
                 
                 if (parent == null) continue;
