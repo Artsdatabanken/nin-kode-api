@@ -6,6 +6,7 @@ namespace NinKode.WebApi
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
+    using NinKode.Database.Service.v22;
 
     public class Startup
     {
@@ -25,6 +26,10 @@ namespace NinKode.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NinKode.WebApi", Version = "v1" });
             });
+
+            // Define singleton-objects
+            services.AddSingleton<ICodeV22Service, CodeV22Service>();
+            services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,14 +12,11 @@
     [Route("v2.2/koder")]
     public class CodeV22Controller : ControllerBase
     {
-        private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2.2";
+        private readonly ICodeV22Service _codeService;
 
-        private readonly CodeV22Service _codeService;
-
-        public CodeV22Controller()
+        public CodeV22Controller(ICodeV22Service codeV22Service)
         {
-            _codeService = new CodeV22Service(DatabaseUrl, DefaultDatabase);
+            _codeService = codeV22Service;
         }
 
         [HttpGet]
@@ -46,6 +43,13 @@
             path = path.Substring(0, path.LastIndexOf("/", StringComparison.Ordinal) + 1);
             var protocol = Request.IsHttps ? "s" : "";
             return $"http{protocol}://{Request.Host}{path}";
+        }
+
+        [HttpGet]
+        [Route("ping")]
+        public string Ping()
+        {
+            return "hello";
         }
     }
 }
