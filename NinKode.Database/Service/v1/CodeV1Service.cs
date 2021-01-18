@@ -44,7 +44,7 @@
                 {
                     while (enumerator.MoveNext())
                     {
-                        yield return CreateCodesByNaturtype(enumerator.Current.Document, host);
+                        yield return CreateCodesByNaturtype(enumerator.Current?.Document, host);
                     }
                 }
             }
@@ -63,7 +63,7 @@
                 {
                     while (enumerator.MoveNext())
                     {
-                        return CreateCodesByNaturtype(enumerator.Current.Document, host);
+                        return CreateCodesByNaturtype(enumerator.Current?.Document, host);
                     }
                 }
             }
