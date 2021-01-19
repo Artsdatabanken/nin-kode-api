@@ -3,12 +3,11 @@
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
-
     using NinKode.Common.Models.Code;
     using NinKode.Database.Service.v22;
 
     [ApiController]
-    [Route("koder")]
+    //[Route("koder")]
     [Route("v2.2/koder")]
     public class CodeV22Controller : ControllerBase
     {
