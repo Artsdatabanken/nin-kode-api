@@ -1,5 +1,5 @@
 language: csharp
-sudo: required
+dist: xenial
 mono: none
 dotnet: 3.1
 branches:
