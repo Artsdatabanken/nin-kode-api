@@ -1,0 +1,24 @@
+language: csharp
+dist: focal
+sudo: required
+mono: none
+dotnet: 3.1.11
+branches:
+  only:
+  - master
+
+install:
+ - dotnet restore
+
+script:
+ - dotnet build
+
+
+
+
+
+
+
+
+
+
