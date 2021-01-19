@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
-
     using NinKode.Common.Models.Code;
     using NinKode.Database.Service.v2;
 
@@ -11,14 +10,11 @@
     [Route("v2")]
     public class CodeV2Controller : ControllerBase
     {
-        private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2";
+        private readonly ICodeV2Service _codeService;
 
-        private readonly CodeV2Service _codeService;
-
-        public CodeV2Controller()
+        public CodeV2Controller(ICodeV2Service codeV2Service)
         {
-            _codeService = new CodeV2Service(DatabaseUrl, DefaultDatabase);
+            _codeService = codeV2Service;
         }
 
         [HttpGet]

@@ -4,20 +4,17 @@
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using NinKode.Common.Models.Code;
-    using NinKode.Database.Service.v20b;
+    using NinKode.Database.Service.v21b;
 
     [ApiController]
     [Route("v2b/koder")]
     public class CodeV2BController : ControllerBase
     {
-        private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2.0b";
+        private readonly ICodeV21BService _codeService;
 
-        private readonly CodeV2BService _codeService;
-
-        public CodeV2BController()
+        public CodeV2BController(ICodeV21BService codeV21BService)
         {
-            _codeService = new CodeV2BService(DatabaseUrl, DefaultDatabase);
+            _codeService = codeV21BService;
         }
 
         [HttpGet]

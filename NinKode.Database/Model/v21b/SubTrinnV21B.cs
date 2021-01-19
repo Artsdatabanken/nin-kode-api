@@ -1,6 +1,6 @@
-﻿namespace NinKode.Database.Model.v20b
+﻿namespace NinKode.Database.Model.v21b
 {
-    public class SubTrinnV2B
+    public class SubTrinnV21B
     {
         public string Navn { get; set; }
         public string Kode { get; set; }
