@@ -1,0 +1,23 @@
+language: csharp
+dist: xenial
+mono: none
+dotnet: 3.1.405
+branches:
+  only:
+  - master
+
+install:
+ - dotnet restore
+
+script:
+ - dotnet build
+
+
+
+
+
+
+
+
+
+
