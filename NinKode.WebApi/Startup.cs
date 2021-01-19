@@ -1,5 +1,6 @@
 namespace NinKode.WebApi
 {
+    using System;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -24,13 +25,14 @@ namespace NinKode.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Console.WriteLine("Starting...");
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NinKode.WebApi", Version = "v1" });
             });
-
+            
             // Define singleton-objects
             services.AddSingleton<ICodeV1Service, CodeV1Service>();
             services.AddSingleton<ICodeV2Service, CodeV2Service>();
@@ -40,19 +42,23 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
             services.AddSingleton<ICodeV22Service, CodeV22Service>();
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
+            Console.WriteLine("Starting - ok");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            Console.WriteLine($"Development: {env.IsDevelopment()}");
+            if (true || env.IsDevelopment())
             {
+                Console.WriteLine("swagger");
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKode.WebApi v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -62,6 +68,7 @@ namespace NinKode.WebApi
             {
                 endpoints.MapControllers();
             });
+            Console.WriteLine("configure - done");
         }
     }
 }
