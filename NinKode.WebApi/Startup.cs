@@ -6,6 +6,10 @@ namespace NinKode.WebApi
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
+    using NinKode.Database.Service.v1;
+    using NinKode.Database.Service.v2;
+    using NinKode.Database.Service.v21;
+    using NinKode.Database.Service.v21b;
     using NinKode.Database.Service.v22;
 
     public class Startup
@@ -28,6 +32,12 @@ namespace NinKode.WebApi
             });
 
             // Define singleton-objects
+            services.AddSingleton<ICodeV1Service, CodeV1Service>();
+            services.AddSingleton<ICodeV2Service, CodeV2Service>();
+            services.AddSingleton<ICodeV21Service, CodeV21Service>();
+            services.AddSingleton<IVarietyV21Service, VarietyV21Service>();
+            services.AddSingleton<ICodeV21BService, CodeV21BService>();
+            services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
             services.AddSingleton<ICodeV22Service, CodeV22Service>();
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
         }

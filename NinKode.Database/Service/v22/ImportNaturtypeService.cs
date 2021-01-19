@@ -15,22 +15,22 @@
     public class ImportNaturtypeService
     {
         private const string PrimaryIndex = "Raven/DocumentsByEntityName";
+        public readonly IConfiguration _configuration;
         public readonly string _dbUrl;
-        public readonly string _dbName;
         public readonly Action<string, bool> _logCallback;
         private readonly CodeV22Service _codeV22Service;
 
         public ImportNaturtypeService(IConfiguration configuration, Action<string, bool> logCallback)
         {
-            _dbUrl = configuration["RavenDbUrl"];
-            _dbName = configuration["RavenDbNameV21"];
+            _configuration = configuration;
+            _dbUrl = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/");
             _logCallback = logCallback;
             _codeV22Service = new CodeV22Service(configuration);
         }
 
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
-            var codeV21Service = new v21.CodeV21Service(_dbUrl, _dbName);
+            var codeV21Service = new v21.CodeV21Service(_configuration);
             var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
 
             var rootNaturtype = new NaturTypeV22
