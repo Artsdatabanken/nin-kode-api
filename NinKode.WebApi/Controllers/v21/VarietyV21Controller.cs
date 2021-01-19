@@ -11,14 +11,11 @@
     [Route("v2.1/variasjon")]
     public class VarietyV21Controller : ControllerBase
     {
-        private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2.1";
+        private readonly IVarietyV21Service _varietyService;
 
-        private readonly VarietyV21Service _varietyService;
-
-        public VarietyV21Controller()
+        public VarietyV21Controller(IVarietyV21Service varietyV21Service)
         {
-            _varietyService = new VarietyV21Service(DatabaseUrl, DefaultDatabase);
+            _varietyService = varietyV21Service;
         }
 
         [HttpGet]
