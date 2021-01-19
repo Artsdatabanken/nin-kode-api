@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.WebApi", "NinKode.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.Common", "NinKode.Common\NinKode.Common.csproj", "{5FEC9411-96C6-4624-B822-97424F616CC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinKode.Database", "NinKode.Database\NinKode.Database.csproj", "{D4331E41-18F9-480C-9D1D-88682344A463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.Database", "NinKode.Database\NinKode.Database.csproj", "{D4331E41-18F9-480C-9D1D-88682344A463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
