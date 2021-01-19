@@ -1,8 +1,8 @@
-﻿namespace NinKode.Database.Model.v20b
+﻿namespace NinKode.Database.Model.v21b
 {
     using System.Collections.Generic;
 
-    public class NaturTypeV2B
+    public class NaturTypeV21B
     {
         public int DatabankId { get; set; }
         public string Navn { get; set; }
@@ -12,7 +12,7 @@
         public string OverordnetKode { get; set; }
         public string[] UnderordnetKoder { get; set; }
         public string[] GrunntypeKoder { get; set; }
-        public TrinnV2B[] Trinn { get; set; }
+        public TrinnV21B[] Trinn { get; set; }
         public IDictionary<string, string[]> Kartleggingsenheter { get; set; }
         public string Malestokk { get; set; }
     }

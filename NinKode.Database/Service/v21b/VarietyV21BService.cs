@@ -1,25 +1,26 @@
-﻿namespace NinKode.Database.Service.v20b
+﻿namespace NinKode.Database.Service.v21b
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.Extensions.Configuration;
     using NinKode.Common.Models.Variety;
-    using NinKode.Database.Model.v20b;
+    using NinKode.Database.Model.v21b;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
-    public class VarietyV2BService
+    public class VarietyV21BService : IVarietyV21BService
     {
         private const string IndexName = "Variasjons/ByKode";
         private readonly DocumentStore _store;
 
-        public VarietyV2BService(string url, string databaseName)
+        public VarietyV21BService(IConfiguration configuration)
         {
             _store = new DocumentStore
             {
-                Url = url,
-                DefaultDatabase = databaseName
+                Url = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/"),
+                DefaultDatabase = configuration.GetValue("RavenDbNameV21B", "SOSINiNv2.0b")
             };
             _store.Initialize(true);
 
@@ -39,7 +40,7 @@
         {
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<VariasjonV2B>(IndexName);
+                var query = session.Query<VariasjonV21B>(IndexName);
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -56,7 +57,7 @@
 
             using (var session = _store.OpenSession())
             {
-                var query = session.Query<VariasjonV2B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                var query = session.Query<VariasjonV21B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
                 using (var enumerator = session.Advanced.Stream(query))
                 {
                     while (enumerator.MoveNext())
@@ -71,7 +72,7 @@
 
         #region private methods
 
-        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV2B variasjon, string host)
+        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV21B variasjon, string host)
         {
             if (variasjon == null) return null;
 
@@ -109,7 +110,7 @@
             }
         }
 
-        private static VarietyCode CreateVarietyCode(VariasjonV2B variasjon, string host)
+        private static VarietyCode CreateVarietyCode(VariasjonV21B variasjon, string host)
         {
             if (variasjon == null) return null;
 

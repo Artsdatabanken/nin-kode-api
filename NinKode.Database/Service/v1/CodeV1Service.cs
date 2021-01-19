@@ -3,23 +3,24 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.Extensions.Configuration;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Model.v1;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
-    public class CodeV1Service
+    public class CodeV1Service : ICodeV1Service
     {
         private const string IndexName = "NaturTypes/ByKode";
         private readonly DocumentStore _store;
 
-        public CodeV1Service(string url, string databaseName)
+        public CodeV1Service(IConfiguration configuration)
         {
             _store = new DocumentStore
             {
-                Url = url,
-                DefaultDatabase = databaseName
+                Url = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/"),
+                DefaultDatabase = configuration.GetValue("RavenDbNameV1", "SOSINiNv1")
             };
             _store.Initialize(true);
 

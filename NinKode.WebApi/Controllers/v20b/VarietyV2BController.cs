@@ -4,20 +4,17 @@
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using NinKode.Common.Models.Variety;
-    using NinKode.Database.Service.v20b;
+    using NinKode.Database.Service.v21b;
 
     [ApiController]
     [Route("v2b/variasjon")]
     public class VarietyV2BController : ControllerBase
     {
-        private const string DatabaseUrl = "http://localhost:8080/";
-        private const string DefaultDatabase = "SOSINiNv2.0b";
+        private readonly IVarietyV21BService _varietyService;
 
-        private readonly VarietyV2BService _varietyService;
-
-        public VarietyV2BController()
+        public VarietyV2BController(IVarietyV21BService varietyV21BService)
         {
-            _varietyService = new VarietyV2BService(DatabaseUrl, DefaultDatabase);
+            _varietyService = varietyV21BService;
         }
 
         [HttpGet]
