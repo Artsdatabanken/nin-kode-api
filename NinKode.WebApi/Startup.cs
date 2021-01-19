@@ -3,6 +3,7 @@ namespace NinKode.WebApi
     using System;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc.ApplicationModels;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
@@ -25,8 +26,6 @@ namespace NinKode.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            Console.WriteLine("Starting...");
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -42,33 +41,39 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
             services.AddSingleton<ICodeV22Service, CodeV22Service>();
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
-            Console.WriteLine("Starting - ok");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            Console.WriteLine($"Development: {env.IsDevelopment()}");
-            if (true || env.IsDevelopment())
-            {
-                Console.WriteLine("swagger");
-
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKode.WebApi v1"));
-            }
+            //if (env.IsDevelopment())
+            //{
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKode.WebApi v1"));
+            //}
 
             //app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{controller=Home}/{action=Index}");
             });
-            Console.WriteLine("configure - done");
+        }
+    }
+
+    internal class ActionHidingConvention : IActionModelConvention
+    {
+        public void Apply(ActionModel action)
+        {
+            if (!action.Controller.ControllerName.Equals("Home", StringComparison.OrdinalIgnoreCase)) return;
+            action.ApiExplorer.IsVisible = false;
         }
     }
 }
