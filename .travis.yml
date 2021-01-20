@@ -14,3 +14,4 @@ after_success:
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push artsdatabanken/nin-kode-api:latest;
     fi
+  - ./deploy.sh
