@@ -6,6 +6,7 @@
     using Microsoft.Extensions.Configuration;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
+    using NinKode.Database.Extension;
     using NinKode.Database.Model.v21;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
@@ -147,12 +148,15 @@
         {
             if (koder == null) yield break;
 
-            foreach (var kode in koder)
+            var codeList = new List<string>();
+            codeList.AddRange(koder);
+
+            foreach (var code in codeList.OrderByList<string>())
             {
                 yield return new VarietyCodeCode
                 {
-                    Id = kode,
-                    Definition = $"{host}{kode.Replace(" ", "_")}"
+                    Id = code,
+                    Definition = $"{host}{code.Replace(" ", "_")}"
                 };
             }
         }
