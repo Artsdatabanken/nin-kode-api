@@ -1,8 +1,6 @@
 language: csharp
-dist: focal
-sudo: required
 mono: none
-dotnet: 3.1.11
+dotnet: 3.1
 branches:
   only:
   - master
@@ -13,9 +11,11 @@ install:
 script:
  - dotnet build
 
-
-
-
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push artsdatabanken/nin-kode-api:latest;
+    fi
 
 
 
