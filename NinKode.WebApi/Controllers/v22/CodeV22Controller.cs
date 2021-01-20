@@ -44,12 +44,5 @@
             var protocol = Request.IsHttps ? "s" : "";
             return $"http{protocol}://{Request.Host}{path}";
         }
-
-        [HttpGet]
-        [Route("ping")]
-        public string Ping()
-        {
-            return "CodeV22Controller";
-        }
     }
 }
