@@ -30,21 +30,6 @@ namespace NinKode.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo
-            //    {
-            //        Title = "NinKodeApi v1",
-            //        Version = "v1",
-            //        Description = CreateDescription()
-            //    });
-            //    //c.DocInclusionPredicate((_, api) =>
-            //    //{
-            //    //    return string.IsNullOrWhiteSpace(api.GroupName)
-            //    //        ? false
-            //    //        : api.GroupName.Equals("v1");
-            //    //});
-            //});
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -77,13 +62,6 @@ namespace NinKode.WebApi
                     Version = "v2.2",
                     Description = CreateDescription()
                 });
-                //c.DocInclusionPredicate((_, api) =>
-                //{
-                //    return string.IsNullOrWhiteSpace(api.GroupName)
-                //        ? false
-                //        : api.GroupName.Equals("v2");
-                //});
-                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
 
             // Define singleton-objects
