@@ -4,8 +4,8 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
+    using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
-    using NinKode.Database.Service.v21b;
 
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2.1b")]

@@ -9,13 +9,13 @@ namespace NinKode.WebApi
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.OpenApi.Models;
+    using NinKode.Common.Interfaces;
     using NinKode.Common.Utilities;
-    using NinKode.Database.Service;
-    using NinKode.Database.Service.v1;
-    using NinKode.Database.Service.v2;
-    using NinKode.Database.Service.v21;
-    using NinKode.Database.Service.v21b;
-    using NinKode.Database.Service.v22;
+    using NinKode.Database.Services.v1;
+    using NinKode.Database.Services.v2;
+    using NinKode.Database.Services.v21;
+    using NinKode.Database.Services.v21b;
+    using NinKode.Database.Services.v22;
 
     public class Startup
     {

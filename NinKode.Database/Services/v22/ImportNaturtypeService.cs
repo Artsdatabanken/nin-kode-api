@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Service.v22
+﻿namespace NinKode.Database.Services.v22
 {
     using System;
     using System.Collections.Generic;
@@ -30,7 +30,7 @@
 
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
-            var codeV21Service = new v21.CodeV21Service(_configuration);
+            var codeV21Service = new Services.v21.CodeV21Service(_configuration);
             var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
 
             var rootNaturtype = new NaturTypeV22

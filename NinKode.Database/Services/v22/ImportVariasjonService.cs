@@ -1,9 +1,8 @@
-﻿namespace NinKode.Database.Service.v22
+﻿namespace NinKode.Database.Services.v22
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.Extensions.Configuration;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
     using Raven.Client;
@@ -13,12 +12,10 @@
     {
         private const string PrimaryIndex = "Raven/DocumentsByEntityName";
         public readonly Action<string, bool> _logCallback;
-        private readonly VarietyV22Service _varietyV22Service;
 
-        public ImportVariasjonService(IConfiguration configuration, Action<string, bool> logCallback)
+        public ImportVariasjonService(Action<string, bool> logCallback)
         {
             _logCallback = logCallback;
-            _varietyV22Service = new VarietyV22Service(configuration);
         }
 
         public void Import(IDocumentStore store)

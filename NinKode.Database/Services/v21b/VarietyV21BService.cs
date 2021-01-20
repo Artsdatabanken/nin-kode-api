@@ -1,9 +1,10 @@
-﻿namespace NinKode.Database.Service.v21b
+﻿namespace NinKode.Database.Services.v21b
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Model.v21b;
     using Raven.Abstractions.Indexing;

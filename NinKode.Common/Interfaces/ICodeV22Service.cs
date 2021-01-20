@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Service.v22
+﻿namespace NinKode.Common.Interfaces
 {
     public interface ICodeV22Service : ICodeService { }
 }
