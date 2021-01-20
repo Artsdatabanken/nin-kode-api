@@ -52,7 +52,7 @@ namespace NinKode.WebApi
 
         private static string CreateDescription()
         {
-            return $"<i>BuildTime: {NorwayDateTime.Convert(File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location)):yyyy-MM-dd HH:mm:ss}</i>";
+            return $"BuildTime: <i>{NorwayDateTime.Convert(File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location)):yyyy-MM-dd HH:mm:ss}</i>";
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
