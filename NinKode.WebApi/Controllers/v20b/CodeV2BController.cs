@@ -8,7 +8,7 @@
     using NinKode.Database.Service.v21b;
 
     [ApiController]
-    [ApiExplorerSettings(GroupName = "v2b")]
+    [ApiExplorerSettings(GroupName = "v2.1b")]
     [DisplayName("Kode")]
     [Route("v2b/koder")]
     public class CodeV2BController : ControllerBase

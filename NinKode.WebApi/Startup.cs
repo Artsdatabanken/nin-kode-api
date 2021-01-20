@@ -52,10 +52,10 @@ namespace NinKode.WebApi
                     Version = "v2.1",
                     Description = CreateDescription()
                 });
-                c.SwaggerDoc("v2b", new OpenApiInfo
+                c.SwaggerDoc("v2.1b", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v2b",
-                    Version = "v2b",
+                    Title = "NinKodeApi v2.1b",
+                    Version = "v2.1b",
                     Description = CreateDescription()
                 });
                 c.SwaggerDoc("v2.2", new OpenApiInfo
@@ -92,7 +92,7 @@ namespace NinKode.WebApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v2.2/swagger.json", "NinKodeApi v2.2");
-                c.SwaggerEndpoint("/swagger/v2b/swagger.json", "NinKodeApi v2b");
+                c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", "NinKodeApi v2.1b");
                 c.SwaggerEndpoint("/swagger/v2.1/swagger.json", "NinKodeApi v2.1");
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "NinKodeApi v2");
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKodeApi v1");
