@@ -8,6 +8,7 @@
     using NinKode.Database.Service.v21;
 
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v2.1")]
     [Route("v2.1/variasjon")]
     public class VarietyV21Controller : ControllerBase
     {

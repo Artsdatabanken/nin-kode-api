@@ -7,6 +7,7 @@
     using NinKode.Database.Service.v2;
 
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v2")]
     [Route("v2")]
     public class CodeV2Controller : ControllerBase
     {
