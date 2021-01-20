@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
-
     using NinKode.Common.Models.Code;
     using NinKode.Database.Service.v22;
 
@@ -16,9 +15,9 @@
     {
         private readonly ICodeV22Service _codeService;
 
-        public CodeV22Controller(ICodeV22Service codeV22Service)
+        public CodeV22Controller(ICodeV22Service codeService)
         {
-            _codeService = codeV22Service;
+            _codeService = codeService;
         }
 
         [HttpGet]

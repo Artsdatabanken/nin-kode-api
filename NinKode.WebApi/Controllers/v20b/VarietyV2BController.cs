@@ -15,9 +15,9 @@
     {
         private readonly IVarietyV21BService _varietyService;
 
-        public VarietyV2BController(IVarietyV21BService varietyV21BService)
+        public VarietyV2BController(IVarietyV21BService varietyService)
         {
-            _varietyService = varietyV21BService;
+            _varietyService = varietyService;
         }
 
         [HttpGet]

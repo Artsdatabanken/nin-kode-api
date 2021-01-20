@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
-
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Service.v21;
 
@@ -16,9 +15,9 @@
     {
         private readonly IVarietyV21Service _varietyService;
 
-        public VarietyV21Controller(IVarietyV21Service varietyV21Service)
+        public VarietyV21Controller(IVarietyV21Service varietyService)
         {
-            _varietyService = varietyV21Service;
+            _varietyService = varietyService;
         }
 
         [HttpGet]

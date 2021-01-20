@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Service.v22;
 
@@ -14,11 +13,11 @@
     [Route("v2.2/variasjon")]
     public class VarietyV22Controller : ControllerBase
     {
-        private readonly VarietyV22Service _varietyService;
+        private readonly IVarietyV22Service _varietyService;
 
-        public VarietyV22Controller(IConfiguration configuration)
+        public VarietyV22Controller(IVarietyV22Service varietyService)
         {
-            _varietyService = new VarietyV22Service(configuration);
+            _varietyService = varietyService;
         }
 
         [HttpGet]

@@ -15,9 +15,9 @@
     {
         private readonly ICodeV2Service _codeService;
 
-        public CodeV2Controller(ICodeV2Service codeV2Service)
+        public CodeV2Controller(ICodeV2Service codeService)
         {
-            _codeService = codeV2Service;
+            _codeService = codeService;
         }
 
         [HttpGet]
