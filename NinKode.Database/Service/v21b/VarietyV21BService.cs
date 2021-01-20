@@ -13,14 +13,23 @@
     public class VarietyV21BService : IVarietyV21BService
     {
         private const string IndexName = "Variasjons/ByKode";
+        private const string RavenDbKeyName = "RavenDbNameV21B";
+        private const string RavenDbKeyUrl = "RavenDbUrl";
+
         private readonly DocumentStore _store;
 
         public VarietyV21BService(IConfiguration configuration)
         {
+            var dbName = configuration.GetValue(RavenDbKeyName, "");
+            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+
+            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
+            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+
             _store = new DocumentStore
             {
-                Url = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/"),
-                DefaultDatabase = configuration.GetValue("RavenDbNameV21B", "SOSINiNv2.0b")
+                DefaultDatabase = configuration.GetValue(RavenDbKeyName, ""),
+                Url = dbUrl
             };
             _store.Initialize(true);
 

@@ -13,14 +13,23 @@
     public class CodeV1Service : ICodeV1Service
     {
         private const string IndexName = "NaturTypes/ByKode";
+        private const string RavenDbKeyName = "RavenDbNameV1";
+        private const string RavenDbKeyUrl = "RavenDbUrl";
+
         private readonly DocumentStore _store;
 
         public CodeV1Service(IConfiguration configuration)
         {
+            var dbName = configuration.GetValue(RavenDbKeyName, "");
+            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+
+            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
+            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+
             _store = new DocumentStore
             {
-                Url = configuration.GetValue("RavenDbUrl", "http://localhost:8080/"),
-                DefaultDatabase = configuration.GetValue("RavenDbNameV1", "")
+                DefaultDatabase = configuration.GetValue(RavenDbKeyName, ""),
+                Url = dbUrl
             };
             _store.Initialize(true);
 
