@@ -7,7 +7,6 @@ branches:
 install:
  - dotnet restore
 script:
-<<<<<<< HEAD
  - dotnet build
 
 after_success:
@@ -15,12 +14,3 @@ after_success:
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push artsdatabanken/nin-kode-api:latest;
     fi
-
-
-
-
-
-
-=======
- - dotnet build
->>>>>>> 7dff21d77c2501e1c2d9dbd7259fbf20fad25f13
