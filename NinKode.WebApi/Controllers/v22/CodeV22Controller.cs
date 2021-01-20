@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
 
     using NinKode.Common.Models.Code;
@@ -9,6 +10,7 @@
 
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2.2")]
+    [DisplayName("Kode")]
     [Route("v2.2/koder")]
     public class CodeV22Controller : ControllerBase
     {

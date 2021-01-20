@@ -1,8 +1,8 @@
 namespace NinKode.WebApi
 {
     using System;
+    using System.ComponentModel;
     using System.IO;
-    using System.Linq;
     using System.Reflection;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -29,7 +29,10 @@ namespace NinKode.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(o =>
+            {
+                o.Conventions.Add(new ControllerDocumentationConvention());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -112,12 +115,29 @@ namespace NinKode.WebApi
         }
     }
 
-    internal class ActionHidingConvention : IActionModelConvention
+    //internal class ActionHidingConvention : IActionModelConvention
+    //{
+    //    public void Apply(ActionModel action)
+    //    {
+    //        if (!action.Controller.ControllerName.Equals("Home", StringComparison.OrdinalIgnoreCase)) return;
+    //        action.ApiExplorer.IsVisible = false;
+    //    }
+    //}
+
+    internal class ControllerDocumentationConvention : IControllerModelConvention
     {
-        public void Apply(ActionModel action)
+        void IControllerModelConvention.Apply(ControllerModel controller)
         {
-            if (!action.Controller.ControllerName.Equals("Home", StringComparison.OrdinalIgnoreCase)) return;
-            action.ApiExplorer.IsVisible = false;
+            if (controller == null) return;
+
+            foreach (var attribute in controller.Attributes)
+            {
+                if (attribute.GetType() != typeof(DisplayNameAttribute)) continue;
+                var displayNameAttribute = (DisplayNameAttribute)attribute;
+                if (!string.IsNullOrWhiteSpace(displayNameAttribute.DisplayName))
+                    controller.ControllerName = displayNameAttribute.DisplayName;
+            }
+
         }
     }
 }

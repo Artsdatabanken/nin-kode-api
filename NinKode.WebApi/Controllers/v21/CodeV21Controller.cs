@@ -2,12 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Service.v21;
 
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2.1")]
+    [DisplayName("Kode")]
     [Route("v2.1/koder")]
     public class CodeV21Controller : ControllerBase
     {

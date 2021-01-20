@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
     using NinKode.Common.Models.Variety;
@@ -9,6 +10,7 @@
 
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2.2")]
+    [DisplayName("Variasjon")]
     [Route("v2.2/variasjon")]
     public class VarietyV22Controller : ControllerBase
     {

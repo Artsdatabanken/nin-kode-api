@@ -2,12 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using Microsoft.AspNetCore.Mvc;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Service.v21b;
 
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2b")]
+    [DisplayName("Variasjon")]
     [Route("v2b/variasjon")]
     public class VarietyV2BController : ControllerBase
     {
