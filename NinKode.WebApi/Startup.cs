@@ -8,7 +8,6 @@ namespace NinKode.WebApi
     using Microsoft.AspNetCore.Mvc.ApplicationModels;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
     using NinKode.Common.Utilities;
     using NinKode.Database.Service.v1;
@@ -34,7 +33,7 @@ namespace NinKode.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "NinKode.WebApi",
+                    Title = "NinKodeApi",
                     Version = "v1",
                     Description = CreateDescription()
                 });
@@ -63,7 +62,7 @@ namespace NinKode.WebApi
             //{
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKode.WebApi v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKodeApi v1"));
             //}
 
             //app.UseHttpsRedirection();
