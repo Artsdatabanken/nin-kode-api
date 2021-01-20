@@ -8,7 +8,10 @@ ENV ASPNETCORE_URLS="http://+:8000"
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["NinKode.WebApi/NinKode.WebApi.csproj", "NinKode.WebApi/"]
+<<<<<<< HEAD
+=======
 # COPY ["NinKode.WebApi.csproj", "NinKode.WebApi/"]
+>>>>>>> d75cada275ef12450551c98895173bb99e3d4516
 RUN dotnet restore "NinKode.WebApi/NinKode.WebApi.csproj"
 COPY . .
 WORKDIR "/src/NinKode.WebApi"
