@@ -1,6 +1,8 @@
 namespace NinKode.WebApi
 {
     using System;
+    using System.IO;
+    using System.Reflection;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.ApplicationModels;
@@ -8,6 +10,7 @@ namespace NinKode.WebApi
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
+    using NinKode.Common.Utilities;
     using NinKode.Database.Service.v1;
     using NinKode.Database.Service.v2;
     using NinKode.Database.Service.v21;
@@ -29,7 +32,12 @@ namespace NinKode.WebApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NinKode.WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "NinKode.WebApi",
+                    Version = "v1",
+                    Description = CreateDescription()
+                });
             });
             
             // Define singleton-objects
@@ -41,6 +49,11 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
             services.AddSingleton<ICodeV22Service, CodeV22Service>();
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
+        }
+
+        private static string CreateDescription()
+        {
+            return $"<i>BuildTime: {NorwayDateTime.Convert(File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location)):yyyy-MM-dd HH:mm:ss}</i>";
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
