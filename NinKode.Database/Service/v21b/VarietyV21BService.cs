@@ -28,7 +28,7 @@
 
             _store = new DocumentStore
             {
-                DefaultDatabase = configuration.GetValue(RavenDbKeyName, ""),
+                DefaultDatabase = dbName,
                 Url = dbUrl
             };
             _store.Initialize(true);

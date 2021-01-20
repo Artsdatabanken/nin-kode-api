@@ -1,4 +1,4 @@
-﻿namespace NinKode.WebApi.Controllers.v20b
+﻿namespace NinKode.WebApi.Controllers.v21b
 {
     using System;
     using System.Collections.Generic;
@@ -11,11 +11,11 @@
     [ApiExplorerSettings(GroupName = "v2.1b")]
     [DisplayName("Variasjon")]
     [Route("v2b/variasjon")]
-    public class VarietyV2BController : ControllerBase
+    public class VarietyV21BController : ControllerBase
     {
         private readonly IVarietyV21BService _varietyService;
 
-        public VarietyV2BController(IVarietyV21BService varietyService)
+        public VarietyV21BController(IVarietyV21BService varietyService)
         {
             _varietyService = varietyService;
         }

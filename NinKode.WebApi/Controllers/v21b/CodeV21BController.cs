@@ -1,4 +1,4 @@
-﻿namespace NinKode.WebApi.Controllers.v20b
+﻿namespace NinKode.WebApi.Controllers.v21b
 {
     using System;
     using System.Collections.Generic;
@@ -11,11 +11,11 @@
     [ApiExplorerSettings(GroupName = "v2.1b")]
     [DisplayName("Kode")]
     [Route("v2b/koder")]
-    public class CodeV2BController : ControllerBase
+    public class CodeV21BController : ControllerBase
     {
         private readonly ICodeV21BService _codeService;
 
-        public CodeV2BController(ICodeV21BService codeService)
+        public CodeV21BController(ICodeV21BService codeService)
         {
             _codeService = codeService;
         }
