@@ -17,4 +17,28 @@
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Swagger\themes\theme-feeling-blue.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-flattop.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-material.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-monokai.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-muted.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-newspaper.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Swagger\themes\theme-outline.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

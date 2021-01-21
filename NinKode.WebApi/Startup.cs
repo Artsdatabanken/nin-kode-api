@@ -92,6 +92,14 @@ namespace NinKode.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                //c.InjectStylesheet("/css/theme-feeling-blue.css");
+                //c.InjectStylesheet("/css/theme-flattop.css");
+                //c.InjectStylesheet("/css/theme-material.css");
+                //c.InjectStylesheet("/css/theme-monokai.css");
+                //c.InjectStylesheet("/css/theme-muted.css");
+                //c.InjectStylesheet("/css/theme-newspaper.css");
+                //c.InjectStylesheet("/css/theme-outline.css");
+                c.DisplayRequestDuration();
                 c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
                 c.SwaggerEndpoint("/swagger/v2.2/swagger.json", "NinKodeApi v2.2");
                 c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", "NinKodeApi v2.1b");
