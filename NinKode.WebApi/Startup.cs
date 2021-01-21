@@ -92,6 +92,7 @@ namespace NinKode.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
                 c.SwaggerEndpoint("/swagger/v2.2/swagger.json", "NinKodeApi v2.2");
                 c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", "NinKodeApi v2.1b");
                 c.SwaggerEndpoint("/swagger/v2.1/swagger.json", "NinKodeApi v2.1");
