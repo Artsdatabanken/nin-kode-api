@@ -19,9 +19,12 @@ namespace NinKode.WebApi
 
     public class Startup
     {
+        private readonly string _swaggerDocumentTitle;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            _swaggerDocumentTitle = Configuration.GetValue("SwaggerDocumentTitle", "NinKode API");
         }
 
         public IConfiguration Configuration { get; }
@@ -37,31 +40,31 @@ namespace NinKode.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v1",
+                    Title = $"{_swaggerDocumentTitle} v1",
                     Version = "v1",
                     Description = CreateDescription()
                 });
                 c.SwaggerDoc("v2", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v2",
+                    Title = $"{_swaggerDocumentTitle} v2",
                     Version = "v2",
                     Description = CreateDescription()
                 });
                 c.SwaggerDoc("v2.1", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v2.1",
+                    Title = $"{_swaggerDocumentTitle} v2.1",
                     Version = "v2.1",
                     Description = CreateDescription()
                 });
                 c.SwaggerDoc("v2.1b", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v2.1b",
+                    Title = $"{_swaggerDocumentTitle} v2.1b",
                     Version = "v2.1b",
                     Description = CreateDescription()
                 });
                 c.SwaggerDoc("v2.2", new OpenApiInfo
                 {
-                    Title = "NinKodeApi v2.2",
+                    Title = $"{_swaggerDocumentTitle} v2.2",
                     Version = "v2.2",
                     Description = CreateDescription()
                 });
@@ -92,6 +95,7 @@ namespace NinKode.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.DocumentTitle = _swaggerDocumentTitle;
                 //c.InjectStylesheet("/css/theme-feeling-blue.css");
                 //c.InjectStylesheet("/css/theme-flattop.css");
                 //c.InjectStylesheet("/css/theme-material.css");
@@ -101,11 +105,11 @@ namespace NinKode.WebApi
                 //c.InjectStylesheet("/css/theme-outline.css");
                 c.DisplayRequestDuration();
                 c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
-                c.SwaggerEndpoint("/swagger/v2.2/swagger.json", "NinKodeApi v2.2");
-                c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", "NinKodeApi v2.1b");
-                c.SwaggerEndpoint("/swagger/v2.1/swagger.json", "NinKodeApi v2.1");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "NinKodeApi v2");
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "NinKodeApi v1");
+                c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
+                c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
+                c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
             });
             //}
 
