@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using Microsoft.AspNetCore.Cors;
     using Microsoft.AspNetCore.Mvc;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
@@ -10,6 +11,7 @@
     [ApiController]
     [ApiExplorerSettings(GroupName = "v2.1")]
     [DisplayName("Variasjon")]
+    [EnableCors]
     [Route("v2.1/variasjon")]
     public class VarietyV21Controller : ControllerBase
     {
