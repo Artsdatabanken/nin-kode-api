@@ -115,10 +115,8 @@ namespace NinKode.WebApi
 
             //app.UseHttpsRedirection();
 
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
             app.UseRouting();
-
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
