@@ -22,7 +22,7 @@
 
         public CodeV1Service(IConfiguration configuration)
         {
-            var dbName = configuration.GetValue(RavenDbKeyName, "");
+            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv1");
             var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
 
             if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");

@@ -22,7 +22,7 @@
 
         public VarietyV21BService(IConfiguration configuration)
         {
-            var dbName = configuration.GetValue(RavenDbKeyName, "");
+            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.0b");
             var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
 
             if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
