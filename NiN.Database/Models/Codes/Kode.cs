@@ -1,4 +1,4 @@
-﻿namespace NiN.Database.Models
+﻿namespace NiN.Database.Models.Codes
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -27,7 +27,7 @@
 
         public NatursystemKode()
         {
-            Kategori = KategoriEnum.Naturmangfoldniva;
+            Kategori = KategoriEnum.Naturmangfoldnivå;
         }
     }
 

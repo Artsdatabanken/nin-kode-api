@@ -4,12 +4,15 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using NiN.Database.Models;
+    using NiN.Database.Models.Codes;
 
     public class NiNContext : DbContext
     {
         public DbSet<Natursystem> Natursystem { get; set; }
         public DbSet<Hovedtypegruppe> Hovedtypegruppe { get; set; }
-        //public DbSet<HovedtypegruppeKode> HovedtypegruppeKode { get; set; }
+        public DbSet<Hovedtype> Hovedtype { get; set; }
+        public DbSet<Grunntype> Grunntype { get; set; }
+        public DbSet<Kartleggingsenhet> Kartleggingsenhet { get; set; }
         public DbSet<Kode> Kode { get; set; }
 
         public string ConnectionString { get; private set; }
@@ -28,8 +31,8 @@
             optionsBuilder
                 .UseSqlServer(ConnectionString)
                 //.UseLazyLoadingProxies()
-                .EnableDetailedErrors()
-                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
+                //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
+                .EnableDetailedErrors();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

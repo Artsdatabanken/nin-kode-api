@@ -12,7 +12,8 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    KodeId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Kode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LkmKategori = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,33 +26,11 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Kategori = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Natursystem", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Basistrinn",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Kode = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    LKMKodeId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Basistrinn", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Basistrinn_LKMKode_LKMKodeId",
-                        column: x => x.LKMKodeId,
-                        principalTable: "LKMKode",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,7 +100,7 @@ namespace NiN.Database.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Malestokk = table.Column<int>(type: "int", nullable: false),
-                    KodeId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    KodeId = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     HovedtypeId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -143,9 +122,7 @@ namespace NiN.Database.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Kode = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    LkmKategori = table.Column<int>(type: "int", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    KodeId = table.Column<int>(type: "int", nullable: true),
                     HovedtypeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -155,6 +132,12 @@ namespace NiN.Database.Migrations
                         name: "FK_Miljovariabel_Hovedtype_HovedtypeId",
                         column: x => x.HovedtypeId,
                         principalTable: "Hovedtype",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Miljovariabel_LKMKode_KodeId",
+                        column: x => x.KodeId,
+                        principalTable: "LKMKode",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -231,11 +214,6 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Basistrinn_LKMKodeId",
-                table: "Basistrinn",
-                column: "LKMKodeId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Grunntype_HovedtypeId",
                 table: "Grunntype",
                 column: "HovedtypeId");
@@ -289,6 +267,11 @@ namespace NiN.Database.Migrations
                 column: "HovedtypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Miljovariabel_KodeId",
+                table: "Miljovariabel",
+                column: "KodeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Trinn_KodeId",
                 table: "Trinn",
                 column: "KodeId");
@@ -302,9 +285,6 @@ namespace NiN.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Basistrinn");
-
-            migrationBuilder.DropTable(
                 name: "Kartleggingsenhet");
 
             migrationBuilder.DropTable(
@@ -317,13 +297,13 @@ namespace NiN.Database.Migrations
                 name: "Grunntype");
 
             migrationBuilder.DropTable(
-                name: "LKMKode");
-
-            migrationBuilder.DropTable(
                 name: "Miljovariabel");
 
             migrationBuilder.DropTable(
                 name: "Hovedtype");
+
+            migrationBuilder.DropTable(
+                name: "LKMKode");
 
             migrationBuilder.DropTable(
                 name: "Hovedtypegruppe");

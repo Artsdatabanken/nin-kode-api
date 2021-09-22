@@ -10,7 +10,7 @@
 
         public MalestokkEnum Malestokk { get; set; }
 
-        [StringLength(10)]
+        [StringLength(25)]
         public string KodeId { get; set; }
 
         [StringLength(1000)]

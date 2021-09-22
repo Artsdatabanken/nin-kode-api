@@ -1,6 +1,6 @@
 ﻿namespace NiN.Database.Models.Enums
 {
-    public enum LKMKategoriEnum
+    public enum LkmKategoriEnum
     {
         hLKM,
         tLKM,

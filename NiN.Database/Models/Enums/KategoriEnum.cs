@@ -2,7 +2,7 @@
 {
     public enum KategoriEnum
     {
-        Naturmangfoldniva,
+        Naturmangfoldnivå,
         Hovedtypegruppe,
         Hovedtype,
         Grunntype

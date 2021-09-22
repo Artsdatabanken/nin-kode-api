@@ -10,7 +10,7 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNContext))]
-    [Migration("20210922063807_Initial")]
+    [Migration("20210922140632_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,36 @@ namespace NiN.Database.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NiN.Database.Models.Basistrinn", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.Kode", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Definisjon")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Kategori")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KodeName")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kode");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Kode");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.LKMKode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,21 +58,14 @@ namespace NiN.Database.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Kode")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LKMKodeId")
+                    b.Property<int>("LkmKategori")
                         .HasColumnType("int");
-
-                    b.Property<string>("Navn")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LKMKodeId");
-
-                    b.ToTable("Basistrinn");
+                    b.ToTable("LKMKode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
@@ -124,8 +146,8 @@ namespace NiN.Database.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("KodeId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<int>("Malestokk")
                         .HasColumnType("int");
@@ -135,50 +157,6 @@ namespace NiN.Database.Migrations
                     b.HasIndex("HovedtypeId");
 
                     b.ToTable("Kartleggingsenhet");
-                });
-
-            modelBuilder.Entity("NiN.Database.Models.Kode", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Definisjon")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Kategori")
-                        .HasColumnType("int");
-
-                    b.Property<string>("KodeName")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Kode");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Kode");
-                });
-
-            modelBuilder.Entity("NiN.Database.Models.LKMKode", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("KodeId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LKMKode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Miljovariabel", b =>
@@ -191,24 +169,18 @@ namespace NiN.Database.Migrations
                     b.Property<int?>("HovedtypeId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Kode")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<int>("LkmKategori")
+                    b.Property<int?>("KodeId")
                         .HasColumnType("int");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Type")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("HovedtypeId");
+
+                    b.HasIndex("KodeId");
 
                     b.ToTable("Miljovariabel");
                 });
@@ -219,10 +191,6 @@ namespace NiN.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Kategori")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
@@ -259,9 +227,9 @@ namespace NiN.Database.Migrations
                     b.ToTable("Trinn");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.GrunntypeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.GrunntypeKode", b =>
                 {
-                    b.HasBaseType("NiN.Database.Models.Kode");
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
 
                     b.Property<int>("GrunntypeId")
                         .HasColumnType("int");
@@ -273,9 +241,9 @@ namespace NiN.Database.Migrations
                     b.HasDiscriminator().HasValue("GrunntypeKode");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.HovedtypeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.HovedtypeKode", b =>
                 {
-                    b.HasBaseType("NiN.Database.Models.Kode");
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
 
                     b.Property<int>("HovedtypeId")
                         .HasColumnType("int");
@@ -287,9 +255,9 @@ namespace NiN.Database.Migrations
                     b.HasDiscriminator().HasValue("HovedtypeKode");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.HovedtypegruppeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.HovedtypegruppeKode", b =>
                 {
-                    b.HasBaseType("NiN.Database.Models.Kode");
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
 
                     b.Property<int>("HovedtypegruppeId")
                         .HasColumnType("int");
@@ -301,9 +269,9 @@ namespace NiN.Database.Migrations
                     b.HasDiscriminator().HasValue("HovedtypegruppeKode");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.NatursystemKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.NatursystemKode", b =>
                 {
-                    b.HasBaseType("NiN.Database.Models.Kode");
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
 
                     b.Property<int>("NatursystemId")
                         .HasColumnType("int");
@@ -313,15 +281,6 @@ namespace NiN.Database.Migrations
                         .HasFilter("[NatursystemId] IS NOT NULL");
 
                     b.HasDiscriminator().HasValue("NatursystemKode");
-                });
-
-            modelBuilder.Entity("NiN.Database.Models.Basistrinn", b =>
-                {
-                    b.HasOne("NiN.Database.Models.LKMKode", "LKMKode")
-                        .WithMany("Basistrinn")
-                        .HasForeignKey("LKMKodeId");
-
-                    b.Navigation("LKMKode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
@@ -371,12 +330,18 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("HovedtypeId")
                         .OnDelete(DeleteBehavior.ClientCascade);
 
+                    b.HasOne("NiN.Database.Models.Codes.LKMKode", "Kode")
+                        .WithMany()
+                        .HasForeignKey("KodeId");
+
                     b.Navigation("Hovedtype");
+
+                    b.Navigation("Kode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Trinn", b =>
                 {
-                    b.HasOne("NiN.Database.Models.LKMKode", "Kode")
+                    b.HasOne("NiN.Database.Models.Codes.LKMKode", "Kode")
                         .WithMany()
                         .HasForeignKey("KodeId");
 
@@ -390,44 +355,44 @@ namespace NiN.Database.Migrations
                     b.Navigation("Miljovariabel");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.GrunntypeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.GrunntypeKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Grunntype", "Grunntype")
                         .WithOne("Kode")
-                        .HasForeignKey("NiN.Database.Models.GrunntypeKode", "GrunntypeId")
+                        .HasForeignKey("NiN.Database.Models.Codes.GrunntypeKode", "GrunntypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Grunntype");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.HovedtypeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.HovedtypeKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Hovedtype", "Hovedtype")
                         .WithOne("Kode")
-                        .HasForeignKey("NiN.Database.Models.HovedtypeKode", "HovedtypeId")
+                        .HasForeignKey("NiN.Database.Models.Codes.HovedtypeKode", "HovedtypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Hovedtype");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.HovedtypegruppeKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.HovedtypegruppeKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Hovedtypegruppe", "Hovedtypegruppe")
                         .WithOne("Kode")
-                        .HasForeignKey("NiN.Database.Models.HovedtypegruppeKode", "HovedtypegruppeId")
+                        .HasForeignKey("NiN.Database.Models.Codes.HovedtypegruppeKode", "HovedtypegruppeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Hovedtypegruppe");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.NatursystemKode", b =>
+            modelBuilder.Entity("NiN.Database.Models.Codes.NatursystemKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Natursystem", "Natursystem")
                         .WithOne("Kode")
-                        .HasForeignKey("NiN.Database.Models.NatursystemKode", "NatursystemId")
+                        .HasForeignKey("NiN.Database.Models.Codes.NatursystemKode", "NatursystemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -456,11 +421,6 @@ namespace NiN.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("UnderordnetKoder");
-                });
-
-            modelBuilder.Entity("NiN.Database.Models.LKMKode", b =>
-                {
-                    b.Navigation("Basistrinn");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Miljovariabel", b =>
