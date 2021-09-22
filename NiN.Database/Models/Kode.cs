@@ -46,9 +46,9 @@
 
     public class HovedtypeKode : Kode
     {
-        public int HovedtypeKeyId { get; set; }
+        public int HovedtypeId { get; set; }
 
-        [ForeignKey(nameof(HovedtypeKeyId))]
+        [ForeignKey(nameof(HovedtypeId))]
         public virtual Hovedtype Hovedtype { get; set; }
 
         public HovedtypeKode()

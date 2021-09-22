@@ -3,21 +3,21 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class Hovedtypegruppe
+    public class Hovedtypegruppe : BaseEntity
     {
         public Hovedtypegruppe()
         {
             UnderordnetKoder = new List<Hovedtype>();
         }
 
-        [Key]
-        public int Id { get; set; }
+        //[Key]
+        //public int Id { get; set; }
 
-        [StringLength(255)]
-        public string Navn { get; set; }
+        //[StringLength(255)]
+        //public string Navn { get; set; }
 
         [Required]
-        public virtual HovedtypegruppeKode HovedtypegruppeKode { get; set; }
+        public virtual HovedtypegruppeKode Kode { get; set; }
 
         public virtual Natursystem Natursystem { get; set; }
 

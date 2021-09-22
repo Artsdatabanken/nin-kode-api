@@ -8,7 +8,6 @@
 
     using NiN.Database;
     using NiN.Database.Models;
-    using NiN.Database.Models.Enums;
 
     public class Program
     {
@@ -19,55 +18,23 @@
                 //Console.WriteLine($"Database: {ninContext.ConnectionString}");
 
                 var na = context.Natursystem
+                    .Include(x => x.Kode)
                     .Include(x => x.UnderordnetKoder)
-                    .FirstOrDefault(x => x.NatursystemKode.KodeName.Equals("NA"));
+                    .FirstOrDefault(x => x.Kode.KodeName.Equals("NA"));
 
                 if (na == null)
                 {
-                    var natursystem = new Natursystem
-                    {
-                        Navn = "Natursystem",
-                        NatursystemKode = new NatursystemKode { KodeName = "NA" }
-                    };
-                    natursystem.UnderordnetKoder.Add(new Hovedtypegruppe
-                    {
-                        Navn = "Limniske vannmasser",
-                        HovedtypegruppeKode = new HovedtypegruppeKode
-                        {
-                            KodeName = "F",
-                            Definisjon = "definisjon"
-                        }
-                    });
-
-                    context.Add(GenerateNatursystem());
+                    var natursystem = GenerateNatursystem();
+                    context.Add(natursystem);
                 }
                 else
                 {
-                    var limn = context.HovedtypegruppeKode
+                    var limn = context.Kode
                         .FirstOrDefault(x => x.KodeName.Equals("F"));
 
                     if (limn != null)
                         Console.WriteLine(limn);
-
-                    //if (na.UnderordnetKoder != null)
-                    //    foreach (var child in na.UnderordnetKoder)
-                    //    {
-                    //        context.Remove(child);
-                    //    }
-
-                    //if (na.Kartleggingsenheter != null)
-                    //    foreach (var child in na.Kartleggingsenheter)
-                    //    {
-                    //        context.Remove(child);
-                    //    }
-
-                    //if (na.Miljovariabler != null)
-                    //    foreach (var child in na.Miljovariabler)
-
-
-                    //        context.Remove(child);
-                    //    }
-
+                    
                     context.Remove(na);
                     Console.WriteLine("NA exist");
                 }
@@ -81,7 +48,7 @@
             var na = new Natursystem
             {
                 Navn = "Natursystem",
-                NatursystemKode = new NatursystemKode { KodeName = "NA" },
+                Kode = new NatursystemKode { KodeName = "NA" },
                 UnderordnetKoder = GenerateHovedtypegrupper()
             };
 
@@ -95,7 +62,7 @@
             htg.Add(new Hovedtypegruppe
             {
                 Navn = "Limniske vannmasser",
-                HovedtypegruppeKode = new HovedtypegruppeKode
+                Kode = new HovedtypegruppeKode
                 {
                     KodeName = "F",
                     Definisjon = "definisjon"

@@ -25,8 +25,8 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Kategori = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                    Kategori = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -60,8 +60,8 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    NatursystemId = table.Column<int>(type: "int", nullable: true)
+                    NatursystemId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -75,35 +75,13 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "NatursystemKode",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NatursystemId = table.Column<int>(type: "int", nullable: false),
-                    KodeName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Kategori = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_NatursystemKode", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_NatursystemKode_Natursystem_NatursystemId",
-                        column: x => x.NatursystemId,
-                        principalTable: "Natursystem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Hovedtype",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: true)
+                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -117,35 +95,13 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HovedtypegruppeKode",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: false),
-                    KodeName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Kategori = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HovedtypegruppeKode", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_HovedtypegruppeKode_Hovedtypegruppe_HovedtypegruppeId",
-                        column: x => x.HovedtypegruppeId,
-                        principalTable: "Hovedtypegruppe",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Grunntype",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true)
+                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -153,28 +109,6 @@ namespace NiN.Database.Migrations
                     table.ForeignKey(
                         name: "FK_Grunntype_Hovedtype_HovedtypeId",
                         column: x => x.HovedtypeId,
-                        principalTable: "Hovedtype",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HovedtypeKode",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    HovedtypeKeyId = table.Column<int>(type: "int", nullable: false),
-                    KodeName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Kategori = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HovedtypeKode", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_HovedtypeKode_Hovedtype_HovedtypeKeyId",
-                        column: x => x.HovedtypeKeyId,
                         principalTable: "Hovedtype",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -226,25 +160,47 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GrunntypeKode",
+                name: "Kode",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    GrunntypeId = table.Column<int>(type: "int", nullable: false),
                     KodeName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    Kategori = table.Column<int>(type: "int", nullable: false)
+                    Kategori = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GrunntypeId = table.Column<int>(type: "int", nullable: true),
+                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
+                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
+                    NatursystemId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GrunntypeKode", x => x.Id);
+                    table.PrimaryKey("PK_Kode", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_GrunntypeKode_Grunntype_GrunntypeId",
+                        name: "FK_Kode_Grunntype_GrunntypeId",
                         column: x => x.GrunntypeId,
                         principalTable: "Grunntype",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Kode_Hovedtype_HovedtypeId",
+                        column: x => x.HovedtypeId,
+                        principalTable: "Hovedtype",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Kode_Hovedtypegruppe_HovedtypegruppeId",
+                        column: x => x.HovedtypegruppeId,
+                        principalTable: "Hovedtypegruppe",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Kode_Natursystem_NatursystemId",
+                        column: x => x.NatursystemId,
+                        principalTable: "Natursystem",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -285,12 +241,6 @@ namespace NiN.Database.Migrations
                 column: "HovedtypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GrunntypeKode_GrunntypeId",
-                table: "GrunntypeKode",
-                column: "GrunntypeId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Hovedtype_HovedtypegruppeId",
                 table: "Hovedtype",
                 column: "HovedtypegruppeId");
@@ -301,32 +251,42 @@ namespace NiN.Database.Migrations
                 column: "NatursystemId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_HovedtypegruppeKode_HovedtypegruppeId",
-                table: "HovedtypegruppeKode",
-                column: "HovedtypegruppeId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_HovedtypeKode_HovedtypeKeyId",
-                table: "HovedtypeKode",
-                column: "HovedtypeKeyId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Kartleggingsenhet_HovedtypeId",
                 table: "Kartleggingsenhet",
                 column: "HovedtypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Kode_GrunntypeId",
+                table: "Kode",
+                column: "GrunntypeId",
+                unique: true,
+                filter: "[GrunntypeId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Kode_HovedtypegruppeId",
+                table: "Kode",
+                column: "HovedtypegruppeId",
+                unique: true,
+                filter: "[HovedtypegruppeId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Kode_HovedtypeId",
+                table: "Kode",
+                column: "HovedtypeId",
+                unique: true,
+                filter: "[HovedtypeId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Kode_NatursystemId",
+                table: "Kode",
+                column: "NatursystemId",
+                unique: true,
+                filter: "[NatursystemId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Miljovariabel_HovedtypeId",
                 table: "Miljovariabel",
                 column: "HovedtypeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_NatursystemKode_NatursystemId",
-                table: "NatursystemKode",
-                column: "NatursystemId",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Trinn_KodeId",
@@ -345,19 +305,10 @@ namespace NiN.Database.Migrations
                 name: "Basistrinn");
 
             migrationBuilder.DropTable(
-                name: "GrunntypeKode");
-
-            migrationBuilder.DropTable(
-                name: "HovedtypegruppeKode");
-
-            migrationBuilder.DropTable(
-                name: "HovedtypeKode");
-
-            migrationBuilder.DropTable(
                 name: "Kartleggingsenhet");
 
             migrationBuilder.DropTable(
-                name: "NatursystemKode");
+                name: "Kode");
 
             migrationBuilder.DropTable(
                 name: "Trinn");
