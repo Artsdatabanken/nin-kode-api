@@ -13,6 +13,7 @@
         public DbSet<Hovedtype> Hovedtype { get; set; }
         public DbSet<Grunntype> Grunntype { get; set; }
         public DbSet<Kartleggingsenhet> Kartleggingsenhet { get; set; }
+        public DbSet<Miljovariabel> Miljovariabel { get; set; }
         public DbSet<Kode> Kode { get; set; }
 
         public string ConnectionString { get; private set; }

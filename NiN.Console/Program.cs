@@ -2,12 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Linq;
     using System.Text.Json;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
-    using Microsoft.IdentityModel.Tokens;
     using NiN.Database;
+    using NiN.Database.Converters;
     using NiN.Database.Models;
     using NiN.Database.Models.Codes;
     using NiN.Database.Models.Enums;
@@ -15,8 +16,12 @@
 
     public class Program
     {
+        private static Stopwatch _stopwatch = new Stopwatch();
+
         public static void Main(string[] args)
         {
+            _stopwatch.Start();
+
             var totalCount = 0;
             var updateCount = 0;
 
@@ -24,15 +29,8 @@
 
             var code22Service = new CodeV22Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
 
-            
-            var htgruppe = code22Service
-                .GetAll("")
-                .ToList()
-                .Where(x => x.Kategori.StartsWith("Natur", StringComparison.OrdinalIgnoreCase));
-
             var na = code22Service
-                .GetAll("")
-                .FirstOrDefault(x => x.Kategori.StartsWith("Natur", StringComparison.OrdinalIgnoreCase));
+                .GetCode("NA");
             //Console.WriteLine(JsonSerializer.Serialize(na, options));
 
             using (var context = new NiNContext())
@@ -53,10 +51,15 @@
                     context.Natursystem.Add(natursystem);
                     totalCount++;
                 }
+                else
+                {
+                    RemoveAll(context);
+                    return;
+                }
 
                 foreach (var htgrp in na.UnderordnetKoder)
                 {
-                    var gruppe = code22Service.GetByKode(htgrp.Id, "");
+                    var gruppe = code22Service.GetCode(htgrp.Id);
 
                     Hovedtypegruppe hovedtypegruppe = null;
 
@@ -84,7 +87,7 @@
 
                     foreach (var grp in gruppe.UnderordnetKoder)
                     {
-                        var hvdtype = code22Service.GetByKode(grp.Id, "");
+                        var hvdtype = code22Service.GetCode(grp.Id);
 
                         Hovedtype hovedtype = null;
 
@@ -115,7 +118,7 @@
                         {
                             foreach (var u in hvdtype.UnderordnetKoder)
                             {
-                                var grtype = code22Service.GetByKode(u.Id, "");
+                                var grtype = code22Service.GetCode(u.Id);
 
                                 Grunntype grunntype = null;
 
@@ -149,7 +152,7 @@
                             {
                                 foreach (var v in k.Value)
                                 {
-                                    var krt = code22Service.GetByKode(v.Id, "");
+                                    var krt = code22Service.GetCode(v.Id);
 
                                     Kartleggingsenhet kartleggingsenhet = null;
 
@@ -196,15 +199,67 @@
                                 }
 
                             }
+
+                            if (hvdtype.Miljovariabler != null)
+                            {
+                                foreach (var m in hvdtype.Miljovariabler)
+                                {
+                                    Miljovariabel miljovariabel = null;
+
+                                    if (context.Miljovariabel.Any())
+                                    {
+                                        miljovariabel = context.Miljovariabel
+                                            .FirstOrDefault(x => x.Kode.Kode.Equals(m.Kode));
+                                    }
+
+                                    if (miljovariabel == null)
+                                    {
+                                        miljovariabel = new Miljovariabel
+                                        {
+                                            Hovedtype = hovedtype,
+                                            Kode = new LKMKode
+                                            {
+                                                Kode = m.Kode,
+                                                LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value
+                                            },
+                                            Navn = m.Navn
+                                        };
+                                        foreach (var t in m.Trinn)
+                                        {
+                                            var trinn = new Trinn
+                                            {
+                                                Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
+                                            };
+                                            miljovariabel.Trinn.Add(trinn);
+                                        }
+
+                                        context.Miljovariabel.Add(miljovariabel);
+                                        totalCount++;
+                                    }
+                                    else
+                                    {
+                                        miljovariabel.Navn = m.Navn;
+                                        context.Miljovariabel.Update(miljovariabel);
+                                        updateCount++;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+                _stopwatch.Stop();
+                Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+                _stopwatch.Reset();
+                _stopwatch.Start();
 
                 context.SaveChanges();
             }
 
             Console.WriteLine($"Added {totalCount} items");
             Console.WriteLine($"Updated {updateCount} items");
+
+            _stopwatch.Stop();
+            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
 
             //using (var context = new NiNContext())
             //{
@@ -235,6 +290,54 @@
 
             //    context.SaveChanges();
             //}
+        }
+
+        private static void RemoveAll(NiNContext context)
+        {
+            var totalCount = 0;
+
+            var natursystem = context.Natursystem
+                        .Include(x => x.Kode)
+                        .Include(x => x.UnderordnetKoder)
+                        .FirstOrDefault();
+
+            foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
+            {
+                var ht = context.Hovedtypegruppe
+                    .Include(x => x.Kode)
+                    .Include(x => x.UnderordnetKoder)
+                    .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
+                foreach (var hovedtype in ht.UnderordnetKoder)
+                {
+                    var h = context.Hovedtype
+                        .Include(x => x.Kode)
+                        .Include(x => x.Kartleggingsenheter)
+                        .Include(x => x.Miljovariabler)
+                        .Include(x => x.UnderordnetKoder)
+                        .FirstOrDefault(x => x.Id == hovedtype.Id);
+                    
+                    totalCount += h.Kartleggingsenheter.Count;
+                    totalCount += h.Miljovariabler.Count;
+                    totalCount += h.UnderordnetKoder.Count;
+
+                    totalCount++;
+                    context.Hovedtype.Remove(h);
+                }
+
+                totalCount++;
+                context.Hovedtypegruppe.Remove(ht);
+            }
+
+            totalCount++;
+            context.Natursystem.Remove(natursystem);
+            _stopwatch.Stop();
+            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+            _stopwatch.Reset();
+            _stopwatch.Start();
+            context.SaveChanges();
+            Console.WriteLine($"Removed {totalCount} items");
+            _stopwatch.Stop();
+            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
         private static Natursystem GenerateNatursystem()

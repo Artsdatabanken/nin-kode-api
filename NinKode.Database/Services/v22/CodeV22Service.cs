@@ -8,6 +8,7 @@
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v22;
+    using Raven.Abstractions.Data;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
@@ -89,7 +90,56 @@
             return null;
         }
 
+        public Codes GetCode(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+
+            id = id.Replace("_", " ");
+
+            using (var session = _store.OpenSession())
+            {
+                var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                using (var enumerator = session.Advanced.Stream(query))
+                {
+                    while (enumerator.MoveNext())
+                    {
+                        return CreateCodeByNaturtype(enumerator.Current?.Document);
+                    }
+                }
+            }
+
+            return null;
+        }
+
         #region private methods
+
+        private static Codes CreateCodeByNaturtype(NaturTypeV22 naturType)
+        {
+            if (naturType == null) return null;
+
+            return new Codes
+            {
+                Navn = naturType.Navn,
+                Kategori = naturType.Kategori,
+                Kode = new AllCodesCode
+                {
+                    Id = naturType.Kode,
+                    //Definition = $"{naturType.Kode.Replace(" ", "_")}"
+                    Definition = $"{RemoveNaFromKode(naturType.Kode)}"
+                },
+                ElementKode = naturType.ElementKode,
+                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, "").ToArray(),
+                Kartleggingsenheter = naturType.Kartleggingsenheter == null ? null : CreateKartleggingsenheter(naturType.Kartleggingsenheter, ""),
+                Miljovariabler = naturType.Trinn == null ? null : CreateTrinn(naturType.Trinn).ToArray()
+            };
+        }
+
+        private static string RemoveNaFromKode(string kode)
+        {
+            if (!kode.StartsWith("NA ")) return kode;
+
+            return kode.Substring("NA ".Length);
+        }
 
         private static Codes CreateCodesByNaturtype(NaturTypeV22 naturType, string host)
         {
