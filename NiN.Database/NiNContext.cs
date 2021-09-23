@@ -15,6 +15,9 @@
         public DbSet<Kartleggingsenhet> Kartleggingsenhet { get; set; }
         public DbSet<Miljovariabel> Miljovariabel { get; set; }
         public DbSet<Kode> Kode { get; set; }
+        public DbSet<LKMKode> LKMKode { get; set; }
+        public DbSet<Trinn> Trinn { get; set; }
+        public DbSet<Basistrinn> Basistrinn { get; set; }
 
         public string ConnectionString { get; private set; }
         public string DbName { get; private set; }
@@ -71,6 +74,16 @@
             modelBuilder.Entity<Miljovariabel>()
                 .HasMany(x => x.Trinn)
                 .WithOne(x => x.Miljovariabel)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Trinn>()
+                .HasMany(x => x.Basistrinn)
+                .WithOne(x => x.Trinn)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Basistrinn>()
+                .HasOne(x => x.Kode)
+                .WithOne(x => x.Basistrinn)
                 .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);

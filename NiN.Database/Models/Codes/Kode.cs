@@ -69,4 +69,30 @@
             Kategori = KategoriEnum.Grunntype;
         }
     }
+
+    public class TrinnKode : Kode
+    {
+        public int TrinnId { get; set; }
+
+        [ForeignKey(nameof(TrinnId))]
+        public virtual Trinn Trinn { get; set; }
+
+        public TrinnKode()
+        {
+            Kategori = KategoriEnum.Trinn;
+        }
+    }
+
+    public class BasistrinnKode : Kode
+    {
+        public int BasistrinnId { get; set; }
+
+        [ForeignKey(nameof(BasistrinnId))]
+        public virtual Basistrinn Basistrinn { get; set; }
+
+        public BasistrinnKode()
+        {
+            Kategori = KategoriEnum.Basistrinn;
+        }
+    }
 }

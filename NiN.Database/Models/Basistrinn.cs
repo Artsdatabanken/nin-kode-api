@@ -3,17 +3,10 @@
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Models.Codes;
 
-    public class Basistrinn
+    public class Basistrinn : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
+        public virtual Trinn Trinn { get; set; }
 
-        [StringLength(255)]
-        public string Navn { get; set; }
-
-        [StringLength(255)]
-        public string Kode { get; set; }
-
-        public virtual LKMKode LKMKode { get; set; }
+        public virtual BasistrinnKode Kode { get; set; }
     }
 }

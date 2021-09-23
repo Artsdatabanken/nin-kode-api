@@ -121,9 +121,9 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     KodeId = table.Column<int>(type: "int", nullable: true),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true)
+                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -143,6 +143,46 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Trinn",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MiljovariabelId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Trinn", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Trinn_Miljovariabel_MiljovariabelId",
+                        column: x => x.MiljovariabelId,
+                        principalTable: "Miljovariabel",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Basistrinn",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TrinnId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Basistrinn", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Basistrinn_Trinn_TrinnId",
+                        column: x => x.TrinnId,
+                        principalTable: "Trinn",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Kode",
                 columns: table => new
                 {
@@ -152,14 +192,22 @@ namespace NiN.Database.Migrations
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     Kategori = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BasistrinnId = table.Column<int>(type: "int", nullable: true),
                     GrunntypeId = table.Column<int>(type: "int", nullable: true),
                     HovedtypeId = table.Column<int>(type: "int", nullable: true),
                     HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
-                    NatursystemId = table.Column<int>(type: "int", nullable: true)
+                    NatursystemId = table.Column<int>(type: "int", nullable: true),
+                    TrinnId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kode", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Kode_Basistrinn_BasistrinnId",
+                        column: x => x.BasistrinnId,
+                        principalTable: "Basistrinn",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Kode_Grunntype_GrunntypeId",
                         column: x => x.GrunntypeId,
@@ -184,34 +232,18 @@ namespace NiN.Database.Migrations
                         principalTable: "Natursystem",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Trinn",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    KodeId = table.Column<int>(type: "int", nullable: true),
-                    MiljovariabelId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Trinn", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Trinn_LKMKode_KodeId",
-                        column: x => x.KodeId,
-                        principalTable: "LKMKode",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Trinn_Miljovariabel_MiljovariabelId",
-                        column: x => x.MiljovariabelId,
-                        principalTable: "Miljovariabel",
+                        name: "FK_Kode_Trinn_TrinnId",
+                        column: x => x.TrinnId,
+                        principalTable: "Trinn",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Basistrinn_TrinnId",
+                table: "Basistrinn",
+                column: "TrinnId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Grunntype_HovedtypeId",
@@ -232,6 +264,13 @@ namespace NiN.Database.Migrations
                 name: "IX_Kartleggingsenhet_HovedtypeId",
                 table: "Kartleggingsenhet",
                 column: "HovedtypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Kode_BasistrinnId",
+                table: "Kode",
+                column: "BasistrinnId",
+                unique: true,
+                filter: "[BasistrinnId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Kode_GrunntypeId",
@@ -262,6 +301,13 @@ namespace NiN.Database.Migrations
                 filter: "[NatursystemId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Kode_TrinnId",
+                table: "Kode",
+                column: "TrinnId",
+                unique: true,
+                filter: "[TrinnId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Miljovariabel_HovedtypeId",
                 table: "Miljovariabel",
                 column: "HovedtypeId");
@@ -269,11 +315,6 @@ namespace NiN.Database.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Miljovariabel_KodeId",
                 table: "Miljovariabel",
-                column: "KodeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Trinn_KodeId",
-                table: "Trinn",
                 column: "KodeId");
 
             migrationBuilder.CreateIndex(
@@ -291,10 +332,13 @@ namespace NiN.Database.Migrations
                 name: "Kode");
 
             migrationBuilder.DropTable(
-                name: "Trinn");
+                name: "Basistrinn");
 
             migrationBuilder.DropTable(
                 name: "Grunntype");
+
+            migrationBuilder.DropTable(
+                name: "Trinn");
 
             migrationBuilder.DropTable(
                 name: "Miljovariabel");

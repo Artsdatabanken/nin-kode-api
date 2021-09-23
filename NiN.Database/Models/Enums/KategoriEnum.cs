@@ -5,6 +5,9 @@
         Naturmangfoldnivå,
         Hovedtypegruppe,
         Hovedtype,
-        Grunntype
+        Grunntype,
+        Miljøvariabel,
+        Trinn,
+        Basistrinn
     }
 }

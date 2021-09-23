@@ -1,18 +1,19 @@
 ﻿namespace NiN.Database.Models
 {
-    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
     using NiN.Database.Models.Codes;
 
-    public class Trinn
+    public class Trinn : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
+        public Trinn()
+        {
+            Basistrinn = new List<Basistrinn>();
+        }
 
-        [StringLength(255)]
-        public string Navn { get; set; }
-        
-        public virtual LKMKode Kode { get; set; }
-        
+        public virtual TrinnKode Kode { get; set; }
+
         public virtual Miljovariabel Miljovariabel { get; set; }
+
+        public virtual ICollection<Basistrinn> Basistrinn { get; set; }
     }
 }

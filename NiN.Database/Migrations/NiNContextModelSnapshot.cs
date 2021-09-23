@@ -19,6 +19,27 @@ namespace NiN.Database.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("NiN.Database.Models.Basistrinn", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Navn")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int?>("TrinnId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TrinnId");
+
+                    b.ToTable("Basistrinn");
+                });
+
             modelBuilder.Entity("NiN.Database.Models.Codes.Kode", b =>
                 {
                     b.Property<int>("Id")
@@ -206,9 +227,6 @@ namespace NiN.Database.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("KodeId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("MiljovariabelId")
                         .HasColumnType("int");
 
@@ -218,11 +236,23 @@ namespace NiN.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("KodeId");
-
                     b.HasIndex("MiljovariabelId");
 
                     b.ToTable("Trinn");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.BasistrinnKode", b =>
+                {
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
+
+                    b.Property<int>("BasistrinnId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("BasistrinnId")
+                        .IsUnique()
+                        .HasFilter("[BasistrinnId] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("BasistrinnKode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Codes.GrunntypeKode", b =>
@@ -279,6 +309,29 @@ namespace NiN.Database.Migrations
                         .HasFilter("[NatursystemId] IS NOT NULL");
 
                     b.HasDiscriminator().HasValue("NatursystemKode");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.TrinnKode", b =>
+                {
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
+
+                    b.Property<int>("TrinnId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("TrinnId")
+                        .IsUnique()
+                        .HasFilter("[TrinnId] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("TrinnKode");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Basistrinn", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Trinn", "Trinn")
+                        .WithMany("Basistrinn")
+                        .HasForeignKey("TrinnId");
+
+                    b.Navigation("Trinn");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
@@ -339,18 +392,23 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Trinn", b =>
                 {
-                    b.HasOne("NiN.Database.Models.Codes.LKMKode", "Kode")
-                        .WithMany()
-                        .HasForeignKey("KodeId");
-
                     b.HasOne("NiN.Database.Models.Miljovariabel", "Miljovariabel")
                         .WithMany("Trinn")
                         .HasForeignKey("MiljovariabelId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.Navigation("Kode");
-
                     b.Navigation("Miljovariabel");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.BasistrinnKode", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Basistrinn", "Basistrinn")
+                        .WithOne("Kode")
+                        .HasForeignKey("NiN.Database.Models.Codes.BasistrinnKode", "BasistrinnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basistrinn");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Codes.GrunntypeKode", b =>
@@ -397,6 +455,22 @@ namespace NiN.Database.Migrations
                     b.Navigation("Natursystem");
                 });
 
+            modelBuilder.Entity("NiN.Database.Models.Codes.TrinnKode", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Trinn", "Trinn")
+                        .WithOne("Kode")
+                        .HasForeignKey("NiN.Database.Models.Codes.TrinnKode", "TrinnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Trinn");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Basistrinn", b =>
+                {
+                    b.Navigation("Kode");
+                });
+
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
                 {
                     b.Navigation("Kode");
@@ -432,6 +506,13 @@ namespace NiN.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("UnderordnetKoder");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Trinn", b =>
+                {
+                    b.Navigation("Basistrinn");
+
+                    b.Navigation("Kode");
                 });
 #pragma warning restore 612, 618
         }

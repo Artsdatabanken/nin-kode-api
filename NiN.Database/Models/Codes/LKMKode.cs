@@ -10,6 +10,7 @@
         [Key]
         public int Id { get; set; }
 
+        [StringLength(10)]
         public string Kode { get; set; }
 
         public LkmKategoriEnum LkmKategori { get; set; }

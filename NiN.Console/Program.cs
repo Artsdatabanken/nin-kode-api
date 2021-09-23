@@ -5,7 +5,9 @@
     using System.Diagnostics;
     using System.Linq;
     using System.Text.Json;
+    using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Internal;
     using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NiN.Database.Converters;
@@ -228,9 +230,28 @@
                                         {
                                             var trinn = new Trinn
                                             {
-                                                Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
+                                                //Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
+                                                Navn = t.Navn,
+                                                Kode = new TrinnKode
+                                                {
+                                                    KodeName = t.Kode,
+                                                    Kategori = KategoriEnum.Trinn
+                                                }
                                             };
+                                            foreach (var b in t.Basistrinn.Split(","))
+                                            {
+                                                trinn.Basistrinn.Add(new Basistrinn
+                                                {
+                                                    Navn = b,
+                                                    Kode = new BasistrinnKode
+                                                    {
+                                                        KodeName = b,
+                                                        Kategori = KategoriEnum.Basistrinn
+                                                    }
+                                                });
+                                            }
                                             miljovariabel.Trinn.Add(trinn);
+                                            totalCount++;
                                         }
 
                                         context.Miljovariabel.Add(miljovariabel);
@@ -301,12 +322,17 @@
                         .Include(x => x.UnderordnetKoder)
                         .FirstOrDefault();
 
+            if (natursystem == null) return;
+
             foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
             {
                 var ht = context.Hovedtypegruppe
                     .Include(x => x.Kode)
                     .Include(x => x.UnderordnetKoder)
                     .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
+
+                if (ht == null) continue;
+
                 foreach (var hovedtype in ht.UnderordnetKoder)
                 {
                     var h = context.Hovedtype
@@ -315,7 +341,40 @@
                         .Include(x => x.Miljovariabler)
                         .Include(x => x.UnderordnetKoder)
                         .FirstOrDefault(x => x.Id == hovedtype.Id);
-                    
+
+                    if (h == null) continue;
+
+                    foreach (var miljovariabel in h.Miljovariabler)
+                    {
+                        var m = context.Miljovariabel
+                            .Include(x => x.Kode)
+                            .Include(x => x.Trinn)
+                            .FirstOrDefault(x => x.Id == miljovariabel.Id);
+
+                        if (m == null) continue;
+
+                        foreach (var trinn in m.Trinn)
+                        {
+                            var t = context.Trinn
+                                .Include(x => x.Kode)
+                                .Include(x => x.Basistrinn)
+                                .FirstOrDefault(x => x.Id == trinn.Id);
+
+                            if (t == null) continue;
+
+                            totalCount += t.Basistrinn.Count;
+
+                            totalCount++;
+                            context.Trinn.Remove(t);
+                        }
+
+                        totalCount++;
+                        context.LKMKode.Remove(m.Kode);
+
+                        totalCount++;
+                        context.Miljovariabel.Remove(m);
+                    }
+
                     totalCount += h.Kartleggingsenheter.Count;
                     totalCount += h.Miljovariabler.Count;
                     totalCount += h.UnderordnetKoder.Count;
@@ -323,13 +382,13 @@
                     totalCount++;
                     context.Hovedtype.Remove(h);
                 }
-
-                totalCount++;
-                context.Hovedtypegruppe.Remove(ht);
             }
 
-            totalCount++;
-            context.Natursystem.Remove(natursystem);
+            totalCount += context.Hovedtypegruppe.Count();
+            context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
+
+            totalCount += context.Natursystem.Count();
+            context.Natursystem.RemoveRange(context.Natursystem);
             _stopwatch.Stop();
             Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             _stopwatch.Reset();
@@ -338,6 +397,24 @@
             Console.WriteLine($"Removed {totalCount} items");
             _stopwatch.Stop();
             Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+
+            ResetCounters(context);
+        }
+
+        private static void ResetCounters(NiNContext context)
+        {
+            if (!context.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
+            
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Hovedtypegruppe)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Hovedtype)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Grunntype)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Kartleggingsenhet)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Miljovariabel)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Kode)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(LKMKode)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Trinn)).GetTableName()}', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('{context.Model.FindEntityType(typeof(Basistrinn)).GetTableName()}', RESEED, 0)");
         }
 
         private static Natursystem GenerateNatursystem()
