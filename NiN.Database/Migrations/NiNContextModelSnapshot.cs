@@ -59,8 +59,8 @@ namespace NiN.Database.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("KodeName")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.HasKey("Id");
 
@@ -77,7 +77,8 @@ namespace NiN.Database.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Kode")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<int>("LkmKategori")
                         .HasColumnType("int");
@@ -163,10 +164,6 @@ namespace NiN.Database.Migrations
 
                     b.Property<int?>("HovedtypeId")
                         .HasColumnType("int");
-
-                    b.Property<string>("KodeId")
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
 
                     b.Property<int>("Malestokk")
                         .HasColumnType("int");
@@ -297,6 +294,20 @@ namespace NiN.Database.Migrations
                     b.HasDiscriminator().HasValue("HovedtypegruppeKode");
                 });
 
+            modelBuilder.Entity("NiN.Database.Models.Codes.KartleggingsenhetKode", b =>
+                {
+                    b.HasBaseType("NiN.Database.Models.Codes.Kode");
+
+                    b.Property<int>("KartleggingsenhetId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("KartleggingsenhetId")
+                        .IsUnique()
+                        .HasFilter("[KartleggingsenhetId] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("KartleggingsenhetKode");
+                });
+
             modelBuilder.Entity("NiN.Database.Models.Codes.NatursystemKode", b =>
                 {
                     b.HasBaseType("NiN.Database.Models.Codes.Kode");
@@ -329,7 +340,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasOne("NiN.Database.Models.Trinn", "Trinn")
                         .WithMany("Basistrinn")
-                        .HasForeignKey("TrinnId");
+                        .HasForeignKey("TrinnId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Trinn");
                 });
@@ -444,6 +456,17 @@ namespace NiN.Database.Migrations
                     b.Navigation("Hovedtypegruppe");
                 });
 
+            modelBuilder.Entity("NiN.Database.Models.Codes.KartleggingsenhetKode", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Kartleggingsenhet", "Kartleggingsenhet")
+                        .WithOne("Kode")
+                        .HasForeignKey("NiN.Database.Models.Codes.KartleggingsenhetKode", "KartleggingsenhetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kartleggingsenhet");
+                });
+
             modelBuilder.Entity("NiN.Database.Models.Codes.NatursystemKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Natursystem", "Natursystem")
@@ -460,7 +483,7 @@ namespace NiN.Database.Migrations
                     b.HasOne("NiN.Database.Models.Trinn", "Trinn")
                         .WithOne("Kode")
                         .HasForeignKey("NiN.Database.Models.Codes.TrinnKode", "TrinnId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Trinn");
@@ -493,6 +516,11 @@ namespace NiN.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("UnderordnetKoder");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Kartleggingsenhet", b =>
+                {
+                    b.Navigation("Kode");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Miljovariabel", b =>

@@ -2,8 +2,16 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
+    using System.Security.Cryptography.X509Certificates;
+    using System.Text.RegularExpressions;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
+    using NiN.Database;
+    using NiN.Database.Converters;
+    using NiN.Database.Models;
+    using NiN.Database.Models.Enums;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
@@ -11,219 +19,317 @@
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
+    using Hovedtype = NiN.Database.Models.Hovedtype;
 
     public class CodeV23Service : ICodeV23Service
     {
-        private const string IndexName = "NaturTypes/ByKode";
-        private const string RavenDbKeyName = "RavenDbNameV22";
-        private const string RavenDbKeyUrl = "RavenDbUrl";
+        private const string DbConnString = "NiNConnectionStringV23";
 
         private readonly DocumentStore _store;
 
+        private readonly NiNContext _context;
+
         public CodeV23Service(IConfiguration configuration)
         {
-            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.3");
-            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+            var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiN_v23_test;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
 
-            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
-            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+            if (string.IsNullOrWhiteSpace(connectionString)) throw new Exception($"Missing \"{DbConnString}\"");
 
-            _store = new DocumentStore
-            {
-                DefaultDatabase = dbName,
-                Url = dbUrl
-            };
-            _store.Initialize(true);
-
-            var index = _store.DatabaseCommands.GetIndex(IndexName);
-
-            if (index != null) return;
-
-            _store.DatabaseCommands.PutIndex(IndexName,
-                new IndexDefinition
-                {
-                    Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
-                }
-            );
+            _context = new NiNContext(connectionString);
         }
 
         public IEnumerable<Codes> GetAll(string host)
         {
             var list = new List<Codes>();
 
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<NaturTypeV22>(IndexName);
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        list.Add(CreateCodesByNaturtype(enumerator.Current?.Document, $"{host}hentkode/"));
-                    }
-                }
-            }
-
-            list.Sort(new CodesComparer());
-
             return list;
         }
 
         public Codes GetByKode(string id, string host)
         {
+            Codes code = null;
+
             if (string.IsNullOrEmpty(id)) return null;
 
             id = id.Replace("_", " ");
 
-            using (var session = _store.OpenSession())
+            var kode = _context.Kode.FirstOrDefault(x => x.KodeName.Equals(id));
+
+            if (kode == null) return null;
+
+            switch (kode.Kategori)
             {
-                var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
+                case KategoriEnum.Naturmangfoldnivå:
+                    var natursystem = _context.Natursystem
+                        .Include(x => x.Kode)
+                        .Include(x => x.UnderordnetKoder)
+                        .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                    if (natursystem == null) return null;
+
+                    code = new Codes
                     {
-                        return CreateCodesByNaturtype(enumerator.Current?.Document, host);
+                        Navn = natursystem.Navn,
+                        Kategori = NinEnumConverter.GetValue<KategoriEnum>(natursystem.Kode.Kategori),
+                        Kode = ConvertNinKode2Code(natursystem.Kode, host)
+                    };
+
+                    if (natursystem.UnderordnetKoder.Any())
+                    {
+                        code.UnderordnetKoder = CreateUnderordnetKoder(natursystem.UnderordnetKoder, host);
                     }
-                }
+
+                    break;
+
+                case KategoriEnum.Hovedtypegruppe:
+                    var hovedtypegruppe = _context.Hovedtypegruppe
+                        .Include(x => x.Natursystem)
+                        .Include(x => x.Natursystem.Kode)
+                        .Include(x => x.Kode)
+                        .Include(x => x.UnderordnetKoder)
+                        .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                    if (hovedtypegruppe == null) break;
+
+                    code = new Codes
+                    {
+                        Navn = hovedtypegruppe.Navn,
+                        Kategori = hovedtypegruppe.Kategori,
+                        Kode = ConvertNinKode2Code(hovedtypegruppe.Kode, host),
+                        OverordnetKode = ConvertNinKode2Code(hovedtypegruppe.Natursystem.Kode, host)
+                    };
+
+                    if (hovedtypegruppe.UnderordnetKoder.Any())
+                    {
+                        code.UnderordnetKoder = CreateUnderordnetKoder(hovedtypegruppe.UnderordnetKoder, host);
+                    }
+
+                    break;
+
+                case KategoriEnum.Hovedtype:
+                    var hovedtype = _context.Hovedtype
+                        .Include(x => x.Hovedtypegruppe)
+                        .Include(x => x.Hovedtypegruppe.Kode)
+                        .Include(x => x.UnderordnetKoder)
+                        .Include(x => x.Kartleggingsenheter)
+                        .Include(x => x.Miljovariabler)
+                        .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                    if (hovedtype == null) break;
+
+                    code = new Codes
+                    {
+                        Navn = hovedtype.Navn,
+                        Kategori = hovedtype.Kategori,
+                        Kode = ConvertNinKode2Code(hovedtype.Kode, host),
+                        OverordnetKode = ConvertNinKode2Code(hovedtype.Hovedtypegruppe.Kode, host)
+                    };
+
+                    if (hovedtype.UnderordnetKoder.Any())
+                    {
+                        code.UnderordnetKoder = CreateUnderordnetKoder(hovedtype.UnderordnetKoder, host);
+                    }
+
+                    if (hovedtype.Kartleggingsenheter.Any())
+                    {
+                        code.Kartleggingsenheter = CreateKartleggingsenheter(hovedtype.Kartleggingsenheter, host);
+                    }
+
+                    if (hovedtype.Miljovariabler.Any())
+                    {
+                        code.Miljovariabler = CreateMiljovariabler(hovedtype.Miljovariabler, host);
+                    }
+                    
+                    break;
+
+                case KategoriEnum.Grunntype:
+                    var grunntype = _context.Grunntype
+                        .Include(x => x.Hovedtype)
+                        .Include(x => x.Hovedtype.Kode)
+                        .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                    if (grunntype == null) break;
+
+                    code = new Codes
+                    {
+                        Navn = grunntype.Navn,
+                        Kategori = grunntype.Kategori,
+                        Kode = ConvertNinKode2Code(grunntype.Kode, host),
+                        OverordnetKode = ConvertNinKode2Code(grunntype.Hovedtype.Kode, host)
+                    };
+
+                    break;
+
+                case KategoriEnum.Kartleggingsenhet:
+                    var kartlegging = _context.Kartleggingsenhet
+                        .Include(x => x.Hovedtype)
+                        .Include(x => x.Hovedtype.Kode)
+                        .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                    if (kartlegging == null) break;
+
+                    code = new Codes
+                    {
+                        Navn = kartlegging.Definisjon,
+                        Kategori = NinEnumConverter.GetValue<KategoriEnum>(kartlegging.Kode.Kategori),
+                        Kode = ConvertNinKode2Code(kartlegging.Kode, host),
+                        OverordnetKode = ConvertNinKode2Code(kartlegging.Hovedtype.Kode, host)
+                    };
+
+                    break;
             }
 
-            return null;
-        }
-
-        public Codes GetCode(string id)
-        {
-            if (string.IsNullOrEmpty(id)) return null;
-
-            id = id.Replace("_", " ");
-
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        return CreateCodeByNaturtype(enumerator.Current?.Document);
-                    }
-                }
-            }
-
-            return null;
+            return code;
         }
 
         #region private methods
 
-        private static Codes CreateCodeByNaturtype(NaturTypeV22 naturType)
+        private static AllCodesCode ConvertNinKode2Code(NiN.Database.Models.Codes.Kode ninKode, string host)
         {
-            if (naturType == null) return null;
-
-            return new Codes
+            return new AllCodesCode
             {
-                Navn = naturType.Navn,
-                Kategori = naturType.Kategori,
-                Kode = new AllCodesCode
-                {
-                    Id = naturType.Kode,
-                    //Definition = $"{naturType.Kode.Replace(" ", "_")}"
-                    Definition = $"{RemoveNaFromKode(naturType.Kode)}"
-                },
-                ElementKode = naturType.ElementKode,
-                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, "").ToArray(),
-                Kartleggingsenheter = naturType.Kartleggingsenheter == null ? null : CreateKartleggingsenheter(naturType.Kartleggingsenheter, ""),
-                Miljovariabler = naturType.Trinn == null ? null : CreateTrinn(naturType.Trinn).ToArray()
+                Id = ninKode.KodeName,
+                Definition = $"{host}{ninKode.KodeName.Replace(" ", "_")}"
             };
         }
 
-        private static string RemoveNaFromKode(string kode)
+        private EnvironmentVariable[] CreateMiljovariabler(ICollection<Miljovariabel> entities, string host)
         {
-            if (!kode.StartsWith("NA ")) return kode;
+            var variables = new List<EnvironmentVariable>();
 
-            return kode.Substring("NA ".Length);
-        }
-
-        private static Codes CreateCodesByNaturtype(NaturTypeV22 naturType, string host)
-        {
-            if (naturType == null) return null;
-
-            return new Codes
+            foreach (var m in entities)
             {
-                Navn = naturType.Navn,
-                Kategori = naturType.Kategori,
-                Kode = new AllCodesCode
+                var miljovariabel = _context.Miljovariabel
+                    .Include(x => x.Kode)
+                    .Include(x => x.Trinn)
+                    .FirstOrDefault(x => x.Id == m.Id);
+
+                if (miljovariabel == null) continue;
+
+                variables.Add(new EnvironmentVariable
                 {
-                    Id = naturType.Kode,
-                    Definition = $"{host}{naturType.Kode.Replace(" ", "_")}"
-                },
-                ElementKode = naturType.ElementKode,
-                OverordnetKode = new AllCodesCode
-                {
-                    Id = naturType.OverordnetKode,
-                    Definition = !string.IsNullOrEmpty(naturType.OverordnetKode) ? $"{host}{naturType.OverordnetKode.Replace(" ", "_")}" : ""
-                },
-                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, host).ToArray(),
-                Kartleggingsenheter = naturType.Kartleggingsenheter == null ? null : CreateKartleggingsenheter(naturType.Kartleggingsenheter, host),
-                Miljovariabler = naturType.Trinn == null ? null : CreateTrinn(naturType.Trinn).ToArray()
-            };
-        }
-
-        private static IEnumerable<AllCodesCode> CreateCodesByNaturtype(string[] koder, string host)
-        {
-            if (koder == null) yield break;
-
-            var codeList = new List<string>();
-            codeList.AddRange(koder);
-
-            foreach (var code in codeList.OrderByList<string>())
-            {
-                yield return new AllCodesCode
-                {
-                    Id = code,
-                    Definition = $"{host}{code.Replace(" ", "_")}"
-                };
-            }
-        }
-
-        private static Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(IDictionary<string, string[]> kartleggingsenheter, string host)
-        {
-            if (kartleggingsenheter == null) return null;
-
-            var result = new Dictionary<string, AllCodesCode[]>();
-
-            foreach (var kartlegging in kartleggingsenheter)
-            {
-                result.Add(kartlegging.Key, CreateCodesByNaturtype(kartlegging.Value, host).ToArray());
+                    Kode = miljovariabel.Kode.Kode,
+                    LKMKategori = miljovariabel.LkmKategori,
+                    Navn = miljovariabel.Navn,
+                    Type = miljovariabel.Type,
+                    Trinn = CreateTrinn(miljovariabel.Trinn)
+                });
             }
 
-            return result;
+            return variables.ToArray();
         }
 
-        private static IEnumerable<EnvironmentVariable> CreateTrinn(IEnumerable<TrinnV22> naturTypeTrinn)
+        private Step[] CreateTrinn(ICollection<Trinn> entities)
         {
-            var list = naturTypeTrinn.Select(x => new EnvironmentVariable
-            {
-                Kode = x.Kode,
-                Navn = x.Navn,
-                Type = x.Type,
-                LKMKategori = x.LKMKategori,
-                Trinn = x.Trinn == null ? null : CreateTrinn(x.Trinn).ToArray()
-            }).ToList();
+            var steps = new List<Step>();
 
-            list.Sort(new EnvironmentComparer());
-            
-            return list;
+            foreach (var t in entities)
+            {
+                var trinn = _context.Trinn
+                    .Include(x => x.Kode)
+                    .Include(x => x.Basistrinn)
+                    .FirstOrDefault(x => x.Id == t.Id);
+
+                if (trinn == null) continue;
+
+                var trinns = "";
+                foreach (var basistrinn in trinn.Basistrinn.OrderBy(x => x.Navn))
+                {
+                    var separator = trinns.Length > 0 ? "," : "";
+                    trinns += $"{separator}{basistrinn.Navn}";
+                }
+
+                steps.Add(new Step
+                {
+                    Navn = trinn.Navn,
+                    Kode = trinn.Kode.KodeName,
+                    Basistrinn = trinns
+                });
+            }
+
+            return steps.OrderBy(x => x.Kode).ToArray();
         }
 
-        private static IEnumerable<Step> CreateTrinn(IEnumerable<SubTrinnV22> naturTypeTrinn)
+        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(ICollection<Kartleggingsenhet> entities, string host)
         {
-            var list = naturTypeTrinn.Select(x => new Step
+            var codes = new Dictionary<int, IList<AllCodesCode>>();
+            foreach (var k in entities)
             {
-                Kode = x.Kode,
-                Navn = x.Navn,
-                Basistrinn = x.Basistrinn
-            }).ToList();
+                var kartleggingsenhet = _context.Kartleggingsenhet
+                    .Include(x => x.Kode)
+                    .FirstOrDefault(x => x.Id == k.Id);
 
-            list.Sort(new StepComparer());
+                if (kartleggingsenhet == null) continue;
 
-            return list;
+                var enumValue = NinEnumConverter.GetValue<MalestokkEnum>(kartleggingsenhet.Malestokk);
+                var scale = int.Parse(Regex.Match(enumValue, @"\d+").Value, NumberFormatInfo.InvariantInfo);
+                if (!codes.ContainsKey(scale)) codes.Add(scale, new List<AllCodesCode>());
+
+                codes[scale].Add(ConvertNinKode2Code(kartleggingsenhet.Kode, host));
+            }
+
+            return codes.ToDictionary(code => code.Key.ToString(), code => CreateOrderedList(code.Value));
+        }
+
+        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Hovedtypegruppe> entities, string host)
+        {
+            var codes = new List<AllCodesCode>();
+
+            foreach (var g in entities)
+            {
+                var gu = _context.Grunntype
+                    .Include(x => x.Kode)
+                    .FirstOrDefault(x => x.Id == g.Id);
+
+                if (gu == null) continue;
+
+                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+            }
+
+            return CreateOrderedList(codes);
+        }
+
+        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Grunntype> entities, string host)
+        {
+            var codes = new List<AllCodesCode>();
+
+            foreach (var g in entities)
+            {
+                var gu = _context.Grunntype
+                    .Include(x => x.Kode)
+                    .FirstOrDefault(x => x.Id == g.Id);
+
+                if (gu == null) continue;
+
+                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+            }
+
+            return CreateOrderedList(codes);
+        }
+
+        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Hovedtype> entities, string host)
+        {
+            var codes = new List<AllCodesCode>();
+
+            foreach (var g in entities)
+            {
+                var gu = _context.Grunntype
+                    .Include(x => x.Kode)
+                    .FirstOrDefault(x => x.Id == g.Id);
+
+                if (gu == null) continue;
+
+                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+            }
+
+            return CreateOrderedList(codes);
+        }
+
+        private static AllCodesCode[] CreateOrderedList(IList<AllCodesCode> codes)
+        {
+            var sortedCodes = codes.ToList();
+            sortedCodes.Sort(new AllCodesCodeComparer());
+            return sortedCodes.ToArray();
         }
 
         #endregion

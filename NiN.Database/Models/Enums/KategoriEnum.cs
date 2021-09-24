@@ -6,6 +6,7 @@
         Hovedtypegruppe,
         Hovedtype,
         Grunntype,
+        Kartleggingsenhet,
         Miljøvariabel,
         Trinn,
         Basistrinn

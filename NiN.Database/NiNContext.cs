@@ -1,6 +1,7 @@
 ﻿namespace NiN.Database
 {
     using System;
+    using System.Security.Cryptography.X509Certificates;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using NiN.Database.Models;
@@ -26,6 +27,11 @@
         {
             DbName = "NiN_v23_test";
             ConnectionString = $"data source=localhost;initial catalog={DbName};Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
+        }
+
+        public NiNContext(string connectionString)
+        {
+            ConnectionString = connectionString;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -81,10 +87,16 @@
                 .WithOne(x => x.Trinn)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Trinn>()
+                .HasOne(x => x.Kode)
+                .WithOne(x => x.Trinn)
+                .OnDelete(DeleteBehavior.NoAction);
+
             modelBuilder.Entity<Basistrinn>()
                 .HasOne(x => x.Kode)
                 .WithOne(x => x.Basistrinn)
                 .OnDelete(DeleteBehavior.Cascade);
+
 
             base.OnModelCreating(modelBuilder);
         }

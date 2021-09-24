@@ -9,7 +9,7 @@
         [Key]
         public int Id { get; set; }
         
-        [StringLength(10)]
+        [StringLength(25)]
         public string KodeName { get; set; }
         
         [StringLength(1000)]
@@ -67,6 +67,19 @@
         public GrunntypeKode()
         {
             Kategori = KategoriEnum.Grunntype;
+        }
+    }
+
+    public class KartleggingsenhetKode : Kode
+    {
+        public int KartleggingsenhetId { get; set; }
+
+        [ForeignKey(nameof(KartleggingsenhetId))]
+        public virtual Kartleggingsenhet Kartleggingsenhet { get; set; }
+
+        public KartleggingsenhetKode()
+        {
+            Kategori = KategoriEnum.Kartleggingsenhet;
         }
     }
 

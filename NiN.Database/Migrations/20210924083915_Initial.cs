@@ -12,7 +12,7 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Kode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Kode = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
                     LkmKategori = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -100,7 +100,6 @@ namespace NiN.Database.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Malestokk = table.Column<int>(type: "int", nullable: false),
-                    KodeId = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     HovedtypeId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -179,7 +178,7 @@ namespace NiN.Database.Migrations
                         column: x => x.TrinnId,
                         principalTable: "Trinn",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -188,7 +187,7 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    KodeName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    KodeName = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     Kategori = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -196,6 +195,7 @@ namespace NiN.Database.Migrations
                     GrunntypeId = table.Column<int>(type: "int", nullable: true),
                     HovedtypeId = table.Column<int>(type: "int", nullable: true),
                     HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
+                    KartleggingsenhetId = table.Column<int>(type: "int", nullable: true),
                     NatursystemId = table.Column<int>(type: "int", nullable: true),
                     TrinnId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -227,6 +227,12 @@ namespace NiN.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_Kode_Kartleggingsenhet_KartleggingsenhetId",
+                        column: x => x.KartleggingsenhetId,
+                        principalTable: "Kartleggingsenhet",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Kode_Natursystem_NatursystemId",
                         column: x => x.NatursystemId,
                         principalTable: "Natursystem",
@@ -236,8 +242,7 @@ namespace NiN.Database.Migrations
                         name: "FK_Kode_Trinn_TrinnId",
                         column: x => x.TrinnId,
                         principalTable: "Trinn",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -294,6 +299,13 @@ namespace NiN.Database.Migrations
                 filter: "[HovedtypeId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Kode_KartleggingsenhetId",
+                table: "Kode",
+                column: "KartleggingsenhetId",
+                unique: true,
+                filter: "[KartleggingsenhetId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Kode_NatursystemId",
                 table: "Kode",
                 column: "NatursystemId",
@@ -326,9 +338,6 @@ namespace NiN.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Kartleggingsenhet");
-
-            migrationBuilder.DropTable(
                 name: "Kode");
 
             migrationBuilder.DropTable(
@@ -336,6 +345,9 @@ namespace NiN.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "Grunntype");
+
+            migrationBuilder.DropTable(
+                name: "Kartleggingsenhet");
 
             migrationBuilder.DropTable(
                 name: "Trinn");

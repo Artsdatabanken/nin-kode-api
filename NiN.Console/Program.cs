@@ -35,6 +35,8 @@
                 .GetCode("NA");
             //Console.WriteLine(JsonSerializer.Serialize(na, options));
 
+            RemoveAll();
+
             using (var context = new NiNContext())
             {
                 var natursystem = context.Natursystem.FirstOrDefault();
@@ -52,11 +54,6 @@
                     };
                     context.Natursystem.Add(natursystem);
                     totalCount++;
-                }
-                else
-                {
-                    RemoveAll(context);
-                    return;
                 }
 
                 foreach (var htgrp in na.UnderordnetKoder)
@@ -161,16 +158,21 @@
                                     if (context.Kartleggingsenhet.Any())
                                     {
                                         kartleggingsenhet = context.Kartleggingsenhet
-                                            .FirstOrDefault(x => x.KodeId.Equals(krt.ElementKode));
+                                            .FirstOrDefault(x => x.Kode.Id.Equals(krt.ElementKode));
                                     }
 
                                     if (kartleggingsenhet == null)
                                     {
                                         kartleggingsenhet = new Kartleggingsenhet
                                         {
-                                            Hovedtype = hovedtype,
+                                            //Hovedtype = hovedtype,
                                             Definisjon = krt.Navn,
-                                            KodeId = krt.Kode.Definition
+                                            //KodeId = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {krt.Kode.Definition}"
+                                            Kode = new KartleggingsenhetKode
+                                            {
+                                                KodeName = $"{krt.Kode.Id}",
+                                                Definisjon = krt.Kode.Definition
+                                            }
                                         };
                                         switch (Convert.ToInt32(k.Key))
                                         {
@@ -188,13 +190,14 @@
                                                 break;
                                         }
 
-                                        context.Kartleggingsenhet.Add(kartleggingsenhet);
+                                        //context.Kartleggingsenhet.Add(kartleggingsenhet);
+                                        hovedtype.Kartleggingsenheter.Add(kartleggingsenhet);
                                         totalCount++;
                                     }
                                     else
                                     {
                                         kartleggingsenhet.Definisjon = krt.Navn;
-                                        kartleggingsenhet.KodeId = krt.Kode.Definition;
+                                        //kartleggingsenhet.KodeId = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {krt.Kode.Definition}";
                                         context.Kartleggingsenhet.Update(kartleggingsenhet);
                                         updateCount++;
                                     }
@@ -221,7 +224,7 @@
                                             Hovedtype = hovedtype,
                                             Kode = new LKMKode
                                             {
-                                                Kode = m.Kode,
+                                                Kode = $"{m.Kode}",
                                                 LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value
                                             },
                                             Navn = m.Navn
@@ -234,7 +237,8 @@
                                                 Navn = t.Navn,
                                                 Kode = new TrinnKode
                                                 {
-                                                    KodeName = t.Kode,
+                                                    //KodeName = t.Kode,
+                                                    KodeName = $"{t.Kode}",
                                                     Kategori = KategoriEnum.Trinn
                                                 }
                                             };
@@ -245,7 +249,8 @@
                                                     Navn = b,
                                                     Kode = new BasistrinnKode
                                                     {
-                                                        KodeName = b,
+                                                        //KodeName = b,
+                                                        KodeName = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
                                                         Kategori = KategoriEnum.Basistrinn
                                                     }
                                                 });
@@ -313,92 +318,106 @@
             //}
         }
 
-        private static void RemoveAll(NiNContext context)
+        private static void RemoveAll()
         {
-            var totalCount = 0;
-
-            var natursystem = context.Natursystem
-                        .Include(x => x.Kode)
-                        .Include(x => x.UnderordnetKoder)
-                        .FirstOrDefault();
-
-            if (natursystem == null) return;
-
-            foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
+            using (var context = new NiNContext())
             {
-                var ht = context.Hovedtypegruppe
+                var totalCount = 0;
+
+                var natursystem = context.Natursystem
                     .Include(x => x.Kode)
                     .Include(x => x.UnderordnetKoder)
-                    .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
+                    .FirstOrDefault();
 
-                if (ht == null) continue;
+                if (natursystem == null) return;
 
-                foreach (var hovedtype in ht.UnderordnetKoder)
+                foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
                 {
-                    var h = context.Hovedtype
+                    var ht = context.Hovedtypegruppe
                         .Include(x => x.Kode)
-                        .Include(x => x.Kartleggingsenheter)
-                        .Include(x => x.Miljovariabler)
                         .Include(x => x.UnderordnetKoder)
-                        .FirstOrDefault(x => x.Id == hovedtype.Id);
+                        .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
 
-                    if (h == null) continue;
+                    if (ht == null) continue;
 
-                    foreach (var miljovariabel in h.Miljovariabler)
+                    foreach (var hovedtype in ht.UnderordnetKoder)
                     {
-                        var m = context.Miljovariabel
+                        var h = context.Hovedtype
                             .Include(x => x.Kode)
-                            .Include(x => x.Trinn)
-                            .FirstOrDefault(x => x.Id == miljovariabel.Id);
+                            .Include(x => x.Kartleggingsenheter)
+                            .Include(x => x.Miljovariabler)
+                            .Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Id == hovedtype.Id);
 
-                        if (m == null) continue;
+                        if (h == null) continue;
 
-                        foreach (var trinn in m.Trinn)
+                        foreach (var miljovariabel in h.Miljovariabler)
                         {
-                            var t = context.Trinn
+                            var m = context.Miljovariabel
                                 .Include(x => x.Kode)
-                                .Include(x => x.Basistrinn)
-                                .FirstOrDefault(x => x.Id == trinn.Id);
+                                .Include(x => x.Trinn)
+                                .FirstOrDefault(x => x.Id == miljovariabel.Id);
 
-                            if (t == null) continue;
+                            if (m == null) continue;
 
-                            totalCount += t.Basistrinn.Count;
+                            foreach (var trinn in m.Trinn)
+                            {
+                                var t = context.Trinn
+                                    .Include(x => x.Kode)
+                                    .Include(x => x.Basistrinn)
+                                    .FirstOrDefault(x => x.Id == trinn.Id);
+
+                                if (t == null) continue;
+
+                                totalCount += t.Basistrinn.Count;
+
+                                context.Kode.Remove(t.Kode);
+
+                                totalCount++;
+                                context.Trinn.Remove(t);
+                            }
 
                             totalCount++;
-                            context.Trinn.Remove(t);
+                            context.LKMKode.Remove(m.Kode);
+
+                            totalCount++;
+                            context.Miljovariabel.Remove(m);
                         }
 
-                        totalCount++;
-                        context.LKMKode.Remove(m.Kode);
+                        totalCount += h.Kartleggingsenheter.Count;
+                        totalCount += h.Miljovariabler.Count;
+                        totalCount += h.UnderordnetKoder.Count;
 
                         totalCount++;
-                        context.Miljovariabel.Remove(m);
+                        context.Hovedtype.Remove(h);
                     }
-
-                    totalCount += h.Kartleggingsenheter.Count;
-                    totalCount += h.Miljovariabler.Count;
-                    totalCount += h.UnderordnetKoder.Count;
-
-                    totalCount++;
-                    context.Hovedtype.Remove(h);
                 }
+
+                totalCount += context.Hovedtypegruppe.Count();
+                context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
+
+                totalCount += context.Natursystem.Count();
+                context.Natursystem.RemoveRange(context.Natursystem);
+                _stopwatch.Stop();
+                Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+                _stopwatch.Reset();
+                _stopwatch.Start();
+                context.SaveChanges();
+                Console.WriteLine($"Removed {totalCount} items");
+                _stopwatch.Stop();
+                Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+
+                ResetCounters(context);
+
+                _stopwatch.Start();
+
+                context.SaveChanges();
             }
 
-            totalCount += context.Hovedtypegruppe.Count();
-            context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
-
-            totalCount += context.Natursystem.Count();
-            context.Natursystem.RemoveRange(context.Natursystem);
             _stopwatch.Stop();
             Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
-            _stopwatch.Reset();
+
             _stopwatch.Start();
-            context.SaveChanges();
-            Console.WriteLine($"Removed {totalCount} items");
-            _stopwatch.Stop();
-            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
-
-            ResetCounters(context);
         }
 
         private static void ResetCounters(NiNContext context)

@@ -1,6 +1,7 @@
 ﻿namespace NiN.Database.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using NiN.Database.Models.Codes;
     using NiN.Database.Models.Enums;
 
     public class Kartleggingsenhet
@@ -10,8 +11,7 @@
 
         public MalestokkEnum Malestokk { get; set; }
 
-        [StringLength(25)]
-        public string KodeId { get; set; }
+        public KartleggingsenhetKode Kode { get; set; }
 
         [StringLength(1000)]
         public string Definisjon { get; set; }
