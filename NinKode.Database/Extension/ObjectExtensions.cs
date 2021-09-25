@@ -1,6 +1,7 @@
 ﻿namespace NinKode.Database.Extension
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using NaturalSort.Extension;
@@ -13,6 +14,37 @@
             var orderedList = list.ToList();
             orderedList.Sort(new NaturalSortComparer(StringComparison.Ordinal));
             return orderedList.ToList();
+        }
+
+        internal class CustomComparer : IComparer<string>
+        {
+            private readonly StringComparison _comparison;
+            private readonly Comparer _comparer;
+
+            public CustomComparer(StringComparison comparison)
+            {
+                _comparison = comparison;
+                _comparer = new Comparer(System.Globalization.CultureInfo.CurrentCulture);
+            }
+
+            public int Compare(string x, string y)
+            {
+                string numxs = string.Concat(x.TakeWhile(c => char.IsDigit(c)).ToArray());
+                string numys = string.Concat(y.TakeWhile(c => char.IsDigit(c)).ToArray());
+
+                int xnum;
+                int ynum;
+                if (!int.TryParse(numxs, out xnum) || !int.TryParse(numys, out ynum))
+                {
+                    return _comparer.Compare(x, y);
+                }
+                int compareNums = xnum.CompareTo(ynum);
+                if (compareNums != 0)
+                {
+                    return compareNums;
+                }
+                return _comparer.Compare(x, y);
+            }
         }
     }
 

@@ -70,7 +70,7 @@
                     code = new Codes
                     {
                         Navn = natursystem.Navn,
-                        Kategori = NinEnumConverter.GetValue<KategoriEnum>(natursystem.Kode.Kategori),
+                        Kategori = natursystem.Kategori,
                         Kode = ConvertNinKode2Code(natursystem.Kode, host)
                     };
 
@@ -137,7 +137,7 @@
 
                     if (hovedtype.Miljovariabler.Any())
                     {
-                        code.Miljovariabler = CreateMiljovariabler(hovedtype.Miljovariabler, host);
+                        code.Miljovariabler = CreateMiljovariabler(hovedtype.Miljovariabler);
                     }
                     
                     break;
@@ -193,7 +193,7 @@
             };
         }
 
-        private EnvironmentVariable[] CreateMiljovariabler(ICollection<Miljovariabel> entities, string host)
+        private EnvironmentVariable[] CreateMiljovariabler(IEnumerable<Miljovariabel> entities)
         {
             var variables = new List<EnvironmentVariable>();
 
@@ -216,10 +216,10 @@
                 });
             }
 
-            return variables.ToArray();
+            return variables.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Step[] CreateTrinn(ICollection<Trinn> entities)
+        private Step[] CreateTrinn(IEnumerable<Trinn> entities)
         {
             var steps = new List<Step>();
 
@@ -232,27 +232,21 @@
 
                 if (trinn == null) continue;
 
-                var trinns = "";
-                foreach (var basistrinn in trinn.Basistrinn.OrderBy(x => x.Navn))
-                {
-                    var separator = trinns.Length > 0 ? "," : "";
-                    trinns += $"{separator}{basistrinn.Navn}";
-                }
-
                 steps.Add(new Step
                 {
                     Navn = trinn.Navn,
                     Kode = trinn.Kode.KodeName,
-                    Basistrinn = trinns
+                    Basistrinn = string.Join(", ", trinn.Basistrinn.Select(x => x.Navn).ToList().OrderByList<IList<string>>())
                 });
             }
 
             return steps.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(ICollection<Kartleggingsenhet> entities, string host)
+        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(IEnumerable<Kartleggingsenhet> entities, string host)
         {
             var codes = new Dictionary<int, IList<AllCodesCode>>();
+
             foreach (var k in entities)
             {
                 var kartleggingsenhet = _context.Kartleggingsenhet
@@ -271,65 +265,65 @@
             return codes.ToDictionary(code => code.Key.ToString(), code => CreateOrderedList(code.Value));
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Hovedtypegruppe> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(IEnumerable<Hovedtypegruppe> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
             foreach (var g in entities)
             {
-                var gu = _context.Grunntype
+                var hovedtypegruppe = _context.Hovedtypegruppe
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == g.Id);
 
-                if (gu == null) continue;
+                if (hovedtypegruppe == null) continue;
 
-                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+                codes.Add(ConvertNinKode2Code(hovedtypegruppe.Kode, host));
             }
 
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Grunntype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(IEnumerable<Grunntype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
             foreach (var g in entities)
             {
-                var gu = _context.Grunntype
+                var grunntype = _context.Grunntype
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == g.Id);
 
-                if (gu == null) continue;
+                if (grunntype == null) continue;
 
-                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+                codes.Add(ConvertNinKode2Code(grunntype.Kode, host));
             }
 
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(ICollection<Hovedtype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(IEnumerable<Hovedtype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
-            foreach (var g in entities)
+            foreach (var h in entities)
             {
-                var gu = _context.Grunntype
+                var hovedtype = _context.Hovedtype
                     .Include(x => x.Kode)
-                    .FirstOrDefault(x => x.Id == g.Id);
+                    .FirstOrDefault(x => x.Id == h.Id);
 
-                if (gu == null) continue;
+                if (hovedtype == null) continue;
 
-                codes.Add(ConvertNinKode2Code(gu.Kode, host));
+                codes.Add(ConvertNinKode2Code(hovedtype.Kode, host));
             }
 
             return CreateOrderedList(codes);
         }
 
-        private static AllCodesCode[] CreateOrderedList(IList<AllCodesCode> codes)
+        private static AllCodesCode[] CreateOrderedList(IEnumerable<AllCodesCode> codes)
         {
-            var sortedCodes = codes.ToList();
-            sortedCodes.Sort(new AllCodesCodeComparer());
-            return sortedCodes.ToArray();
+            var sorted = codes.ToList();
+            sorted.Sort(new AllCodesCodeComparer());
+            return sorted.ToArray();
         }
 
         #endregion

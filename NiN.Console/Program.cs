@@ -246,7 +246,7 @@
                                             {
                                                 trinn.Basistrinn.Add(new Basistrinn
                                                 {
-                                                    Navn = b,
+                                                    Navn = b.Trim(),
                                                     Kode = new BasistrinnKode
                                                     {
                                                         //KodeName = b,
