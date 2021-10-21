@@ -31,7 +31,7 @@
 
         public CodeV23Service(IConfiguration configuration)
         {
-            var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiN_v23_test;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
+            var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiNv2.3;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
 
             if (string.IsNullOrWhiteSpace(connectionString)) throw new Exception($"Missing \"{DbConnString}\"");
 

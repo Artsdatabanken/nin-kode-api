@@ -1,4 +1,4 @@
-﻿namespace NinKode.WebApi.Controllers.v22
+﻿namespace NinKode.WebApi.Controllers.v23
 {
     using System;
     using System.Collections.Generic;
@@ -15,9 +15,9 @@
     [Route("v2.3/variasjon")]
     public class VarietyV23Controller : ControllerBase
     {
-        private readonly IVarietyService _varietyService;
+        private readonly IVarietyV23Service _varietyService;
 
-        public VarietyV23Controller(IVarietyService varietyService)
+        public VarietyV23Controller(IVarietyV23Service varietyService)
         {
             _varietyService = varietyService;
         }

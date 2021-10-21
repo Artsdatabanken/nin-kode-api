@@ -5,9 +5,7 @@
     using System.Diagnostics;
     using System.Linq;
     using System.Text.Json;
-    using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
     using Microsoft.EntityFrameworkCore;
-    using Microsoft.EntityFrameworkCore.Internal;
     using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NiN.Database.Converters;
@@ -322,6 +320,12 @@
         {
             using (var context = new NiNContext())
             {
+                if (context.Database.EnsureCreated())
+                {
+                    Console.WriteLine($"Created empty database: {context.DbName}");
+                    return;
+                }
+
                 var totalCount = 0;
 
                 var natursystem = context.Natursystem

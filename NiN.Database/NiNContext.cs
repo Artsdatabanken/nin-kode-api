@@ -25,7 +25,7 @@
         
         public NiNContext()
         {
-            DbName = "NiN_v23_test";
+            DbName = "NiNv2.3";
             ConnectionString = $"data source=localhost;initial catalog={DbName};Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
         }
 
@@ -96,7 +96,6 @@
                 .HasOne(x => x.Kode)
                 .WithOne(x => x.Basistrinn)
                 .OnDelete(DeleteBehavior.Cascade);
-
 
             base.OnModelCreating(modelBuilder);
         }
