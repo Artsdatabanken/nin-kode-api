@@ -71,7 +71,7 @@
                         hovedtypegruppe = new Hovedtypegruppe
                         {
                             Natursystem = natursystem,
-                            Navn = gruppe.Navn,
+                            Navn = gruppe.Navn.Trim(),
                             Kode = new HovedtypegruppeKode
                             {
                                 KodeName = gruppe.Kode.Id,
@@ -92,7 +92,7 @@
                         {
                             hovedtype = context.Hovedtype
                                 .Include(x => x.Kode)
-                                .FirstOrDefault(x => x.Navn.Equals(hvdtype.Navn));
+                                .FirstOrDefault(x => x.Navn.Equals(hvdtype.Navn.Trim()));
                         }
 
                         if (hovedtype == null)
@@ -100,7 +100,7 @@
                             hovedtype = new Hovedtype
                             {
                                 Hovedtypegruppe = hovedtypegruppe,
-                                Navn = hvdtype.Navn,
+                                Navn = hvdtype.Navn.Trim(),
                                 Kode = new HovedtypeKode
                                 {
                                     KodeName = hvdtype.Kode.Id,
@@ -122,7 +122,7 @@
                                 if (context.Grunntype.Any())
                                 {
                                     grunntype = context.Grunntype
-                                        .FirstOrDefault(x => x.Navn.Equals(grtype.Navn));
+                                        .FirstOrDefault(x => x.Navn.Equals(grtype.Navn.Trim()));
                                 }
 
                                 if (grunntype == null)
@@ -130,11 +130,11 @@
                                     grunntype = new Grunntype
                                     {
                                         Hovedtype = hovedtype,
-                                        Navn = grtype.Navn,
+                                        Navn = grtype.Navn.Trim(),
                                         Kode = new GrunntypeKode
                                         {
                                             KodeName = grtype.Kode.Id,
-                                            Definisjon = grtype.Kode.Definition
+                                            Definisjon = grtype.Kode.Definition.Trim()
                                         }
                                     };
                                     context.Grunntype.Add(grunntype);
@@ -169,7 +169,7 @@
                                             Kode = new KartleggingsenhetKode
                                             {
                                                 KodeName = $"{krt.Kode.Id}",
-                                                Definisjon = krt.Kode.Definition
+                                                Definisjon = krt.Kode.Definition.Trim()
                                             }
                                         };
                                         switch (Convert.ToInt32(k.Key))
@@ -194,7 +194,7 @@
                                     }
                                     else
                                     {
-                                        kartleggingsenhet.Definisjon = krt.Navn;
+                                        kartleggingsenhet.Definisjon = krt.Navn.Trim();
                                         //kartleggingsenhet.KodeId = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {krt.Kode.Definition}";
                                         context.Kartleggingsenhet.Update(kartleggingsenhet);
                                         updateCount++;
@@ -225,7 +225,7 @@
                                                 Kode = $"{m.Kode}",
                                                 LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value
                                             },
-                                            Navn = m.Navn
+                                            Navn = m.Navn.Trim()
                                         };
                                         foreach (var t in m.Trinn)
                                         {
@@ -262,7 +262,7 @@
                                     }
                                     else
                                     {
-                                        miljovariabel.Navn = m.Navn;
+                                        miljovariabel.Navn = m.Navn.Trim();
                                         context.Miljovariabel.Update(miljovariabel);
                                         updateCount++;
                                     }
