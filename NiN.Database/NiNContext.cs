@@ -9,6 +9,8 @@
 
     public class NiNContext : DbContext
     {
+        private readonly string _versionPrefix = "_v2.3";
+
         public DbSet<Natursystem> Natursystem { get; set; }
         public DbSet<Hovedtypegruppe> Hovedtypegruppe { get; set; }
         public DbSet<Hovedtype> Hovedtype { get; set; }
@@ -25,7 +27,7 @@
         
         public NiNContext()
         {
-            DbName = "NiNv2.3";
+            DbName = $"NiN{_versionPrefix}";
             ConnectionString = $"data source=localhost;initial catalog={DbName};Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
         }
 
@@ -51,6 +53,13 @@
             modelBuilder.Entity<Hovedtypegruppe>().ToTable("Hovedtypegruppe");
             modelBuilder.Entity<Hovedtype>().ToTable("Hovedtype");
             modelBuilder.Entity<Grunntype>().ToTable("Grunntype");
+
+            //modelBuilder.Entity<Miljovariabel>().ToTable("Miljovariabel");
+            //modelBuilder.Entity<Trinn>().ToTable("Trinn");
+            //modelBuilder.Entity<Basistrinn>().ToTable("Basistrinn");
+            //modelBuilder.Entity<Kartleggingsenhet>().ToTable("Kartleggingsenhet");
+            //modelBuilder.Entity<Kode>().ToTable("Kode");
+            //modelBuilder.Entity<LKMKode>().ToTable("LKMKode");
 
             modelBuilder.Entity<Natursystem>()
                 .HasMany(x => x.UnderordnetKoder)

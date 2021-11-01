@@ -31,11 +31,12 @@
 
         public CodeV23Service(IConfiguration configuration)
         {
-            var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiNv2.3;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
+            //var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiN_v2.3;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
+            //if (string.IsNullOrWhiteSpace(connectionString)) throw new Exception($"Missing \"{DbConnString}\"");
 
-            if (string.IsNullOrWhiteSpace(connectionString)) throw new Exception($"Missing \"{DbConnString}\"");
+            var connectionString = configuration.GetValue(DbConnString, "");
 
-            _context = new NiNContext(connectionString);
+            _context = string.IsNullOrEmpty(connectionString) ? new NiNContext() : new NiNContext(connectionString);
         }
 
         public IEnumerable<Codes> GetAll(string host)
