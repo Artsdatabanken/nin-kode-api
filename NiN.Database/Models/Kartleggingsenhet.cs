@@ -2,13 +2,11 @@
 {
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Common;
     using NiN.Database.Models.Enums;
 
-    public class Kartleggingsenhet
+    public class Kartleggingsenhet : BaseIdEntity
     {
-        [Key]
-        public int Id { get; set; }
-
         public MalestokkEnum Malestokk { get; set; }
 
         public KartleggingsenhetKode Kode { get; set; }

@@ -1,8 +1,9 @@
-﻿namespace NiN.Database.Models
+﻿namespace NiN.Database.Models.Common
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class BaseEntity
+    public class NinVersion
     {
         [Key]
         public int Id { get; set; }

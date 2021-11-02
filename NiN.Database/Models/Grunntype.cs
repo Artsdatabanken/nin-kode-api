@@ -3,12 +3,11 @@
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Converters;
     using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Common;
     using NiN.Database.Models.Enums;
 
     public class Grunntype : BaseEntity
     {
-        public Grunntype() { }
-
         [StringLength(255)]
         public string Kategori => NinEnumConverter.GetValue<KategoriEnum>(Kode.Kategori);
         

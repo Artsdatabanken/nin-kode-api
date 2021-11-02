@@ -5,6 +5,7 @@
     using Microsoft.Extensions.Logging;
     using NiN.Database.Models;
     using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Common;
 
     public class NiNContext : DbContext
     {
@@ -14,6 +15,7 @@
 
         private string _versionPrefix;
 
+        public DbSet<NinVersion> NinVersion { get; set; }
         public DbSet<Natursystem> Natursystem { get; set; }
         public DbSet<Hovedtypegruppe> Hovedtypegruppe { get; set; }
         public DbSet<Hovedtype> Hovedtype { get; set; }
@@ -44,10 +46,7 @@
         private void InitializeVersion()
         {
             _versionPrefix = $"_v{_versionMajor}.{_versionMinor}{_versionBeta}";
-            Schema = $"NiN{_versionPrefix}";
         }
-
-        public string Schema { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -62,8 +61,7 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema(Schema);
-
+            modelBuilder.Entity<NinVersion>().ToTable("NinVersion");
             modelBuilder.Entity<Natursystem>().ToTable("Natursystem");
             modelBuilder.Entity<Hovedtypegruppe>().ToTable("Hovedtypegruppe");
             modelBuilder.Entity<Hovedtype>().ToTable("Hovedtype");

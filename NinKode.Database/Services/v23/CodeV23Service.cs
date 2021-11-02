@@ -18,9 +18,8 @@
 
     public class CodeV23Service : ICodeV23Service
     {
+        private const string NinVersionNumber = "2.3";
         private const string DbConnString = "NiNConnectionStringV23";
-
-        private readonly DocumentStore _store;
 
         private readonly NiNContext _context;
 
@@ -47,9 +46,12 @@
 
             if (string.IsNullOrEmpty(id)) return null;
 
+            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(NinVersionNumber));
+            if (ninVersion == null) return null;
+
             id = id.Replace("_", " ");
 
-            var kode = _context.Kode.FirstOrDefault(x => x.KodeName.Equals(id));
+            var kode = _context.Kode.FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals(id));
 
             if (kode == null) return null;
 

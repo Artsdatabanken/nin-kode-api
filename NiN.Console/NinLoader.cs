@@ -10,6 +10,7 @@
     using NiN.Database;
     using NiN.Database.Models;
     using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Common;
     using NiN.Database.Models.Enums;
     using NinKode.Database.Services.v22;
 
@@ -17,7 +18,7 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateDatabase()
+        public static void CreateDatabase(string version)
         {
             _stopwatch.Start();
 
@@ -31,19 +32,33 @@
             //var options = new JsonSerializerOptions { WriteIndented = true };
             //Console.WriteLine(JsonSerializer.Serialize(na, options));
 
-            RemoveAll();
+            //RemoveAll(version);
 
             using (var context = new NiNContext())
             {
-                var natursystem = context.Natursystem.FirstOrDefault();
+                var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+
+                Natursystem natursystem = null;
+                if (ninVersion != null)
+                {
+                    natursystem = context.Natursystem.FirstOrDefault(x => x.Version == ninVersion);
+                }
+                else
+                {
+                    ninVersion = new NinVersion { Navn = version };
+                    context.NinVersion.Add(ninVersion);
+                }
+
 
                 if (natursystem == null)
                 {
                     natursystem = new Natursystem
                     {
                         Navn = na.Navn,
+                        Version = ninVersion,
                         Kode = new NatursystemKode
                         {
+                            Version = ninVersion,
                             KodeName = na.Kode.Id,
                             Definisjon = na.Kode.Definition
                         }
@@ -61,17 +76,23 @@
                     if (context.Hovedtypegruppe.Any())
                     {
                         hovedtypegruppe = context.Hovedtypegruppe
-                            .FirstOrDefault(x => x.Navn.Trim().Equals(gruppe.Navn.Trim()));
+                            .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
+                        if (hovedtypegruppe != null && !hovedtypegruppe.Navn.Trim().Equals(gruppe.Navn.Trim()))
+                        {
+                            hovedtypegruppe = null;
+                        }
                     }
 
                     if (hovedtypegruppe == null)
                     {
                         hovedtypegruppe = new Hovedtypegruppe
                         {
+                            Version = ninVersion,
                             Natursystem = natursystem,
                             Navn = gruppe.Navn.Trim(),
                             Kode = new HovedtypegruppeKode
                             {
+                                Version = ninVersion,
                                 KodeName = gruppe.Kode.Id,
                                 Definisjon = gruppe.Kode.Definition.Trim()
                             }
@@ -90,17 +111,23 @@
                         {
                             hovedtype = context.Hovedtype
                                 .Include(x => x.Kode)
-                                .FirstOrDefault(x => x.Navn.Trim().Equals(hvdtype.Navn.Trim()));
+                                .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
+                            if (hovedtype != null && hovedtype.Navn.Trim().Equals(hvdtype.Navn.Trim()))
+                            {
+                                hovedtype = null;
+                            }
                         }
 
                         if (hovedtype == null)
                         {
                             hovedtype = new Hovedtype
                             {
+                                Version = ninVersion,
                                 Hovedtypegruppe = hovedtypegruppe,
                                 Navn = hvdtype.Navn.Trim(),
                                 Kode = new HovedtypeKode
                                 {
+                                    Version = ninVersion,
                                     KodeName = hvdtype.Kode.Id,
                                     Definisjon = hvdtype.Kode.Definition.Trim()
                                 }
@@ -120,17 +147,23 @@
                                 if (context.Grunntype.Any())
                                 {
                                     grunntype = context.Grunntype
-                                        .FirstOrDefault(x => x.Navn.Equals(grtype.Navn.Trim()));
+                                        .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
+                                    if (grunntype != null && grunntype.Navn.Equals(grtype.Navn.Trim()))
+                                    {
+                                        grunntype = null;
+                                    }
                                 }
 
                                 if (grunntype == null)
                                 {
                                     grunntype = new Grunntype
                                     {
+                                        Version = ninVersion,
                                         Hovedtype = hovedtype,
                                         Navn = grtype.Navn.Trim(),
                                         Kode = new GrunntypeKode
                                         {
+                                            Version = ninVersion,
                                             KodeName = grtype.Kode.Id,
                                             Definisjon = grtype.Kode.Definition.Trim()
                                         }
@@ -154,18 +187,20 @@
                                     if (context.Kartleggingsenhet.Any())
                                     {
                                         kartleggingsenhet = context.Kartleggingsenhet
-                                            .FirstOrDefault(x => x.Kode.Id.Equals(krt.ElementKode));
+                                            .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn) && x.Kode.Id.Equals(krt.ElementKode));
                                     }
 
                                     if (kartleggingsenhet == null)
                                     {
                                         kartleggingsenhet = new Kartleggingsenhet
                                         {
+                                            Version = ninVersion,
                                             //Hovedtype = hovedtype,
                                             Definisjon = krt.Navn.Trim(),
                                             //KodeId = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {krt.Kode.Definition}"
                                             Kode = new KartleggingsenhetKode
                                             {
+                                                Version = ninVersion,
                                                 KodeName = $"{krt.Kode.Id}",
                                                 Definisjon = krt.Kode.Definition.Trim()
                                             }
@@ -210,16 +245,18 @@
                                     if (context.Miljovariabel.Any())
                                     {
                                         miljovariabel = context.Miljovariabel
-                                            .FirstOrDefault(x => x.Kode.Kode.Equals(m.Kode));
+                                            .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn) && x.Kode.Kode.Equals(m.Kode));
                                     }
 
                                     if (miljovariabel == null)
                                     {
                                         miljovariabel = new Miljovariabel
                                         {
+                                            Version = ninVersion,
                                             Hovedtype = hovedtype,
                                             Kode = new LKMKode
                                             {
+                                                Version = ninVersion,
                                                 Kode = $"{m.Kode}",
                                                 LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value
                                             },
@@ -229,6 +266,7 @@
                                         {
                                             var trinn = new Trinn
                                             {
+                                                Version = ninVersion,
                                                 //Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
                                                 Navn = t.Navn.Trim(),
                                                 Kode = new TrinnKode
@@ -242,9 +280,11 @@
                                             {
                                                 trinn.Basistrinn.Add(new Basistrinn
                                                 {
+                                                    Version = ninVersion,
                                                     Navn = b.Trim(),
                                                     Kode = new BasistrinnKode
                                                     {
+                                                        Version = ninVersion,
                                                         //KodeName = b,
                                                         KodeName = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
                                                         Kategori = KategoriEnum.Basistrinn
@@ -285,8 +325,10 @@
 
         }
 
-        private static void RemoveAll()
+        private static void RemoveAll(string version)
         {
+            throw new NotImplementedException("Disabled removeall");
+
             using (var context = new NiNContext())
             {
                 //if (context.Database.EnsureCreated())
@@ -297,12 +339,14 @@
 
                 var totalCount = 0;
 
-                var natursystem = context.Natursystem
-                    .Include(x => x.Kode)
-                    .Include(x => x.UnderordnetKoder)
-                    .FirstOrDefault();
+                var natursystem = context.Natursystem.FirstOrDefault(x => x.Version.Navn.Equals(version));
 
                 if (natursystem == null) return;
+                
+                natursystem = context.Natursystem
+                    .Include(x => x.Kode)
+                    .Include(x => x.UnderordnetKoder)
+                    .FirstOrDefault(x => x.Version.Navn.Equals(version));
 
                 foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
                 {
@@ -397,16 +441,18 @@
         {
             if (!context.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
 
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Hovedtypegruppe)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Hovedtype)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Grunntype)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Kartleggingsenhet)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Miljovariabel)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Kode)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(LKMKode)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Trinn)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Schema}].[{context.Model.FindEntityType(typeof(Basistrinn)).GetTableName()}]', RESEED, 0)");
+            var n_id = context.Database.ExecuteSqlRaw($"select max(id) from [{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]");
+
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Hovedtypegruppe)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Hovedtype)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Grunntype)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Kartleggingsenhet)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Miljovariabel)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Kode)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(LKMKode)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Trinn)).GetTableName()}]', RESEED, 0)");
+            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Basistrinn)).GetTableName()}]', RESEED, 0)");
         }
     }
 }

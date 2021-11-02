@@ -7,7 +7,8 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Starting...");
-            NinLoader.CreateDatabase();
+            NinLoader.CreateDatabase("2.2");
+            NinLoader.CreateDatabase("2.3");
         }
     }
 }

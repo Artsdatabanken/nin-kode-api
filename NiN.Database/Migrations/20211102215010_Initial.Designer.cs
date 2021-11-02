@@ -10,14 +10,13 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNContext))]
-    [Migration("20211102134210_Initial")]
+    [Migration("20211102215010_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("NiN_v2.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -36,9 +35,14 @@ namespace NiN.Database.Migrations
                     b.Property<int?>("TrinnId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("TrinnId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Basistrinn");
                 });
@@ -65,7 +69,12 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Kode");
 
@@ -86,9 +95,30 @@ namespace NiN.Database.Migrations
                     b.Property<int>("LkmKategori")
                         .HasColumnType("int");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("VersionId");
+
                     b.ToTable("LKMKode");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Common.NinVersion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Navn")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NinVersion");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
@@ -105,9 +135,14 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HovedtypeId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Grunntype");
                 });
@@ -126,9 +161,14 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HovedtypegruppeId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Hovedtype");
                 });
@@ -147,9 +187,14 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NatursystemId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Hovedtypegruppe");
                 });
@@ -171,9 +216,14 @@ namespace NiN.Database.Migrations
                     b.Property<int>("Malestokk")
                         .HasColumnType("int");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HovedtypeId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Kartleggingsenhet");
                 });
@@ -195,11 +245,16 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HovedtypeId");
 
                     b.HasIndex("KodeId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Miljovariabel");
                 });
@@ -215,7 +270,12 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Natursystem");
                 });
@@ -234,9 +294,14 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("VersionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("MiljovariabelId");
+
+                    b.HasIndex("VersionId");
 
                     b.ToTable("Trinn");
                 });
@@ -346,7 +411,31 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("TrinnId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Trinn");
+
+                    b.Navigation("Version");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.Kode", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
+                    b.Navigation("Version");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Codes.LKMKode", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Grunntype", b =>
@@ -356,7 +445,13 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("HovedtypeId")
                         .OnDelete(DeleteBehavior.ClientCascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Hovedtype");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Hovedtype", b =>
@@ -366,7 +461,13 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("HovedtypegruppeId")
                         .OnDelete(DeleteBehavior.ClientCascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Hovedtypegruppe");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Hovedtypegruppe", b =>
@@ -376,7 +477,13 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("NatursystemId")
                         .OnDelete(DeleteBehavior.ClientCascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Natursystem");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Kartleggingsenhet", b =>
@@ -386,7 +493,13 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("HovedtypeId")
                         .OnDelete(DeleteBehavior.ClientCascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Hovedtype");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Miljovariabel", b =>
@@ -400,9 +513,24 @@ namespace NiN.Database.Migrations
                         .WithMany()
                         .HasForeignKey("KodeId");
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Hovedtype");
 
                     b.Navigation("Kode");
+
+                    b.Navigation("Version");
+                });
+
+            modelBuilder.Entity("NiN.Database.Models.Natursystem", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Trinn", b =>
@@ -412,7 +540,13 @@ namespace NiN.Database.Migrations
                         .HasForeignKey("MiljovariabelId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
+                        .WithMany()
+                        .HasForeignKey("VersionId");
+
                     b.Navigation("Miljovariabel");
+
+                    b.Navigation("Version");
                 });
 
             modelBuilder.Entity("NiN.Database.Models.Codes.BasistrinnKode", b =>

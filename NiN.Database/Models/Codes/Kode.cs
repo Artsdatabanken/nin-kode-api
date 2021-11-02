@@ -4,12 +4,10 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using NiN.Database.Models.Enums;
     using NiN.Database.Models;
+    using NiN.Database.Models.Common;
 
-    public class Kode
+    public class Kode : BaseIdEntity
     {
-        [Key]
-        public int Id { get; set; }
-        
         [StringLength(25)]
         public string KodeName { get; set; }
         
