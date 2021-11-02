@@ -13,13 +13,8 @@
             UnderordnetKoder = new List<Hovedtypegruppe>();
         }
 
-        //[Key]
-        //public int Id { get; set; }
-
-        //[StringLength(255)]
-        //public string Navn { get; set; }
-
-        [StringLength(255)] public string Kategori => NinEnumConverter.GetValue<KategoriEnum>(Kode.Kategori);
+        [StringLength(255)]
+        public string Kategori => NinEnumConverter.GetValue<KategoriEnum>(Kode.Kategori);
 
         [Required]
         public virtual NatursystemKode Kode { get; set; }

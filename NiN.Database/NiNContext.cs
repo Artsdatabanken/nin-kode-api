@@ -1,7 +1,6 @@
 ﻿namespace NiN.Database
 {
     using System;
-    using System.Security.Cryptography.X509Certificates;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using NiN.Database.Models;
@@ -9,7 +8,11 @@
 
     public class NiNContext : DbContext
     {
-        private readonly string _versionPrefix = "_v2.3";
+        private readonly int _versionMajor = 2;
+        private readonly int _versionMinor = 3;
+        private readonly string _versionBeta = "";
+
+        private string _versionPrefix;
 
         public DbSet<Natursystem> Natursystem { get; set; }
         public DbSet<Hovedtypegruppe> Hovedtypegruppe { get; set; }
@@ -27,14 +30,24 @@
         
         public NiNContext()
         {
-            DbName = $"NiN{_versionPrefix}";
+            DbName = "NiN";
             ConnectionString = $"data source=localhost;initial catalog={DbName};Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
+            InitializeVersion();
         }
 
         public NiNContext(string connectionString)
         {
             ConnectionString = connectionString;
+            InitializeVersion();
         }
+
+        private void InitializeVersion()
+        {
+            _versionPrefix = $"_v{_versionMajor}.{_versionMinor}{_versionBeta}";
+            Schema = $"NiN{_versionPrefix}";
+        }
+
+        public string Schema { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -49,6 +62,8 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema(Schema);
+
             modelBuilder.Entity<Natursystem>().ToTable("Natursystem");
             modelBuilder.Entity<Hovedtypegruppe>().ToTable("Hovedtypegruppe");
             modelBuilder.Entity<Hovedtype>().ToTable("Hovedtype");

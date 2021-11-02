@@ -10,13 +10,14 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNContext))]
-    [Migration("20211101141902_Initial")]
+    [Migration("20211102134210_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("NiN_v2.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);

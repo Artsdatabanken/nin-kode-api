@@ -3,6 +3,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using NiN.Database.Models.Enums;
+    using NiN.Database.Models;
 
     public class Kode
     {

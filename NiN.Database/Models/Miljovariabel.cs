@@ -1,5 +1,6 @@
 ﻿namespace NiN.Database.Models
 {
+    using System;
     using System.Collections.Generic;
     using NiN.Database.Converters;
     using NiN.Database.Models.Codes;

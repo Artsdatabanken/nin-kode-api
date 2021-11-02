@@ -9,12 +9,6 @@
     {
         public Grunntype() { }
 
-        //[Key]
-        //public int Id { get; set; }
-
-        //[StringLength(255)]
-        //public string Navn { get; set; }
-
         [StringLength(255)]
         public string Kategori => NinEnumConverter.GetValue<KategoriEnum>(Kode.Kategori);
         

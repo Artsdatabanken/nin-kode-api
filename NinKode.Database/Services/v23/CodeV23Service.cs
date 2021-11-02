@@ -1,24 +1,19 @@
 ﻿namespace NinKode.Database.Services.v23
 {
-    using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
     using System.Text.RegularExpressions;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
-    using NiN.Database;
     using NiN.Database.Converters;
+    using NiN.Database;
     using NiN.Database.Models;
     using NiN.Database.Models.Enums;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
-    using NinKode.Database.Model.v22;
-    using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
-    using Raven.Client.Linq;
     using Hovedtype = NiN.Database.Models.Hovedtype;
 
     public class CodeV23Service : ICodeV23Service
