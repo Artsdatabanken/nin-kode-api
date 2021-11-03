@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Services.v23
+﻿namespace NinKode.Database.Services
 {
     using System.Collections.Generic;
     using System.Globalization;
@@ -13,17 +13,15 @@
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
-    using Raven.Client.Document;
     using Hovedtype = NiN.Database.Models.Hovedtype;
 
-    public class CodeV23Service : ICodeV23Service
+    public class CodeService : ICodeService
     {
-        private const string NinVersionNumber = "2.3";
-        private const string DbConnString = "NiNConnectionStringV23";
+        private const string DbConnString = "NiNConnectionString";
 
         private readonly NiNContext _context;
 
-        public CodeV23Service(IConfiguration configuration)
+        public CodeService(IConfiguration configuration)
         {
             //var connectionString = configuration.GetValue(DbConnString, "data source=localhost;initial catalog=NiN_v2.3;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework");
             //if (string.IsNullOrWhiteSpace(connectionString)) throw new Exception($"Missing \"{DbConnString}\"");
@@ -46,7 +44,7 @@
 
             if (string.IsNullOrEmpty(id)) return null;
 
-            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(NinVersionNumber));
+            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
             if (ninVersion == null) return null;
 
             id = id.Replace("_", " ");

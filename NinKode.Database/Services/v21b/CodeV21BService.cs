@@ -47,7 +47,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(string host)
+        public IEnumerable<Codes> GetAll(string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -62,7 +62,7 @@
             }
         }
 
-        public Codes GetByKode(string id, string host)
+        public Codes GetByKode(string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

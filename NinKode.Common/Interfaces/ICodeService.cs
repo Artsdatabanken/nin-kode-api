@@ -5,7 +5,7 @@
 
     public interface ICodeService
     {
-        IEnumerable<Codes> GetAll(string host);
-        Codes GetByKode(string id, string host);
+        IEnumerable<Codes> GetAll(string host, string version = "");
+        Codes GetByKode(string id, string host, string version = "");
     }
 }

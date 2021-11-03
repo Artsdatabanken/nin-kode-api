@@ -11,6 +11,7 @@ namespace NinKode.WebApi
     using Microsoft.OpenApi.Models;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Utilities;
+    using NinKode.Database.Services;
     using NinKode.Database.Services.v1;
     using NinKode.Database.Services.v2;
     using NinKode.Database.Services.v21;
@@ -69,10 +70,10 @@ namespace NinKode.WebApi
                     Version = "v2.2",
                     Description = CreateDescription()
                 });
-                c.SwaggerDoc("v2.3", new OpenApiInfo
+                c.SwaggerDoc("beta", new OpenApiInfo
                 {
-                    Title = $"{_swaggerDocumentTitle} v2.3",
-                    Version = "v2.3",
+                    Title = $"{_swaggerDocumentTitle} beta",
+                    Version = "beta",
                     Description = CreateDescription()
                 });
             });
@@ -88,6 +89,8 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
             services.AddSingleton<ICodeV23Service, CodeV23Service>();
             services.AddSingleton<IVarietyV23Service, VarietyV23Service>();
+
+            services.AddSingleton<ICodeService, CodeService>();
         }
 
         private static string CreateDescription()
@@ -114,7 +117,7 @@ namespace NinKode.WebApi
                 //c.InjectStylesheet("/css/theme-outline.css");
                 c.DisplayRequestDuration();
                 c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
-                c.SwaggerEndpoint("/swagger/v2.3/swagger.json", $"{_swaggerDocumentTitle} v2.3");
+                c.SwaggerEndpoint("/swagger/beta/swagger.json", $"{_swaggerDocumentTitle} beta");
                 c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
                 c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
                 c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");

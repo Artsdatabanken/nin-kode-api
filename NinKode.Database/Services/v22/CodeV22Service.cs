@@ -48,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(string host)
+        public IEnumerable<Codes> GetAll(string host, string version = "")
         {
             var list = new List<Codes>();
 
@@ -69,7 +69,7 @@
             return list;
         }
 
-        public Codes GetByKode(string id, string host)
+        public Codes GetByKode(string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
