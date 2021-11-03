@@ -24,16 +24,16 @@
 
         [HttpGet]
         [Route("allekoder")]
-        public IEnumerable<Codes> GetAll()
+        public IEnumerable<Codes> GetAll(string version = DefaultNinVersion)
         {
-            return _codeService.GetAll(base.GetHostPath(), base.GetVersion(DefaultNinVersion));
+            return _codeService.GetAll(base.GetHostPath(), base.GetVersion(version));
         }
 
         [HttpGet]
         [Route("hentkode/{id}")]
-        public Codes GetCode(string id)
+        public Codes GetCode(string id = "NA", string version = DefaultNinVersion)
         {
-            return _codeService.GetByKode(id, GetHostPath(), base.GetVersion(DefaultNinVersion));
+            return _codeService.GetByKode(id, GetHostPath(), base.GetVersion(version));
         }
     }
 }
