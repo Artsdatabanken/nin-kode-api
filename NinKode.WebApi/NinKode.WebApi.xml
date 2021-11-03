@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NinKode.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:NinKode.WebApi.Controllers.CodeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.CodeController.GetAll(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version">NiN-versjon</param>
+            <returns></returns>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.CodeController.GetCode(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id">NiN-kode</param>
+            <param name="version">NiN-versjon</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

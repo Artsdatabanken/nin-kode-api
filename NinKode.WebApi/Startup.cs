@@ -1,5 +1,6 @@
 namespace NinKode.WebApi
 {
+    using System;
     using System.ComponentModel;
     using System.IO;
     using System.Reflection;
@@ -40,6 +41,9 @@ namespace NinKode.WebApi
             });
             services.AddSwaggerGen(c =>
             {
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
+                c.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
+                
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = $"{_swaggerDocumentTitle} v1",

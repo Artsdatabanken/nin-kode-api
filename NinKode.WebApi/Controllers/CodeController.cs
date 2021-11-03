@@ -7,14 +7,17 @@
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
     [ApiExplorerSettings(GroupName = "beta")]
     [DisplayName("Kode")]
     [EnableCors]
-    [Route("api/v{version}/koder")]
+    [Route("api/{version:required}/koder")]
     public class CodeController : ApiControllerBase
     {
-        private const string DefaultNinVersion = "2.3";
+        private const string DefaultNinVersion = "v2.3";
         private readonly ICodeService _codeService;
 
         public CodeController(ICodeService codeService)
@@ -22,6 +25,11 @@
             _codeService = codeService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="version">NiN-versjon</param>
+        /// <returns></returns>
         [HttpGet]
         [Route("allekoder")]
         public IEnumerable<Codes> GetAll(string version = DefaultNinVersion)
@@ -29,8 +37,14 @@
             return _codeService.GetAll(base.GetHostPath(), base.GetVersion(version));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">NiN-kode</param>
+        /// <param name="version">NiN-versjon</param>
+        /// <returns></returns>
         [HttpGet]
-        [Route("hentkode/{id}")]
+        [Route("hentkode/{id:required}")]
         public Codes GetCode(string id = "NA", string version = DefaultNinVersion)
         {
             return _codeService.GetByKode(id, GetHostPath(), base.GetVersion(version));
