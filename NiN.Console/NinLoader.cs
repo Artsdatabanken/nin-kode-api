@@ -220,7 +220,9 @@
                                     if (context.Kartleggingsenhet.Any())
                                     {
                                         kartleggingsenhet = context.Kartleggingsenhet
-                                            .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn) && x.Kode.Id.Equals(krt.ElementKode));
+                                            .FirstOrDefault(x =>
+                                                x.Version.Navn.Equals(ninVersion.Navn) &&
+                                                x.Kode.Id.Equals(krt.ElementKode));
                                     }
 
                                     if (kartleggingsenhet == null)
@@ -268,84 +270,87 @@
                                 }
 
                             }
+                        }
 
-                            if (hvdtype.Miljovariabler != null)
+                        if (hvdtype.Miljovariabler != null)
+                        {
+                            foreach (var m in hvdtype.Miljovariabler)
                             {
-                                foreach (var m in hvdtype.Miljovariabler)
+                                Miljovariabel miljovariabel = null;
+
+                                if (context.Miljovariabel.Any())
                                 {
-                                    Miljovariabel miljovariabel = null;
+                                    miljovariabel = context.Miljovariabel
+                                        .FirstOrDefault(x =>
+                                            x.Version.Navn.Equals(ninVersion.Navn) && x.Kode.Kode.Equals(m.Kode));
+                                }
 
-                                    if (context.Miljovariabel.Any())
+                                if (miljovariabel == null)
+                                {
+                                    miljovariabel = new Miljovariabel
                                     {
-                                        miljovariabel = context.Miljovariabel
-                                            .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn) && x.Kode.Kode.Equals(m.Kode));
-                                    }
-
-                                    if (miljovariabel == null)
-                                    {
-                                        miljovariabel = new Miljovariabel
+                                        Version = ninVersion,
+                                        Hovedtype = hovedtype,
+                                        Kode = new LKMKode
                                         {
                                             Version = ninVersion,
-                                            Hovedtype = hovedtype,
-                                            Kode = new LKMKode
-                                            {
-                                                Version = ninVersion,
-                                                Kode = $"{m.Kode}"
-                                            },
-                                            Navn = m.Navn.Trim()
-                                        };
+                                            Kode = $"{m.Kode}"
+                                        },
+                                        Navn = m.Navn.Trim()
+                                    };
 
-                                        if (m.LKMKategori != null) miljovariabel.Kode.LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value;
+                                    if (m.LKMKategori != null)
+                                        miljovariabel.Kode.LkmKategori =
+                                            NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value;
 
-                                        foreach (var t in m.Trinn)
+                                    foreach (var t in m.Trinn)
+                                    {
+                                        //Console.WriteLine($"{t.Navn.Trim()}: {t.Kode.Length}");
+                                        var trinn = new Trinn
                                         {
-                                            //Console.WriteLine($"{t.Navn.Trim()}: {t.Kode.Length}");
-                                            var trinn = new Trinn
+                                            Version = ninVersion,
+                                            //Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
+                                            Navn = t.Navn.Trim(),
+                                            Kode = new TrinnKode
                                             {
                                                 Version = ninVersion,
-                                                //Navn = $"{t.Kode} - {t.Basistrinn} - {t.Navn}"
-                                                Navn = t.Navn.Trim(),
-                                                Kode = new TrinnKode
+                                                //KodeName = t.Kode,
+                                                KodeName = $"{t.Kode}",
+                                                Kategori = KategoriEnum.Trinn
+                                            }
+                                        };
+                                        if (t.Basistrinn != null)
+                                        {
+                                            foreach (var b in t.Basistrinn.Split(","))
+                                            {
+                                                trinn.Basistrinn.Add(new Basistrinn
                                                 {
                                                     Version = ninVersion,
-                                                    //KodeName = t.Kode,
-                                                    KodeName = $"{t.Kode}",
-                                                    Kategori = KategoriEnum.Trinn
-                                                }
-                                            };
-                                            if (t.Basistrinn != null)
-                                            {
-                                                foreach (var b in t.Basistrinn.Split(","))
-                                                {
-                                                    trinn.Basistrinn.Add(new Basistrinn
+                                                    Navn = b.Trim(),
+                                                    Kode = new BasistrinnKode
                                                     {
                                                         Version = ninVersion,
-                                                        Navn = b.Trim(),
-                                                        Kode = new BasistrinnKode
-                                                        {
-                                                            Version = ninVersion,
-                                                            //KodeName = b,
-                                                            KodeName =
-                                                                $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
-                                                            Kategori = KategoriEnum.Basistrinn
-                                                        }
-                                                    });
-                                                }
+                                                        //KodeName = b,
+                                                        KodeName =
+                                                            $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
+                                                        Kategori = KategoriEnum.Basistrinn
+                                                    }
+                                                });
                                             }
-
-                                            miljovariabel.Trinn.Add(trinn);
-                                            totalCount++;
                                         }
 
-                                        context.Miljovariabel.Add(miljovariabel);
+                                        miljovariabel.Trinn.Add(trinn);
                                         totalCount++;
                                     }
-                                    else
-                                    {
-                                        miljovariabel.Navn = m.Navn.Trim();
-                                        context.Miljovariabel.Update(miljovariabel);
-                                        updateCount++;
-                                    }
+
+                                    context.Miljovariabel.Add(miljovariabel);
+                                    totalCount++;
+                                }
+                                else
+                                {
+                                    miljovariabel.Navn = m.Navn.Trim();
+                                    context.Miljovariabel.Update(miljovariabel);
+                                    updateCount++;
                                 }
                             }
                         }
@@ -367,10 +372,8 @@
 
         }
 
-        private static void RemoveAll(string version)
+        public static void RemoveAll(string version)
         {
-            throw new NotImplementedException("Disabled removeall");
-
             using (var context = new NiNContext())
             {
                 //if (context.Database.EnsureCreated())
@@ -381,14 +384,18 @@
 
                 var totalCount = 0;
 
-                var natursystem = context.Natursystem.FirstOrDefault(x => x.Version.Navn.Equals(version));
+                var natursystem = context.Natursystem
+                    .Include(x => x.Version)
+                    .FirstOrDefault(x => x.Version.Navn.Equals(version));
 
                 if (natursystem == null) return;
-                
+
+                var ninVersion = natursystem.Version;
+
                 natursystem = context.Natursystem
                     .Include(x => x.Kode)
                     .Include(x => x.UnderordnetKoder)
-                    .FirstOrDefault(x => x.Version.Navn.Equals(version));
+                    .FirstOrDefault(x => x.Id == natursystem.Id);
 
                 foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
                 {
@@ -450,13 +457,18 @@
                         totalCount++;
                         context.Hovedtype.Remove(h);
                     }
+
+                    context.Hovedtypegruppe.Remove(hovedtypegruppe);
                 }
 
-                totalCount += context.Hovedtypegruppe.Count();
-                context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
+                //totalCount += context.Hovedtypegruppe.Count();
+                //context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
 
-                totalCount += context.Natursystem.Count();
-                context.Natursystem.RemoveRange(context.Natursystem);
+                //totalCount += context.Natursystem.Count();
+                context.Natursystem.Remove(natursystem);
+
+                context.NinVersion.Remove(ninVersion);
+
                 _stopwatch.Stop();
                 Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
                 _stopwatch.Reset();
@@ -482,6 +494,8 @@
         private static void ResetCounters(NiNContext context)
         {
             if (!context.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
+
+            return;
 
             var n_id = context.Database.ExecuteSqlRaw($"select max(id) from [{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]");
 

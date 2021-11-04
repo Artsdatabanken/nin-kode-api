@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using System.Security.Cryptography.X509Certificates;
     using System.Text.RegularExpressions;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
@@ -135,7 +136,7 @@
                     {
                         code.Miljovariabler = CreateMiljovariabler(hovedtype.Miljovariabler);
                     }
-                    
+
                     break;
 
                 case KategoriEnum.Grunntype:
