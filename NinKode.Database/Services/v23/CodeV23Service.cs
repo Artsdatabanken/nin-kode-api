@@ -180,6 +180,11 @@
             return code;
         }
 
+        public Codes GetCode(string id)
+        {
+            return null;
+        }
+
         #region private methods
 
         private static AllCodesCode ConvertNinKode2Code(NiN.Database.Models.Codes.Kode ninKode, string host)

@@ -12,6 +12,11 @@
     using NiN.Database.Models.Codes;
     using NiN.Database.Models.Common;
     using NiN.Database.Models.Enums;
+    using NinKode.Common.Interfaces;
+    using NinKode.Database.Services.v1;
+    using NinKode.Database.Services.v2;
+    using NinKode.Database.Services.v21;
+    using NinKode.Database.Services.v21b;
     using NinKode.Database.Services.v22;
 
     public static class NinLoader
@@ -25,9 +30,35 @@
             var totalCount = 0;
             var updateCount = 0;
 
-            var code22Service = new CodeV22Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+            ICodeService codeService = null;
 
-            var na = code22Service
+            switch (version)
+            {
+                case "1":
+                    codeService = new CodeV1Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    break;
+                case "2":
+                    codeService = new CodeV2Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    break;
+                case "2.1":
+                    codeService = new CodeV21Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    break;
+                case "2.1b":
+                    codeService = new CodeV21BService(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    break;
+                case "2.2":
+                case "2.3":
+                    codeService = new CodeV22Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    break;
+            }
+
+            if (codeService == null)
+            {
+                Console.WriteLine($"CodeService for version '{version}' doesn't exist. Skipping...");
+                return;
+            }
+
+            var na = codeService
                 .GetCode("NA");
             //var options = new JsonSerializerOptions { WriteIndented = true };
             //Console.WriteLine(JsonSerializer.Serialize(na, options));
@@ -41,13 +72,15 @@
                 Natursystem natursystem = null;
                 if (ninVersion != null)
                 {
-                    natursystem = context.Natursystem.FirstOrDefault(x => x.Version == ninVersion);
+                    //natursystem = context.Natursystem.FirstOrDefault(x => x.Version == ninVersion);
+
+                    Console.WriteLine($"Version {ninVersion.Navn} exists. Skipping...");
+                    return;
                 }
-                else
-                {
-                    ninVersion = new NinVersion { Navn = version };
-                    context.NinVersion.Add(ninVersion);
-                }
+                Console.WriteLine($"Adding version {version}");
+
+                ninVersion = new NinVersion { Navn = version };
+                context.NinVersion.Add(ninVersion);
 
 
                 if (natursystem == null)
@@ -69,7 +102,7 @@
 
                 foreach (var htgrp in na.UnderordnetKoder)
                 {
-                    var gruppe = code22Service.GetCode(htgrp.Id);
+                    var gruppe = codeService.GetCode(htgrp.Id);
 
                     Hovedtypegruppe hovedtypegruppe = null;
 
@@ -103,7 +136,7 @@
 
                     foreach (var grp in gruppe.UnderordnetKoder)
                     {
-                        var hvdtype = code22Service.GetCode(grp.Id);
+                        var hvdtype = codeService.GetCode(grp.Id);
 
                         Hovedtype hovedtype = null;
 
@@ -140,7 +173,7 @@
                         {
                             foreach (var u in hvdtype.UnderordnetKoder)
                             {
-                                var grtype = code22Service.GetCode(u.Id);
+                                var grtype = codeService.GetCode(u.Id);
 
                                 Grunntype grunntype = null;
 
@@ -180,7 +213,7 @@
                             {
                                 foreach (var v in k.Value)
                                 {
-                                    var krt = code22Service.GetCode(v.Id);
+                                    var krt = codeService.GetCode(v.Id);
 
                                     Kartleggingsenhet kartleggingsenhet = null;
 
@@ -257,13 +290,16 @@
                                             Kode = new LKMKode
                                             {
                                                 Version = ninVersion,
-                                                Kode = $"{m.Kode}",
-                                                LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value
+                                                Kode = $"{m.Kode}"
                                             },
                                             Navn = m.Navn.Trim()
                                         };
+
+                                        if (m.LKMKategori != null) miljovariabel.Kode.LkmKategori = NinEnumConverter.Convert<LkmKategoriEnum>(m.LKMKategori).Value;
+
                                         foreach (var t in m.Trinn)
                                         {
+                                            //Console.WriteLine($"{t.Navn.Trim()}: {t.Kode.Length}");
                                             var trinn = new Trinn
                                             {
                                                 Version = ninVersion,
@@ -271,26 +307,32 @@
                                                 Navn = t.Navn.Trim(),
                                                 Kode = new TrinnKode
                                                 {
+                                                    Version = ninVersion,
                                                     //KodeName = t.Kode,
                                                     KodeName = $"{t.Kode}",
                                                     Kategori = KategoriEnum.Trinn
                                                 }
                                             };
-                                            foreach (var b in t.Basistrinn.Split(","))
+                                            if (t.Basistrinn != null)
                                             {
-                                                trinn.Basistrinn.Add(new Basistrinn
+                                                foreach (var b in t.Basistrinn.Split(","))
                                                 {
-                                                    Version = ninVersion,
-                                                    Navn = b.Trim(),
-                                                    Kode = new BasistrinnKode
+                                                    trinn.Basistrinn.Add(new Basistrinn
                                                     {
                                                         Version = ninVersion,
-                                                        //KodeName = b,
-                                                        KodeName = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
-                                                        Kategori = KategoriEnum.Basistrinn
-                                                    }
-                                                });
+                                                        Navn = b.Trim(),
+                                                        Kode = new BasistrinnKode
+                                                        {
+                                                            Version = ninVersion,
+                                                            //KodeName = b,
+                                                            KodeName =
+                                                                $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {t.Kode} {b}",
+                                                            Kategori = KategoriEnum.Basistrinn
+                                                        }
+                                                    });
+                                                }
                                             }
+
                                             miljovariabel.Trinn.Add(trinn);
                                             totalCount++;
                                         }

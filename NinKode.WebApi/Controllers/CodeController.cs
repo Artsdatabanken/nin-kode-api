@@ -20,6 +20,10 @@
         private const string DefaultNinVersion = "v2.3";
         private readonly ICodeService _codeService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="codeService"></param>
         public CodeController(ICodeService codeService)
         {
             _codeService = codeService;

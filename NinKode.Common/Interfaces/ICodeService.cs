@@ -7,5 +7,6 @@
     {
         IEnumerable<Codes> GetAll(string host, string version = "");
         Codes GetByKode(string id, string host, string version = "");
+        Codes GetCode(string id);
     }
 }

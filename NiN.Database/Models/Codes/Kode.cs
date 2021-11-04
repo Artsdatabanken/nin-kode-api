@@ -8,7 +8,7 @@
 
     public class Kode : BaseIdEntity
     {
-        [StringLength(25)]
+        [StringLength(255)]
         public string KodeName { get; set; }
         
         [StringLength(1000)]

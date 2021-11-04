@@ -9,6 +9,12 @@
             
             </summary>
         </member>
+        <member name="M:NinKode.WebApi.Controllers.CodeController.#ctor(NinKode.Common.Interfaces.ICodeService)">
+            <summary>
+            
+            </summary>
+            <param name="codeService"></param>
+        </member>
         <member name="M:NinKode.WebApi.Controllers.CodeController.GetAll(System.String)">
             <summary>
             

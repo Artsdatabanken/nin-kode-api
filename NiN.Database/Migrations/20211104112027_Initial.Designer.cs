@@ -10,7 +10,7 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNContext))]
-    [Migration("20211102215010_Initial")]
+    [Migration("20211104112027_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,8 +66,8 @@ namespace NiN.Database.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("KodeName")
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int?>("VersionId")
                         .HasColumnType("int");

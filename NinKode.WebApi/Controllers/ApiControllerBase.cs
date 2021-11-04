@@ -18,6 +18,8 @@
             var version = RouteData.Values["version"]?.ToString();
             if (string.IsNullOrWhiteSpace(version)) version = defaultVersion;
 
+            if (version.StartsWith("v")) version = version[1..];
+
             return version;
         }
     }

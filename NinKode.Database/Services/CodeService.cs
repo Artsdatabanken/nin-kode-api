@@ -13,7 +13,7 @@
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
-    using Hovedtype = NiN.Database.Models.Hovedtype;
+    //using Hovedtype = NiN.Database.Models.Hovedtype;
 
     public class CodeService : ICodeService
     {
@@ -176,6 +176,11 @@
             }
 
             return code;
+        }
+
+        public Codes GetCode(string id)
+        {
+            return null;
         }
 
         #region private methods

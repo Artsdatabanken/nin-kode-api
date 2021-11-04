@@ -263,7 +263,7 @@ namespace NiN.Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    KodeName = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
+                    KodeName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     Kategori = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),

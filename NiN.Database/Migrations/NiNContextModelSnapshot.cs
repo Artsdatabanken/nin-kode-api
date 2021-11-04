@@ -64,8 +64,8 @@ namespace NiN.Database.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("KodeName")
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int?>("VersionId")
                         .HasColumnType("int");
