@@ -1,4 +1,4 @@
-﻿namespace NiN.Database.Models.Enums
+﻿namespace NiN.Database.Models.Code.Enums
 {
     public enum MalestokkEnum
     {

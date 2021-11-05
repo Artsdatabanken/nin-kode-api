@@ -95,6 +95,7 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV23Service, VarietyV23Service>();
 
             services.AddSingleton<ICodeService, CodeService>();
+            services.AddSingleton<IVarietyService, VarietyService>();
         }
 
         private static string CreateDescription()

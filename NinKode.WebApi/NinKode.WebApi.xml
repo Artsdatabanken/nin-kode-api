@@ -30,5 +30,31 @@
             <param name="version">NiN-versjon</param>
             <returns></returns>
         </member>
+        <member name="T:NinKode.WebApi.Controllers.VarietyController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.VarietyController.#ctor(NinKode.Common.Interfaces.IVarietyService)">
+            <summary>
+            
+            </summary>
+            <param name="varietyService"></param>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.VarietyController.GetAll(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version">NiN-versjon</param>
+            <returns></returns>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.VarietyController.GetCode(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id">Beskrivelsessystem kode</param>
+            <param name="version">NiN-versjon</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

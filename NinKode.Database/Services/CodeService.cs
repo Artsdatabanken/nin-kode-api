@@ -3,18 +3,17 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
     using System.Text.RegularExpressions;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using NiN.Database.Converters;
     using NiN.Database;
-    using NiN.Database.Models;
-    using NiN.Database.Models.Enums;
+    using NiN.Database.Models.Code;
+    using NiN.Database.Models.Code.Codes;
+    using NiN.Database.Models.Code.Enums;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
-    //using Hovedtype = NiN.Database.Models.Hovedtype;
 
     public class CodeService : ICodeService
     {
@@ -41,8 +40,6 @@
 
         public Codes GetByKode(string id, string host, string version = "")
         {
-            Codes code = null;
-
             if (string.IsNullOrEmpty(id)) return null;
 
             var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
@@ -50,9 +47,12 @@
 
             id = id.Replace("_", " ");
 
-            var kode = _context.Kode.FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals(id));
+            var kode = _context.Kode
+                .FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals(id));
 
             if (kode == null) return null;
+
+            Codes code = null;
 
             switch (kode.Kategori)
             {
@@ -186,7 +186,7 @@
 
         #region private methods
 
-        private static AllCodesCode ConvertNinKode2Code(NiN.Database.Models.Codes.Kode ninKode, string host)
+        private static AllCodesCode ConvertNinKode2Code(NinKode ninKode, string host)
         {
             return new AllCodesCode
             {

@@ -6,6 +6,7 @@
     using System.Linq;
     using NaturalSort.Extension;
     using NinKode.Common.Models.Code;
+    using NinKode.Common.Models.Variety;
 
     public static class ObjectExtensions
     {
@@ -84,6 +85,17 @@
     public class AllCodesCodeComparer : Comparer<AllCodesCode>
     {
         public override int Compare(AllCodesCode x, AllCodesCode y)
+        {
+            var list = new List<string> { x.Id, y.Id };
+            list.Sort(new NaturalSortComparer(StringComparison.Ordinal));
+            var element = list[0];
+            return x.Id.Equals(element) ? -1 : 1;
+        }
+    }
+
+    public class VarietyCodeCodeComparer : Comparer<VarietyCodeCode>
+    {
+        public override int Compare(VarietyCodeCode x, VarietyCodeCode y)
         {
             var list = new List<string> { x.Id, y.Id };
             list.Sort(new NaturalSortComparer(StringComparison.Ordinal));

@@ -5,7 +5,8 @@
 
     public interface IVarietyService
     {
-        IEnumerable<VarietyAllCodes> GetAll(string host);
-        VarietyCode GetByKode(string id, string host);
+        IEnumerable<VarietyAllCodes> GetAll(string host, string version = "");
+        VarietyCode GetByKode(string id, string host, string version = "");
+        VarietyCode GetVariety(string id);
     }
 }

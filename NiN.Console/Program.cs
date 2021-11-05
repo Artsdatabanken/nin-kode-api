@@ -10,12 +10,17 @@
 
             //NinLoader.RemoveAll("2.1b");
 
-            NinLoader.CreateDatabase("1");
-            NinLoader.CreateDatabase("2");
-            NinLoader.CreateDatabase("2.1");
-            NinLoader.CreateDatabase("2.1b");
-            NinLoader.CreateDatabase("2.2");
-            NinLoader.CreateDatabase("2.3");
+            NinLoader.CreateCodeDatabase("1");
+            NinLoader.CreateCodeDatabase("2");
+            NinLoader.CreateCodeDatabase("2.1");
+            NinLoader.CreateCodeDatabase("2.1b");
+            NinLoader.CreateCodeDatabase("2.2");
+            NinLoader.CreateCodeDatabase("2.3");
+
+            NinLoader.CreateVarietyDatabase("2.1");
+            NinLoader.CreateVarietyDatabase("2.1b");
+            NinLoader.CreateVarietyDatabase("2.2");
+            NinLoader.CreateVarietyDatabase("2.3");
         }
     }
 }

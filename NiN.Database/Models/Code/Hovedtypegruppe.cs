@@ -1,11 +1,11 @@
-﻿namespace NiN.Database.Models
+﻿namespace NiN.Database.Models.Code
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Converters;
-    using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Code.Codes;
+    using NiN.Database.Models.Code.Enums;
     using NiN.Database.Models.Common;
-    using NiN.Database.Models.Enums;
 
     public class Hovedtypegruppe : BaseEntity
     {

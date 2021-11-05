@@ -1,7 +1,7 @@
-﻿namespace NiN.Database.Models
+﻿namespace NiN.Database.Models.Code
 {
     using System.Collections.Generic;
-    using NiN.Database.Models.Codes;
+    using NiN.Database.Models.Code.Codes;
     using NiN.Database.Models.Common;
 
     public class Trinn : BaseEntity

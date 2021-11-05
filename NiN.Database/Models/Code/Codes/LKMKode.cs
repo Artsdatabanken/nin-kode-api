@@ -1,8 +1,8 @@
-﻿namespace NiN.Database.Models.Codes
+﻿namespace NiN.Database.Models.Code.Codes
 {
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Models.Common;
-    using NiN.Database.Models.Enums;
+    using NiN.Database.Models.Code.Enums;
 
     public class LKMKode : BaseIdEntity
     {

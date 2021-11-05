@@ -61,6 +61,26 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "VarietyLevel0",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel0", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel0_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Hovedtypegruppe",
                 columns: table => new
                 {
@@ -88,6 +108,33 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "VarietyLevel1",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel1", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel1_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel1_VarietyLevel0_OverordnetKodeId",
+                        column: x => x.OverordnetKodeId,
+                        principalTable: "VarietyLevel0",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Hovedtype",
                 columns: table => new
                 {
@@ -110,6 +157,33 @@ namespace NiN.Database.Migrations
                         name: "FK_Hovedtype_NinVersion_VersionId",
                         column: x => x.VersionId,
                         principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VarietyLevel2",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel2", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel2_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel2_VarietyLevel1_OverordnetKodeId",
+                        column: x => x.OverordnetKodeId,
+                        principalTable: "VarietyLevel1",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -204,6 +278,33 @@ namespace NiN.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "VarietyLevel3",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel3", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel3_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel3_VarietyLevel2_OverordnetKodeId",
+                        column: x => x.OverordnetKodeId,
+                        principalTable: "VarietyLevel2",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Trinn",
                 columns: table => new
                 {
@@ -226,6 +327,33 @@ namespace NiN.Database.Migrations
                         name: "FK_Trinn_NinVersion_VersionId",
                         column: x => x.VersionId,
                         principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VarietyLevel4",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel4", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel4_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel4_VarietyLevel3_OverordnetKodeId",
+                        column: x => x.OverordnetKodeId,
+                        principalTable: "VarietyLevel3",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -255,6 +383,33 @@ namespace NiN.Database.Migrations
                         principalTable: "Trinn",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VarietyLevel5",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VarietyLevel5", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel5_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VarietyLevel5_VarietyLevel4_OverordnetKodeId",
+                        column: x => x.OverordnetKodeId,
+                        principalTable: "VarietyLevel4",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -326,6 +481,71 @@ namespace NiN.Database.Migrations
                         column: x => x.TrinnId,
                         principalTable: "Trinn",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VariasjonKode",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    KodeName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    VarietyCategory = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VarietyLevel1Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VarietyLevel2Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VarietyLevel3Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VarietyLevel4Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VarietyLevel5Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
+                    VersionId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VariasjonKode", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_NinVersion_VersionId",
+                        column: x => x.VersionId,
+                        principalTable: "NinVersion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel0_VarietyLevelId",
+                        column: x => x.VarietyLevelId,
+                        principalTable: "VarietyLevel0",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel1_VarietyLevel1Code_VarietyLevelId",
+                        column: x => x.VarietyLevel1Code_VarietyLevelId,
+                        principalTable: "VarietyLevel1",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel2_VarietyLevel2Code_VarietyLevelId",
+                        column: x => x.VarietyLevel2Code_VarietyLevelId,
+                        principalTable: "VarietyLevel2",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel3_VarietyLevel3Code_VarietyLevelId",
+                        column: x => x.VarietyLevel3Code_VarietyLevelId,
+                        principalTable: "VarietyLevel3",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel4_VarietyLevel4Code_VarietyLevelId",
+                        column: x => x.VarietyLevel4Code_VarietyLevelId,
+                        principalTable: "VarietyLevel4",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_VariasjonKode_VarietyLevel5_VarietyLevel5Code_VarietyLevelId",
+                        column: x => x.VarietyLevel5Code_VarietyLevelId,
+                        principalTable: "VarietyLevel5",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -466,12 +686,117 @@ namespace NiN.Database.Migrations
                 name: "IX_Trinn_VersionId",
                 table: "Trinn",
                 column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevel1Code_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevel1Code_VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevel1Code_VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevel2Code_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevel2Code_VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevel2Code_VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevel3Code_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevel3Code_VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevel3Code_VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevel4Code_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevel4Code_VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevel4Code_VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevel5Code_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevel5Code_VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevel5Code_VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VarietyLevelId",
+                table: "VariasjonKode",
+                column: "VarietyLevelId",
+                unique: true,
+                filter: "[VarietyLevelId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VariasjonKode_VersionId",
+                table: "VariasjonKode",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel0_VersionId",
+                table: "VarietyLevel0",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel1_OverordnetKodeId",
+                table: "VarietyLevel1",
+                column: "OverordnetKodeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel1_VersionId",
+                table: "VarietyLevel1",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel2_OverordnetKodeId",
+                table: "VarietyLevel2",
+                column: "OverordnetKodeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel2_VersionId",
+                table: "VarietyLevel2",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel3_OverordnetKodeId",
+                table: "VarietyLevel3",
+                column: "OverordnetKodeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel3_VersionId",
+                table: "VarietyLevel3",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel4_OverordnetKodeId",
+                table: "VarietyLevel4",
+                column: "OverordnetKodeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel4_VersionId",
+                table: "VarietyLevel4",
+                column: "VersionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel5_OverordnetKodeId",
+                table: "VarietyLevel5",
+                column: "OverordnetKodeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VarietyLevel5_VersionId",
+                table: "VarietyLevel5",
+                column: "VersionId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Kode");
+
+            migrationBuilder.DropTable(
+                name: "VariasjonKode");
 
             migrationBuilder.DropTable(
                 name: "Basistrinn");
@@ -483,10 +808,19 @@ namespace NiN.Database.Migrations
                 name: "Kartleggingsenhet");
 
             migrationBuilder.DropTable(
+                name: "VarietyLevel5");
+
+            migrationBuilder.DropTable(
                 name: "Trinn");
 
             migrationBuilder.DropTable(
+                name: "VarietyLevel4");
+
+            migrationBuilder.DropTable(
                 name: "Miljovariabel");
+
+            migrationBuilder.DropTable(
+                name: "VarietyLevel3");
 
             migrationBuilder.DropTable(
                 name: "Hovedtype");
@@ -495,10 +829,19 @@ namespace NiN.Database.Migrations
                 name: "LKMKode");
 
             migrationBuilder.DropTable(
+                name: "VarietyLevel2");
+
+            migrationBuilder.DropTable(
                 name: "Hovedtypegruppe");
 
             migrationBuilder.DropTable(
+                name: "VarietyLevel1");
+
+            migrationBuilder.DropTable(
                 name: "Natursystem");
+
+            migrationBuilder.DropTable(
+                name: "VarietyLevel0");
 
             migrationBuilder.DropTable(
                 name: "NinVersion");

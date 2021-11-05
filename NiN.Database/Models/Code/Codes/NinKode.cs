@@ -1,12 +1,11 @@
-﻿namespace NiN.Database.Models.Codes
+﻿namespace NiN.Database.Models.Code.Codes
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using NiN.Database.Models.Enums;
-    using NiN.Database.Models;
+    using NiN.Database.Models.Code.Enums;
     using NiN.Database.Models.Common;
 
-    public class Kode : BaseIdEntity
+    public class NinKode : BaseIdEntity
     {
         [StringLength(255)]
         public string KodeName { get; set; }
@@ -17,7 +16,7 @@
         public KategoriEnum Kategori { get; set; }
     }
 
-    public class NatursystemKode : Kode
+    public class NatursystemKode : NinKode
     {
         public int NatursystemId { get; set; }
 
@@ -30,7 +29,7 @@
         }
     }
 
-    public class HovedtypegruppeKode : Kode
+    public class HovedtypegruppeKode : NinKode
     {
         public int HovedtypegruppeId { get; set; }
 
@@ -43,7 +42,7 @@
         }
     }
 
-    public class HovedtypeKode : Kode
+    public class HovedtypeKode : NinKode
     {
         public int HovedtypeId { get; set; }
 
@@ -56,7 +55,7 @@
         }
     }
 
-    public class GrunntypeKode : Kode
+    public class GrunntypeKode : NinKode
     {
         public int GrunntypeId { get; set; }
 
@@ -69,7 +68,7 @@
         }
     }
 
-    public class KartleggingsenhetKode : Kode
+    public class KartleggingsenhetKode : NinKode
     {
         public int KartleggingsenhetId { get; set; }
 
@@ -82,7 +81,7 @@
         }
     }
 
-    public class TrinnKode : Kode
+    public class TrinnKode : NinKode
     {
         public int TrinnId { get; set; }
 
@@ -95,7 +94,7 @@
         }
     }
 
-    public class BasistrinnKode : Kode
+    public class BasistrinnKode : NinKode
     {
         public int BasistrinnId { get; set; }
 

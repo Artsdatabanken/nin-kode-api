@@ -47,7 +47,7 @@
             );
         }
 
-        public IEnumerable<VarietyAllCodes> GetAll(string host)
+        public IEnumerable<VarietyAllCodes> GetAll(string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -62,7 +62,7 @@
             }
         }
 
-        public VarietyCode GetByKode(string id, string host)
+        public VarietyCode GetByKode(string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -79,6 +79,11 @@
             }
 
             return null;
+        }
+
+        public VarietyCode GetVariety(string id)
+        {
+            throw new NotImplementedException();
         }
 
         #region private methods

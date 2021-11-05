@@ -8,13 +8,12 @@
     using Microsoft.Extensions.Configuration;
     using NiN.Database.Converters;
     using NiN.Database;
-    using NiN.Database.Models;
-    using NiN.Database.Models.Enums;
+    using NiN.Database.Models.Code;
+    using NiN.Database.Models.Code.Codes;
+    using NiN.Database.Models.Code.Enums;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
-    using Raven.Client.Document;
-    using Hovedtype = NiN.Database.Models.Hovedtype;
 
     public class CodeV23Service : ICodeV23Service
     {
@@ -187,7 +186,7 @@
 
         #region private methods
 
-        private static AllCodesCode ConvertNinKode2Code(NiN.Database.Models.Codes.Kode ninKode, string host)
+        private static AllCodesCode ConvertNinKode2Code(NinKode ninKode, string host)
         {
             return new AllCodesCode
             {
