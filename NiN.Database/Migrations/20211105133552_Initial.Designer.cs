@@ -10,7 +10,7 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNContext))]
-    [Migration("20211105075229_Initial")]
+    [Migration("20211105133552_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
