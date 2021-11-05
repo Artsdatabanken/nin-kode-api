@@ -9,10 +9,6 @@
 
     public class NiNContext : DbContext
     {
-        private readonly int _versionMajor = 2;
-        private readonly int _versionMinor = 3;
-        private readonly string _versionBeta = "";
-
         // Common
         public DbSet<NinVersion> NinVersion { get; set; }
 

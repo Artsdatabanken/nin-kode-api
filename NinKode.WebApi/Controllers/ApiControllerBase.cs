@@ -20,6 +20,8 @@
 
             if (version.StartsWith("v")) version = version[1..];
 
+            if (version.Equals("2b")) version = "2.1b";
+
             return version;
         }
     }
