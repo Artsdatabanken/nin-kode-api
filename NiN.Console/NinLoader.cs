@@ -63,10 +63,9 @@
             {
                 var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
 
-                Natursystem natursystem = null;
                 if (ninVersion != null)
                 {
-                    natursystem = context.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                    var natursystem = context.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
                     if (natursystem != null)
                     {
                         Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
