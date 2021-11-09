@@ -10,6 +10,7 @@ namespace NinKode.WebApi
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.OpenApi.Models;
+    using NiN.Export;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Utilities;
     using NinKode.Database.Services;
@@ -96,6 +97,7 @@ namespace NinKode.WebApi
 
             services.AddSingleton<ICodeService, CodeService>();
             services.AddSingleton<IVarietyService, VarietyService>();
+            services.AddSingleton<IExportService, ExportService>();
         }
 
         private static string CreateDescription()

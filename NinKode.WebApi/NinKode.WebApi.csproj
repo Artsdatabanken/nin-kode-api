@@ -46,8 +46,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\v23\" />
-  </ItemGroup>
-
 </Project>

@@ -30,6 +30,23 @@
             <param name="version">NiN-versjon</param>
             <returns></returns>
         </member>
+        <member name="T:NinKode.WebApi.Controllers.ExportController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.ExportController.#ctor(NinKode.Common.Interfaces.IExportService)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.ExportController.ExportToCsv(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
         <member name="T:NinKode.WebApi.Controllers.VarietyController">
             <summary>
             

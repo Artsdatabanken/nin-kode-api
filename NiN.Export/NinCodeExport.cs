@@ -11,8 +11,6 @@
     using Microsoft.EntityFrameworkCore;
     using NiN.Database;
     using NiN.Database.Models.Code;
-    using NiN.Database.Models.Code.Codes;
-    using NiN.Database.Models.Code.Enums;
     using NiN.Export.Map;
 
     public class NinCodeExport
