@@ -16,7 +16,7 @@
     [DisplayName("Kode")]
     [EnableCors]
     [Route("api/{version:required}/koder")]
-    public class CodeController : ApiControllerBase
+    public class CodeController : ApiControllerBase<CodeController>
     {
         private const string DefaultNinVersion = "v2.3";
         private readonly ICodeService _codeService;
@@ -39,7 +39,7 @@
         [Route("allekoder")]
         public IEnumerable<Codes> GetAll(string version = DefaultNinVersion)
         {
-            return _codeService.GetAll(base.GetHostPath(), base.GetVersion(version));
+            return _codeService.GetAll(base.Context, base.GetHostPath(), base.GetVersion(version));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@
         [Route("hentkode/{id:required}")]
         public Codes GetCode(string id = "NA", string version = DefaultNinVersion)
         {
-            return _codeService.GetByKode(id, GetHostPath(), base.GetVersion(version));
+            return _codeService.GetByKode(base.Context, id, GetHostPath(), base.GetVersion(version));
         }
     }
 }

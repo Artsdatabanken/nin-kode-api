@@ -7,10 +7,11 @@ namespace NinKode.WebApi
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.ApplicationModels;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.OpenApi.Models;
-    using NiN.Export;
+    using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Utilities;
     using NinKode.Database.Services;
@@ -23,6 +24,7 @@ namespace NinKode.WebApi
 
     public class Startup
     {
+        private IConfiguration Configuration { get; }
         private readonly string _swaggerDocumentTitle;
 
         public Startup(IConfiguration configuration)
@@ -30,8 +32,6 @@ namespace NinKode.WebApi
             Configuration = configuration;
             _swaggerDocumentTitle = Configuration.GetValue("SwaggerDocumentTitle", "NinKode API");
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -81,6 +81,13 @@ namespace NinKode.WebApi
                     Version = "beta",
                     Description = CreateDescription()
                 });
+            });
+
+            var defaultConnectionString = Configuration.GetConnectionString("Default");
+
+            services.AddDbContext<NiNContext>(o =>
+            {
+                o.UseSqlServer(defaultConnectionString, x => x.MigrationsAssembly("NinKode.Database"));
             });
 
             // Define singleton-objects

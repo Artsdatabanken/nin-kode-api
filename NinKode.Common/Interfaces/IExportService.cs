@@ -1,9 +1,10 @@
 ﻿namespace NinKode.Common.Interfaces
 {
     using System.IO;
+    using NiN.Database;
 
     public interface IExportService
     {
-        Stream ExportToCsv(string version);
+        Stream ExportToCsv(NiNContext context, string version);
     }
 }

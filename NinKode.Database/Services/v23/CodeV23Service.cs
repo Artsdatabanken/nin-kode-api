@@ -32,14 +32,14 @@
             _context = string.IsNullOrEmpty(connectionString) ? new NiNContext() : new NiNContext(connectionString);
         }
 
-        public IEnumerable<Codes> GetAll(string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "")
         {
             var list = new List<Codes>();
 
             return list;
         }
 
-        public Codes GetByKode(string id, string host, string version = "")
+        public Codes GetByKode(NiNContext context, string id, string host, string version = "")
         {
             Codes code = null;
 

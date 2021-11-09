@@ -26,7 +26,7 @@
         [Route("allekoder")]
         public IEnumerable<Codes> GetAll()
         {
-            var result = _codeService.GetAll(GetHostPath());
+            var result = _codeService.GetAll(null, GetHostPath());
             foreach (var code in result)
             {
                 yield return code;
@@ -37,7 +37,7 @@
         [Route("hentkode/{id}")]
         public Codes GetCode(string id)
         {
-            return _codeService.GetByKode(id, GetHostPath());
+            return _codeService.GetByKode(null, id, GetHostPath());
         }
 
         private string GetHostPath()

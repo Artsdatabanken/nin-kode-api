@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Reflection.Metadata.Ecma335;
     using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NiN.Database.Models.Variety;
     using NiN.Database.Models.Variety.Codes;
@@ -13,38 +11,27 @@
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Extension;
-    using NinKode.Database.Model.v22;
 
     public class VarietyService : IVarietyService
     {
-        private const string DbConnString = "NiNConnectionString";
 
-        private readonly NiNContext _context;
-
-        public VarietyService(IConfiguration configuration)
-        {
-            var connectionString = configuration.GetValue(DbConnString, "");
-
-            _context = string.IsNullOrEmpty(connectionString) ? new NiNContext() : new NiNContext(connectionString);
-        }
-
-        public IEnumerable<VarietyAllCodes> GetAll(string host, string version = "")
+        public IEnumerable<VarietyAllCodes> GetAll(NiNContext context, string host, string version = "")
         {
             var list = new List<VarietyAllCodes>();
 
             return list;
         }
 
-        public VarietyCode GetByKode(string id, string host, string version = "")
+        public VarietyCode GetByKode(NiNContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+            var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
             if (ninVersion == null) return null;
 
             id = id.Replace(" ", "_");
 
-            var variety = _context.VariasjonKode
+            var variety = context.VariasjonKode
                 .FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals(id));
 
             if (variety == null) return null;
@@ -54,7 +41,7 @@
             switch (variety.VarietyCategory)
             {
                 case VarietyEnum.VarietyLevel0:
-                    var v0 = _context.VarietyLevel0s
+                    var v0 = context.VarietyLevel0s
                         .Include(x => x.Kode)
                         .Include(x => x.UnderordnetKoder)
                         .FirstOrDefault(x => x.Kode.Id == variety.Id);
@@ -65,12 +52,12 @@
                     {
                         Name = v0.Navn,
                         Code = ConvertVarietyCode(v0.Kode, host),
-                        UnderordnetKoder = CreateUnderordnetKoder(v0.UnderordnetKoder, host)
+                        UnderordnetKoder = CreateUnderordnetKoder(context, v0.UnderordnetKoder, host)
                     };
                     break;
 
                 case VarietyEnum.VarietyLevel1:
-                    var v1 = _context.VarietyLevel1s
+                    var v1 = context.VarietyLevel1s
                         .Include(x => x.Kode)
                         .Include(x => x.OverordnetKode.Kode)
                         .Include(x => x.UnderordnetKoder)
@@ -87,12 +74,12 @@
                             Id = v1.OverordnetKode.Kode.KodeName,
                             Definition = $"{host}{v1.OverordnetKode.Kode.KodeName}"
                         },
-                        UnderordnetKoder = CreateUnderordnetKoder(v1.UnderordnetKoder, host)
+                        UnderordnetKoder = CreateUnderordnetKoder(context, v1.UnderordnetKoder, host)
                     };
                     break;
 
                 case VarietyEnum.VarietyLevel2:
-                    var v2 = _context.VarietyLevel2s
+                    var v2 = context.VarietyLevel2s
                         .Include(x => x.Kode)
                         .Include(x => x.OverordnetKode.Kode)
                         .Include(x => x.UnderordnetKoder)
@@ -109,12 +96,12 @@
                             Id = v2.OverordnetKode.Kode.KodeName,
                             Definition = $"{host}{v2.OverordnetKode.Kode.KodeName}"
                         },
-                        UnderordnetKoder = CreateUnderordnetKoder(v2.UnderordnetKoder, host)
+                        UnderordnetKoder = CreateUnderordnetKoder(context, v2.UnderordnetKoder, host)
                     };
                     break;
 
                 case VarietyEnum.VarietyLevel3:
-                    var v3 = _context.VarietyLevel3s
+                    var v3 = context.VarietyLevel3s
                         .Include(x => x.Kode)
                         .Include(x => x.OverordnetKode.Kode)
                         .Include(x => x.UnderordnetKoder)
@@ -131,12 +118,12 @@
                             Id = v3.OverordnetKode.Kode.KodeName,
                             Definition = $"{host}{v3.OverordnetKode.Kode.KodeName}"
                         },
-                        UnderordnetKoder = CreateUnderordnetKoder(v3.UnderordnetKoder, host)
+                        UnderordnetKoder = CreateUnderordnetKoder(context, v3.UnderordnetKoder, host)
                     };
                     break;
 
                 case VarietyEnum.VarietyLevel4:
-                    var v4 = _context.VarietyLevel4s
+                    var v4 = context.VarietyLevel4s
                         .Include(x => x.Kode)
                         .Include(x => x.OverordnetKode.Kode)
                         .Include(x => x.UnderordnetKoder)
@@ -153,12 +140,12 @@
                             Id = v4.OverordnetKode.Kode.KodeName,
                             Definition = $"{host}{v4.OverordnetKode.Kode.KodeName}"
                         },
-                        UnderordnetKoder = CreateUnderordnetKoder(v4.UnderordnetKoder, host)
+                        UnderordnetKoder = CreateUnderordnetKoder(context, v4.UnderordnetKoder, host)
                     };
                     break;
 
                 case VarietyEnum.VarietyLevel5:
-                    var v5 = _context.VarietyLevel5s
+                    var v5 = context.VarietyLevel5s
                         .Include(x => x.Kode)
                         .Include(x => x.OverordnetKode.Kode)
                         .FirstOrDefault(x => x.Kode.Id == variety.Id);
@@ -197,7 +184,7 @@
             };
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(ICollection<VarietyLevel1> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel1> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -205,7 +192,7 @@
 
             foreach (var kode in koder)
             {
-                var k = _context.VarietyLevel1s
+                var k = context.VarietyLevel1s
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == kode.Id);
 
@@ -221,7 +208,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(ICollection<VarietyLevel2> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel2> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -229,7 +216,7 @@
 
             foreach (var kode in koder)
             {
-                var k = _context.VarietyLevel2s
+                var k = context.VarietyLevel2s
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == kode.Id);
 
@@ -245,7 +232,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(ICollection<VarietyLevel3> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel3> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -253,7 +240,7 @@
 
             foreach (var kode in koder)
             {
-                var k = _context.VarietyLevel3s
+                var k = context.VarietyLevel3s
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == kode.Id);
 
@@ -269,7 +256,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(ICollection<VarietyLevel4> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel4> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -277,7 +264,7 @@
 
             foreach (var varietyLevel5 in koder)
             {
-                var k = _context.VarietyLevel4s
+                var k = context.VarietyLevel4s
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == varietyLevel5.Id);
 
@@ -293,7 +280,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(ICollection<VarietyLevel5> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel5> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -301,7 +288,7 @@
 
             foreach (var kode in koder)
             {
-                var k = _context.VarietyLevel5s
+                var k = context.VarietyLevel5s
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == kode.Id);
 

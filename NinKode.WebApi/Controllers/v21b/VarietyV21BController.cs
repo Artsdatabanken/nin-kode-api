@@ -26,7 +26,7 @@
         [Route("allekoder")]
         public IEnumerable<VarietyAllCodes> GetAll()
         {
-            var result = _varietyService.GetAll(GetHostPath());
+            var result = _varietyService.GetAll(null, GetHostPath());
             foreach (var variety in result)
             {
                 yield return variety;
@@ -37,7 +37,7 @@
         [Route("hentkode/{id}")]
         public VarietyCode GetCode(string id)
         {
-            return _varietyService.GetByKode(id, GetHostPath());
+            return _varietyService.GetByKode(null, id, GetHostPath());
         }
 
         private string GetHostPath()

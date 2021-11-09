@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Extension;
@@ -47,7 +48,7 @@
             );
         }
 
-        public IEnumerable<VarietyAllCodes> GetAll(string host, string version = "")
+        public IEnumerable<VarietyAllCodes> GetAll(NiNContext context, string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -62,7 +63,7 @@
             }
         }
 
-        public VarietyCode GetByKode(string id, string host, string version = "")
+        public VarietyCode GetByKode(NiNContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

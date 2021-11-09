@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
@@ -48,7 +49,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "")
         {
             var list = new List<Codes>();
 
@@ -69,7 +70,7 @@
             return list;
         }
 
-        public Codes GetByKode(string id, string host, string version = "")
+        public Codes GetByKode(NiNContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

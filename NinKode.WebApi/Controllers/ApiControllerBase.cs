@@ -2,13 +2,21 @@
 {
     using System;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.DependencyInjection;
+    using NiN.Database;
 
-    public class ApiControllerBase : ControllerBase
+    public abstract class ApiControllerBase<T> : Controller where T : ApiControllerBase<T>
     {
+        private NiNContext _context;
+
+        protected NiNContext Context => _context ??= HttpContext.RequestServices.GetService<NiNContext>();
+
         internal string GetHostPath()
         {
             var path = Request.Path.Value;
-            path = path.Substring(0, path.LastIndexOf("/", StringComparison.Ordinal) + 1);
+            if (path == null) return null;
+
+            path = path[..(path.LastIndexOf("/", StringComparison.Ordinal) + 1)];
             var protocol = Request.IsHttps ? "s" : "";
             return $"http{protocol}://{Request.Host}{path}";
         }

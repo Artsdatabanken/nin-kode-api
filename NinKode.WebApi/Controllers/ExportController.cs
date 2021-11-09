@@ -13,7 +13,7 @@
     [DisplayName("Eksport")]
     [EnableCors]
     [Route("api/{version:required}/eksport")]
-    public class ExportController : ApiControllerBase
+    public class ExportController : ApiControllerBase<ExportController>
     {
         private const string DefaultNinVersion = "v2.3";
 
@@ -36,7 +36,7 @@
         [Route("csv")]
         public ActionResult ExportToCsv(string version = DefaultNinVersion)
         {
-            var stream = _exportService.ExportToCsv(base.GetVersion(version));
+            var stream = _exportService.ExportToCsv(base.Context, base.GetVersion(version));
             if (stream == null) return new BadRequestResult();
 
             return File(
