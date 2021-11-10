@@ -86,8 +86,8 @@ namespace NinKode.WebApi
             var connectionString = Configuration.GetConnectionString("Default");
             if (string.IsNullOrEmpty(connectionString))
             {
-                connectionString = Configuration.GetValue("ConnectionString", "");
-                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'ConnectionString'");
+                connectionString = Configuration.GetValue("NinApiConnectionString", "");
+                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'NinApiConnectionString'");
             }
 
             services.AddDbContext<NiNDbContext>(o =>
