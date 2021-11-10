@@ -14,12 +14,98 @@
 
     public class VarietyService : IVarietyService
     {
-
         public IEnumerable<VarietyAllCodes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
-            var list = new List<VarietyAllCodes>();
+            if (host.EndsWith("variasjon/", StringComparison.OrdinalIgnoreCase)) host += "hentkode/";
+            var varietyList = dbContext.VariasjonKode.Include(x => x.Version).Where(x => x.Version.Navn.Equals(version)).ToList();
+            foreach (var variety in varietyList)
+            {
+                VarietyAllCodes codes = null;
 
-            return list;
+                switch (variety.VarietyCategory)
+                {
+                    case VarietyEnum.VarietyLevel0:
+                        var v0 = dbContext.VarietyLevel0s
+                            .Include(x => x.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v0 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v0, host);
+
+                        break;
+
+                    case VarietyEnum.VarietyLevel1:
+                        var v1 = dbContext.VarietyLevel1s
+                            .Include(x => x.Kode)
+                            .Include(x => x.OverordnetKode.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v1 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v1, host);
+
+                        break;
+
+                    case VarietyEnum.VarietyLevel2:
+                        var v2 = dbContext.VarietyLevel2s
+                            .Include(x => x.Kode)
+                            .Include(x => x.OverordnetKode.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v2 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v2, host);
+
+                        break;
+
+                    case VarietyEnum.VarietyLevel3:
+                        var v3 = dbContext.VarietyLevel3s
+                            .Include(x => x.Kode)
+                            .Include(x => x.OverordnetKode.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v3 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v3, host);
+
+                        break;
+
+                    case VarietyEnum.VarietyLevel4:
+                        var v4 = dbContext.VarietyLevel4s
+                            .Include(x => x.Kode)
+                            .Include(x => x.OverordnetKode.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v4 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v4, host);
+
+                        break;
+
+                    case VarietyEnum.VarietyLevel5:
+                        var v5 = dbContext.VarietyLevel5s
+                            .Include(x => x.Kode)
+                            .Include(x => x.OverordnetKode.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == variety.Id);
+
+                        if (v5 == null) continue;
+
+                        codes = CreateVarietyAllCodes(v5, host);
+
+                        break;
+                }
+
+                if (codes == null) continue;
+
+                yield return codes;
+            }
         }
 
         public VarietyCode GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
@@ -175,6 +261,88 @@
 
         #region private methods
 
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel0 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn
+            };
+        }
+
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel1 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn,
+                OverordnetKode = CreateVarietyAllCodesCode(variety.OverordnetKode.Kode.KodeName, host)
+            };
+        }
+
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel2 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn,
+                OverordnetKode = CreateVarietyAllCodesCode(variety.OverordnetKode.Kode.KodeName, host)
+            };
+        }
+
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel3 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn,
+                OverordnetKode = CreateVarietyAllCodesCode(variety.OverordnetKode.Kode.KodeName, host)
+            };
+        }
+
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel4 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn,
+                OverordnetKode = CreateVarietyAllCodesCode(variety.OverordnetKode.Kode.KodeName, host)
+            };
+        }
+
+        private static VarietyAllCodes CreateVarietyAllCodes(VarietyLevel5 variety, string host)
+        {
+            if (variety == null) return null;
+
+            return new VarietyAllCodes
+            {
+                Code = CreateVarietyAllCodesCode(variety.Kode.KodeName, host),
+                Name = variety.Navn,
+                OverordnetKode = CreateVarietyAllCodesCode(variety.OverordnetKode.Kode.KodeName, host)
+            };
+        }
+
+        private static VarietyAllCodesCode CreateVarietyAllCodesCode(string kode, string host)
+        {
+            if (string.IsNullOrEmpty(kode)) return null;
+
+            return new VarietyAllCodesCode
+            {
+                Id = kode,
+                Definition = $"{host}{kode.Replace(" ", "_")}"
+            };
+        }
+
         private static VarietyCodeCode ConvertVarietyCode(VariasjonKode kode, string host)
         {
             return new VarietyCodeCode
@@ -186,7 +354,7 @@
 
         private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext dbContext, ICollection<VarietyLevel1> koder, string host)
         {
-            if (!koder.Any()) return null;
+            if (koder == null || !koder.Any()) return null;
 
             var list = new List<VarietyCodeCode>();
 
@@ -210,7 +378,7 @@
 
         private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext dbContext, ICollection<VarietyLevel2> koder, string host)
         {
-            if (!koder.Any()) return null;
+            if (koder == null || !koder.Any()) return null;
 
             var list = new List<VarietyCodeCode>();
 
@@ -234,7 +402,7 @@
 
         private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext dbContext, ICollection<VarietyLevel3> koder, string host)
         {
-            if (!koder.Any()) return null;
+            if (koder == null || !koder.Any()) return null;
 
             var list = new List<VarietyCodeCode>();
 
@@ -258,7 +426,7 @@
 
         private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext dbContext, ICollection<VarietyLevel4> koder, string host)
         {
-            if (!koder.Any()) return null;
+            if (koder == null || !koder.Any()) return null;
 
             var list = new List<VarietyCodeCode>();
 
@@ -282,7 +450,7 @@
 
         private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext dbContext, ICollection<VarietyLevel5> koder, string host)
         {
-            if (!koder.Any()) return null;
+            if (koder == null || !koder.Any()) return null;
 
             var list = new List<VarietyCodeCode>();
 
