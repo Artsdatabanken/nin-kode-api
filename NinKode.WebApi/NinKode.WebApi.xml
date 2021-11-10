@@ -73,5 +73,22 @@
             <param name="version">NiN-versjon</param>
             <returns></returns>
         </member>
+        <member name="T:NinKode.WebApi.Controllers.VersionController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.VersionController.#ctor(NinKode.Common.Interfaces.IVersionService)">
+            <summary>
+            
+            </summary>
+            <param name="versionService"></param>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.VersionController.GetVersions">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

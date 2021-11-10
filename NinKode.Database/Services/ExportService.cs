@@ -16,9 +16,5 @@
             stream.Seek(0, SeekOrigin.Begin);
             return stream;
         }
-
-        #region private methods
-
-        #endregion
     }
 }

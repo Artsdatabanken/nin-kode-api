@@ -20,7 +20,6 @@ namespace NinKode.WebApi
     using NinKode.Database.Services.v21;
     using NinKode.Database.Services.v21b;
     using NinKode.Database.Services.v22;
-    using NinKode.Database.Services.v23;
 
     public class Startup
     {
@@ -104,12 +103,11 @@ namespace NinKode.WebApi
             services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
             services.AddSingleton<ICodeV22Service, CodeV22Service>();
             services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
-            services.AddSingleton<ICodeV23Service, CodeV23Service>();
-            services.AddSingleton<IVarietyV23Service, VarietyV23Service>();
 
             services.AddSingleton<ICodeService, CodeService>();
             services.AddSingleton<IVarietyService, VarietyService>();
             services.AddSingleton<IExportService, ExportService>();
+            services.AddSingleton<IVersionService, VersionService>();
         }
 
         private static string CreateDescription()
