@@ -11,9 +11,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NinKode.Database", "NinKode
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{30236E4F-012A-41BA-818E-C5508ED3E64A}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		.travis.yml = .travis.yml
 		Dockerfile = Dockerfile
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.Database", "NiN.Database\NiN.Database.csproj", "{770203A8-DA74-4EEB-95E5-0F8CBE9B019C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NinKode", "NinKode", "{75D994BD-77C9-47EE-A2AD-8071BE0C9006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{54871604-1AFF-4D3A-AD09-863F76179566}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NiN", "NiN", "{46EF6F12-0079-4702-B5D0-5C319C217FA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.Console", "NiN.Console\NiN.Console.csproj", "{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiN.Export", "NiN.Export\NiN.Export.csproj", "{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +46,28 @@ Global
 		{D4331E41-18F9-480C-9D1D-88682344A463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4331E41-18F9-480C-9D1D-88682344A463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4331E41-18F9-480C-9D1D-88682344A463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770203A8-DA74-4EEB-95E5-0F8CBE9B019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770203A8-DA74-4EEB-95E5-0F8CBE9B019C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770203A8-DA74-4EEB-95E5-0F8CBE9B019C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770203A8-DA74-4EEB-95E5-0F8CBE9B019C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FEC9411-96C6-4624-B822-97424F616CC6} = {54871604-1AFF-4D3A-AD09-863F76179566}
+		{D4331E41-18F9-480C-9D1D-88682344A463} = {75D994BD-77C9-47EE-A2AD-8071BE0C9006}
+		{770203A8-DA74-4EEB-95E5-0F8CBE9B019C} = {46EF6F12-0079-4702-B5D0-5C319C217FA6}
+		{91C7732E-D9AA-446C-8AC7-A39D5B5FF5DF} = {46EF6F12-0079-4702-B5D0-5C319C217FA6}
+		{01D2B2EC-924C-4ED6-8E47-EA600F7D72E9} = {54871604-1AFF-4D3A-AD09-863F76179566}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E11C2B2-96F2-4E82-BA4D-7D89391ADD01}

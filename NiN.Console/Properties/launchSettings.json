@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NiN.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "import 1 2 2.1 2.1b 2.2 2.3"
+    }
+  }
+}

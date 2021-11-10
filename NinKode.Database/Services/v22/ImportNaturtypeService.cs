@@ -31,7 +31,7 @@
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
             var codeV21Service = new Services.v21.CodeV21Service(_configuration);
-            var naKode = codeV21Service.GetByKode(rootName, _dbUrl);
+            var naKode = codeV21Service.GetByKode(null, rootName, _dbUrl);
 
             var rootNaturtype = new NaturTypeV22
             {
@@ -56,10 +56,10 @@
 
             foreach (var code in naKode.UnderordnetKoder)
             {
-                naKode = _codeV22Service.GetByKode(code.Id, _dbUrl);
+                naKode = _codeV22Service.GetByKode(null, code.Id, _dbUrl);
                 if (naKode == null)
                 {
-                    naKode = codeV21Service.GetByKode(code.Id, _dbUrl);
+                    naKode = codeV21Service.GetByKode(null, code.Id, _dbUrl);
                     // add to current database
                     var missing = new NaturTypeV22
                     {

@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Extension;
@@ -47,7 +48,7 @@
             );
         }
 
-        public IEnumerable<VarietyAllCodes> GetAll(string host)
+        public IEnumerable<VarietyAllCodes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -62,7 +63,7 @@
             }
         }
 
-        public VarietyCode GetByKode(string id, string host)
+        public VarietyCode GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -81,7 +82,46 @@
             return null;
         }
 
+        public VarietyCode GetVariety(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+
+            using (var session = _store.OpenSession())
+            {
+                var query = session.Query<VariasjonV21B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                using (var enumerator = session.Advanced.Stream(query))
+                {
+                    while (enumerator.MoveNext())
+                    {
+                        return CreateVarietyByCode(enumerator.Current?.Document);
+                    }
+                }
+            }
+
+            return null;
+        }
+
         #region private methods
+
+        private static VarietyCode CreateVarietyByCode(VariasjonV21B variasjon)
+        {
+            if (variasjon == null) return null;
+
+            return new VarietyCode
+            {
+                Code = new VarietyCodeCode
+                {
+                    Id = variasjon.Kode
+                },
+                Name = variasjon.Navn,
+                OverordnetKode = new VarietyCodeCode
+                {
+                    Id = variasjon.OverordnetKode
+                },
+                UnderordnetKoder = variasjon.UnderordnetKoder == null ? null : CreateVarietyCode(variasjon.UnderordnetKoder, "").ToArray()
+
+            };
+        }
 
         private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV21B variasjon, string host)
         {

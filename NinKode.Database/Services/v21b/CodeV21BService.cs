@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
@@ -47,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(string host)
+        public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -62,7 +63,7 @@
             }
         }
 
-        public Codes GetByKode(string id, string host)
+        public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -83,7 +84,55 @@
             return null;
         }
 
+        public Codes GetCode(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+
+            id = id.Replace("_", " ");
+
+            using (var session = _store.OpenSession())
+            {
+                var query = session.Query<NaturTypeV21B>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+                using (var enumerator = session.Advanced.Stream(query))
+                {
+                    while (enumerator.MoveNext())
+                    {
+                        return CreateCodeByNaturtype(enumerator.Current?.Document);
+                    }
+                }
+            }
+
+            return null;
+        }
+
         #region private methods
+
+        private static Codes CreateCodeByNaturtype(NaturTypeV21B naturType)
+        {
+            if (naturType == null) return null;
+
+            return new Codes
+            {
+                Navn = naturType.Navn,
+                Kategori = naturType.Kategori,
+                Kode = new AllCodesCode
+                {
+                    Id = naturType.Kode,
+                    Definition = $"{RemoveNaFromKode(naturType.Kode)}"
+                },
+                ElementKode = naturType.ElementKode,
+                UnderordnetKoder = naturType.UnderordnetKoder == null ? null : CreateCodesByNaturtype(naturType.UnderordnetKoder, "").ToArray(),
+                Kartleggingsenheter = naturType.Kartleggingsenheter == null ? null : CreateKartleggingsenheter(naturType.Kartleggingsenheter, ""),
+                Miljovariabler = naturType.Trinn == null ? null : CreateTrinn(naturType.Trinn).ToArray()
+            };
+        }
+
+        private static string RemoveNaFromKode(string kode)
+        {
+            if (!kode.StartsWith("NA ")) return kode;
+
+            return kode.Substring("NA ".Length);
+        }
 
         private static Codes CreateCodesByNaturtype(NaturTypeV21B naturType, string host)
         {
