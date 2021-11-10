@@ -11,7 +11,7 @@
     /// </summary>
     [ApiController]
     [ApiExplorerSettings(GroupName = "beta")]
-    [DisplayName("Versjoner")]
+    [DisplayName("Versjon")]
     [EnableCors]
     [Route("api")]
     public class VersionController : ApiControllerBase<VersionController>
