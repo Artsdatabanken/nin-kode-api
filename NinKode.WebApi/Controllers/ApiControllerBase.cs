@@ -7,9 +7,9 @@
 
     public abstract class ApiControllerBase<T> : Controller where T : ApiControllerBase<T>
     {
-        private NiNDbContext _context;
+        private NiNDbContext _dbContext;
 
-        protected NiNDbContext Context => _context ??= HttpContext.RequestServices.GetService<NiNDbContext>();
+        protected NiNDbContext DbContext => _dbContext ??= HttpContext.RequestServices.GetService<NiNDbContext>();
 
         internal string GetHostPath()
         {

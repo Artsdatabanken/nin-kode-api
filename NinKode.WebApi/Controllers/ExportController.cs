@@ -36,7 +36,7 @@
         [Route("csv")]
         public ActionResult ExportToCsv(string version = DefaultNinVersion)
         {
-            var stream = _exportService.ExportToCsv(base.Context, base.GetVersion(version));
+            var stream = _exportService.ExportToCsv(base.DbContext, base.GetVersion(version));
             if (stream == null) return new BadRequestResult();
 
             return File(

@@ -89,7 +89,7 @@
         #region private methods
 
         private static void AddNatursystem(ICodeService codeService,
-                                           NiNDbContext context,
+                                           NiNDbContext dbContext,
                                            NinVersion ninVersion,
                                            Codes na)
         {
@@ -104,13 +104,13 @@
                     Definisjon = na.Kode.Definition
                 }
             };
-            context.Natursystem.Add(natursystem);
+            dbContext.Natursystem.Add(natursystem);
 
-            AddHovedtypegrupper(codeService, context, ninVersion, na, natursystem);
+            AddHovedtypegrupper(codeService, dbContext, ninVersion, na, natursystem);
         }
 
         private static void AddHovedtypegrupper(ICodeService codeService,
-                                                NiNDbContext context,
+                                                NiNDbContext dbContext,
                                                 NinVersion ninVersion,
                                                 Codes na,
                                                 Natursystem natursystem)
@@ -123,9 +123,9 @@
                 
                 Hovedtypegruppe hovedtypegruppe = null;
 
-                if (context.Hovedtypegruppe.Any())
+                if (dbContext.Hovedtypegruppe.Any())
                 {
-                    hovedtypegruppe = context.Hovedtypegruppe
+                    hovedtypegruppe = dbContext.Hovedtypegruppe
                         .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
                     if (hovedtypegruppe != null && !hovedtypegruppe.Navn.Trim().Equals(gruppe.Navn.Trim()))
                     {
@@ -147,10 +147,10 @@
                             Definisjon = gruppe.Kode.Definition.Trim()
                         }
                     };
-                    context.Hovedtypegruppe.Add(hovedtypegruppe);
+                    dbContext.Hovedtypegruppe.Add(hovedtypegruppe);
                 }
 
-                AddHovedtyper(codeService, context, ninVersion, gruppe, hovedtypegruppe);
+                AddHovedtyper(codeService, dbContext, ninVersion, gruppe, hovedtypegruppe);
             }
 
         }
@@ -246,7 +246,7 @@
         }
 
         private static void AddKartleggingsenheter(ICodeService codeService,
-                                                   NiNDbContext context,
+                                                   NiNDbContext dbContext,
                                                    NinVersion ninVersion,
                                                    Codes hvdtype,
                                                    Hovedtype hovedtype)
@@ -261,9 +261,9 @@
 
                     Kartleggingsenhet kartleggingsenhet = null;
 
-                    if (context.Kartleggingsenhet.Any())
+                    if (dbContext.Kartleggingsenhet.Any())
                     {
-                        kartleggingsenhet = context.Kartleggingsenhet
+                        kartleggingsenhet = dbContext.Kartleggingsenhet
                             .FirstOrDefault(x =>
                                 x.Version.Navn.Equals(ninVersion.Navn) &&
                                 x.Kode.Id.Equals(krt.ElementKode));
@@ -303,13 +303,13 @@
                     else
                     {
                         kartleggingsenhet.Definisjon = krt.Navn.Trim();
-                        context.Kartleggingsenhet.Update(kartleggingsenhet);
+                        dbContext.Kartleggingsenhet.Update(kartleggingsenhet);
                     }
                 }
             }
         }
 
-        private static void AddMiljovariabler(NiNDbContext context,
+        private static void AddMiljovariabler(NiNDbContext dbContext,
                                               NinVersion ninVersion,
                                               Codes hvdtype,
                                               Hovedtype hovedtype)
@@ -320,9 +320,9 @@
             {
                 Miljovariabel miljovariabel = null;
 
-                if (context.Miljovariabel.Any())
+                if (dbContext.Miljovariabel.Any())
                 {
-                    miljovariabel = context.Miljovariabel
+                    miljovariabel = dbContext.Miljovariabel
                         .FirstOrDefault(x =>
                             x.Version.Navn.Equals(ninVersion.Navn) &&
                             x.Kode.Kode.Equals(child.Kode));
@@ -350,12 +350,12 @@
                         AddTrinn(ninVersion, child, miljovariabel, hovedtype);
                     }
 
-                    context.Miljovariabel.Add(miljovariabel);
+                    dbContext.Miljovariabel.Add(miljovariabel);
                 }
                 else
                 {
                     miljovariabel.Navn = child.Navn.Trim();
-                    context.Miljovariabel.Update(miljovariabel);
+                    dbContext.Miljovariabel.Update(miljovariabel);
                 }
             }
         }

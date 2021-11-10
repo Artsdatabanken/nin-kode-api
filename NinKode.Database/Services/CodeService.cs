@@ -16,23 +16,23 @@
 
     public class CodeService : ICodeService
     {
-        public IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
             var list = new List<Codes>();
 
             return list;
         }
 
-        public Codes GetByKode(NiNDbContext context, string id, string host, string version = "")
+        public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
             if (ninVersion == null) return null;
 
             id = id.Replace("_", " ");
 
-            var kode = context.Kode
+            var kode = dbContext.Kode
                 .FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals(id));
 
             if (kode == null) return null;
@@ -42,7 +42,7 @@
             switch (kode.Kategori)
             {
                 case KategoriEnum.Naturmangfoldnivå:
-                    var natursystem = context.Natursystem
+                    var natursystem = dbContext.Natursystem
                         .Include(x => x.Kode)
                         .Include(x => x.UnderordnetKoder)
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
@@ -58,13 +58,13 @@
 
                     if (natursystem.UnderordnetKoder.Any())
                     {
-                        code.UnderordnetKoder = CreateUnderordnetKoder(context, natursystem.UnderordnetKoder, host);
+                        code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, natursystem.UnderordnetKoder, host);
                     }
 
                     break;
 
                 case KategoriEnum.Hovedtypegruppe:
-                    var hovedtypegruppe = context.Hovedtypegruppe
+                    var hovedtypegruppe = dbContext.Hovedtypegruppe
                         .Include(x => x.Natursystem)
                         .Include(x => x.Natursystem.Kode)
                         .Include(x => x.Kode)
@@ -83,13 +83,13 @@
 
                     if (hovedtypegruppe.UnderordnetKoder.Any())
                     {
-                        code.UnderordnetKoder = CreateUnderordnetKoder(context, hovedtypegruppe.UnderordnetKoder, host);
+                        code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, hovedtypegruppe.UnderordnetKoder, host);
                     }
 
                     break;
 
                 case KategoriEnum.Hovedtype:
-                    var hovedtype = context.Hovedtype
+                    var hovedtype = dbContext.Hovedtype
                         .Include(x => x.Hovedtypegruppe)
                         .Include(x => x.Hovedtypegruppe.Kode)
                         .Include(x => x.UnderordnetKoder)
@@ -109,23 +109,23 @@
 
                     if (hovedtype.UnderordnetKoder.Any())
                     {
-                        code.UnderordnetKoder = CreateUnderordnetKoder(context, hovedtype.UnderordnetKoder, host);
+                        code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, hovedtype.UnderordnetKoder, host);
                     }
 
                     if (hovedtype.Kartleggingsenheter.Any())
                     {
-                        code.Kartleggingsenheter = CreateKartleggingsenheter(context, hovedtype.Kartleggingsenheter, host);
+                        code.Kartleggingsenheter = CreateKartleggingsenheter(dbContext, hovedtype.Kartleggingsenheter, host);
                     }
 
                     if (hovedtype.Miljovariabler.Any())
                     {
-                        code.Miljovariabler = CreateMiljovariabler(context, hovedtype.Miljovariabler);
+                        code.Miljovariabler = CreateMiljovariabler(dbContext, hovedtype.Miljovariabler);
                     }
 
                     break;
 
                 case KategoriEnum.Grunntype:
-                    var grunntype = context.Grunntype
+                    var grunntype = dbContext.Grunntype
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
@@ -143,7 +143,7 @@
                     break;
 
                 case KategoriEnum.Kartleggingsenhet:
-                    var kartlegging = context.Kartleggingsenhet
+                    var kartlegging = dbContext.Kartleggingsenhet
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
@@ -180,13 +180,13 @@
             };
         }
 
-        private EnvironmentVariable[] CreateMiljovariabler(NiNDbContext context, IEnumerable<Miljovariabel> entities)
+        private EnvironmentVariable[] CreateMiljovariabler(NiNDbContext dbContext, IEnumerable<Miljovariabel> entities)
         {
             var variables = new List<EnvironmentVariable>();
 
             foreach (var m in entities)
             {
-                var miljovariabel = context.Miljovariabel
+                var miljovariabel = dbContext.Miljovariabel
                     .Include(x => x.Kode)
                     .Include(x => x.Trinn)
                     .FirstOrDefault(x => x.Id == m.Id);
@@ -199,20 +199,20 @@
                     LKMKategori = miljovariabel.LkmKategori,
                     Navn = miljovariabel.Navn,
                     Type = miljovariabel.Type,
-                    Trinn = CreateTrinn(context, miljovariabel.Trinn)
+                    Trinn = CreateTrinn(dbContext, miljovariabel.Trinn)
                 });
             }
 
             return variables.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Step[] CreateTrinn(NiNDbContext context, IEnumerable<Trinn> entities)
+        private Step[] CreateTrinn(NiNDbContext dbContext, IEnumerable<Trinn> entities)
         {
             var steps = new List<Step>();
 
             foreach (var t in entities)
             {
-                var trinn = context.Trinn
+                var trinn = dbContext.Trinn
                     .Include(x => x.Kode)
                     .Include(x => x.Basistrinn)
                     .FirstOrDefault(x => x.Id == t.Id);
@@ -230,13 +230,13 @@
             return steps.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(NiNDbContext context, IEnumerable<Kartleggingsenhet> entities, string host)
+        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(NiNDbContext dbContext, IEnumerable<Kartleggingsenhet> entities, string host)
         {
             var codes = new Dictionary<int, IList<AllCodesCode>>();
 
             foreach (var k in entities)
             {
-                var kartleggingsenhet = context.Kartleggingsenhet
+                var kartleggingsenhet = dbContext.Kartleggingsenhet
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == k.Id);
 
@@ -252,13 +252,13 @@
             return codes.ToDictionary(code => code.Key.ToString(), code => CreateOrderedList(code.Value));
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Hovedtypegruppe> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext dbContext, IEnumerable<Hovedtypegruppe> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
             foreach (var g in entities)
             {
-                var hovedtypegruppe = context.Hovedtypegruppe
+                var hovedtypegruppe = dbContext.Hovedtypegruppe
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == g.Id);
 
@@ -270,13 +270,13 @@
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Grunntype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext dbContext, IEnumerable<Grunntype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
             foreach (var g in entities)
             {
-                var grunntype = context.Grunntype
+                var grunntype = dbContext.Grunntype
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == g.Id);
 
@@ -288,13 +288,13 @@
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Hovedtype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext dbContext, IEnumerable<Hovedtype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
             foreach (var h in entities)
             {
-                var hovedtype = context.Hovedtype
+                var hovedtype = dbContext.Hovedtype
                     .Include(x => x.Kode)
                     .FirstOrDefault(x => x.Id == h.Id);
 

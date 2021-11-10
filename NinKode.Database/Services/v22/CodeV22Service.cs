@@ -48,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
             var list = new List<Codes>();
 
@@ -69,7 +69,7 @@
             return list;
         }
 
-        public Codes GetByKode(NiNDbContext context, string id, string host, string version = "")
+        public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

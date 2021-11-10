@@ -77,7 +77,7 @@
         #region private methods
 
         private static void AddVarietyLevel0(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCodeCode varietyCodeCode)
         {
@@ -93,13 +93,13 @@
                     KodeName = variety.Code.Id.Trim()
                 }
             };
-            context.VarietyLevel0s.Add(varietyLevel);
+            dbContext.VarietyLevel0s.Add(varietyLevel);
 
-            AddVarietyLevel1(varietyService, context, ninVersion, variety, varietyLevel);
+            AddVarietyLevel1(varietyService, dbContext, ninVersion, variety, varietyLevel);
         }
 
         private static void AddVarietyLevel1(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel0 parentVarietyLevel)
@@ -121,14 +121,14 @@
                         KodeName = variety.Code.Id.Trim()
                     }
                 };
-                context.VarietyLevel1s.Add(varietyLevel);
+                dbContext.VarietyLevel1s.Add(varietyLevel);
 
-                AddVarietyLevel2(varietyService, context, ninVersion, variety, varietyLevel);
+                AddVarietyLevel2(varietyService, dbContext, ninVersion, variety, varietyLevel);
             }
         }
 
         private static void AddVarietyLevel2(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel1 parentVarietyLevel)
@@ -150,14 +150,14 @@
                         KodeName = variety.Code.Id.Trim()
                     }
                 };
-                context.VarietyLevel2s.Add(varietyLevel);
+                dbContext.VarietyLevel2s.Add(varietyLevel);
 
-                AddVarietyLevel3(varietyService, context, ninVersion, variety, varietyLevel);
+                AddVarietyLevel3(varietyService, dbContext, ninVersion, variety, varietyLevel);
             }
         }
 
         private static void AddVarietyLevel3(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel2 parentVarietyLevel)
@@ -179,14 +179,14 @@
                         KodeName = variety.Code.Id.Trim()
                     }
                 };
-                context.VarietyLevel3s.Add(varietyLevel);
+                dbContext.VarietyLevel3s.Add(varietyLevel);
 
-                AddVarietyLevel4(varietyService, context, ninVersion, variety, varietyLevel);
+                AddVarietyLevel4(varietyService, dbContext, ninVersion, variety, varietyLevel);
             }
         }
 
         private static void AddVarietyLevel4(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel3 parentVarietyLevel)
@@ -208,14 +208,14 @@
                         KodeName = variety.Code.Id.Trim()
                     }
                 };
-                context.VarietyLevel4s.Add(varietyLevel);
+                dbContext.VarietyLevel4s.Add(varietyLevel);
 
-                AddVarietyLevel5(varietyService, context, ninVersion, variety, varietyLevel);
+                AddVarietyLevel5(varietyService, dbContext, ninVersion, variety, varietyLevel);
             }
         }
 
         private static void AddVarietyLevel5(IVarietyService varietyService,
-                                             NiNDbContext context,
+                                             NiNDbContext dbContext,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel4 parentVarietyLevel)
@@ -237,7 +237,7 @@
                         KodeName = variety.Code.Id.Trim()
                     }
                 };
-                context.VarietyLevel5s.Add(varietyLevel);
+                dbContext.VarietyLevel5s.Add(varietyLevel);
 
                 if (variety.UnderordnetKoder == null) return;
 

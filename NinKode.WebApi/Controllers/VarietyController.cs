@@ -38,7 +38,7 @@
         [Route("allekoder")]
         public IEnumerable<VarietyAllCodes> GetAll(string version = DefaultNinVersion)
         {
-            var result = _varietyService.GetAll(base.Context, GetHostPath(), base.GetVersion(version));
+            var result = _varietyService.GetAll(base.DbContext, GetHostPath(), base.GetVersion(version));
             foreach (var variety in result)
             {
                 yield return variety;
@@ -55,7 +55,7 @@
         [Route("hentkode/{id:required}")]
         public VarietyCode GetCode(string id = "BeSys0", string version = DefaultNinVersion)
         {
-            return _varietyService.GetByKode(base.Context, id, GetHostPath(), base.GetVersion(version));
+            return _varietyService.GetByKode(base.DbContext, id, GetHostPath(), base.GetVersion(version));
         }
     }
 }
