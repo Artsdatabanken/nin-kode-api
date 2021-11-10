@@ -9,7 +9,6 @@
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v22;
-    using Raven.Abstractions.Data;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
@@ -49,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "")
         {
             var list = new List<Codes>();
 
@@ -70,7 +69,7 @@
             return list;
         }
 
-        public Codes GetByKode(NiNContext context, string id, string host, string version = "")
+        public Codes GetByKode(NiNDbContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

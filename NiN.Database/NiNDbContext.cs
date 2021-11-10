@@ -7,7 +7,7 @@
     using NiN.Database.Models.Variety;
     using NiN.Database.Models.Variety.Codes;
 
-    public class NiNContext : DbContext
+    public class NiNDbContext : DbContext
     {
         // Common
         public DbSet<NinVersion> NinVersion { get; set; }
@@ -33,30 +33,7 @@
         public DbSet<VarietyLevel4> VarietyLevel4s { get; set; }
         public DbSet<VarietyLevel5> VarietyLevel5s { get; set; }
 
-        public string ConnectionString { get; private set; }
-        public string DbName { get; private set; }
-        
-        public NiNContext()
-        {
-            DbName = "NiN";
-            ConnectionString = $"data source=localhost;initial catalog={DbName};Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
-        }
-
-        public NiNContext(string connectionString)
-        {
-            ConnectionString = connectionString;
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (optionsBuilder.IsConfigured) return;
-
-            optionsBuilder
-                .UseSqlServer(ConnectionString)
-                //.UseLazyLoadingProxies()
-                //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
-                .EnableDetailedErrors();
-        }
+        public NiNDbContext(DbContextOptions<NiNDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -9,8 +9,8 @@ using NiN.Database;
 
 namespace NiN.Database.Migrations
 {
-    [DbContext(typeof(NiNContext))]
-    [Migration("20211105133552_Initial")]
+    [DbContext(typeof(NiNDbContext))]
+    [Migration("20211109201826_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace NiN.Database.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("NiN.Database.Models.Code.Basistrinn", b =>

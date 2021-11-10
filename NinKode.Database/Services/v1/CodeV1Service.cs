@@ -48,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "")
         {
             using (var session = _store.OpenSession())
             {
@@ -63,7 +63,7 @@
             }
         }
 
-        public Codes GetByKode(NiNContext context, string id, string host, string version = "")
+        public Codes GetByKode(NiNDbContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 

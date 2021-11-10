@@ -12,118 +12,115 @@
     {
         private static Stopwatch _stopwatch = new();
         
-        public static void RemoveAll(string version)
+        public static void RemoveAll(NiNDbContext dbContext, string version)
         {
-            using (var context = new NiNContext())
+            //if (dbContext.Database.EnsureCreated())
+            //{
+            //    Console.WriteLine($"Created empty database: {dbContext.DbName}");
+            //    return;
+            //}
+
+            var totalCount = 0;
+
+            var natursystem = dbContext.Natursystem
+                .Include(x => x.Version)
+                .FirstOrDefault(x => x.Version.Navn.Equals(version));
+
+            if (natursystem == null) return;
+
+            var ninVersion = natursystem.Version;
+
+            natursystem = dbContext.Natursystem
+                .Include(x => x.Kode)
+                .Include(x => x.UnderordnetKoder)
+                .FirstOrDefault(x => x.Id == natursystem.Id);
+
+            foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
             {
-                //if (context.Database.EnsureCreated())
-                //{
-                //    Console.WriteLine($"Created empty database: {context.DbName}");
-                //    return;
-                //}
-
-                var totalCount = 0;
-
-                var natursystem = context.Natursystem
-                    .Include(x => x.Version)
-                    .FirstOrDefault(x => x.Version.Navn.Equals(version));
-
-                if (natursystem == null) return;
-
-                var ninVersion = natursystem.Version;
-
-                natursystem = context.Natursystem
+                var ht = dbContext.Hovedtypegruppe
                     .Include(x => x.Kode)
                     .Include(x => x.UnderordnetKoder)
-                    .FirstOrDefault(x => x.Id == natursystem.Id);
+                    .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
 
-                foreach (var hovedtypegruppe in natursystem.UnderordnetKoder)
+                if (ht == null) continue;
+
+                foreach (var hovedtype in ht.UnderordnetKoder)
                 {
-                    var ht = context.Hovedtypegruppe
+                    var h = dbContext.Hovedtype
                         .Include(x => x.Kode)
+                        .Include(x => x.Kartleggingsenheter)
+                        .Include(x => x.Miljovariabler)
                         .Include(x => x.UnderordnetKoder)
-                        .FirstOrDefault(x => x.Id == hovedtypegruppe.Id);
+                        .FirstOrDefault(x => x.Id == hovedtype.Id);
 
-                    if (ht == null) continue;
+                    if (h == null) continue;
 
-                    foreach (var hovedtype in ht.UnderordnetKoder)
+                    foreach (var miljovariabel in h.Miljovariabler)
                     {
-                        var h = context.Hovedtype
+                        var m = dbContext.Miljovariabel
                             .Include(x => x.Kode)
-                            .Include(x => x.Kartleggingsenheter)
-                            .Include(x => x.Miljovariabler)
-                            .Include(x => x.UnderordnetKoder)
-                            .FirstOrDefault(x => x.Id == hovedtype.Id);
+                            .Include(x => x.Trinn)
+                            .FirstOrDefault(x => x.Id == miljovariabel.Id);
 
-                        if (h == null) continue;
+                        if (m == null) continue;
 
-                        foreach (var miljovariabel in h.Miljovariabler)
+                        foreach (var trinn in m.Trinn)
                         {
-                            var m = context.Miljovariabel
+                            var t = dbContext.Trinn
                                 .Include(x => x.Kode)
-                                .Include(x => x.Trinn)
-                                .FirstOrDefault(x => x.Id == miljovariabel.Id);
+                                .Include(x => x.Basistrinn)
+                                .FirstOrDefault(x => x.Id == trinn.Id);
 
-                            if (m == null) continue;
+                            if (t == null) continue;
 
-                            foreach (var trinn in m.Trinn)
-                            {
-                                var t = context.Trinn
-                                    .Include(x => x.Kode)
-                                    .Include(x => x.Basistrinn)
-                                    .FirstOrDefault(x => x.Id == trinn.Id);
+                            totalCount += t.Basistrinn.Count;
 
-                                if (t == null) continue;
-
-                                totalCount += t.Basistrinn.Count;
-
-                                context.Kode.Remove(t.Kode);
-
-                                totalCount++;
-                                context.Trinn.Remove(t);
-                            }
+                            dbContext.Kode.Remove(t.Kode);
 
                             totalCount++;
-                            context.LKMKode.Remove(m.Kode);
-
-                            totalCount++;
-                            context.Miljovariabel.Remove(m);
+                            dbContext.Trinn.Remove(t);
                         }
 
-                        totalCount += h.Kartleggingsenheter.Count;
-                        totalCount += h.Miljovariabler.Count;
-                        totalCount += h.UnderordnetKoder.Count;
+                        totalCount++;
+                        dbContext.LKMKode.Remove(m.Kode);
 
                         totalCount++;
-                        context.Hovedtype.Remove(h);
+                        dbContext.Miljovariabel.Remove(m);
                     }
 
-                    context.Hovedtypegruppe.Remove(hovedtypegruppe);
+                    totalCount += h.Kartleggingsenheter.Count;
+                    totalCount += h.Miljovariabler.Count;
+                    totalCount += h.UnderordnetKoder.Count;
+
+                    totalCount++;
+                    dbContext.Hovedtype.Remove(h);
                 }
 
-                //totalCount += context.Hovedtypegruppe.Count();
-                //context.Hovedtypegruppe.RemoveRange(context.Hovedtypegruppe);
-
-                //totalCount += context.Natursystem.Count();
-                context.Natursystem.Remove(natursystem);
-
-                context.NinVersion.Remove(ninVersion);
-
-                _stopwatch.Stop();
-                Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
-                _stopwatch.Reset();
-                _stopwatch.Start();
-                context.SaveChanges();
-                Console.WriteLine($"Removed {totalCount} items");
-                _stopwatch.Stop();
-                Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
-
-                _stopwatch.Start();
-
-                context.SaveChanges();
-
-                ResetCounters(context);
+                dbContext.Hovedtypegruppe.Remove(hovedtypegruppe);
             }
+
+            //totalCount += dbContext.Hovedtypegruppe.Count();
+            //dbContext.Hovedtypegruppe.RemoveRange(dbContext.Hovedtypegruppe);
+
+            //totalCount += dbContext.Natursystem.Count();
+            dbContext.Natursystem.Remove(natursystem);
+
+            dbContext.NinVersion.Remove(ninVersion);
+
+            _stopwatch.Stop();
+            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+            _stopwatch.Reset();
+            _stopwatch.Start();
+            dbContext.SaveChanges();
+            Console.WriteLine($"Removed {totalCount} items");
+            _stopwatch.Stop();
+            Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+
+            _stopwatch.Start();
+
+            dbContext.SaveChanges();
+
+            ResetCounters(dbContext);
 
             _stopwatch.Stop();
             Console.WriteLine($"{_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
@@ -133,24 +130,24 @@
 
         #region private methods
 
-        private static void ResetCounters(NiNContext context)
+        private static void ResetCounters(NiNDbContext dbContext)
         {
-            if (!context.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
+            if (!dbContext.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
 
             return;
 
-            var n_id = context.Database.ExecuteSqlRaw($"select max(id) from [{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]");
+            var n_id = dbContext.Database.ExecuteSqlRaw($"select max(id) from [{dbContext.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]");
 
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Hovedtypegruppe)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Hovedtype)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Grunntype)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Kartleggingsenhet)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Miljovariabel)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(NinKode)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(LKMKode)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Trinn)).GetTableName()}]', RESEED, 0)");
-            context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{context.Model.FindEntityType(typeof(Basistrinn)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Natursystem)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Hovedtypegruppe)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Hovedtype)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Grunntype)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Kartleggingsenhet)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Miljovariabel)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(NinKode)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(LKMKode)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Trinn)).GetTableName()}]', RESEED, 0)");
+            dbContext.Database.ExecuteSqlRaw($"DBCC CHECKIDENT('[{dbContext.Model.FindEntityType(typeof(Basistrinn)).GetTableName()}]', RESEED, 0)");
         }
 
         #endregion

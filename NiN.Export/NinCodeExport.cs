@@ -15,10 +15,10 @@
 
     public class NinCodeExport
     {
-        private readonly NiNContext _context;
+        private readonly NiNDbContext _context;
         private readonly string _version;
 
-        public NinCodeExport(NiNContext ninContext, string version)
+        public NinCodeExport(NiNDbContext ninContext, string version)
         {
             _context = ninContext;
             _version = version;

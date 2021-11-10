@@ -16,14 +16,14 @@
 
     public class CodeService : ICodeService
     {
-        public IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "")
         {
             var list = new List<Codes>();
 
             return list;
         }
 
-        public Codes GetByKode(NiNContext context, string id, string host, string version = "")
+        public Codes GetByKode(NiNDbContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -180,7 +180,7 @@
             };
         }
 
-        private EnvironmentVariable[] CreateMiljovariabler(NiNContext context, IEnumerable<Miljovariabel> entities)
+        private EnvironmentVariable[] CreateMiljovariabler(NiNDbContext context, IEnumerable<Miljovariabel> entities)
         {
             var variables = new List<EnvironmentVariable>();
 
@@ -206,7 +206,7 @@
             return variables.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Step[] CreateTrinn(NiNContext context, IEnumerable<Trinn> entities)
+        private Step[] CreateTrinn(NiNDbContext context, IEnumerable<Trinn> entities)
         {
             var steps = new List<Step>();
 
@@ -230,7 +230,7 @@
             return steps.OrderBy(x => x.Kode).ToArray();
         }
 
-        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(NiNContext context, IEnumerable<Kartleggingsenhet> entities, string host)
+        private Dictionary<string, AllCodesCode[]> CreateKartleggingsenheter(NiNDbContext context, IEnumerable<Kartleggingsenhet> entities, string host)
         {
             var codes = new Dictionary<int, IList<AllCodesCode>>();
 
@@ -252,7 +252,7 @@
             return codes.ToDictionary(code => code.Key.ToString(), code => CreateOrderedList(code.Value));
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNContext context, IEnumerable<Hovedtypegruppe> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Hovedtypegruppe> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
@@ -270,7 +270,7 @@
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNContext context, IEnumerable<Grunntype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Grunntype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 
@@ -288,7 +288,7 @@
             return CreateOrderedList(codes);
         }
 
-        private AllCodesCode[] CreateUnderordnetKoder(NiNContext context, IEnumerable<Hovedtype> entities, string host)
+        private AllCodesCode[] CreateUnderordnetKoder(NiNDbContext context, IEnumerable<Hovedtype> entities, string host)
         {
             var codes = new List<AllCodesCode>();
 

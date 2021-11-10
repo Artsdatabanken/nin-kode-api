@@ -6,8 +6,8 @@
 
     public interface ICodeService
     {
-        IEnumerable<Codes> GetAll(NiNContext context, string host, string version = "");
-        Codes GetByKode(NiNContext context, string id, string host, string version = "");
+        IEnumerable<Codes> GetAll(NiNDbContext context, string host, string version = "");
+        Codes GetByKode(NiNDbContext context, string id, string host, string version = "");
         Codes GetCode(string id);
     }
 }

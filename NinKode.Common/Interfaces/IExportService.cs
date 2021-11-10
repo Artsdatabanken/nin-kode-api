@@ -5,6 +5,6 @@
 
     public interface IExportService
     {
-        Stream ExportToCsv(NiNContext context, string version);
+        Stream ExportToCsv(NiNDbContext context, string version);
     }
 }

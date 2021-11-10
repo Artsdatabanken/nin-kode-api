@@ -6,6 +6,7 @@
     using System.Linq;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
     using NiN.Database.Converters;
     using NiN.Database;
     using NiN.Database.Models.Code;
@@ -24,7 +25,7 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateCodeDatabase(string version)
+        public static void CreateCodeDatabase(ServiceProvider serviceProvider, string version)
         {
             _stopwatch.Reset();
             _stopwatch.Start();
@@ -59,38 +60,36 @@
 
             var na = codeService.GetCode("NA");
 
-            using (var context = new NiNContext())
+            var dbContext = serviceProvider.GetService<NiNDbContext>();
+            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+
+            if (ninVersion != null)
             {
-                var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
-
-                if (ninVersion != null)
+                var natursystem = dbContext.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                if (natursystem != null)
                 {
-                    var natursystem = context.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
-                    if (natursystem != null)
-                    {
-                        Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
-                        return;
-                    }
+                    Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
+                    return;
                 }
-                else
-                {
-                    ninVersion = new NinVersion { Navn = version };
-                    context.NinVersion.Add(ninVersion);
-                }
-
-                AddNatursystem(codeService, context, ninVersion, na);
-
-                context.SaveChanges();
-
-                _stopwatch.Stop();
-                Console.WriteLine($"Added NiN-code version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }
+            else
+            {
+                ninVersion = new NinVersion { Navn = version };
+                dbContext.NinVersion.Add(ninVersion);
+            }
+
+            AddNatursystem(codeService, dbContext, ninVersion, na);
+
+            dbContext.SaveChanges();
+
+            _stopwatch.Stop();
+            Console.WriteLine($"Added NiN-code version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
         #region private methods
 
         private static void AddNatursystem(ICodeService codeService,
-                                           NiNContext context,
+                                           NiNDbContext context,
                                            NinVersion ninVersion,
                                            Codes na)
         {
@@ -111,7 +110,7 @@
         }
 
         private static void AddHovedtypegrupper(ICodeService codeService,
-                                                NiNContext context,
+                                                NiNDbContext context,
                                                 NinVersion ninVersion,
                                                 Codes na,
                                                 Natursystem natursystem)
@@ -157,7 +156,7 @@
         }
 
         private static void AddHovedtyper(ICodeService codeService,
-                                          NiNContext context,
+                                          NiNDbContext dbContext,
                                           NinVersion ninVersion,
                                           Codes gruppe,
                                           Hovedtypegruppe hovedtypegruppe)
@@ -170,9 +169,9 @@
                 
                 Hovedtype hovedtype = null;
 
-                if (context.Hovedtype.Any())
+                if (dbContext.Hovedtype.Any())
                 {
-                    hovedtype = context.Hovedtype
+                    hovedtype = dbContext.Hovedtype
                         .Include(x => x.Kode)
                         .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
                     if (hovedtype != null && hovedtype.Navn.Trim().Equals(hvdtype.Navn.Trim()))
@@ -195,17 +194,17 @@
                             Definisjon = hvdtype.Kode.Definition.Trim()
                         }
                     };
-                    context.Hovedtype.Add(hovedtype);
+                    dbContext.Hovedtype.Add(hovedtype);
                 }
 
-                AddGrunntyper(codeService, context, ninVersion, hvdtype, hovedtype);
-                AddKartleggingsenheter(codeService, context, ninVersion, hvdtype, hovedtype);
-                AddMiljovariabler(context, ninVersion, hvdtype, hovedtype);
+                AddGrunntyper(codeService, dbContext, ninVersion, hvdtype, hovedtype);
+                AddKartleggingsenheter(codeService, dbContext, ninVersion, hvdtype, hovedtype);
+                AddMiljovariabler(dbContext, ninVersion, hvdtype, hovedtype);
             }
         }
 
         private static void AddGrunntyper(ICodeService codeService,
-            NiNContext context,
+            NiNDbContext dbContext,
             NinVersion ninVersion,
             Codes hvdtype,
             Hovedtype hovedtype)
@@ -218,9 +217,9 @@
 
                 Grunntype grunntype = null;
 
-                if (context.Grunntype.Any())
+                if (dbContext.Grunntype.Any())
                 {
-                    grunntype = context.Grunntype
+                    grunntype = dbContext.Grunntype
                         .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
                     if (grunntype != null && grunntype.Navn.Equals(grtype.Navn.Trim()))
                     {
@@ -242,12 +241,12 @@
                         Definisjon = grtype.Kode.Definition.Trim()
                     }
                 };
-                context.Grunntype.Add(grunntype);
+                dbContext.Grunntype.Add(grunntype);
             }
         }
 
         private static void AddKartleggingsenheter(ICodeService codeService,
-                                                   NiNContext context,
+                                                   NiNDbContext context,
                                                    NinVersion ninVersion,
                                                    Codes hvdtype,
                                                    Hovedtype hovedtype)
@@ -310,7 +309,7 @@
             }
         }
 
-        private static void AddMiljovariabler(NiNContext context,
+        private static void AddMiljovariabler(NiNDbContext context,
                                               NinVersion ninVersion,
                                               Codes hvdtype,
                                               Hovedtype hovedtype)

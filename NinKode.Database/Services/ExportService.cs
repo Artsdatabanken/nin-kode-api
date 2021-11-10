@@ -7,7 +7,7 @@
 
     public class ExportService : IExportService
     {
-        public Stream ExportToCsv(NiNContext context, string version)
+        public Stream ExportToCsv(NiNDbContext context, string version)
         {
             var ninCodeExport = new NinCodeExport(context, version);
             var stream = ninCodeExport.GenerateStream();

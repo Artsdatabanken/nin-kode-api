@@ -85,7 +85,7 @@ namespace NinKode.WebApi
 
             var defaultConnectionString = Configuration.GetConnectionString("Default");
 
-            services.AddDbContext<NiNContext>(o =>
+            services.AddDbContext<NiNDbContext>(o =>
             {
                 o.UseSqlServer(defaultConnectionString, x => x.MigrationsAssembly("NinKode.Database"));
             });
@@ -152,6 +152,10 @@ namespace NinKode.WebApi
                     "default",
                     "{controller=Home}/{action=Index}");
             });
+
+            //using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            //var dbContext = serviceScope.ServiceProvider.GetService<NiNDbContext>();
+            //dbContext?.Database.Migrate();
         }
     }
 

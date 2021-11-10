@@ -6,8 +6,8 @@
 
     public interface IVarietyService
     {
-        IEnumerable<VarietyAllCodes> GetAll(NiNContext context, string host, string version = "");
-        VarietyCode GetByKode(NiNContext context, string id, string host, string version = "");
+        IEnumerable<VarietyAllCodes> GetAll(NiNDbContext context, string host, string version = "");
+        VarietyCode GetByKode(NiNDbContext context, string id, string host, string version = "");
         VarietyCode GetVariety(string id);
     }
 }

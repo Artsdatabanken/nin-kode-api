@@ -15,14 +15,14 @@
     public class VarietyService : IVarietyService
     {
 
-        public IEnumerable<VarietyAllCodes> GetAll(NiNContext context, string host, string version = "")
+        public IEnumerable<VarietyAllCodes> GetAll(NiNDbContext context, string host, string version = "")
         {
             var list = new List<VarietyAllCodes>();
 
             return list;
         }
 
-        public VarietyCode GetByKode(NiNContext context, string id, string host, string version = "")
+        public VarietyCode GetByKode(NiNDbContext context, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
@@ -184,7 +184,7 @@
             };
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel1> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext context, ICollection<VarietyLevel1> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -208,7 +208,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel2> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext context, ICollection<VarietyLevel2> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -232,7 +232,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel3> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext context, ICollection<VarietyLevel3> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -256,7 +256,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel4> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext context, ICollection<VarietyLevel4> koder, string host)
         {
             if (!koder.Any()) return null;
 
@@ -280,7 +280,7 @@
             return CreateOrderedList(list);
         }
 
-        private VarietyCodeCode[] CreateUnderordnetKoder(NiNContext context, ICollection<VarietyLevel5> koder, string host)
+        private VarietyCodeCode[] CreateUnderordnetKoder(NiNDbContext context, ICollection<VarietyLevel5> koder, string host)
         {
             if (!koder.Any()) return null;
 

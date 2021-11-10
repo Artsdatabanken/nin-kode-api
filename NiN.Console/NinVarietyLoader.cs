@@ -5,6 +5,7 @@
     using System.Diagnostics;
     using System.Linq;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
     using NiN.Database;
     using NiN.Database.Models.Common;
     using NiN.Database.Models.Variety;
@@ -19,7 +20,7 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateVarietyDatabase(string version)
+        public static void CreateVarietyDatabase(ServiceProvider serviceProvider, string version)
         {
             _stopwatch.Reset();
             _stopwatch.Start();
@@ -46,39 +47,37 @@
                 return;
             }
 
-            using (var context = new NiNContext())
+            var dbContext = serviceProvider.GetService<NiNDbContext>();
+            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+
+            VarietyLevel0 varietyLevel0 = null;
+            if (ninVersion != null)
             {
-                var ninVersion = context.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
-
-                VarietyLevel0 varietyLevel0 = null;
-                if (ninVersion != null)
+                varietyLevel0 = dbContext.VarietyLevel0s.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                if (varietyLevel0 != null)
                 {
-                    varietyLevel0 = context.VarietyLevel0s.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
-                    if (varietyLevel0 != null)
-                    {
-                        Console.WriteLine($"Variety version {ninVersion.Navn} exists. Skipping...");
-                        return;
-                    }
+                    Console.WriteLine($"Variety version {ninVersion.Navn} exists. Skipping...");
+                    return;
                 }
-                else
-                {
-                    ninVersion = new NinVersion { Navn = version };
-                    context.NinVersion.Add(ninVersion);
-                }
-
-                AddVarietyLevel0(varietyService, context, ninVersion, new VarietyCodeCode { Id = "besys0" });
-                
-                context.SaveChanges();
-
-                _stopwatch.Stop();
-                Console.WriteLine($"Added NiN-variety version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }
+            else
+            {
+                ninVersion = new NinVersion { Navn = version };
+                dbContext.NinVersion.Add(ninVersion);
+            }
+
+            AddVarietyLevel0(varietyService, dbContext, ninVersion, new VarietyCodeCode { Id = "besys0" });
+            
+            dbContext.SaveChanges();
+
+            _stopwatch.Stop();
+            Console.WriteLine($"Added NiN-variety version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
         #region private methods
 
         private static void AddVarietyLevel0(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCodeCode varietyCodeCode)
         {
@@ -100,7 +99,7 @@
         }
 
         private static void AddVarietyLevel1(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel0 parentVarietyLevel)
@@ -129,7 +128,7 @@
         }
 
         private static void AddVarietyLevel2(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel1 parentVarietyLevel)
@@ -158,7 +157,7 @@
         }
 
         private static void AddVarietyLevel3(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel2 parentVarietyLevel)
@@ -187,7 +186,7 @@
         }
 
         private static void AddVarietyLevel4(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel3 parentVarietyLevel)
@@ -216,7 +215,7 @@
         }
 
         private static void AddVarietyLevel5(IVarietyService varietyService,
-                                             NiNContext context,
+                                             NiNDbContext context,
                                              NinVersion ninVersion,
                                              VarietyCode varietyCode,
                                              VarietyLevel4 parentVarietyLevel)
