@@ -29,9 +29,11 @@
 
             var connectionString = config.GetConnectionString("Default");
 
-            if (string.IsNullOrEmpty(connectionString)) connectionString = config.GetValue("ConnectionString", "");
-
-            if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'ConnectionString'");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                connectionString = config.GetValue("ConnectionString", "");
+                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'ConnectionString'");
+            }
 
             var services = new ServiceCollection();
             services.AddDbContext<NiNDbContext>(options => options.UseSqlServer(connectionString));
@@ -58,7 +60,16 @@
         private static void Migrate()
         {
             var dbContext = _serviceProvider.GetService<NiNDbContext>();
-            dbContext?.Database.Migrate();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            Console.WriteLine("Migrating database");
+
+            dbContext.Database.Migrate();
+
+            Console.WriteLine("Migrate database - ok");
         }
 
         private static void Export(IEnumerable<string> arguments)

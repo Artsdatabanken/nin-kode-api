@@ -18,7 +18,8 @@ namespace NinKode.WebApi
                     builder.SetBasePath(context.HostingEnvironment.ContentRootPath)
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", optional: true)
-                        .AddJsonFile("appsettings.local.json", optional: true);
+                        .AddJsonFile("appsettings.local.json", optional: true)
+                        .AddEnvironmentVariables();
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

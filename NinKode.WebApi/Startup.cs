@@ -83,11 +83,16 @@ namespace NinKode.WebApi
                 });
             });
 
-            var defaultConnectionString = Configuration.GetConnectionString("Default");
+            var connectionString = Configuration.GetConnectionString("Default");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                connectionString = Configuration.GetValue("ConnectionString", "");
+                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'ConnectionString'");
+            }
 
             services.AddDbContext<NiNDbContext>(o =>
             {
-                o.UseSqlServer(defaultConnectionString, x => x.MigrationsAssembly("NinKode.Database"));
+                o.UseSqlServer(connectionString, x => x.MigrationsAssembly("NinKode.Database"));
             });
 
             // Define singleton-objects
