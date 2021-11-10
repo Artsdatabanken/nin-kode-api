@@ -1,5 +1,6 @@
 ﻿namespace NinKode.Database.Services
 {
+    using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
@@ -18,9 +19,120 @@
     {
         public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
-            var list = new List<Codes>();
+            if (host.EndsWith("koder/", StringComparison.OrdinalIgnoreCase)) host += "hentkode/";
 
-            return list;
+            var kodeList = dbContext.Kode.Include(x => x.Version).Where(x => x.Version.Navn.Equals(version)).ToList();
+            foreach (var kode in kodeList)
+            {
+                Codes code = null;
+                switch (kode.Kategori)
+                {
+                    case KategoriEnum.Naturmangfoldnivå:
+                        var natursystem = dbContext.Natursystem
+                            .Include(x => x.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == kode.Id);
+                        if (natursystem == null) continue;
+
+                        code = new Codes
+                        {
+                            Navn = natursystem.Navn,
+                            Kategori = natursystem.Kategori,
+                            Kode = ConvertNinKode2Code(natursystem.Kode, host)
+                        };
+                        if (natursystem.UnderordnetKoder.Any())
+                        {
+                            code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, natursystem.UnderordnetKoder, host);
+                        }
+
+                        break;
+
+                    case KategoriEnum.Hovedtypegruppe:
+                        var hovedtypegruppe = dbContext.Hovedtypegruppe
+                            .Include(x => x.Natursystem)
+                            .Include(x => x.Natursystem.Kode)
+                            .Include(x => x.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                        if (hovedtypegruppe == null) break;
+
+                        code = new Codes
+                        {
+                            Navn = hovedtypegruppe.Navn,
+                            Kategori = hovedtypegruppe.Kategori,
+                            Kode = ConvertNinKode2Code(hovedtypegruppe.Kode, host),
+                            OverordnetKode = ConvertNinKode2Code(hovedtypegruppe.Natursystem.Kode, host)
+                        };
+
+                        if (hovedtypegruppe.UnderordnetKoder.Any())
+                        {
+                            code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, hovedtypegruppe.UnderordnetKoder, host);
+                        }
+
+                        break;
+
+                    case KategoriEnum.Hovedtype:
+
+                        var hovedtype = dbContext.Hovedtype
+                            .Include(x => x.Hovedtypegruppe)
+                            .Include(x => x.Hovedtypegruppe.Kode)
+                            //.Include(x => x.UnderordnetKoder)
+                            .Include(x => x.Kartleggingsenheter)
+                            .Include(x => x.Miljovariabler)
+                            .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                        if (hovedtype == null) break;
+
+                        code = new Codes
+                        {
+                            Navn = hovedtype.Navn,
+                            Kategori = hovedtype.Kategori,
+                            Kode = ConvertNinKode2Code(hovedtype.Kode, host),
+                            OverordnetKode = ConvertNinKode2Code(hovedtype.Hovedtypegruppe.Kode, host)
+                        };
+
+                        if (hovedtype.UnderordnetKoder.Any())
+                        {
+                            code.UnderordnetKoder = CreateUnderordnetKoder(dbContext, hovedtype.UnderordnetKoder, host);
+                        }
+
+                        if (hovedtype.Kartleggingsenheter.Any())
+                        {
+                            code.Kartleggingsenheter = CreateKartleggingsenheter(dbContext, hovedtype.Kartleggingsenheter, host);
+                        }
+
+                        if (hovedtype.Miljovariabler.Any())
+                        {
+                            code.Miljovariabler = CreateMiljovariabler(dbContext, hovedtype.Miljovariabler);
+                        }
+
+                        break;
+
+                    case KategoriEnum.Grunntype:
+
+                        var grunntype = dbContext.Grunntype
+                            .Include(x => x.Hovedtype)
+                            .Include(x => x.Hovedtype.Kode)
+                            .FirstOrDefault(x => x.Kode.Id == kode.Id);
+
+                        if (grunntype == null) break;
+
+                        code = new Codes
+                        {
+                            Navn = grunntype.Navn,
+                            Kategori = grunntype.Kategori,
+                            Kode = ConvertNinKode2Code(grunntype.Kode, host),
+                            OverordnetKode = ConvertNinKode2Code(grunntype.Hovedtype.Kode, host)
+                        };
+
+                        break;
+                }
+
+                if (code == null) continue;
+
+                yield return code;
+            }
         }
 
         public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
