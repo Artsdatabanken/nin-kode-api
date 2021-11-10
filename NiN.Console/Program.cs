@@ -31,8 +31,8 @@
 
             if (string.IsNullOrEmpty(connectionString))
             {
-                connectionString = config.GetValue("ConnectionString", "");
-                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'ConnectionString'");
+                connectionString = config.GetValue("NinApiConnectionString", "");
+                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'NinApiConnectionString'");
             }
 
             var services = new ServiceCollection();
