@@ -12,10 +12,10 @@
     [ApiExplorerSettings(GroupName = "beta")]
     [DisplayName("Eksport")]
     [EnableCors]
-    [Route("api/{version:required}/eksport")]
+    [Route("{version:required}/eksport")]
     public class ExportController : ApiControllerBase<ExportController>
     {
-        private const string DefaultNinVersion = "v2.3";
+        private const string DefaultNinVersion = "v2.2";
 
         private readonly IExportService _exportService;
 

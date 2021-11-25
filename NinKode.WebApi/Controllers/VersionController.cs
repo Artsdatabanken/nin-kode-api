@@ -13,7 +13,7 @@
     [ApiExplorerSettings(GroupName = "beta")]
     [DisplayName("Versjon")]
     [EnableCors]
-    [Route("api")]
+    [Route("")]
     public class VersionController : ApiControllerBase<VersionController>
     {
         private readonly IVersionService _versionService;

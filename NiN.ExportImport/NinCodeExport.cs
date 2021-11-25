@@ -1,4 +1,4 @@
-﻿namespace NiN.Export
+﻿namespace NiN.ExportImport
 {
     using System.Collections.Generic;
     using System.Globalization;
@@ -11,7 +11,7 @@
     using Microsoft.EntityFrameworkCore;
     using NiN.Database;
     using NiN.Database.Models.Code;
-    using NiN.Export.Map;
+    using NiN.ExportImport.Map;
 
     public class NinCodeExport
     {

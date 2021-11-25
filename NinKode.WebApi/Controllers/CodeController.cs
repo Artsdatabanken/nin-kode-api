@@ -15,10 +15,10 @@
     [ApiExplorerSettings(GroupName = "beta")]
     [DisplayName("Kode")]
     [EnableCors]
-    [Route("api/{version:required}/koder")]
+    [Route("{version:required}/koder")]
     public class CodeController : ApiControllerBase<CodeController>
     {
-        private const string DefaultNinVersion = "v2.3";
+        private const string DefaultNinVersion = "v2.2";
         private readonly ICodeService _codeService;
 
         /// <summary>

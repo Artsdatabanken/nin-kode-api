@@ -1,4 +1,4 @@
-﻿namespace NiN.Export.Map
+﻿namespace NiN.ExportImport.Map
 {
     using System.Text.Json;
     using CsvHelper.Configuration;

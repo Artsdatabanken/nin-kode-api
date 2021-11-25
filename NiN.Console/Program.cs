@@ -9,7 +9,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using NiN.Database;
-    using NiN.Export;
+    using NiN.ExportImport;
 
     public class Program
     {
@@ -119,12 +119,12 @@
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.1");
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b");
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.2");
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.3");
+            //NinLoader.CreateCodeDatabase(_serviceProvider, "2.3");
 
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1");
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1b");
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.2");
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3");
+            //NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3");
 
             Console.WriteLine("Finished building database");
 

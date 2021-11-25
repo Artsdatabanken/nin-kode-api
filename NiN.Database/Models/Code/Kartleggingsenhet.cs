@@ -20,5 +20,7 @@
         public string Definisjon { get; set; }
 
         public virtual Hovedtype Hovedtype { get; set; }
+
+        // ToDo: Kartleggingsenhet has 0-many Grunntyper
     }
 }

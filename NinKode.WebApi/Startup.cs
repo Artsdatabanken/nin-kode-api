@@ -107,6 +107,7 @@ namespace NinKode.WebApi
             services.AddSingleton<ICodeService, CodeService>();
             services.AddSingleton<IVarietyService, VarietyService>();
             services.AddSingleton<IExportService, ExportService>();
+            services.AddSingleton<IImportService, ImportService>();
             services.AddSingleton<IVersionService, VersionService>();
         }
 

@@ -14,10 +14,10 @@
     [ApiExplorerSettings(GroupName = "beta")]
     [DisplayName("Variasjon")]
     [EnableCors]
-    [Route("api/{version:required}/variasjon")]
+    [Route("{version:required}/variasjon")]
     public class VarietyController : ApiControllerBase<VarietyController>
     {
-        private const string DefaultNinVersion = "v2.3";
+        private const string DefaultNinVersion = "v2.2";
         private readonly IVarietyService _varietyService;
 
         /// <summary>

@@ -2,7 +2,7 @@
 {
     using System.IO;
     using NiN.Database;
-    using NiN.Export;
+    using NiN.ExportImport;
     using NinKode.Common.Interfaces;
 
     public class ExportService : IExportService
