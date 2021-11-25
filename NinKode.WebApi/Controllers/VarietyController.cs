@@ -11,7 +11,7 @@
     /// 
     /// </summary>
     [ApiController]
-    [ApiExplorerSettings(GroupName = "beta")]
+    [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Variasjon")]
     [EnableCors]
     [Route("{version:required}/variasjon")]

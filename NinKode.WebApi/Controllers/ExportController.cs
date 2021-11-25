@@ -9,7 +9,7 @@
     /// 
     /// </summary>
     [ApiController]
-    [ApiExplorerSettings(GroupName = "beta")]
+    [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Eksport")]
     [EnableCors]
     [Route("{version:required}/eksport")]

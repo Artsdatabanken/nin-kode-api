@@ -12,7 +12,7 @@
     /// 
     /// </summary>
     [ApiController]
-    [ApiExplorerSettings(GroupName = "beta")]
+    [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Kode")]
     [EnableCors]
     [Route("{version:required}/koder")]

@@ -44,40 +44,40 @@ namespace NinKode.WebApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
                 c.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
                 
-                c.SwaggerDoc("v1", new OpenApiInfo
+                //c.SwaggerDoc("v1", new OpenApiInfo
+                //{
+                //    Title = $"{_swaggerDocumentTitle} v1",
+                //    Version = "v1",
+                //    Description = CreateDescription()
+                //});
+                //c.SwaggerDoc("v2", new OpenApiInfo
+                //{
+                //    Title = $"{_swaggerDocumentTitle} v2",
+                //    Version = "v2",
+                //    Description = CreateDescription()
+                //});
+                //c.SwaggerDoc("v2.1", new OpenApiInfo
+                //{
+                //    Title = $"{_swaggerDocumentTitle} v2.1",
+                //    Version = "v2.1",
+                //    Description = CreateDescription()
+                //});
+                //c.SwaggerDoc("v2.1b", new OpenApiInfo
+                //{
+                //    Title = $"{_swaggerDocumentTitle} v2.1b",
+                //    Version = "v2.1b",
+                //    Description = CreateDescription()
+                //});
+                //c.SwaggerDoc("v2.2", new OpenApiInfo
+                //{
+                //    Title = $"{_swaggerDocumentTitle} v2.2",
+                //    Version = "v2.2",
+                //    Description = CreateDescription()
+                //});
+                c.SwaggerDoc("api", new OpenApiInfo
                 {
-                    Title = $"{_swaggerDocumentTitle} v1",
-                    Version = "v1",
-                    Description = CreateDescription()
-                });
-                c.SwaggerDoc("v2", new OpenApiInfo
-                {
-                    Title = $"{_swaggerDocumentTitle} v2",
-                    Version = "v2",
-                    Description = CreateDescription()
-                });
-                c.SwaggerDoc("v2.1", new OpenApiInfo
-                {
-                    Title = $"{_swaggerDocumentTitle} v2.1",
-                    Version = "v2.1",
-                    Description = CreateDescription()
-                });
-                c.SwaggerDoc("v2.1b", new OpenApiInfo
-                {
-                    Title = $"{_swaggerDocumentTitle} v2.1b",
-                    Version = "v2.1b",
-                    Description = CreateDescription()
-                });
-                c.SwaggerDoc("v2.2", new OpenApiInfo
-                {
-                    Title = $"{_swaggerDocumentTitle} v2.2",
-                    Version = "v2.2",
-                    Description = CreateDescription()
-                });
-                c.SwaggerDoc("beta", new OpenApiInfo
-                {
-                    Title = $"{_swaggerDocumentTitle} beta",
-                    Version = "beta",
+                    Title = $"{_swaggerDocumentTitle}",
+                    Version = "api",
                     Description = CreateDescription()
                 });
             });
@@ -135,12 +135,12 @@ namespace NinKode.WebApi
                 //c.InjectStylesheet("/css/theme-outline.css");
                 c.DisplayRequestDuration();
                 c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
-                c.SwaggerEndpoint("/swagger/beta/swagger.json", $"{_swaggerDocumentTitle} beta");
-                c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
-                c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
-                c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
+                c.SwaggerEndpoint("/swagger/api/swagger.json", $"{_swaggerDocumentTitle}");
+                //c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
+                //c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
+                //c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
+                //c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
+                //c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
             });
             //}
 

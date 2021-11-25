@@ -10,7 +10,7 @@
     /// 
     /// </summary>
     [ApiController]
-    [ApiExplorerSettings(GroupName = "beta")]
+    [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Import")]
     [EnableCors]
     [Route("[controller]")]
