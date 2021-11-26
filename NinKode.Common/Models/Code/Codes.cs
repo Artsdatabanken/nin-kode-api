@@ -20,6 +20,7 @@
         public string ElementKode { get; set; }
 
         [JsonPropertyName("OverordnetKode")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public AllCodesCode OverordnetKode { get; set; }
 
         [JsonPropertyName("UnderordnetKoder")]
