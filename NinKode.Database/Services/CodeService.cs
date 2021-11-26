@@ -240,6 +240,7 @@
                     var grunntype = dbContext.Grunntype
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
+                        .Include(x => x.Kartleggingsenhet)
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (grunntype == null) break;
@@ -252,12 +253,18 @@
                         OverordnetKode = ConvertNinKode2Code(grunntype.Hovedtype.Kode, host)
                     };
 
+                    if (grunntype.Kartleggingsenhet.Any())
+                    {
+                        code.Kartleggingsenheter = CreateKartleggingsenheter(dbContext, grunntype.Kartleggingsenhet, host);
+                    }
+
                     break;
 
                 case KategoriEnum.Kartleggingsenhet:
                     var kartlegging = dbContext.Kartleggingsenhet
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
+                        .Include(x => x.Grunntype)
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (kartlegging == null) break;
@@ -269,6 +276,30 @@
                         Kode = ConvertNinKode2Code(kartlegging.Kode, host),
                         OverordnetKode = ConvertNinKode2Code(kartlegging.Hovedtype.Kode, host)
                     };
+
+                    if (kartlegging.Grunntype.Any())
+                    {
+                        var grunntyper = new List<Codes>();
+                        foreach (var item in kartlegging.Grunntype)
+                        {
+                            var g = dbContext.Grunntype
+                                .Include(x => x.Hovedtype)
+                                .Include(x => x.Hovedtype.Kode)
+                                .Include(x => x.Kode)
+                                .FirstOrDefault(x => x.Id == item.Id);
+                            
+                            if (g == null) continue;
+
+                            grunntyper.Add(new Codes
+                            {
+                                Navn = g.Navn,
+                                Kategori = g.Kategori,
+                                Kode = ConvertNinKode2Code(g.Kode, host),
+                                OverordnetKode = ConvertNinKode2Code(g.Hovedtype.Kode, host)
+                            });
+                        }
+                        code.Grunntyper = grunntyper.ToArray();
+                    }
 
                     break;
             }

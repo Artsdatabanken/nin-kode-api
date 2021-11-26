@@ -1,5 +1,6 @@
 ﻿namespace NiN.Database.Models.Code
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using NiN.Database.Converters;
@@ -22,5 +23,6 @@
         public virtual Hovedtype Hovedtype { get; set; }
 
         // ToDo: Kartleggingsenhet has 0-many Grunntyper
+        public virtual ICollection<Grunntype> Grunntype { get; set; } = new List<Grunntype>();
     }
 }

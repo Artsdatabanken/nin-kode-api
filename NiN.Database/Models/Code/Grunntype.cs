@@ -1,5 +1,6 @@
 ﻿namespace NiN.Database.Models.Code
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using NiN.Database.Converters;
     using NiN.Database.Models.Code.Codes;
@@ -14,5 +15,9 @@
         public virtual Hovedtype Hovedtype { get; set; }
 
         public virtual GrunntypeKode Kode { get; set; }
+
+        public virtual ICollection<Kartleggingsenhet> Kartleggingsenhet { get; }
+
+        public virtual ICollection<Miljovariabel> Miljovariabel { get; }
     }
 }

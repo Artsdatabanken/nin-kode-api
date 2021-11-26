@@ -27,7 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\NiN.Database\NiN.Database.csproj" />
     <ProjectReference Include="..\NiN.ExportImport\NiN.ExportImport.csproj" />
-    <ProjectReference Include="..\NiN.Export\NiN.Export.csproj" />
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
   </ItemGroup>
 

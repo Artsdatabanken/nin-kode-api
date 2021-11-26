@@ -37,6 +37,10 @@
         [JsonPropertyName("Miljovariabler")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public EnvironmentVariable[] Miljovariabler { get; set; }
+
+        [JsonPropertyName("Grunntyper")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Codes[] Grunntyper { get; set; }
     }
 
     //public partial class Codes

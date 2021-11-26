@@ -33,7 +33,27 @@
         public DbSet<VarietyLevel4> VarietyLevel4s { get; set; }
         public DbSet<VarietyLevel5> VarietyLevel5s { get; set; }
 
+#if DEBUG
+        public string ConnectionString { get; private set; }
+
+        public NiNDbContext()
+        {
+            ConnectionString = "data source=localhost;initial catalog=nin;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
+        }
+
         public NiNDbContext(DbContextOptions<NiNDbContext> options) : base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (optionsBuilder.IsConfigured) return;
+
+            optionsBuilder
+                .UseSqlServer(ConnectionString)
+                //.UseLazyLoadingProxies()
+                //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
+                .EnableDetailedErrors();
+        }
+#endif
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -103,6 +123,13 @@
                 .HasOne(x => x.Kode)
                 .WithOne(x => x.Basistrinn)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Miljovariabel>()
+                .HasMany(x => x.Grunntype)
+                .WithMany(x => x.Miljovariabel);
+            modelBuilder.Entity<Kartleggingsenhet>()
+                .HasMany(x => x.Grunntype)
+                .WithMany(x => x.Kartleggingsenhet);
         }
 
         private static void CreateVariety(ModelBuilder modelBuilder)

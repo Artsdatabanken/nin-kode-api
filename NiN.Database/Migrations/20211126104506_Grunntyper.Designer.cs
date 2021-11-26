@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NiN.Database;
 
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNDbContext))]
-    partial class NiNContextModelSnapshot : ModelSnapshot
+    [Migration("20211126104506_Grunntyper")]
+    partial class Grunntyper
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

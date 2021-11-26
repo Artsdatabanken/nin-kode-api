@@ -9,6 +9,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using NiN.Database;
+    using NiN.Database.Models.Code.Enums;
     using NiN.ExportImport;
 
     public class Program
@@ -32,7 +33,8 @@
             if (string.IsNullOrEmpty(connectionString))
             {
                 connectionString = config.GetValue("NinApiConnectionString", "");
-                if (string.IsNullOrEmpty(connectionString)) throw new Exception("Could not find 'NinApiConnectionString'");
+                if (string.IsNullOrEmpty(connectionString))
+                    throw new Exception("Could not find 'NinApiConnectionString'");
             }
 
             var services = new ServiceCollection();
@@ -54,7 +56,69 @@
                 case "migrate":
                     Migrate();
                     break;
+                case "test":
+                    Test("NA T4", "E-1", new[] { 1, 5 }, "2.2");
+                    Test("NA T4", "E-2", new[] { 2, 6, 17 }, "2.2");
+                    Test("NA T4", "E-3", new[] { 3, 4, 7, 8, 18, 19 }, "2.2");
+                    Test("NA T4", "E-4", new[] { 9, 13 }, "2.2");
+                    Test("NA T4", "E-5", new[] { 10, 14 }, "2.2");
+                    Test("NA T4", "E-6", new[] { 11, 12, 15, 16, 20 }, "2.2");
+                    break;
             }
+        }
+
+        private static void Test(string ninkodeprefix, string ninkode, int[] grunntypekoder, string version)
+        {
+            Test($"{ninkodeprefix}-{ninkode}", grunntypekoder.Select(i => $"{ninkodeprefix}-{i}").ToArray(), version);
+        }
+
+    private static void Test(string ninkode, string[] grunntypekoder, string version)
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            var kode = dbContext.Kode
+                .Include(x => x.Version)
+                .FirstOrDefault(x => x.KodeName.Equals(ninkode) && x.Version.Navn.Equals(version));
+
+            var storeChanges = false;
+
+            if (kode == null) throw new Exception("Could not find kode");
+
+            if (kode.Kategori == KategoriEnum.Kartleggingsenhet)
+            {
+                var kartleggingsenhet = dbContext.Kartleggingsenhet
+                    .Include(x => x.Grunntype)
+                    .FirstOrDefault(x => x.Kode.Id == kode.Id);
+                if (kartleggingsenhet == null) return;
+
+                foreach (var grunntypeKode in grunntypekoder)
+                {
+                    var gkode = dbContext.Kode
+                        .FirstOrDefault(x => x.KodeName.Equals(grunntypeKode) && x.Version.Id == kode.Version.Id);
+                    if (gkode == null) continue;
+
+                    if (gkode.Kategori != KategoriEnum.Grunntype) continue;
+
+                    var grunntype = dbContext.Grunntype
+                        .FirstOrDefault(x => x.Kode.Id == gkode.Id);
+
+                    if (grunntype == null) continue;
+
+                    if (kartleggingsenhet.Grunntype.Contains(grunntype)) continue;
+
+                    kartleggingsenhet.Grunntype.Add(grunntype);
+                    Console.WriteLine($"Added {grunntype.Kode.KodeName} to {kartleggingsenhet.Kode.KodeName}");
+                    storeChanges = true;
+                }
+
+                if (storeChanges) dbContext.Kartleggingsenhet.Update(kartleggingsenhet);
+            }
+
+            if (storeChanges) dbContext.SaveChanges();
         }
 
         private static void Migrate()
