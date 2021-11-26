@@ -283,8 +283,6 @@
                         foreach (var item in kartlegging.Grunntype)
                         {
                             var g = dbContext.Grunntype
-                                .Include(x => x.Hovedtype)
-                                .Include(x => x.Hovedtype.Kode)
                                 .Include(x => x.Kode)
                                 .FirstOrDefault(x => x.Id == item.Id);
                             
@@ -294,8 +292,7 @@
                             {
                                 Navn = g.Navn,
                                 Kategori = g.Kategori,
-                                Kode = ConvertNinKode2Code(g.Kode, host),
-                                OverordnetKode = ConvertNinKode2Code(g.Hovedtype.Kode, host)
+                                Kode = ConvertNinKode2Code(g.Kode, host)
                             });
                         }
                         code.Grunntyper = grunntyper.ToArray();
