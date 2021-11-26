@@ -33,6 +33,8 @@
         public DbSet<VarietyLevel4> VarietyLevel4s { get; set; }
         public DbSet<VarietyLevel5> VarietyLevel5s { get; set; }
 
+        public NiNDbContext(DbContextOptions<NiNDbContext> options) : base(options) { }
+
 #if DEBUG
         public string ConnectionString { get; private set; }
 
@@ -40,8 +42,6 @@
         {
             ConnectionString = "data source=localhost;initial catalog=nin;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
         }
-
-        public NiNDbContext(DbContextOptions<NiNDbContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
