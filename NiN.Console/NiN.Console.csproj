@@ -30,4 +30,10 @@
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="CsvFiles\20211129_basitrinn_grunntyper_KE_import_v2.2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

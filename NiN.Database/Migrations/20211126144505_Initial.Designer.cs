@@ -10,8 +10,8 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNDbContext))]
-    [Migration("20211126104506_Grunntyper")]
-    partial class Grunntyper
+    [Migration("20211126144505_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,36 @@ namespace NiN.Database.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("BasistrinnGrunntype", b =>
+                {
+                    b.Property<int>("BasistrinnId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GrunntypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BasistrinnId", "GrunntypeId");
+
+                    b.HasIndex("GrunntypeId");
+
+                    b.ToTable("BasistrinnGrunntype");
+                });
+
+            modelBuilder.Entity("BasistrinnTrinn", b =>
+                {
+                    b.Property<int>("BasistrinnId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrinnId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BasistrinnId", "TrinnId");
+
+                    b.HasIndex("TrinnId");
+
+                    b.ToTable("BasistrinnTrinn");
+                });
 
             modelBuilder.Entity("GrunntypeKartleggingsenhet", b =>
                 {
@@ -62,15 +92,10 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("TrinnId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("VersionId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TrinnId");
 
                     b.HasIndex("VersionId");
 
@@ -521,20 +546,6 @@ namespace NiN.Database.Migrations
                     b.ToTable("VarietyLevel5");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.Code.Codes.BasistrinnKode", b =>
-                {
-                    b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
-
-                    b.Property<int>("BasistrinnId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("BasistrinnId")
-                        .IsUnique()
-                        .HasFilter("[BasistrinnId] IS NOT NULL");
-
-                    b.HasDiscriminator().HasValue("BasistrinnKode");
-                });
-
             modelBuilder.Entity("NiN.Database.Models.Code.Codes.GrunntypeKode", b =>
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
@@ -708,6 +719,36 @@ namespace NiN.Database.Migrations
                     b.HasDiscriminator().HasValue("VarietyLevel5Code");
                 });
 
+            modelBuilder.Entity("BasistrinnGrunntype", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Code.Basistrinn", null)
+                        .WithMany()
+                        .HasForeignKey("BasistrinnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NiN.Database.Models.Code.Grunntype", null)
+                        .WithMany()
+                        .HasForeignKey("GrunntypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BasistrinnTrinn", b =>
+                {
+                    b.HasOne("NiN.Database.Models.Code.Basistrinn", null)
+                        .WithMany()
+                        .HasForeignKey("BasistrinnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("NiN.Database.Models.Code.Trinn", null)
+                        .WithMany()
+                        .HasForeignKey("TrinnId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("GrunntypeKartleggingsenhet", b =>
                 {
                     b.HasOne("NiN.Database.Models.Code.Grunntype", null)
@@ -740,16 +781,9 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Basistrinn", b =>
                 {
-                    b.HasOne("NiN.Database.Models.Code.Trinn", "Trinn")
-                        .WithMany("Basistrinn")
-                        .HasForeignKey("TrinnId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("NiN.Database.Models.Common.NinVersion", "Version")
                         .WithMany()
                         .HasForeignKey("VersionId");
-
-                    b.Navigation("Trinn");
 
                     b.Navigation("Version");
                 });
@@ -981,17 +1015,6 @@ namespace NiN.Database.Migrations
                     b.Navigation("Version");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.Code.Codes.BasistrinnKode", b =>
-                {
-                    b.HasOne("NiN.Database.Models.Code.Basistrinn", "Basistrinn")
-                        .WithOne("Kode")
-                        .HasForeignKey("NiN.Database.Models.Code.Codes.BasistrinnKode", "BasistrinnId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Basistrinn");
-                });
-
             modelBuilder.Entity("NiN.Database.Models.Code.Codes.GrunntypeKode", b =>
                 {
                     b.HasOne("NiN.Database.Models.Code.Grunntype", "Grunntype")
@@ -1124,11 +1147,6 @@ namespace NiN.Database.Migrations
                     b.Navigation("VarietyLevel");
                 });
 
-            modelBuilder.Entity("NiN.Database.Models.Code.Basistrinn", b =>
-                {
-                    b.Navigation("Kode");
-                });
-
             modelBuilder.Entity("NiN.Database.Models.Code.Grunntype", b =>
                 {
                     b.Navigation("Kode");
@@ -1173,8 +1191,6 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Trinn", b =>
                 {
-                    b.Navigation("Basistrinn");
-
                     b.Navigation("Kode");
                 });
 

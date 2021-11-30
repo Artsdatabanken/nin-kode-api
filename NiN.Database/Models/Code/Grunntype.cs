@@ -19,5 +19,7 @@
         public virtual ICollection<Kartleggingsenhet> Kartleggingsenhet { get; }
 
         public virtual ICollection<Miljovariabel> Miljovariabel { get; }
+
+        public virtual ICollection<Basistrinn> Basistrinn { get; }
     }
 }

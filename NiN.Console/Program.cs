@@ -47,6 +47,11 @@
 
             switch (arguments[0])
             {
+                case "complete":
+                    Migrate();
+                    Import();
+                    CreateKartleggingConnection("2.2");
+                    break;
                 case "import":
                     Import();
                     break;
@@ -56,23 +61,125 @@
                 case "migrate":
                     Migrate();
                     break;
-                case "test":
-                    Test("NA T4", "E-1", new[] { 1, 5 }, "2.2");
-                    Test("NA T4", "E-2", new[] { 2, 6, 17 }, "2.2");
-                    Test("NA T4", "E-3", new[] { 3, 4, 7, 8, 18, 19 }, "2.2");
-                    Test("NA T4", "E-4", new[] { 9, 13 }, "2.2");
-                    Test("NA T4", "E-5", new[] { 10, 14 }, "2.2");
-                    Test("NA T4", "E-6", new[] { 11, 12, 15, 16, 20 }, "2.2");
+                case "grunntype":
+                    CreateKartleggingConnection("NA T4", "E-1", new[] { 1, 5 }, "2.2");
+                    CreateKartleggingConnection("NA T4", "E-2", new[] { 2, 6, 17 }, "2.2");
+                    CreateKartleggingConnection("NA T4", "E-3", new[] { 3, 4, 7, 8, 18, 19 }, "2.2");
+                    CreateKartleggingConnection("NA T4", "E-4", new[] { 9, 13 }, "2.2");
+                    CreateKartleggingConnection("NA T4", "E-5", new[] { 10, 14 }, "2.2");
+                    CreateKartleggingConnection("NA T4", "E-6", new[] { 11, 12, 15, 16, 20 }, "2.2");
+                    break;
+                case "basistrinn":
+                    CreateLkmConnection("NA T4", "1", "KA", new[] { "a", "b", "c" }, "2.2");
+                    CreateLkmConnection("NA T4", "1", "UF", new[] { "a", "b" }, "2.2");
+                    CreateLkmConnection("NA T4", "2", "KA", new[] { "d", "e" }, "2.2");
+                    CreateLkmConnection("NA T4", "2", "UF", new[] { "a", "b" }, "2.2");
+                    CreateLkmConnection("NA T4", "3", "KA", new[] { "f", "g" }, "2.2");
+                    CreateLkmConnection("NA T4", "3", "UF", new[] { "a", "b" }, "2.2");
+                    CreateLkmConnection("NA T4", "4", "KA", new[] { "h", "i" }, "2.2");
+                    CreateLkmConnection("NA T4", "4", "UF", new[] { "a", "b" }, "2.2");
+                    CreateLkmConnection("NA T4", "5", "KA", new[] { "a", "b", "c" }, "2.2");
+                    CreateLkmConnection("NA T4", "5", "UF", new[] { "c", "d" }, "2.2");
+                    CreateLkmConnection("NA T4", "6", "KA", new[] { "d", "e" }, "2.2");
+                    CreateLkmConnection("NA T4", "6", "UF", new[] { "c", "d" }, "2.2");
+                    break;
+                case "kartlegging":
+                    CreateKartleggingConnection("2.2");
                     break;
             }
         }
 
-        private static void Test(string ninkodeprefix, string ninkode, int[] grunntypekoder, string version)
+        private static void CreateLkmConnection(string ninkodeprefix, string grunntypekode, string basistrinnprefix, string[] basistrinn, string version)
         {
-            Test($"{ninkodeprefix}-{ninkode}", grunntypekoder.Select(i => $"{ninkodeprefix}-{i}").ToArray(), version);
+            CreateLkmConnection($"{ninkodeprefix}-{grunntypekode}", basistrinn.Select(i => $"{basistrinnprefix}-{i}").ToArray(), version);
         }
 
-    private static void Test(string ninkode, string[] grunntypekoder, string version)
+        private static void CreateLkmConnection(string ninkode, string[] basistrinns, string version)
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            var kode = dbContext.Kode
+                .Include(x => x.Version)
+                .FirstOrDefault(x => x.KodeName.Equals(ninkode) && x.Version.Navn.Equals(version));
+
+            if (kode == null) throw new Exception("Could not find kode");
+
+            var storeChanges = false;
+
+            if (kode.Kategori == KategoriEnum.Grunntype)
+            {
+                var grunntype = dbContext.Grunntype
+                    .Include(x => x.Basistrinn)
+                    .FirstOrDefault(x => x.Kode.Id == kode.Id);
+                if (grunntype == null) return;
+
+                foreach (var b in basistrinns)
+                {
+                    var basistrinn = dbContext.Basistrinn
+                        .Include(x => x.Grunntype)
+                        .FirstOrDefault(x => x.Version.Id == grunntype.Version.Id && x.Navn.Equals(b));
+                    if (basistrinn == null) continue;
+                    
+                    if (basistrinn.Grunntype.Contains(grunntype)) continue;
+
+                    grunntype.Basistrinn.Add(basistrinn);
+                    Console.WriteLine($"Added {grunntype.Kode.KodeName} to {basistrinn.Navn}");
+                    storeChanges = true;
+                }
+
+                if (storeChanges) dbContext.Grunntype.Update(grunntype);
+            }
+
+            if (storeChanges) dbContext.SaveChanges();
+        }
+
+        private static void CreateKartleggingConnection(string version)
+        {
+            Stopwatch.Reset();
+            Stopwatch.Start();
+            var importer = new NinCodeImport(_serviceProvider.GetService<NiNDbContext>(), version);
+            var records = importer.FixKartleggingConnections(@"CsvFiles\20211129_basitrinn_grunntyper_KE_import_v2.2.csv");
+
+            if (records == null) return;
+
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            var i = 0;
+            foreach (var @record in records)
+            {
+                i++;
+                var grunntyper = record.Grunntypenummer.Split(",");
+                var ninkodeprefix = record.SammensattKode.Substring(0, record.SammensattKode.IndexOf("-", StringComparison.Ordinal));
+                CreateKartleggingConnection(record.SammensattKode, grunntyper.Select(x => $"{ninkodeprefix}-{x}").ToArray(), version);
+                //Console.WriteLine($"{i:0###}\t{record.Malestokk}\t{record.SammensattKode}\t{record.Grunntypenummer}\t{record.Grunntypekoder}\t{record.Name}");
+                //break;
+            }
+
+            if (i > 0)
+            {
+                Console.WriteLine("\nSaving changes");
+                dbContext.SaveChanges();
+            }
+
+            Stopwatch.Stop();
+
+            Console.WriteLine($"\nProcessed {i} records in {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
+        private static void CreateKartleggingConnection(string ninkodeprefix, string ninkode, int[] grunntypekoder, string version)
+        {
+            CreateKartleggingConnection($"{ninkodeprefix}-{ninkode}", grunntypekoder.Select(i => $"{ninkodeprefix}-{i}").ToArray(), version);
+        }
+
+        private static void CreateKartleggingConnection(string ninkode, string[] grunntypekoder, string version)
         {
             var dbContext = _serviceProvider.GetService<NiNDbContext>();
             if (dbContext == null)
@@ -111,14 +218,14 @@
                     if (kartleggingsenhet.Grunntype.Contains(grunntype)) continue;
 
                     kartleggingsenhet.Grunntype.Add(grunntype);
-                    Console.WriteLine($"Added {grunntype.Kode.KodeName} to {kartleggingsenhet.Kode.KodeName}");
+                    //Console.WriteLine($"Added {grunntype.Kode.KodeName} to {kartleggingsenhet.Kode.KodeName}");
                     storeChanges = true;
                 }
 
                 if (storeChanges) dbContext.Kartleggingsenhet.Update(kartleggingsenhet);
             }
 
-            if (storeChanges) dbContext.SaveChanges();
+            //if (storeChanges) dbContext.SaveChanges();
         }
 
         private static void Migrate()
@@ -174,6 +281,7 @@
 
         private static void Import()
         {
+            Stopwatch.Reset();
             Stopwatch.Start();
 
             Console.WriteLine("Building database...");

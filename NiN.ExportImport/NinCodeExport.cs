@@ -143,7 +143,7 @@
                             foreach (var basistrinn in t.Basistrinn)
                             {
                                 var bt = _context.Basistrinn
-                                    .Include(x => x.Kode)
+                                    //.Include(x => x.Kode)
                                     .FirstOrDefault(x => x.Id == basistrinn.Id);
                                 if (bt == null) continue;
 

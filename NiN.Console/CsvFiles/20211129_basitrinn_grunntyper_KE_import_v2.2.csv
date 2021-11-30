@@ -1,0 +1,1007 @@
+﻿Målestokk;Sammensatt kode;Navn_Kartleggingsenheter 1:2500 for terrestre systemer;Grunntypenr;Grunntypekoder
+2500;NA T1-B-1;lite tørkeutsatte svært og temmelig kalkfattige berg, bergvegger og knauser;1,2,21,33,41,42;T1-1,T1-2,T1-21,T1-33,T1-41,T1-42
+2500;NA T1-B-2;tørkeutsatte svært og temmelig kalkfattige berg, bergvegger og knauser;3,4,22,23,34,43,44;T1-3,T1-4,T1-22,T1-23,T1-34,T1-43
+2500;NA T1-B-3;lite tørkeutsatte, litt kalkfattige og svakt intermediæreberg, bergvegger og knauser;5,6,24,35,45,46;T1-5,T1-6,T1-24,T1-35,T1-45,T1-46
+2500;NA T1-B-4;tørkeutsatte litt kalkfattige og svakt intermediære berg, bergvegger og knauser;7,8,25,26,36,47,48;T1-7,T1-8,T1-25,T1-26,T1-36,T1-47
+2500;NA T1-B-5;lite tørkeutsatte sterkt intermediære og litt kalkrike berg, bergvegger og knauser;9,10,27,37,49,50;T1-9,T1-10,T1-27,T1-37,T1-49,T1-50
+2500;NA T1-B-6;tørkeutsatte sterkt intermediære og litt kalkrike berg, bergvegger og knauser;11,12,28,29,38,51,52;T1-11,T1-12,T1-28,T1-29,T1-38,T1-51
+2500;NA T1-B-7;lite tørkeutsatte temmelig til ekstremt kalkrike berg, bergvegger og knauser;13,14,17,18,30,39,53,54,57,58;T1-13,T1-14,T1-17,T1-18,T1-30,T1-39,T1-53,T1-54,T1-57,T1-58
+2500;NA T1-B-8;tørkeutsatte temmelig til ekstremt klakrike berg, bergvegger og knauser;15,16,19,20,31,32,40,55,56,59,60,85;T1-15,T1-16,T1-19,T1-20,T1-31,T1-32,T1-40,T1-55,T1-56,T1-59,T1-60,T1-85
+2500;NA T1-B-9;svært og temmelig kalkfattige flomsone-bergknauser og -vegger ;61,62;T1-61,T1-62
+2500;NA T1-B-10;litt kalkfattige og svakt intermediære flomsone-bergknauser og vegger;63,64;T1-63,T1-64
+2500;NA T1-B-11;sterkt intermediær og litt kalkrik flomsonebergvegg;66;T1-66
+2500;NA T1-B-12;temmelig til ekstremt kalkrike flomsone-bergknauser og -vegger;67,68;T1-67,T1-68
+2500;NA T1-B-13;svært og temmelig kalkfattige fosseberg-knauser og -vegger;69,7;T1-69,T1-70
+2500;NA T1-B-14;litt kalkfattige og svakt intermediære foseeberg-knauser og -vegger;71,72;T1-71,T1-72
+2500;NA T1-B-15;sterkt intermediære og litt kalkrike fosseberg-knauser og -vegger;65,73,74;T1-65,T1-73,T1-74
+2500;NA T1-B-16;temmelig til ekstremt kalkrike fosseberg-knauser og -vegger;75,76;T1-75,T1-76
+2500;NA T1-B-17;svakt intermediært og kalkfattig lite tørkeutsatt berg i pionérfase;77;T1-77
+2500;NA T1-B-18;sterkt intermediært til ekstremt kalkrikt lite tørkeutsatt berg i pionérfase;79;T1-79
+2500;NA T1-B-19;svakt intermediært og kalkfattig tørkeutsatt berg i pionérfase;78;T1-78
+2500;NA T1-B-20;sterkt intermediært til ekstremt kalkrikt tørkeutsatt berg i pionérfase;80;T1-80
+2500;NA T1-B-21;svakt intermediært og kalkfattig forblåst berg;83;T1-83
+2500;NA T1-B-22;sterkt intermediært til ekstremt kalkrikt forblåst berg;84;T1-84
+2500;NA T1-B-23;svakt intermediært og kalkfattig snøleieberg;81;T1-81
+2500;NA T1-B-24;sterkt intermediært til ekstremt kalkrikt snøleieberg;82;T1-82
+2500;NA T2-B-1;åpen kalkfattig grunnlendt lyngmark;1;T2-1
+2500;NA T2-B-2;åpen kalkfattig grunnlendt lavmark;2;T2-2
+2500;NA T2-B-3;åpen intermediær grunnlendt lyngmark;3;T2-3
+2500;NA T2-B-4;åpen intermediær grunnlendt lavmark;4;T2-4
+2500;NA T2-B-5;åpen svakt kalkrik grunnlendt lyngmark;5;T2-5
+2500;NA T2-B-6;åpen svakt kalkrik grunnlendt lavmark;6;T2-6
+2500;NA T2-B-7;åpen sterkt kalkrik grunnlendt lyngmark;7;T2-7
+2500;NA T2-B-8;åpen sterkt kalkrik grunnlendt lavmark;8;T2-8
+2500;NA T3-B-1;kalkfattig leside;1;T3-1
+2500;NA T3-B-2;kalkfattig fjell-lynghei;2;T3-2
+2500;NA T3-B-3;kalkfattig fjell-lavhei;3;T3-3
+2500;NA T3-B-4;intermediær leside;4;T3-4
+2500;NA T3-B-5;intermediær fjell-lynghei;5;T3-5
+2500;NA T3-B-6;intermediær fjell-lavhei;6;T3-6
+2500;NA T3-B-7;svakt kalkrik leside;7;T3-7
+2500;NA T3-B-8;svakt kalkrik fjell-lynghei;8;T3-8
+2500;NA T3-B-9;svakt kalkrik fjell-lavhei;9;T3-9
+2500;NA T3-B-10;sterkt kalkrik leside;10;T3-10
+2500;NA T3-B-11;sterkt kalkrik fjell-lynghei;11;T3-11
+2500;NA T3-B-12;sterkt kalkrik fjell-lavhei;12;T3-12
+2500;NA T3-B-13;intermediær kildepåvirket fjellhei;13;T3-13
+2500;NA T3-B-14;kalkrik kildepåvirket fjellhei;14;T3-14
+2500;NA T4-B-1;blåbærskog;1;T4-1
+2500;NA T4-B-2;svak lågurtskog;2;T4-2
+2500;NA T4-B-3;lågurtskog;3;T4-3
+2500;NA T4-B-4;kalklågurtskog;4;T4-4
+2500;NA T4-B-5;bærlyngskog;5;T4-5
+2500;NA T4-B-6;svak bærlyng-lågurtskog;6;T4-6
+2500;NA T4-B-7;bærlyng-lågurtskog;7;T4-7
+2500;NA T4-B-8;bærlyng-kalklågurtskog;8;T4-8
+2500;NA T4-B-9;lyngskog;9;T4-9
+2500;NA T4-B-10;svak lyng-lågurtskog;10;T4-10
+2500;NA T4-B-11;lyng-lågurtskog;11;T4-11
+2500;NA T4-B-12;lyng-kalklågurtskog;12;T4-12
+2500;NA T4-B-13;lavskog;13;T4-13
+2500;NA T4-B-14;svak lav-lågurtskog;14;T4-14
+2500;NA T4-B-15;lav-lågurtskog;15;T4-15
+2500;NA T4-B-16;lav-kalklågurtskog;16;T4-16
+2500;NA T4-B-17;storbregneskog;17;T4-17
+2500;NA T4-B-18;høgstaudeskog;18;T4-18
+2500;NA T4-B-19;litt tørkeutsatt høgstaudeskog;19;T4-19
+2500;NA T4-B-20;tørkeutsatt høgstaudeskog;20;T4-20
+2500;NA T5-B-1;Kalkfattig overheng;1;T5-1
+2500;NA T5-B-2;intermediært og svakt kalkrikt overheng;2;T5-2
+2500;NA T5-B-3;sterkt kalkrikt overheng;3;T5-3
+2500;NA T5-B-4;mindre kalkrik grotte;4;T5-4
+2500;NA T5-B-5;karstgrotte og overheng;5;T5-5
+2500;NA T5-B-6 ;mindre kalkrikt grottedyp;6;T5-6
+2500;NA T5-B-7;indre del av dyp kartsgrotte;7;T5-7
+2500;NA T5-B-8;tørt kalkfattig overheng;8;T5-8
+2500;NA T5-B-9;tørt intermediært og svakt kalkrikt overheng;9;T5-9
+2500;NA T5-B-10;tørt sterkt kalkrikt overheng;10;T5-10
+2500;NA T6-B-1;kalkfattige og intermediært beskyttende strandberg;1,2,3,6,7;T6-1,T6-2,T6-3,T6-6,T6-7
+2500;NA T6-B-2;kalkrik bergknaus i bølgesprutsonen;4;T6-4
+2500;NA T6-B-3;eksponert bergknaus i nedre bølgeslagssone;5;T6-5
+2500;NA T7-B-1;svært kalkfattig moderat snøleie;1;T7-1
+2500;NA T7-B-2;svakt kalkfattig moderat snøleie;2;T7-2
+2500;NA T7-B-3;intermediært moderat snøleie;3;T7-3
+2500;NA T7-B-4;intermediært seint snøleie;4;T7-4
+2500;NA T7-B-5;intermediært ekstremsnøleie;5;T7-5
+2500;NA T7-B-6;svakt kalkrikt moderat snøleie;6;T7-6
+2500;NA T7-B-7;svakt kalkrikt seint snøleie;7;T7-7
+2500;NA T7-B-8;sterkt kalkrikt moderat snøleie;8;T7-8
+2500;NA T7-B-9;sterkt kalkrikt seint snøleie;9;T7-9
+2500;NA T7-B-10;kalkrikt ekstremsnøleie;10;T7-10
+2500;NA T7-B-11;vegetasjonsfritt snøleie;11;T7-11
+2500;NA T7-B-12;kildepåvirket intermediært snøleie;12;T7-12
+2500;NA T7-B-13;kildepåvirket nokså kalkrikt snøleie;13;T7-13
+2500;NA T7-B-14;kildepåvirket kalksnøleie;14;T7-14
+2500;NA T8-B-1;fuglefjellenger med naturlig gjødslingspreg;1,2;T8-1,T8-2
+2500;NA T8-B-2;overgjødslet fuglefjell-eng;3;T8-3
+2500;NA T8-B-3;kildeåpvirket fuglefjell-eng;4;T8-4
+2500;NA T8-B-4;fulgetopp;5;T8-5
+2500;NA T9-B-1;fattig-intermediær mosetundra;1;T9-1
+2500;NA T9-B-2;kalkrik mosetundra;2;T9-2
+2500;NA T10-B-1;beskyttet arktisk steppe;1;T10-1
+2500;NA T10-B-2;rabbe i arktisk steppe;2;T10-2
+2500;NA T11-B-1;nedre saltanrikningsmark på grus;1;T11-1
+2500;NA T11-B-2;øvre saltanrikingsmark på grus;2;T11-2
+2500;NA T11-B-3;saltanrikningsmark på bløtbunn;3;T11-3
+2500;NA T12-B-1;nedre strandeng;1;T12-1
+2500;NA T12-B-2;midtre strandeng;2;T12-2
+2500;NA T12-B-3;øvre strandeng;3;T12-3
+2500;NA T12-B-4;øverste strandeng;4;T12-4
+2500;NA T13-B-1;kalkfattig grov ur;1;T13-1
+2500;NA T13-B-2;kalkfattig ur;2;T13-2
+2500;NA T13-B-3;kalkfattig grus- og sanddominert rasmark;3;T13-3
+2500;NA T13-B-4;intermediær og svakt kalkrik grov ur;4;T13-4
+2500;NA T13-B-5;intermediær og svakt kalkrik ur;5;T13-5
+2500;NA T13-B-6;intermediær og svakt kalkrik grus- og sanddominert rasmark;6;T13-6
+2500;NA T13-B-7;sterkt kalkrik grov ur;7;T13-7
+2500;NA T13-B-8;sterkt kalkrik ur;8;T13-8
+2500;NA T13-B-9;sterkt kalkrik grus- og sanddominert rasmark;9;T13-9
+2500;NA T13-B-10;kalkfattig fuktig grov ur;10;T13-10
+2500;NA T13-B-11;kalkfattig fuktig ur;11;T13-11
+2500;NA T13-B-12;intermediær og svakt kalkrik fuktig grov ur;12;T13-12
+2500;NA T13-B-13;intermediær og svakt kalkrik fuktig ur;13;T13-13
+2500;NA T13-B-14;sterkt kalkrik fuktig grov ur;14;T13-14
+2500;NA T13-B-15;sterkt kalkrik fuktig ur;15;T13-15
+2500;NA T13-B-16;ustabil grov ut;16;T13-16
+2500;NA T13-B-17;ustabil ur;17;T13-17
+2500;NA T13-B-18;ustabil grus- og sanddominert rasmark;18;T13-18
+2500;NA T14-B-1;kalkfattig og intermediær rabbe;1;T14-1
+2500;NA T14-B-2;kalkrik rabbe;2;T14-2
+2500;NA T14-B-3;deflasjonsrabbe;3;T14-3
+2500;NA T15-B-1;kalkfattig og intermediær fosse-eng;1;T15-1
+2500;NA T15-B-2;kalkrik fosse-eng;2;T15-2
+2500;NA T16-B-1;kalkfattig rasmarkeng og -hei;1;T16-1
+2500;NA T16-B-2;intermediær rasmarkeng og -hei;2;T16-2
+2500;NA T16-B-3;svakt kalkrik rasmarkeng og -hei;3;T16-3
+2500;NA T16-B-4;sterkt kalkrik rasmarkeng og -hei;4;T16-4
+2500;NA T16-B-5;kildepåvirket intermediær rasmarkeng og -hei;5;T16-5
+2500;NA T16-B-6;kildepåvirket kalkrik rasmarkeng og -hei;6;T16-6
+2500;NA T16-B-7;sterkt raspreget rasmarkeng og -hei;7;T16-7
+2500;NA T17-B-1;jordskred;1;T17-1
+2500;NA T17-B-2;grusskred;2;T17-2
+2500;NA T17-B-3;sandskred;3;T17-3
+2500;NA T17-B-4;silt- og leirskred;4;T17-4
+2500;NA T18-B-1;åpne flomfastmarker på grus og stein    ;1;T18-1
+2500;NA T18-B-2;åpen flomfastmark på sand ;2;T18-2
+2500;NA T18-B-3;åpen flomfastmark på  silt og leire;3;T18-3
+2500;NA T18-B-4;sterkt eksponert åpen flomfastmark;4;T18-4
+2500;NA T18-B-5;åpen flomfastmark på kalkrik grus og stein;5;T18-5
+2500;NA T18-B-6;åpen flomfastmakr på sand med klart erosjonspreg;6;T18-6
+2500;NA T19-B-1;kalkfattige finjordsflekker;1;T19-1
+2500;NA T19-B-2;kalkrike finjordsflekker;2;T19-2
+2500;NA T20-B-1;kalkfattig og intermediær isinnfrysingsmark;1;T20-1
+2500;NA T20-B-2;kalkrik isinnfrysingsmark;2;T20-2
+2500;NA T21-B-1;forstrand;1;T21-1
+2500;NA T21-B-2;primærdyne;2;T21-2
+2500;NA T21-B-3;kvit dyne;3;T21-3
+2500;NA T21-B-4;grå dyne;4;T21-4
+2500;NA T21-B-5;brun dyne;5;T21-5
+2500;NA T21-B-6;dynehei;6;T21-6
+2500;NA T21-B-7;ustabil sanddyne;7;T21-7
+2500;NA T21-B-8;dynetrau;8;T21-8
+2500;NA T22-B-1;kalkfattig og intermediær fjellgrashei;1;T22-1
+2500;NA T22-B-2;kalkfattig og intermediær grassnøleie;2;T22-2
+2500;NA T22-B-3;kalkrik fjellgrashei;3;T22-3
+2500;NA T22-B-4;kalkrikt grassnøleie;4;T22-4
+2500;NA T23-B-1;ferskvannsdriftvoll;1;T23
+2500;NA T24-B-1;høgurtdriftvoll;1;T24-1
+2500;NA T24-B-2;lågurtdriftvoll;2;T24-2
+2500;NA T24-B-3;ettårsdriftvoll;3;T24-3
+2500;NA T25-B-1;historisk jordskred;1;T25-1
+2500;NA T25-B-2;historisk grusskred;2;T25-2
+2500;NA T25-B-3;historisk sandskred;3;T25-3
+2500;NA T25-B-4;historisk silt- og leirskred;4;T25-4
+2500;NA T26-B-1;veldrenert breforland i etableringsfasen mot fjellhei;1;T26-1
+2500;NA T26-B-2;fuktig breforland i etableringsfasen mot fjellhei;2;T26-2
+2500;NA T26-B-3;veldrenert breforland i etableringsfasen mot snøleie;3;T26-3
+2500;NA T26-B-4;fuktig breforland i etableringsfasen mot snøleie;4;T26-4
+2500;NA T26-B-5;grus- og steindominert breforland i pionérfasen;5;T26-5
+2500;NA T26-B-6;sanddominert breforland i pionérfasen;6;T26-6
+2500;NA T26-B-7;silt- og leirdominert breforland i pionérfasen;7;T26-7
+2500;NA T27-B-1;kalkfattig og intermediær blokkmark;1;T27-1
+2500;NA T27-B-2;kalkfattig og intermediær snøleie-blokkmark;2;T27-2
+2500;NA T27-B-3;kalkrik blokkmark;3;T27-3
+2500;NA T27-B-4;kalkrik snøleie-blokkmark;4;T27-4
+2500;NA T27-B-5;blokkmark i vegetasjonsfritt snøleie;5;T27-5
+2500;NA T27-B-6;kalkfattig og intermediær rabbepreget blokkmark;6;T27-6
+2500;NA T27-B-7;kalkrik rabbepreget blokkmark;7;T27-7
+2500;NA T27-B-8;pionérfase-blokkmark;8;T27-8
+2500;NA T28-B-1;kalkfattig polarørken;1;T28-1
+2500;NA T28-B-2;intermediær og svakt kalkrik polarørken;2;T28-2
+2500;NA T28-B-3;sterkt kalkrik polarørken;3;T28-3
+2500;NA T29-B-1;øvre steinstrand med pionérvegetasjon;1;T29-1
+2500;NA T29-B-2;øvre steinstrand uten pionérvegetasjon;2;T29-2
+2500;NA T29-B-3;øvre grusstrand med pionérvegetasjon;3;T29-3
+2500;NA T29-B-4;øvre grusstrand uten pionérvegetasjon;4;T29-4
+2500;NA T29-B-5;øvre sandstrand med pionérvegetasjon;5;T29-5
+2500;NA T29-B-6;øvre sandstrand uten pionérvegetasjon;6;T29-6
+2500;NA T29-B-7;nedre steinstrand med pionérvegetasjon;7;T29-7
+2500;NA T29-B-8;nedre grusstrand med pionérvegetasjon;8;T29-8
+2500;NA T29-B-9;nedre sandstrand med pionérvegetasjon;9;T29-9
+2500;NA T29-B-10;øvre grusstrand med vinddeflasjon;10;T29-10
+2500;NA T30-B-1;beskyttet flomskogsmark på grus og stein;1;T30-1
+2500;NA T30-B-2;eksponert flomskogsmark på grus og stein;2;T30-2
+2500;NA T30-B-3;beskyttet flomskogsmark på finmateriale;3;T30-3
+2500;NA T30-B-4;eksponert flomskogsmark på finmateriale;4;T30-4
+2500;NA T30-B-5;beskyttet flomskogsmark med storbregner og høgstauder;5;T30-5
+2500;NA T30-B-6;eksponert flomskogsmark med storbregner og høgstauder;6;T30-6
+2500;NA T30-B-7;erosjonspreget flomskogsmark;7;T30-7
+2500;NA T31-B-1;kalkfattig boreal frisk hei;1;T31-1
+2500;NA T31-B-2;kalkfattig boreal lynghei;2;T31-2
+2500;NA T31-B-3;kalkfattig boreal lavhei;3;T31-3
+2500;NA T31-B-4;intermediær boreal frisk hei;4;T31-4
+2500;NA T31-B-5;intermediær boreal lynghei;5;T31-5
+2500;NA T31-B-6;intermediær boreal lavhei;6;T31-6
+2500;NA T31-B-7;svakt kalkrik boreal frisk hei;7;T31-7
+2500;NA T31-B-8;svakt kalkrik boreal lynghei;8;T31-8
+2500;NA T31-B-9;svakt kalkrik boreal lavhei;9;T31-9
+2500;NA T31-B-10;sterkt kalkrik boreal frisk hei;10;T31-10
+2500;NA T31-B-11;sterkt kalkrik boreal lynghei;11;T31-11
+2500;NA T31-B-12;sterkt kalkrik boreal lavhei;12;T31-12
+2500;NA T31-B-13;intermediær kildepåvirket boreal frisk hei;13;T31-13
+2500;NA T31-B-14;kalkrik kildepåvirket boreal frisk hei;14;T31-14
+2500;NA T32-B-1;kalkfattig eng med mindre hevdpreg;1;T32-1
+2500;NA T32-B-2;kalkfattig eng med klart hevdpreg;2;T32-2
+2500;NA T32-B-3;intermediær eng med mindre hevdpreg;3;T32-3
+2500;NA T32-B-4;intermediær eng med klart hevdpreg;4;T32-4
+2500;NA T32-B-5;intermediær eng med gjødselpåvirkning;5;T32-5
+2500;NA T32-B-6;svakt kalkrik eng med mindre hevdpreg;6;T32-6
+2500;NA T32-B-7;svakt kalkrik eng med klart hevdpreg;7;T32-7
+2500;NA T32-B-8;svakt kalkrik eng med gjødselpåvirkning;8;T32-8
+2500;NA T32-B-9;sterkt kalkrik eng med mindre hevdpreg;9;T32-9
+2500;NA T32-B-10;sterkt kalkrik eng med ekstensivt hevdpreg;10;T32-10
+2500;NA T32-B-11;kalkrik fukteng med mindre hevdpreg;11;T32-11
+2500;NA T32-B-12;kalkrik fukteng med klart hevdpreg og gjødselpåvirkning;12;T32-12
+2500;NA T32-B-13;kalkfattig tørreng med mindre hevdpreg;13;T32-13
+2500;NA T32-B-14;kalkfattig tørreng med klart hevdpreg;14;T32-14
+2500;NA T32-B-15;intermediær tørreng med mindre hevdpreg;15;T32-15
+2500;NA T32-B-16;intermediær tørreng med klart hevdpreg og gjødselpåvirkning;16;T32-16
+2500;NA T32-B-17;svakt kalkrik tørreng med mindre hevdpreg;17;T32-17
+2500;NA T32-B-18;svakt kalkrik tørreng med klart hevdpreg og gjødselpåvirkning;18;T32-18
+2500;NA T32-B-19;sterkt kalkrik tørreng med mindre hevdpreg;19;T32-19
+2500;NA T32-B-20;sterkt kalkrik tørreng med klart hevdpreg;20;T32-20
+2500;NA T32-B-21;sanddyne-eng med klart hevdpreg og gjødselpåvirkning;21;T32-21
+2500;NA T33-B-1;nedre semi-naturlig strandeng;1;T33-1
+2500;NA T33-B-2;øvre semi-naturlig strandeng;2;T33-2
+2500;NA T34-B-1;kalkfattig bakli-hei;1;T34-1
+2500;NA T34-B-2;kalkfattig kystlynghei;2;T34-2
+2500;NA T34-B-3;kalkfattig tørr kystlynghei;3;T34-3
+2500;NA T34-B-4;intermediær bakli-hei;4;T34-4
+2500;NA T34-B-5;intermediær kystlynghei;5;T34-5
+2500;NA T34-B-6;intermediær tørr kystlynghei;6;T34-6
+2500;NA T34-B-7;svakt kalkrik kystlynghei;7;T34-7
+2500;NA T34-B-8;svakt kalkrik tørr kystlynghei;8;T34-8
+2500;NA T34-B-9;sterkt kalkrik kystlynghei;9;T34-9
+2500;NA T34-B-10;sterkt kalkrik tørr kystlynghei;10;T34-10
+2500;NA T34-B-11;kalkfattig fuktig kystlynghei;11;T34-11
+2500;NA T34-B-12;intermediær fuktig kystlynghei;12;T34-12
+2500;NA T35-B-1;sterkt endret fastmark med jorddekke;1;T35-1
+2500;NA T35-B-2;sterkt endret fastmark med grusdekke;2;T35-2
+2500;NA T35-B-3;sterkt endret fastmark med sanddekke;3;T35-3
+2500;NA T35-B-4;sterkt endret fastmark med dekke av silt og leire;4;T35-4
+2500;NA T36-B-1;sterkt endret tidligere våtmark;1;T36-1
+2500;NA T36-B-2;tørrlagt elvebunn;2;T36-2
+2500;NA T36-B-3;tørrlagt innsjøbunn;3;T36-3
+2500;NA T37-B-1;slagghauger og deponier for fast kjemisk avfall;1;T37-1
+2500;NA T37-B-2;asfalt, løs betong o.l.;2;T37-2
+2500;NA T37-B-3;avfallsdeponi o.l.;3;T37-3
+2500;NA T38-B-1;treplantasje;1;T38
+2500;NA T39-B-1;blokkdeponi;1;T39-1
+2500;NA T39-B-2;blokkdeponi under gjengroing;2;T39-2
+2500;NA T39-B-3;dagbrudd, vegskjæringer i fjell o.l.;3;T39-3
+2500;NA T39-B-4;dagbrudd, vegskjæringer i fjell o.l. under gjengroing;4;T39-4
+2500;NA T39-B-5;fast fjell blottlagt ved tørrlegging;5;T39-5
+2500;NA T39-B-6;fast fjell blottlagt ved tørrlegging under gjengroing;6;T39-6
+2500;NA T39-B-7;metalloverflater, glass, glassfiber o.l.;7;T39-7
+2500;NA T39-B-8;metalloverflater, glass, glassfiber o.l. under gjengroing;8;T39-8
+2500;NA T40-B-1;eng-liknende sterkt endret fastmark;1;T40
+2500;NA T41-B-1;eng-liknende oppdyrket mark;1;T41
+2500;NA T42-B-1;blomsterbed og liknende;1;T42
+2500;NA T43-B-1;plener, parker og liknende;1;T43
+2500;NA T44-B-1;åker;1;T44
+2500;NA T45-B-1;oppdyrket lite intensiv beitemark;1;T45-1
+2500;NA T45-B-2;oppdyrket lite intensiv slåtteeng;2;T45-2
+2500;NA T45-B-3;oppdyrket intensiv slåtteeng;3;T45-3
+2500;NA T45-B-4;oppdyrket svært intensiv slåtteeng;4;T45-4
+2500;NA V1-B-1;svært og temmelig kalkfattige mykmatter og nedre fastmatter;1,2;V1-1,V1-2
+2500;NA V1-B-2;svært og temmelig kalkfattige øvre fastmatter  og tuenivå;3,4,5;V1-3,V1-4,V1-5
+2500;NA V1-B-3;litt kalkfattige og svakt intermediære mykmatter og nedre fastmatter;6,7;V1-6,V1-7
+2500;NA V1-B-4;litt kalkfattige og svakt intermediære øvre fastmatter og tuenivå;8,9;V1-8,V1-9
+2500;NA V1-B-5;sterkt intermediære og litt kalkrike mykmatter og nedre fastmatter;10,11;V1-10,V1-11
+2500;NA V1-B-6;sterk intermediære og litt kalkrike øvre fastmatter og nedre tuenivå;12,13;V1-12,V1-13
+2500;NA V1-B-7;temmelig og svært kalkrik mykmatte og nedre fastmatte;14,15;V1-14,V1-15
+2500;NA V1-B-8;temmelig til ekstremt kalkrik øvre fastmatte og nedre tuenivå;16,19,20;V1-16,V1-19,V1-20
+2500;NA V1-B-9;ekstremt kalkrik mykmatte og nedre fastmatte;17,18;V1-17,V1-18
+2500;NA V1-B-10;svært og temmelig kalkfattig mykmatte og nedre fastmatte i myrkant;21;V1-21
+2500;NA V1-B-11;svært og temmelig kalkfattig øvre fastmatte og tuer i myrkant;22;V1-22
+2500;NA V1-B-12;litt kalkfattig og svakt intermediær mykmatte og nedre fastmatte i myrkant;23;V1-23
+2500;NA V1-B-13;litt kalkfattig og svakt intermediær øvre fastmatte og nedre tuenivå i myrkant;24;V1-24
+2500;NA V1-B-14;temmelig og svært kalkrik mykmatte;25;V1-25
+2500;NA V1-B-15;temmelig og svært kalkrik nedre fastmatte;26;V1-26
+2500;NA V1-B-16;temmelig og svært kalkrik mykmatte og nedre fastmatte i myrkant;27;V1-27
+2500;NA V1-B-17;ekstremt kalkrik mykmatte og nedre fastmatte i myrkant;28;V1-28
+2500;NA V1-B-18;temmelig til ekstremt kalkrik øvre fastmatte og nedre tuenivå i myrkant;29;V1-29
+2500;NA V1-B-19;sterkt intermediær og litt kalkrik kildemyr;30;V1-30
+2500;NA V1-B-20;temmelig og svært kalkrik kildemyr;31;V1-31
+2500;NA V1-B-21;saltpåvirket myrkant;32;V1-32
+2500;NA V2-B-1;kalkfattig og svakt intermediær myr- og sumpskogsmatte;1;V2-1
+2500;NA V2-B-2;kalkfattig og svakt intermediær myr- og sumpskogstue;2;V2-2
+2500;NA V2-B-3;sterkt intermediær og litt kalkrik myr- og sumpskogsmatte;3;V2-3
+2500;NA V2-B-4;sterkt intermediær og litt kalkrik myr- og sumpskogstue;4;V2-4
+2500;NA V2-B-5;temmelig til ekstremt kalkrik myr- og sumpskogsmatte;5;V2-5
+2500;NA V2-B-6;temmelig til ekstremt kalkrik myr- og sumpskogstue;6;V2-6
+2500;NA V2-B-7;sterkt intermediær og litt kalkrik kildemyrskogsmark;7;V2-7
+2500;NA V2-B-8;temmelig til ekstremt kalkrik kildemyrskogsmark;8;V2-8
+2500;NA V3-B-1;ombrotrof mykmatte og nedre fastmatte;1,2;V3-1,V3-2
+2500;NA V3-B-2;ombrotrof øvre fastmatte til øvre tuenivå;3,4,5,7;V3-3,V3-4,V3-5,V3-7
+2500;NA V3-B-3;ombrotrof myrkant;6;V3-6
+2500;NA V4-B-1;litt kalkfattig og svakt intermediær svakkilde;1;V4-1
+2500;NA V4-B-2;sterkt intermediære og litt kalkrike kilder    ;2,3;V4-2,V4-3
+2500;NA V4-B-3;temmelig til ekstremt kalkrike kilder    ;4,5;V4-4,V4-5
+2500;NA V4-B-4;sterkt intermediære og litt kalkrike torvmarkskilder;6,7;V4-6,V4-7
+2500;NA V4-B-5;temmelig til ekstremt kalkrike torvmarkskilder    ;8,9;V4-8,V4-9
+2500;NA V5-B-1;svak varmkilde;1;V5-1
+2500;NA V5-B-2;klar varmkilde;2;V5-2
+2500;NA V6-B-1;kalkfattig og intermediært moderat våtsnøleie;1;V6-1
+2500;NA V6-B-2;kalkrikt moderat våtsnøleie;2;V6-2
+2500;NA V6-B-3;kalkfattig og intermediært seint våtsnøleie;3;V6-3
+2500;NA V6-B-4;kalkrikt seint våtsnøleie;4;V6-4
+2500;NA V6-B-5;kalkfattig og intermediært ekstrem-våtsnøleie;5;V6-5
+2500;NA V6-B-6;kalkrikt ekstrem-våtsnøleie;6;V6-6
+2500;NA V6-B-7;kalkfattig og intermediært seint kildesnøleie;7;V6-7
+2500;NA V6-B-8;kalkrikt seint kildesnøleie;8;V6-8
+2500;NA V6-B-9;ekstrem-kildesnøleie;9;V6-9
+2500;NA V7-B-1;kalkfattig og intermediær permafrost-våtmark;1;V7-1
+2500;NA V7-B-2;kalkrik permafrost-våtmark;2;V7-2
+2500;NA V8-B-1;kalkfattig og intermediær strand- og sumpskogsmark;1;V8-1
+2500;NA V8-B-2;kalkrik strand- og sumpskogsmark;2;V8-2
+2500;NA V8-B-3;saltpåvirket strand- og sumpskogsmark;3;V8-3
+2500;NA V9-B-1;kalkfattig semi-naturlig myr;1;V9-1
+2500;NA V9-B-2;intermediær semi-naturlig myr;2;V9-2
+2500;NA V9-B-3;kalkrik semi-naturlig myr;3;V9-3
+2500;NA V10-B-1;intermediær våteng;1;V10-1
+2500;NA V10-B-2;kalkrik våteng;2;V10-2
+2500;NA V10-B-3;kildevannspåvirket våteng;3;V10-3
+2500;NA V11-B-1;kalkfattig torvtak;1;V11-1
+2500;NA V11-B-2;kalkrikt torvtak;2;V11-2
+2500;NA V12-B-1;grøftet kalkfattig jordvannsmyr;1;V12-1
+2500;NA V12-B-2;grøftet kalkrik jordvannsmyr;2;V12-2
+2500;NA V12-B-3;grøftet nedbørsmyr;3;V12-3
+2500;NA V13-B-1;ny våtmark på tidligere fastmark ;1;V13-1
+2500;NA V13-B-2;torvdannende ny våtmark på tidligere fastmark ;2;V13-2
+2500;NA V13-B-3;ny våtmark på tidligere jordbruks-fastmark ;3;V13-3
+2500;NA V13-B-4;torvdannende ny våtmark på tidligere jordbruks-fastmark;4;V13-4
+2500;NA V13-B-5;ny våtmark på tidligere neddemt skogsmark;5;V13-5
+2500;NA V13-B-6;torvdannende ny våtmark på tidligere neddemt skogsmark;6;V13-6
+2500;NA V13-B-7;ny våtmark på tidligere ferskvannsbunn;7;V13-7
+2500;NA V13-B-8;torvdannende ny våtmark på tidligere ferskvannsbunn;8;V13-8
+2500;NA I1-B-1;snø- og isdekt fastmark;1;I1
+5000;NA M8-C-1;Helofytt-saltvannssump;;
+5000;NA M9-C-1;Litoralbasseng;1,2,3,4,5,6,7,8,9;M9-1,M9-2,M9-3,M9-4,M9-5,M9-6,M9-7,M9-8,M9-9
+5000;NA L4-C-1;Kalkfattig helofyttsump ;1;L4-1
+5000;NA L4-C-2;Litt kalkfattig til intermediær helofyttsump;2;L4-2
+5000;NA L4-C-3;Kalkrik helofyttsump;3;L4-3
+5000;NA T1-C-1 ;lite tørkeutsatte svært og temmelig kalkfattige nakne berg ;1,2,21,33,41,42,61,62,69,70;T1-1,T1-2,T1-21,T1-33,T1-41,T1-42,T1-61,T1-62,T1-69,T1-70
+5000;NA T1-C-2;uttørkingseksponerte svært og temmelig kalkfattige berg, bergvegger og knauser;3,4,22,23,34,43,44;T1-3,T1-4,T1-22,T1-23,T1-34,T1-43,T1-44
+5000;NA T1-C-3;lite uttørkingseksponerte litt kalkfattige og svakt intermediære nakne berg ;5,6,24,35,45,46,63,64,71,72;T1-5,T1-6,T1-24,T1-35,T1-45,T1-46,T1-63,T1-64,T1-71,T1-72
+5000;NA T1-C-4;uttørkingseksponerte litt kalkfattige og svakt intermediære berg, bergvegger og knauser;7,8,25,26,36,47,48;T1-7,T1-8,T1-25,T1-26,T1-36,T1-47,T1-48
+5000;NA T1-C-5;lite uttørkingseksponerte sterkt og litt kalkrike intermediære nakne berg ;9,10,27,37,49,50,66,65,73,74;T1-9,T1-10,T1-27,T1-37,T1-49,T1-50,T1-66,T1-65,T1-73,T1-74
+5000;NA T1-C-6;uttørkingseksponerte sterkt intermediære og litt kalkrike berg, bergvegger og knauser ;11,12,28,29,38,51,52;T1-11,T1-12,T1-28,T1-29,T1-38,T1-51,T1-52
+5000;NA T1-C-7;lite uttørkingseksponerte temmelig til ekstremt kalkrike nakne berg ;13,14,17,18,30,39,53,54,57,58,67,68,75,76;T1-13,T1-14,T1-17,T1-18,T1-30,T1-39,T1-53,T1-54,T1-57,T1-58,T1-67,T1-68,T1-75,T1-76
+5000;NA T1-C-8;uttørkingseksponerte temmelig til ekstremt kalkrike berg, bergvegger og knauser ;15,16,19,20,31,32,40,55,56,59,60;T1-15,T1-16,T1-19,T1-20,T1-31,T1-32,T1-40,T1-55,T1-56,T1-59,T1-60
+5000;NA T1-C-9;svakt intermediært og kalkfattig forblåst berg;83;T1-83
+5000;NA T1-C-10;sterkt intermediært til ekstremt kalkrikt forblåst berg;84;T1-84
+5000;NA T1-C-11;svakt intermediært og kalkfattig snøleieberg;81;T1-81
+5000;NA T1-C-12;sterkt intermediært til ekstremt kalkrikt snøleieberg;82;T1-82
+5000;NA T2-C-1;åpen kalkfattig grunnlendt lyngmark;1;T2-1
+5000;NA T2-C-2;åpen kalkfattig grunnlendt lavmark;2;T2-2
+5000;NA T2-C-3;åpen intermediær grunnlendt lyngmark;3;T2-3
+5000;NA T2-C-4;åpen intermediær grunnlendt lavmark;4;T2-4
+5000;NA T2-C-5;åpen svakt kalkrik grunnlendt lyngmark;5;T2-5
+5000;NA T2-C-6;åpen svakt kalkrik grunnlendt lavmark;6;T2-6
+5000;NA T2-C-7;åpen sterkt kalkrik grunnlendt lyngmark;7;T2-7
+5000;NA T2-C-8;åpen sterkt kalkrik grunnlendt lavmark;8;T2-8
+5000;NA T3-C-1;kalkfattig leside;1;T3-1
+5000;NA T3-C-2;kalkfattig fjell-lynghei;2;T3-2
+5000;NA T3-C-3;kalkfattig fjell-lavhei;3;T3-3
+5000;NA T3-C-4;intermediær leside;4;T3-4
+5000;NA T3-C-5;intermediær fjell-lynghei;5;T3-5
+5000;NA T3-C-6;intermediær fjell-lavhei;6;T3-6
+5000;NA T3-C-7;svakt kalkrik leside;7;T3-7
+5000;NA T3-C-8;svakt kalkrik fjell-lynghei;8;T3-8
+5000;NA T3-C-9;svakt kalkrik fjell-lavhei;9;T3-9
+5000;NA T3-C-10;sterkt kalkrik leside;10;T3-10
+5000;NA T3-C-11;sterkt kalkrik fjell-lynghei;11;T3-11
+5000;NA T3-C-12;sterkt kalkrik fjell-lavhei;12;T3-12
+5000;NA T3-C-13;intermediær kildepåvirket fjellhei;13;T3-13
+5000;NA T3-C-14;kalkrik kildepåvirket fjellhei;14;T3-14
+5000;NA T4-C-1;blåbærskog;1;T4-1
+5000;NA T4-C-2;svak lågurtskog;2;T4-2
+5000;NA T4-C-3;lågurtskog;3;T4-3
+5000;NA T4-C-4;kalklågurtskog;4;T4-4
+5000;NA T4-C-5;bærlyngskog;5;T4-5
+5000;NA T4-C-6;svak bærlyng-lågurtskog;6;T4-6
+5000;NA T4-C-7;bærlyng-lågurtskog;7;T4-7
+5000;NA T4-C-8;bærlyng-kalklågurtskog;8;T4-8
+5000;NA T4-C-9;lyngskog;9;T4-9
+5000;NA T4-C-10;svak lyng-lågurtskog;10;T4-10
+5000;NA T4-C-11;lyng-lågurtskog;11;T4-11
+5000;NA T4-C-12;lyng-kalklågurtskog;12;T4-12
+5000;NA T4-C-13;lavskog;13;T4-13
+5000;NA T4-C-14;svak lav-lågurtskog;14;T4-14
+5000;NA T4-C-15;lav-lågurtskog;15;T4-15
+5000;NA T4-C-16;lav-kalklågurtskog;16;T4-16
+5000;NA T4-C-17;storbregneskog;17;T4-17
+5000;NA T4-C-18;høgstaudeskog;18;T4-18
+5000;NA T4-C-19;litt tørkeutsatt høgstaudeskog;19;T4-19
+5000;NA T4-C-20;tørkeutsatt høgstaudeskog;20;T4-20
+5000;NA T5-C-1;kalkfattige til svakt kalkrike tørkeutsatte grotter og overheng ;1,2,4;T5-1,T5-2,T5-4
+5000;NA T5-C-2;sterkt kalkrike ikke tørkeutsatte grotter og overheng ;3,5;T5-3,T5-5
+5000;NA T5-C-3;mindre kalkrikt grottedyp;6;T5-6
+5000;NA T5-C-4;indre del av dyp karstgrotte;7;T5-7
+5000;NA T5-C-5;tørt kalkfattig overheng;8;T5-8
+5000;NA T5-C-6;tørt intermediært og svakt kalkrikt overheng;9;T5-9
+5000;NA T5-C-7;tørt sterkt kalkrikt overheng;10;T5-10
+5000;NA T6-C-1;kalkfattige strandberg;1,2,3,5,6,7;T6-1,T6-2,T6-3,T6-5,T6-6,T6-7
+5000;NA T6-C-2;kalkrik bergknaus i bølgesprutsonen;4;T6-4
+5000;NA T7-C-1;svært kalkfattig moderat snøleie;1;T7-1
+5000;NA T7-C-2;svakt kalkfattig moderat snøleie;2;T7-2
+5000;NA T7-C-3;intermediært moderat snøleie;3;T7-3
+5000;NA T7-C-4;intermediært seint snøleie;4;T7-4
+5000;NA T7-C-5;intermediært ekstremsnøleie;5;T7-5
+5000;NA T7-C-6;svakt kalkrikt moderat snøleie;6;T7-6
+5000;NA T7-C-7;svakt kalkrikt seint snøleie;7;T7-7
+5000;NA T7-C-8;sterkt kalkrikt moderat snøleie;8;T7-8
+5000;NA T7-C-9;sterkt kalkrikt seint snøleie;9;T7-9
+5000;NA T7-C-10;kalkrikt ekstremsnøleie;10;T7-10
+5000;NA T7-C-11;vegetasjonsfritt snøleie;11;T7-11
+5000;NA T7-C-12;kildepåvirket intermediært snøleie;12;T7-12
+5000;NA T7-C-13;kildepåvirket svakt kalkrikt snøleie;13;T7-13
+5000;NA T7-C-14;kildepåvirket kalksnøleie;14;T7-14
+5000;NA T8-C-1;fuglefjell-høgstaude-enger     ;1,2,3;T8-1,T8-2,T8-3
+5000;NA T8-C-2;kildepåvirket fuglefjell-eng;4;T8-4
+5000;NA T8-C-3;fugletopp;5;T8-5
+5000;NA T9-C-1;fattig-intermediær mosetundra;1;T9-1
+5000;NA T9-C-2;kalkrik mosetundra;2;T9-2
+5000;NA T10-C-1;arktiske stepper ;1,2;T10-1,T10-2
+5000;NA T11-C-1;saltanrikingsmarker i geolitoral ;1,3;T11-1,T11-3
+5000;NA T11-C-2;øvre saltanrikingsmark på grus;2;T11-2
+5000;NA T12-C-1;strandenger i nedre og midtre geolitoral ;1,2;T12-1,T12-2
+5000;NA T12-C-2;strandenger i øvre geolitoral og supralitoral ;3,4;T12-3,T12-4
+5000;NA T13-C-1;kalkfattig grov ur;1;T13-1
+5000;NA T13-C-2;kalkfattig ur;2;T13-2
+5000;NA T13-C-3;kalkfattig grus- og sanddominert rasmark;3;T13-3
+5000;NA T13-C-4;intermediær og svakt kalkrik grov ur;4;T13-4
+5000;NA T13-C-5;intermediær og svakt kalkrik ur;5;T13-5
+5000;NA T13-C-6;intermediær og svakt kalkrik grus- og sanddominert rasmark;6;T13-6
+5000;NA T13-C-7;sterkt kalkrik grov ur;7;T13-7
+5000;NA T13-C-8;sterkt kalkrik ur;8;T13-8
+5000;NA T13-C-9;sterkt kalkrik grus- og sanddominert rasmark;9;T13-9
+5000;NA T13-C-10;kalkfattig fuktig grov ur;10;T13-10
+5000;NA T13-C-11;kalkfattig fuktig ur;11;T13-11
+5000;NA T13-C-12;intermediær og svakt kalkrik fuktig grov ur;12;T13-12
+5000;NA T13-C-13;intermediær og svakt kalkrik fuktig ur;13;T13-13
+5000;NA T13-C-14;sterkt kalkrik fuktig grov ur;14;T13-14
+5000;NA T13-C-15;sterkt kalkrik fuktig ur;15;T13-15
+5000;NA T14-C-1;kalkfattig og intermediær rabbe;1;T14-1
+5000;NA T14-C-2;kalkrik rabbe;2;T14-2
+5000;NA T15-C-1;kalkfattig og intermediær fosse-eng;1;T15-1
+5000;NA T15-C-2;kalkrik fosse-eng;2;T15-2
+5000;NA T16-C-1;kalkfattig rasmarkeng og -hei;1;T16-1
+5000;NA T16-C-2;intermediær rasmarkeng og -hei;2;T16-2
+5000;NA T16-C-3;svakt kalkrik rasmarkeng og -hei;3;T16-3
+5000;NA T16-C-4;sterkt kalkrik rasmarkeng og -hei;4;T16-4
+5000;NA T16-C-5;kildepåvirket intermediær rasmarkeng og -hei;5;T16-5
+5000;NA T16-C-6;kildepåvirket kalkrik rasmarkeng og -hei;6;T16-6
+5000;NA T16-C-7;sterkt raspreget rasmarkeng og -hei;7;T16-7
+5000;NA T17-C-1;jordskred;1;T17-1
+5000;NA T17-C-2;grus- og sandskred ;2,3;T17-2,T17-3
+5000;NA T17-C-3;silt- og leirskred;4;T17-4
+5000;NA T18-C-1;åpne flomfastmarker på sand, grus og stein    ;1,2;T18-1,T18-2
+5000;NA T18-C-2;åpen flomfastmark på silt og leire;3;T18-3
+5000;NA T18-C-3;åpen flomfastmark på kalkrik grus og stein;5;T18-5
+5000;NA T18-C-4;åpen flomfastmark på sand med klart erosjonspreg;6;T18-6
+5000;NA T19-C-1;kalkfattige finjordsflekker;1;T19-1
+5000;NA T19-C-2;kalkrike finjordsflekker;2;T19-2
+5000;NA T20-C-1;kalkfattig og intermediær isinnfrysingsmark;1;T20-1
+5000;NA T20-C-2;kalkrik isinnfrysingsmark;2;T20-2
+5000;NA T21-C-1;forstrand og primærdyner  ;1,2;T21-1,T21-2
+5000;NA T21-C-2;kvite og grå dyner  ;3,4;T21-3,T21-4
+5000;NA T21-C-3;brune dyner og dynehei ;5,6;T21-5,T21-6
+5000;NA T21-C-4;dynetrau;8;T21-8
+5000;NA T22-C-1;kalkfattig og intermediær fjellgrashei;1;T22-1
+5000;NA T22-C-2;kalkfattig og intermediært grassnøleie;2;T22-2
+5000;NA T22-C-3;kalkrik fjellgrashei;3;T22-3
+5000;NA T22-C-4;kalkrikt grassnøleie;4;T22-4
+5000;NA T23-C-1;ferskvannsdriftvoll;1;T23
+5000;NA T24-C-1;beskyttede og moderat eksponerte driftvoller  ;1,2;T24-1,T24-2
+5000;NA T24-C-2;ettårsdriftvoll;3;T24-3
+5000;NA T25-C-1;historisk jordskred;1;T25-1
+5000;NA T25-C-2;historiske grus- og sandskred ;2,3;T25-2,T25-3
+5000;NA T25-C-3;historisk silt- og leirskred;4;T25-4
+5000;NA T26-C-1;fjellhei-initialer ;1,2;T26-1,T26-2
+5000;NA T26-C-2;snøleie-initialer ;3,4;T26-3,T26-4
+5000;NA T26-C-3;grus- og steindominert breforland i pionerfasen;5;T26-5
+5000;NA T26-C-4;breforland og snøavsmeltingsområder i pionérfase, dominert av fin grus, sand, silt til leire ;6,7;T26-6,T26-7
+5000;NA T27-C-1;kalkfattig og intermediær blokkmark;1;T27-1
+5000;NA T27-C-2;kalkfattig og intermediær snøleie-blokkmark;2;T27-2
+5000;NA T27-C-3;kalkrik blokkmark;3;T27-3
+5000;NA T27-C-4;kalkrik snøleie-blokkmark;4;T27-4
+5000;NA T27-C-5;blokkmark i vegetasjonsfritt snøleie;5;T27-5
+5000;NA T27-C-6;kalkfattig og intermediær rabbepreget blokkmark;6;T27-6
+5000;NA T27-C-7;kalkrik rabbepreget blokkmark;7;T27-7
+5000;NA T28-C-1;kalkfattig polarørken;1;T28-1
+5000;NA T28-C-2;intermediær og svakt kalkrik polarørken;2;T28-2
+5000;NA T28-C-3;sterkt kalkrik polarørken;3;T28-3
+5000;NA T29-C-1;stein- og grusstrender og strandlinjer i pionérfase på epilitoral fastmark ;1,3;T29-1,T29-3
+5000;NA T29-C-2;stein- og grusstrender og strandlinjer i etablerings- og konsolideringsfase på epilitoral fastmark ;2,4,10;T29-2,T29-4,T29-10
+5000;NA T29-C-3;øvre skjellsandstrand med pionervegetasjon;5;T29-5
+5000;NA T29-C-4;øvre skjellsandstrand uten pionervegetasjon;6;T29-6
+5000;NA T29-C-5;stein- og grusstrender og strandlinjer i pionérfase i supralitoral ;7,8;T29-7,T29-8
+5000;NA T29-C-6;nedre skjellsandstrand med pionervegetasjon;9;T29-9
+5000;NA T30-C-1;flomskogsmarker på grus og stein    ;1,2;T30-1,T30-2
+5000;NA T30-C-2;flomskogsmarker på finmateriale ;3,4;T30-3,T30-4
+5000;NA T30-C-3;kildepåvirkede flomskogsmarker på finmateriale ;5,6;T30-5,T30-6
+5000;NA T30-C-4;erosjonspreget flomskogsmark;7;T30-7
+5000;NA T31-C-1;kalkfattig boreal frisk hei;1;T31-1
+5000;NA T31-C-2;kalkfattig boreal lynghei;2;T31-2
+5000;NA T31-C-3;kalkfattig boreal lavhei;3;T31-3
+5000;NA T31-C-4;intermediær boreal frisk hei;4;T31-4
+5000;NA T31-C-5;intermediær boreal lynghei;5;T31-5
+5000;NA T31-C-6;intermediær boreal lavhei;6;T31-6
+5000;NA T31-C-7;svakt kalkrik boreal frisk hei;7;T31-7
+5000;NA T31-C-8;svakt kalkrik boreal lynghei;8;T31-8
+5000;NA T31-C-9;svakt kalkrik boreal lavhei;9;T31-9
+5000;NA T31-C-10;sterkt kalkrik boreal frisk hei;10;T31-10
+5000;NA T31-C-11;sterkt kalkrik boreal lynghei;11;T31-11
+5000;NA T31-C-12;sterkt kalkrik boreal lavhei;12;T31-12
+5000;NA T31-C-13;intermediær kildepåvirket boreal frisk hei;13;T31-13
+5000;NA T31-C-14;kalkrik kildepåvirket boreal frisk hei;14;T31-14
+5000;NA T32-C-1;kalkfattig eng med mindre hevdpreg;1;T32-1
+5000;NA T32-C-2;kalkfattig eng med klart hevdpreg;2;T32-2
+5000;NA T32-C-3;intermediær eng med mindre hevdpreg;3;T32-3
+5000;NA T32-C-4;intermediær eng med klart hevdpreg;4;T32-4
+5000;NA T32-C-5;svakt kalkrik eng med mindre hevdpreg;6;T32-6
+5000;NA T32-C-6;intermediær eng med svakt preg av gjødsling;5;T32-5
+5000;NA T32-C-7;sterkt kalkrik eng med mindre hevdpreg;9;T32-9
+5000;NA T32-C-8;sterkt kalkrik eng med klart hevdpreg;10;T32-10
+5000;NA T32-C-9;kalkrik fukteng med mindre hevdpreg;11;T32-11
+5000;NA T32-C-10;kalkrik fukteng med klart hevdpreg og svakt preg av gjødsling;12;T32-12
+5000;NA T32-C-11;kalkfattig tørreng med mindre hevdpreg;13;T32-13
+5000;NA T32-C-12;kalkfattig tørreng med klart hevdpreg;14;T32-14
+5000;NA T32-C-13;intermediær tørreng med mindre hevdpreg;15;T32-15
+5000;NA T32-C-14;intermediær tørreng med klart hevdpreg eller svakt preg av gjødsling;16;T32-16
+5000;NA T32-C-15;svakt kalkrik tørreng med mindre hevdpreg;17;T32-17
+5000;NA T32-C-16;svakt kalkrik tørreng med klart hevdpreg eller svakt preg av gjødsling;18;T32-18
+5000;NA T32-C-17;sterkt kalkrik tørreng med mindre hevdpreg;19;T32-19
+5000;NA T32-C-18;sterkt kalkrik tørreng med klart hevdpreg;20;T32-20
+5000;NA T32-C-19;sanddyne-eng med klart hevdpreg eller svakt preg av gjødsling;21;T32-21
+5000;NA T32-C-20;svakt kalkrik eng med klart hevdpreg;7;T32-7
+5000;NA T32-C-21;svakt kalkrik eng med svakt preg av gjødsling;8;T32-8
+5000;NA T33-C-1;nedre semi-naturlig strandeng;1;T33-1
+5000;NA T33-C-2;øvre semi-naturlig strandeng;2;T33-2
+5000;NA T34-C-1;kalkfattig bakli-hei;1;T34-1
+5000;NA T34-C-2;kalkfattige kystlyngheier   ;2,3,11;T34-2,T34-3,T34-11
+5000;NA T34-C-3;intermediær bakli-hei;4;T34-4
+5000;NA T34-C-4;intermediære kystlyngheier   ;5,6,12;T34-5,T34-6,T34-12
+5000;NA T34-C-5;svakt kalkrike kystlyngheier   ;7,8;T34-7,T34-8
+5000;NA T34-C-6;sterkt kalkrike kystlyngheier   ;9,1;T34-9,T34-10
+5000;NA T35-C-1;sterkt endret fastmark med jorddekke;1;T35-1
+5000;NA T35-C-2;sterkt endrede fastmarker med dekke av sand eller grus ;2,3;T35-2,T35-3
+5000;NA T35-C-3;sterkt endret fastmark med dekke av silt og leire;4;T35-4
+5000;NA T36-C-1;sterkt endret tidligere våtmark;1;T36-1
+5000;NA T36-C-2;tørrlagt elvebunn;2;T36-2
+5000;NA T36-C-3;tørrlagt innsjøbunn;3;T36-3
+5000;NA T37-C-1;slagghauger og deponier for fast kjemisk avfall;1;T37-1
+5000;NA T37-C-2;asfalt, løs betong o.l.;2;T37-2
+5000;NA T37-C-3;avfallsdeponi o.l.;3;T37-3
+5000;NA T38-C-1;plantasjeskog;1;T38
+5000;NA T39-C-1;blokkdeponier   ;1,2;T39-1,T39-2
+5000;NA T39-C-2;blottlagt fast fjell   ;3,4;T39-3,T39-4
+5000;NA T39-C-3;fast fjell blottlagt ved tørrlegging eller nedtapping ;5,6;T39-5,T39-6
+5000;NA T39-C-4;sterkt modifiserte eller syntetiske, overveiende uorganisk faste substrater ;7,8;T39-7,T39-8
+5000;NA T40-C-1;eng-aktig sterkt endret fastmark;1;T40
+5000;NA T41-C-1;eng-aktig oppdyrket mark;1;T41
+5000;NA T42-C-1;blomsterbed og liknende;1;T42
+5000;NA T43-C-1;plener, parker og liknende;1;T43
+5000;NA T44-C-1;åker;1;T44
+5000;NA T45-C-1;oppdyrkede varige enger med lite intensivt hevdpreg ;1,2;T45-1,T45-2
+5000;NA T45-C-2;oppdyrket intensiv slåtteeng;3;T45-3
+5000;NA T45-C-3;oppdyrket svært intensiv slåtteeng;4;T45-4
+5000;NA V1-C-1;svært og temmelig kalkfattige myrflater;1,2,3,4,5;V1-1,V1-2,V1-3,V1-4,V1-5
+5000;NA V1-C-2;litt kalkfattige og svakt intermediære myrflater;6,7,8,9;V1-6,V1-7,V1-8,V1-9
+5000;NA V1-C-3;sterkt intermediære og litt kalkrike myrflater ;10,11,12,13;V1-10,V1-11,V1-12,V1-13
+5000;NA V1-C-4;temmelig til ekstremt kalkrike myrflater ;14,15,16,17,18,19,20;V1-14,V1-15,V1-16,V1-17,V1-18,V1-19,V1-20
+5000;NA V1-C-5;svært og temmelig kalkfattige myrkanter ;21,22;V1-21,V1-22
+5000;NA V1-C-6;litt kalkfattige og svakt intermediære myrkanter ;23,24;V1-23,V1-24
+5000;NA V1-C-7;sterkt intermediære og litt kalkrike myrkanter ;25,26,30;V1-25,V1-26,V1-30
+5000;NA V1-C-8;temmelig til ekstremt kalkrike myrkanter;27,28,29,31;V1-27,V1-28,V1-29,V1-31
+5000;NA V1-C-9;saltpåvirket myrkant;32;V1-32
+5000;NA V2-C-1;kalkfattige og svakt intermediære myr- og sumpskogsmarker     ;1,2;V2-1,V2-2
+5000;NA V2-C-2;sterkt intermediære litt kalkrike myr- og sumpskog-marker ;3,4,7;V2-3,V2-4,V2-7
+5000;NA V2-C-3;temmelig til ekstremt kalkrike myr- og sumpskogsmarker     ;5,6,8;V2-5,V2-6,V2-8
+5000;NA V3-C-1;ombrotrofe myrflater;1,2,3,4,5,7;V3-1,V3-2,V3-3,V3-4,V3-5,V3-7
+5000;NA V3-C-2;ombrotrof myrkant;6;V3-6
+5000;NA V4-C-1;litt kalkfattig og svakt intermediær svakkilde;1;V4-1
+5000;NA V4-C-2;sterkt intermediære og litt kalkrike kilder    ;2,3;V4-2,V4-3
+5000;NA V4-C-3;temmelig til ekstremt kalkrike kilder    ;4,5;V4-4,V4-5
+5000;NA V4-C-4;sterkt intermediære og litt kalkrike torvmarkskilder;6,7;V4-6,V4-7
+5000;NA V4-C-5;temmelig til ekstremt kalkrike torvmarkskilder    ;8,9;V4-8,V4-9
+5000;NA V5-C-1;svak varmkilde;1;V5-1
+5000;NA V5-C-2;klar varmkilde;2;V5-2
+5000;NA V6-C-1;kalkfattig og intermediært moderat våtsnøleie;1;V6-1
+5000;NA V6-C-2;kalkrikt moderat våtsnøleie;2;V6-2
+5000;NA V6-C-3;kalkfattig og intermediært seint våtsnøleie;3;V6-3
+5000;NA V6-C-4;kalkrikt seint våtsnøleie;4;V6-4
+5000;NA V6-C-5;kalkfattig og intermediært ekstrem-våtsnøleie;5;V6-5
+5000;NA V6-C-6;kalkrikt ekstrem-våtsnøleie;6;V6-6
+5000;NA V6-C-7;kalkfattig og intermediært seint kildesnøleie;7;V6-7
+5000;NA V6-C-8;kalkrikt seint kildesnøleie;8;V6-8
+5000;NA V6-C-9;ekstrem-kildesnøleie;9;V6-9
+5000;NA V7-C-1;kalkfattig og intermediær permafrost-våtmark;1;V7-1
+5000;NA V7-C-2;kalkrik permafrost-våtmark;2;V7-2
+5000;NA V8-C-1;kalkfattig og intermediær strand- og sumpskogsmark;1;V8-1
+5000;NA V8-C-2;kalkrik strand- og sumpskogsmark;2;V8-2
+5000;NA V8-C-3;saltpåvirket strand- og sumpskogsmark;3;V8-3
+5000;NA V9-C-1;kalkfattig semi-naturlig myr;1;V9-1
+5000;NA V9-C-2;intermediær semi-naturlig myr;2;V9-2
+5000;NA V9-C-3;kalkrik semi-naturlig myr;3;V9-3
+5000;NA V10-C-1;intermediær våteng;1;V10-1
+5000;NA V10-C-2;kalkrik våteng;2;V10-2
+5000;NA V10-C-3;kildevannspåvirket våteng;3;V10-3
+5000;NA V11-C-1;kalkfattig torvtak;1;V11-1
+5000;NA V11-C-2;kalkrikt torvtak;2;V11-2
+5000;NA V12-C-1;grøftet kalkfattig jordvannsmyr;1;V12-1
+5000;NA V12-C-2;grøftet kalkrik jordvannsmyr;2;V12-2
+5000;NA V12-C-3;grøftet nedbørsmyr;3;V12-3
+5000;NA V13-C-1;nye våtmarker med opprinnelse i sterkt endrede fastmarkssystemer ;1,2;V13-1,V13-2
+5000;NA V13-C-2;nye våtmarker med opprinnelse i jordbruksmark på fastmark ;3,4;V13-3,V13-4
+5000;NA V13-C-3;nye våtmarker med opprinnelse i neddemt skogsmark ;5,6;V13-5,V13-6
+5000;NA V13-C-4;nye våtmarker med opprinnelse i ferskvannsbunn   ;7,8;V13-7,V13-8
+5000;NA I1-C-1;snø- og isdekt fastmark;1;I1
+10000;NA T1-D-1 ;lite tørkeutsatte svært og temmelig kalkfattige nakne berg ;1,2,21,33,41,42,61,62,69,70;T1-1,T1-2,T1-21,T1-33,T1-41,T1-42,T1-61,T1-62,T1-69,T1-70
+10000;NA T1-D-2;tørkeutsatte svært og temmelig kalkfattige berg, bergvegger og knauser;3,4,22,23,34,43,44;T1-3,T1-4,T1-22,T1-23,T1-34,T1-43,T1-44
+10000;NA T1-D-3;lite tørkeutsatte litt kalkfattige og svakt intermediære nakne berg ;5,6,24,35,45,46,63,64,71,72;T1-5,T1-6,T1-24,T1-35,T1-45,T1-46,T1-63,T1-64,T1-71,T1-72
+10000;NA T1-D-4;tørkeutsatte litt kalkfattige og svakt intermediære berg, bergvegger og knauser;7,8,25,26,36,47,48;T1-7,T1-8,T1-25,T1-26,T1-36,T1-47,T1-48
+10000;NA T1-D-5;lite tørkeutsatte sterkt intermediære og litt kalkrike nakne berg ;9,10,27,37,49,50,66,65,73,74;T1-9,T1-10,T1-27,T1-37,T1-49,T1-50,T1-66,T1-65,T1-73,T1-74
+10000;NA T1-D-6;tørkeutsatte sterkt intermediære og litt kalkrike berg, bergvegger og knauser ;11,12,28,29,38,51,52;T1-11,T1-12,T1-28,T1-29,T1-38,T1-51,T1-52
+10000;NA T1-D-7;lite tørkeutsatte temmelig til ekstremt kalkrike nakne berg ;13,14,17,18,30,39,53,54,57,58,67,68,75,76;T1-13,T1-14,T1-17,T1-18,T1-30,T1-39,T1-53,T1-54,T1-57,T1-58,T1-67,T1-68,T1-75,T1-76
+10000;NA T1-D-8;tørkeutsatte temmelig til ekstremt kalkrike berg, bergvegger og knauser ;15,16,19,20,31,32,40,55,56,59,60;T1-15,T1-16,T1-19,T1-20,T1-31,T1-32,T1-40,T1-55,T1-56,T1-59,T1-60
+10000;NA T1-D-9;svakt intermediært og kalkfattig forblåst berg;83;T1-83
+10000;NA T1-D-10;sterkt intermediært til ekstremt kalkrikt forblåst berg;84;T1-84
+10000;NA T1-D-11;svakt intermediært og kalkfattig snøleieberg;81;T1-81
+10000;NA T1-D-12;sterkt intermediært til ekstremt kalkrikt snøleieberg;82;T1-82
+10000;NA T2-D-1;åpne og kalkfattige grunnlendte marker;1,2;T2-1,T2-2
+10000;NA T2-D-2;åpne intermediære grunnlendte marker;3,4;T2-3,T2-4
+10000;NA T2-D-3;åpne svakt kalkrike grunnlendte marker;5,6;T2-5,T2-6
+10000;NA T2-D-4;åpne kalkrike grunnlente marker;7,8;T2-7,T2-8
+10000;NA T3-D-1;kalkfattig leside;1;T3-1
+10000;NA T3-D-2;intermediær leside;4;T3-4
+10000;NA T3-D-3;kalkrike lesider og intermediære og kalkrike kildevannspåvirkede fjell-lavheier;10,13,14,7;T3-10,T3-13,T3-14,T3-7
+10000;NA T3-D-4;kalkfattige fjell-lyng- og lavheier;2,3;T3-2,T3-3
+10000;NA T3-D-5;intermediære fjell-lyng- og lavheier;5,6;T3-5,T3-6
+10000;NA T3-D-6;svakt kalkrike fjell-lyng- og lavheier;8,9;T3-8,T3-9
+10000;NA T3-D-7;svært kalkrike fjell-lyng- og lavheier;11,12;T3-11,T3-12
+10000;NA T4-D-1;blåbær- og bærlyngskoger;1,5;T4-1,T4-5
+10000;NA T4-D-2;svake lågurt- og storbregneskoger;2,6,17;T4-2,T4-6,T4-17
+10000;NA T4-D-3;lite tørkeutsatte lågurt- og bærlyng- lågurtskoger;3,4,7,8,18,19;T4-3,T4-4,T4-7,T4-8,T4-18,T4-19
+10000;NA T4-D-4;lav- og lyngskoger;9,13;T4-9,T4-13
+10000;NA T4-D-5;tørkeutsatte svake lågurtskoger;10,14;T4-10,T4-14
+10000;NA T4-D-6;tørkeutsatte lågurtskoger;11,12,15,16,20;T4-11,T4-12,T4-15,T4-16,T4-20
+10000;NA T5-D-1;kalkfattige til svakt kalkrike tørkeutsatte grotter og overheng ;1,2,4;T5-1,T5-2,T5-4
+10000;NA T5-D-2;sterkt kalkrike ikke tørkeutsatte grotter og overheng ;3,5;T5-3,T5-5
+10000;NA T5-D-3;mindre kalkrikt grottedyp;6;T5-6
+10000;NA T5-D-4;indre del av dyp karstgrotte;7;T5-7
+10000;NA T5-D-5;tørt kalkfattig overheng;8;T5-8
+10000;NA T5-D-6;tørt intermediært og svakt kalkrikt overheng;9;T5-9
+10000;NA T5-D-7;tørt sterkt kalkrikt overheng;10;T5-10
+10000;NA T6-D-1;kalkfattige strandberg;1,2,3,5,6,7;T6-1,T6-2,T6-3,T6-5,T6-6,T6-7
+10000;NA T6-D-2;kalkrik bergknaus i bølgesprutsonen;4;T6-4
+10000;NA T7-D-1;svært kalkfattig moderat snøleie;1;T7-1
+10000;NA T7-D-2;svakt kalkfattige og intermediære moderate og seine snøleier;2,3,4,12;T7-2,T7-3,T7-4,T7-12
+10000;NA T7-D-3;intermediært ekstremsnøleie;5;T7-5
+10000;NA T7-D-4;svakt kalkrike moderate og seine snøleier;6,7,13;T7-6,T7-7,T7-13
+10000;NA T7-D-5;sterkt kalkrike moderate og seine snøleier;8,9,14;T7-8,T7-9,T7-14
+10000;NA T7-D-6;kalkrikt ekstremsnøleie;10;T7-10
+10000;NA T8-D-1;fuglefjell-enger;1,2,3,4;T8-1,T8-2,T8-3,T8-4
+10000;NA T8-D-2;fugletopp;5;T8-5
+10000;NA T9-D-1;fattig-intermediær mosetundra;1;T9-1
+10000;NA T9-D-2;kalkrik mosetundra;2;T9-2
+10000;NA T10-D-1;arktiske stepper ;1,2;T10-1,T10-2
+10000;NA T11-D-1;saltanrikingsmarker i geolitoral ;1,3;T11-1,T11-3
+10000;NA T11-D-2;øvre saltanrikingsmark på grus;2;T11-2
+10000;NA T12-D-1;strandenger i nedre og midtre geolitoral ;1,2;T12-1,T12-2
+10000;NA T12-D-2;strandenger i øvre geolitoral og supralitoral ;3,4;T12-3,T12-4
+10000;NA T13-D-1;tørkeutsatte kalkfattige grove rasmarker;1,2;T13-1,T13-2
+10000;NA T13-D-2;kalkfattig grus- og sanddominert rasmark;3;T13-3
+10000;NA T13-D-3;tørkeutsatte intermediære og svcakt kalkrike grove rasmarker;4,5;T13-4,T13-5
+10000;NA T13-D-4;intermediær og svakt kalkrik ur;6;T13-6
+10000;NA T13-D-5;tørkeutsatte sterkt kalkrike grove rasmarker;7,8;T13-7,T13-8
+10000;NA T13-D-6;sterkt kalkrik grus- og sanddominert rasmark;9;T13-9
+10000;NA T13-D-7;lite tørkeutsatte kalkfattige rasmarker;10,11;T13-10,T13-11
+10000;NA T13-D-8;lite tørkeutsatte intermediære og svkat kalkrike rasmarker;12,13;T13-12,T13-13
+10000;NA T13-D-9;lite tørkeutsatte sterkt kalkrike rasmarker;14,15;T13-14,T13-15
+10000;NA T14-D-1;kalkfattig og intermediær rabbe;1;T14-1
+10000;NA T14-D-2;kalkrik rabbe;2;T14-2
+10000;NA T15-D-1;kalkfattig og intermediær fosse-eng;1;T15-1
+10000;NA T15-D-2;kalkrik fosse-eng;2;T15-2
+10000;NA T16-D-1;kalkfattig rasmarkeng og -hei;1;T16-1
+10000;NA T16-D-2;intermediære rasmarkenger og -heier ;2,5;T16-2,T16-5
+10000;NA T16-D-3;kalkrike rasmarkenger og -heier;3,4,6;T16-3,T16-4,T16-6
+10000;NA T16-D-4;sterkt raspreget rasmerkeng og -hei;7;T16-7
+10000;NA T17-D-1;jordskred;1;T17-1
+10000;NA T17-D-2;grus- og sandskred ;2,3;T17-2,T17-3
+10000;NA T17-D-3;silt- og leirskred;4;T17-4
+10000;NA T18-D-1;åpne flomfastmarker på sand, grus og stein    ;1,2;T18-1,T18-2
+10000;NA T18-D-2;åpen flomfastmark på silt og leire;3;T18-3
+10000;NA T18-D-3;åpen flomfastmark på kalkrik grus og stein;5;T18-5
+10000;NA T18-D-4;åpen flomfastmark på sand med klart erosjonspreg;6;T18-6
+10000;NA T19-D-1;kalkfattige finjordsflekker;1;T19-1
+10000;NA T19-D-2;kalkrike finjordsflekker;2;T19-2
+10000;NA T20-D-1;kalkfattig og intermediær isinnfrysingsmark;1;T20-1
+10000;NA T20-D-2;kalkrik isinnfrysingsmark;2;T20-2
+10000;NA T21-D-1;forstrand og primærdyner  ;1,2;T21-1,T21-2
+10000;NA T21-D-2;kvite og grå dyner  ;3,4;T21-3,T21-4
+10000;NA T21-D-3;brune dyner og dynehei ;5,6;T21-5,T21-6
+10000;NA T21-D-4;dynetrau;8;T21-8
+10000;NA T22-D-1;kalkfattige og intermediære fjellgrasheier og grassnøleier;1,2;T22-1,T22-2
+10000;NA T22-D-2;kalkrike fjellgrasheier og grassnøleier;3,4;T22-3,T22-4
+10000;NA T23-D-1;ferskvannsdriftvoll;1;T23
+10000;NA T24-D-1;beskyttede og moderat eksponerte driftvoller  ;1,2;T24-1,T24-2
+10000;NA T24-D-2;ettårsdriftvoll;3;T24-3
+10000;NA T25-D-1;historisk jordskred;1;T25-1
+10000;NA T25-D-2;historiske grus- og sandskred ;2,3;T25-2,T25-3
+10000;NA T25-D-3;historisk silt- og leirskred;4;T25-4
+10000;NA T26-D-1;fjellhei og snøleie initialer;1,2,3,4;T26-1,T26-2,T26-3,T26-4
+10000;NA T26-D-2;grus og steindominert breforland i pionerfasen;5;T26-5
+10000;NA T26-D-3;breforland og snøavsmeltningsområder i pionérfase, dominert av fin grus sand, silt til leire;6,7;T26-6,T26-7
+10000;NA T27-D-1;kalkfattige og intermediære blokkmarker;1,2,6;T27-1,T27-2,T27-6
+10000;NA T27-D-2;kalkrike blokkmarker;3,4,7;T27-3,T27-4,T27-7
+10000;NA T27-D-3;blokkmark i vegetasjonsfritt snøleie;5;T27-5
+10000;NA T28-D-1;kalkfattig polarørken;1;T28-1
+10000;NA T28-D-2;intermediær og svakt kalkrik polarørken;2;T28-2
+10000;NA T28-D-3;sterkt kalkrik polarørken;3;T28-3
+10000;NA T29-D-1;stein- og grusstrender og strandlinjer;1,2,3,4,7,8,10;T29-1,T29-2,T29-3,T29-4,T29-7,T29-8,T29-10
+10000;NA T29-D-2;skjellsand-strender og strandlinjer;5,6,9;T29-5,T29-6,T29-9
+10000;NA T30-D-1;flomskogsmarker;1,2,3,4,5,6,7;T30-1,T30-2,T30-3,T30-4,T30-5,T30-6,T30-7
+10000;NA T31-D-1;kalkfattig boreal frisk hei;1;T31-1
+10000;NA T31-D-2;kalkfattige boreale lyng- og lavheier;2,3;T31-2,T31-3
+10000;NA T31-D-3;intermediære boreale friske heier;4,13;T31-4,T31-13
+10000;NA T31-D-4;intermediære boreal lyng- og lavhei;5,6;T31-5,T31-6
+10000;NA T31-D-5;kalkrike boreale friske heier;7,10,14;T31-7,T31-10,T31-14
+10000;NA T31-D-6;svakt kalkrike boreale lyng- og lavheier;8,9;T31-8,T31-9
+10000;NA T31-D-7;sterkt kalkrike boreale lyng- og lavheier;11,12;T31-11,T31-12
+10000;NA T32-D-1;kalkfattige enger med svært ekstensivt hevdpreg;1,13;T32-1,T32-13
+10000;NA T32-D-2;kalkfattige enger med ekstensivt hevdpreg;2,14;T32-2,T32-14
+10000;NA T32-D-3;intermediære enger med svært ekstensivt hevdpreg;3,15;T32-3,T32-15
+10000;NA T32-D-4;intermediære enger med ekstensivt og svakt intensivt hevdpreg;4,5,16;T32-4,T32-5,T32-16
+10000;NA T32-D-5;klakrike enger med svært ekstensivt hevdpreg;6,9,11,17,19;T32-6,T32-9,T32-11,T32-17,T32-19
+10000;NA T32-D-6;kalkrike enger med ekstensivt og svakt intensivt hevdpreg;7,8,10,12,18,20,21;T32-7,T32-8,T32-10,T32-12,T32-18,T32-20,T32-21
+10000;NA T33-D-1;semi-naturlige strandenger;1,2;T33-1,T33-2
+10000;NA T34-D-1;kalkfattig baklihei;1;T34-1
+10000;NA T34-D-2;kalkfattige kystlyngheier   ;2,3,11;T34-2,T34-3,T34-11
+10000;NA T34-D-3;intermediær baklihei;4;T34-4
+10000;NA T34-D-4;intermediære kystlyngheier   ;5,6,12;T34-5,T34-6,T34-12
+10000;NA T34-D-5;svakt kalkrike kystlyngheier   ;7,8;T34-7,T34-8
+10000;NA T34-D-6;sterkt kalkrike kystlyngheier   ;9,1;T34-9,T34-10
+10000;NA T35-D-1;sterkt endret fastmark med jorddekke;1;T35-1
+10000;NA T35-D-2;sterkt endrede fastmarker med dekke av sand eller grus ;2,3;T35-2,T35-3
+10000;NA T35-D-3;sterkt endret fastmark med dekke av silt og leire;4;T35-4
+10000;NA T36-D-1;sterkt endret tidligere våtmark;1;T36-1
+10000;NA T36-D-2;tørrlagt elvebunn;2;T36-2
+10000;NA T36-D-3;tørrlagt innsjøbunn;3;T36-3
+10000;NA T37-D-1;slagghauger og deponier for fast kjemisk avfall;1;T37-1
+10000;NA T37-D-2;asfalt, løs betong o.l.;2;T37-2
+10000;NA T37-D-3;avfallsdeponi o.l.;3;T37-3
+10000;NA T38-D-1;treplantasje;1;T38
+10000;NA T39-D-1;blokkdeponier   ;1,2;T39-1,T39-2
+10000;NA T39-D-2;blottlagt fast fjell   ;3,4;T39-3,T39-4
+10000;NA T39-D-3;fast fjell blottlagt ved tørrlegging eller nedtapping ;5,6;T39-5,T39-6
+10000;NA T39-D-4;sterkt modifiserte eller syntetiske, overveiende uorganisk faste substrater ;7,8;T39-7,T39-8
+10000;NA T40-D-1;eng-liknende sterkt endret fastmark;1;T40
+10000;NA T41-D-1;eng-liknende oppdyrket mark;1;T41
+10000;NA T42-D-1;blomsterbed og liknende;1;T42
+10000;NA T43-D-1;plener, parker og liknende;1;T43
+10000;NA T44-D-1;åker;1;T44
+10000;NA T45-D-1;oppdyrkede varige enger med lite intensivt hevdpreg ;1,2;T45-1,T45-2
+10000;NA T45-D-2;oppdyrkede varige enger med intensivt og svært intensivt hevdpreg;3,4;T45-3,T45-4
+10000;NA V1-D-1;fattigmyrer;1,2,3,4,5,6,7,8,9,21,22,23,24;V1-1,V1-2,V1-3,V1-4,V1-5,V1-6,V1-7,V1-8,V1-9,V1-21,V1-22,V1-23,V1-24
+10000;NA V1-D-2;sterkt intermediære og litt kalkrike myrer;10,11,12,13,25,26,30;V1-10,V1-11,V1-12,V1-13,V1-25,V1-26,V1-30
+10000;NA V1-D-3;rikmyrer;14,15,16,17,18,19,20,27,28,29,31,32;V1-14,V1-15,V1-16,V1-17,V1-18,V1-19,V1-20,V1-27,V1-28,V1-29,V1-31,V1-32
+10000;NA V2-D-1;kalkfattige og svakt intermediære myr- og sumpskogsmarker     ;1,2;V2-1,V2-2
+10000;NA V2-D-2;sterkt intermediære litt kalkrike myr- og sumpskog-marker ;3,4,7;V2-3,V2-4,V2-7
+10000;NA V2-D-3;temmelig til ekstremt kalkrike myr- og sumpskogsmarker     ;5,6,8;V2-5,V2-6,V2-8
+10000;NA V3-D-1;ombrotrofe myrflater;1,2,3,4,5,7;V3-1,V3-2,V3-3,V3-4,V3-5,V3-7
+10000;NA V3-D-2;ombrotrof myrkant;6;V3-6
+10000;NA V4-D-1;litt kalkfattige til litt kalkrike kilder;1,2,3;V4-1,V4-2,V4-3
+10000;NA V4-D-2;temmelig til ekstremt kalkrike kilder;4,5;V4-4,V4-5
+10000;NA V4-D-3;sterkt intermediære og litt kalkrike torvmarkskilder;6,7;V4-6,V4-7
+10000;NA V4-D-4;temmelig til ekstremt kalkrike torvmarkskilder;8,9;V4-8,V4-9
+10000;NA V5-D-1;svak varmkilde;1;V5-1
+10000;NA V5-D-2;klar varmkilde;2;V5-2
+10000;NA V6-D-1;litt kalkfattige til litt kalkrike våt- og kildesnøleier;1,3,7;V6-1,V6-3,V6-7
+10000;NA V6-D-2;temmelig til ekstremt kalkrike våt- og kildesnøeleier;2,4,8;V6-2,V6-4,V6-8
+10000;NA V6-D-3;ekstreme våt- og kildesnøleie;5,6,9;V6-5,V6-6,V6-9
+10000;NA V7-D-1;kalkfattig og intermediær permafrost-våtmark;1;V7-1
+10000;NA V7-D-2;kalkrik permafrost-våtmark;2;V7-2
+10000;NA V8-D-1;kalkfattig og intermediær strand- og sumpskogsmark;1;V8-1
+10000;NA V8-D-2;kalkrik strand- og sumpskogsmark;2;V8-2
+10000;NA V8-D-3;saltpåvirket strand- og sumpskogsmark;3;V8-3
+10000;NA V9-D-1;kalkfattig semi-naturlig myr;1;V9-1
+10000;NA V9-D-2;intermediær semi-naturlig myr;2;V9-2
+10000;NA V9-D-3;kalkrik semi-naturlig myr;3;V9-3
+10000;NA V10-D-1;intermediær våteng;1;V10-1
+10000;NA V10-D-2;kalkrike og svakt kildevannspåvirkede semi-naturlige våtenger;2,3;V10-2,V10-3
+10000;NA V11-D-1;kalkfattig torvtak;1;V11-1
+10000;NA V11-D-2;kalkrikt torvtak;2;V11-2
+10000;NA V12-D-1;grøftet kalkfattig jordvannsmyr;1;V12-1
+10000;NA V12-D-2;grøftet kalkrik jordvannsmyr;2;V12-2
+10000;NA V12-D-3;grøftet nedbørsmyr;3;V12-3
+10000;NA V13-D-1;nye våtmarker med opprinnelse i sterkt endrede fastmarkssystemer ;1,2;V13-1,V13-2
+10000;NA V13-D-2;nye våtmarker med opprinnelse i jordbruksmark på fastmark ;3,4;V13-3,V13-4
+10000;NA V13-D-3;nye våtmarker med opprinnelse i neddemt skogsmark ;5,6;V13-5,V13-6
+10000;NA V13-D-4;nye våtmarker med opprinnelse i ferskvannsbunn   ;7,8;V13-7,V13-8
+10000;NA I1-D-1;snø- og isdekt fastmark;1;I1
+20000;NA T1-D-1 ;lite tørkeutsatte svært og temmelig kalkfattige nakne berg ;1,2,21,33,41,42,61,62,69,70;T1-1,T1-2,T1-21,T1-33,T1-41,T1-42,T1-61,T1-62,T1-69,T1-70
+20000;NA T1-D-2;tørkeutsatte svært og temmelig kalkfattige berg, bergvegger og knauser;3,4,22,23,34,43,44;T1-3,T1-4,T1-22,T1-23,T1-34,T1-43,T1-44
+20000;NA T1-D-3;lite tørkeutsatte litt kalkfattige og svakt intermediære nakne berg ;5,6,24,35,45,46,63,64,71,72;T1-5,T1-6,T1-24,T1-35,T1-45,T1-46,T1-63,T1-64,T1-71,T1-72
+20000;NA T1-D-4;tørkeutsatte litt kalkfattige og svakt intermediære berg, bergvegger og knauser;7,8,25,26,36,47,48;T1-7,T1-8,T1-25,T1-26,T1-36,T1-47,T1-48
+20000;NA T1-D-5;lite tørkeutsatte sterkt intermediære og litt kalkrike nakne berg ;9,10,27,37,49,50,66,65,73,74;T1-9,T1-10,T1-27,T1-37,T1-49,T1-50,T1-66,T1-65,T1-73,T1-74
+20000;NA T1-D-6;tørkeutsatte sterkt intermediære og litt kalkrike berg, bergvegger og knauser ;11,12,28,29,38,51,52;T1-11,T1-12,T1-28,T1-29,T1-38,T1-51,T1-52
+20000;NA T1-D-7;lite tørkeutsatte temmelig til ekstremt kalkrike nakne berg ;13,14,17,18,30,39,53,54,57,58,67,68,75,76;T1-13,T1-14,T1-17,T1-18,T1-30,T1-39,T1-53,T1-54,T1-57,T1-58,T1-67,T1-68,T1-75,T1-76
+20000;NA T1-D-8;tørkeutsatte temmelig til ekstremt kalkrike berg, bergvegger og knauser ;15,16,19,20,31,32,40,55,56,59,60;T1-15,T1-16,T1-19,T1-20,T1-31,T1-32,T1-40,T1-55,T1-56,T1-59,T1-60
+20000;NA T1-D-9;svakt intermediært og kalkfattig forblåst berg;83;T1-83
+20000;NA T1-D-10;sterkt intermediært til ekstremt kalkrikt forblåst berg;84;T1-84
+20000;NA T1-D-11;svakt intermediært og kalkfattig snøleieberg;81;T1-81
+20000;NA T1-D-12;sterkt intermediært til ekstremt kalkrikt snøleieberg;82;T1-82
+20000;NA T2-D-1;åpne og kalkfattige grunnlendte marker;1,2;T2-1,T2-2
+20000;NA T2-D-2;åpne intermediære grunnlendte marker;3,4;T2-3,T2-4
+20000;NA T2-D-3;åpne svakt kalkrike grunnlendte marker;5,6;T2-5,T2-6
+20000;NA T2-D-4;åpne kalkrike grunnlente marker;7,8;T2-7,T2-8
+20000;NA T3-D-1;kalkfattig leside;1;T3-1
+20000;NA T3-D-2;intermediær leside;4;T3-4
+20000;NA T3-D-3;kalkrike lesider og intermediære og kalkrike kildevannspåvirkede fjell-lavheier;10,13,14,7;T3-10,T3-13,T3-14,T3-7
+20000;NA T3-D-4;kalkfattige fjell-lyng- og lavheier;2,3;T3-2,T3-3
+20000;NA T3-D-5;intermediære fjell-lyng- og lavheier;5,6;T3-5,T3-6
+20000;NA T3-D-6;svakt kalkrike fjell-lyng- og lavheier;8,9;T3-8,T3-9
+20000;NA T3-D-7;svært kalkrike fjell-lyng- og lavheier;11,12;T3-11,T3-12
+20000;NA T4-D-1;blåbær- og bærlyngskoger;1,5;T4-1,T4-5
+20000;NA T4-D-2;svake lågurt- og storbregneskoger;2,6,17;T4-2,T4-6,T4-17
+20000;NA T4-D-3;lite tørkeutsatte lågurt- og bærlyng- lågurtskoger;3,4,7,8,18,19;T4-3,T4-4,T4-7,T4-8,T4-18,T4-19
+20000;NA T4-D-4;lav- og lyngskoger;9,13;T4-9,T4-13
+20000;NA T4-D-5;tørkeutsatte svake lågurtskoger;10,14;T4-10,T4-14
+20000;NA T4-D-6;tørkeutsatte lågurtskoger;11,12,15,16,20;T4-11,T4-12,T4-15,T4-16,T4-20
+20000;NA T5-D-1;kalkfattige til svakt kalkrike tørkeutsatte grotter og overheng ;1,2,4;T5-1,T5-2,T5-4
+20000;NA T5-D-2;sterkt kalkrike ikke tørkeutsatte grotter og overheng ;3,5;T5-3,T5-5
+20000;NA T5-D-3;mindre kalkrikt grottedyp;6;T5-6
+20000;NA T5-D-4;indre del av dyp karstgrotte;7;T5-7
+20000;NA T5-D-5;tørt kalkfattig overheng;8;T5-8
+20000;NA T5-D-6;tørt intermediært og svakt kalkrikt overheng;9;T5-9
+20000;NA T5-D-7;tørt sterkt kalkrikt overheng;10;T5-10
+20000;NA T6-D-1;kalkfattige strandberg;1,2,3,5,6,7;T6-1,T6-2,T6-3,T6-5,T6-6,T6-7
+20000;NA T6-D-2;kalkrik bergknaus i bølgesprutsonen;4;T6-4
+20000;NA T7-D-1;svært kalkfattig moderat snøleie;1;T7-1
+20000;NA T7-D-2;svakt kalkfattige og intermediære moderate og seine snøleier;2,3,4,12;T7-2,T7-3,T7-4,T7-12
+20000;NA T7-D-3;intermediært ekstremsnøleie;5;T7-5
+20000;NA T7-D-4;svakt kalkrike moderate og seine snøleier;6,7,13;T7-6,T7-7,T7-13
+20000;NA T7-D-5;sterkt kalkrike moderate og seine snøleier;8,9,14;T7-8,T7-9,T7-14
+20000;NA T7-D-6;kalkrikt ekstremsnøleie;10;T7-10
+20000;NA T8-D-1;fuglefjell-enger;1,2,3,4;T8-1,T8-2,T8-3,T8-4
+20000;NA T8-D-2;fugletopp;5;T8-5
+20000;NA T9-D-1;fattig-intermediær mosetundra;1;T9-1
+20000;NA T9-D-2;kalkrik mosetundra;2;T9-2
+20000;NA T10-D-1;arktiske stepper ;1,2;T10-1,T10-2
+20000;NA T11-D-1;saltanrikingsmarker i geolitoral ;1,3;T11-1,T11-3
+20000;NA T11-D-2;øvre saltanrikingsmark på grus;2;T11-2
+20000;NA T12-D-1;strandenger i nedre og midtre geolitoral ;1,2;T12-1,T12-2
+20000;NA T12-D-2;strandenger i øvre geolitoral og supralitoral ;3,4;T12-3,T12-4
+20000;NA T13-D-1;tørkeutsatte kalkfattige grove rasmarker;1,2;T13-1,T13-2
+20000;NA T13-D-2;kalkfattig grus- og sanddominert rasmark;3;T13-3
+20000;NA T13-D-3;tørkeutsatte intermediære og svcakt kalkrike grove rasmarker;4,5;T13-4,T13-5
+20000;NA T13-D-4;intermediær og svakt kalkrik ur;6;T13-6
+20000;NA T13-D-5;tørkeutsatte sterkt kalkrike grove rasmarker;7,8;T13-7,T13-8
+20000;NA T13-D-6;sterkt kalkrik grus- og sanddominert rasmark;9;T13-9
+20000;NA T13-D-7;lite tørkeutsatte kalkfattige rasmarker;10,11;T13-10,T13-11
+20000;NA T13-D-8;lite tørkeutsatte intermediære og svkat kalkrike rasmarker;12,13;T13-12,T13-13
+20000;NA T13-D-9;lite tørkeutsatte sterkt kalkrike rasmarker;14,15;T13-14,T13-15
+20000;NA T14-D-1;kalkfattig og intermediær rabbe;1;T14-1
+20000;NA T14-D-2;kalkrik rabbe;2;T14-2
+20000;NA T15-D-1;kalkfattig og intermediær fosse-eng;1;T15-1
+20000;NA T15-D-2;kalkrik fosse-eng;2;T15-2
+20000;NA T16-D-1;kalkfattig rasmarkeng og -hei;1;T16-1
+20000;NA T16-D-2;intermediære rasmarkenger og -heier ;2,5;T16-2,T16-5
+20000;NA T16-D-3;kalkrike rasmarkenger og -heier;3,4,6;T16-3,T16-4,T16-6
+20000;NA T16-D-4;sterkt raspreget rasmerkeng og -hei;7;T16-7
+20000;NA T17-D-1;jordskred;1;T17-1
+20000;NA T17-D-2;grus- og sandskred ;2,3;T17-2,T17-3
+20000;NA T17-D-3;silt- og leirskred;4;T17-4
+20000;NA T18-D-1;åpne flomfastmarker på sand, grus og stein    ;1,2;T18-1,T18-2
+20000;NA T18-D-2;åpen flomfastmark på silt og leire;3;T18-3
+20000;NA T18-D-3;åpen flomfastmark på kalkrik grus og stein;5;T18-5
+20000;NA T18-D-4;åpen flomfastmark på sand med klart erosjonspreg;6;T18-6
+20000;NA T19-D-1;kalkfattige finjordsflekker;1;T19-1
+20000;NA T19-D-2;kalkrike finjordsflekker;2;T19-2
+20000;NA T20-D-1;kalkfattig og intermediær isinnfrysingsmark;1;T20-1
+20000;NA T20-D-2;kalkrik isinnfrysingsmark;2;T20-2
+20000;NA T21-D-1;forstrand og primærdyner  ;1,2;T21-1,T21-2
+20000;NA T21-D-2;kvite og grå dyner  ;3,4;T21-3,T21-4
+20000;NA T21-D-3;brune dyner og dynehei ;5,6;T21-5,T21-6
+20000;NA T21-D-4;dynetrau;8;T21-8
+20000;NA T22-D-1;kalkfattige og intermediære fjellgrasheier og grassnøleier;1,2;T22-1,T22-2
+20000;NA T22-D-2;kalkrike fjellgrasheier og grassnøleier;3,4;T22-3,T22-4
+20000;NA T23-D-1;ferskvannsdriftvoll;1;T23
+20000;NA T24-D-1;beskyttede og moderat eksponerte driftvoller  ;1,2;T24-1,T24-2
+20000;NA T24-D-2;ettårsdriftvoll;3;T24-3
+20000;NA T25-D-1;historisk jordskred;1;T25-1
+20000;NA T25-D-2;historiske grus- og sandskred ;2,3;T25-2,T25-3
+20000;NA T25-D-3;historisk silt- og leirskred;4;T25-4
+20000;NA T26-D-1;fjellhei og snøleie initialer;1,2,3,4;T26-1,T26-2,T26-3,T26-4
+20000;NA T26-D-2;grus og steindominert breforland i pionerfasen;5;T26-5
+20000;NA T26-D-3;breforland og snøavsmeltningsområder i pionérfase, dominert av fin grus sand, silt til leire;6,7;T26-6,T26-7
+20000;NA T27-D-1;kalkfattige og intermediære blokkmarker;1,2,6;T27-1,T27-2,T27-6
+20000;NA T27-D-2;kalkrike blokkmarker;3,4,7;T27-3,T27-4,T27-7
+20000;NA T27-D-3;blokkmark i vegetasjonsfritt snøleie;5;T27-5
+20000;NA T28-D-1;kalkfattig polarørken;1;T28-1
+20000;NA T28-D-2;intermediær og svakt kalkrik polarørken;2;T28-2
+20000;NA T28-D-3;sterkt kalkrik polarørken;3;T28-3
+20000;NA T29-D-1;stein- og grusstrender og strandlinjer;1,2,3,4,7,8,10;T29-1,T29-2,T29-3,T29-4,T29-7,T29-8,T29-10
+20000;NA T29-D-2;skjellsand-strender og strandlinjer;5,6,9;T29-5,T29-6,T29-9
+20000;NA T30-D-1;flomskogsmarker;1,2,3,4,5,6,7;T30-1,T30-2,T30-3,T30-4,T30-5,T30-6,T30-7
+20000;NA T31-D-1;kalkfattig boreal frisk hei;1;T31-1
+20000;NA T31-D-2;kalkfattige boreale lyng- og lavheier;2,3;T31-2,T31-3
+20000;NA T31-D-3;intermediære boreale friske heier;4,13;T31-4,T31-13
+20000;NA T31-D-4;intermediære boreal lyng- og lavhei;5,6;T31-5,T31-6
+20000;NA T31-D-5;kalkrike boreale friske heier;7,10,14;T31-7,T31-10,T31-14
+20000;NA T31-D-6;svakt kalkrike boreale lyng- og lavheier;8,9;T31-8,T31-9
+20000;NA T31-D-7;sterkt kalkrike boreale lyng- og lavheier;11,12;T31-11,T31-12
+20000;NA T32-D-1;kalkfattige enger med svært ekstensivt hevdpreg;1,13;T32-1,T32-13
+20000;NA T32-D-2;kalkfattige enger med ekstensivt hevdpreg;2,14;T32-2,T32-14
+20000;NA T32-D-3;intermediære enger med svært ekstensivt hevdpreg;3,15;T32-3,T32-15
+20000;NA T32-D-4;intermediære enger med ekstensivt og svakt intensivt hevdpreg;4,5,16;T32-4,T32-5,T32-16
+20000;NA T32-D-5;klakrike enger med svært ekstensivt hevdpreg;6,9,11,17,19;T32-6,T32-9,T32-11,T32-17,T32-19
+20000;NA T32-D-6;kalkrike enger med ekstensivt og svakt intensivt hevdpreg;7,8,10,12,18,20,21;T32-7,T32-8,T32-10,T32-12,T32-18,T32-20,T32-21
+20000;NA T33-D-1;semi-naturlige strandenger;1,2;T33-1,T33-2
+20000;NA T34-D-1;kalkfattig baklihei;1;T34-1
+20000;NA T34-D-2;kalkfattige kystlyngheier   ;2,3,11;T34-2,T34-3,T34-11
+20000;NA T34-D-3;intermediær baklihei;4;T34-4
+20000;NA T34-D-4;intermediære kystlyngheier   ;5,6,12;T34-5,T34-6,T34-12
+20000;NA T34-D-5;svakt kalkrike kystlyngheier   ;7,8;T34-7,T34-8
+20000;NA T34-D-6;sterkt kalkrike kystlyngheier   ;9,1;T34-9,T34-10
+20000;NA T35-D-1;sterkt endret fastmark med jorddekke;1;T35-1
+20000;NA T35-D-2;sterkt endrede fastmarker med dekke av sand eller grus ;2,3;T35-2,T35-3
+20000;NA T35-D-3;sterkt endret fastmark med dekke av silt og leire;4;T35-4
+20000;NA T36-D-1;sterkt endret tidligere våtmark;1;T36-1
+20000;NA T36-D-2;tørrlagt elvebunn;2;T36-2
+20000;NA T36-D-3;tørrlagt innsjøbunn;3;T36-3
+20000;NA T37-D-1;slagghauger og deponier for fast kjemisk avfall;1;T37-1
+20000;NA T37-D-2;asfalt, løs betong o.l.;2;T37-2
+20000;NA T37-D-3;avfallsdeponi o.l.;3;T37-3
+20000;NA T38-D-1;treplantasje;1;T38
+20000;NA T39-D-1;blokkdeponier   ;1,2;T39-1,T39-2
+20000;NA T39-D-2;blottlagt fast fjell   ;3,4;T39-3,T39-4
+20000;NA T39-D-3;fast fjell blottlagt ved tørrlegging eller nedtapping ;5,6;T39-5,T39-6
+20000;NA T39-D-4;sterkt modifiserte eller syntetiske, overveiende uorganisk faste substrater ;7,8;T39-7,T39-8
+20000;NA T40-D-1;eng-liknende sterkt endret fastmark;1;T40
+20000;NA T41-D-1;eng-liknende oppdyrket mark;1;T41
+20000;NA T42-D-1;blomsterbed og liknende;1;T42
+20000;NA T43-D-1;plener, parker og liknende;1;T43
+20000;NA T44-D-1;åker;1;T44
+20000;NA T45-D-1;oppdyrkede varige enger med lite intensivt hevdpreg ;1,2;T45-1,T45-2
+20000;NA T45-D-2;oppdyrkede varige enger med intensivt og svært intensivt hevdpreg;3,4;T45-3,T45-4
+20000;NA V1-D-1;fattigmyrer;1,2,3,4,5,6,7,8,9,21,22,23,24;V1-1,V1-2,V1-3,V1-4,V1-5,V1-6,V1-7,V1-8,V1-9,V1-21,V1-22,V1-23,V1-24
+20000;NA V1-D-2;sterkt intermediære og litt kalkrike myrer;10,11,12,13,25,26,30;V1-10,V1-11,V1-12,V1-13,V1-25,V1-26,V1-30
+20000;NA V1-D-3;rikmyrer;14,15,16,17,18,19,20,27,28,29,31,32;V1-14,V1-15,V1-16,V1-17,V1-18,V1-19,V1-20,V1-27,V1-28,V1-29,V1-31,V1-32
+20000;NA V2-D-1;kalkfattige og svakt intermediære myr- og sumpskogsmarker     ;1,2;V2-1,V2-2
+20000;NA V2-D-2;sterkt intermediære litt kalkrike myr- og sumpskog-marker ;3,4,7;V2-3,V2-4,V2-7
+20000;NA V2-D-3;temmelig til ekstremt kalkrike myr- og sumpskogsmarker     ;5,6,8;V2-5,V2-6,V2-8
+20000;NA V3-D-1;ombrotrofe myrflater;1,2,3,4,5,7;V3-1,V3-2,V3-3,V3-4,V3-5,V3-7
+20000;NA V3-D-2;ombrotrof myrkant;6;V3-6
+20000;NA V4-D-1;litt kalkfattige til litt kalkrike kilder;1,2,3;V4-1,V4-2,V4-3
+20000;NA V4-D-2;temmelig til ekstremt kalkrike kilder;4,5;V4-4,V4-5
+20000;NA V4-D-3;sterkt intermediære og litt kalkrike torvmarkskilder;6,7;V4-6,V4-7
+20000;NA V4-D-4;temmelig til ekstremt kalkrike torvmarkskilder;8,9;V4-8,V4-9
+20000;NA V5-D-1;svak varmkilde;1;V5-1
+20000;NA V5-D-2;klar varmkilde;2;V5-2
+20000;NA V6-D-1;litt kalkfattige til litt kalkrike våt- og kildesnøleier;1,3,7;V6-1,V6-3,V6-7
+20000;NA V6-D-2;temmelig til ekstremt kalkrike våt- og kildesnøeleier;2,4,8;V6-2,V6-4,V6-8
+20000;NA V6-D-3;ekstreme våt- og kildesnøleie;5,6,9;V6-5,V6-6,V6-9
+20000;NA V7-D-1;kalkfattig og intermediær permafrost-våtmark;1;V7-1
+20000;NA V7-D-2;kalkrik permafrost-våtmark;2;V7-2
+20000;NA V8-D-1;kalkfattig og intermediær strand- og sumpskogsmark;1;V8-1
+20000;NA V8-D-2;kalkrik strand- og sumpskogsmark;2;V8-2
+20000;NA V8-D-3;saltpåvirket strand- og sumpskogsmark;3;V8-3
+20000;NA V9-D-1;kalkfattig semi-naturlig myr;1;V9-1
+20000;NA V9-D-2;intermediær semi-naturlig myr;2;V9-2
+20000;NA V9-D-3;kalkrik semi-naturlig myr;3;V9-3
+20000;NA V10-D-1;intermediær våteng;1;V10-1
+20000;NA V10-D-2;kalkrike og svakt kildevannspåvirkede semi-naturlige våtenger;2,3;V10-2,V10-3
+20000;NA V11-D-1;kalkfattig torvtak;1;V11-1
+20000;NA V11-D-2;kalkrikt torvtak;2;V11-2
+20000;NA V12-D-1;grøftet kalkfattig jordvannsmyr;1;V12-1
+20000;NA V12-D-2;grøftet kalkrik jordvannsmyr;2;V12-2
+20000;NA V12-D-3;grøftet nedbørsmyr;3;V12-3
+20000;NA V13-D-1;nye våtmarker med opprinnelse i sterkt endrede fastmarkssystemer ;1,2;V13-1,V13-2
+20000;NA V13-D-2;nye våtmarker med opprinnelse i jordbruksmark på fastmark ;3,4;V13-3,V13-4
+20000;NA V13-D-3;nye våtmarker med opprinnelse i neddemt skogsmark ;5,6;V13-5,V13-6
+20000;NA V13-D-4;nye våtmarker med opprinnelse i ferskvannsbunn   ;7,8;V13-7,V13-8
+20000;NA I1-D-1;snø- og isdekt fastmark;1;I1

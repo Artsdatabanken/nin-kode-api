@@ -30,6 +30,8 @@
 
         public static void Main(string[] args)
         {
+            // deprecated code
+            return;
             if (args.Length <= 0)
             {
                 Log2Console("\nUsage:", true);

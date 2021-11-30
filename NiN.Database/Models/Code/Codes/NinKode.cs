@@ -94,16 +94,16 @@
         }
     }
 
-    public class BasistrinnKode : NinKode
-    {
-        public int BasistrinnId { get; set; }
+    //public class BasistrinnKode : NinKode
+    //{
+    //    public int BasistrinnId { get; set; }
 
-        [ForeignKey(nameof(BasistrinnId))]
-        public virtual Basistrinn Basistrinn { get; set; }
+    //    [ForeignKey(nameof(BasistrinnId))]
+    //    public virtual Basistrinn Basistrinn { get; set; }
 
-        public BasistrinnKode()
-        {
-            Kategori = KategoriEnum.Basistrinn;
-        }
-    }
+    //    public BasistrinnKode()
+    //    {
+    //        Kategori = KategoriEnum.Basistrinn;
+    //    }
+    //}
 }

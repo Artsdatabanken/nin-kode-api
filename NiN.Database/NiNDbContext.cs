@@ -36,6 +36,7 @@
         public NiNDbContext(DbContextOptions<NiNDbContext> options) : base(options) { }
 
 #if DEBUG
+
         public string ConnectionString { get; private set; }
 
         public NiNDbContext()
@@ -53,6 +54,7 @@
                 //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
                 .EnableDetailedErrors();
         }
+
 #endif
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -109,20 +111,28 @@
                 .WithOne(x => x.Miljovariabel)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Trinn>()
-                .HasMany(x => x.Basistrinn)
-                .WithOne(x => x.Trinn)
-                .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<Trinn>()
+            //    .HasMany(x => x.Basistrinn)
+            //    .WithOne(x => x.Trinn)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Trinn>()
                 .HasOne(x => x.Kode)
                 .WithOne(x => x.Trinn)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            //modelBuilder.Entity<Basistrinn>()
+            //    .HasOne(x => x.Kode)
+            //    .WithOne(x => x.Basistrinn)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Trinn>()
+                .HasMany(x => x.Basistrinn)
+                .WithMany(x => x.Trinn);
+
             modelBuilder.Entity<Basistrinn>()
-                .HasOne(x => x.Kode)
-                .WithOne(x => x.Basistrinn)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasMany(x => x.Trinn)
+                .WithMany(x => x.Basistrinn);
 
             modelBuilder.Entity<Miljovariabel>()
                 .HasMany(x => x.Grunntype)

@@ -157,6 +157,7 @@
                     var natursystem = dbContext.Natursystem
                         .Include(x => x.Kode)
                         .Include(x => x.UnderordnetKoder)
+                        .AsSplitQuery()
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (natursystem == null) return null;
@@ -181,6 +182,7 @@
                         .Include(x => x.Natursystem.Kode)
                         .Include(x => x.Kode)
                         .Include(x => x.UnderordnetKoder)
+                        .AsSplitQuery()
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (hovedtypegruppe == null) break;
@@ -207,6 +209,7 @@
                         .Include(x => x.UnderordnetKoder)
                         .Include(x => x.Kartleggingsenheter)
                         .Include(x => x.Miljovariabler)
+                        .AsSplitQuery()
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (hovedtype == null) break;
@@ -241,6 +244,8 @@
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
                         .Include(x => x.Kartleggingsenhet)
+                        .Include(x => x.Basistrinn)
+                        .AsSplitQuery()
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (grunntype == null) break;
@@ -258,6 +263,13 @@
                         code.Kartleggingsenheter = CreateKartleggingsenheter(dbContext, grunntype.Kartleggingsenhet, host);
                     }
 
+                    if (grunntype.Basistrinn.Any())
+                    {
+                        var list = grunntype.Basistrinn.Select(b => new AllCodesCode { Id = b.Navn }).ToList();
+
+                        code.Basistrinn = list.OrderBy(x => x.Id).ToArray();
+                    }
+
                     break;
 
                 case KategoriEnum.Kartleggingsenhet:
@@ -265,6 +277,7 @@
                         .Include(x => x.Hovedtype)
                         .Include(x => x.Hovedtype.Kode)
                         .Include(x => x.Grunntype)
+                        .AsSplitQuery()
                         .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                     if (kartlegging == null) break;
@@ -273,6 +286,7 @@
                     {
                         Navn = kartlegging.Definisjon,
                         Kategori = NinEnumConverter.GetValue<KategoriEnum>(kartlegging.Kode.Kategori),
+                        Malestokk = kartlegging.Malestokk,
                         Kode = ConvertNinKode2Code(kartlegging.Kode, host),
                         OverordnetKode = ConvertNinKode2Code(kartlegging.Hovedtype.Kode, host)
                     };

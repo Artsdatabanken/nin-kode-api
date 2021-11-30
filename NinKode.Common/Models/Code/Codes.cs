@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text.Json.Serialization;
+    using NiN.Database.Models.Code.Enums;
 
     public class Codes
     {
@@ -11,6 +12,10 @@
 
         [JsonPropertyName("Kategori")]
         public string Kategori { get; set; }
+
+        [JsonPropertyName("Målestokk")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public MalestokkEnum? Malestokk { get; set; }
 
         [JsonPropertyName("Kode")]
         public AllCodesCode Kode { get; set; }
@@ -42,6 +47,10 @@
         [JsonPropertyName("Grunntyper")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public Codes[] Grunntyper { get; set; }
+
+        [JsonPropertyName("Basistrinn")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public AllCodesCode[] Basistrinn { get; set; }
     }
 
     //public partial class Codes

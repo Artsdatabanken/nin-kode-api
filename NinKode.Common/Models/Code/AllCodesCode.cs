@@ -9,6 +9,7 @@
         public string Id { get; set; }
 
         [JsonPropertyName("Definisjon")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string Definition { get; set; }
     }
 }

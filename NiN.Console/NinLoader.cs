@@ -126,11 +126,10 @@
                 if (dbContext.Hovedtypegruppe.Any())
                 {
                     hovedtypegruppe = dbContext.Hovedtypegruppe
-                        .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
-                    if (hovedtypegruppe != null && !hovedtypegruppe.Navn.Trim().Equals(gruppe.Navn.Trim()))
-                    {
-                        hovedtypegruppe = null;
-                    }
+                        .Include(x => x.Kode)
+                        .FirstOrDefault(x =>
+                            x.Version.Navn.Equals(ninVersion.Navn) &&
+                            x.Kode.KodeName.Equals(gruppe.Navn.Trim()));
                 }
 
                 if (hovedtypegruppe == null)
@@ -147,12 +146,12 @@
                             Definisjon = gruppe.Kode.Definition.Trim()
                         }
                     };
+
                     dbContext.Hovedtypegruppe.Add(hovedtypegruppe);
                 }
 
                 AddHovedtyper(codeService, dbContext, ninVersion, gruppe, hovedtypegruppe);
             }
-
         }
 
         private static void AddHovedtyper(ICodeService codeService,
@@ -173,11 +172,9 @@
                 {
                     hovedtype = dbContext.Hovedtype
                         .Include(x => x.Kode)
-                        .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
-                    if (hovedtype != null && hovedtype.Navn.Trim().Equals(hvdtype.Navn.Trim()))
-                    {
-                        hovedtype = null;
-                    }
+                        .FirstOrDefault(x =>
+                            x.Version.Navn.Equals(ninVersion.Navn) &&
+                            x.Kode.KodeName.Equals(hvdtype.Kode.Id.Trim()));
                 }
 
                 if (hovedtype == null)
@@ -194,12 +191,16 @@
                             Definisjon = hvdtype.Kode.Definition.Trim()
                         }
                     };
+
                     dbContext.Hovedtype.Add(hovedtype);
                 }
 
                 AddGrunntyper(codeService, dbContext, ninVersion, hvdtype, hovedtype);
                 AddKartleggingsenheter(codeService, dbContext, ninVersion, hvdtype, hovedtype);
                 AddMiljovariabler(dbContext, ninVersion, hvdtype, hovedtype);
+
+                // Make basistrinn available and save changes
+                dbContext.SaveChanges();
             }
         }
 
@@ -220,11 +221,10 @@
                 if (dbContext.Grunntype.Any())
                 {
                     grunntype = dbContext.Grunntype
-                        .FirstOrDefault(x => x.Version.Navn.Equals(ninVersion.Navn));
-                    if (grunntype != null && grunntype.Navn.Equals(grtype.Navn.Trim()))
-                    {
-                        grunntype = null;
-                    }
+                        .Include(x => x.Kode)
+                        .FirstOrDefault(x =>
+                            x.Version.Navn.Equals(ninVersion.Navn) &&
+                            x.Kode.KodeName.Equals(grtype.Kode.Id.Trim()));
 
                     if (grunntype != null) continue;
                 }
@@ -241,6 +241,7 @@
                         Definisjon = grtype.Kode.Definition.Trim()
                     }
                 };
+
                 dbContext.Grunntype.Add(grunntype);
             }
         }
@@ -264,9 +265,10 @@
                     if (dbContext.Kartleggingsenhet.Any())
                     {
                         kartleggingsenhet = dbContext.Kartleggingsenhet
+                            .Include(x => x.Kode)
                             .FirstOrDefault(x =>
                                 x.Version.Navn.Equals(ninVersion.Navn) &&
-                                x.Kode.Id.Equals(krt.ElementKode));
+                                x.Kode.KodeName.Equals(krt.Kode.Id.Trim()));
                     }
 
                     if (kartleggingsenhet == null)
@@ -320,13 +322,14 @@
             {
                 Miljovariabel miljovariabel = null;
 
-                if (dbContext.Miljovariabel.Any())
-                {
-                    miljovariabel = dbContext.Miljovariabel
-                        .FirstOrDefault(x =>
-                            x.Version.Navn.Equals(ninVersion.Navn) &&
-                            x.Kode.Kode.Equals(child.Kode));
-                }
+                // Each miljøvariabel has to be unique because of different trinn/basistrinn
+                //if (dbContext.Miljovariabel.Any())
+                //{
+                //    miljovariabel = dbContext.Miljovariabel
+                //        .FirstOrDefault(x =>
+                //            x.Version.Navn.Equals(ninVersion.Navn) &&
+                //            x.Kode.Kode.Equals(child.Kode));
+                //}
 
                 if (miljovariabel == null)
                 {
@@ -347,7 +350,7 @@
                         miljovariabel.Kode.LkmKategori =
                             NinEnumConverter.Convert<LkmKategoriEnum>(child.LKMKategori).Value;
 
-                        AddTrinn(ninVersion, child, miljovariabel, hovedtype);
+                        AddTrinn(dbContext, ninVersion, child, miljovariabel);
                     }
 
                     dbContext.Miljovariabel.Add(miljovariabel);
@@ -360,50 +363,58 @@
             }
         }
 
-        private static void AddTrinn(NinVersion ninVersion,
+        private static void AddTrinn(NiNDbContext dbContext,
+                                     NinVersion ninVersion,
                                      EnvironmentVariable env,
-                                     Miljovariabel miljovariabel,
-                                     Hovedtype hovedtype)
+                                     Miljovariabel miljovariabel)
         {
-            foreach (var child in env.Trinn)
+            foreach (var step in env.Trinn)
             {
                 var trinn = new Trinn
                 {
                     Version = ninVersion,
-                    Navn = child.Navn.Trim(),
+                    Navn = step.Navn.Trim(),
                     Kode = new TrinnKode
                     {
                         Version = ninVersion,
-                        KodeName = $"{child.Kode}",
+                        KodeName = $"{step.Kode}",
                         Kategori = KategoriEnum.Trinn
                     }
                 };
 
-                AddBasistrinn(ninVersion, child, trinn, hovedtype);
+                AddBasistrinn(dbContext, ninVersion, step, trinn);
 
                 miljovariabel.Trinn.Add(trinn);
             }
         }
 
-        private static void AddBasistrinn(NinVersion ninVersion,
-                                          Step child,
-                                          Trinn trinn,
-                                          Hovedtype hovedtype)
+        private static void AddBasistrinn(NiNDbContext dbContext,
+                                          NinVersion ninVersion,
+                                          Step step,
+                                          Trinn trinn)
         {
-            if (child.Basistrinn == null) return;
+            if (step.Basistrinn == null) return;
 
-            foreach (var b in child.Basistrinn.Split(","))
+            foreach (var b in step.Basistrinn.Split(","))
             {
+                var kodename = b.Trim();
+
+                // Check if basistrinn exists
+                var basistrinn = dbContext.Basistrinn
+                    //.Include(x => x.Kode)
+                    .FirstOrDefault(x =>
+                        x.Version.Id == ninVersion.Id &&
+                        x.Navn.Equals(kodename));
+                if (basistrinn != null)
+                {
+                    trinn.Basistrinn.Add(basistrinn);
+                    continue;
+                }
+
                 trinn.Basistrinn.Add(new Basistrinn
                 {
                     Version = ninVersion,
-                    Navn = b.Trim(),
-                    Kode = new BasistrinnKode
-                    {
-                        Version = ninVersion,
-                        Kategori = KategoriEnum.Basistrinn,
-                        KodeName = $"{hovedtype.Hovedtypegruppe.Natursystem.Kode.Definisjon} {child.Kode} {b}"
-                    }
+                    Navn = kodename
                 });
             }
         }
