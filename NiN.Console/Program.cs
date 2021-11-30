@@ -47,6 +47,10 @@
 
             switch (arguments[0])
             {
+                case "importnin":
+                    Migrate();
+                    Import(arguments.Skip(1));
+                    break;
                 case "complete":
                     Migrate();
                     Import();
@@ -142,7 +146,7 @@
             Stopwatch.Reset();
             Stopwatch.Start();
             var importer = new NinCodeImport(_serviceProvider.GetService<NiNDbContext>(), version);
-            var records = importer.FixKartleggingConnections(@"CsvFiles\20211129_basitrinn_grunntyper_KE_import_v2.2.csv");
+            var records = importer.FixKartleggingConnections($"CsvFiles\\import_grunntyper_kartleggingsenheter_v{version}.csv");
 
             if (records == null) return;
 
@@ -159,8 +163,6 @@
                 var grunntyper = record.Grunntypenummer.Split(",");
                 var ninkodeprefix = record.SammensattKode.Substring(0, record.SammensattKode.IndexOf("-", StringComparison.Ordinal));
                 CreateKartleggingConnection(record.SammensattKode, grunntyper.Select(x => $"{ninkodeprefix}-{x}").ToArray(), version);
-                //Console.WriteLine($"{i:0###}\t{record.Malestokk}\t{record.SammensattKode}\t{record.Grunntypenummer}\t{record.Grunntypekoder}\t{record.Name}");
-                //break;
             }
 
             if (i > 0)
@@ -303,6 +305,21 @@
             Stopwatch.Stop();
 
             Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
+        private static void Import(IEnumerable<string> arguments)
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            foreach (var argument in arguments)
+            {
+                var ninCodeImport = new NinCodeImport(dbContext, argument);
+                ninCodeImport.ImportCompleteNin("CsvFiles");
+            }
         }
     }
 }

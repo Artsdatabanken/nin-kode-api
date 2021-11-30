@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NiN.Database.Migrations
 {
@@ -10,8 +11,7 @@ namespace NiN.Database.Migrations
                 name: "NinVersion",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -23,9 +23,8 @@ namespace NiN.Database.Migrations
                 name: "Basistrinn",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -43,11 +42,10 @@ namespace NiN.Database.Migrations
                 name: "LKMKode",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Kode = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: true),
                     LkmKategori = table.Column<int>(type: "int", nullable: false),
-                    VersionId = table.Column<int>(type: "int", nullable: true)
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -64,9 +62,8 @@ namespace NiN.Database.Migrations
                 name: "Natursystem",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -84,9 +81,8 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel0",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -104,10 +100,9 @@ namespace NiN.Database.Migrations
                 name: "Hovedtypegruppe",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    NatursystemId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    NatursystemId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -131,10 +126,9 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel1",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OverordnetKodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -158,10 +152,9 @@ namespace NiN.Database.Migrations
                 name: "Hovedtype",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    HovedtypegruppeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -185,10 +178,9 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel2",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OverordnetKodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -212,10 +204,9 @@ namespace NiN.Database.Migrations
                 name: "Grunntype",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    HovedtypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -239,12 +230,11 @@ namespace NiN.Database.Migrations
                 name: "Kartleggingsenhet",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Malestokk = table.Column<int>(type: "int", nullable: false),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true)
+                    HovedtypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -267,11 +257,10 @@ namespace NiN.Database.Migrations
                 name: "Miljovariabel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    KodeId = table.Column<int>(type: "int", nullable: true),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    KodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    HovedtypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -301,10 +290,9 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel3",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OverordnetKodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -328,8 +316,8 @@ namespace NiN.Database.Migrations
                 name: "BasistrinnGrunntype",
                 columns: table => new
                 {
-                    BasistrinnId = table.Column<int>(type: "int", nullable: false),
-                    GrunntypeId = table.Column<int>(type: "int", nullable: false)
+                    BasistrinnId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    GrunntypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -352,8 +340,8 @@ namespace NiN.Database.Migrations
                 name: "GrunntypeKartleggingsenhet",
                 columns: table => new
                 {
-                    GrunntypeId = table.Column<int>(type: "int", nullable: false),
-                    KartleggingsenhetId = table.Column<int>(type: "int", nullable: false)
+                    GrunntypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    KartleggingsenhetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -376,8 +364,8 @@ namespace NiN.Database.Migrations
                 name: "GrunntypeMiljovariabel",
                 columns: table => new
                 {
-                    GrunntypeId = table.Column<int>(type: "int", nullable: false),
-                    MiljovariabelId = table.Column<int>(type: "int", nullable: false)
+                    GrunntypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MiljovariabelId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -400,10 +388,9 @@ namespace NiN.Database.Migrations
                 name: "Trinn",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MiljovariabelId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MiljovariabelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -427,10 +414,9 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel4",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OverordnetKodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -454,8 +440,8 @@ namespace NiN.Database.Migrations
                 name: "BasistrinnTrinn",
                 columns: table => new
                 {
-                    BasistrinnId = table.Column<int>(type: "int", nullable: false),
-                    TrinnId = table.Column<int>(type: "int", nullable: false)
+                    BasistrinnId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TrinnId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -478,19 +464,18 @@ namespace NiN.Database.Migrations
                 name: "Kode",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     KodeName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     Kategori = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GrunntypeId = table.Column<int>(type: "int", nullable: true),
-                    HovedtypeId = table.Column<int>(type: "int", nullable: true),
-                    HovedtypegruppeId = table.Column<int>(type: "int", nullable: true),
-                    KartleggingsenhetId = table.Column<int>(type: "int", nullable: true),
-                    NatursystemId = table.Column<int>(type: "int", nullable: true),
-                    TrinnId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true)
+                    GrunntypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    HovedtypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    HovedtypegruppeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    KartleggingsenhetId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    NatursystemId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    TrinnId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -542,10 +527,9 @@ namespace NiN.Database.Migrations
                 name: "VarietyLevel5",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OverordnetKodeId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OverordnetKodeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     Navn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
@@ -569,19 +553,18 @@ namespace NiN.Database.Migrations
                 name: "VariasjonKode",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     KodeName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Definisjon = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
                     VarietyCategory = table.Column<int>(type: "int", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VarietyLevel1Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VarietyLevel2Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VarietyLevel3Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VarietyLevel4Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VarietyLevel5Code_VarietyLevelId = table.Column<int>(type: "int", nullable: true),
-                    VersionId = table.Column<int>(type: "int", nullable: true)
+                    VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VarietyLevel1Code_VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VarietyLevel2Code_VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VarietyLevel3Code_VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VarietyLevel4Code_VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VarietyLevel5Code_VarietyLevelId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    VersionId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {

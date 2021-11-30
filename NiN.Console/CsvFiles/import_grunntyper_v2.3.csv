@@ -1,0 +1,917 @@
+﻿natursystemNavn;natursystemKode;hovedtypegruppeNavn;hovedtypeGruppeKode;hovedtypeNavn;hovedtypeKode;grunntypeNavn;grunntypeKode
+Natursystem;NA;Marine vannmasser;NA H;Havvannmasser;NA H1;epipelagiale kystvannmasser;NA H1-5
+Natursystem;NA;Marine vannmasser;NA H;Havvannmasser;NA H1;abyssopelagiale havvannmasser;NA H1-4
+Natursystem;NA;Marine vannmasser;NA H;Havvannmasser;NA H1;bathypelagiale havvannmasser;NA H1-3
+Natursystem;NA;Marine vannmasser;NA H;Havvannmasser;NA H1;mesopelagiale havvannmasser;NA H1-2
+Natursystem;NA;Marine vannmasser;NA H;Havvannmasser;NA H1;epipelagiale havvannmasser;NA H1-1
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;middels stor eller liten brakkvannspoll;NA H2-8
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;stor brakkvannspoll;NA H2-7
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;temporært litoralbasseng;NA H2-6
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;lite litoralbasseng;NA H2-5
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;stort litoralbasseng;NA H2-4
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;middels stor eller liten poll;NA H2-3
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;stor poll;NA H2-2
+Natursystem;NA;Marine vannmasser;NA H;Sirkulerende vannmasser i fysisk avgrensete saltvannsforekomster;NA H2;fjord;NA H2-1
+Natursystem;NA;Marine vannmasser;NA H;Sterkt endrete marine vannmasser;NA H4;nye marine vannmasser;NA H4-4
+Natursystem;NA;Marine vannmasser;NA H;Sterkt endrete marine vannmasser;NA H4;vannmasser sterkt endret gjennom biologiske inngrep;NA H4-3
+Natursystem;NA;Marine vannmasser;NA H;Sterkt endrete marine vannmasser;NA H4;vannmasser sterkt endret gjennom kjemiske inngrep;NA H4-2
+Natursystem;NA;Marine vannmasser;NA H;Sterkt endrete marine vannmasser;NA H4;vannmasser sterkt endret gjennom fysiske inngrep;NA H4-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert sublitoral fastbunn;NA M1-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært beskyttet fast algebunn;NA M1-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet infralitoral fastbunn;NA M1-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet øvre circalitoral fastbunn;NA M1-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså eksponert infralitoral fastbunn;NA M1-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså eksponert øvre circalitoral fastbunn;NA M1-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;blokkdominert bunn preget av disruptiv isforstyrrelse;NA M1-29
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert nokså brakk blokkdominert bunn under sublitoral;NA M1-28
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært eksponert blokkdominert bunn;NA M1-27
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert blokkdominert bunn under sublitoral;NA M1-26
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert blokkdominert bunn i sublitoral;NA M1-25
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært beskyttet blokkdominert bunn under sublitoral;NA M1-24
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært brakk bergvegg;NA M1-23
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert nokså brakk bergvegg under sublitoral;NA M1-22
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært beskyttet nokså brakk bergvegg;NA M1-20
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært eksponert bergvegg;NA M1-19
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert bergvegg under sublitoral;NA M1-18
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert sublitoral bergvegg;NA M1-17
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært beskyttet bergvegg under sublitoral;NA M1-16
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært brakk beskyttet-eksponert fast tareskogs-algebunn;NA M1-15
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært brakk svært beskyttet fast algebunn;NA M1-14
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk nokså eksponert øvre circalitoral fastbunn;NA M1-13
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk nokså eksponert infralitoral fastbunn;NA M1-12
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk beskyttet øvre circalitoral fastbunn;NA M1-11
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk beskyttet infralitoral fastbunn;NA M1-10
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk beskyttet-eksponert sublitoral fastbunn;NA M1-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;nokså brakk svært beskyttet fast algebunn;NA M1-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;svært eksponert eufotisk fastbunn;NA M1-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk fast saltvannsbunn;NA M1;beskyttet-eksponert nokså brakk bergvegg i sublitoral;NA M1-21
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;svært beskyttet fastbunn i intermediært vann;NA M2-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;svært beskyttet fastbunn i atlantisk vann;NA M2-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;svært beskyttet afotisk fastbunn i øvre sublitoral;NA M2-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;svært beskyttet fastbunn i bathyal;NA M2-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;svært beskyttet fastbunn i abyssal;NA M2-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså beskyttet fastbunn i atlantisk vann;NA M2-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså beskyttet afotisk fastbunn i øvre sublitoral;NA M2-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;beskyttet til nokså eksponert abyssal bergvegg;NA M2-20
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;beskyttet til nokså eksponert bathyal bergvegg;NA M2-19
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså eksponert bergvegg i intermediært vann;NA M2-18
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;beskyttet bergvegg i intermediært vann;NA M2-17
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså eksponert bergvegg i nedre sublitoral;NA M2-16
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;beskyttet bergvegg i atlantisk vann;NA M2-15
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså eksponert bergvegg  i øvre sublitoral;NA M2-14
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;beskyttet afotisk bergvegg i øvre sublitoral;NA M2-13
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså eksponert ultramafisk fastbunn i abyssal;NA M2-12
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså eksponert ultramafisk fastbunn i atlantisk vann;NA M2-11
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså beskyttet fastbunn i abyssal;NA M2-10
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså beskyttet fastbunn i bathyal;NA M2-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk fast saltvannsbunn;NA M2;nokså beskyttet fastbunn i intermediært vann;NA M2-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;fjæresone-fastbunn preget av disruptiv isforstyrrelse;NA M3-19
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;mesohalin beskyttet-intermediær bergvegg i hydrolitoral-geolitoral;NA M3-18
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;eksponert bergvegg i hydrolitoral-geolitoral;NA M3-17
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;intermediær bergvegg i hydrolitoral-geolitoral;NA M3-16
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;beskyttet bergvegg i nedre geolitoral;NA M3-14
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;beskyttet bergvegg i hydrolitoral-øvre geolitoral;NA M3-15
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;oligohalin beskyttet-intermediær fastbunn;NA M3-13
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;mesohalin beskyttet-intermediær fastbunn i geolitoral;NA M3-12
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;mesohalin svært beskyttet-intermediær fastbunn i hydrolitoral;NA M3-11
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;bunn dominert av filamentøse alger;NA M3-10
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;strandsnegl-blåskjell-rurbunn;NA M3-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;strandsnegl-blåskjellbunn;NA M3-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;remtangbunn;NA M3-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;sauetang-blåskjellbunn;NA M3-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;spiraltangbunn;NA M3-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;blæretangbunn;NA M3-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;grønnalge-rurbunn;NA M3-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;grønnalge-spiraltangbunn;NA M3-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Fast fjærebeltebunn;NA M3;grisetangbunn;NA M3-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk svært kalkrik organisk finmaterialdominert bunn med liten erosjonsmotstand;NA M4-28
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk organisk finmaterialdominert bunn med liten erosjonsmotstand;NA M4-27
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialrik bunn med nokså stor erosjonsmotstand;NA M4-26
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialdominert bunn med intermediær til stor erosjonsmotstand;NA M4-25
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialdominert bunn med nokså liten til stor erosjonsmotstand;NA M4-24
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialrik bunn med nokså liten til intermediær erosjonsmotstand;NA M4-23
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialdominert bunn med liten erosjonsmotstand;NA M4-22
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk eufotisk finmaterialfattig bunn med liten erosjonsmotstand;NA M4-21
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;ruglbunn i rødalgebeltet;NA M4-20
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;skjellsandbunn i rødalgebeltet;NA M4-19
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;organisk finmaterialdominert bunn med liten erosjonsmotstand i rødalgebeltet;NA M4-18
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med stor erosjonsmotstand i rødalgebeltet;NA M4-17
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i rødalgebeltet;NA M4-16
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med nokså liten til nokså stor erosjonsmotstand i rødalgebeltet;NA M4-15
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialfattig bunn med liten erosjonsmotstand i hydrolitoral;NA M4-29
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med intermediær til stor erosjonsmotstand i rødalgebeltet;NA M4-14
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialfattig bunn med liten erosjonsmotstand i rødalgebeltet;NA M4-12
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;ruglbunn i sjøkant-tareskogsbeltet;NA M4-11
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;skjellsandbunn i sjøkant-tareskogsbeltet;NA M4-10
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;organisk finmaterialdominert bunn med liten erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med stor erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med nokså stor erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialfattig bunn med nokså stor til stor erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med nokså liten til intermediær erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialfattig bunn med intermediær erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med liten erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialfattig bunn med liten erosjonsmotstand i sjøkant-tareskogsbeltet;NA M4-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med liten erosjonsmotstand i rødalgebeltet;NA M4-13
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med liten erosjonsmotstand i hydrolitoral;NA M4-30
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med nokså liten til intermediær erosjonsmotstand i hydrolitoral;NA M4-32
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialrik bunn med nokså liten til intermediær erosjonsmotstand i hydrolitoral;NA M4-31
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;eufotisk sedimentbunn preget av disruptiv sedimentasjon;NA M4-44
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk organisk finmaterialdominert bunn med liten erosjonsmotstand i hydrolitoral;NA M4-43
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk finmaterialdominert bunn med nokså stor erosjonsmotstand i hydrolitoral;NA M4-42
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk finmaterialdominert bunn med nokså liten til intermediær erosjonsmotstand i hydrolitoral;NA M4-41
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk finmaterialrik bunn med nokså liten til intermediær erosjonsmotstand i hydrolitoral;NA M4-40
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk finmaterialdominert bunn med liten erosjonsmotstand i hydrolitoral;NA M4-39
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;brakk finmaterialfattig bunn med liten erosjonsmotstand i hydrolitoral;NA M4-38
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;hydrolitoral skjellsandbunn;NA M4-37
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;organisk finmaterialdominert bunn med liten erosjonsmotstand i hydrolitoral;NA M4-36
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med nokså stor erosjonsmotstand i hydrolitoral;NA M4-35
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med nokså stor til stor erosjonsmotstand i hydrolitoral;NA M4-34
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Eufotisk marin sedimentbunn;NA M4;finmaterialdominert bunn med intermediær erosjonsmotstand i hydrolitoral;NA M4-33
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;svampspikelbunn i abyssal;NA M5-38
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i abyssal;NA M5-36
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med intermediær til stor erosjonsmotstand i abyssal;NA M5-35
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med liten erosjonsmotstand i abyssal;NA M5-34
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialfattig bunn med liten erosjonsmotstand i abyssal;NA M5-33
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;svampspikelbunn i bathyal;NA M5-32
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med stor erosjonsmotstand i bathyal;NA M5-31
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i bathyal;NA M5-30
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med intermediær til stor erosjonsmotstand i bathyal;NA M5-29
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med liten erosjonsmotstand i bathyal;NA M5-28
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialfattig bunn med liten erosjonsmotstand i bathyal;NA M5-27
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;svampspikelbunn i intermediært vann;NA M5-26
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med stor erosjonsmotstand i intermediært vann;NA M5-25
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i intermediært vann;NA M5-24
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialrik bunn med nokså liten til nokså stor erosjonsmotstand i intermediært vann;NA M5-23
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med stor erosjonsmotstand i abyssal;NA M5-37
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med intermediær til stor erosjonsmotstand i intermediært vann;NA M5-22
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med liten erosjonsmotstand i intermediært vann;NA M5-21
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;korallgrusbunn i atlantisk vann;NA M5-19
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;svampspikelbunn i atlantisk vann;NA M5-18
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;organisk finmaterialdominert bunn med liten erosjonsmotstand i atlantisk vann;NA M5-17
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialrik bunn med stor erosjonsmotstand i atlantisk vann;NA M5-16
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med nokså liten til nokså stor erosjonsmotstand i atlantisk vann;NA M5-15
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialrik bunn med nokså liten til nokså stor erosjonsmotstand i atlantisk vann;NA M5-14
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med intermediær til stor erosjonsmotstand i atlantisk vann;NA M5-13
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert bunn med liten erosjonsmotstand i atlantisk vann;NA M5-12
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialfattig bunn med liten erosjonsmotstand i atlantisk vann;NA M5-11
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;afotisk korallgrusbunn i øvre sublitoral;NA M5-10
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;afotisk svampspikelbunn i øvre sublitoral;NA M5-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;afotisk skjellsandbunn i øvre sublitoral;NA M5-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;organisk finmaterialdominert afotisk bunn med liten erosjonsmotstand i øvre sublitoral;NA M5-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialrik afotisk bunn med stor erosjonsmotstand i øvre sublitoral;NA M5-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert afotisk bunn med nokså liten til nokså stor erosjonsmotstand i øvre sublitoral;NA M5-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialrik afotisk bunn med nokså liten til nokså stor erosjonsmotstand i øvre sublitoral;NA M5-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert afotisk bunn med liten erosjonsmotstand i øvre sublitoral;NA M5-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialfattig afotisk bunn med liten erosjonsmotstand i øvre sublitoral;NA M5-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialdominert afotisk bunn med intermediær til stor erosjonsmotstand i øvre sublitoral;NA M5-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Afotisk marin sedimentbunn;NA M5;finmaterialfattig bunn med liten erosjonsmotstand i intermediært vann;NA M5-20
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Korallrev-bunn;NA M6;havtilknyttet korallrev-bunn;NA M6-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Korallrev-bunn;NA M6;kysttilknyttet korallrev-bunn;NA M6-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin undervannseng;NA M7;Salt undervannseng i sublitoral;NA M7-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin undervannseng;NA M7;Salt undervannseng i hydrolitoral;NA M7-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin undervannseng;NA M7;Brakk undervannseng i sublitoral;NA M7-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin undervannseng;NA M7;Brakk undervannseng i hydrolitoral;NA M7-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Stort litoralbasseng i geolitoralen;NA M9-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Stort litoralbasseng i nedre og midtre supralitoral;NA M9-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Stort litoralbasseng i øvre supralitoral;NA M9-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Lite litoralbasseng i nedre og midtre supralitoral;NA M9-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Lite litoralbasseng i geolitoralen;NA M9-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Lite litoralbasseng i geolitoralen med klart sedimentasjonspreg;NA M9-9
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Stort litoralbasseng i geolitoralen med klart sedimentasjonspreg;NA M9-8
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Temporært litoralbasseng i supralitoral;NA M9-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Littoralbasseng-bunn;NA M9;Lite litoralbasseng i øvre supralitoral;NA M9-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin grotte og overheng;NA M10;Midtre og indre del av grotte i eufotisk sone;NA M10-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin grotte og overheng;NA M10;Midtre og indre del av grotte i tidevannssonen;NA M10-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin grotte og overheng;NA M10;Grotte i afotisk sone;NA M10-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin grotte og overheng;NA M10;Overheng og ytre del av grotte i eufotisk sone;NA M10-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin grotte og overheng;NA M10;Overheng og ytre del av grotte i tidevannssonen;NA M10-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Stabil mudderførende kald havkilde i dyphavet;NA M11-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Stabil kilde i dyphavet;NA M11-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Ustabil kilde i dyphavet;NA M11-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Ustabil kilde i nedre sublitoral;NA M11-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Stabil kilde på sublitoral sokkel;NA M11-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Ustabil kilde på sublitoral sokkel;NA M11-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Kaldt gassoppkomme;NA M11;Stabil kilde i nedre sublitoral;NA M11-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin sedimentbunn preget av oksygenmangel;NA M13;Anoksisk sedimentbunn i afotisk sone;NA M13-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin sedimentbunn preget av oksygenmangel;NA M13;Anoksisk sedimentbunn i eufotisk sone;NA M13-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin sedimentbunn preget av oksygenmangel;NA M13;Periodisk anoksisk sedimentbunn i afotisk sone;NA M13-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Marin sedimentbunn preget av oksygenmangel;NA M13;Periodisk anoksisk sedimentbunn i eufotisk sone;NA M13-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny fast saltvannsbunn;NA M14;Sterkt endret eller ny fast saltvannsbunn i afotisk sone;NA M14-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny fast saltvannsbunn;NA M14;Sterkt endret eller ny fast saltvannsbunn i eufotisk sone;NA M14-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny fast saltvannsbunn;NA M14;Sterkt endret eller ny fast saltvannsbunn i tidevannssonen;NA M14-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny marin sedimentbunn;NA M15;Løst mudder og silt- og leirdominert sterkt endret eller ny marin sedimentbunn med sterkt avvikende kjemisk sammensetning;NA M15-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny marin sedimentbunn;NA M15;Steindominert sterkt endret eller ny marin sedimentbunn;NA M15-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny marin sedimentbunn;NA M15;Løst mudder og silt- og leirdominert sterkt endret eller ny marin sedimentbunn;NA M15-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Sterkt endret eller ny marin sedimentbunn;NA M15;Sand- og grusdominert sterkt endret eller ny marin sedimentbunn;NA M15-1
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Disruptiv jordvarmeinfluert kilde;NA M12-7
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Sterkt jordvarmeinfluert kilde i dyphavet;NA M12-6
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Sterkt jordvarmeinfluert kilde i nedre sublitoral;NA M12-5
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Sterkt jordvarmeinfluert kilde på sublitoral sokkel;NA M12-4
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Klart jordvarmeinfluert kilde i dyphavet;NA M12-3
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Klart jordvarmeinfluert kilde i nedre sublitoral;NA M12-2
+Natursystem;NA;Saltvannsbunnsystemer;NA M;Varm havkilde;NA M12;Klart jordvarmeinfluert kilde på sublitoral sokkel;NA M12-1
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;uttørkingseksponert svært kalkrikt overheng;NA T5-10
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;uttørkingseksponert nokså kalkrikt overheng;NA T5-9
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;uttørkingseksponert kalkfattig overheng;NA T5-8
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;svært kalkrik indre del av dyp grotte;NA T5-7
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;kalkfattig til nokså kalkrik indre del av dyp grotte;NA T5-6
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;svært kalkrik grotte og overheng;NA T5-5
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;kalkfattig til nokså kalkrik grotte og overheng;NA T5-4
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;svært kalkrikt overheng;NA T5-3
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;nokså kalkrikt overheng;NA T5-2
+Natursystem;NA;Fastmarkssystemer;NA T;Grotte og overheng;NA T5;kalkfattig overheng;NA T5-1
+Natursystem;NA;Fastmarkssystemer;NA T;Isinnfrysingsmark;NA T20;kalkfattig isinnfrysingsmark;NA T20-1
+Natursystem;NA;Fastmarkssystemer;NA T;Isinnfrysingsmark;NA T20;kalkrik isinnfrysingsmark;NA T20-2
+Natursystem;NA;Fastmarkssystemer;NA T;Oppfrysingsmark;NA T19;kalkfattige finjordsflekker;NA T19-1
+Natursystem;NA;Fastmarkssystemer;NA T;Oppfrysingsmark;NA T19;kalkrike finjordsflekker;NA T19-2
+Natursystem;NA;Fastmarkssystemer;NA T;Oppfrysingsmark;NA T19;kalkrik oppfrysingsmark;NA T19-3
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;beskyttet-eksponert åpen flomfastmark på grus og stein;NA T18-1
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;beskyttet-eksponert åpen flomfastmark på sand;NA T18-2
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;beskyttet-eksponert åpen flomfastmark på silt og leire;NA T18-3
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;svært sterkt eksponert åpen flomfastmark;NA T18-4
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;beskyttet-eksponert åpen flomfastmark på kalkrik grus og stein;NA T18-5
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen flomfastmark;NA T18;beskyttet-eksponert åpen flomfastmark på sand med klart erosjonspreg;NA T18-6
+Natursystem;NA;Fastmarkssystemer;NA T;Aktiv skredmark;NA T17;silt- og leirskred;NA T17-4
+Natursystem;NA;Fastmarkssystemer;NA T;Aktiv skredmark;NA T17;sanskred;NA T17-3
+Natursystem;NA;Fastmarkssystemer;NA T;Aktiv skredmark;NA T17;grusskred;NA T17-2
+Natursystem;NA;Fastmarkssystemer;NA T;Aktiv skredmark;NA T17;jordskred;NA T17-1
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;rasmarkeng og -hei med svært sterkt raspreg;NA T16-7
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;kalkfattig rasmarkeng og -hei;NA T16-1
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;intermediær rasmarkeng og -hei;NA T16-2
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;nokså kalkrik rasmarkeng og -hei;NA T16-3
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;svært kalkrik rasmarkeng og -hei;NA T16-4
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;intermediær rasmarkeng og -hei med svak kildepåvirkning;NA T16-5
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmarkhei og -eng;NA T16;kalkrik rasmarkeng og -hei med svak kildepåvirkning;NA T16-6
+Natursystem;NA;Fastmarkssystemer;NA T;Fosse-eng;NA T15;kalkfattig fosse-eng;NA T15-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fosse-eng;NA T15;kalkrik fosse-eng;NA T15-2
+Natursystem;NA;Fastmarkssystemer;NA T;Rabbe;NA T14;kalkfattig rabbe;NA T14-1
+Natursystem;NA;Fastmarkssystemer;NA T;Rabbe;NA T14;kalkrik rabbe;NA T14-2
+Natursystem;NA;Fastmarkssystemer;NA T;Rabbe;NA T14;deflasjonsrabbe;NA T14-3
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert kalkfattig grus- og sanddominert rasmark;NA T13-3
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert nokså kalkrik stein- og blokkdominert rasmark;NA T13-4
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert  nokså kalkrik steindominert rasmark;NA T13-5
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert  nokså kalkrik grus- og sanddominert rasmark;NA T13-6
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert svært kalkrik stein- og blokkdominert rasmark;NA T13-7
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert  svært kalkrik steindominert rasmark;NA T13-8
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert  svært kalkrik grus- og sanddominert rasmark;NA T13-9
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert kalkfattig stein- og blokkdominert rasmark;NA T13-10
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert kalkfattig steindominert rasmark;NA T13-11
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert nokså kalkrik stein- og blokkdominert rasmark;NA T13-12
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert  nokså kalkrik steindominert rasmark;NA T13-13
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert svært kalkrik stein- og blokkdominert rasmark;NA T13-14
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;lite uttørkingseksponert  svært kalkrik steindominert rasmark;NA T13-15
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;stein- og blokkdominert rasmark med disruptivt raspreg;NA T13-16
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;steindominert rasmark med disruptivt raspreg;NA T13-17
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;grus- og sanddominert rasmark med disruptivt raspreg;NA T13-18
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert kalkfattig steindominert rasmark;NA T13-2
+Natursystem;NA;Fastmarkssystemer;NA T;Rasmark;NA T13;uttørkingseksponert kalkfattig stein- og blokkdominert rasmark;NA T13-1
+Natursystem;NA;Fastmarkssystemer;NA T;Strandeng;NA T12;strandeng i midtre geoliitoral;NA T12-2
+Natursystem;NA;Fastmarkssystemer;NA T;Strandeng;NA T12;strandeng i nedre geoliitoral;NA T12-1
+Natursystem;NA;Fastmarkssystemer;NA T;Strandeng;NA T12;strandeng i supraliitoral;NA T12-4
+Natursystem;NA;Fastmarkssystemer;NA T;Strandeng;NA T12;strandeng i øvre geoliitoral;NA T12-3
+Natursystem;NA;Fastmarkssystemer;NA T;Saltanrikingsmark i fjæresonen;NA T11;saltanrikingsmark på grus i geolitoral;NA T11-1
+Natursystem;NA;Fastmarkssystemer;NA T;Saltanrikingsmark i fjæresonen;NA T11;saltanrikingsmark på silt og leire i geolitoral;NA T11-3
+Natursystem;NA;Fastmarkssystemer;NA T;Saltanrikingsmark i fjæresonen;NA T11;saltanrikingsmark på grus i supralitoral;NA T11-2
+Natursystem;NA;Fastmarkssystemer;NA T;Arktisk steppe;NA T10;rabbe i arktisk steppe;NA T10-2
+Natursystem;NA;Fastmarkssystemer;NA T;Arktisk steppe;NA T10;beskyttet grashei i arktisk steppe;NA T10-1
+Natursystem;NA;Fastmarkssystemer;NA T;Mosetundra;NA T9;kalkrik mosetundra;NA T9-2
+Natursystem;NA;Fastmarkssystemer;NA T;Mosetundra;NA T9;kalkfattig-intermediær mosetundra;NA T9-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fuglefjell-eng og fugletopp;NA T8;overgjødslet fuglefjell-eng;NA T8-3
+Natursystem;NA;Fastmarkssystemer;NA T;Fuglefjell-eng og fugletopp;NA T8;fugletopp med klart naturlig gjødslingspreg;NA T8-5
+Natursystem;NA;Fastmarkssystemer;NA T;Fuglefjell-eng og fugletopp;NA T8;fuglefjell-eng med klart naturlig gjødslingspreg og svak kildevannspåvirkning;NA T8-4
+Natursystem;NA;Fastmarkssystemer;NA T;Fuglefjell-eng og fugletopp;NA T8;fuglefjell-eng med sterkt naturlig gjødslingspreg;NA T8-2
+Natursystem;NA;Fastmarkssystemer;NA T;Fuglefjell-eng og fugletopp;NA T8;fuglefjell-eng med klart naturlig gjødslingspreg;NA T8-1
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;kalkrikt ekstrem-snøleie;NA T7-10
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;vegetasjonsfritt snøleie;NA T7-11
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;intermediært moderat snøleie med svak kildepåvirkning;NA T7-12
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;nokså kalkrikt moderat snøleie med svak kildepåvirkning;NA T7-13
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;svært kalkrikt moderat snøleie med svak kildepåvirkning;NA T7-14
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;svært kalkrikt seint snøleie;NA T7-9
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;svært kalkrikt moderat snøleie;NA T7-8
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;nokså kalkrikt moderat snøleie;NA T7-6
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;nokså kalkrikt seint snøleie;NA T7-7
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;intermediært ekstrem-snøleie;NA T7-5
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;intermediært seint snøleie;NA T7-4
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;intermediært moderat snøleie;NA T7-3
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;nokså kalkfattig moderat snøleie;NA T7-2
+Natursystem;NA;Fastmarkssystemer;NA T;Snøleie;NA T7;svært kalkfattig moderat snøleie;NA T7-1
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær beskyttet bergknaus i nedre supralitoral;NA T6-1
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær beskyttet bergknaus i midtre supralitoral;NA T6-2
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær beskyttet bergknaus i øvre supralitoral;NA T6-3
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;svært kalkrik beskyttet bergknaus i øvre supralitoral;NA T6-4
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær eksponert bergknaus i nedre supralitoral;NA T6-5
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær beskyttet bergvegg i midtre supralitoral;NA T6-6
+Natursystem;NA;Fastmarkssystemer;NA T;Strandberg;NA T6;kalkfattig og intermediær beskyttet bergknaus i øvre supralitoral preget av disruptiv isforstyrrelse;NA T6-7
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert kalkfattig bergvegg;NA T1-1
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert kalkfattig bergvegg;NA T1-2
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkfattig bergvegg;NA T1-3
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkfattig bergvegg;NA T1-4
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert svakt intermediær bergvegg;NA T1-5
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert svakt intermediær bergvegg;NA T1-7
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert svakt intermediær bergvegg;NA T1-8
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert sterkt intermediær bergvegg;NA T1-9
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert sterkt intermediær bergvegg;NA T1-10
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;fuglestein og fugleberg;NA T1-85
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrikt sterkt vindutsatt berg;NA T1-84
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig sterkt vindutsatt berg;NA T1-83
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrikt snøleieberg;NA T1-82
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig snøleieberg;NA T1-81
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;intermediært til svært kalkrikt uttørkingseksponert berg i pionerfase;NA T1-80
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;intermediært til svært kalkrikt lite uttørkingseksponert berg i pionerfase;NA T1-79
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert sterkt intermediær bergvegg;NA T1-11
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert sterkt intermediær bergvegg;NA T1-12
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert kalkrik bergvegg;NA T1-13
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert svakt intermediær bergvegg;NA T1-6
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert svakt intermediært iblant overrislet berg;NA T1-26
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert sterkt intermediær bergknaus;NA T1-50
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert sterkt intermediær bergknaus;NA T1-49
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert svakt intermediær bergknaus;NA T1-48
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert svakt intermediær bergknaus;NA T1-47
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert svakt intermediær bergknaus;NA T1-46
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert svakt intermediær bergknaus;NA T1-45
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkfattig bergknaus;NA T1-44
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkfattig bergknaus;NA T1-43
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert kalkfattig bergknaus;NA T1-42
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert kalkfattig bergknaus;NA T1-41
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;uttørkingseksponert kalkrikt ofte overrislet berg;NA T1-40
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert kalkrikt ofte overrislet berg;NA T1-39
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;uttørkingseksponert sterkt intermediært ofte overrislet berg;NA T1-38
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert sterkt intermediært ofte overrislet berg;NA T1-37
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert sterkt intermediær bergknaus;NA T1-51
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;uttørkingseksponert svakt intermediært ofte overrislet berg;NA T1-36
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;uttørkingseksponert kalkfattig ofte overrislet berg;NA T1-34
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert kalkfattig ofte overrislet berg;NA T1-33
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkrikt iblant overrislet berg;NA T1-32
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkrikt iblant overrislet berg;NA T1-31
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert kalkrikt iblant overrislet berg;NA T1-30
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert sterkt intermediært iblant overrislet berg;NA T1-29
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert sterkt intermediært iblant overrislet berg;NA T1-28
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert svært kalkrik bergvegg;NA T1-19
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert svært kalkrik bergvegg;NA T1-20
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert kalkfattig iblant overrislet berg;NA T1-21
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkfattig iblant overrislet berg;NA T1-22
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkfattig iblant overrislet berg;NA T1-23
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert svakt intermediært iblant overrislet berg;NA T1-24
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert sterkt intermediært iblant overrislet berg;NA T1-27
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;lite uttørkingseksponert svakt intermediært ofte overrislet berg;NA T1-35
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert sterkt intermediær bergknaus;NA T1-52
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert kalkrik bergknaus;NA T1-54
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert kalkrik bergvegg;NA T1-14
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkrik bergvegg;NA T1-15
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkrik bergvegg;NA T1-16
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert svært kalkrik bergvegg;NA T1-17
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert svært kalkrik bergvegg;NA T1-18
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig uttørkingseksponert berg i pionerfase;NA T1-78
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig lite uttørkingseksponert berg i pionerfase;NA T1-77
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrik flomsonebergvegg;NA T1-76
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrik fossebergknaus;NA T1-75
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;sterkt intermediær fossebergvegg;NA T1-74
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;sterkt intermediær fossebergknaus;NA T1-73
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svakt intermediær fossebergvegg;NA T1-72
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svakt intermediær fossebergknaus;NA T1-71
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert kalkrik bergknaus;NA T1-53
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig flomsonebergvegg;NA T1-70
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrik flomsonebergvegg;NA T1-68
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkrik flomsonebergknaus;NA T1-67
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;sterkt intermediær flomsonebergvegg;NA T1-66
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;sterkt intermediær flomsonebergknaus;NA T1-65
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svakt intermediær flomsonebergvegg;NA T1-64
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svakt intermediær flomsonebergknaus;NA T1-63
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig flomsonebergvegg;NA T1-62
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig flomsonebergknaus;NA T1-61
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert svært kalkrik bergknaus;NA T1-60
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert svært kalkrik bergknaus;NA T1-59
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså lite uttørkingseksponert svært kalkrik bergknaus;NA T1-58
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært lite uttørkingseksponert svært kalkrik bergknaus;NA T1-57
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;svært uttørkingseksponert kalkrik bergknaus;NA T1-56
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert kalkrik bergknaus;NA T1-55
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;kalkfattig fossebergknaus;NA T1-69
+Natursystem;NA;Fastmarkssystemer;NA T;Nakent berg;NA T1;nokså uttørkingseksponert svakt intermediært iblant overrislet berg;NA T1-25
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen svært kalkrik grunnlendt lavmark;NA T2-8
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen svært kalkrik grunnlendt lyngmark;NA T2-7
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen nokså kalkrik grunnlendt lavmark;NA T2-6
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen nokså kalkrik grunnlendt lyngmark;NA T2-5
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen intermediær grunnlendt lavmark;NA T2-4
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen intermediær grunnlendt lyngmark;NA T2-3
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen kalkfattig grunnlendt lavmark;NA T2-2
+Natursystem;NA;Fastmarkssystemer;NA T;Åpen grunnlendt mark;NA T2;Åpen kalkfattig grunnlendt lyngmark;NA T2-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;kalkrik fjell-lavhei med svak kildevannspåvirkning;NA T3-14
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;intermediær fjell-lavhei med svak kildevannspåvirkning;NA T3-13
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;svært kalkrik fjell-lavhei;NA T3-12
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;svært kalkrik leside;NA T3-10
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;nokså kalkrik fjell-lavhei;NA T3-9
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;nokså kalkrik fjell-lynghei;NA T3-8
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;nokså kalkrik leside;NA T3-7
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;intermediær fjell-lavhei;NA T3-6
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;intermediær leside;NA T3-4
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;kalkfattig fjell-lavhei;NA T3-3
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;kalkfattig fjell-lynghei;NA T3-2
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;kalkfattig leside;NA T3-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;svært kalkrik fjell-lynghei;NA T3-11
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellhei, leside og tundra;NA T3;intermediær fjell-lynghei;NA T3-5
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lav-kalklågurtskog;NA T4-16
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lav-lågurtskog;NA T4-15
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;svak lav-lågurtskog;NA T4-14
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lavskog;NA T4-13
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lyng-kalklågurtskog;NA T4-12
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lyng-lågurtskog;NA T4-11
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;svak lyng-lågurtskog;NA T4-10
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lyngskog;NA T4-9
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;bærlyng-kalklågurtskog;NA T4-8
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;bærlyng-lågurtskog;NA T4-7
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;svak bærlyng-lågurtskog;NA T4-6
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;bærlyngskog;NA T4-5
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;kalklågurtskog;NA T4-4
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;lågurtskog;NA T4-3
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;svak lågurtskog;NA T4-2
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;blåbærskog;NA T4-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;storbregneskog;NA T4-17
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;høgstaudeskog;NA T4-18
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;tørkeutsatt høgstaudeskog;NA T4-20
+Natursystem;NA;Fastmarkssystemer;NA T;Fastmarksskogsmark;NA T4;litt tørkeutsatt høgstaudeskog;NA T4-19
+Natursystem;NA;Fastmarkssystemer;NA T;Oppdyrket varig eng;NA T45;oppdyrket varig eng med nokså intensivt hevdpreg og beitepreget;NA T45-1
+Natursystem;NA;Fastmarkssystemer;NA T;Oppdyrket varig eng;NA T45;oppdyrket varig eng med nokså intensivt hevdpreg og slåttepreget;NA T45-2
+Natursystem;NA;Fastmarkssystemer;NA T;Oppdyrket varig eng;NA T45;oppdyrket varig eng med intensivt hevdpreg og slåttepreget;NA T45-3
+Natursystem;NA;Fastmarkssystemer;NA T;Oppdyrket varig eng;NA T45;oppdyrket varig eng med svært intensivt hevdpreg og slåttepreget;NA T45-4
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellgrashei og grastundra;NA T22;kalkfattig fjellgrashei;NA T22-1
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellgrashei og grastundra;NA T22;kalkfattig grassnøleie;NA T22-2
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellgrashei og grastundra;NA T22;kalkrik fjellgrashei;NA T22-3
+Natursystem;NA;Fastmarkssystemer;NA T;Fjellgrashei og grastundra;NA T22;kalkrik grassnøleie;NA T22-4
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;primærdyne;NA T21-2
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;kvit dyne;NA T21-3
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;grå dyne;NA T21-4
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;brun dyne;NA T21-5
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;dynehei;NA T21-6
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;deflasjonsmark;NA T21-7
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;vekselfuktig eller fuktig sanddynemark;NA T21-8
+Natursystem;NA;Fastmarkssystemer;NA T;Sanddynemark;NA T21;forstrand;NA T21-1
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på sterkt modifi-serte og syntetiske substrater, i rask suksesjon;NA T37;ny fastmark på substrat med avvikende kjemisk sammensetning;NA T37-1
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på sterkt modifi-serte og syntetiske substrater, i rask suksesjon;NA T37;ny fastmark på sterkt modifisert eller syntetisk, overveiende uorganisk substrat;NA T37-2
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på sterkt modifi-serte og syntetiske substrater, i rask suksesjon;NA T37;ny fastmark på sterkt modifisert eller syntetisk, overveiende organisk substrat;NA T37-3
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på tidligere våtmark og ferskvannsbunn;NA T36;tørrlagt tidligere elvebunn;NA T36-2
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på tidligere våtmark og ferskvannsbunn;NA T36;tørrlagt tidligere innsjøbunn;NA T36-3
+Natursystem;NA;Fastmarkssystemer;NA T;Ny fastmark på tidligere våtmark og ferskvannsbunn;NA T36;sterkt endret tidligere våtmarkssystem;NA T36-1
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret åpen fastmark med løsmassedekke;NA T35;sterkt endret fastmark med dekke av silt og leire;NA T35-4
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret åpen fastmark med løsmassedekke;NA T35;sterkt endret fastmark med dekke av jord og andre mer eller mindre usorterte masser;NA T35-1
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret åpen fastmark med løsmassedekke;NA T35;sterkt endret fastmark med grusdekke;NA T35-2
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret åpen fastmark med løsmassedekke;NA T35;sterkt endret fastmark med sanddekke;NA T35-3
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;kalkfattig bakli-hei;NA T34-1
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;kalkfattig normal kystlynghei;NA T34-2
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;kalkfattig tørkeutsatt kystlynghei;NA T34-3
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;intermediær bakli-hei;NA T34-4
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;intermediær tørkeutsatt kystlynghei;NA T34-6
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;nokså kalkrik normal kystlynghei;NA T34-7
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;nokså kalkrik tørkeutsatt kystlynghei;NA T34-8
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;svært kalkrik normal kystlynghei;NA T34-9
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;svært kalkrik tørkeutsatt kystlynghei;NA T34-10
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;kalkfattig normal kystlynghei på veksefuktig og fuktig mark;NA T34-11
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;intermediær normal kystlynghei på veksefuktig og fuktig mark;NA T34-12
+Natursystem;NA;Fastmarkssystemer;NA T;Kystlynghei;NA T34;intermediær normal kystlynghei;NA T34-5
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig strandeng;NA T33;semi-naturlig strandeng i øvre geolitoral;NA T33-1
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig strandeng;NA T33;semi-naturlig strandeng i supralitoral;NA T33-2
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;intermediær tørkeutsatt eng med svært ekstensivt hevdpreg;NA T32-15
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;intermediær tørkeutsatt eng med ekstensivt-svakt intensivt hevdpreg;NA T32-16
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik tørkeutsatt eng med svært ekstensivt hevdpreg;NA T32-17
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik tørkeutsatt eng med ekstensivt-svakt intensivt hevdpreg;NA T32-18
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;svært kalkrik tørkeutsatt eng med svært ekstensivt hevdpreg;NA T32-19
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;svært kalkrik tørkeutsatt eng med ekstensivt hevdpreg;NA T32-20
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik tørkeutsatt eng på stabilisert sand med ekstensivt-svakt intensivt hevdpreg;NA T32-21
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkfattig tørkeutsatt eng med ekstensivt hevdpreg;NA T32-14
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkfattig tørkeutsatt eng med svært ekstensivt hevdpreg;NA T32-13
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkrik eng med ekstensivt-svakt intensivt hevdpreg og svak kildepåvirkning;NA T32-12
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkrik eng med svært ekstensivt hevdpreg og svak kildepåvirkning;NA T32-11
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkfattig eng med svært ekstensivt hevdpreg;NA T32-1
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;kalkfattig eng med ekstensivt hevdpreg;NA T32-2
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;intermediær eng med svært ekstensivt hevdpreg;NA T32-3
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;intermediær eng med ekstensivt hevdpreg;NA T32-4
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;intermediær eng med svakt intensivt hevdpreg;NA T32-5
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik eng med svært ekstensivt hevdpreg;NA T32-6
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik eng med ekstensivt hevdpreg;NA T32-7
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;nokså kalkrik eng med svakt intensivt hevdpreg;NA T32-8
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;svært kalkrik eng med svært ekstensivt hevdpreg;NA T32-9
+Natursystem;NA;Fastmarkssystemer;NA T;Semi-naturlig eng;NA T32;svært kalkrik eng med ekstensivt hevdpreg;NA T32-10
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;kalkfattig boreal hei i leside;NA T31-1
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;kalkfattig boreal fjell-lynghei;NA T31-2
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;kalkfattig boreal fjell-lavhei;NA T31-3
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;intermediær boreal hei i leside;NA T31-4
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;intermediær boreal fjell-lynghei;NA T31-5
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;intermediær boreal fjell-lavhei;NA T31-6
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;nokså kalkrik boreal hei i leside;NA T31-7
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;nokså kalkrik boreal fjell-lynghei;NA T31-8
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;nokså kalkrik boreal fjell-lavhei;NA T31-9
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;svært kalkrik boreal fjell-lynghei;NA T31-11
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;svært kalkrik boreal fjell-lavhei;NA T31-12
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;intermediær boreal leside med kildepåvirkning;NA T31-13
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;kalkrik boreal leside med kildepåvirkning;NA T31-14
+Natursystem;NA;Fastmarkssystemer;NA T;Boreal hei;NA T31;svært kalkrik boreal hei i leside;NA T31-10
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;eksponert flomskogsmark på grus og stein;NA T30-2
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;beskyttet flomskogsmark på finmateriale;NA T30-3
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;eksponert flomskogsmark på finmateriale;NA T30-4
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;beskyttet flomskogsmark på finmateriale med svak kildevannspåvirkning;NA T30-5
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;eksponert flomskogsmark på finmateriale med svak kildevannspåvirkning;NA T30-6
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;eksponert flomskogsmark på finmateriale med klart erosjonspreg;NA T30-7
+Natursystem;NA;Fastmarkssystemer;NA T;Flomskogsmark;NA T30;beskyttet flomskogsmark på grus og stein;NA T30-1
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;skjellsandstrand i pionerfase i supralitoral;NA T29-9
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;grusstrand i etablerings- og konsolideringsfase på epilitoral fastmark med vinddeflasjon;NA T29-10
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;steinstrand i pionerfase på epilitoral fastmark;NA T29-1
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;steinstrand i etablerings- og konsolideringsfase på epilitoral fastmark;NA T29-2
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;grusstrand i pionerfase på epilitoral fastmark;NA T29-3
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;grusstrand i etablerings- og konsolideringsfase på epilitoral fastmark;NA T29-4
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;skjellsandstrand i pionerfase på epilitoral fastmark;NA T29-5
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;skjellsandstrand i etablerings- og konsolideringsfase på epilitoral fastmark;NA T29-6
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;steinstrand i pionerfase i supralitoral;NA T29-7
+Natursystem;NA;Fastmarkssystemer;NA T;Grus- og steindominert strand og strandlinje;NA T29;grusstrand i pionerfase i supralitoral;NA T29-8
+Natursystem;NA;Fastmarkssystemer;NA T;Polarørken;NA T28;kalkfattig polarørken;NA T28-1
+Natursystem;NA;Fastmarkssystemer;NA T;Polarørken;NA T28;nokså kalkrik polarørken;NA T28-2
+Natursystem;NA;Fastmarkssystemer;NA T;Polarørken;NA T28;svært kalkrik polarørken;NA T28-3
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkfattig  blokkmark uten snødekkebetinget vekstsesongreduksjon;NA T27-1
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkfattig  blokkmark i snøleie;NA T27-2
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkrik  blokkmark uten snødekkebetinget vekstsesongreduksjon;NA T27-3
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkrik  blokkmark i snøleie;NA T27-4
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;blokkmark i vegetasjonsfritt snøleie;NA T27-5
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkrik  blokkmark uten snødekkebetinget vekstsesongreduksjon med sterkt vindpreg;NA T27-7
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;blokkmark i pionerfase;NA T27-8
+Natursystem;NA;Fastmarkssystemer;NA T;Blokkmark;NA T27;kalkfattig  blokkmark uten snødekkebetinget vekstsesongreduksjon med sterkt vindpreg;NA T27-6
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;veldrenerte eller vekselfuktige fjellhei-initialer;NA T26-1
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;fuktige fjellhei-initialer;NA T26-2
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;veldrenerte eller vekselfuktige snøleie-initialer;NA T26-3
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;fuktige snøleie-initialer;NA T26-4
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;breforland og snøavsmeltingsområde i pionerfase dominert av grov grus og stein;NA T26-5
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;breforland og snøavsmeltingsområde i pionerfase dominert av sand og fin grus;NA T26-6
+Natursystem;NA;Fastmarkssystemer;NA T;Breforland og snøavsmeltingsområde;NA T26;breforland og snøavsmeltingsområde i pionerfase dominert av silt og leire;NA T26-7
+Natursystem;NA;Fastmarkssystemer;NA T;Historisk skredmark;NA T25;historisk jordskred;NA T25-1
+Natursystem;NA;Fastmarkssystemer;NA T;Historisk skredmark;NA T25;historisk grusskred;NA T25-2
+Natursystem;NA;Fastmarkssystemer;NA T;Historisk skredmark;NA T25;historisk silt- og leirskred;NA T25-4
+Natursystem;NA;Fastmarkssystemer;NA T;Historisk skredmark;NA T25;historisk sanskred;NA T25-3
+Natursystem;NA;Fastmarkssystemer;NA T;Driftvoll;NA T24;beskyttet driftvoll;NA T24-1
+Natursystem;NA;Fastmarkssystemer;NA T;Driftvoll;NA T24;moderat eksponert driftvoll;NA T24-2
+Natursystem;NA;Fastmarkssystemer;NA T;Driftvoll;NA T24;eksponert driftvoll;NA T24-3
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;blokkdeponi i pionerfase;NA T39-1
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;blokkdeponi i etablerings- og konsolideringsfase;NA T39-2
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;blottlagt fast fjell i pionerfase;NA T39-3
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;blottlagt fast fjell i etablerings- og konsolideringsfase;NA T39-4
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;fast fjell blottlagt ved tørrlegging eller nedtapping av vannforekomster i pionerfase;NA T39-5
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;fast fjell blottlagt ved tørrlegging eller nedtapping av vannforekomster i etablerings- og konsolideringsfase;NA T39-6
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;sterkt modifisert eller syntetisk, overveiende uorganisk fast substrat i pionerfase;NA T39-7
+Natursystem;NA;Fastmarkssystemer;NA T;Sterkt endret eller ny fastmark i langsom suksesjon;NA T39;sterkt modifisert eller syntetisk, overveiende uorganisk fast substrat i etablerings- og konsolideringsfase;NA T39-8
+Natursystem;NA;Våtmarkssystemer;NA V;Grøftet torvmark;NA V12;Grøftet kalkrik jordvannsmyr;NA V12-2
+Natursystem;NA;Våtmarkssystemer;NA V;Grøftet torvmark;NA V12;Grøftet kalkfattig jordvannsmyr;NA V12-1
+Natursystem;NA;Våtmarkssystemer;NA V;Grøftet torvmark;NA V12;Grøftet nedbørsmyr;NA V12-3
+Natursystem;NA;Våtmarkssystemer;NA V;Torvtak;NA V11;kalkfattig torvtak;NA V11-1
+Natursystem;NA;Våtmarkssystemer;NA V;Torvtak;NA V11;kalkrikt torvtak;NA V11-2
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig våteng;NA V10;semi-naturlig våteng med svak kildevannspåvirkning;NA V10-3
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig våteng;NA V10;kalkrik semi-naturlig våteng;NA V10-2
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig våteng;NA V10;intermediær semi-naturlig våteng;NA V10-1
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig myr;NA V9;kalkrik semi-naturlig myr;NA V9-3
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig myr;NA V9;intermediær semi-naturlig myr;NA V9-2
+Natursystem;NA;Våtmarkssystemer;NA V;Semi-naturlig myr;NA V9;kalkfattig semi-naturlig myr;NA V9-1
+Natursystem;NA;Våtmarkssystemer;NA V;Strandsumpskogsmark;NA V8;kalkrik saltpåvirket strandsumpskogsmark;NA V8-3
+Natursystem;NA;Våtmarkssystemer;NA V;Strandsumpskogsmark;NA V8;kalkrik strandsumpskogsmark;NA V8-2
+Natursystem;NA;Våtmarkssystemer;NA V;Strandsumpskogsmark;NA V8;intermediær strandsumpskogsmark;NA V8-1
+Natursystem;NA;Våtmarkssystemer;NA V;Arktisk permafrost-våtmark;NA V7;kalkfattig-intermediær permafrost-våtmark;NA V7-1
+Natursystem;NA;Våtmarkssystemer;NA V;Arktisk permafrost-våtmark;NA V7;kalkrik permafrost-våtmark;NA V7-2
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkfattig-intermediær moderat våtsnøleie;NA V6-1
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkrikt moderat våtsnøleie;NA V6-2
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkfattig-intermediær seint våtsnøleie;NA V6-3
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;ekstrem-kildesnøleie;NA V6-9
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkrikt seint kildesnøleie;NA V6-8
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkfattig-intermediær seint kildesnøleie;NA V6-7
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkrikt ekstrem-våtsnøleie;NA V6-6
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkfattig-intermediær ekstrem-våtsnøleie;NA V6-5
+Natursystem;NA;Våtmarkssystemer;NA V;Våtsnøleie og snøleiekilde;NA V6;kalkrikt seint våtsnøleie;NA V6-4
+Natursystem;NA;Våtmarkssystemer;NA V;Varm kilde;NA V5;klart jordvarmeinfluert kilde;NA V5-2
+Natursystem;NA;Våtmarkssystemer;NA V;Varm kilde;NA V5;svakt jordvarmeinfluert kilde;NA V5-1
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;kalkrik stabil torvmarkskilde;NA V4-9
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;kalkrik svak eller ustabil torvmarkskilde;NA V4-8
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;intermediær stabil torvmarkskilde;NA V4-7
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;intermediær svak eller ustabil torvmarkskilde;NA V4-6
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;kalkrik stabil kilde;NA V4-5
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;kalkrik svak eller ustabil kilde;NA V4-4
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;intermediær stabil kilde;NA V4-3
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;intermediær svak eller ustabil kilde;NA V4-2
+Natursystem;NA;Våtmarkssystemer;NA V;Kaldkilde;NA V4;kalkfattig svak eller ustabil kilde;NA V4-1
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof rabbepreget myrtue;NA V3-7
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof øvre tuenivå i myrkant;NA V3-6
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof øvre tuenivå;NA V3-5
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof nedre tuenivå;NA V3-4
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof øvre fastmatte;NA V3-3
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof nedre fastmatte;NA V3-2
+Natursystem;NA;Våtmarkssystemer;NA V;Nedbørsmyr;NA V3;ombrotrof mykmatte;NA V3-1
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;intermediær myr- og sumpskogstue;NA V2-4
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;intermediær myr- og sumpskogsmatte;NA V2-3
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;kalkfattig myr- og sumpskogstue;NA V2-2
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;kalkfattig myr- og sumpskogsmatte;NA V2-1
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;kalkrik myr- og sumpskogsmatte med svak kildevannspåvirkning;NA V2-8
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;intermediær myr- og sumpskogsmatte med svak kildevannspåvirkning;NA V2-7
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;kalkrik myr- og sumpskogsmatte;NA V2-5
+Natursystem;NA;Våtmarkssystemer;NA V;Myr- og sumpskogsmark;NA V2;kalkrik myr- og sumpskogstue;NA V2-6
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig øvre tuenivå;NA V1-5
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik mykmatte og nedre fastmatte i myrkant med saltpåvirkning;NA V1-32
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik mykmatte og nedre fastmatte i myrkant med svak kildepåvirkning;NA V1-31
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær mykmatte og nedre fastmatte i myrkant med svak kildepåvirkning;NA V1-30
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;kalkrik øvre fastmatte og nedre tuenivå i myrkant;NA V1-29
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkrik mykmatte og nedre fastmatte i myrkant;NA V1-28
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær mykmatte;NA V1-10
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig nedre tuenivå;NA V1-9
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig øvre fastmatte;NA V1-8
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig nedre fastmatte;NA V1-7
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig mykmatte;NA V1-1
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig nedre fastmatte;NA V1-2
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig øvre fastmatte;NA V1-3
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig nedre tuenivå;NA V1-4
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik mykmatte og nedre fastmatte i myrkant;NA V1-27
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær øvre fastmatte og nedre tuenivå i myrkant;NA V1-26
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær mykmatte og nedre fastmatte i myrkant;NA V1-25
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig øvre fastmatte og nedre tuenivå i myrkant;NA V1-24
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig mykmatte og nedre fastmatte i myrkant;NA V1-23
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig øvre fastmatte og tuer i myrkant;NA V1-22
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;kalkrik nedre tuenivå;NA V1-20
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkrik øvre fastmatte;NA V1-19
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkrik nedre fastmatte;NA V1-18
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkrik mykmatte;NA V1-17
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik øvre fastmatte;NA V1-16
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik nedre fastmatte;NA V1-15
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkrik mykmatte;NA V1-14
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær nedre tuenivå;NA V1-13
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær øvre fastmatte;NA V1-12
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;intermediær nedre fastmatte;NA V1-11
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;svært kalkfattig mykmatte og nedre fastmatte i myrkant;NA V1-21
+Natursystem;NA;Våtmarkssystemer;NA V;Åpen jordvannsmyr;NA V1;nokså kalkfattig mykmatte;NA V1-6
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i sterkt endret fastmarkssystem som ikke er jordbruksmark med torvdannelse;NA V13-2
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i sterkt endret fastmarkssystem som ikke er jordbruksmark;NA V13-1
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i jordbruksmark på fastmark;NA V13-3
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i jordbruksmark på fastmark med torvdannelse;NA V13-4
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i neddemt skogsmark med torvdannelse;NA V13-6
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i ferskvannsbunn med torvdannelse;NA V13-8
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i ferskvannsbunn;NA V13-7
+Natursystem;NA;Våtmarkssystemer;NA V;Ny våtmark;NA V13;ny våtmark med opprinnelse i neddemt skogsmark;NA V13-5
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av kronisk kjemisk påvirkning;NA F10;Kronisk kjemisk påvirkede innsjø-vannmasser;NA F10-1
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av kronisk kjemisk påvirkning;NA F10;Kronisk saltpåvirkede innsjø-vannmasser;NA F10-2
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av kronisk kjemisk påvirkning;NA F10;Kronisk eutrofierte innsjø-vannmasser;NA F10-3
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av kronisk kjemisk påvirkning;NA F10;Kronisk forsurede innsjø-vannmasser;NA F10-4
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og klare lagdelte vannmasser med enkelt fiskesamfunn;NA F1-1
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og humøse lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-10
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F11;Sterkt endrede kalkfattige innsjø-vannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F11-1
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Moderat kalkrike lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-11
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F11;Sterkt endrede kalkrike innsjø-vannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F11-2
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkrike lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-12
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og klare lagdelte vannmasser med komplekst fiskesamfunn;NA F1-13
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og humøse lagdelte vannmasser med komplekst fiskesamfunn;NA F1-14
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og klare lagdelte vannmasser med komplekst fiskesamfunn;NA F1-15
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og humøse lagdelte vannmasser med komplekst fiskesamfunn;NA F1-16
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Moderat kalkrike lagdelte vannmasser med komplekst fiskesamfunn;NA F1-17
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkrike lagdelte vannmasser med komplekst fiskesamfunn;NA F1-18
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og humøse lagdelte vannmasser med enkelt fiskesamfunn;NA F1-2
+Natursystem;NA;Limniske vannmasser;NA F;Elvevannmasser preget av kronisk kjemisk påvirkning;NA F12;Sterkt forsurede elvevannmasser;NA F12-1
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og klare lagdelte vannmasser med enkelt fiskesamfunn;NA F1-3
+Natursystem;NA;Limniske vannmasser;NA F;Elvevannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F13;Sterkt endrede kalkfattige elvevannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F13-1
+Natursystem;NA;Limniske vannmasser;NA F;Elvevannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F13;Sterkt endrede kalkrike elvevannmasser preget av introduksjon eller bortfall av strukturerende organismer;NA F13-2
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og humøse lagdelte vannmasser med enkelt fiskesamfunn;NA F1-4
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Moderat kalkrike lagdelte vannmasser med enkelt fiskesamfunn;NA F1-5
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkrike lagdelte vannmasser med enkelt fiskesamfunn;NA F1-6
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og klare lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-7
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Svært kalkfattige og humøse lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-8
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) vannmasser med fiskesamfunn;NA F1;Noe kalkfattige og klare lagdelte vannmasser med middels komplekst fiskesamfunn;NA F1-9
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og klare grunne vannmasser med enkelt fiskesamfunn;NA F2-1
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og humøse grunne vannmasser med middels komplekst fiskesamfunn;NA F2-10
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Moderat kalkrike grunne vannmasser med middels komplekst fiskesamfunn;NA F2-11
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkrike grunne vannmasser med middels komplekst fiskesamfunn;NA F2-12
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og klare grunne vannmasser med komplekst fiskesamfunn;NA F2-13
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og humøse grunne vannmasser med komplekst fiskesamfunn;NA F2-14
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og klare grunne vannmasser med komplekst fiskesamfunn;NA F2-15
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og humøse grunne vannmasser med komplekst fiskesamfunn;NA F2-16
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Moderat kalkrike grunne vannmasser med komplekst fiskesamfunn;NA F2-17
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkrike grunne vannmasser med komplekst fiskesamfunn;NA F2-18
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og humøse grunne vannmasser med enkelt fiskesamfunn;NA F2-2
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og klare grunne vannmasser med enkelt fiskesamfunn;NA F2-3
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og humøse grunne vannmasser med enkelt fiskesamfunn;NA F2-4
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Moderat kalkrike grunne vannmasser med enkelt fiskesamfunn;NA F2-5
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkrike grunne vannmasser med enkelt fiskesamfunn;NA F2-6
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og klare grunne vannmasser med middels komplekst fiskesamfunn;NA F2-7
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Svært kalkfattige og humøse grunne vannmasser med middels komplekst fiskesamfunn;NA F2-8
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) vannmasser med fiskesamfunn;NA F2;Noe kalkfattige og klare grunne vannmasser med middels komplekst fiskesamfunn;NA F2-9
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Svært kalkfattige og klare lagdelte vannmasser uten fisk;NA F3-1
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Svært kalkfattige og humøse lagdelte vannmasser uten fisk;NA F3-2
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Noe kalkfattige og klare lagdelte vannmasser uten fisk;NA F3-3
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Noe kalkfattige og humøse lagdelte vannmasser uten fisk;NA F3-4
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Moderat kalkrike lagdelte vannmasser uten fisk;NA F3-5
+Natursystem;NA;Limniske vannmasser;NA F;Lagdelte fullsirkulerende (mono- og dimiktiske) naturlig fisketomme vannmasser;NA F3;Svært kalkrike lagdelte vannmasser uten fisk;NA F3-6
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkfattige og klare store grunne vannmasser uten fisk;NA F4-1
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkfattige og humøse små grunne vannmasser uten fisk;NA F4-10
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Noe kalkfattige og humøse store grunne vannmasser uten fisk;NA F4-11
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Noe kalkfattige og humøse små grunne vannmasser uten fisk;NA F4-12
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Moderat kalkrike og humøse store grunne vannmasser uten fisk;NA F4-13
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Moderat kalkrike og humøse små grunne vannmasser uten fisk;NA F4-14
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkrike og humøse store grunne vannmasser uten fisk;NA F4-15
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkrike og humøse små grunne vannmasser uten fisk;NA F4-16
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Små og grunne humøse vannmasser uten fisk (høljegjøl);NA F4-17
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkfattige og klare små grunne vannmasser uten fisk;NA F4-2
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Noe kalkfattige og klare store grunne vannmasser uten fisk;NA F4-3
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Noe kalkfattige og klare små grunne vannmasser uten fisk;NA F4-4
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Moderat kalkrike og klare store grunne vannmasser uten fisk;NA F4-5
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Moderat kalkrike og klare små grunne vannmasser uten fisk;NA F4-6
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkrike og klare store grunne vannmasser uten fisk;NA F4-7
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkrike og klare små grunne vannmasser uten fisk;NA F4-8
+Natursystem;NA;Limniske vannmasser;NA F;Ikke-lagdelte (polymiktiske) naturlig fisketomme vannmasser;NA F4;Svært kalkfattige og humøse store grunne vannmasser uten fisk;NA F4-9
+Natursystem;NA;Limniske vannmasser;NA F;Turbide vannmasser;NA F5;Kalkfattige litt turbide vannmasser;NA F5-1
+Natursystem;NA;Limniske vannmasser;NA F;Turbide vannmasser;NA F5;Kalkrike litt turbide vannmasser;NA F5-2
+Natursystem;NA;Limniske vannmasser;NA F;Turbide vannmasser;NA F5;Svært turbide vannmasser;NA F5-3
+Natursystem;NA;Limniske vannmasser;NA F;Grottesjø-vannmasser;NA F6;Grottesjø-vannmasser;NA F6-1
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Innsjø-vannmasser med periodisk oksygenmangel;NA F7-1
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Anoksiske innsjø-vannmasser betinget av gammelt havvann;NA F7-2
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Anoksiske innsjø-vannmasser betinget av saltholdig kildevann;NA F7-3
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Anoksiske innsjø-vannmasser betinget av jernholdig vann;NA F7-4
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Anoksiske innsjø-vannmasser betinget av kalkrikt vann;NA F7-5
+Natursystem;NA;Limniske vannmasser;NA F;Innsjø-vannmasser preget av oksygenmangel;NA F7;Anoksiske innsjø-vannmasser betinget av humusrikt vann;NA F7-6
+Natursystem;NA;Limniske vannmasser;NA F;Elvevannmasser;NA F8;Elvevannmasser uten fisk;NA F8-1
+Natursystem;NA;Limniske vannmasser;NA F;Elvevannmasser;NA F8;Elvevannmasser med fisk;NA F8-2
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkfattige grunne nye innsjø-vannmasser uten fisk;NA F9-1
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkfattige lagdelte nye innsjø-vannmasser uten fisk;NA F9-2
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkrike grunne nye innsjø-vannmasser uten fisk;NA F9-3
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkrike lagdelte nye innsjø-vannmasser uten fisk;NA F9-4
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkfattige grunne nye innsjø-vannmasser med fisk;NA F9-5
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkfattige lagdelte nye innsjø-vannmasser med fisk;NA F9-6
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkrike grunne nye innsjø-vannmasser med fisk;NA F9-7
+Natursystem;NA;Limniske vannmasser;NA F;Nye innsjø-vannmasser;NA F9;Kalkrike lagdelte nye innsjø-vannmasser med fisk;NA F9-8
+Natursystem;NA;Innsjøbunnsystemer;NA L;Arktisk permafrost-innsjøbunn;NA L10;Arktisk permafrost-innsjøbunn;NA L10-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkfattig og beskyttet fast strandkant-innsjøbunn;NA L1-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkrik og beskyttet fast strandkant-innsjøbunn;NA L1-10
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn;NA L11;Ny sedimentbunn i innsjø;NA L11-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkrik og eksponert fast strandkant-innsjøbunn;NA L1-11
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn;NA L11;Ny fastbunn i innsjø;NA L11-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkrik beskyttet grunn fast innsjøbunn;NA L1-12
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Turbid eufotisk fast innsjøbunn;NA L1-13
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkfattig og eksponert fast strandkant-innsjøbunn;NA L1-14
+Natursystem;NA;Innsjøbunnsystemer;NA L;Semi-naturlig eutrof innsjøbunn;NA L12;Semi-naturlig eutrof innsjøbunn;NA L12-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Svært kalkfattig beskyttet grunn fast innsjøbunn;NA L1-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Semi-naturlig vannstrand-eng;NA L13;Kalkfattig semi-naturlig vannstrand-eng;NA L13-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Semi-naturlig vannstrand-eng;NA L13;Kalkrik semi-naturlig vannstrand-eng;NA L13-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Noe kalkfattig og beskyttet fast strandkant-innsjøbunn;NA L1-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny sterkt endret innsjøbunn;NA L14;Sterkt endret ny fast innsjøbunn;NA L14-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny sterkt endret innsjøbunn;NA L14;Kalkfattig (ny) syntetisk innsjøbunn;NA L14-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny sterkt endret innsjøbunn;NA L14;Kalkrik (ny) syntetisk innsjøbunn;NA L14-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny sterkt endret innsjøbunn;NA L14;Kalkfattig ny innsjø-sedimentbunn;NA L14-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny sterkt endret innsjøbunn;NA L14;Kalkrik ny innsjø-sedimentbunn ;NA L14-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Noe kalkfattig og eksponert fast strandkant-innsjøbunn;NA L1-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn med opphav i elvebunn;NA L15;Kalkfattig ny innsjø-sedimentbunn med opphav i elvebunn;NA L15-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn med opphav i elvebunn;NA L15;Kalkfattig ny fast innsjøbunn med opphav i elvebunn;NA L15-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn med opphav i elvebunn;NA L15;Kalkrik ny innsjø-sedimentbunn med opphav i elvebunn;NA L15-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ny innsjøbunn med opphav i elvebunn;NA L15;Kalkrik ny fast innsjøbunn med opphav i elvebunn;NA L15-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Noe kalkfattig beskyttet grunn fast innsjøbunn;NA L1-6
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk fysisk forstyrrelse;NA L16;Kalkfattig kronisk fysisk forstyrret innsjø-sedimentbunn;NA L16-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk fysisk forstyrrelse;NA L16;Kalkfattig kronisk fysisk forstyrret fast innsjøbunn;NA L16-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk fysisk forstyrrelse;NA L16;Kalkrik kronisk fysisk forstyrret innsjø-sedimentbunn;NA L16-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk fysisk forstyrrelse;NA L16;Kalkrik kronisk fysisk forstyrret fast innsjøbunn;NA L16-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk fysisk forstyrrelse;NA L16;Reguleringssone i innsjø;NA L16-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Moderat kalkrik og beskyttet fast strandkant-innsjøbunn ;NA L1-7
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk kjemisk påvirket innsjø-sedimentbunn ;NA L17-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk kjemisk påvirket fast innsjøbunn ;NA L17-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk saltpåvirket innsjø-sedimentbunn ;NA L17-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk eutrofiert innsjø-sedimentbunn ;NA L17-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk eutrofiert fast innsjøbunn ;NA L17-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk forsuret innsjø-sedimentbunn ;NA L17-6
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av kronisk kjemisk påvirkning;NA L17;Kronisk forsuret fast innsjøbunn ;NA L17-7
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Moderat kalkrik og eksponert fast strandkant-innsjøbunn;NA L1-8
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk fast innsjøbunn;NA L1;Moderat kalkrik beskyttet grunn fast innsjøbunn;NA L1-9
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av silt og sand i strandkant;NA L2-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av grus og stein i karplantebeltet;NA L2-10
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av grus og stein i mosebeltet;NA L2-11
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av grus og stein i karplantebeltet;NA L2-12
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av grus og stein i mosebeltet;NA L2-13
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkfattig innsjø-sedimentbunn av blokker i karplantebeltet;NA L2-14
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av silt og sand i strandkant;NA L2-15
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av silt og sand i strandkant;NA L2-16
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkrik innsjø-sedimentbunn av leire i strandkant;NA L2-17
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av silt og sand i karplantebeltet;NA L2-18
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av silt og sand i mosebeltet;NA L2-19
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av silt og sand i strandkant;NA L2-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av silt og sand i karplantebeltet;NA L2-20
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av silt og sand i mosebeltet;NA L2-21
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkrik innsjø-sedimentbunn av leire i karplantebeltet;NA L2-22
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av grus og stein i strandkant;NA L2-23
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av grus og stein i strandkant;NA L2-24
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkrik innsjø-sedimentbunn av blokker i strandkant;NA L2-25
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av grus og stein i karplantebeltet;NA L2-26
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Moderat kalkrik innsjø-sedimentbunn av grus og stein i mosebeltet;NA L2-27
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av grus og stein i karplantebeltet;NA L2-28
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkrik innsjø-sedimentbunn av grus og stein i mosebeltet;NA L2-29
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av silt og sand i karplantebeltet;NA L2-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkrik innsjø-sedimentbunn av blokker i karplantebeltet;NA L2-30
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Turbid eufotisk innsjø-sedimentbunn;NA L2-31
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av silt og sand i mosebeltet;NA L2-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av silt og sand i karplantebeltet;NA L2-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av silt og sand i mosebeltet;NA L2-6
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Svært kalkfattig innsjø-sedimentbunn av grus og stein i strandkant;NA L2-7
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Noe kalkfattig innsjø-sedimentbunn av grus og stein i strandkant;NA L2-8
+Natursystem;NA;Innsjøbunnsystemer;NA L;Eufotisk innsjø-sedimentbunn;NA L2;Kalkfattig innsjø-sedimentbunn av blokker i strandkant;NA L2-9
+Natursystem;NA;Innsjøbunnsystemer;NA L;Afotisk (dyp) innsjø-sedimentbunn;NA L3;Kalkfattig dyp innsjøbunn;NA L3-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Afotisk (dyp) innsjø-sedimentbunn;NA L3;Moderat kalkrik dyp innsjøbunn;NA L3-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Afotisk (dyp) innsjø-sedimentbunn;NA L3;Svært kalkrik dyp innsjøbunn;NA L3-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Helofyttsump;NA L4;Kalkfattig helofyttsump;NA L4-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Helofyttsump;NA L4;Moderat kalkrik helofyttsump;NA L4-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Helofyttsump;NA L4;Svært kalkrik helofyttsump;NA L4-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ferskvanns-undervannseng;NA L5;Kalkfattig undervannseng i innsjø;NA L5-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ferskvanns-undervannseng;NA L5;Moderat kalkrik undervannseng i innsjø;NA L5-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ferskvanns-undervannseng;NA L5;Svært kalkrik undervannseng i innsjø;NA L5-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ferskvanns-undervannseng;NA L5;Kalkfattig undervannseng i elv;NA L5-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Ferskvanns-undervannseng;NA L5;Moderat kalkrik undervannseng i elv;NA L5-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Gjøl-bunn på fast torv;NA L6;Svært kalkfattig flarkgjøl-bunn på fast torv ;NA L6-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Gjøl-bunn på fast torv;NA L6;Noe kalkfattig flarkgjøl-bunn på fast torv ;NA L6-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Gjøl-bunn på fast torv;NA L6;Moderat kalkrik flarkgjøl-bunn på fast torv ;NA L6-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Gjøl-bunn på fast torv;NA L6;Svært kalkrik flarkgjøl-bunn på fast torv ;NA L6-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Gjøl-bunn på fast torv;NA L6;Høljegjøl-bunn på fast torv ;NA L6-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av dy og gytje;NA L7;Svært kalkfattig innsjøbunn av dy og gytje;NA L7-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av dy og gytje;NA L7;Noe kalkfattig innsjøbunn av dy og gytje;NA L7-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av dy og gytje;NA L7;Moderat kalkrik innsjøbunn av dy og gytje;NA L7-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av dy og gytje;NA L7;Svært kalkrik innsjøbunn av dy og gytje;NA L7-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av grovt organisk materiale;NA L8;Kalkfattig innsjøbunn av grovt organisk materiale;NA L8-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn av grovt organisk materiale;NA L8;Kalkrik innsjøbunn av grovt organisk materiale;NA L8-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Innsjøbunn med periodisk oksygenmangel;NA L9-1
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Anoksisk innsjøbunn med gammelt havvann;NA L9-2
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Anoksisk innsjøbunn betinget av saltholdig kildevann;NA L9-3
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Anoksisk innsjøbunn betinget av jernholdig vann;NA L9-4
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Anoksisk innsjøbunn betinget av kalkrikt vann;NA L9-5
+Natursystem;NA;Innsjøbunnsystemer;NA L;Innsjøbunn preget av oksygenmangel;NA L9;Anoksisk innsjøbunn betinget av humusrikt vann;NA L9-6
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkfattig fastbunn i klar og stilleflytende elv ;NA O1-1
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Moderat kalkrik fastbunn i klar elv med brutt overflate;NA O1-10
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Moderat kalkrik fastbunn i klar elv med moderat stryk;NA O1-11
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Moderat kalkrik fastbunn i klar elv med hvitstryk;NA O1-12
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkrik fastbunn i klar og stilleflytende elv;NA O1-13
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkrik fastbunn i klar elv med brutt overflate;NA O1-14
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkrik fastbunn i klar elv med moderat stryk;NA O1-15
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkrik fastbunn i klar elv med hvitstryk;NA O1-16
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkfattig fastbunn i humøs og stilleflytende elv;NA O1-17
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkfattig fastbunn i humøs elv med brutt overflate;NA O1-18
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkfattig fastbunn i humøs elv med moderat stryk;NA O1-19
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkfattig fastbunn i klar elv med brutt overflate;NA O1-2
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkfattig fastbunn i humøs elv med hvitstryk;NA O1-20
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkrik fastbunn i humøs og stilleflytende elv;NA O1-21
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkrik fastbunn i humøs elv med brutt overflate;NA O1-22
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkrik fastbunn i humøs elv med moderat stryk;NA O1-23
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkrik fastbunn i humøs elv med hvitstryk;NA O1-24
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkfattig og svært ujevn fastbunn i klar elv med stryk;NA O1-25
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Kalkrik og svært ujevn fastbunn i klar elv med stryk;NA O1-26
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Turbid fast elvebunn;NA O1-27
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Fast elvebunn i grotte;NA O1-28
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkfattig fastbunn i klar elv med moderat stryk;NA O1-3
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Svært kalkfattig fastbunn i klar elv med hvitstryk;NA O1-4
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Noe kalkfattig fastbunn i klar og stilleflytende elv;NA O1-5
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Noe kalkfattig fastbunn i klar elv med brutt overflate;NA O1-6
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Noe kalkfattig fastbunn i klar elv med moderat stryk;NA O1-7
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Noe kalkfattig fastbunn i klar elv med hvitstryk;NA O1-8
+Natursystem;NA;Elvebunnsystemer;NA O;Fast elvebunn;NA O1;Moderat kalkrik fastbunn i klar og stilleflytende elv;NA O1-9
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkfattig siltbunn i klar elv;NA O2-1
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkrik grov grusbunn i klar elv;NA O2-10
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Moderat kalkrik steinbunn i klar elv;NA O2-11
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Svært kalkrik steinbunn i klar elv;NA O2-12
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Siltbunn i humøs elv;NA O2-13
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Sandbunn i humøs elv;NA O2-14
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Fin grusbunn i humøs elv;NA O2-15
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Grov grusbunn i humøs elv;NA O2-16
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkfattig steinbunn i humøs elv;NA O2-17
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkrik steinbunn i humøs elv;NA O2-18
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Utstrømspåvirket kalkfattig elvebunn;NA O2-19
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkfattig sandbunn i klar elv;NA O2-2
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Utstrømspåvirket kalkrik elvebunn;NA O2-20
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Turbid elvesedimentbunn;NA O2-21
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkfattig fin grusbunn i klar elv;NA O2-3
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkfattig grov grusbunn i klar elv;NA O2-4
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Svært kalkfattig steinbunn i klar elv;NA O2-5
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Noe kalkfattig steinbunn i klar elv;NA O2-6
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkrik siltbunn i klar elv;NA O2-7
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkrik sandbunn i klar elv;NA O2-8
+Natursystem;NA;Elvebunnsystemer;NA O;Elvesedimentbunn;NA O2;Kalkrik fin grusbunn i klar elv;NA O2-9
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Sand- og grov grusbunn i kalkfattig svak kilde;NA O3-1
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Storblokket bunn i kalkrik svak kilde;NA O3-10
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Silt- og leirbunn i kalkrik sterk kilde;NA O3-11
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Sand- og grov grusbunn i kalkrik sterk kilde;NA O3-12
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Steinbunn i kalkrik sterk kilde;NA O3-13
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Storblokket bunn i kalkrik sterk kilde;NA O3-14
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Steinbunn i kalkfattig svak kilde;NA O3-2
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Storblokket bunn i kalkfattig svak kilde;NA O3-3
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Sand- og grov grusbunn i kalkfattig sterk kilde;NA O3-4
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Steinbunn i kalkfattig sterk kilde;NA O3-5
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Storblokket bunn i kalkfattig sterk kilde ;NA O3-6
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Silt- og leirbunn i kalkrik svak kilde;NA O3-7
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Sand- og grov grusbunn i kalkrik svak kilde;NA O3-8
+Natursystem;NA;Elvebunnsystemer;NA O;Ferskvannskildebunn;NA O3;Stein- og blokkbunn i kalkrik svak kilde;NA O3-9
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Silt- og leirbunn i litt varm kilde;NA O4-1
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Sand- og steinbunn i litt varm kilde;NA O4-2
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Stein- og blokkbunn i litt varm kilde;NA O4-3
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Storblokket bunn i litt varm kilde;NA O4-4
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Silt- og leirbunn i varm kilde;NA O4-5
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Sand- og steinbunn i varm kilde;NA O4-6
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Stein- og blokkbunn i varm kilde;NA O4-7
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Storblokket bunn i varm kilde;NA O4-8
+Natursystem;NA;Elvebunnsystemer;NA O;Varm ferskvannskildebunn;NA O4;Svovelpåvirket bunn i litt varm kilde;NA O4-9
+Natursystem;NA;Elvebunnsystemer;NA O;Ny sedimentbunn i elv;NA O5;Ny sedimentbunn i elv;NA O5-1
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysisk forstyrrelse;NA O6;Kalkfattig kronisk fysisk forstyrret sedimentbunn i elv;NA O6-1
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysisk forstyrrelse;NA O6;Kalkfattig kronisk fysisk forstyrret fastbunn i elv;NA O6-2
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysisk forstyrrelse;NA O6;Kalkrik kronisk fysisk forstyrret sedimentbunn i elv;NA O6-3
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysisk forstyrrelse;NA O6;Kalkrik kronisk fysisk forstyrret fastbunn i elv;NA O6-4
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysisk forstyrrelse;NA O6;Turbid minstevannførings-strekning i elv ;NA O6-5
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;NA O7;Kronisk kjemisk påvirket sedimentbunn i elv;NA O7-1
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;NA O7;Kronisk kjemisk påvirket fastbunn i elv;NA O7-2
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;NA O7;Kronisk forsuret sedimentbunn i elv;NA O7-3
+Natursystem;NA;Elvebunnsystemer;NA O;Elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;NA O7;Kronisk forsuret fastbunn i elv;NA O7-4

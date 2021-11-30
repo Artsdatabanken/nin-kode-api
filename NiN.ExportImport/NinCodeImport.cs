@@ -2,57 +2,502 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.Globalization;
     using System.IO;
+    using System.Linq;
     using CsvHelper;
     using CsvHelper.Configuration;
-    using CsvHelper.Configuration.Attributes;
+    using Microsoft.EntityFrameworkCore;
     using NiN.Database;
+    using NiN.Database.Converters;
+    using NiN.Database.Models.Code;
+    using NiN.Database.Models.Code.Codes;
+    using NiN.Database.Models.Code.Enums;
+    using NiN.Database.Models.Common;
+    using NiN.ExportImport.Model;
 
     public class NinCodeImport
     {
         private readonly NiNDbContext _context;
         private readonly string _version;
+        private readonly CsvConfiguration _csvConfiguration;
 
         public NinCodeImport(NiNDbContext ninContext, string version)
         {
             _context = ninContext;
             _version = version;
+            _csvConfiguration = new CsvConfiguration(new CultureInfo("nb-NO"));
         }
 
-        public IEnumerable<KartleggingRecord> FixKartleggingConnections(string path)
+        public IEnumerable<GrunntypeKartleggingRecord> FixKartleggingConnections(string path)
         {
-            var csvConfiguration = new CsvConfiguration(new CultureInfo("nb-NO"));
-
             if (!File.Exists(path)) yield break;
 
             using var reader = new StreamReader(path);
-            using var csv = new CsvReader(reader, csvConfiguration);
+            using var csv = new CsvReader(reader, _csvConfiguration);
 
-            var records = csv.GetRecords<KartleggingRecord>();
+            var records = csv.GetRecords<GrunntypeKartleggingRecord>();
             foreach (var record in records)
             {
                 yield return record;
             }
         }
-    }
 
-    public class KartleggingRecord
-    {
-        [Index(0)]
-        public int Malestokk { get; set; }
-        
-        [Index(1)]
-        public string SammensattKode { get; set; }
-        
-        [Index(2)]
-        public string Name { get; set; }
+        public void ImportCompleteNin(string basePath)
+        {
+            var i = 0;
+            Natursystem natursystem = null;
 
-        [Index(3)]
-        public string Grunntypenummer { get; set; }
+            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(_version));
+            if (ninVersion == null)
+            {
+                ninVersion = new NinVersion { Navn = _version };
+                _context.NinVersion.Add(ninVersion);
+                _context.SaveChanges();
 
-        [Index(4)]
-        public string Grunntypekoder { get; set; }
+                ninVersion = _context.NinVersion.FirstOrDefault(x => x.Id == ninVersion.Id);
+            }
+
+            var path = Path.Combine(basePath, $"import_grunntyper_v{_version}.csv");
+            if (File.Exists(path))
+            {
+                using var reader = new StreamReader(path);
+                using var csv = new CsvReader(reader, _csvConfiguration);
+
+                var records = csv.GetRecords<GrunntyperRecord>();
+                foreach (var record in records)
+                {
+                    if (natursystem == null)
+                    {
+                        natursystem = _context.Natursystem
+                            .Include(x => x.Kode)
+                            .FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                    }
+                    if (natursystem == null)
+                    {
+                        natursystem = CreateNatursystem(record, ninVersion);
+                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        _context.Natursystem.Add(natursystem);
+                    }
+
+                    var hovedtypegruppe = _context.Hovedtypegruppe
+                        .Include(x => x.Natursystem)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Natursystem.Id == natursystem.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypegruppeKode));
+                    if (hovedtypegruppe == null)
+                    {
+                        hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
+                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        _context.Hovedtypegruppe.Add(hovedtypegruppe);
+                    }
+
+                    var hovedtype = _context.Hovedtype
+                        .Include(x => x.Hovedtypegruppe)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtypegruppe.Id == hovedtypegruppe.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypeKode));
+                    if (hovedtype == null)
+                    {
+                        hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
+                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        _context.Hovedtype.Add(hovedtype);
+                    }
+
+                    var grunntype = _context.Grunntype
+                        .Include(x => x.Hovedtype)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtype.Id == hovedtype.Id &&
+                            x.Kode.KodeName.Equals(record.GrunntypeKode));
+                    if (grunntype == null)
+                    {
+                        grunntype = CreateGrunntype(record.GrunntypeNavn, record.GrunntypeKode, ninVersion, natursystem, hovedtype);
+                        Console.WriteLine($"{++i:0####} grunntype\t{grunntype.Kode.KodeName} {grunntype.Navn}");
+                        _context.Grunntype.Add(grunntype);
+                    }
+
+                    if (HasUnsavedChanges()) _context.SaveChanges();
+                }
+            }
+
+            path = Path.Combine(basePath, $"import_kartleggingsenheter_v{_version}.csv");
+            if (File.Exists(path))
+            {
+                using var reader = new StreamReader(path);
+                using var csv = new CsvReader(reader, _csvConfiguration);
+
+                var records = csv.GetRecords<KartleggingsenheterRecord>();
+                foreach (var record in records)
+                {
+                    if (natursystem == null)
+                    {
+                        natursystem = _context.Natursystem
+                            .Include(x => x.Kode)
+                            .FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                    }
+                    if (natursystem == null)
+                    {
+                        natursystem = CreateNatursystem(record, ninVersion);
+                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        _context.Natursystem.Add(natursystem);
+                    }
+
+                    var hovedtypegruppe = _context.Hovedtypegruppe
+                        .Include(x => x.Natursystem)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Natursystem.Id == natursystem.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypegruppeKode));
+                    if (hovedtypegruppe == null)
+                    {
+                        hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
+                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        _context.Hovedtypegruppe.Add(hovedtypegruppe);
+                    }
+
+                    var hovedtype = _context.Hovedtype
+                        .Include(x => x.Hovedtypegruppe)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtypegruppe.Id == hovedtypegruppe.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypeKode));
+                    if (hovedtype == null)
+                    {
+                        hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
+                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        _context.Hovedtype.Add(hovedtype);
+                    }
+
+                    var kartleggingsenhet = _context.Kartleggingsenhet
+                        .Include(x => x.Hovedtype)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtype.Id == hovedtype.Id &&
+                            x.Kode.KodeName.Equals(record.KartleggingsenhetKode));
+                    if (kartleggingsenhet == null)
+                    {
+                        kartleggingsenhet = CreateKartleggingsenhet(record, ninVersion, hovedtype);
+                        Console.WriteLine($"{++i:0####} kartleggingsenhet\t{kartleggingsenhet.Malestokk} {kartleggingsenhet.Kode.KodeName} {kartleggingsenhet.Definisjon}");
+                        hovedtype.Kartleggingsenheter.Add(kartleggingsenhet);
+                    }
+
+                    if (HasUnsavedChanges()) _context.SaveChanges();
+                }
+            }
+
+            path = Path.Combine(basePath, $"import_miljovariabler_v{_version}.csv");
+            if (File.Exists(path))
+            {
+                using var reader = new StreamReader(path);
+                using var csv = new CsvReader(reader, _csvConfiguration);
+
+                var records = csv.GetRecords<MiljovariablerRecord>();
+                foreach (var record in records)
+                {
+                    if (natursystem == null)
+                    {
+                        natursystem = _context.Natursystem
+                            .Include(x => x.Kode)
+                            .FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                    }
+                    if (natursystem == null)
+                    {
+                        natursystem = CreateNatursystem(record, ninVersion);
+                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        _context.Natursystem.Add(natursystem);
+                    }
+
+                    var hovedtypegruppe = _context.Hovedtypegruppe
+                        .Include(x => x.Natursystem)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Natursystem.Id == natursystem.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypegruppeKode));
+                    if (hovedtypegruppe == null)
+                    {
+                        hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
+                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        _context.Hovedtypegruppe.Add(hovedtypegruppe);
+                    }
+
+                    var hovedtype = _context.Hovedtype
+                        .Include(x => x.Hovedtypegruppe)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtypegruppe.Id == hovedtypegruppe.Id &&
+                            x.Kode.KodeName.Equals(record.HovedtypeKode));
+                    if (hovedtype == null)
+                    {
+                        hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
+                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        _context.Hovedtype.Add(hovedtype);
+                    }
+
+                    var miljovariabel = _context.Miljovariabel
+                        .Include(x => x.Hovedtype)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtype.Id == hovedtype.Id &&
+                            x.Kode.Kode.Equals(record.MiljovariabelKode));
+                    if (miljovariabel == null)
+                    {
+                        miljovariabel = CreateMiljovariabel(record, ninVersion, hovedtype);
+                        Console.WriteLine($"{++i:0####} miljovariabel\t{miljovariabel.Kode.Kode} {miljovariabel.Navn}");
+                        hovedtype.Miljovariabler.Add(miljovariabel);
+                    }
+
+                    var trinn = _context.Trinn
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Kode.KodeName.Equals(record.TrinnKode));
+                    if (trinn == null)
+                    {
+                        trinn = CreateTrinn(record, ninVersion);
+                        Console.WriteLine($"{++i:0####} trinn\t{trinn.Kode.KodeName} {trinn.Navn}");
+                        miljovariabel.Trinn.Add(trinn);
+                    }
+
+                    var basistrinnNavn = record.BasistrinnNavn;
+                    if (!string.IsNullOrWhiteSpace(basistrinnNavn))
+                    {
+                        var basistrinnPrefix = basistrinnNavn.Substring(0, basistrinnNavn.IndexOf("-", StringComparison.Ordinal));
+                        var basistrinnListe = basistrinnNavn.Substring($"{basistrinnPrefix}-".Length).ToCharArray();
+                        foreach (var s in basistrinnListe)
+                        {
+                            var basistrinn = _context.Basistrinn
+                                .FirstOrDefault(x =>
+                                    x.Version.Id == ninVersion.Id &&
+                                    x.Navn.Equals($"{basistrinnPrefix}-{s}"));
+                            if (basistrinn == null)
+                            {
+                                basistrinn = CreateBasistrinn($"{basistrinnPrefix}-{s}", ninVersion);
+                            }
+                            basistrinn.Trinn.Add(trinn);
+                            Console.WriteLine($"{++i:0####} basistrinn\t{basistrinn.Navn}");
+                            trinn.Basistrinn.Add(basistrinn);
+                        }
+                    }
+
+                    if (HasUnsavedChanges()) _context.SaveChanges();
+                }
+            }
+        }
+
+        #region private methods
+
+        private bool HasUnsavedChanges()
+        {
+            return _context.ChangeTracker.Entries().Any(e =>
+                e.State is EntityState.Added or EntityState.Modified or EntityState.Deleted);
+        }
+
+        private Natursystem CreateNatursystem(GrunntyperRecord record, NinVersion ninVersion)
+        {
+            return CreateNatursystem(record.NatursystemNavn, record.NatursystemKode, ninVersion);
+        }
+
+        private Natursystem CreateNatursystem(KartleggingsenheterRecord record, NinVersion ninVersion)
+        {
+            return CreateNatursystem(record.NatursystemNavn, record.NatursystemKode, ninVersion);
+        }
+
+        private Natursystem CreateNatursystem(MiljovariablerRecord record, NinVersion ninVersion)
+        {
+            return CreateNatursystem(record.NatursystemNavn, record.NatursystemKode, ninVersion);
+        }
+
+        private Natursystem CreateNatursystem(string name, string code, NinVersion ninVersion)
+        {
+            return new Natursystem
+            {
+                Navn = name,
+                Version = ninVersion,
+                Kode = new NatursystemKode
+                {
+                    Version = ninVersion,
+                    KodeName = code,
+                    Definisjon = code
+                }
+            };
+        }
+
+        private Hovedtypegruppe CreateHovedtypegruppe(GrunntyperRecord record,
+                                                      NinVersion ninVersion,
+                                                      Natursystem natursystem)
+        {
+            return CreateHovedtypegruppe(record.HovedtypegruppeNavn, record.HovedtypegruppeKode, ninVersion, natursystem);
+        }
+
+        private Hovedtypegruppe CreateHovedtypegruppe(KartleggingsenheterRecord record,
+                                                      NinVersion ninVersion,
+                                                      Natursystem natursystem)
+        {
+            return CreateHovedtypegruppe(record.HovedtypegruppeNavn, record.HovedtypegruppeKode, ninVersion, natursystem);
+        }
+
+        private Hovedtypegruppe CreateHovedtypegruppe(MiljovariablerRecord record,
+                                                      NinVersion ninVersion,
+                                                      Natursystem natursystem)
+        {
+            return CreateHovedtypegruppe(record.HovedtypegruppeNavn, record.HovedtypegruppeKode, ninVersion, natursystem);
+        }
+
+        private Hovedtypegruppe CreateHovedtypegruppe(string name, string code,
+                                                      NinVersion ninVersion,
+                                                      Natursystem natursystem)
+        {
+            return new Hovedtypegruppe
+            {
+                Version = ninVersion,
+                Natursystem = natursystem,
+                Navn = name,
+                Kode = new HovedtypegruppeKode
+                {
+                    Version = ninVersion,
+                    KodeName = code,
+                    Definisjon = code.Replace(natursystem.Kode.KodeName, "").Trim()
+                }
+            };
+        }
+
+        private Hovedtype CreateHovedtype(GrunntyperRecord record,
+                                          NinVersion ninVersion,
+                                          Natursystem natursystem,
+                                          Hovedtypegruppe hovedtypegruppe)
+        {
+            return CreateHovedtype(record.HovedtypeNavn, record.HovedtypeKode, ninVersion, natursystem, hovedtypegruppe);
+        }
+
+        private Hovedtype CreateHovedtype(KartleggingsenheterRecord record,
+                                          NinVersion ninVersion,
+                                          Natursystem natursystem,
+                                          Hovedtypegruppe hovedtypegruppe)
+        {
+            return CreateHovedtype(record.HovedtypeNavn, record.HovedtypeKode, ninVersion, natursystem, hovedtypegruppe);
+        }
+
+        private Hovedtype CreateHovedtype(MiljovariablerRecord record,
+                                          NinVersion ninVersion,
+                                          Natursystem natursystem,
+                                          Hovedtypegruppe hovedtypegruppe)
+        {
+            return CreateHovedtype(record.HovedtypeNavn, record.HovedtypeKode, ninVersion, natursystem, hovedtypegruppe);
+        }
+
+        private Hovedtype CreateHovedtype(string name, string code,
+                                          NinVersion ninVersion,
+                                          Natursystem natursystem,
+                                          Hovedtypegruppe hovedtypegruppe)
+        {
+            return new Hovedtype
+            {
+                Version = ninVersion,
+                Hovedtypegruppe = hovedtypegruppe,
+                Navn = name,
+                Kode = new HovedtypeKode
+                {
+                    Version = ninVersion,
+                    KodeName = code,
+                    Definisjon = code.Replace(natursystem.Kode.KodeName, "").Trim()
+                }
+            };
+        }
+
+        private Grunntype CreateGrunntype(string name, string code,
+                                          NinVersion ninVersion,
+                                          Natursystem natursystem,
+                                          Hovedtype hovedtype)
+        {
+            return new Grunntype
+            {
+                Version = ninVersion,
+                Hovedtype = hovedtype,
+                Navn = name,
+                Kode = new GrunntypeKode
+                {
+                    Version = ninVersion,
+                    KodeName = code,
+                    Definisjon = code.Replace(natursystem.Kode.KodeName, "").Trim()
+                }
+            };
+        }
+
+        private Kartleggingsenhet CreateKartleggingsenhet(KartleggingsenheterRecord record,
+                                                          NinVersion ninVersion,
+                                                          Hovedtype hovedtype)
+        {
+            return new Kartleggingsenhet
+            {
+                Version = ninVersion,
+                Hovedtype = hovedtype,
+                Definisjon = record.KartleggingsenhetDef,
+                Kode = new KartleggingsenhetKode
+                {
+                    Version = ninVersion,
+                    KodeName = record.KartleggingsenhetKode,
+                    Definisjon = record.KartleggingsenhetDef
+                },
+                Malestokk = GetKartleggingsenhetmalestokk(record.KartleggingsenhetMalestokk)
+            };
+        }
+
+        private Miljovariabel CreateMiljovariabel(MiljovariablerRecord record, NinVersion ninVersion, Hovedtype hovedtype)
+        {
+            return new Miljovariabel
+            {
+                Version = ninVersion,
+                Hovedtype = hovedtype,
+                Kode = new LKMKode
+                {
+                    Version = ninVersion,
+                    Kode = record.MiljovariabelKode,
+                    LkmKategori = GetLkmKategori("") // ToDo: where is it?!
+                },
+                Navn = record.MiljovariabelNavn
+            };
+        }
+
+        private Trinn CreateTrinn(MiljovariablerRecord record, NinVersion ninVersion)
+        {
+            return new Trinn
+            {
+                Version = ninVersion,
+                Navn = record.TrinnNavn,
+                Kode = new TrinnKode
+                {
+                    Version = ninVersion,
+                    KodeName = record.TrinnKode.Replace(" ", ""),
+                    Kategori = KategoriEnum.Trinn
+                }
+            };
+        }
+
+        private Basistrinn CreateBasistrinn(string name, NinVersion ninVersion)
+        {
+            return new Basistrinn
+            {
+                Version = ninVersion,
+                Navn = name
+            };
+        }
+
+        private MalestokkEnum GetKartleggingsenhetmalestokk(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return MalestokkEnum.MalestokkInvalid;
+
+            return NinEnumConverter.Convert<MalestokkEnum>(value).Value;
+        }
+
+        private LkmKategoriEnum GetLkmKategori(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return LkmKategoriEnum.invalid;
+
+            return NinEnumConverter.Convert<LkmKategoriEnum>(value).Value;
+        }
+
+        #endregion
     }
 }

@@ -2,6 +2,7 @@
 {
     public enum LkmKategoriEnum
     {
+        invalid,
         dLKM,
         hLKM,
         tLKM,

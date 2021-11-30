@@ -31,7 +31,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="CsvFiles\20211129_basitrinn_grunntyper_KE_import_v2.2.csv">
+    <None Update="CsvFiles\import_grunntyper_kartleggingsenheter_v2.2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CsvFiles\import_grunntyper_v2.3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CsvFiles\import_kartleggingsenheter_v2.3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CsvFiles\import_miljovariabler_v2.3.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

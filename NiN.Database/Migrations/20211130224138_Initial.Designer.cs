@@ -10,7 +10,7 @@ using NiN.Database;
 namespace NiN.Database.Migrations
 {
     [DbContext(typeof(NiNDbContext))]
-    [Migration("20211126144505_Initial")]
+    [Migration("20211130224138_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,11 +23,11 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("BasistrinnGrunntype", b =>
                 {
-                    b.Property<int>("BasistrinnId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BasistrinnId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("GrunntypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GrunntypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BasistrinnId", "GrunntypeId");
 
@@ -38,11 +38,11 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("BasistrinnTrinn", b =>
                 {
-                    b.Property<int>("BasistrinnId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BasistrinnId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("TrinnId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("TrinnId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BasistrinnId", "TrinnId");
 
@@ -53,11 +53,11 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("GrunntypeKartleggingsenhet", b =>
                 {
-                    b.Property<int>("GrunntypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GrunntypeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("KartleggingsenhetId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("KartleggingsenhetId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("GrunntypeId", "KartleggingsenhetId");
 
@@ -68,11 +68,11 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("GrunntypeMiljovariabel", b =>
                 {
-                    b.Property<int>("GrunntypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GrunntypeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("MiljovariabelId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("MiljovariabelId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("GrunntypeId", "MiljovariabelId");
 
@@ -83,17 +83,16 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Basistrinn", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -104,10 +103,9 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Codes.LKMKode", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Kode")
                         .HasMaxLength(25)
@@ -116,8 +114,8 @@ namespace NiN.Database.Migrations
                     b.Property<int>("LkmKategori")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -128,10 +126,9 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Codes.NinKode", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Definisjon")
                         .HasMaxLength(1000)
@@ -148,8 +145,8 @@ namespace NiN.Database.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -162,20 +159,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Grunntype", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("HovedtypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("HovedtypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -188,20 +184,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Hovedtype", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("HovedtypegruppeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("HovedtypegruppeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -214,20 +209,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Hovedtypegruppe", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("NatursystemId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("NatursystemId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -240,23 +234,22 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Kartleggingsenhet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Definisjon")
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
-                    b.Property<int?>("HovedtypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("HovedtypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Malestokk")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -269,23 +262,22 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Miljovariabel", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("HovedtypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("HovedtypeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("KodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("KodeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -300,17 +292,16 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Natursystem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -321,20 +312,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Code.Trinn", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("MiljovariabelId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("MiljovariabelId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -347,10 +337,9 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Common.NinVersion", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
@@ -363,10 +352,9 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.Codes.VariasjonKode", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Definisjon")
                         .HasMaxLength(1000)
@@ -383,8 +371,8 @@ namespace NiN.Database.Migrations
                     b.Property<int>("VarietyCategory")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -397,17 +385,16 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel0", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -418,20 +405,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel1", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("OverordnetKodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("OverordnetKodeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -444,20 +430,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel2", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("OverordnetKodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("OverordnetKodeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -470,20 +455,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel3", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("OverordnetKodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("OverordnetKodeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -496,20 +480,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel4", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("OverordnetKodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("OverordnetKodeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -522,20 +505,19 @@ namespace NiN.Database.Migrations
 
             modelBuilder.Entity("NiN.Database.Models.Variety.VarietyLevel5", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Navn")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int?>("OverordnetKodeId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("OverordnetKodeId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int?>("VersionId")
-                        .HasColumnType("int");
+                    b.Property<Guid?>("VersionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -550,8 +532,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("GrunntypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("GrunntypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("GrunntypeId")
                         .IsUnique()
@@ -564,8 +546,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("HovedtypeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("HovedtypeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("HovedtypeId")
                         .IsUnique()
@@ -578,8 +560,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("HovedtypegruppeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("HovedtypegruppeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("HovedtypegruppeId")
                         .IsUnique()
@@ -592,8 +574,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("KartleggingsenhetId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("KartleggingsenhetId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("KartleggingsenhetId")
                         .IsUnique()
@@ -606,8 +588,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("NatursystemId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("NatursystemId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("NatursystemId")
                         .IsUnique()
@@ -620,8 +602,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Code.Codes.NinKode");
 
-                    b.Property<int>("TrinnId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("TrinnId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("TrinnId")
                         .IsUnique()
@@ -634,8 +616,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasIndex("VarietyLevelId")
                         .IsUnique()
@@ -648,8 +630,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int")
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("VarietyLevel1Code_VarietyLevelId");
 
                     b.HasIndex("VarietyLevelId")
@@ -663,8 +645,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int")
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("VarietyLevel2Code_VarietyLevelId");
 
                     b.HasIndex("VarietyLevelId")
@@ -678,8 +660,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int")
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("VarietyLevel3Code_VarietyLevelId");
 
                     b.HasIndex("VarietyLevelId")
@@ -693,8 +675,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int")
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("VarietyLevel4Code_VarietyLevelId");
 
                     b.HasIndex("VarietyLevelId")
@@ -708,8 +690,8 @@ namespace NiN.Database.Migrations
                 {
                     b.HasBaseType("NiN.Database.Models.Variety.Codes.VariasjonKode");
 
-                    b.Property<int>("VarietyLevelId")
-                        .HasColumnType("int")
+                    b.Property<Guid>("VarietyLevelId")
+                        .HasColumnType("uniqueidentifier")
                         .HasColumnName("VarietyLevel5Code_VarietyLevelId");
 
                     b.HasIndex("VarietyLevelId")

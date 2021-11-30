@@ -1,5 +1,6 @@
 ﻿namespace NiN.Database.Models.Code.Codes
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using NiN.Database.Models.Code.Enums;
@@ -18,7 +19,7 @@
 
     public class NatursystemKode : NinKode
     {
-        public int NatursystemId { get; set; }
+        public Guid NatursystemId { get; set; }
 
         [ForeignKey(nameof(NatursystemId))]
         public virtual Natursystem Natursystem { get; set; }
@@ -31,7 +32,7 @@
 
     public class HovedtypegruppeKode : NinKode
     {
-        public int HovedtypegruppeId { get; set; }
+        public Guid HovedtypegruppeId { get; set; }
 
         [ForeignKey(nameof(HovedtypegruppeId))]
         public virtual Hovedtypegruppe Hovedtypegruppe { get; set; }
@@ -44,7 +45,7 @@
 
     public class HovedtypeKode : NinKode
     {
-        public int HovedtypeId { get; set; }
+        public Guid HovedtypeId { get; set; }
 
         [ForeignKey(nameof(HovedtypeId))]
         public virtual Hovedtype Hovedtype { get; set; }
@@ -57,7 +58,7 @@
 
     public class GrunntypeKode : NinKode
     {
-        public int GrunntypeId { get; set; }
+        public Guid GrunntypeId { get; set; }
 
         [ForeignKey(nameof(GrunntypeId))]
         public virtual Grunntype Grunntype { get; set; }
@@ -70,7 +71,7 @@
 
     public class KartleggingsenhetKode : NinKode
     {
-        public int KartleggingsenhetId { get; set; }
+        public Guid KartleggingsenhetId { get; set; }
 
         [ForeignKey(nameof(KartleggingsenhetId))]
         public virtual Kartleggingsenhet Kartleggingsenhet { get; set; }
@@ -83,7 +84,7 @@
 
     public class TrinnKode : NinKode
     {
-        public int TrinnId { get; set; }
+        public Guid TrinnId { get; set; }
 
         [ForeignKey(nameof(TrinnId))]
         public virtual Trinn Trinn { get; set; }

@@ -20,7 +20,6 @@
 
         public virtual Hovedtype Hovedtype { get; set; }
 
-        // ToDo: Miljovariabel has 0-many Grunntyper
         public virtual ICollection<Grunntype> Grunntype { get; set; } = new List<Grunntype>();
     }
 }

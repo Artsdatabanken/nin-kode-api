@@ -1,5 +1,6 @@
 ﻿namespace NiN.Database.Models.Variety.Codes
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using NiN.Database.Models.Common;
@@ -18,7 +19,7 @@
 
     public class VarietyLevel0Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel0 VarietyLevel { get; set; }
@@ -31,7 +32,7 @@
 
     public class VarietyLevel1Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel1 VarietyLevel { get; set; }
@@ -44,7 +45,7 @@
 
     public class VarietyLevel2Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel2 VarietyLevel { get; set; }
@@ -57,7 +58,7 @@
 
     public class VarietyLevel3Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel3 VarietyLevel { get; set; }
@@ -70,7 +71,7 @@
 
     public class VarietyLevel4Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel4 VarietyLevel { get; set; }
@@ -83,7 +84,7 @@
 
     public class VarietyLevel5Code : VariasjonKode
     {
-        public int VarietyLevelId { get; set; }
+        public Guid VarietyLevelId { get; set; }
 
         [ForeignKey(nameof(VarietyLevelId))]
         public virtual VarietyLevel5 VarietyLevel { get; set; }
