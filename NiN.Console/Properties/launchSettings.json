@@ -2,7 +2,7 @@
   "profiles": {
     "NiN.Console": {
       "commandName": "Project",
-      "commandLineArgs": "test 1 2 2.1 2.1b 2.2"
+      "commandLineArgs": "importnin 2.3"
     }
   }
 }
