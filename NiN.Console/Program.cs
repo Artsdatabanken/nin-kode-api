@@ -115,6 +115,26 @@
                 throw new Exception("Could not find DbContext");
             }
 
+            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+            if (ninVersion == null) return;
+
+            // reset database if connections exist
+            var grunntypes = dbContext.Grunntype
+                .Include(x => x.Kode)
+                .Include(x => x.Basistrinn)
+                .Where(x =>
+                    x.Version.Id == ninVersion.Id &&
+                    x.Basistrinn.Count > 0);
+            if (grunntypes.Any())
+            {
+                if (!dbContext.Database.ProviderName.Equals("Microsoft.EntityFrameworkCore.SqlServer")) return;
+
+                foreach (var grunntype in grunntypes)
+                {
+                    dbContext.Database.ExecuteSqlRaw($"DELETE FROM BasistrinnGrunntype WHERE GrunntypeId = '{grunntype.Id}'");
+                }
+            }
+
             var i = 0;
             foreach (var @record in records)
             {
