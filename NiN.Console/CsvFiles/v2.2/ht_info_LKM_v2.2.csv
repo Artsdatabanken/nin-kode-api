@@ -1,10 +1,10 @@
 ﻿HTK;Navn;PrK;PrK-tekst;GrL;Definisjonsgrunnlag-tekst;dLKM;hLKM;tLKM;uLKM;Kunnskapsgrunnlag - Hovedtypen generelt;Kunnskapsgrunnlag - Grunntypeinndelingen
 M1;Eufotisk fast saltvannsbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;VF,DL,SA;HF,S1,IF;VR,RU ;3;2
-M2;Afotisk fast saltvannsbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;DM,VF;HF,BK;SA,S1,RU;1;2
+M2;Afotisk fast saltvannsbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;DM,VF;HF,BK;SA,S1,RU, DD;1;2
 M3;Fast fjærebeltebunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;VF,TV,SA ;HF,IF ;S1,VR,RU;3;3
-M4;Eufotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;S3 ;DL,SA,IO,KA,SE ;;2;2
-M5;Afotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;S3,DM ;IO ;VF;2;2
-M6;Korallrev-bunn;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;;;DM ;LK;4;3
+M4;Eufotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;S3 ;DL,SA,IO,KA,SE , TV;;2;2
+M5;Afotisk marin sedimentbunn;1;Uten variasjon i artssammensetning betinget av strukturerende artsgruppe;0;normal hovedtype;;S3,DM ;IO ;VF, DD;2;2
+M6;Korallrev-bunn;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;;;KY ;LK, DM;4;3
 M7;Marin undervannseng;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A;normal, strukturerende artsgruppe;;;SA,TV ;S3;4;3
 M8;Helofytt-saltvannsump;2;Med variasjon i artssammensetning betinget av strukturerende artsgruppe;A ;normal, strukturerende artsgruppe;;;;SA,IO,TV ;2;2
 M9;Littoralbasseng-bunn;3;Preget av miljøstress;S;miljøstressbetinget;SM ;SM,TV ;SE;;2;2
@@ -39,8 +39,8 @@ T14;Rabbe;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende 
 T15;Fosse-eng;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende forstyrrelse;VS;;KA ;VS,HI,KI;2;2
 T16;Rasmarkhei og -eng;4;Preget av aktiv regulerende forstyrrelse ;R;betinget av regulerende forstyrrelse;RU;KA ;RU,KI ;UF,HI,BK,VI,VM;3;3
 T17;Aktiv skredmark;5;Preget av aktiv destabiliserende forstyrrelse;DL;betinget av destabiliserende forstyrrelse, ikke jorddekt;SU;S1 ;;SU,KA,KI;2;3
-T18;Åpen flomfastmark;5;Preget av aktiv destabiliserende forstyrrelse;DL;betinget av destabiliserende forstyrrelse, ikke jorddekt;VF;S1 ;VF,KA,ER ;IF,KI,HI;2;2
-T19;Oppfrysingsmark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;PF,OF;;KA;;2;2
+T18;Åpen flomfastmark;5;Preget av aktiv destabiliserende forstyrrelse;DL;betinget av destabiliserende forstyrrelse, ikke jorddekt;VF;S1 ;VF,KA,FR ;IF,KI,HI;2;2
+T19;Oppfrysingsmark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;PF,OF;S1 ;KA;;2;2
 T20;Isinnfrysingsmark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;IF;;KA;;3;3
 T21;Sanddynemark;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;SS;SS ;VI,VM ;HI;4;3
 T22;Fjellgrashei og grastundra;5;Preget av aktiv destabiliserende forstyrrelse;D;betinget av destabiliserende forstyrrelse;JF;;KA,SV ;VM;3;3

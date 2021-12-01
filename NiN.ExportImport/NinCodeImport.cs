@@ -43,6 +43,130 @@
             }
         }
 
+        public IEnumerable<GrunntypeBasistrinnRecord> GetGrunntypeBasistrinnRecords(string path)
+        {
+            if (!File.Exists(path)) yield break;
+
+            using var reader = new StreamReader(path);
+            using var csv = new CsvReader(reader, _csvConfiguration);
+
+            var records = csv.GetRecords<GrunntypeBasistrinnRecord>();
+            foreach (var record in records)
+            {
+                yield return record;
+            }
+        }
+
+        public void FixLkm(string basePath)
+        {
+            var path = Path.Combine(basePath, $"ht_info_LKM_v{_version}.csv");
+            if (!File.Exists(path)) return;
+
+            var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(_version));
+            if (ninVersion == null)
+            {
+                Console.WriteLine($"NiN-code version {ninVersion.Navn} doesn't exist. Skipping...");
+                return;
+            }
+
+            using var reader = new StreamReader(path);
+            using var csv = new CsvReader(reader, _csvConfiguration);
+
+            var records = csv.GetRecords<HtLkmRecords>();
+            var i = 0;
+            foreach (var record in records)
+            {
+                i++;
+                var dLkm = CreateStringArray(record.dLKM);
+                var hLkm = CreateStringArray(record.hLKM);
+                var tLkm = CreateStringArray(record.tLKM);
+                var uLkm = CreateStringArray(record.uLKM);
+
+                var hovedtype = _context.Hovedtype
+                    .Include(x => x.Kode)
+                    .Include(x => x.Miljovariabler)
+                    .FirstOrDefault(x =>
+                        x.Version.Id == ninVersion.Id &&
+                        x.Kode.KodeName.Equals($"NA {record.HovedtypeKode}"));
+
+                if (hovedtype == null) throw new Exception($"Could not find NA {record.HovedtypeKode}");
+
+                if (!hovedtype.Miljovariabler.Any()) continue;
+
+                foreach (var m in hovedtype.Miljovariabler)
+                {
+                    var multiple = false;
+                    var miljovariabel = _context.Miljovariabel
+                        .Include(x => x.Kode)
+                        .FirstOrDefault(x => x.Id == m.Id);
+
+                    if (miljovariabel == null) throw new Exception("error");
+                    miljovariabel.Kode.LkmKategori = LkmKategoriEnum._null;
+
+                    if (uLkm != null && uLkm.Contains(miljovariabel.Kode.Kode.Substring(0, 2)))
+                    {
+                        if (miljovariabel.Kode.LkmKategori != LkmKategoriEnum._null) multiple = true;
+                        miljovariabel.Kode.LkmKategori = LkmKategoriEnum.uLKM;
+                    }
+                    if (tLkm != null && tLkm.Contains(miljovariabel.Kode.Kode.Substring(0, 2)))
+                    {
+                        if (miljovariabel.Kode.LkmKategori != LkmKategoriEnum._null) multiple = true;
+                        miljovariabel.Kode.LkmKategori = LkmKategoriEnum.tLKM;
+                    }
+                    if (hLkm != null && hLkm.Contains(miljovariabel.Kode.Kode.Substring(0, 2)))
+                    {
+                        if (miljovariabel.Kode.LkmKategori != LkmKategoriEnum._null) multiple = true;
+                        miljovariabel.Kode.LkmKategori = LkmKategoriEnum.hLKM;
+                    }
+                    if (dLkm != null && dLkm.Contains(miljovariabel.Kode.Kode.Substring(0, 2)))
+                    {
+                        if (miljovariabel.Kode.LkmKategori != LkmKategoriEnum._null) multiple = true;
+                        miljovariabel.Kode.LkmKategori = LkmKategoriEnum.dLKM;
+                    }
+
+                    if (multiple)
+                    {
+                        //Console.WriteLine($"dLKM: {JoinStrings(dLkm)}\thLKM: {JoinStrings(hLkm)}\ttLKM: {JoinStrings(tLkm)}\tuLKM: {JoinStrings(uLkm)}");
+                        //Console.WriteLine($"{hovedtype.Kode.KodeName}:\t{miljovariabel.Kode.Kode}\t{miljovariabel.LkmKategori}");
+                    }
+
+                    if (miljovariabel.Kode.LkmKategori == LkmKategoriEnum._null)
+                    {
+                        Console.WriteLine($"{hovedtype.Kode.KodeName}:\t{miljovariabel.Kode.Kode}");
+                        //continue;
+                    }
+
+                    //Console.WriteLine($"{i:#000} dLKM: {JoinStrings(dLkm)}\thLKM: {JoinStrings(hLkm)}\ttLKM: {JoinStrings(tLkm)}\tuLKM: {JoinStrings(uLkm)}");
+                    //Console.WriteLine($"{i:#000} {hovedtype.Kode.KodeName}\t{miljovariabel.Kode.Kode}\t{miljovariabel.LkmKategori}");
+                    
+                    //Console.WriteLine($"{hovedtype.Kode.KodeName}:\t{miljovariabel.Kode.Kode}");
+
+                    if (HasUnsavedChanges()) _context.SaveChanges();
+                }
+            }
+        }
+
+        private List<string> CreateStringArray(string value)
+        {
+            value = value.Trim();
+            var stringArray = string.IsNullOrWhiteSpace(value)
+                ? null
+                : value.Split(new[] { ",", "." }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            if (stringArray == null) return null;
+
+            for (var index = 0; index < stringArray.Count; index++)
+            {
+                stringArray[index] = stringArray[index].Trim();
+            }
+
+            return stringArray;
+        }
+
+        private string JoinStrings(List<string> strings)
+        {
+            return strings == null ? "" : string.Join(",", strings);
+        }
+
         public void ImportCompleteNin(string basePath, bool allowUpdate = false)
         {
             var i = 0;

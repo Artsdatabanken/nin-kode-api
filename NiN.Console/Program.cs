@@ -47,6 +47,10 @@
 
             switch (arguments[0])
             {
+                case "test":
+                    CreateLkmConnection("2.2");
+                    CreateLkmConnection("2.3");
+                    break;
                 case "importnin":
                     Migrate();
                     Import(arguments.Skip(1));
@@ -55,7 +59,9 @@
                     Migrate();
                     Import();
                     CreateKartleggingConnection("2.2");
-                    Import(new[] { "2.3" }, true);
+                    CreateKartleggingConnection("2.3");
+                    Import(new[] { "2.3" });
+                    FixLkm(new[] { "2.2", "2.3" });
                     break;
                 case "import":
                     Import();
@@ -66,14 +72,14 @@
                 case "migrate":
                     Migrate();
                     break;
-                case "grunntype":
-                    CreateKartleggingConnection("NA T4", "E-1", new[] { 1, 5 }, "2.2");
-                    CreateKartleggingConnection("NA T4", "E-2", new[] { 2, 6, 17 }, "2.2");
-                    CreateKartleggingConnection("NA T4", "E-3", new[] { 3, 4, 7, 8, 18, 19 }, "2.2");
-                    CreateKartleggingConnection("NA T4", "E-4", new[] { 9, 13 }, "2.2");
-                    CreateKartleggingConnection("NA T4", "E-5", new[] { 10, 14 }, "2.2");
-                    CreateKartleggingConnection("NA T4", "E-6", new[] { 11, 12, 15, 16, 20 }, "2.2");
-                    break;
+                //case "grunntype":
+                //    CreateKartleggingConnection("NA T4", "E-1", new[] { 1, 5 }, "2.2");
+                //    CreateKartleggingConnection("NA T4", "E-2", new[] { 2, 6, 17 }, "2.2");
+                //    CreateKartleggingConnection("NA T4", "E-3", new[] { 3, 4, 7, 8, 18, 19 }, "2.2");
+                //    CreateKartleggingConnection("NA T4", "E-4", new[] { 9, 13 }, "2.2");
+                //    CreateKartleggingConnection("NA T4", "E-5", new[] { 10, 14 }, "2.2");
+                //    CreateKartleggingConnection("NA T4", "E-6", new[] { 11, 12, 15, 16, 20 }, "2.2");
+                //    break;
                 case "basistrinn":
                     CreateLkmConnection("NA T4", "1", "KA", new[] { "a", "b", "c" }, "2.2");
                     CreateLkmConnection("NA T4", "1", "UF", new[] { "a", "b" }, "2.2");
@@ -92,6 +98,67 @@
                     CreateKartleggingConnection("2.2");
                     break;
             }
+        }
+
+        private static void CreateLkmConnection(string version)
+        {
+            Stopwatch.Reset();
+            Stopwatch.Start();
+            var importer = new NinCodeImport(_serviceProvider.GetService<NiNDbContext>(), version);
+            var records = importer.GetGrunntypeBasistrinnRecords($"CsvFiles\\v{version}\\import_grunntyper_basistrinn_v{version}.csv");
+
+            if (records == null) return;
+
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            var i = 0;
+            foreach (var @record in records)
+            {
+                i++;
+                var ninkodeprefix = record.GrunntypeKode;
+                if (ninkodeprefix.StartsWith("NA-", StringComparison.OrdinalIgnoreCase))
+                    ninkodeprefix = ninkodeprefix.Replace("NA-", "NA ");
+
+                var iPos = ninkodeprefix.IndexOf("-", StringComparison.Ordinal);
+                if (iPos < 0)
+                {
+                    Console.WriteLine($"Illegal values in line {i}: {record.GrunntypeKode};{record.Basistrinn}");
+                    continue;
+                }
+                var grunntypekode = ninkodeprefix.Substring(iPos + 1);
+                ninkodeprefix = ninkodeprefix.Substring(0, iPos);
+
+                var basistrinns = record.Basistrinn.Replace(" ", "").Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var b in basistrinns)
+                {
+                    if (string.IsNullOrWhiteSpace(b)) continue;
+
+                    iPos = b.IndexOf("-", StringComparison.Ordinal);
+                    if (iPos < 0)
+                    {
+                        Console.WriteLine($"Illegal values in line {i}: {record.GrunntypeKode};{record.Basistrinn}");
+                        continue;
+                    }
+                    var basistrinnprefix = b.Substring(0, iPos);
+
+                    var basistrinn = b.Substring(iPos + 1);
+
+                    CreateLkmConnection(ninkodeprefix, grunntypekode, basistrinnprefix, basistrinn.ToCharArray(), version);
+                }
+            }
+
+            Stopwatch.Stop();
+            Console.WriteLine($"\nProcessed {i} records in {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
+        private static void CreateLkmConnection(string ninkodeprefix, string grunntypekode, string basistrinnprefix, char[] basistrinn, string version)
+        {
+            CreateLkmConnection($"{ninkodeprefix}-{grunntypekode}", basistrinn.Select(i => $"{basistrinnprefix}-{i}").ToArray(), version);
         }
 
         private static void CreateLkmConnection(string ninkodeprefix, string grunntypekode, string basistrinnprefix, string[] basistrinn, string version)
@@ -132,7 +199,7 @@
                     if (basistrinn.Grunntype.Contains(grunntype)) continue;
 
                     grunntype.Basistrinn.Add(basistrinn);
-                    Console.WriteLine($"Added {grunntype.Kode.KodeName} to {basistrinn.Navn}");
+                    //Console.WriteLine($"Added {grunntype.Kode.KodeName} to {basistrinn.Navn}");
                     storeChanges = true;
                 }
 
@@ -161,7 +228,23 @@
             foreach (var @record in records)
             {
                 i++;
-                var grunntyper = record.Grunntypenummer.Split(",");
+                string[] grunntyper = null;
+                if (!string.IsNullOrWhiteSpace(record.Grunntypenummer))
+                {
+                    grunntyper = record.Grunntypenummer.Split(",");
+                }
+                else
+                {
+                    var gtlist = record.Grunntypekoder.Split(",", StringSplitOptions.RemoveEmptyEntries).ToList();
+                    for (var index = 0; index < gtlist.Count; index++)
+                    {
+                        var iPos = gtlist[index].IndexOf("-", StringComparison.Ordinal);
+                        if (iPos < 0) continue;
+                        gtlist[index] = gtlist[index].Substring(iPos + 1);
+                    }
+
+                    grunntyper = gtlist.ToArray();
+                }
                 var ninkodeprefix = record.SammensattKode.Substring(0, record.SammensattKode.IndexOf("-", StringComparison.Ordinal));
                 CreateKartleggingConnection(record.SammensattKode, grunntyper.Select(x => $"{ninkodeprefix}-{x}").ToArray(), version);
             }
@@ -323,6 +406,28 @@
 
                 var ninCodeImport = new NinCodeImport(dbContext, argument);
                 ninCodeImport.ImportCompleteNin($"CsvFiles\\v{argument}", allowUpdate);
+
+                Stopwatch.Stop();
+                Console.WriteLine($"v{argument}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+            }
+        }
+
+        private static void FixLkm(IEnumerable<string> arguments, bool allowUpdate = false)
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            foreach (var argument in arguments)
+            {
+                Stopwatch.Reset();
+                Stopwatch.Start();
+
+                var ninCodeImport = new NinCodeImport(dbContext, argument);
+
+                ninCodeImport.FixLkm($"CsvFiles\\v{argument}");
 
                 Stopwatch.Stop();
                 Console.WriteLine($"v{argument}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");

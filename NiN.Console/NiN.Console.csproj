@@ -34,6 +34,9 @@
     <None Update="CsvFiles\v2.2\ht_info_LKM_v2.2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="CsvFiles\v2.2\import_grunntyper_basistrinn_v2.2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="CsvFiles\v2.2\import_grunntyper_kartleggingsenheter_v2.2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
