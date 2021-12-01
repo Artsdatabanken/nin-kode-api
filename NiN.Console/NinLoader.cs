@@ -25,10 +25,13 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateCodeDatabase(ServiceProvider serviceProvider, string version)
+        public static void CreateCodeDatabase(ServiceProvider serviceProvider, string version, bool allowUpdate = false)
         {
             _stopwatch.Reset();
             _stopwatch.Start();
+
+            var dbContext = serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null) throw new Exception("Could not get DbContext");
 
             ICodeService codeService = null;
 
@@ -60,13 +63,11 @@
 
             var na = codeService.GetCode("NA");
 
-            var dbContext = serviceProvider.GetService<NiNDbContext>();
             var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
-
             if (ninVersion != null)
             {
                 var natursystem = dbContext.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
-                if (natursystem != null)
+                if (!allowUpdate && natursystem != null)
                 {
                     Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
                     return;
@@ -76,9 +77,12 @@
             {
                 ninVersion = new NinVersion { Navn = version };
                 dbContext.NinVersion.Add(ninVersion);
+                dbContext.SaveChanges();
+
+                ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
             }
 
-            AddNatursystem(codeService, dbContext, ninVersion, na);
+            AddOrUpdateNatursystem(codeService, dbContext, ninVersion, na);
 
             dbContext.SaveChanges();
 
@@ -88,32 +92,49 @@
 
         #region private methods
 
-        private static void AddNatursystem(ICodeService codeService,
-                                           NiNDbContext dbContext,
-                                           NinVersion ninVersion,
-                                           Codes na)
+        private static void AddOrUpdateNatursystem(ICodeService codeService,
+                                                   NiNDbContext dbContext,
+                                                   NinVersion ninVersion,
+                                                   Codes na)
         {
-            var natursystem = new Natursystem
+            Natursystem natursystem = null;
+            natursystem = dbContext.Natursystem
+                .Include(x => x.Kode)
+                .FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+            if (natursystem == null)
             {
-                Navn = na.Navn,
-                Version = ninVersion,
-                Kode = new NatursystemKode
+                natursystem = new Natursystem
                 {
+                    Navn = na.Navn,
                     Version = ninVersion,
-                    KodeName = na.Kode.Id,
-                    Definisjon = na.Kode.Definition
-                }
-            };
-            dbContext.Natursystem.Add(natursystem);
+                    Kode = new NatursystemKode
+                    {
+                        Version = ninVersion,
+                        KodeName = na.Kode.Id,
+                        Definisjon = na.Kode.Definition
+                    }
+                };
+                dbContext.Natursystem.Add(natursystem);
+            }
+            else
+            {
+                natursystem.Navn = na.Navn;
+                natursystem.Kode.KodeName = na.Kode.Id;
+                natursystem.Kode.Definisjon = na.Kode.Definition;
 
-            AddHovedtypegrupper(codeService, dbContext, ninVersion, na, natursystem);
+                dbContext.Natursystem.Update(natursystem);
+            }
+
+            dbContext.SaveChanges();
+
+            AddOrUpdateHovedtypegrupper(codeService, dbContext, ninVersion, na, natursystem);
         }
 
-        private static void AddHovedtypegrupper(ICodeService codeService,
-                                                NiNDbContext dbContext,
-                                                NinVersion ninVersion,
-                                                Codes na,
-                                                Natursystem natursystem)
+        private static void AddOrUpdateHovedtypegrupper(ICodeService codeService,
+                                                        NiNDbContext dbContext,
+                                                        NinVersion ninVersion,
+                                                        Codes na,
+                                                        Natursystem natursystem)
         {
             if (na.UnderordnetKoder == null) return;
 
@@ -128,8 +149,8 @@
                     hovedtypegruppe = dbContext.Hovedtypegruppe
                         .Include(x => x.Kode)
                         .FirstOrDefault(x =>
-                            x.Version.Navn.Equals(ninVersion.Navn) &&
-                            x.Kode.KodeName.Equals(gruppe.Navn.Trim()));
+                            x.Version.Id == ninVersion.Id &&
+                            x.Kode.KodeName.Equals(gruppe.Kode.Id));
                 }
 
                 if (hovedtypegruppe == null)
@@ -149,16 +170,24 @@
 
                     dbContext.Hovedtypegruppe.Add(hovedtypegruppe);
                 }
+                else
+                {
+                    hovedtypegruppe.Navn = gruppe.Navn.Trim();
+                    hovedtypegruppe.Kode.KodeName = gruppe.Kode.Id;
+                    hovedtypegruppe.Kode.Definisjon = gruppe.Kode.Definition.Trim();
 
-                AddHovedtyper(codeService, dbContext, ninVersion, gruppe, hovedtypegruppe);
+                    dbContext.Hovedtypegruppe.Update(hovedtypegruppe);
+                }
+
+                AddOrUpdateHovedtyper(codeService, dbContext, ninVersion, gruppe, hovedtypegruppe);
             }
         }
 
-        private static void AddHovedtyper(ICodeService codeService,
-                                          NiNDbContext dbContext,
-                                          NinVersion ninVersion,
-                                          Codes gruppe,
-                                          Hovedtypegruppe hovedtypegruppe)
+        private static void AddOrUpdateHovedtyper(ICodeService codeService,
+                                                  NiNDbContext dbContext,
+                                                  NinVersion ninVersion,
+                                                  Codes gruppe,
+                                                  Hovedtypegruppe hovedtypegruppe)
         {
             if (gruppe.UnderordnetKoder == null) return;
 
@@ -173,7 +202,7 @@
                     hovedtype = dbContext.Hovedtype
                         .Include(x => x.Kode)
                         .FirstOrDefault(x =>
-                            x.Version.Navn.Equals(ninVersion.Navn) &&
+                            x.Version.Id == ninVersion.Id &&
                             x.Kode.KodeName.Equals(hvdtype.Kode.Id.Trim()));
                 }
 
@@ -194,20 +223,28 @@
 
                     dbContext.Hovedtype.Add(hovedtype);
                 }
+                else
+                {
+                    hovedtype.Navn = hvdtype.Navn.Trim();
+                    hovedtype.Kode.KodeName = hvdtype.Kode.Id;
+                    hovedtype.Kode.Definisjon = hvdtype.Kode.Definition.Trim();
 
-                AddGrunntyper(codeService, dbContext, ninVersion, hvdtype, hovedtype);
-                AddKartleggingsenheter(codeService, dbContext, ninVersion, hvdtype, hovedtype);
-                AddMiljovariabler(dbContext, ninVersion, hvdtype, hovedtype);
+                    dbContext.Hovedtype.Update(hovedtype);
+                }
+
+                AddOrUpdateGrunntyper(codeService, dbContext, ninVersion, hvdtype, hovedtype);
+                AddOrUpdateKartleggingsenheter(codeService, dbContext, ninVersion, hvdtype, hovedtype);
+                AddOrUpdateMiljovariabler(dbContext, ninVersion, hvdtype, hovedtype);
 
                 // Make basistrinn available and save changes
                 dbContext.SaveChanges();
             }
         }
 
-        private static void AddGrunntyper(ICodeService codeService,
-            NiNDbContext dbContext,
-            NinVersion ninVersion,
-            Codes hvdtype,
+        private static void AddOrUpdateGrunntyper(ICodeService codeService,
+                                                  NiNDbContext dbContext,
+                                                  NinVersion ninVersion,
+                                                  Codes hvdtype,
             Hovedtype hovedtype)
         {
             if (hvdtype.UnderordnetKoder == null) return;
@@ -223,34 +260,44 @@
                     grunntype = dbContext.Grunntype
                         .Include(x => x.Kode)
                         .FirstOrDefault(x =>
-                            x.Version.Navn.Equals(ninVersion.Navn) &&
+                            x.Version.Id == ninVersion.Id &&
                             x.Kode.KodeName.Equals(grtype.Kode.Id.Trim()));
 
-                    if (grunntype != null) continue;
                 }
 
-                grunntype = new Grunntype
+                if (grunntype == null)
                 {
-                    Version = ninVersion,
-                    Hovedtype = hovedtype,
-                    Navn = grtype.Navn.Trim(),
-                    Kode = new GrunntypeKode
+                    grunntype = new Grunntype
                     {
                         Version = ninVersion,
-                        KodeName = grtype.Kode.Id,
-                        Definisjon = grtype.Kode.Definition.Trim()
-                    }
-                };
+                        Hovedtype = hovedtype,
+                        Navn = grtype.Navn.Trim(),
+                        Kode = new GrunntypeKode
+                        {
+                            Version = ninVersion,
+                            KodeName = grtype.Kode.Id,
+                            Definisjon = grtype.Kode.Definition.Trim()
+                        }
+                    };
 
-                dbContext.Grunntype.Add(grunntype);
+                    dbContext.Grunntype.Add(grunntype);
+                }
+                else
+                {
+                    grunntype.Navn = grtype.Navn.Trim();
+                    grunntype.Kode.KodeName = grtype.Kode.Id;
+                    grunntype.Kode.Definisjon = grtype.Kode.Definition.Trim();
+
+                    dbContext.Grunntype.Update(grunntype);
+                }
             }
         }
 
-        private static void AddKartleggingsenheter(ICodeService codeService,
-                                                   NiNDbContext dbContext,
-                                                   NinVersion ninVersion,
-                                                   Codes hvdtype,
-                                                   Hovedtype hovedtype)
+        private static void AddOrUpdateKartleggingsenheter(ICodeService codeService,
+                                                           NiNDbContext dbContext,
+                                                           NinVersion ninVersion,
+                                                           Codes hvdtype,
+                                                           Hovedtype hovedtype)
         {
             if (hvdtype.Kartleggingsenheter == null) return;
 
@@ -267,7 +314,7 @@
                         kartleggingsenhet = dbContext.Kartleggingsenhet
                             .Include(x => x.Kode)
                             .FirstOrDefault(x =>
-                                x.Version.Navn.Equals(ninVersion.Navn) &&
+                                x.Version.Id == ninVersion.Id &&
                                 x.Kode.KodeName.Equals(krt.Kode.Id.Trim()));
                     }
 
@@ -305,31 +352,39 @@
                     else
                     {
                         kartleggingsenhet.Definisjon = krt.Navn.Trim();
+                        kartleggingsenhet.Kode.KodeName = $"{krt.Kode.Id}";
+                        kartleggingsenhet.Kode.Definisjon = krt.Kode.Definition.Trim();
+
                         dbContext.Kartleggingsenhet.Update(kartleggingsenhet);
                     }
                 }
             }
         }
 
-        private static void AddMiljovariabler(NiNDbContext dbContext,
+        private static void AddOrUpdateMiljovariabler(NiNDbContext dbContext,
                                               NinVersion ninVersion,
                                               Codes hvdtype,
                                               Hovedtype hovedtype)
         {
             if (hvdtype.Miljovariabler == null) return;
 
+            dbContext.SaveChanges();
+
             foreach (var child in hvdtype.Miljovariabler)
             {
                 Miljovariabel miljovariabel = null;
 
                 // Each miljøvariabel has to be unique because of different trinn/basistrinn
-                //if (dbContext.Miljovariabel.Any())
-                //{
-                //    miljovariabel = dbContext.Miljovariabel
-                //        .FirstOrDefault(x =>
-                //            x.Version.Navn.Equals(ninVersion.Navn) &&
-                //            x.Kode.Kode.Equals(child.Kode));
-                //}
+                if (dbContext.Miljovariabel.Any())
+                {
+                    miljovariabel = dbContext.Miljovariabel
+                        .Include(x => x.Kode)
+                        .Include(x => x.Hovedtype)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Hovedtype.Id == hovedtype.Id &&
+                            x.Kode.Kode.Equals($"{child.Kode}"));
+                }
 
                 if (miljovariabel == null)
                 {
@@ -349,49 +404,76 @@
                     {
                         miljovariabel.Kode.LkmKategori =
                             NinEnumConverter.Convert<LkmKategoriEnum>(child.LKMKategori).Value;
-
-                        AddTrinn(dbContext, ninVersion, child, miljovariabel);
                     }
+
+                    AddOrUpdateTrinn(dbContext, ninVersion, child, miljovariabel);
 
                     dbContext.Miljovariabel.Add(miljovariabel);
                 }
                 else
                 {
                     miljovariabel.Navn = child.Navn.Trim();
+                    miljovariabel.Kode.Kode = $"{child.Kode}";
+                    if (child.LKMKategori != null) miljovariabel.Kode.LkmKategori =
+                            NinEnumConverter.Convert<LkmKategoriEnum>(child.LKMKategori).Value;
+
+                    AddOrUpdateTrinn(dbContext, ninVersion, child, miljovariabel);
+
                     dbContext.Miljovariabel.Update(miljovariabel);
                 }
             }
         }
 
-        private static void AddTrinn(NiNDbContext dbContext,
-                                     NinVersion ninVersion,
-                                     EnvironmentVariable env,
-                                     Miljovariabel miljovariabel)
+        private static void AddOrUpdateTrinn(NiNDbContext dbContext,
+                                             NinVersion ninVersion,
+                                             EnvironmentVariable env,
+                                             Miljovariabel miljovariabel)
         {
             foreach (var step in env.Trinn)
             {
-                var trinn = new Trinn
+                Trinn trinn = null;
+
+                dbContext.SaveChanges();
+
+                if (dbContext.Trinn.Any())
                 {
-                    Version = ninVersion,
-                    Navn = step.Navn.Trim(),
-                    Kode = new TrinnKode
+                    trinn = dbContext.Trinn
+                        .Include(x => x.Kode)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Miljovariabel.Kode.Kode.Equals($"{step.Kode}"));
+                }
+
+                if (trinn == null)
+                {
+                    trinn = new Trinn
                     {
                         Version = ninVersion,
-                        KodeName = $"{step.Kode}",
-                        Kategori = KategoriEnum.Trinn
-                    }
-                };
+                        Navn = step.Navn.Trim(),
+                        Kode = new TrinnKode
+                        {
+                            Version = ninVersion,
+                            KodeName = $"{step.Kode}",
+                            Kategori = KategoriEnum.Trinn
+                        }
+                    };
 
-                AddBasistrinn(dbContext, ninVersion, step, trinn);
+                    miljovariabel.Trinn.Add(trinn);
+                }
+                else
+                {
+                    trinn.Navn = step.Navn.Trim();
+                }
 
-                miljovariabel.Trinn.Add(trinn);
+                AddOrUpdateBasistrinn(dbContext, ninVersion, step, trinn);
+
             }
         }
 
-        private static void AddBasistrinn(NiNDbContext dbContext,
-                                          NinVersion ninVersion,
-                                          Step step,
-                                          Trinn trinn)
+        private static void AddOrUpdateBasistrinn(NiNDbContext dbContext,
+                                                  NinVersion ninVersion,
+                                                  Step step,
+                                                  Trinn trinn)
         {
             if (step.Basistrinn == null) return;
 
@@ -401,7 +483,6 @@
 
                 // Check if basistrinn exists
                 var basistrinn = dbContext.Basistrinn
-                    //.Include(x => x.Kode)
                     .FirstOrDefault(x =>
                         x.Version.Id == ninVersion.Id &&
                         x.Navn.Equals(kodename));

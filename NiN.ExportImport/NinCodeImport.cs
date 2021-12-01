@@ -43,13 +43,21 @@
             }
         }
 
-        public void ImportCompleteNin(string basePath)
+        public void ImportCompleteNin(string basePath, bool allowUpdate = false)
         {
             var i = 0;
             Natursystem natursystem = null;
 
             var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(_version));
-            if (ninVersion == null)
+            if (ninVersion != null)
+            {
+                if (!allowUpdate)
+                {
+                    Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
+                    return;
+                }
+            }
+            else
             {
                 ninVersion = new NinVersion { Navn = _version };
                 _context.NinVersion.Add(ninVersion);
@@ -58,15 +66,21 @@
                 ninVersion = _context.NinVersion.FirstOrDefault(x => x.Id == ninVersion.Id);
             }
 
+            Console.WriteLine("\nGrunntyper");
+
             var path = Path.Combine(basePath, $"import_grunntyper_v{_version}.csv");
             if (File.Exists(path))
             {
                 using var reader = new StreamReader(path);
                 using var csv = new CsvReader(reader, _csvConfiguration);
 
-                var records = csv.GetRecords<GrunntyperRecord>();
+                var records = csv.GetRecords<GrunntyperRecord>().ToList();
+                var count = records.Count;
+                var pos = 0;
+                double percent;
                 foreach (var record in records)
                 {
+                    percent = Math.Round(100 * ((double)++pos / count));
                     if (natursystem == null)
                     {
                         natursystem = _context.Natursystem
@@ -76,7 +90,7 @@
                     if (natursystem == null)
                     {
                         natursystem = CreateNatursystem(record, ninVersion);
-                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
                         _context.Natursystem.Add(natursystem);
                     }
 
@@ -89,7 +103,7 @@
                     if (hovedtypegruppe == null)
                     {
                         hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
-                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
                         _context.Hovedtypegruppe.Add(hovedtypegruppe);
                     }
 
@@ -102,7 +116,7 @@
                     if (hovedtype == null)
                     {
                         hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
-                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
                         _context.Hovedtype.Add(hovedtype);
                     }
 
@@ -115,13 +129,22 @@
                     if (grunntype == null)
                     {
                         grunntype = CreateGrunntype(record.GrunntypeNavn, record.GrunntypeKode, ninVersion, natursystem, hovedtype);
-                        Console.WriteLine($"{++i:0####} grunntype\t{grunntype.Kode.KodeName} {grunntype.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} grunntype\t{grunntype.Kode.KodeName} {grunntype.Navn}");
                         _context.Grunntype.Add(grunntype);
                     }
 
-                    if (HasUnsavedChanges()) _context.SaveChanges();
+                    if (HasUnsavedChanges())
+                    {
+                        _context.SaveChanges();
+                    }
+                    else
+                    {
+                        Console.Write($"\r{Math.Round(100 * ((double)pos / count))}%\t");
+                    }
                 }
             }
+
+            Console.WriteLine("\rKartleggingsenheter");
 
             path = Path.Combine(basePath, $"import_kartleggingsenheter_v{_version}.csv");
             if (File.Exists(path))
@@ -129,9 +152,13 @@
                 using var reader = new StreamReader(path);
                 using var csv = new CsvReader(reader, _csvConfiguration);
 
-                var records = csv.GetRecords<KartleggingsenheterRecord>();
+                var records = csv.GetRecords<KartleggingsenheterRecord>().ToList();
+                var count = records.Count;
+                var pos = 0;
+                double percent;
                 foreach (var record in records)
                 {
+                    percent = Math.Round(100 * ((double)++pos / count));
                     if (natursystem == null)
                     {
                         natursystem = _context.Natursystem
@@ -141,7 +168,7 @@
                     if (natursystem == null)
                     {
                         natursystem = CreateNatursystem(record, ninVersion);
-                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
                         _context.Natursystem.Add(natursystem);
                     }
 
@@ -154,7 +181,7 @@
                     if (hovedtypegruppe == null)
                     {
                         hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
-                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
                         _context.Hovedtypegruppe.Add(hovedtypegruppe);
                     }
 
@@ -167,7 +194,7 @@
                     if (hovedtype == null)
                     {
                         hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
-                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
                         _context.Hovedtype.Add(hovedtype);
                     }
 
@@ -180,13 +207,22 @@
                     if (kartleggingsenhet == null)
                     {
                         kartleggingsenhet = CreateKartleggingsenhet(record, ninVersion, hovedtype);
-                        Console.WriteLine($"{++i:0####} kartleggingsenhet\t{kartleggingsenhet.Malestokk} {kartleggingsenhet.Kode.KodeName} {kartleggingsenhet.Definisjon}");
+                        Console.WriteLine($"{percent}% {++i:0####} kartleggingsenhet\t{kartleggingsenhet.Malestokk} {kartleggingsenhet.Kode.KodeName} {kartleggingsenhet.Definisjon}");
                         hovedtype.Kartleggingsenheter.Add(kartleggingsenhet);
                     }
 
-                    if (HasUnsavedChanges()) _context.SaveChanges();
+                    if (HasUnsavedChanges())
+                    {
+                        _context.SaveChanges();
+                    }
+                    else
+                    {
+                        Console.Write($"\r{Math.Round(100 * ((double)pos / count))}%\t");
+                    }
                 }
             }
+
+            Console.WriteLine("\rMiljøvariabler");
 
             path = Path.Combine(basePath, $"import_miljovariabler_v{_version}.csv");
             if (File.Exists(path))
@@ -194,9 +230,13 @@
                 using var reader = new StreamReader(path);
                 using var csv = new CsvReader(reader, _csvConfiguration);
 
-                var records = csv.GetRecords<MiljovariablerRecord>();
+                var records = csv.GetRecords<MiljovariablerRecord>().ToList();
+                var count = records.Count;
+                var pos = 0;
+                double percent;
                 foreach (var record in records)
                 {
+                    percent = Math.Round(100 * ((double)++pos / count));
                     if (natursystem == null)
                     {
                         natursystem = _context.Natursystem
@@ -206,7 +246,7 @@
                     if (natursystem == null)
                     {
                         natursystem = CreateNatursystem(record, ninVersion);
-                        Console.WriteLine($"{++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} natursystem\t{natursystem.Kode.KodeName} {natursystem.Navn}");
                         _context.Natursystem.Add(natursystem);
                     }
 
@@ -219,7 +259,7 @@
                     if (hovedtypegruppe == null)
                     {
                         hovedtypegruppe = CreateHovedtypegruppe(record, ninVersion, natursystem);
-                        Console.WriteLine($"{++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtypegruppe\t{hovedtypegruppe.Kode.KodeName} {hovedtypegruppe.Navn}");
                         _context.Hovedtypegruppe.Add(hovedtypegruppe);
                     }
 
@@ -232,7 +272,7 @@
                     if (hovedtype == null)
                     {
                         hovedtype = CreateHovedtype(record, ninVersion, natursystem, hovedtypegruppe);
-                        Console.WriteLine($"{++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} hovedtype\t{hovedtype.Kode.KodeName} {hovedtype.Navn}");
                         _context.Hovedtype.Add(hovedtype);
                     }
 
@@ -245,18 +285,18 @@
                     if (miljovariabel == null)
                     {
                         miljovariabel = CreateMiljovariabel(record, ninVersion, hovedtype);
-                        Console.WriteLine($"{++i:0####} miljovariabel\t{miljovariabel.Kode.Kode} {miljovariabel.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} miljovariabel\t{miljovariabel.Kode.Kode} {miljovariabel.Navn}");
                         hovedtype.Miljovariabler.Add(miljovariabel);
                     }
 
                     var trinn = _context.Trinn
                         .FirstOrDefault(x =>
                             x.Version.Id == ninVersion.Id &&
-                            x.Kode.KodeName.Equals(record.TrinnKode));
+                            x.Kode.KodeName.Equals(record.TrinnKode.Replace(" ", "")));
                     if (trinn == null)
                     {
                         trinn = CreateTrinn(record, ninVersion);
-                        Console.WriteLine($"{++i:0####} trinn\t{trinn.Kode.KodeName} {trinn.Navn}");
+                        Console.WriteLine($"{percent}% {++i:0####} trinn\t{trinn.Kode.KodeName} {trinn.Navn}");
                         miljovariabel.Trinn.Add(trinn);
                     }
 
@@ -268,22 +308,39 @@
                         foreach (var s in basistrinnListe)
                         {
                             var basistrinn = _context.Basistrinn
+                                .Include(x => x.Trinn)
                                 .FirstOrDefault(x =>
                                     x.Version.Id == ninVersion.Id &&
                                     x.Navn.Equals($"{basistrinnPrefix}-{s}"));
                             if (basistrinn == null)
                             {
                                 basistrinn = CreateBasistrinn($"{basistrinnPrefix}-{s}", ninVersion);
+                                
+                                basistrinn.Trinn.Add(trinn);
+                                Console.WriteLine($"{percent}% {++i:0####} basistrinn\t{basistrinn.Navn}");
+                                trinn.Basistrinn.Add(basistrinn);
                             }
-                            basistrinn.Trinn.Add(trinn);
-                            Console.WriteLine($"{++i:0####} basistrinn\t{basistrinn.Navn}");
-                            trinn.Basistrinn.Add(basistrinn);
+                            else if (!basistrinn.Trinn.Contains(trinn))
+                            {
+                                basistrinn.Trinn.Add(trinn);
+                                Console.WriteLine($"{percent}% {++i:0####} basistrinn\t{basistrinn.Navn}");
+                                trinn.Basistrinn.Add(basistrinn);
+                            }
                         }
                     }
 
-                    if (HasUnsavedChanges()) _context.SaveChanges();
+                    if (HasUnsavedChanges())
+                    {
+                        _context.SaveChanges();
+                    }
+                    else
+                    {
+                        Console.Write($"\r{Math.Round(100 * ((double)pos / count))}%\t");
+                    }
                 }
             }
+
+            Console.WriteLine("\r    ");
         }
 
         #region private methods
@@ -493,7 +550,7 @@
 
         private LkmKategoriEnum GetLkmKategori(string value)
         {
-            if (string.IsNullOrWhiteSpace(value)) return LkmKategoriEnum.invalid;
+            if (string.IsNullOrWhiteSpace(value)) return LkmKategoriEnum._null;
 
             return NinEnumConverter.Convert<LkmKategoriEnum>(value).Value;
         }

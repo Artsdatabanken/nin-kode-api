@@ -55,6 +55,7 @@
                     Migrate();
                     Import();
                     CreateKartleggingConnection("2.2");
+                    Import(new[] { "2.3" }, true);
                     break;
                 case "import":
                     Import();
@@ -146,7 +147,7 @@
             Stopwatch.Reset();
             Stopwatch.Start();
             var importer = new NinCodeImport(_serviceProvider.GetService<NiNDbContext>(), version);
-            var records = importer.FixKartleggingConnections($"CsvFiles\\import_grunntyper_kartleggingsenheter_v{version}.csv");
+            var records = importer.FixKartleggingConnections($"CsvFiles\\v{version}\\import_grunntyper_kartleggingsenheter_v{version}.csv");
 
             if (records == null) return;
 
@@ -281,18 +282,18 @@
             }
         }
 
-        private static void Import()
+        private static void Import(bool allowUpdate = false)
         {
             Stopwatch.Reset();
             Stopwatch.Start();
 
             Console.WriteLine("Building database...");
 
-            NinLoader.CreateCodeDatabase(_serviceProvider, "1");
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2");
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1");
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b");
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.2");
+            NinLoader.CreateCodeDatabase(_serviceProvider, "1", allowUpdate);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2", allowUpdate);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1", allowUpdate);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b", allowUpdate);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.2", allowUpdate);
             //NinLoader.CreateCodeDatabase(_serviceProvider, "2.3");
 
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1");
@@ -307,7 +308,7 @@
             Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
-        private static void Import(IEnumerable<string> arguments)
+        private static void Import(IEnumerable<string> arguments, bool allowUpdate = false)
         {
             var dbContext = _serviceProvider.GetService<NiNDbContext>();
             if (dbContext == null)
@@ -317,8 +318,14 @@
 
             foreach (var argument in arguments)
             {
+                Stopwatch.Reset();
+                Stopwatch.Start();
+
                 var ninCodeImport = new NinCodeImport(dbContext, argument);
-                ninCodeImport.ImportCompleteNin("CsvFiles");
+                ninCodeImport.ImportCompleteNin($"CsvFiles\\v{argument}", allowUpdate);
+
+                Stopwatch.Stop();
+                Console.WriteLine($"v{argument}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }
         }
     }
