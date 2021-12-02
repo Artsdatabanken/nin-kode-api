@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NinKode.Common</name>
+    </assembly>
+    <members>
+        <member name="T:NinKode.Common.Utilities.NorwayDateTime">
+            <summary>
+            Creates time in the Norwegian timezone
+            </summary>
+        </member>
+        <member name="P:NinKode.Common.Utilities.NorwayDateTime.Now">
+            <summary>
+            Norwegian timezone
+            </summary>
+        </member>
+        <member name="M:NinKode.Common.Utilities.NorwayDateTime.Convert(System.DateTime)">
+            <summary>
+            Converts any time to Norwegian timezone
+            </summary>
+            <param name="dtg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NinKode.Common.Utilities.NorwayDateTime.Parse(System.String)">
+            <summary>
+            Parse string and convert time to Norwegian timezone
+            </summary>
+            <param name="dtg"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

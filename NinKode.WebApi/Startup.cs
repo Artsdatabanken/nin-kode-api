@@ -1,15 +1,19 @@
 namespace NinKode.WebApi
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.IO;
     using System.Reflection;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.ApplicationModels;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
     using Microsoft.OpenApi.Models;
     using NiN.Database;
     using NinKode.Common.Interfaces;
@@ -20,15 +24,28 @@ namespace NinKode.WebApi
     using NinKode.Database.Services.v21;
     using NinKode.Database.Services.v21b;
     using NinKode.Database.Services.v22;
+    using NinKode.WebApi.Helpers;
 
     public class Startup
     {
-        private IConfiguration Configuration { get; }
+        private readonly string _apiName;
+        private readonly string _authAuthority;
+        private readonly string _authAuthorityEndPoint;
+        private readonly string _swaggerClientId;
         private readonly string _swaggerDocumentTitle;
+        
+        private ILogger _logger;
+        private IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
+            // configuration
+            _apiName = Configuration.GetValue("ApiName", "api");
+            _authAuthority = Configuration.GetValue("AuthAuthority", "https://demo.identityserver.io");
+            _authAuthorityEndPoint = Configuration.GetValue("AuthAuthorityEndPoint", "https://demo.identityserver.io/connect/authorize");
+            _swaggerClientId = Configuration.GetValue("SwaggerClientId", "implicit");
             _swaggerDocumentTitle = Configuration.GetValue("SwaggerDocumentTitle", "NinKode API");
         }
 
@@ -39,11 +56,40 @@ namespace NinKode.WebApi
             {
                 o.Conventions.Add(new ControllerDocumentationConvention());
             });
+            AddIdentityServerAuthentication(services);
+
+            AddSwaggerGenerator(services);
+
+            // Define singleton-objects
+            services.AddSingleton<ICodeV1Service, CodeV1Service>();
+            services.AddSingleton<ICodeV2Service, CodeV2Service>();
+            services.AddSingleton<ICodeV21Service, CodeV21Service>();
+            services.AddSingleton<IVarietyV21Service, VarietyV21Service>();
+            services.AddSingleton<ICodeV21BService, CodeV21BService>();
+            services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
+            services.AddSingleton<ICodeV22Service, CodeV22Service>();
+            services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
+
+            services.AddSingleton<ICodeService, CodeService>();
+            services.AddSingleton<IVarietyService, VarietyService>();
+            services.AddSingleton<IExportService, ExportService>();
+            services.AddSingleton<IImportService, ImportService>();
+            services.AddSingleton<IVersionService, VersionService>();
+        }
+
+        private void AddSwaggerGenerator(IServiceCollection services)
+        {
             services.AddSwaggerGen(c =>
             {
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
                 c.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
-                
+                xmlPath = Path.Combine(AppContext.BaseDirectory, "NinKode.Database.xml");
+                if (File.Exists(xmlPath)) c.IncludeXmlComments(xmlPath, true);
+                xmlPath = Path.Combine(AppContext.BaseDirectory, "NiN.Database.xml");
+                if (File.Exists(xmlPath)) c.IncludeXmlComments(xmlPath, true);
+                xmlPath = Path.Combine(AppContext.BaseDirectory, "NiN.Common.xml");
+                if (File.Exists(xmlPath)) c.IncludeXmlComments(xmlPath, true);
+
                 //c.SwaggerDoc("v1", new OpenApiInfo
                 //{
                 //    Title = $"{_swaggerDocumentTitle} v1",
@@ -80,6 +126,29 @@ namespace NinKode.WebApi
                     Version = "api",
                     Description = CreateDescription()
                 });
+
+                c.AddSecurityDefinition(
+                    "oauth2",
+                    new OpenApiSecurityScheme
+                    {
+                        Type = SecuritySchemeType.OAuth2,
+                        Flows = new OpenApiOAuthFlows
+                        {
+                            Implicit = new OpenApiOAuthFlow
+                            {
+                                AuthorizationUrl = new Uri(_authAuthorityEndPoint, UriKind.Absolute),
+                                Scopes = new Dictionary<string, string>
+                                {
+                                    {_apiName, "Access Api"}
+
+                                    // { "readAccess", "Access read operations" },
+                                    // { "writeAccess", "Access write operations" }
+                                }
+                            }
+                        }
+                    });
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
+                c.EnableAnnotations();
             });
 
             var connectionString = Configuration.GetConnectionString("Default");
@@ -93,22 +162,6 @@ namespace NinKode.WebApi
             {
                 o.UseSqlServer(connectionString, x => x.MigrationsAssembly("NinKode.Database"));
             });
-
-            // Define singleton-objects
-            services.AddSingleton<ICodeV1Service, CodeV1Service>();
-            services.AddSingleton<ICodeV2Service, CodeV2Service>();
-            services.AddSingleton<ICodeV21Service, CodeV21Service>();
-            services.AddSingleton<IVarietyV21Service, VarietyV21Service>();
-            services.AddSingleton<ICodeV21BService, CodeV21BService>();
-            services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
-            services.AddSingleton<ICodeV22Service, CodeV22Service>();
-            services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
-
-            services.AddSingleton<ICodeService, CodeService>();
-            services.AddSingleton<IVarietyService, VarietyService>();
-            services.AddSingleton<IExportService, ExportService>();
-            services.AddSingleton<IImportService, ImportService>();
-            services.AddSingleton<IVersionService, VersionService>();
         }
 
         private static string CreateDescription()
@@ -117,8 +170,10 @@ namespace NinKode.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
+            _logger = logger;
+
             //if (env.IsDevelopment())
             //{
             app.UseDeveloperExceptionPage();
@@ -147,8 +202,13 @@ namespace NinKode.WebApi
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+            
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            app.UseAuthentication();
+            
             app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -160,6 +220,73 @@ namespace NinKode.WebApi
             //using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
             //var dbContext = serviceScope.ServiceProvider.GetService<NiNDbContext>();
             //dbContext?.Database.Migrate();
+        }
+
+        private void AddIdentityServerAuthentication(IServiceCollection services)
+        {
+            var roleClaim = "iss"; //"role";
+            var roleClaimValue = "https://demo.identityserver.io"; //writeAccessRole;
+
+            // Users defined at https://demo.identityserver.io has no roles.
+            // Using the Issuer-claim (iss) as a substitute to allow authorization with Swagger when testing
+            if (_authAuthority == "https://demo.identityserver.io")
+            {
+                roleClaim = "iss";
+                roleClaimValue = "https://demo.identityserver.io";
+            }
+
+            services.AddAuthorization(options =>
+                options.AddPolicy("WriteAccess", policy => policy.RequireClaim(roleClaim, roleClaimValue))
+            );
+
+            services.AddCors();
+
+            services
+                .AddAuthentication("token")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = _authAuthority;
+                    options.RequireHttpsMetadata = false;
+
+                    options.Audience = _apiName;
+                }
+                )
+                .AddIdentityServerAuthentication("token", options =>
+                {
+                    options.Authority = _authAuthority;
+                    options.RequireHttpsMetadata = false;
+
+                    options.ApiName = _apiName;
+
+                    options.JwtBearerEvents = new JwtBearerEvents
+                    {
+                        OnMessageReceived = e =>
+                        {
+                            _logger.LogDebug($"JWT: message received\t{e.Request.Path}");
+                            return Task.CompletedTask;
+                        },
+                        OnTokenValidated = e =>
+                        {
+                            _logger.LogDebug($"JWT: token validated\t{e.Request.Path}");
+                            return Task.CompletedTask;
+                        },
+                        OnAuthenticationFailed = e =>
+                        {
+                            _logger.LogDebug($"JWT: authentication failed\t{e.Request.Path}");
+                            return Task.CompletedTask;
+                        },
+                        OnChallenge = e =>
+                        {
+                            _logger.LogDebug($"JWT: challenge\t{e.Request.Path}");
+                            return Task.CompletedTask;
+                        },
+                        OnForbidden = e =>
+                        {
+                            _logger.LogDebug($"JWT: forbidden\t{e.Request.Path}");
+                            return Task.CompletedTask;
+                        }
+                    };
+                });
         }
     }
 

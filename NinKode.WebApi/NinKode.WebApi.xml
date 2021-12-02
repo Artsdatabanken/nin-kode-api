@@ -57,6 +57,14 @@
             
             </summary>
         </member>
+        <member name="M:NinKode.WebApi.Controllers.ImportController.ImportFromCsv(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
         <member name="T:NinKode.WebApi.Controllers.VarietyController">
             <summary>
             
@@ -99,6 +107,18 @@
             
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:NinKode.WebApi.Helpers.SecurityRequirementsOperationFilter">
+            <summary>
+            Help swagger discover api operations that require authentication
+            </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Helpers.SecurityRequirementsOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
         </member>
     </members>
 </doc>
