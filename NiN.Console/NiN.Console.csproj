@@ -55,6 +55,9 @@
     <None Update="CsvFiles\v2.3\import_kartleggingsenheter_v2.3.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="CsvFiles\v2.3\import_landform_v2.3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="CsvFiles\v2.3\import_miljovariabler_v2.3.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

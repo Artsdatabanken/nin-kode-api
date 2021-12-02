@@ -11,6 +11,7 @@
     using NiN.Database;
     using NiN.Database.Models.Code.Enums;
     using NiN.ExportImport;
+    using NinKode.Database.Services.v22;
 
     public class Program
     {
@@ -48,8 +49,7 @@
             switch (arguments[0])
             {
                 case "test":
-                    CreateLkmConnection("2.2");
-                    CreateLkmConnection("2.3");
+                    ImportVariasjon("2.3");
                     break;
                 case "importnin":
                     Migrate();
@@ -387,6 +387,31 @@
             }
         }
 
+        private static void ImportVariasjon(string version)
+        {
+            Stopwatch.Reset();
+            Stopwatch.Start();
+
+            Console.WriteLine($"Building variasjon v{version} ...");
+
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, version);
+
+            Console.WriteLine("Finished building variasjon");
+
+            Stopwatch.Stop();
+
+            Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+
+            Stopwatch.Reset();
+            Stopwatch.Start();
+
+            NinVarietyLoader.FixLandform(_serviceProvider, $"CsvFiles\\v{version}",version);
+
+            Stopwatch.Stop();
+
+            Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
         private static void Import(bool allowUpdate = false)
         {
             Stopwatch.Reset();
@@ -399,12 +424,11 @@
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.1", allowUpdate);
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b", allowUpdate);
             NinLoader.CreateCodeDatabase(_serviceProvider, "2.2", allowUpdate);
-            //NinLoader.CreateCodeDatabase(_serviceProvider, "2.3");
 
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1");
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1b");
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.2");
-            //NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3");
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3");
 
             Console.WriteLine("Finished building database");
 
