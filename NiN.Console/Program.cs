@@ -58,10 +58,12 @@
                 case "complete":
                     Migrate();
                     Import();
+                    Import(new[] { "2.3" });
                     CreateKartleggingConnection("2.2");
                     CreateKartleggingConnection("2.3");
-                    Import(new[] { "2.3" });
                     FixLkm(new[] { "2.2", "2.3" });
+                    CreateLkmConnection("2.2");
+                    CreateLkmConnection("2.3");
                     break;
                 case "import":
                     Import();

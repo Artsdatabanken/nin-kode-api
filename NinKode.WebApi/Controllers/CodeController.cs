@@ -18,7 +18,7 @@
     [Route("{version:required}/koder")]
     public class CodeController : ApiControllerBase<CodeController>
     {
-        private const string DefaultNinVersion = "v2.2";
+        private const string DefaultNinVersion = "v2.3";
         private readonly ICodeService _codeService;
 
         /// <summary>

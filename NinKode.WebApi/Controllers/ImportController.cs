@@ -16,7 +16,7 @@
     [Route("[controller]")]
     public class ImportController : ApiControllerBase<ImportController>
     {
-        private const string DefaultNinVersion = "v2.2";
+        private const string DefaultNinVersion = "v2.3";
 
         private readonly IImportService _importService;
 

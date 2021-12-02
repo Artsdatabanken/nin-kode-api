@@ -15,7 +15,7 @@
     [Route("{version:required}/eksport")]
     public class ExportController : ApiControllerBase<ExportController>
     {
-        private const string DefaultNinVersion = "v2.2";
+        private const string DefaultNinVersion = "v2.3";
 
         private readonly IExportService _exportService;
 
