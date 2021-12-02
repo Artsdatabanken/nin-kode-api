@@ -57,14 +57,6 @@
             
             </summary>
         </member>
-        <member name="M:NinKode.WebApi.Controllers.ImportController.ImportFromCsv(Microsoft.AspNetCore.Http.IFormFile,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="file"></param>
-            <param name="version"></param>
-            <returns></returns>
-        </member>
         <member name="T:NinKode.WebApi.Controllers.VarietyController">
             <summary>
             
