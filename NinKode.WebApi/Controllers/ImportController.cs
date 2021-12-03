@@ -17,8 +17,6 @@
     [Route("[controller]")]
     public class ImportController : ApiControllerBase<ImportController>
     {
-        private const string DefaultNinVersion = "v2.3";
-
         private readonly IImportService _importService;
 
         /// <summary>
@@ -38,7 +36,7 @@
         [Authorize]
         [HttpPost]
         [Route("csv")]
-        public ActionResult ImportFromCsv(IFormFile file, string version = DefaultNinVersion)
+        public ActionResult ImportFromCsv(IFormFile file, string version)
         {
             if (file == null || file.Length == 0) return new BadRequestResult();
 
