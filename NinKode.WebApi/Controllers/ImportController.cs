@@ -14,7 +14,7 @@
     [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Import")]
     [EnableCors]
-    [Route("[controller]")]
+    [Route("import")]
     public class ImportController : ApiControllerBase<ImportController>
     {
         private readonly IImportService _importService;
