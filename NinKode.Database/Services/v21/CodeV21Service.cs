@@ -48,7 +48,7 @@
             );
         }
 
-        public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "")
+        public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "", bool tree = false)
         {
             using (var session = _store.OpenSession())
             {
