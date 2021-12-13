@@ -11,7 +11,6 @@
     using NiN.Database;
     using NiN.Database.Models.Code.Enums;
     using NiN.ExportImport;
-    using NinKode.Database.Services.v22;
 
     public class Program
     {
@@ -48,8 +47,13 @@
 
             switch (arguments[0])
             {
+                case "deleteconnections":
+                    DeleteKartleggingConnection();
+                    break;
                 case "test":
-                    ImportVariasjon("2.3");
+                    DeleteKartleggingConnection();
+                    CreateKartleggingConnection("2.2");
+                    CreateKartleggingConnection("2.3");
                     break;
                 case "importnin":
                     Migrate();
@@ -95,9 +99,6 @@
                     CreateLkmConnection("NA T4", "5", "UF", new[] { "c", "d" }, "2.2");
                     CreateLkmConnection("NA T4", "6", "KA", new[] { "d", "e" }, "2.2");
                     CreateLkmConnection("NA T4", "6", "UF", new[] { "c", "d" }, "2.2");
-                    break;
-                case "kartlegging":
-                    CreateKartleggingConnection("2.2");
                     break;
             }
         }
@@ -231,6 +232,18 @@
             if (storeChanges) dbContext.SaveChanges();
         }
 
+        private static void DeleteKartleggingConnection()
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            foreach (var grunntype in dbContext.Grunntype.Include(x => x.Kartleggingsenhet))
+            {
+                grunntype.Kartleggingsenhet.Clear();
+                dbContext.Grunntype.Update(grunntype);
+            }
+
+            dbContext.SaveChanges();
+        }
+
         private static void CreateKartleggingConnection(string version)
         {
             Stopwatch.Reset();
@@ -246,27 +259,22 @@
                 throw new Exception("Could not find DbContext");
             }
 
+            var k = 0;
             var i = 0;
             foreach (var @record in records)
             {
                 i++;
                 string[] grunntyper = null;
-                if (!string.IsNullOrWhiteSpace(record.Grunntypenummer))
+                var gtlist = record.Grunntypekoder.Split(",", StringSplitOptions.RemoveEmptyEntries).ToList();
+                for (var index = 0; index < gtlist.Count; index++)
                 {
-                    grunntyper = record.Grunntypenummer.Split(",");
+                    var iPos = gtlist[index].IndexOf("-", StringComparison.Ordinal);
+                    if (iPos < 0) continue;
+                    gtlist[index] = gtlist[index].Substring(iPos + 1);
                 }
-                else
-                {
-                    var gtlist = record.Grunntypekoder.Split(",", StringSplitOptions.RemoveEmptyEntries).ToList();
-                    for (var index = 0; index < gtlist.Count; index++)
-                    {
-                        var iPos = gtlist[index].IndexOf("-", StringComparison.Ordinal);
-                        if (iPos < 0) continue;
-                        gtlist[index] = gtlist[index].Substring(iPos + 1);
-                    }
 
-                    grunntyper = gtlist.ToArray();
-                }
+                grunntyper = gtlist.ToArray();
+                
                 var ninkodeprefix = record.SammensattKode.Substring(0, record.SammensattKode.IndexOf("-", StringComparison.Ordinal));
                 CreateKartleggingConnection(record.SammensattKode, grunntyper.Select(x => $"{ninkodeprefix}-{x}").ToArray(), version);
             }

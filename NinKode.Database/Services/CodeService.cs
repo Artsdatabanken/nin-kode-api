@@ -30,7 +30,7 @@
                     case KategoriEnum.Naturmangfoldnivå:
                         var natursystem = dbContext.Natursystem
                             .Include(x => x.Kode)
-                            //.Include(x => x.UnderordnetKoder)
+                            .Include(x => x.UnderordnetKoder)
                             .FirstOrDefault(x => x.Kode.Id == kode.Id);
                         if (natursystem == null) continue;
 
@@ -52,7 +52,7 @@
                             .Include(x => x.Natursystem)
                             .Include(x => x.Natursystem.Kode)
                             .Include(x => x.Kode)
-                            //.Include(x => x.UnderordnetKoder)
+                            .Include(x => x.UnderordnetKoder)
                             .FirstOrDefault(x => x.Kode.Id == kode.Id);
 
                         if (hovedtypegruppe == null) break;
@@ -77,7 +77,7 @@
                         var hovedtype = dbContext.Hovedtype
                             .Include(x => x.Hovedtypegruppe)
                             .Include(x => x.Hovedtypegruppe.Kode)
-                            //.Include(x => x.UnderordnetKoder)
+                            .Include(x => x.UnderordnetKoder)
                             .Include(x => x.Kartleggingsenheter)
                             .Include(x => x.Miljovariabler)
                             .FirstOrDefault(x => x.Kode.Id == kode.Id);
