@@ -14,7 +14,7 @@
     [ApiExplorerSettings(GroupName = "api")]
     [DisplayName("Import")]
     [EnableCors]
-    [Route("{version:required}/import")]
+    [Route("import")]
     public class ImportController : ApiControllerBase<ImportController>
     {
         private readonly IImportService _importService;
@@ -60,7 +60,7 @@
         [Authorize("WriteAccess")]
         [HttpPost]
         [Route("csv")]
-        public ActionResult ImportFromCsv(IFormFile file, string version)
+        public ActionResult ImportFromCsv(IFormFile file, string version = "")
         {
             if (file == null || file.Length == 0) return new BadRequestResult();
 

@@ -16,10 +16,10 @@ namespace NinKode.WebApi
                 .ConfigureAppConfiguration((context, builder) =>
                 {
                     builder.SetBasePath(context.HostingEnvironment.ContentRootPath)
+                        .AddEnvironmentVariables()
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", optional: true)
-                        .AddJsonFile("appsettings.local.json", optional: true)
-                        .AddEnvironmentVariables();
+                        .AddJsonFile("appsettings.local.json", optional: true);
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

@@ -210,7 +210,7 @@ namespace NinKode.WebApi
 
         private void AddIdentityServerAuthentication(IServiceCollection services)
         {
-            var roleClaim = "iss"; //"role";
+            var roleClaim = "role";
             var roleClaimValue = _writeAccessRole;
 
             // Users defined at https://demo.identityserver.io has no roles.
