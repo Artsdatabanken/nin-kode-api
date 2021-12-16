@@ -65,7 +65,7 @@
             var ninVersion = _context.NinVersion.FirstOrDefault(x => x.Navn.Equals(_version));
             if (ninVersion == null)
             {
-                Console.WriteLine($"NiN-code version {ninVersion.Navn} doesn't exist. Skipping...");
+                Console.WriteLine($"NiN-code version {_version} doesn't exist. Skipping...");
                 return;
             }
 

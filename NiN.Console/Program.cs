@@ -47,10 +47,11 @@
 
             switch (arguments[0])
             {
-                case "deleteconnections":
-                    DeleteKartleggingConnection();
-                    break;
                 case "test":
+                    FixSingleLkm("2.3", "T4-SS_1", "SS-h", "SS-j");
+                    FixSingleLkm("2.3", "T4-SS_2", "SS-i", "SS-k");
+                    break;
+                case "kartlegging":
                     DeleteKartleggingConnection();
                     CreateKartleggingConnection("2.2");
                     CreateKartleggingConnection("2.3");
@@ -62,7 +63,7 @@
                 case "complete":
                     Migrate();
                     Import();
-                    Import(new[] { "2.3" });
+                    Import(new[] { "2.3" }, true);
                     CreateKartleggingConnection("2.2");
                     CreateKartleggingConnection("2.3");
                     FixLkm(new[] { "2.2", "2.3" });
@@ -486,6 +487,86 @@
                 Stopwatch.Stop();
                 Console.WriteLine($"v{argument}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }
+        }
+
+        private static void FixSingleLkm(string version, string id, string fromBasistrinn, string toBasistrinn)
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+
+            Stopwatch.Reset();
+            Stopwatch.Start();
+
+            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+            if (ninVersion == null)
+            {
+                Console.WriteLine($"NiN-code version {version} doesn't exist. Skipping...");
+                return;
+            }
+
+            var kode = id.Substring(0, id.IndexOf("-", StringComparison.Ordinal));
+
+            var nin = dbContext.Kode
+                .FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.KodeName.Equals($"NA {kode}"));
+
+            if (nin != null && nin.Kategori == KategoriEnum.Hovedtype)
+            {
+                var hovedtype = dbContext.Hovedtype
+                    .Include(x => x.Miljovariabler)
+                    .FirstOrDefault(x => x.Kode.Id == nin.Id);
+
+                if (hovedtype != null && hovedtype.Miljovariabler.Any())
+                {
+                    foreach (var m in hovedtype.Miljovariabler)
+                    {
+                        var miljovariabel = dbContext.Miljovariabel
+                            .Include(x => x.Trinn)
+                            .FirstOrDefault(x => x.Id == m.Id);
+                        if (miljovariabel == null) continue;
+
+                        foreach (var t in miljovariabel.Trinn)
+                        {
+                            var trinn = dbContext.Trinn
+                                .Include(x => x.Kode)
+                                .Include(x => x.Basistrinn)
+                                .FirstOrDefault(x => x.Id == t.Id);
+
+                            if (trinn == null) continue;
+                            if (!trinn.Kode.KodeName.Equals(id)) continue;
+
+                            if (!trinn.Basistrinn.Any()) continue;
+
+                            // locate trinn to remove
+                            var remove = trinn.Basistrinn.FirstOrDefault(x => x.Navn.Equals(fromBasistrinn));
+                            if (remove == null) continue;
+
+                            trinn.Basistrinn.Remove(remove);
+                            Console.WriteLine($"{kode}: {trinn.Kode.KodeName} - {trinn.Navn}, removed {remove.Navn}");
+
+                            // find new basistrinn
+                            var add = dbContext.Basistrinn
+                                .FirstOrDefault(x => x.Version.Id == ninVersion.Id && x.Navn.Equals(toBasistrinn));
+
+                            if (add != null)
+                            {
+                                trinn.Basistrinn.Add(add);
+                                Console.WriteLine($"{kode}: {trinn.Kode.KodeName} - {trinn.Navn}, added {add.Navn}");
+                            }
+
+                            dbContext.Trinn.Update(trinn);
+                        }
+                    }
+
+                    dbContext.SaveChanges();
+                }
+            }
+
+
+            Stopwatch.Stop();
+            Console.WriteLine($"v{version}, {id}, {toBasistrinn}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
     }
 }

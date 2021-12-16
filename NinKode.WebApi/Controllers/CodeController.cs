@@ -37,7 +37,7 @@
         /// <returns></returns>
         [HttpGet]
         [Route("allekoder")]
-        public IEnumerable<Codes> GetAll(string version = DefaultNinVersion)
+        public IEnumerable<Codes> GetAll(string version = DefaultNinVersion, bool tre = false)
         {
             return _codeService.GetAll(base.DbContext, base.GetHostPath(), base.GetVersion(version));
         }

@@ -128,27 +128,27 @@ namespace NinKode.WebApi
                 });
 
                 // temporary disable auth
-                //c.AddSecurityDefinition(
-                //    "oauth2",
-                //    new OpenApiSecurityScheme
-                //    {
-                //        Type = SecuritySchemeType.OAuth2,
-                //        Flows = new OpenApiOAuthFlows
-                //        {
-                //            Implicit = new OpenApiOAuthFlow
-                //            {
-                //                AuthorizationUrl = new Uri(_authAuthorityEndPoint, UriKind.Absolute),
-                //                Scopes = new Dictionary<string, string>
-                //                {
-                //                    {_apiName, "Access Api"}
+                c.AddSecurityDefinition(
+                    "oauth2",
+                    new OpenApiSecurityScheme
+                    {
+                        Type = SecuritySchemeType.OAuth2,
+                        Flows = new OpenApiOAuthFlows
+                        {
+                            Implicit = new OpenApiOAuthFlow
+                            {
+                                AuthorizationUrl = new Uri(_authAuthorityEndPoint, UriKind.Absolute),
+                                Scopes = new Dictionary<string, string>
+                                {
+                                    {_apiName, "Access Api"}
 
-                //                    // { "readAccess", "Access read operations" },
-                //                    // { "writeAccess", "Access write operations" }
-                //                }
-                //            }
-                //        }
-                //    });
-                //c.OperationFilter<SecurityRequirementsOperationFilter>();
+                                    // { "readAccess", "Access read operations" },
+                                    // { "writeAccess", "Access write operations" }
+                                }
+                            }
+                        }
+                    });
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
                 c.EnableAnnotations();
             });
 

@@ -15,7 +15,7 @@
             </summary>
             <param name="codeService"></param>
         </member>
-        <member name="M:NinKode.WebApi.Controllers.CodeController.GetAll(System.String)">
+        <member name="M:NinKode.WebApi.Controllers.CodeController.GetAll(System.String,System.Boolean)">
             <summary>
             
             </summary>
@@ -56,6 +56,14 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:NinKode.WebApi.Controllers.ImportController.ImportFromCsv(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+            <param name="version"></param>
+            <returns></returns>
         </member>
         <member name="T:NinKode.WebApi.Controllers.VarietyController">
             <summary>
