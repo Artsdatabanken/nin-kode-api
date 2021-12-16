@@ -65,7 +65,7 @@
         </member>
         <member name="M:NinKode.WebApi.Controllers.ImportController.IsAuthorizedWithRole">
             <summary>
-            Check if user has access
+            Check if user has write-access
             </summary>
             <returns></returns>
         </member>

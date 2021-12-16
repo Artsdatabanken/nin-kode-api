@@ -301,6 +301,7 @@ namespace NinKode.WebApi
                 c.OAuthClientId(_swaggerClientId);
                 c.OAuthAppName(_apiName);
                 c.OAuthScopeSeparator(" ");
+                c.OAuthScopes(_apiName);
 
                 // c.OAuthAdditionalQueryStringParams(new { foo = "bar" });
                 c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
