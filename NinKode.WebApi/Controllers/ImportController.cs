@@ -28,12 +28,24 @@
         }
 
         /// <summary>
+        /// Check if user has access
+        /// </summary>
+        /// <returns></returns>
+        [Authorize("WriteAccess")]
+        [HttpPost]
+        [Route("isauthorized")]
+        public string IsAuthorized()
+        {
+            return "ok";
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="file"></param>
         /// <param name="version"></param>
         /// <returns></returns>
-        [Authorize]
+        [Authorize("WriteAccess")]
         [HttpPost]
         [Route("csv")]
         public ActionResult ImportFromCsv(IFormFile file, string version)

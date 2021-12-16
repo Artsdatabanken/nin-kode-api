@@ -33,7 +33,8 @@ namespace NinKode.WebApi
         private readonly string _authAuthorityEndPoint;
         private readonly string _swaggerClientId;
         private readonly string _swaggerDocumentTitle;
-        
+        private readonly string _writeAccessRole;
+
         private ILogger _logger;
         private IConfiguration Configuration { get; }
 
@@ -47,6 +48,7 @@ namespace NinKode.WebApi
             _authAuthorityEndPoint = Configuration.GetValue("AuthAuthorityEndPoint", "https://demo.identityserver.io/connect/authorize");
             _swaggerClientId = Configuration.GetValue("SwaggerClientId", "implicit");
             _swaggerDocumentTitle = Configuration.GetValue("SwaggerDocumentTitle", "NinKode API");
+            _writeAccessRole = Configuration.GetValue("WriteAccessRole", "my_write_access_role");
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -226,7 +228,7 @@ namespace NinKode.WebApi
         private void AddIdentityServerAuthentication(IServiceCollection services)
         {
             var roleClaim = "iss"; //"role";
-            var roleClaimValue = "https://demo.identityserver.io"; //writeAccessRole;
+            var roleClaimValue = _writeAccessRole;
 
             // Users defined at https://demo.identityserver.io has no roles.
             // Using the Issuer-claim (iss) as a substitute to allow authorization with Swagger when testing
