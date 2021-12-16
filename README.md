@@ -1,4 +1,5 @@
 # nin-kode-api
+Gå til url for å bli redirigert til swagger-dokumentasjonen.
 
 ## Drift
 https://nin-kode-api.artsdatabanken.no/
