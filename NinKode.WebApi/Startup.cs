@@ -19,11 +19,11 @@ namespace NinKode.WebApi
     using NinKode.Common.Interfaces;
     using NinKode.Common.Utilities;
     using NinKode.Database.Services;
-    using NinKode.Database.Services.v1;
-    using NinKode.Database.Services.v2;
-    using NinKode.Database.Services.v21;
-    using NinKode.Database.Services.v21b;
-    using NinKode.Database.Services.v22;
+    //using NinKode.Database.Services.v1;
+    //using NinKode.Database.Services.v2;
+    //using NinKode.Database.Services.v21;
+    //using NinKode.Database.Services.v21b;
+    //using NinKode.Database.Services.v22;
     using NinKode.WebApi.Helpers;
 
     public class Startup
@@ -54,6 +54,7 @@ namespace NinKode.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCompression();
             services.AddControllers(o =>
             {
                 o.Conventions.Add(new ControllerDocumentationConvention());
@@ -63,14 +64,14 @@ namespace NinKode.WebApi
             AddSwaggerGenerator(services);
 
             // Define singleton-objects
-            services.AddSingleton<ICodeV1Service, CodeV1Service>();
-            services.AddSingleton<ICodeV2Service, CodeV2Service>();
-            services.AddSingleton<ICodeV21Service, CodeV21Service>();
-            services.AddSingleton<IVarietyV21Service, VarietyV21Service>();
-            services.AddSingleton<ICodeV21BService, CodeV21BService>();
-            services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
-            services.AddSingleton<ICodeV22Service, CodeV22Service>();
-            services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
+            //services.AddSingleton<ICodeV1Service, CodeV1Service>();
+            //services.AddSingleton<ICodeV2Service, CodeV2Service>();
+            //services.AddSingleton<ICodeV21Service, CodeV21Service>();
+            //services.AddSingleton<IVarietyV21Service, VarietyV21Service>();
+            //services.AddSingleton<ICodeV21BService, CodeV21BService>();
+            //services.AddSingleton<IVarietyV21BService, VarietyV21BService>();
+            //services.AddSingleton<ICodeV22Service, CodeV22Service>();
+            //services.AddSingleton<IVarietyV22Service, VarietyV22Service>();
 
             services.AddSingleton<ICodeService, CodeService>();
             services.AddSingleton<IVarietyService, VarietyService>();
@@ -180,32 +181,14 @@ namespace NinKode.WebApi
             //if (env.IsDevelopment())
             //{
             app.UseDeveloperExceptionPage();
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.DocumentTitle = _swaggerDocumentTitle;
-                //c.InjectStylesheet("/css/theme-feeling-blue.css");
-                //c.InjectStylesheet("/css/theme-flattop.css");
-                //c.InjectStylesheet("/css/theme-material.css");
-                //c.InjectStylesheet("/css/theme-monokai.css");
-                //c.InjectStylesheet("/css/theme-muted.css");
-                //c.InjectStylesheet("/css/theme-newspaper.css");
-                //c.InjectStylesheet("/css/theme-outline.css");
-                c.DisplayRequestDuration();
-                c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
-                c.SwaggerEndpoint("/swagger/api/swagger.json", $"{_swaggerDocumentTitle}");
-                //c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
-                //c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
-                //c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
-                //c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
-                //c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
-            });
-            //}
+            //AddSwaggerMiddleware(app);
 
             //app.UseHttpsRedirection();
 
             app.UseRouting();
-            
+
+            AddSwaggerMiddleware(app);
+
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthentication();
@@ -215,9 +198,9 @@ namespace NinKode.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapControllerRoute(
-                    "default",
-                    "{controller=Home}/{action=Index}");
+                //endpoints.MapControllerRoute(
+                //    "default",
+                //    "{controller=Home}/{action=Index}");
             });
 
             //using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
@@ -290,6 +273,41 @@ namespace NinKode.WebApi
                         }
                     };
                 });
+        }
+
+
+
+        private void AddSwaggerMiddleware(IApplicationBuilder app)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.DocumentTitle = _swaggerDocumentTitle;
+                //c.InjectStylesheet("/css/theme-feeling-blue.css");
+                //c.InjectStylesheet("/css/theme-flattop.css");
+                //c.InjectStylesheet("/css/theme-material.css");
+                //c.InjectStylesheet("/css/theme-monokai.css");
+                //c.InjectStylesheet("/css/theme-muted.css");
+                //c.InjectStylesheet("/css/theme-newspaper.css");
+                //c.InjectStylesheet("/css/theme-outline.css");
+                c.DisplayRequestDuration();
+                c.DefaultModelsExpandDepth(-1); // Disable swagger schemas at bottom
+                c.SwaggerEndpoint("/swagger/api/swagger.json", $"{_swaggerDocumentTitle}");
+                //c.SwaggerEndpoint("/swagger/v2.2/swagger.json", $"{_swaggerDocumentTitle} v2.2");
+                //c.SwaggerEndpoint("/swagger/v2.1b/swagger.json", $"{_swaggerDocumentTitle} v2.1b");
+                //c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
+                //c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
+                //c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
+                c.OAuthClientId(_swaggerClientId);
+                c.OAuthAppName(_apiName);
+                c.OAuthScopeSeparator(" ");
+
+                // c.OAuthAdditionalQueryStringParams(new { foo = "bar" });
+                c.OAuthUseBasicAuthenticationWithAccessCodeGrant();
+                //c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "swagger";
+
+            });
         }
     }
 

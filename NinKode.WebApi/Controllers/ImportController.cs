@@ -31,10 +31,22 @@
         /// Check if user has access
         /// </summary>
         /// <returns></returns>
-        [Authorize("WriteAccess")]
+        [Authorize]
         [HttpPost]
         [Route("isauthorized")]
         public string IsAuthorized()
+        {
+            return "ok";
+        }
+
+        /// <summary>
+        /// Check if user has access
+        /// </summary>
+        /// <returns></returns>
+        [Authorize("WriteAccess")]
+        [HttpPost]
+        [Route("isauthorizedwithrole")]
+        public string IsAuthorizedWithRole()
         {
             return "ok";
         }
