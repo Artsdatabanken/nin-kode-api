@@ -40,7 +40,7 @@
         }
 
         /// <summary>
-        /// Check if user has access
+        /// Check if user has write-access
         /// </summary>
         /// <returns></returns>
         [Authorize("WriteAccess")]
