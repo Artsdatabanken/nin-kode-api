@@ -298,7 +298,9 @@ namespace NinKode.WebApi
                 //c.SwaggerEndpoint("/swagger/v2.1/swagger.json", $"{_swaggerDocumentTitle} v2.1");
                 //c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{_swaggerDocumentTitle} v2");
                 //c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{_swaggerDocumentTitle} v1");
+
                 c.OAuthClientId(_swaggerClientId);
+
                 c.OAuthAppName(_apiName);
                 c.OAuthScopeSeparator(" ");
                 c.OAuthScopes(_apiName);
