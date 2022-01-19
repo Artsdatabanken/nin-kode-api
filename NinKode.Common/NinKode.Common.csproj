@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>.\NinKode.Common.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,12 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NiN.Database\NiN.Database.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="NinKode.Common.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
