@@ -275,8 +275,6 @@ namespace NinKode.WebApi
                 });
         }
 
-
-
         private void AddSwaggerMiddleware(IApplicationBuilder app)
         {
             app.UseSwagger();
