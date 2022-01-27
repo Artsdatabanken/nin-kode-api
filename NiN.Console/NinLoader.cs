@@ -61,33 +61,44 @@
                 return;
             }
 
-            var na = codeService.GetCode("NA");
+            // missing systems: LA, LD, LI
+            var ninSystems = new[] { "LA", "LD", "LI", "NA" };
 
-            var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
-            if (ninVersion != null)
+            foreach (var prefix in ninSystems)
             {
-                var natursystem = dbContext.Natursystem.FirstOrDefault(x => x.Version.Id == ninVersion.Id);
-                if (!allowUpdate && natursystem != null)
+                var na = codeService.GetCode(prefix);
+                if (na == null) continue;
+
+                var ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+                if (ninVersion != null)
                 {
-                    Console.WriteLine($"NiN-code version {ninVersion.Navn} exists. Skipping...");
-                    return;
+                    var ninSystem = dbContext.Natursystem
+                        .Include(x => x.Kode)
+                        .FirstOrDefault(x =>
+                            x.Version.Id == ninVersion.Id &&
+                            x.Kode.KodeName.Equals(prefix));
+                    if (!allowUpdate && ninSystem != null)
+                    {
+                        Console.WriteLine($"NiN-code '{prefix}' version {ninVersion.Navn} exists. Skipping...");
+                        continue;
+                    }
                 }
-            }
-            else
-            {
-                ninVersion = new NinVersion { Navn = version };
-                dbContext.NinVersion.Add(ninVersion);
+                else
+                {
+                    ninVersion = new NinVersion { Navn = version };
+                    dbContext.NinVersion.Add(ninVersion);
+                    dbContext.SaveChanges();
+
+                    ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+                }
+
+                AddOrUpdateNatursystem(codeService, dbContext, ninVersion, na);
+
                 dbContext.SaveChanges();
 
-                ninVersion = dbContext.NinVersion.FirstOrDefault(x => x.Navn.Equals(version));
+                _stopwatch.Stop();
+                Console.WriteLine($"Added NiN-code {prefix} version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }
-
-            AddOrUpdateNatursystem(codeService, dbContext, ninVersion, na);
-
-            dbContext.SaveChanges();
-
-            _stopwatch.Stop();
-            Console.WriteLine($"Added NiN-code version {ninVersion.Navn} in {_stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
         #region private methods
@@ -100,7 +111,9 @@
             Natursystem natursystem = null;
             natursystem = dbContext.Natursystem
                 .Include(x => x.Kode)
-                .FirstOrDefault(x => x.Version.Id == ninVersion.Id);
+                .FirstOrDefault(x =>
+                    x.Version.Id == ninVersion.Id &&
+                    x.Kode.KodeName.Equals(na.Kode.Id));
             if (natursystem == null)
             {
                 natursystem = new Natursystem
