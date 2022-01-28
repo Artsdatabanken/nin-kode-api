@@ -9,6 +9,8 @@ https://nin-kode-api.test.artsdatabanken.no/
 
 ## Development
 
+Populate local database: [Console app readme](NIN.Console/README.md)
+
 ### Docker
 
 cd NinKode.WebApi
