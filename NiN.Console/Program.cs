@@ -70,6 +70,12 @@
                     CreateLkmConnection("2.2");
                     CreateLkmConnection("2.3");
                     break;
+                case "unraven":
+                    //todo-sat: receive version param
+                    //todo-sat: Move ravendb to json for current version
+                    Console.WriteLine("!unravening! beyond recognition (todo: impl.)....");
+                    throw new NotImplementedException();
+                    break;
                 case "import":
                     Import();
                     break;

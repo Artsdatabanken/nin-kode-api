@@ -2,7 +2,7 @@
   "profiles": {
     "NiN.Console": {
       "commandName": "Project",
-      "commandLineArgs": "test"
+      "commandLineArgs": "unraven"
     }
   }
 }
