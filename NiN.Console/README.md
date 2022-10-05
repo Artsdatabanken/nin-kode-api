@@ -59,3 +59,16 @@ Yet to be clarified:
 * Does the api use ravendb or do all versions use sqlserver?
 * The purpose of the console app is to move all versions data into a single sqlserver instance?
 
+
+# Vocabulary
+
+## Taxonomy :
+the branch of science concerned with classification, 
+especially of organisms; systematics.
+
+## Variety :
+a taxonomic category that ranks below subspecies (where present) or species, 
+its members differing from others of the same subspecies or 
+species in minor but permanent or heritable characteristics. 
+Varieties are more often recognized in botany, 
+in which they are designated in the style Apium graveolens var. dulce.

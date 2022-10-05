@@ -2,7 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Text.Json;
     using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NinKode.Common.Interfaces;
@@ -18,8 +20,42 @@
         private const string IndexName = "NaturTypes/ByKode";
         private const string RavenDbKeyName = "RavenDbNameV1";
         private const string RavenDbKeyUrl = "RavenDbUrl";
+        private List<NaturTypeV1> allNaturetypes;
 
         private readonly DocumentStore _store;
+
+        public List<NaturTypeV1> AllNaturetypes
+        {
+            get
+            {
+                if (allNaturetypes == null)
+                {
+                    if (File.Exists("test.json"))
+                    {
+                        var text = File.ReadAllText("test.json");
+                        allNaturetypes = JsonSerializer.Deserialize<List<NaturTypeV1>>(text);
+                        return allNaturetypes;
+                    }
+
+                    allNaturetypes = new List<NaturTypeV1>();
+                    using (var session = _store.OpenSession())
+                    {
+                        var query = session.Query<NaturTypeV1>(IndexName);
+                        using (var enumerator = session.Advanced.Stream(query))
+                        {
+                            while (enumerator.MoveNext())
+                            {
+                                allNaturetypes.Add(enumerator.Current?.Document);
+                            }
+                        }
+                    }
+                    string jsonString = JsonSerializer.Serialize(allNaturetypes.ToArray());
+                    System.IO.File.WriteAllText("test.json", jsonString);
+                }
+
+                return allNaturetypes;
+            }
+        }
 
         public CodeV1Service(IConfiguration configuration)
         {
@@ -50,6 +86,8 @@
 
         public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "", bool tree = false)
         {
+            var all = new List<Codes>();
+
             using (var session = _store.OpenSession())
             {
                 var query = session.Query<NaturTypeV1>(IndexName);
@@ -57,10 +95,14 @@
                 {
                     while (enumerator.MoveNext())
                     {
-                        yield return CreateCodesByNaturtype(enumerator.Current?.Document, host);
+                        var naturType = CreateCodesByNaturtype(enumerator.Current?.Document, host);
+                        all.Add(naturType);
+                        yield return naturType;
                     }
                 }
             }
+            string jsonString = JsonSerializer.Serialize(all.ToArray());
+            System.IO.File.WriteAllText("test.json", jsonString);
         }
 
         public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
@@ -89,20 +131,24 @@
             if (string.IsNullOrEmpty(id)) return null;
 
             id = id.Replace("_", " ");
+            var result = AllNaturetypes.Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase)).SingleOrDefault();
 
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<NaturTypeV1>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        return CreateCodeByNaturtype(enumerator.Current?.Document);
-                    }
-                }
-            }
+            if (result == null) return null;
+            return CreateCodeByNaturtype(result);
 
-            return null;
+            //using (var session = _store.OpenSession())
+            //{
+            //    var query = session.Query<NaturTypeV1>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+            //    using (var enumerator = session.Advanced.Stream(query))
+            //    {
+            //        while (enumerator.MoveNext())
+            //        {
+            //            return CreateCodeByNaturtype(enumerator.Current?.Document);
+            //        }
+            //    }
+            //}
+
+            //return null;
         }
 
         #region private methods

@@ -350,4 +350,5 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-.ipynb_checkpoints/*
+# Just a .net ineractive notebook to poc around with C# and custom libs.
+.ipynb_checkpoints

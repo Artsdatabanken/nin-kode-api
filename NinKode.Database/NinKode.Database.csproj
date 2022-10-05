@@ -12,6 +12,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
     <PackageReference Include="NaturalSort.Extension" Version="3.2.0" />
     <PackageReference Include="RavenDB.Client" Version="3.5.9" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.*">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

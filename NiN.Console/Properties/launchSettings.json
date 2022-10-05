@@ -2,7 +2,11 @@
   "profiles": {
     "NiN.Console": {
       "commandName": "Project",
-      "commandLineArgs": "unraven"
+      "commandLineArgs": "import"
+    },
+    "complete": {
+      "commandName": "Project",
+      "commandLineArgs": "complete"
     }
   }
 }
