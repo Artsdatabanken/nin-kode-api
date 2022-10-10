@@ -27,7 +27,7 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateVarietyDatabase(ServiceProvider serviceProvider, string version)
+        public static void CreateVarietyDatabase(ServiceProvider serviceProvider, string version, IConfiguration configuration = null)
         {
             _stopwatch.Reset();
             _stopwatch.Start();
@@ -37,14 +37,15 @@
             switch (version)
             {
                 case "2.1":
-                    varietyService = new VarietyV21Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    varietyService = new VarietyV21Service(configuration);
                     break;
                 case "2.1b":
-                    varietyService = new VarietyV21BService(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    varietyService = new VarietyV21BService(configuration);
                     break;
                 case "2.2":
                 case "2.3":
-                    varietyService = new VarietyV22Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    Console.WriteLine($"Variety for version {version}");
+                    varietyService = new VarietyV22Service(configuration);
                     break;
             }
 

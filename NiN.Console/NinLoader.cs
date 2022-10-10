@@ -25,7 +25,7 @@
     {
         private static Stopwatch _stopwatch = new();
 
-        public static void CreateCodeDatabase(ServiceProvider serviceProvider, string version, bool allowUpdate = false)
+        public static void CreateCodeDatabase(ServiceProvider serviceProvider, string version, bool allowUpdate = false, IConfiguration configuration=null)
         {
             _stopwatch.Reset();
             _stopwatch.Start();
@@ -38,20 +38,23 @@
             switch (version)
             {
                 case "1":
-                    codeService = new CodeV1Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    //codeService = new CodeV1Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    codeService = new CodeV1Service(configuration);
                     break;
                 case "2":
-                    codeService = new CodeV2Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    //codeService = new CodeV2Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    codeService = new CodeV2Service(configuration);
                     break;
                 case "2.1":
-                    codeService = new CodeV21Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    //codeService = new CodeV21Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    codeService = new CodeV21Service(configuration);
                     break;
                 case "2.1b":
-                    codeService = new CodeV21BService(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    codeService = new CodeV21BService(configuration);
                     break;
                 case "2.2":
                 case "2.3":
-                    codeService = new CodeV22Service(new ConfigurationRoot(new List<IConfigurationProvider>()));
+                    codeService = new CodeV22Service(configuration);
                     break;
             }
 

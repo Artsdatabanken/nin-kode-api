@@ -5,6 +5,7 @@
     using System.Diagnostics;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +18,7 @@
         private static readonly Stopwatch Stopwatch = new();
 
         private static ServiceProvider _serviceProvider;
+        private static IConfiguration config;
 
         public static void Main(string[] args)
         {
@@ -24,9 +26,10 @@
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", true, true)
                 .AddJsonFile("appsettings.local.json", true, true)
-                .AddEnvironmentVariables();
+                .AddEnvironmentVariables()
+                .AddUserSecrets(Assembly.GetExecutingAssembly(), true);
 
-            IConfiguration config = builder.Build();
+            config = builder.Build();
 
             var connectionString = config.GetConnectionString("Default");
 
@@ -73,7 +76,12 @@
                 case "unraven":
                     //todo-sat: receive version param
                     //todo-sat: Move ravendb to json for current version
-                    Console.WriteLine("!unravening! beyond recognition (todo: impl.)....");
+                    var p = System.AppContext.BaseDirectory;
+                    var all = config.AsEnumerable();
+                    //Testing fetching sosijson filename for user secrets
+                    var sosiv1jsonFileStr = config.GetValue("SOSINiNv1Json", "");
+                    System.IO.File.WriteAllText($"{sosiv1jsonFileStr}", "123123");
+                    Console.WriteLine($"Current path: {p}");
                     throw new NotImplementedException();
                     break;
                 case "import":
@@ -431,19 +439,19 @@
         {
             Stopwatch.Reset();
             Stopwatch.Start();
-
+            
             Console.WriteLine("Building database...");
 
-            NinLoader.CreateCodeDatabase(_serviceProvider, "1", allowUpdate);
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2", allowUpdate);
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1", allowUpdate);
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b", allowUpdate);
-            NinLoader.CreateCodeDatabase(_serviceProvider, "2.2", allowUpdate);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "1", allowUpdate, config);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2", allowUpdate, config);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1", allowUpdate, config);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.1b", allowUpdate, config);
+            NinLoader.CreateCodeDatabase(_serviceProvider, "2.2", allowUpdate, config);
 
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1");
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1b");
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.2");
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3");
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1", config);
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.1b", config);
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.2", config);
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3", config);
 
             Console.WriteLine("Finished building database");
 

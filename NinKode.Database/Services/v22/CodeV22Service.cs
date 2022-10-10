@@ -2,12 +2,15 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Text.Json;
     using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Code;
     using NinKode.Database.Extension;
+    using NinKode.Database.Model.v21b;
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
@@ -15,41 +18,82 @@
 
     public class CodeV22Service : ICodeV22Service
     {
-        private const string IndexName = "NaturTypes/ByKode";
-        private const string RavenDbKeyName = "RavenDbNameV22";
-        private const string RavenDbKeyUrl = "RavenDbUrl";
+        //private const string IndexName = "NaturTypes/ByKode";
+        //private const string RavenDbKeyName = "RavenDbNameV22";
+        //private const string RavenDbKeyUrl = "RavenDbUrl";
 
-        private readonly DocumentStore _store;
+
+        private List<NaturTypeV22> allNaturetypes;
+        private string _sosiv22jsonFileStr;
+
+        //private readonly DocumentStore _store;
+
+        public List<NaturTypeV22> AllNaturetypes
+        {
+            get
+            {
+                if (allNaturetypes == null)
+                {
+
+                    if (File.Exists(_sosiv22jsonFileStr))
+                    {
+                        var text = File.ReadAllText(_sosiv22jsonFileStr);
+                        allNaturetypes = JsonSerializer.Deserialize<List<NaturTypeV22>>(text);
+                        return allNaturetypes;
+                    }
+
+                    //allNaturetypes = new List<NaturTypeV22>();
+                    //using (var session = _store.OpenSession())
+                    //{
+                    //    var query = session.Query<NaturTypeV22>(IndexName);
+                    //    using (var enumerator = session.Advanced.Stream(query))
+                    //    {
+                    //        while (enumerator.MoveNext())
+                    //        {
+                    //            allNaturetypes.Add(enumerator.Current?.Document);
+                    //        }
+                    //    }
+                    //}
+                    //string jsonString = JsonSerializer.Serialize(allNaturetypes.ToArray());
+                    //System.IO.File.WriteAllText(_sosiv22jsonFileStr, jsonString);
+                }
+
+                return allNaturetypes;
+            }
+        }
 
         public CodeV22Service(IConfiguration configuration)
         {
-            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.2");
-            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+            //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.2");
+            //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+            _sosiv22jsonFileStr = configuration.GetValue("SOSINiNv22Json", "");
 
-            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
-            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+            //if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
+            //if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
 
-            _store = new DocumentStore
-            {
-                DefaultDatabase = dbName,
-                Url = dbUrl
-            };
-            _store.Initialize(true);
+            //_store = new DocumentStore
+            //{
+            //    DefaultDatabase = dbName,
+            //    Url = dbUrl
+            //};
+            //_store.Initialize(true);
 
-            var index = _store.DatabaseCommands.GetIndex(IndexName);
+            //var index = _store.DatabaseCommands.GetIndex(IndexName);
 
-            if (index != null) return;
+            //if (index != null) return;
 
-            _store.DatabaseCommands.PutIndex(IndexName,
-                new IndexDefinition
-                {
-                    Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
-                }
-            );
+            //_store.DatabaseCommands.PutIndex(IndexName,
+            //    new IndexDefinition
+            //    {
+            //        Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
+            //    }
+            //);
         }
 
         public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "", bool tree = false)
         {
+            //var all = new List<Codes>
+            /*
             var list = new List<Codes>();
 
             using (var session = _store.OpenSession())
@@ -66,27 +110,27 @@
 
             list.Sort(new CodesComparer());
 
-            return list;
+            return list;*/
+            return null;
         }
 
         public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            id = id.Replace("_", " ");
+            //id = id.Replace("_", " ");
 
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        return CreateCodesByNaturtype(enumerator.Current?.Document, host);
-                    }
-                }
-            }
-
+            //using (var session = _store.OpenSession())
+            //{
+            //    var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+            //    using (var enumerator = session.Advanced.Stream(query))
+            //    {
+            //        while (enumerator.MoveNext())
+            //        {
+            //            return CreateCodesByNaturtype(enumerator.Current?.Document, host);
+            //        }
+            //    }
+            //}
             return null;
         }
 
@@ -95,20 +139,9 @@
             if (string.IsNullOrEmpty(id)) return null;
 
             id = id.Replace("_", " ");
-
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<NaturTypeV22>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        return CreateCodeByNaturtype(enumerator.Current?.Document);
-                    }
-                }
-            }
-
-            return null;
+            var result = AllNaturetypes.Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+            if (result == null) return null;
+            return CreateCodeByNaturtype(result);
         }
 
         #region private methods

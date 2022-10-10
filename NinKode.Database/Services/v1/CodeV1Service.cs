@@ -17,12 +17,14 @@
 
     public class CodeV1Service : ICodeV1Service
     {
-        private const string IndexName = "NaturTypes/ByKode";
-        private const string RavenDbKeyName = "RavenDbNameV1";
-        private const string RavenDbKeyUrl = "RavenDbUrl";
+        //private const string IndexName = "NaturTypes/ByKode";
+        //private const string RavenDbKeyName = "RavenDbNameV1";
+        //private const string RavenDbKeyUrl = "RavenDbUrl";
+        
         private List<NaturTypeV1> allNaturetypes;
-
-        private readonly DocumentStore _store;
+        private string _sosiv1jsonFileStr;
+        //private readonly DocumentStore _store;
+        
 
         public List<NaturTypeV1> AllNaturetypes
         {
@@ -30,13 +32,15 @@
             {
                 if (allNaturetypes == null)
                 {
-                    if (File.Exists("test.json"))
+
+                    if (File.Exists(_sosiv1jsonFileStr))
                     {
-                        var text = File.ReadAllText("test.json");
+                        var text = File.ReadAllText(_sosiv1jsonFileStr);
                         allNaturetypes = JsonSerializer.Deserialize<List<NaturTypeV1>>(text);
                         return allNaturetypes;
                     }
-
+                    
+                    /*
                     allNaturetypes = new List<NaturTypeV1>();
                     using (var session = _store.OpenSession())
                     {
@@ -50,44 +54,50 @@
                         }
                     }
                     string jsonString = JsonSerializer.Serialize(allNaturetypes.ToArray());
-                    System.IO.File.WriteAllText("test.json", jsonString);
+                    System.IO.File.WriteAllText(_sosiv1jsonFileStr, jsonString);
+                    */
                 }
 
                 return allNaturetypes;
-            }
-        }
-
-        public CodeV1Service(IConfiguration configuration)
-        {
-            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv1");
-            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
-
-            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
-            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
-
-            _store = new DocumentStore
-            {
-                DefaultDatabase = dbName,
-                Url = dbUrl
-            };
-            _store.Initialize(true);
-
-            var index = _store.DatabaseCommands.GetIndex(IndexName);
-
-            if (index != null) return;
-
-            _store.DatabaseCommands.PutIndex(IndexName,
-                new IndexDefinition
-                {
-                    Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
                 }
-            );
+                }
+
+                public CodeV1Service(IConfiguration configuration)
+        {
+            //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv1");
+            //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+            //            var dbName = configuration.GetValue(RavenDbKeyName, "");
+            //            var dbUrl = configuration.GetValue("RavenDbUrl", "");
+            _sosiv1jsonFileStr = configuration.GetValue("SOSINiNv1Json", "");
+            //            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
+            //            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+            
+            /*
+                        _store = new DocumentStore
+                        {
+                            DefaultDatabase = dbName,
+                            Url = dbUrl
+                        };
+                        _store.Initialize(true);
+
+                        var index = _store.DatabaseCommands.GetIndex(IndexName);
+
+                        if (index != null) return;
+
+                        _store.DatabaseCommands.PutIndex(IndexName,
+                            new IndexDefinition
+                            {
+                                Map = "from doc in docs.NaturTypes\nselect new\n{\n\tKode = doc.Kode\n}"
+                            }
+                        );
+                    }
+            */
         }
 
         public IEnumerable<Codes> GetAll(NiNDbContext dbContext, string host, string version = "", bool tree = false)
         {
+            /*
             var all = new List<Codes>();
-
             using (var session = _store.OpenSession())
             {
                 var query = session.Query<NaturTypeV1>(IndexName);
@@ -101,14 +111,17 @@
                     }
                 }
             }
+            
             string jsonString = JsonSerializer.Serialize(all.ToArray());
-            System.IO.File.WriteAllText("test.json", jsonString);
+            System.IO.File.WriteAllText(_sosiv1jsonFileStr, jsonString);
+            */
+            return null;
         }
 
         public Codes GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
             if (string.IsNullOrEmpty(id)) return null;
-
+            /*
             id = id.Replace("_", " ");
 
             using (var session = _store.OpenSession())
@@ -122,7 +135,7 @@
                     }
                 }
             }
-
+            */
             return null;
         }
 

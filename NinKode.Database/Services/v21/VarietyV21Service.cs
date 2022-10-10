@@ -2,82 +2,125 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Text.Json;
     using Microsoft.Extensions.Configuration;
     using NiN.Database;
     using NinKode.Common.Interfaces;
     using NinKode.Common.Models.Variety;
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v21;
+    using NinKode.Database.Model.v21b;
     using Raven.Abstractions.Indexing;
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
     public class VarietyV21Service : IVarietyV21Service
     {
-        private const string IndexName = "Variasjons/ByKode";
-        private const string RavenDbKeyName = "RavenDbNameV21";
-        private const string RavenDbKeyUrl = "RavenDbUrl";
+        //private const string IndexName = "Variasjons/ByKode";
+        //private const string RavenDbKeyName = "RavenDbNameV21";
+        //private const string RavenDbKeyUrl = "RavenDbUrl";
+
+        private List<VariasjonV21> allVariations;
+        private string _variations_v21jsonFileStr;
 
         private readonly DocumentStore _store;
 
+        public List<VariasjonV21> AllVariations
+        {
+            get
+            {
+                if (allVariations == null)
+                {
+
+                    if (File.Exists(_variations_v21jsonFileStr))
+                    {
+                        var text = File.ReadAllText(_variations_v21jsonFileStr);
+                        allVariations = JsonSerializer.Deserialize<List<VariasjonV21>>(text);
+                        return allVariations;
+                    }
+
+                    //allVariations = new List<VariasjonV21>();
+                    //using (var session = _store.OpenSession())
+                    //{
+                    //    var query = session.Query<VariasjonV21>(IndexName);
+                    //    using (var enumerator = session.Advanced.Stream(query))
+                    //    {
+                    //        while (enumerator.MoveNext())
+                    //        {
+                    //            allVariations.Add(enumerator.Current?.Document);
+                    //        }
+                    //    }
+                    //}
+                    //string jsonString = JsonSerializer.Serialize(allVariations.ToArray());
+                    //System.IO.File.WriteAllText(_variations_v21jsonFileStr, jsonString);
+                }
+
+                return allVariations;
+            }
+        }
+
         public VarietyV21Service(IConfiguration configuration)
         {
-            var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.1");
-            var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
+            //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.1");
+            //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
 
-            if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
-            if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
+            _variations_v21jsonFileStr = configuration.GetValue("variations21Json", "");
 
-            _store = new DocumentStore
-            {
-                DefaultDatabase = dbName,
-                Url = dbUrl
-            };
-            _store.Initialize(true);
+            //if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
+            //if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
 
-            var index = _store.DatabaseCommands.GetIndex(IndexName);
+            //_store = new DocumentStore
+            //{
+            //    DefaultDatabase = dbName,
+            //    Url = dbUrl
+            //};
+            //_store.Initialize(true);
 
-            if (index != null) return;
+            //var index = _store.DatabaseCommands.GetIndex(IndexName);
 
-            _store.DatabaseCommands.PutIndex(IndexName,
-                new IndexDefinition
-                {
-                    Map = "from doc in docs.Variasjons\nselect new\n{\n\tKode = doc.Kode\n}"
-                }
-            );
+            //if (index != null) return;
+
+            //_store.DatabaseCommands.PutIndex(IndexName,
+            //    new IndexDefinition
+            //    {
+            //        Map = "from doc in docs.Variasjons\nselect new\n{\n\tKode = doc.Kode\n}"
+            //    }
+            //);
         }
 
         public IEnumerable<VarietyAllCodes> GetAll(NiNDbContext dbContext, string host, string version = "")
         {
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<VariasjonV21>(IndexName);
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        yield return CreateVarietyAllCodes(enumerator.Current?.Document, $"{host}hentkode/");
-                    }
-                }
-            }
+            //using (var session = _store.OpenSession())
+            //{
+            //    var query = session.Query<VariasjonV21>(IndexName);
+            //    using (var enumerator = session.Advanced.Stream(query))
+            //    {
+            //        while (enumerator.MoveNext())
+            //        {
+            //            yield return CreateVarietyAllCodes(enumerator.Current?.Document, $"{host}hentkode/");
+            //        }
+            //    }
+            //}
+            return null;
         }
 
         public VarietyCode GetByKode(NiNDbContext dbContext, string id, string host, string version = "")
         {
-            if (string.IsNullOrEmpty(id)) return null;
+            //if (string.IsNullOrEmpty(id)) return null;
 
-            using (var session = _store.OpenSession())
-            {
-                var query = session.Query<VariasjonV21>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
-                using (var enumerator = session.Advanced.Stream(query))
-                {
-                    while (enumerator.MoveNext())
-                    {
-                        return CreateVarietyCode(enumerator.Current?.Document, host);
-                    }
-                }
-            }
+            //using (var session = _store.OpenSession())
+            //{
+            //    var query = session.Query<VariasjonV21>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
+            //    using (var enumerator = session.Advanced.Stream(query))
+            //    {
+            //        while (enumerator.MoveNext())
+            //        {
+            //            return CreateVarietyCode(enumerator.Current?.Document, host);
+            //        }
+            //    }
+            //}
 
             return null;
         }
@@ -85,7 +128,11 @@
         public VarietyCode GetVariety(string id)
         {
             if (string.IsNullOrEmpty(id)) return null;
+            var result = AllVariations.Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+            if (result == null) return null;
+            return CreateVarietyByCode(result);
 
+            /*
             using (var session = _store.OpenSession())
             {
                 var query = session.Query<VariasjonV21>(IndexName).Where(x => x.Kode.Equals(id, StringComparison.OrdinalIgnoreCase));
@@ -99,6 +146,7 @@
             }
 
             return null;
+           */
         }
 
         #region private methods
