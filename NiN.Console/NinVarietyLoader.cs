@@ -46,6 +46,10 @@
                 case "2.3":
                     Console.WriteLine($"Variety for version {version}");
                     varietyService = new VarietyV22Service(configuration);
+                    if (version.Equals("2.3")){                        
+                        //throw new NotImplementedException();
+                        FixLandform(serviceProvider, Directory.GetCurrentDirectory(),"2.3");
+                    }
                     break;
             }
 

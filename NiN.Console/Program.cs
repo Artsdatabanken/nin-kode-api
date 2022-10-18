@@ -67,6 +67,7 @@
                     Migrate();
                     Import();
                     Import(new[] { "2.3" }, true);
+                    ImportVariasjon("2.3");
                     CreateKartleggingConnection("2.2");
                     CreateKartleggingConnection("2.3");
                     FixLkm(new[] { "2.2", "2.3" });
@@ -76,13 +77,15 @@
                 case "unraven":
                     //todo-sat: receive version param
                     //todo-sat: Move ravendb to json for current version
-                    var p = System.AppContext.BaseDirectory;
-                    var all = config.AsEnumerable();
+                    //var p = System.AppContext.BaseDirectory;
+                    //var all = config.AsEnumerable();
                     //Testing fetching sosijson filename for user secrets
-                    var sosiv1jsonFileStr = config.GetValue("SOSINiNv1Json", "");
-                    System.IO.File.WriteAllText($"{sosiv1jsonFileStr}", "123123");
-                    Console.WriteLine($"Current path: {p}");
-                    throw new NotImplementedException();
+                    //var sosiv1jsonFileStr = config.GetValue("SOSINiNv1Json", "");
+                    //System.IO.File.WriteAllText($"{sosiv1jsonFileStr}", "123123");
+                    //Console.WriteLine($"Current path: {p}");
+                    //throw new NotImplementedException();
+                    //NinVarietyLoader.FixLandform(serviceProvider, Directory.GetCurrentDirectory(),"2.3");
+                    ImportVariasjon("2.3");
                     break;
                 case "import":
                     Import();
@@ -417,7 +420,7 @@
 
             Console.WriteLine($"Building variasjon v{version} ...");
 
-            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, version);
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, version, config);
 
             Console.WriteLine("Finished building variasjon");
 

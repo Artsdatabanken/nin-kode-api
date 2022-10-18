@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.local.json
+annet/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -352,3 +353,4 @@ MigrationBackup/
 
 # Just a .net ineractive notebook to poc around with C# and custom libs.
 .ipynb_checkpoints
+.vs/
