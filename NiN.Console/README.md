@@ -15,9 +15,8 @@ Documentation of parameter
 
 
 ## complete
-* Generates structure
-* Imports all versions of input-files (raven soon to be only json/csv files)
-* Also imports all variaty-levels
+* Construct the entire NiNkode-database from scratch. 
+* Extra params: none
 
 
 ## unraven
@@ -41,7 +40,7 @@ Documentation of parameter
 
 Create and import sourcedata into new database
 
-## Requirements: 
+Requirements: 
 - connectionString in appsettings.json:
 ```json
 {
@@ -50,19 +49,6 @@ Create and import sourcedata into new database
   }
 }
 ```
-
-### Configuration
--user secrets, secrets.json:
-These properties are expected (example values added):
-'''
-{
-  "SOSINiNv1Json": "CsvFiles/SOSINiNv1.json",
-  "SOSINiNv2Json": "CsvFiles/SOSINiNv2.json",
-  "SOSINiNv2.1Json": "CsvFiles/SOSINiNv2.1.json",
-  "SOSINiNv2.1BJson": "CsvFiles/SOSINiNv2.1B.json",
-  "SOSINiNv2.2Json": "CsvFiles/SOSINiNv2.2.json"
-}
-'''
 Ravendb databases must exists from old service on ravendb 3.5 localhost:
 - SOSINiNv1
 - SOSINiNv2
