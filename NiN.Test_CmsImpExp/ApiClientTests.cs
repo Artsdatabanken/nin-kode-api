@@ -199,6 +199,8 @@ Roy;55";
 
         [Fact]
         public void TestGetImagesAndDownload() {
+            string[] paramz = { Config.Image_path };
+            CleanUp("TestDownload", paramz);
             /*
              *  L1-C-5:  Nodes/317956
              *  L1-C-6:  Nodes/317959
@@ -222,7 +224,7 @@ Roy;55";
             //todo-sat: download each file to image folder.
             int count = new System.IO.DirectoryInfo(Config.Image_path).GetFiles().Length;
             count.Should().Be(7);
-            string[] paramz = { Config.Image_path};
+            
             CleanUp("TestDownload", paramz);
         }
 
