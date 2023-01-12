@@ -56,6 +56,10 @@
                 case "2.3":
                     codeService = new CodeV22Service(configuration);
                     break;
+                case "3.0":
+                    //codeService = new CodeV30Service(configuration);
+                    Console.WriteLine("CreateCodeDatabase for 3.0, not yet impl.");
+                    break;
             }
 
             if (codeService == null)

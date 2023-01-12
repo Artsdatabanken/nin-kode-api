@@ -14,9 +14,10 @@ Console.WriteLine("Hello there, write command or type 'Help' for options");
 var apiClient = new ApiClient();
 var run = true;
 var meny = @"Commands:
+            help    : this menu
             info    : show settings/config
             testexp : Testexport of 2 pages
-            export  : Run the full (all pages with text and images)            
+            export  : Run the entire export (all pages with text and images)            
             exit    : Close program";
 while (run) {
     var input = Prompt.Input<string>("cmsimpexp ");

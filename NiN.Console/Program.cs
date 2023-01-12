@@ -74,6 +74,15 @@
                     CreateLkmConnection("2.2");
                     CreateLkmConnection("2.3");
                     break;
+                case "30":
+                    Migrate();
+                    Import30();
+                    //CreateKartleggingConnection("3.0");
+                    //CreateLkmConnection("3.0");
+                    // ? FixLkm(new[] {"3.0"});
+                    //CreateLkmConnection("3.0");
+                    Console.WriteLine("30 here");
+                    break;
                 case "unraven":
                     //todo-sat: receive version param
                     //todo-sat: Move ravendb to json for current version
@@ -456,10 +465,22 @@
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.2", config);
             NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "2.3", config);
 
+            
             Console.WriteLine("Finished building database");
 
             Stopwatch.Stop();
 
+            Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
+        // assuming 3.0 can have a complete isolated creation
+        private static void Import30(bool allowUpdate = false) { 
+            Stopwatch.Reset();
+            Stopwatch.Start();
+            Console.WriteLine("Building database...");
+            NinLoader.CreateCodeDatabase(_serviceProvider, "3.0", allowUpdate, config);
+            NinVarietyLoader.CreateVarietyDatabase(_serviceProvider, "3.0", config);
+            Stopwatch.Stop();
             Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
@@ -475,10 +496,8 @@
             {
                 Stopwatch.Reset();
                 Stopwatch.Start();
-
                 var ninCodeImport = new NinCodeImport(dbContext, argument);
                 ninCodeImport.ImportCompleteNin($"CsvFiles\\v{argument}", allowUpdate);
-
                 Stopwatch.Stop();
                 Console.WriteLine($"v{argument}: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
             }

@@ -12,20 +12,20 @@
     using Raven.Client.Document;
     using Raven.Json.Linq;
 
-    public class ImportNaturtypeService
+    public class ImportV30NaturtypeService
     {
         private const string PrimaryIndex = "Raven/DocumentsByEntityName";
         public readonly IConfiguration _configuration;
         public readonly string _dbUrl;
         public readonly Action<string, bool> _logCallback;
-        private readonly CodeV22Service _codeV22Service;
+        private readonly CodeV30Service _codeV30Service;
 
-        public ImportNaturtypeService(IConfiguration configuration, Action<string, bool> logCallback)
+        public ImportV30NaturtypeService(IConfiguration configuration, Action<string, bool> logCallback)
         {
             _configuration = configuration;
             _dbUrl = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/");
             _logCallback = logCallback;
-            _codeV22Service = new CodeV22Service(configuration);
+            _codeV30Service = new CodeV22Service(configuration);
         }
 
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
@@ -56,7 +56,7 @@
 
             foreach (var code in naKode.UnderordnetKoder)
             {
-                naKode = _codeV22Service.GetByKode(null, code.Id, _dbUrl);
+                naKode = _codeV30Service.GetByKode(null, code.Id, _dbUrl);
                 if (naKode == null)
                 {
                     naKode = codeV21Service.GetByKode(null, code.Id, _dbUrl);

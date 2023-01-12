@@ -5,12 +5,15 @@
       "commandLineArgs": "import"
     },
     "complete": {
-      "commandName": "Project",
-      "commandLineArgs": "complete"
+      "commandName": "Project"
     },
     "unraven": {
       "commandName": "Project",
       "commandLineArgs": "unraven"
+    },
+    "run 3.0": {
+      "commandName": "Project",
+      "commandLineArgs": "30"
     }
   }
 }
