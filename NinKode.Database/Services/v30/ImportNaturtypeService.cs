@@ -25,13 +25,13 @@
             _configuration = configuration;
             _dbUrl = configuration.GetValue("RavenDbUrl", "http://it-webadb01.it.ntnu.no:8180/");
             _logCallback = logCallback;
-            _codeV30Service = new CodeV22Service(configuration);
+            _codeV30Service = new CodeV30Service(configuration);
         }
 
         public void Import(IDocumentStore store, Miljovariabel miljovariabel, string rootName)
         {
-            var codeV21Service = new v21.CodeV21Service(_configuration);
-            var naKode = codeV21Service.GetByKode(null, rootName, _dbUrl);
+            var codeV30Service = new CodeV30Service(_configuration);
+            var naKode = codeV30Service.GetByKode(null, rootName, _dbUrl);
 
             var rootNaturtype = new NaturTypeV22
             {
@@ -59,7 +59,7 @@
                 naKode = _codeV30Service.GetByKode(null, code.Id, _dbUrl);
                 if (naKode == null)
                 {
-                    naKode = codeV21Service.GetByKode(null, code.Id, _dbUrl);
+                    naKode = codeV30Service.GetByKode(null, code.Id, _dbUrl);
                     // add to current database
                     var missing = new NaturTypeV22
                     {
