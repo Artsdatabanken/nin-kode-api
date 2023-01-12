@@ -16,7 +16,7 @@
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
-    public class CodeV22Service : ICodeV22Service
+    public class CodeV30Service : ICodeV30Service
     {
         //private const string IndexName = "NaturTypes/ByKode";
         //private const string RavenDbKeyName = "RavenDbNameV22";
@@ -62,7 +62,7 @@
             }
         }
 
-        public CodeV22Service(IConfiguration configuration)
+        public CodeV30Service(IConfiguration configuration)
         {
             //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.2");
             //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");

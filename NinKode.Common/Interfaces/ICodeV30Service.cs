@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace NinKode.Common.Interfaces
 {
-    internal interface Interface1
-    {
-    }
+    public interface ICodeV30Service : ICodeService { }
 }
