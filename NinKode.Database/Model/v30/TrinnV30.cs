@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Model.v22
+﻿namespace NinKode.Database.Model.v30
 {
     public class TrinnV30
     {
@@ -9,6 +9,6 @@
         public string OverordnetKode { get; set; }
         public string[] UnderordnetKoder { get; set; }
         public string Type { get; set; }
-        public SubTrinnV22[] Trinn { get; set; }
+        public SubTrinnV30[] Trinn { get; set; }
     }
 }

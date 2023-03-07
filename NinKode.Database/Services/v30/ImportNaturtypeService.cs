@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Services.v22
+﻿namespace NinKode.Database.Services.v30
 {
     using System;
     using System.Collections.Generic;
@@ -151,7 +151,7 @@
 
                 if (parent == null) continue;
 
-                var trinn = new TrinnV22
+                var trinn = new TrinnV30
                 {
                     Kode = hovedtypeTrinn.Gradientkode,
                     Type = "Miljøvariabel",
@@ -209,7 +209,7 @@
                 }
                 else
                 {
-                    var list = new List<TrinnV22>();
+                    var list = new List<TrinnV30>();
                     list.AddRange(parent.Trinn);
                     list.Add(trinn);
                     parent.Trinn = list.ToArray();

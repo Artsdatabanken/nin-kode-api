@@ -20,6 +20,7 @@
     using NinKode.Database.Services.v21;
     using NinKode.Database.Services.v21b;
     using NinKode.Database.Services.v22;
+    using NinKode.Database.Services.v30;
 
     public static class NinLoader
     {
@@ -57,7 +58,7 @@
                     codeService = new CodeV22Service(configuration);
                     break;
                 case "3.0":
-                    //codeService = new CodeV30Service(configuration);
+                    codeService = new CodeV30Service(configuration);
                     Console.WriteLine("CreateCodeDatabase for 3.0, not yet impl.");
                     break;
             }

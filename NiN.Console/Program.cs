@@ -74,7 +74,11 @@
                     CreateLkmConnection("2.2");
                     CreateLkmConnection("2.3");
                     break;
+                case "23":
+                    Migrate();                   
+                    break;
                 case "30":
+                    connectionString = config.GetConnectionString("v3.0");
                     Migrate();
                     Import30();
                     //CreateKartleggingConnection("3.0");
@@ -94,7 +98,7 @@
                     //Console.WriteLine($"Current path: {p}");
                     //throw new NotImplementedException();
                     //NinVarietyLoader.FixLandform(serviceProvider, Directory.GetCurrentDirectory(),"2.3");
-                    ImportVariasjon("2.3");
+                    //ImportVariasjon("2.3");
                     break;
                 case "import":
                     Import();
@@ -473,7 +477,7 @@
             Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
         }
 
-        // assuming 3.0 can have a complete isolated creation
+        // assuming 3.0 can have a completely isolated creation
         private static void Import30(bool allowUpdate = false) { 
             Stopwatch.Reset();
             Stopwatch.Start();

@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Services.v22
+﻿namespace NinKode.Database.Services.v30
 {
     using System;
     using System.Collections.Generic;
@@ -16,26 +16,26 @@
     using Raven.Client.Document;
     using Raven.Client.Linq;
 
-    public class VarietyV22Service : IVarietyV22Service
+    public class VarietyV30Service : IVarietyV22Service
     {
         //private const string IndexName = "Variasjons/ByKode";
         //private const string RavenDbKeyName = "RavenDbNameV22";
         //private const string RavenDbKeyUrl = "RavenDbUrl";
 
-        private List<VariasjonV22> allVariations;
-        private string _variations_v22jsonFileStr;
+        private List<VariasjonV30> allVariations;
+        private string _variations_v30jsonFileStr;
 
-        public List<VariasjonV22> AllVariations
+        public List<VariasjonV30> AllVariations
         {
             get
             {
                 if (allVariations == null)
                 {
 
-                    if (File.Exists(_variations_v22jsonFileStr))
+                    if (File.Exists(_variations_v30jsonFileStr))
                     {
-                        var text = File.ReadAllText(_variations_v22jsonFileStr);
-                        allVariations = JsonSerializer.Deserialize<List<VariasjonV22>>(text);
+                        var text = File.ReadAllText(_variations_v30jsonFileStr);
+                        allVariations = JsonSerializer.Deserialize<List<VariasjonV30>>(text);
                         return allVariations;
                     }
 
@@ -52,7 +52,7 @@
                     //    }
                     //}
                     //string jsonString = JsonSerializer.Serialize(allVariations.ToArray());
-                    //System.IO.File.WriteAllText(_variations_v22jsonFileStr, jsonString);
+                    //System.IO.File.WriteAllText(_variations_v30jsonFileStr, jsonString);
                 }
 
                 return allVariations;
@@ -61,7 +61,7 @@
 
         //private readonly DocumentStore _store;
 
-        public VarietyV22Service(IConfiguration configuration)
+        public VarietyV30Service(IConfiguration configuration)
         {
             //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2.2");
             //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
@@ -69,7 +69,7 @@
             //if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
             //if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
 
-            _variations_v22jsonFileStr = configuration.GetValue("variations22Json", "");
+            _variations_v30jsonFileStr = configuration.GetValue("variations22Json", "");
 
             //_store = new DocumentStore
             //{
@@ -150,7 +150,7 @@
 
         #region private methods
 
-        private static VarietyCode CreateVarietyByCode(VariasjonV22 variasjon)
+        private static VarietyCode CreateVarietyByCode(VariasjonV30 variasjon)
         {
             if (variasjon == null) return null;
 
@@ -170,7 +170,7 @@
             };
         }
 
-        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV22 variasjon, string host)
+        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV30 variasjon, string host)
         {
             if (variasjon == null) return null;
 
@@ -208,7 +208,7 @@
             }
         }
 
-        private static VarietyCode CreateVarietyCode(VariasjonV22 variasjon, string host)
+        private static VarietyCode CreateVarietyCode(VariasjonV30 variasjon, string host)
         {
             if (variasjon == null) return null;
 

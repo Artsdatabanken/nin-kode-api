@@ -22,10 +22,10 @@
         //private const string RavenDbKeyName = "RavenDbNameV22";
         //private const string RavenDbKeyUrl = "RavenDbUrl";
 
-        private List<VariasjonV22> allVariations;
+        private List<VariasjonV30> allVariations;
         private string _variations_v22jsonFileStr;
 
-        public List<VariasjonV22> AllVariations
+        public List<VariasjonV30> AllVariations
         {
             get
             {
@@ -35,7 +35,7 @@
                     if (File.Exists(_variations_v22jsonFileStr))
                     {
                         var text = File.ReadAllText(_variations_v22jsonFileStr);
-                        allVariations = JsonSerializer.Deserialize<List<VariasjonV22>>(text);
+                        allVariations = JsonSerializer.Deserialize<List<VariasjonV30>>(text);
                         return allVariations;
                     }
 
@@ -52,7 +52,7 @@
                     //    }
                     //}
                     //string jsonString = JsonSerializer.Serialize(allVariations.ToArray());
-                    //System.IO.File.WriteAllText(_variations_v22jsonFileStr, jsonString);
+                    //System.IO.File.WriteAllText(_variations_v30jsonFileStr, jsonString);
                 }
 
                 return allVariations;
@@ -150,7 +150,7 @@
 
         #region private methods
 
-        private static VarietyCode CreateVarietyByCode(VariasjonV22 variasjon)
+        private static VarietyCode CreateVarietyByCode(VariasjonV30 variasjon)
         {
             if (variasjon == null) return null;
 
@@ -170,7 +170,7 @@
             };
         }
 
-        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV22 variasjon, string host)
+        private static VarietyAllCodes CreateVarietyAllCodes(VariasjonV30 variasjon, string host)
         {
             if (variasjon == null) return null;
 
@@ -208,7 +208,7 @@
             }
         }
 
-        private static VarietyCode CreateVarietyCode(VariasjonV22 variasjon, string host)
+        private static VarietyCode CreateVarietyCode(VariasjonV30 variasjon, string host)
         {
             if (variasjon == null) return null;
 

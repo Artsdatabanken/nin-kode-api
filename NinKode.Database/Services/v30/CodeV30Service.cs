@@ -1,4 +1,4 @@
-﻿namespace NinKode.Database.Services.v22
+﻿namespace NinKode.Database.Services.v30
 {
     using System;
     using System.Collections.Generic;
@@ -230,7 +230,7 @@
             return result;
         }
 
-        private static IEnumerable<EnvironmentVariable> CreateTrinn(IEnumerable<TrinnV22> naturTypeTrinn)
+        private static IEnumerable<EnvironmentVariable> CreateTrinn(IEnumerable<TrinnV30> naturTypeTrinn)
         {
             var list = naturTypeTrinn.Select(x => new EnvironmentVariable
             {

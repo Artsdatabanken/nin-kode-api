@@ -20,7 +20,7 @@
 
         public void Import(IDocumentStore store)
         {
-            var variasjoner = new Dictionary<string, VariasjonV22>();
+            var variasjoner = new Dictionary<string, VariasjonV30>();
 
             using var session = store.OpenSession();
             var indexes = GetIndexes(session.Advanced.DocumentStore).ToList();
@@ -44,7 +44,7 @@
         #region private methods
 
         private void ProcessBeskrivelsessystem(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -62,12 +62,12 @@
                 var beskrivelsesSystem = enumerator.Current?.Document;
                 if (beskrivelsesSystem == null) continue;
 
-                VariasjonV22 variasjon;
+                VariasjonV30 variasjon;
                 if (variasjoner.ContainsKey(beskrivelsesSystem.Kode))
                 {
                     if (variasjoner.ContainsKey(beskrivelsesSystem.Nivaa2Kode)) continue;
 
-                    variasjon = new VariasjonV22
+                    variasjon = new VariasjonV30
                     {
                         Kode = beskrivelsesSystem.Nivaa2Kode,
                         Navn = beskrivelsesSystem.col3,
@@ -76,7 +76,7 @@
                 }
                 else
                 {
-                    variasjon = new VariasjonV22
+                    variasjon = new VariasjonV30
                     {
                         Kode = beskrivelsesSystem.Kode,
                         Navn = beskrivelsesSystem.Variabelgruppe,
@@ -89,7 +89,7 @@
                     if (!beskrivelsesSystem.Nivaa2Kode.Equals("BeSys1,BeSys2,BeSys3,BeSys4,BeSys5,BeSys6,BeSys7,BeSys8,BeSys9")
                         && !variasjoner.ContainsKey(beskrivelsesSystem.Nivaa2Kode))
                     {
-                        var child = new VariasjonV22
+                        var child = new VariasjonV30
                         {
                             Kode = beskrivelsesSystem.Nivaa2Kode,
                             Navn = beskrivelsesSystem.col3,
@@ -104,7 +104,7 @@
         }
 
         private void ProcessTilstand(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -128,7 +128,7 @@
                 var parentKode = variasjonTilstand.Nivaa2KodeNy;
                 if (string.IsNullOrEmpty(parentKode))
                 {
-                    variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV22
+                    variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV30
                     {
                         Kode = variasjonTilstand.SammensattKode,
                         Navn = variasjonTilstand.Trinnbeskrivelse,
@@ -137,7 +137,7 @@
                     continue;
                 }
 
-                variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonTilstand.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonTilstand.SammensattKode,
                     Navn = variasjonTilstand.Trinnbeskrivelse,
@@ -146,7 +146,7 @@
 
                 if (variasjoner.ContainsKey(parentKode)) continue;
 
-                variasjoner.Add(parentKode, new VariasjonV22
+                variasjoner.Add(parentKode, new VariasjonV30
                 {
                     Kode = parentKode,
                     Navn = variasjonTilstand.Variabel,
@@ -156,7 +156,7 @@
         }
 
         private void ProcessTerrengform(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -177,7 +177,7 @@
 
                 if (variasjoner.ContainsKey(variasjonTerrengform.SammensattKode)) continue;
 
-                variasjoner.Add(variasjonTerrengform.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonTerrengform.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonTerrengform.SammensattKode,
                     Navn = variasjonTerrengform.Vaiabelnavn,
@@ -187,7 +187,7 @@
         }
 
         private void ProcessRomlig(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -210,7 +210,7 @@
 
                 if (string.IsNullOrEmpty(variasjonRomlig.Trinn))
                 {
-                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV30
                     {
                         Kode = variasjonRomlig.SammensattKode,
                         Navn = variasjonRomlig.Navn,
@@ -221,7 +221,7 @@
 
                 if (string.IsNullOrEmpty(variasjonRomlig.VariabelType) || variasjonRomlig.VariabelType.Equals("T", StringComparison.OrdinalIgnoreCase))
                 {
-                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                    variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV30
                     {
                         Kode = variasjonRomlig.SammensattKode,
                         Navn = variasjonRomlig.Forklaring,
@@ -231,7 +231,7 @@
                 }
 
                 var parentKode = $"BeSys{variasjonRomlig.Kode}";
-                variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonRomlig.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonRomlig.SammensattKode,
                     Navn = variasjonRomlig.Navn,
@@ -241,7 +241,7 @@
         }
 
         private void ProcessRegional(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -263,7 +263,7 @@
                 if (variasjoner.ContainsKey(variasjonRegional.SammensattKode)) continue;
 
                 var parentKode = $"{variasjonRegional.col_0}{variasjonRegional.Kode}";
-                variasjoner.Add(variasjonRegional.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonRegional.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonRegional.SammensattKode,
                     Navn = variasjonRegional.KlasseTrinnbetegnelse,
@@ -277,7 +277,7 @@
                     variasjoner.Remove(parentKode);
                 }
 
-                variasjoner.Add(parentKode, new VariasjonV22
+                variasjoner.Add(parentKode, new VariasjonV30
                 {
                     Kode = parentKode,
                     Navn = variasjonRegional.col_1,
@@ -287,7 +287,7 @@
         }
 
         private void ProcessNaturgitt(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -309,7 +309,7 @@
                 if (variasjoner.ContainsKey(variasjonNaturgitt.SammensattKode)) continue;
 
                 var parentKode = variasjonNaturgitt.Nivaa2KodeNy;
-                variasjoner.Add(variasjonNaturgitt.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonNaturgitt.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonNaturgitt.SammensattKode,
                     Navn = variasjonNaturgitt.Verdi,
@@ -323,7 +323,7 @@
                 {
                     parentKode = $"{variasjonNaturgitt.Besys}{variasjonNaturgitt.Nivaa1kode}";
                 }
-                variasjoner.Add(kode, new VariasjonV22
+                variasjoner.Add(kode, new VariasjonV30
                 {
                     Kode = kode,
                     Navn = variasjonNaturgitt.Nivaa2Beskrivelse,
@@ -333,7 +333,7 @@
                 if (variasjoner.ContainsKey(parentKode)) continue;
 
                 parentKode = $"{variasjonNaturgitt.Besys}{variasjonNaturgitt.Nivaa1kode}";
-                variasjoner.Add(parentKode, new VariasjonV22
+                variasjoner.Add(parentKode, new VariasjonV30
                 {
                     Kode = parentKode,
                     Navn = variasjonNaturgitt.Nivaa2Beskrivelse,
@@ -342,7 +342,7 @@
 
                 if (variasjoner.ContainsKey(parentKode)) continue;
 
-                variasjoner.Add(parentKode, new VariasjonV22
+                variasjoner.Add(parentKode, new VariasjonV30
                 {
                     Kode = parentKode,
                     Navn = variasjonNaturgitt.col_2,
@@ -352,7 +352,7 @@
         }
 
         private void ProcessMenneskeskapt(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -375,7 +375,7 @@
                 {
                     if (string.IsNullOrEmpty(variasjonMenneskeskapt.Navn))
                     {
-                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV30
                         {
                             Kode = variasjonMenneskeskapt.SammensattKode,
                             Navn = variasjonMenneskeskapt.Verdi,
@@ -384,14 +384,14 @@
                     }
                     else
                     {
-                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                        variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV30
                         {
                             Kode = variasjonMenneskeskapt.SammensattKode,
                             Navn = variasjonMenneskeskapt.Navn,
                             OverordnetKode = variasjonMenneskeskapt.Nivaa2_Kode
                         });
                         if (variasjoner.ContainsKey(variasjonMenneskeskapt.Nivaa2_Kode)) continue;
-                        variasjoner.Add(variasjonMenneskeskapt.Nivaa2_Kode, new VariasjonV22
+                        variasjoner.Add(variasjonMenneskeskapt.Nivaa2_Kode, new VariasjonV30
                         {
                             Kode = variasjonMenneskeskapt.Nivaa2_Kode,
                             Navn = variasjonMenneskeskapt.col_5,
@@ -403,7 +403,7 @@
 
                 if (variasjoner.ContainsKey(variasjonMenneskeskapt.SammensattKode)) continue;
 
-                variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV22
+                variasjoner.Add(variasjonMenneskeskapt.SammensattKode, new VariasjonV30
                 {
                     Kode = variasjonMenneskeskapt.SammensattKode,
                     Navn = variasjonMenneskeskapt.Verdi,
@@ -412,7 +412,7 @@
 
                 if (!variasjoner.ContainsKey(variasjonMenneskeskapt.Nivaa2KodeNy))
                 {
-                    variasjoner.Add(variasjonMenneskeskapt.Nivaa2KodeNy, new VariasjonV22
+                    variasjoner.Add(variasjonMenneskeskapt.Nivaa2KodeNy, new VariasjonV30
                     {
                         Kode = variasjonMenneskeskapt.Nivaa2KodeNy,
                         Navn = variasjonMenneskeskapt.Navn,
@@ -422,7 +422,7 @@
 
                 var kode = $"{variasjonMenneskeskapt.col_0}{variasjonMenneskeskapt.Nivaa1kode}-{variasjonMenneskeskapt.Nivaa2Kode}";
                 if (variasjoner.ContainsKey(kode)) continue;
-                variasjoner.Add(kode, new VariasjonV22
+                variasjoner.Add(kode, new VariasjonV30
                 {
                     Kode = kode,
                     Navn = variasjonMenneskeskapt.col_5,
@@ -432,7 +432,7 @@
         }
 
         private void ProcessLandform(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -456,7 +456,7 @@
 
                 if (!variasjoner.ContainsKey(parentKode))
                 {
-                    var parent = new VariasjonV22
+                    var parent = new VariasjonV30
                     {
                         Kode = parentKode,
                         Navn = variasjonGeo.col_3,
@@ -467,7 +467,7 @@
 
                 if (variasjoner.ContainsKey(variasjonGeo.SammensattKode)) continue;
 
-                var variasjon = new VariasjonV22
+                var variasjon = new VariasjonV30
                 {
                     Kode = $"{variasjonGeo.SammensattKode}",
                     Navn = $"{variasjonGeo.Navn}",
@@ -480,7 +480,7 @@
         }
 
         private void ProcessGeologisksammensetning(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -501,7 +501,7 @@
 
                 if (variasjonGeo.Variabeltype.Equals("M", StringComparison.OrdinalIgnoreCase))
                 {
-                    variasjoner.Add(variasjonGeo.Nivaa2KodeNy, new VariasjonV22
+                    variasjoner.Add(variasjonGeo.Nivaa2KodeNy, new VariasjonV30
                     {
                         Kode = variasjonGeo.Nivaa2KodeNy,
                         Navn = variasjonGeo.col_5,
@@ -515,7 +515,7 @@
 
                 if (!variasjoner.ContainsKey(parentKode))
                 {
-                    var parent = new VariasjonV22
+                    var parent = new VariasjonV30
                     {
                         Kode = parentKode,
                         Navn = variasjonGeo.col_5,
@@ -526,7 +526,7 @@
 
                 if (variasjoner.ContainsKey(variasjonGeo.SammensattKode)) continue;
 
-                var variasjon = new VariasjonV22
+                var variasjon = new VariasjonV30
                 {
                     Kode = $"{variasjonGeo.SammensattKode}",
                     Navn = $"{variasjonGeo.Navn}",
@@ -539,7 +539,7 @@
         }
 
         private void ProcessArtssammensetning(
-            ref Dictionary<string, VariasjonV22> variasjoner,
+            ref Dictionary<string, VariasjonV30> variasjoner,
             IDocumentSession session,
             IEnumerable<string> indexes)
         {
@@ -549,7 +549,7 @@
             //);
             variasjoner.Add(
                 "1AR-A-0",
-                new VariasjonV22 { Kode = "1AR-A-0", Navn = "Dominansutforming", OverordnetKode = "1AR" }
+                new VariasjonV30 { Kode = "1AR-A-0", Navn = "Dominansutforming", OverordnetKode = "1AR" }
             );
 
             var indexName = "_Variasjon_Artssammensetning";
@@ -582,7 +582,7 @@
 
                 if (!variasjoner.ContainsKey(parentKode))
                 {
-                    var parent = new VariasjonV22
+                    var parent = new VariasjonV30
                     {
                         Kode = parentKode,
                         Navn = variasjonArt.Nivaa2beskrivelse,
@@ -593,7 +593,7 @@
 
                 if (variasjoner.ContainsKey(variasjonArt.SammensattKode)) continue;
 
-                var variasjon = new VariasjonV22
+                var variasjon = new VariasjonV30
                 {
                     Kode = $"{variasjonArt.SammensattKode}",
                     Navn = $"{variasjonArt.NavnForklaring}",
@@ -605,7 +605,7 @@
             }
         }
 
-        private static void FixChildrenAndParents(IDictionary<string, VariasjonV22> variasjoner)
+        private static void FixChildrenAndParents(IDictionary<string, VariasjonV30> variasjoner)
         {
             foreach (var element in variasjoner)
             {
@@ -634,7 +634,7 @@
             }
         }
 
-        private static void SaveVariasjoner(IDocumentStore store, IDictionary<string, VariasjonV22> variasjoner)
+        private static void SaveVariasjoner(IDocumentStore store, IDictionary<string, VariasjonV30> variasjoner)
         {
             using var bulk = store.BulkInsert(null, new BulkInsertOptions { OverwriteExisting = true });
 

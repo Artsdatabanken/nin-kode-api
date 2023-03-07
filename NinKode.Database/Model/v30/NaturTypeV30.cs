@@ -1,8 +1,8 @@
-﻿namespace NinKode.Database.Model.v22
+﻿namespace NinKode.Database.Model.v30
 {
     using System.Collections.Generic;
 
-    public class NaturTypeV22
+    public class NaturTypeV30
     {
         public int DatabankId { get; set; }
         public string Navn { get; set; }

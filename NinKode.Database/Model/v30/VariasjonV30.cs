@@ -1,14 +1,14 @@
-﻿namespace NinKode.Database.Model.v22
+﻿namespace NinKode.Database.Model.v30
 {
-    public class TrinnV30
+    using System.Collections.Generic;
+
+    public class VariasjonV30
     {
-        public string Id { get; set; }
         public string Navn { get; set; }
         public string Kode { get; set; }
-        public string LKMKategori { get; set; }
         public string OverordnetKode { get; set; }
         public string[] UnderordnetKoder { get; set; }
         public string Type { get; set; }
-        public SubTrinnV22[] Trinn { get; set; }
+        public IList<VariasjonV30> Trinn { get; set; }
     }
 }
