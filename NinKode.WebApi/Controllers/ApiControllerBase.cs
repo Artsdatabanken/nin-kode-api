@@ -1,36 +1,38 @@
-﻿namespace NinKode.WebApi.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using NiN.Database;
+
+namespace NinKode.WebApi.Controllers;
+
+[ApiController]
+[Produces("application/json")]
+public abstract class ApiControllerBase<T> : ControllerBase where T : ApiControllerBase<T>
 {
-    using System;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.DependencyInjection;
-    using NiN.Database;
+    private NiNDbContext _dbContext;
 
-    public abstract class ApiControllerBase<T> : Controller where T : ApiControllerBase<T>
+    protected NiNDbContext DbContext => _dbContext ??= HttpContext.RequestServices.GetService<NiNDbContext>();
+
+    protected string GetHostPath()
     {
-        private NiNDbContext _dbContext;
+        var path = Request.Path.Value;
+        
+        if (path == null) 
+            return null;
 
-        protected NiNDbContext DbContext => _dbContext ??= HttpContext.RequestServices.GetService<NiNDbContext>();
+        path = path[..(path.LastIndexOf("/", StringComparison.Ordinal) + 1)];
+        
+        var protocol = Request.IsHttps ? "s" : "";
+        
+        return $"http{protocol}://{Request.Host}{path}";
+    }
 
-        internal string GetHostPath()
-        {
-            var path = Request.Path.Value;
-            if (path == null) return null;
+    protected string GetVersion()
+    {
+        var requestedApiVersion = HttpContext.GetRequestedApiVersion() ?? throw new Exception("ApiVersion is required");
+        var apiVersion = requestedApiVersion.ToString("VVS");
 
-            path = path[..(path.LastIndexOf("/", StringComparison.Ordinal) + 1)];
-            var protocol = Request.IsHttps ? "s" : "";
-            return $"http{protocol}://{Request.Host}{path}";
-        }
+        if (apiVersion.EndsWith(".0"))
+            apiVersion = apiVersion.Replace(".0", string.Empty);
 
-        internal string GetVersion(string defaultVersion)
-        {
-            var version = RouteData.Values["version"]?.ToString();
-            if (string.IsNullOrWhiteSpace(version)) version = defaultVersion;
-
-            if (version.StartsWith("v")) version = version[1..];
-
-            if (version.Equals("2b")) version = "2.1b";
-
-            return version;
-        }
+        return apiVersion;
     }
 }

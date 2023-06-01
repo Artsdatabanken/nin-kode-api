@@ -32,11 +32,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.Console", "NiN.Console\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.ExportImport", "NiN.ExportImport\NiN.ExportImport.csproj", "{60EC75D0-F24B-4B96-BA90-AAACB50430F9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cms", "Cms", "{1CF549B5-09C2-4DDC-871D-9D5D3FC93A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.CmsImpExp", "NiN.CmsImpExp\NiN.CmsImpExp.csproj", "{140FEC8B-EA7A-43AB-AF19-0318F0B467DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiN.CmsImpExp", "NiN.CmsImpExp\NiN.CmsImpExp.csproj", "{140FEC8B-EA7A-43AB-AF19-0318F0B467DA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiN.Test_CmsImpExp", "NiN.Test_CmsImpExp\NiN.Test_CmsImpExp.csproj", "{95712A33-774B-42DA-B1C6-8C0654AC29B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN.Test_CmsImpExp", "NiN.Test_CmsImpExp\NiN.Test_CmsImpExp.csproj", "{95712A33-774B-42DA-B1C6-8C0654AC29B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -41,7 +41,7 @@
 
         public NiNDbContext()
         {
-            ConnectionString = "data source=localhost;initial catalog=nin;Integrated Security=SSPI;MultipleActiveResultSets=True;App=EntityFramework";
+            ConnectionString = "Server=(local);Database=NinKodebase;Trusted_Connection=True;Encrypt=False;";
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
