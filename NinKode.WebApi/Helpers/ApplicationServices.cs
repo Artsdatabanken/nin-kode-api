@@ -13,7 +13,7 @@ public static class ApplicationServices
         // database
         var connectionString = configuration.GetConnectionString("Default");
         if (string.IsNullOrEmpty(connectionString))
-            throw new Exception("Could not find 'NinApiConnectionString'");
+            throw new Exception("Could not find 'Default' ConnectionString");
         services.AddDbContext<NiNDbContext>(o =>
         {
             o.UseSqlServer(connectionString, x => x.MigrationsAssembly(typeof(NiNDbContext).Module.Name));
