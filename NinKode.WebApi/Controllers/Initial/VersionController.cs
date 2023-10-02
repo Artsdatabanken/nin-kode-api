@@ -9,7 +9,7 @@ namespace NinKode.WebApi.Controllers.Initial;
 [ApiVersion("2.1", Deprecated = true)]
 [ApiVersion("2", Deprecated = true)]
 [ApiVersion("1", Deprecated = true)]
-[Route("v{version:apiVersion}/versjoner"), Tags("Versjon")]
+[Route("versjoner"), Tags("Versjon")]
 public class VersionController : ApiControllerBase<VersionController>
 {
     private readonly IVersionService _versionService;

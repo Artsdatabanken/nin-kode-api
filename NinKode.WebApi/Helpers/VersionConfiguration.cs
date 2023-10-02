@@ -9,6 +9,7 @@ public static class VersioningConfiguration
         services
             .AddApiVersioning(options =>
             {
+                options.AssumeDefaultVersionWhenUnspecified = true;
                 options.Conventions.Add(new VersionByNamespaceConvention());
             })
             .AddVersionedApiExplorer(options =>
