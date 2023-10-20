@@ -202,10 +202,6 @@ namespace NinKode.WebApi
                 //    "default",
                 //    "{controller=Home}/{action=Index}");
             });
-
-            //using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            //var dbContext = serviceScope.ServiceProvider.GetService<NiNDbContext>();
-            //dbContext?.Database.Migrate();
         }
 
         private void AddIdentityServerAuthentication(IServiceCollection services)
