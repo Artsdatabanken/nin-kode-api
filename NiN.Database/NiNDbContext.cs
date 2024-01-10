@@ -49,7 +49,7 @@
             if (optionsBuilder.IsConfigured) return;
 
             optionsBuilder
-                .UseSqlServer(ConnectionString)
+                .UseSqlite(@"Data Source=nin2prod.db;")
                 //.UseLazyLoadingProxies()
                 //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information)
                 .EnableDetailedErrors();

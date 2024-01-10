@@ -65,7 +65,7 @@
         {
             //var dbName = configuration.GetValue(RavenDbKeyName, "SOSINiNv2");
             //var dbUrl = configuration.GetValue("RavenDbUrl", "http://localhost:8080/");
-            _sosiv2jsonFileStr = configuration.GetValue("SOSINiNv2Json", "");
+            _sosiv2jsonFileStr = configuration.GetValue("SOSINiNv2Json", "CsvFiles\\SOSINiNv2.json");
             /*
             if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
             if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
