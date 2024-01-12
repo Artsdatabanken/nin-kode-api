@@ -13,7 +13,6 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 if (string.IsNullOrEmpty(connectionString))
     throw new Exception("Could not find ConnectionString 'Default'");
 
-//builder.Services.AddDbContext<NiNDbContext>(o => { o.UseSqlServer(connectionString, x => x.MigrationsAssembly(typeof(NiNDbContext).Module.Name)); });
 builder.Services.AddDbContext<NiNDbContext>(o => { o.UseSqlite(connectionString); });
 
 // misc project services
