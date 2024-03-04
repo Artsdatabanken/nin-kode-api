@@ -92,6 +92,8 @@ namespace NiN3.Infrastructure.Services
 
         public HovedtypegruppeDto GetHovedtypegruppeByKortkode(string kode, string versjon)
         {
+            var exists = _context.Hovedtypegruppe.Any(htg => htg.Kode == kode && htg.Versjon.Navn == versjon);
+            if (!exists) return null;
             var hovedtypegruppe = _context.Hovedtypegruppe.Where(htg => htg.Kode == kode && htg.Versjon.Navn == versjon)
                 .Include(htg => htg.Hovedtyper.OrderBy(ht => ht.Langkode))
                     .ThenInclude(ht => ht.Grunntyper.OrderBy(t => t.Langkode))

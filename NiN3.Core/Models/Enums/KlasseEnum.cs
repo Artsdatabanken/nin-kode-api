@@ -24,6 +24,9 @@ namespace NiN3.Core.Models.Enums
         [Description("Variabel")]
         V,
         [Description("Variabelnavn")]
-        VN
+        VN,
+        [Description("Alle")]
+        ALL,
+        Default
     }
 }

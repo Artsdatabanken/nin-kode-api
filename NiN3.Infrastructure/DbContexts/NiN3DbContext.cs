@@ -14,7 +14,7 @@ namespace NiN3.Infrastructure.DbContexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             /********* SEEDING moved to loader service***********/
-
+            modelBuilder.Entity<SearchResult>().HasNoKey().HasIndex(sr => sr.Navn);
             base.OnModelCreating(modelBuilder);
         }
 
@@ -48,6 +48,7 @@ namespace NiN3.Infrastructure.DbContexts
         /* For rapportservice and convenience */
         public DbSet<AlleKortkoder> AlleKortkoder { get; set; }
         public DbSet<Enumoppslag> Enumoppslag { get; set; }
+        public DbSet<SearchResult> AlleLangkoderView { get; set; }
         //ANDRE
         // ...
 

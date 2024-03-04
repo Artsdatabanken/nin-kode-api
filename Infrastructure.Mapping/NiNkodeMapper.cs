@@ -13,6 +13,7 @@ using NiN3.Core.Models.DTOs.rapport;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using NiN3.Core.Models.DTOs.search;
 
 namespace NiN3.Infrastructure.Mapping
 {
@@ -239,6 +240,7 @@ namespace NiN3.Infrastructure.Mapping
                 hovedtypedto.Variabeltrinn = variabeltrinnBag.Distinct().ToList();
             }
             hovedtypedto.Kartleggingsenheter = kartleggingsenheterBag.ToList();
+            
             hovedtypedto.Variabeltrinn = hovedtypedto.Variabeltrinn
                 .GroupBy(vt => vt.Maaleskala.MaaleskalaNavn)//TODO: Lazy solution to duplicate MaaleskalaDto objects inside VariabeltrinnCollection, please improve
                 .Select(group => group.First())
@@ -270,6 +272,7 @@ namespace NiN3.Infrastructure.Mapping
                 var variabelnavn = grunntype.GrunntypeVariabeltrinn.Any() ? grunntype.GrunntypeVariabeltrinn.Select(vt => vt.Variabelnavn).ToList() : new List<Variabelnavn?>();
                 Parallel.ForEach(grunntype.GrunntypeVariabeltrinn.ToList(), vt => variabeltrinnBag.Add(Map(vt, trinnIds)));
                 grunntypedto.Variabeltrinn = variabeltrinnBag.ToList();
+                
                 grunntypedto.Variabeltrinn = grunntypedto.Variabeltrinn//TODO: Lazy solution to duplicate MaaleskalaDto objects inside VariabeltrinnCollection, please improve
                     .GroupBy(vt => vt.Maaleskala.MaaleskalaNavn)
                     .Select(group => group.First())
@@ -533,7 +536,55 @@ namespace NiN3.Infrastructure.Mapping
             return KodeoversiktDto;
         }
 
+        public List<SearchResultDto> MapSearchResults(List<SearchResult> searchResults)
+        {
+            List<SearchResultDto> mappedResults = new List<SearchResultDto>();
 
+            foreach (SearchResult searchResult in searchResults)
+            {
+                SearchResultDto mappedResult = Map(searchResult);
+                mappedResults.Add(mappedResult);
+            }
+            return mappedResults;
+        }
+
+        public SearchResultDto Map(SearchResult searchResult)
+        {
+            var klasseValue = KlassestringToEnumString(searchResult.Klasse);
+            var klasseEnum = (KlasseEnum)EnumUtil.ParseEnum<KlasseEnum>(klasseValue);
+            var searchResultDto = new SearchResultDto()
+            {
+                Kode = searchResult.Kode,
+                Langkode = searchResult.Langkode,
+                Navn = searchResult.Navn,
+                KlasseEnum = klasseEnum,
+                KlasseNavn = EnumUtil.ToDescription(klasseEnum)
+            };
+            return searchResultDto;
+        }
+
+        private string KlassestringToEnumString(string klassestring)
+        {
+            switch (klassestring)
+            {
+                case "Type":
+                    return "T";
+                case "Hovedtypegruppe":
+                    return "HTG";
+                case "Hovedtype":
+                    return "HT";
+                case "Grunntype":
+                    return "GT";
+                case "Variabel":
+                    return "V";
+                case "Variabelnavn":
+                    return "VN";
+                case "Kartleggingsenhet":
+                    return "KE";
+                default:
+                    return "";
+            }
+        }
 
         /// <summary>
         /// Helper method to get the endpoint name for a given langkode.

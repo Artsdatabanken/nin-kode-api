@@ -15,6 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiN.Database\NiN.Database.csproj" />
+    <ProjectReference Include="..\NiN3.Infrastructure\NiN3.Infrastructure.csproj" />
     <ProjectReference Include="..\NinKode.Common\NinKode.Common.csproj" />
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
   </ItemGroup>

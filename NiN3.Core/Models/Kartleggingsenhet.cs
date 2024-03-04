@@ -15,7 +15,7 @@ namespace NiN3.Core.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // added attribute to auto-generate Id
         public int Id { get; set; }
         //public Guid Id { get; set; }
-        public string Navn { get; set; }
+        public string? Navn { get; set; }
         public string Kode { get; set; }// added nullable suffix
         public string Langkode { get; set; } 
         public MaalestokkEnum Maalestokk { get; set; }

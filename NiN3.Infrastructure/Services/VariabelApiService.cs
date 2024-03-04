@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DocumentFormat.OpenXml.EMMA;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Logging;
@@ -78,6 +79,8 @@ namespace NiN3.Infrastructure.Services
 
         public VariabelnavnDto GetVariabelnavnByKortkode(string kode, string versjon)
         {
+            var exists = _context.Variabelnavn.Any(vn => vn.Kode == kode && vn.Versjon.Navn == versjon);
+            if (!exists) return null;
             Variabelnavn variabelnavn = _context.Variabelnavn.Where(v => v.Kode == kode && v.Versjon.Navn == versjon)
                 .Include(variabelnavn => variabelnavn.VariabelnavnMaaleskala)
                 .ThenInclude(maaletrinn => maaletrinn.Maaleskala)
@@ -107,6 +110,8 @@ namespace NiN3.Infrastructure.Services
         }
 
         public MaaleskalaDto GetMaaleskalaByMaaleskalanavn(string maaleskalanavn) {
+            var exists = _context.Maaleskala.Any(ms => ms.MaaleskalaNavn == maaleskalanavn);
+            if (!exists) return null;
             var maaleskala = _context.Maaleskala.Where(m => m.MaaleskalaNavn == maaleskalanavn)
                 .Include(maaleskala => maaleskala.Trinn)
                 .FirstOrDefault();

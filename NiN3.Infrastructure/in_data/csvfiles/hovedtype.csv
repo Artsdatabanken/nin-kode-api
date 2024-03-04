@@ -1,431 +1,431 @@
-Kode;Hovedtypenavn;Hovedtypegruppe;Prosedyrekategori;Hovedtype;HTGKode
-0A-0-01;kystvann;A;0;01;0-A
-0A-0-02;atlantisk vann;A;0;02;0-A
-0A-0-03;intermediært vann;A;0;03;0-A
-0A-0-04;dyphavsvann;A;0;04;0-A
-0A-0-05;arktisk vann;A;0;05;0-A
-0B-0-01;tidevannsbetinget fullsirkulerende fjordvann;B;0;01;0-B
-0B-0-02;øvre fjordvannlag med estuarin sirkulasjon;B;0;02;0-B
-0B-0-03;stabilisert varmt intermediært fjordvann;B;0;03;0-B
-0B-0-04;fjord-dypvann dannet fra atlantisk vann;B;0;04;0-B
-0B-0-05;fjord-dypvann dannet fra kystvann;B;0;05;0-B
-0B-0-06;stabilisert kaldt fjord-dypvann;B;0;06;0-B
-0B-0-07;stabilisert iskaldt fjord-dypvann;B;0;07;0-B
-0FS-0-01;hardbunn i ferskvann;FS;0;01;0-FS
-0FS-0-02;bløtbunn i ferskvann;FS;0;02;0-FS
-0FS-0-03;levende ferskvannsplanter;FS;0;03;0-FS
-0FS-0-04;levende ferskvannsdyr;FS;0;04;0-FS
-0FS-0-05;dødt organisk materiale i ferskvann;FS;0;05;0-FS
-0FS-0-06;syntetiske livsmedier i ferskvann;FS;0;06;0-FS
-0FU-0-01;substratfrie livsmedier i ferskvann;FU;0;01;0-FU
-0MS-0-01;hardbunn i marine systemer;MS;0;01;0-MS
-0MS-0-02;bløtbunn i marine systemer;MS;0;02;0-MS
-0MS-0-03;biogene karbonatsubstrater fra døde organismer i marine systemer;MS;0;03;0-MS
-0MS-0-04;levende organismer med karbonatsubstrater i marine systemer;MS;0;04;0-MS
-0MS-0-05;levende marine planter;MS;0;05;0-MS
-0MS-0-06;levende marine dyr;MS;0;06;0-MS
-0MS-0-07;dødt plantemateriale i marine systemer;MS;0;07;0-MS
-0MS-0-08;døde dyr i marine systemer;MS;0;08;0-MS
-0MS-0-09;syntetiske livsmedier i marine systemer;MS;0;09;0-MS
-0MU-0-01;substratfrie livsmedier i marine systemer;MU;0;01;0-MU
-0TS-0-01;grovere uorganiske substrater på land;TS;0;01;0-TS
-0TS-0-02;finere uorganiske substrater på land;TS;0;02;0-TS
-0TS-0-03;organisk jord;TS;0;03;0-TS
-0TS-0-04;levende, ikke forvedete planter på land;TS;0;04;0-TS
-0TS-0-05;bladverk, nåleverk og reproduktive deler av levende forvedete planter på land;TS;0;05;0-TS
-0TS-0-06;ved-livsmedier;TS;0;06;0-TS
-0TS-0-07;lav og markboende sopp;TS;0;07;0-TS
-0TS-0-08;levende dyr og dyrebo;TS;0;08;0-TS
-0TS-0-09;dødt plantemateriale;TS;0;09;0-TS
-0TS-0-10;dødt animalsk materiale;TS;0;10;0-TS
-0TS-0-11;dyremøkk og fuglegjødsel;TS;0;11;0-TS
-0TS-0-12;syntetiske livsmedier på land;TS;0;12;0-TS
-0TU-0-01;snø og is på land;TU;0;01;0-TU
-0TU-0-02;luft;TU;0;02;0-TU
-BA-0-01;brekappe;A;0;01;BM-A
-BA-0-02;sammensatt bre;A;0;02;BM-A
-BA-0-03;utløpsbre;A;0;03;BM-A
-BA-0-04;dalbre;A;0;04;BM-A
-BA-0-05;botnbre;A;0;05;BM-A
-BA-0-06;dalsidebre;A;0;06;BM-A
-BA-0-07;regenerert bre;A;0;07;BM-A
-BA-0-08;isfonn;A;0;08;BM-A
-BA-0-09;steinbre med bre-opphav;A;0;09;BM-A
-EA-0-01;elveløp i fast fjell med foss;A;0;01;EL-A
-EA-0-02;elveløp i fast fjell uten foss;A;0;02;EL-A
-EA-0-03;elveløp i karstfjell;A;0;03;EL-A
-EB-0-01;stein- og blokkdominert fluvialt elveløp med kaskade- eller trappetrinnsmorfologi;B;0;01;EL-B
-EB-0-02;fluvialt elveløp med jevn, grus- og steindominert bunn;B;0;02;EL-B
-EB-0-03;fluvialt elveløp med kulp-strykmorfologi;B;0;03;EL-B
-EB-0-04;enkelt fluvialt elveløp med jevn, sand- og/eller finmaterialdominert bunn;B;0;04;EL-B
-EC-0-01;stein- og blokkdominert glasifluvialt elveløp med kaskade- eller trappetrinnsmorfologi;C;0;01;EL-C
-EC-0-02;glasifluvialt elveløp med jevn, grus- og steindominert bunn;C;0;02;EL-C
-EC-0-03;glasifluvialt elveløp med kulp-strykmorfologi;C;0;03;EL-C
-ED-0-01;elveløp gjennom leire;D;0;01;EL-D
-ED-0-02;enkelt elveløp i torv;D;0;02;EL-D
-ED-0-03;enkelt elveløp gjennom torv, med sedimentbunn;D;0;03;EL-D
-EE-0-01;elveprosesspreget kompleks elvemunning i innsjø;E;0;01;EL-E
-EE-0-02;bølgeprosesspreget kompleks elvemunning i innsjø;E;0;02;EL-E
-EE-0-03;bølgeprosesspreget kompleks elvemunning i saltvann;E;0;03;EL-E
-EE-0-04;tidevannspreget elvemunning;E;0;04;EL-E
-EF-0-01;elveløp med klart endret hydromorfologi;F;0;01;EL-F
-EG-0-01;kunstige elveløp og elveløp med sterkt endret hydromorfologi;G;0;01;EL-G
-FA-0-01;breelvdelta;A;0;01;FL-A
-FA-0-02;esker;A;0;02;FL-A
-FA-0-03;gjel;A;0;03;FL-A
-FA-0-04;kame;A;0;04;FL-A
-FA-0-05;kameterrasse;A;0;05;FL-A
-FA-0-06;sandur;A;0;06;FL-A
-FA-0-07;bresjødelta;A;0;07;FL-A
-FA-0-08;spylefelt;A;0;08;FL-A
-FA-0-09;spylerenne;A;0;09;FL-A
-FA-0-10;tunneldal;A;0;10;FL-A
-FB-0-01;korallrev;B;0;01;FL-B
-FC-0-01;flomkanal fra bresjøtapping;C;0;01;FL-C
-FC-0-02;flombanke fra bresjøtapping;C;0;02;FL-C
-FC-0-03;flomdyne fra bresjøtapping;C;0;03;FL-C
-FC-0-04;oppskyllingsnivå fra bresjøtapping;C;0;04;FL-C
-FC-0-05;bresjøstrandlinje;C;0;05;FL-C
-FD-0-01;elvebanke;D;0;01;FL-D
-FD-0-02;elvedelta;D;0;02;FL-D
-FD-0-03;meanderbue;D;0;03;FL-D
-FD-0-04;ravine i bresjøsediment;D;0;04;FL-D
-FD-0-05;leirravine;D;0;05;FL-D
-FD-0-06;ravine i morene;D;0;06;FL-D
-FD-0-07;elveskrent;D;0;07;FL-D
-FD-0-08;elveslette;D;0;08;FL-D
-FD-0-09;V-dal;D;0;09;FL-D
-FD-0-10;elvevifte;D;0;10;FL-D
-FD-0-11;elvevoll;D;0;11;FL-D
-FE-0-01;aksedal;E;0;01;FL-E
-FE-0-02;forkastningsrygg;E;0;02;FL-E
-FE-0-03;forkastningstrinn;E;0;03;FL-E
-FE-0-04;sprekkekløft og sprekkedal;E;0;04;FL-E
-FF-0-01;iskile;F;0;01;FL-F
-FF-0-02;pingo;F;0;02;FL-F
-FF-0-03;steinbre;F;0;03;FL-F
-FF-0-04;strukturmark;F;0;04;FL-F
-FF-0-05;sigejordstunge;F;0;05;FL-F
-FF-0-06;termokarst;F;0;06;FL-F
-FG-0-01;doline;G;0;01;FL-G
-FG-0-02;karstgrotte;G;0;02;FL-G
-FG-0-03;karstdekke;G;0;03;FL-G
-FG-0-04;polje;G;0;04;FL-G
-FG-0-05;sinterterrasse;G;0;05;FL-G
-FG-0-06;sokkelstein;G;0;06;FL-G
-FG-0-07;tafone;G;0;07;FL-G
-FG-0-08;tor;G;0;08;FL-G
-FH-0-01;botn;H;0;01;FL-H
-FH-0-02;de Geer-morene;H;0;02;FL-H
-FH-0-03;dødisgrop;H;0;03;FL-H
-FH-0-04;drumlin;H;0;04;FL-H
-FH-0-05;egg;H;0;05;FL-H
-FH-0-06;flyttblokk;H;0;06;FL-H
-FH-0-07;flute;H;0;07;FL-H
-FH-0-08;dalsidesva;H;0;08;FL-H
-FH-0-09;fjord;H;0;09;FL-H
-FH-0-10;glasitektonisk grop og haug;H;0;10;FL-H
-FH-0-11;grunningssonekile;H;0;11;FL-H
-FH-0-12;hengende dal;H;0;12;FL-H
-FH-0-13;isfjellgrop;H;0;13;FL-H
-FH-0-14;iskjernemorene;H;0;14;FL-H
-FH-0-15;isfjellpløyespor;H;0;15;FL-H
-FH-0-16;isskuringsstripe;H;0;16;FL-H
-FH-0-17;jettegryte;H;0;17;FL-H
-FH-0-18;knaus og hale;H;0;18;FL-H
-FH-0-19;megaskala glasial lineasjon;H;0;19;FL-H
-FH-0-20;morenehaug;H;0;20;FL-H
-FH-0-21;murtoo-morene;H;0;21;FL-H
-FH-0-22;plastisk form;H;0;22;FL-H
-FH-0-23;randmorene;H;0;23;FL-H
-FH-0-24;rogenmorene;H;0;24;FL-H
-FH-0-25;rundsva;H;0;25;FL-H
-FH-0-26;sprekkefyllrygg;H;0;26;FL-H
-FH-0-27;tind;H;0;27;FL-H
-FH-0-28;traumunningsvifte;H;0;28;FL-H
-FH-0-29;U-dal;H;0;29;FL-H
-FH-0-30;veikimorene;H;0;30;FL-H
-FI-0-01;brenningsgrotte;I;0;01;FL-I
-FI-0-02;kystklippe;I;0;02;FL-I
-FI-0-03;krumodde;I;0;03;FL-I
-FI-0-04;kystrestfjell;I;0;04;FL-I
-FI-0-05;leirslette;I;0;05;FL-I
-FI-0-06;rauk;I;0;06;FL-I
-FI-0-07;revle;I;0;07;FL-I
-FI-0-08;strandflate;I;0;08;FL-I
-FI-0-09;strandlinje;I;0;09;FL-I
-FI-0-10;strandvoll;I;0;10;FL-I
-FI-0-11;tidevannsslette;I;0;11;FL-I
-FI-0-12;tombolo;I;0;12;FL-I
-FJ-0-01;benk;J;0;01;FL-J
-FJ-0-02;cuesta;J;0;02;FL-J
-FJ-0-03;hogback;J;0;03;FL-J
-FJ-0-04;platåfjell;J;0;04;FL-J
-FK-0-01;dekkerestfjell;K;0;01;FL-K
-FK-0-02;foldeås;K;0;02;FL-K
-FK-0-03;kalkrygg;K;0;03;FL-K
-FL-0-01;flomskredformer;L;0;01;FL-L
-FL-0-02;fjellskredformer;L;0;02;FL-L
-FL-0-03;jordpyramide;L;0;03;FL-L
-FL-0-04;jordskredformer;L;0;04;FL-L
-FL-0-05;leirskredgrop;L;0;05;FL-L
-FL-0-06;steinsprangblokk;L;0;06;FL-L
-FL-0-07;snøskredformer;L;0;07;FL-L
-FL-0-08;talus;L;0;08;FL-L
-FL-0-09;talusvoll;L;0;09;FL-L
-FL-0-10;undersjøiske skredformer;L;0;10;FL-L
-FM-0-01;havbunnskanal;M;0;01;FL-M
-FM-0-02;konturitt;M;0;02;FL-M
-FM-0-03;havbunnssedimentbanke;M;0;03;FL-M
-FM-0-04;strømgrop;M;0;04;FL-M
-FM-0-05;sedimentbølge;M;0;05;FL-M
-FM-0-06;havbunnsstrømrenne;M;0;06;FL-M
-FM-0-07;havbunnsstrømningsspor;M;0;07;FL-M
-FN-0-01;diapir;N;0;01;FL-N
-FN-0-02;gasshydrateksplosjonskrater;N;0;02;FL-N
-FN-0-03;gasshydratpingo;N;0;03;FL-N
-FN-0-04;pockmark;N;0;04;FL-N
-FN-0-05;slamvulkan;N;0;05;FL-N
-FO-0-01;deflasjonsgrop;O;0;01;FL-O
-FO-0-02;flygesanddyne;O;0;02;FL-O
-FP-0-01;hydrotermisk haug;P;0;01;FL-P
-FP-0-02;hydrotermisk skorstein;P;0;02;FL-P
-FP-0-03;lavastrøm;P;0;03;FL-P
-FP-0-04;lavatunnel;P;0;04;FL-P
-FP-0-05;undervannsfjell;P;0;05;FL-P
-FP-0-06;vulkankjegle;P;0;06;FL-P
-FP-0-07;vulkankrater;P;0;07;FL-P
-FP-0-08;vulkanspalte;P;0;08;FL-P
-IA-0-01;basseng i avsnørt havbukt;A;0;01;IB-A
-IA-0-02;basseng betinget av strukturgeologiske prosesser;A;0;02;IB-A
-IB-0-01;jord- og steinskredbasseng;B;0;01;IB-B
-IB-0-02;leirskredbasseng;B;0;02;IB-B
-IC-0-01;basseng på bre;C;0;01;IB-C
-IC-0-02;basseng med terskel av breis;C;0;02;IB-C
-ID-0-01;fjordsjøbasseng;D;0;01;IB-D
-ID-0-02;U-dalsbasseng;D;0;02;IB-D
-ID-0-03;skålbasseng;D;0;03;IB-D
-ID-0-04;botnbasseng;D;0;04;IB-D
-ID-0-05;løsmassedemt dalbasseng;D;0;05;IB-D
-ID-0-06;torvdemt skålbasseng;D;0;06;IB-D
-IE-0-01;morenebasseng;E;0;01;IB-E
-IE-0-02;basseng i breelv-sedimenter;E;0;02;IB-E
-IF-0-01;termokarst-basseng;F;0;01;IB-F
-IF-0-02;pingo-basseng;F;0;02;IB-F
-IG-0-01;karstbasseng;G;0;01;IB-G
-IG-0-02;kalkgrottebasseng;G;0;02;IB-G
-IG-0-03;kalksinterbasseng;G;0;03;IB-G
-IG-0-04;sprekkedal-basseng;G;0;04;IB-G
-IH-0-01;V-dalsbasseng;H;0;01;IB-H
-II-0-01;basseng avsnørt fra innsjø;I;0;01;IB-I
-II-0-02;basseng avsnørt fra sideelv;I;0;02;IB-I
-II-0-03;deltabankebasseng;I;0;03;IB-I
-II-0-04;elveslettebasseng;I;0;04;IB-I
-II-0-05;kroksjø-basseng;I;0;05;IB-I
-II-0-06;innersving-basseng;I;0;06;IB-I
-II-0-07;yttersving-basseng;I;0;07;IB-I
-II-0-08;bakevje-basseng;I;0;08;IB-I
-II-0-09;trestammedemt basseng;I;0;09;IB-I
-IJ-0-01;dynetrau-basseng;J;0;01;IB-J
-IK-0-01;strandvoll-basseng;K;0;01;IB-K
-IL-0-01;flarkgjøl-basseng;L;0;01;IB-L
-IL-0-02;høljegjøl-basseng;L;0;02;IB-L
-IM-0-01;beverdam;M;0;01;IB-M
-IN-0-01;reguleringsbasseng;N;0;01;IB-N
-IN-0-02;sedimentbunn-basseng;N;0;02;IB-N
-IN-0-03;fastfjellsbasseng;N;0;03;IB-N
-IN-0-04;basseng i nytt materiale;N;0;04;IB-N
-LI-0-01;innlandsås- og fjellandskap;I;0;01;LA-I
-LI-0-02;innlandsdallandskap;I;0;02;LA-I
-LI-0-03;innlandsslettelandskap;I;0;03;LA-I
-LK-0-01;kystås- og kystfjellandskap;K;0;01;LA-K
-LK-0-02;fjordlandskap;K;0;02;LA-K
-LK-0-03;kystslettelandskap;K;0;03;LA-K
-LM-0-01;marine ås- og fjellandskap;M;0;01;LA-M
-LM-0-02;marine dallandskap;M;0;02;LA-M
-LM-0-03;marine sletter;M;0;03;LA-M
-NC-C-01;varmkildekompleks;C;C;01;NK-C
-NC-C-02;ferskvannskildekompleks;C;C;02;NK-C
-NC-C-03;ferskvanns- og våtmarkskildekompleks;C;C;03;NK-C
-NC-C-04;torvkildekompleks;C;C;04;NK-C
-NC-C-05;grunnkildekompleks;C;C;05;NK-C
-NC-C-06;fuglefjellkompleks;C;C;06;NK-C
-NC-C-07;saltpannekompleks;C;C;07;NK-C
-NC-C-08;snøleiekompleks;C;C;08;NK-C
-ND-D-01;flomskredkompleks;D;D;01;NK-D
-ND-D-02;rasmarkskompleks;D;D;02;NK-D
-ND-D-03;fossesprutkompleks;D;D;03;NK-D
-NE-E-01;sanddynekompleks;E;E;01;NK-E
-NE-E-02;skredmarkskompleks;E;E;02;NK-E
-NE-E-03;flommarkskompleks;E;E;03;NK-E
-NF-A-01;lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;01;NA-F
-NF-A-02;ikke lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;02;NA-F
-NF-B-01;lagdelte, fullsirkulerende innsjø-vannmassesystemer;F;B;01;NA-F
-NF-B-02;ikke lagdelte innsjø-vannmassesystemer;F;B;02;NA-F
-NF-B-03;elvevannmassesystemer;F;B;03;NA-F
-NF-C-01;bresjø-vannmassesystemer;F;C;01;NA-F
-NF-C-02;grottesjø-vannmassesystemer;F;C;02;NA-F
-NF-C-03;limniske vannmassesystemer preget av naturlig gjødsling;F;C;03;NA-F
-NF-C-04;innsjø-vannmassesystemer preget av oksygenmangel;F;C;04;NA-F
-NF-C-05;limniske vannmassesystemer på isoverflate;F;C;05;NA-F
-NF-M-01;nye innsjø-vannmassesystemer;F;M;01;NA-F
-NF-M-02;innsjø-vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;F;M;02;NA-F
-NF-M-03;innsjø-vannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;03;NA-F
-NF-M-04;elvevannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;F;M;04;NA-F
-NF-M-05;elvevannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;05;NA-F
-NI-A-01;snø og isflater;I;A;01;NA-I
-NL-A-01;eufotisk fast innsjøbunn;L;A;01;NA-L
-NL-A-02;eufotisk innsjø-sedimentbunn;L;A;02;NA-L
-NL-A-03;afotisk innsjøbunn;L;A;03;NA-L
-NL-B-01;helofytt-ferskvannssump;L;B;01;NA-L
-NL-B-02;innsjø-undervannseng;L;B;02;NA-L
-NL-C-01;myrtorv-innsjøbunn;L;C;01;NA-L
-NL-C-02;dy- og gytjebunn i innsjø;L;C;02;NA-L
-NL-C-03;innsjøbunn som består av grovt organisk materiale;L;C;03;NA-L
-NL-C-04;innsjøbunn preget av oksygenmangel;L;C;04;NA-L
-NL-C-05;innsjø-isbunn;L;C;05;NA-L
-NL-C-06;innsjø-sedimentbunn betinget av naturlig gjødsling;L;C;06;NA-L
-NL-G-01;ny innsjøbunn;L;G;01;NA-L
-NL-J-01;klart endret innsjøbunn preget av næringsstoff-overbelastning;L;J;01;NA-L
-NL-M-01;ny sterkt endret innsjøbunn;L;M;01;NA-L
-NL-M-02;ny innsjøbunn med opphav i elvebunn;L;M;02;NA-L
-NL-M-03;ny innsjøbunn med opphav i våtmarkssystemer;L;M;03;NA-L
-NL-M-04;innsjøbunn preget av kronisk fysisk forstyrrelse;L;M;04;NA-L
-NL-M-05;innsjøbunn preget av kronisk fysiskalsk-kjemisk påvirkning;L;M;05;NA-L
-NM-A-01;fast saltvanns-fjærebeltebunn;M;A;01;NA-M
-NM-A-02;eufotisk fast saltvannsbunn;M;A;02;NA-M
-NM-A-03;afotisk fast saltvannsbunn;M;A;03;NA-M
-NM-A-04;fjærebelte-sedimentbunn;M;A;04;NA-M
-NM-A-05;eufotisk saltvanns-sedimentbunn;M;A;05;NA-M
-NM-A-06;afotisk saltvanns-sedimentbunn;M;A;06;NA-M
-NM-B-01;marin helofyttsump;M;B;01;NA-M
-NM-B-02;saltvanns-undervannseng;M;B;02;NA-M
-NM-B-03;korallrev;M;B;03;NA-M
-NM-C-01;fast brakkvanns-fjærebeltebunn;M;C;01;NA-M
-NM-C-02;fast brakkvannsbunn;M;C;02;NA-M
-NM-C-03;littoralbassengbunn;M;C;03;NA-M
-NM-C-04;brakkvanns-sedimentbunn;M;C;04;NA-M
-NM-C-05;marine grotter og overheng;M;C;05;NA-M
-NM-C-06;kald havkilde;M;C;06;NA-M
-NM-C-07;varm havkilde;M;C;07;NA-M
-NM-C-08;marint bunnsystem preget av oksygenmangel;M;C;08;NA-M
-NM-C-09;havisbunn;M;C;09;NA-M
-NM-C-10;havis-underside;M;C;10;NA-M
-NM-F-01;brakkvanns-undervannseng;M;F;01;NA-M
-NM-J-01;taretrålingsbunn;M;J;01;NA-M
-NM-M-01;sterkt endret eller ny marin bunn;M;M;01;NA-M
-NM-M-02;sterkt endret marin bunn preget av kronisk kjemisk påvirkning;M;M;02;NA-M
-NO-A-01;fast elvebunn;O;A;01;NA-O
-NO-A-02;elvesedimentbunn;O;A;02;NA-O
-NO-B-01;elve-undervannseng;O;B;01;NA-O
-NO-C-01;ferskvannskildebunn;O;C;01;NA-O
-NO-C-02;varm ferskvannskildebunn;O;C;02;NA-O
-NO-C-03;dy- og gytjebunn i elv;O;C;03;NA-O
-NO-G-01;ny elvebunn;O;G;01;NA-O
-NO-M-01;elvebunn preget av kronisk fysisk forstyrrelse;O;M;01;NA-O
-NO-M-02;elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;O;M;02;NA-O
-NS-A-01;eufotiske havvannmassesystemer sør for iskanten;S;A;01;NA-S
-NS-C-01;afotiske havvannmassesystemer;S;C;01;NA-S
-NS-C-02;eufotiske fjordvannmassesystemer;S;C;02;NA-S
-NS-C-03;afotiske sirkulerende fjordvannmassesystemer;S;C;03;NA-S
-NS-C-04;marine vannmassesystemer preget av oksygenmangel;S;C;04;NA-S
-NS-C-05;marine vannmassesystemer i poller og littoralbasseng;S;C;05;NA-S
-NS-C-06;marine vannmassesystemer nær og nord for iskanten;S;C;06;NA-S
-NS-C-07;marine vannmassesystemer på polar havis;S;C;07;NA-S
-NS-M-01;nye marine vannmassesystemer;S;M;01;NA-S
-NS-M-02;marine vannmassesystemer preget av kronisk fysisk påvirkning;S;M;02;NA-S
-NS-M-03;marine vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;S;M;03;NA-S
-NT-A-01;nakent berg;T;A;01;NA-T
-NT-A-02;åpen grunnlendt mark;T;A;02;NA-T
-NT-A-03;arktisk-alpin hei og leside;T;A;03;NA-T
-NT-A-04;arktisk-alpin grasmark;T;A;04;NA-T
-NT-B-01;fastmarksskogsmark;T;B;01;NA-T
-NT-C-01;strandberg;T;C;01;NA-T
-NT-C-02;grotte og overheng;T;C;02;NA-T
-NT-C-03;løsmasse-strand;T;C;03;NA-T
-NT-C-04;saltanrikningsmark;T;C;04;NA-T
-NT-C-05;strandeng;T;C;05;NA-T
-NT-C-06;fuglefjell-eng;T;C;06;NA-T
-NT-C-07;fugletopp;T;C;07;NA-T
-NT-C-08;snøleie;T;C;08;NA-T
-NT-D-01;rasmark;T;D;01;NA-T
-NT-D-02;flomskredmark;T;D;02;NA-T
-NT-D-03;rasmarkeng;T;D;03;NA-T
-NT-D-04;fosse-eng;T;D;04;NA-T
-NT-D-05;naturlig beitebetinget eng;T;D;05;NA-T
-NT-D-06;rabbe;T;D;06;NA-T
-NT-E-01;sanddynemark;T;E;01;NA-T
-NT-E-02;aktiv skredmark;T;E;02;NA-T
-NT-E-03;åpen flomfastmark;T;E;03;NA-T
-NT-E-04;langvarig oversvømt flommark;T;E;04;NA-T
-NT-E-05;oppfrysingsmark;T;E;05;NA-T
-NT-E-06;marin driftvoll;T;E;06;NA-T
-NT-E-07;ferskvannsdriftvoll;T;E;07;NA-T
-NT-E-08;flommarkseng;T;E;08;NA-T
-NT-E-09;isinnfrysingsmark;T;E;09;NA-T
-NT-F-01;sand- og dyneskogsmark;T;F;01;NA-T
-NT-F-02;flomskogsmark;T;F;02;NA-T
-NT-G-01;nakne løsmasser;T;G;01;NA-T
-NT-H-01;avskoget hei og eng;T;H;01;NA-T
-NT-I-01;klart endret skogsmark;T;I;01;NA-T
-NT-K-01;semi-naturlig eng;T;K;01;NA-T
-NT-K-02;semi-naturlig strandeng;T;K;02;NA-T
-NT-K-03;kystlynghei;T;K;03;NA-T
-NT-L-01;ny eng med semi-naturlig preg;T;L;01;NA-T
-NT-M-01;hard sterkt endret fastmark;T;M;01;NA-T
-NT-M-02;ny hard fastmark på tørrlagt ferskvannsbunn;T;M;02;NA-T
-NT-M-03;løs sterkt endret fastmark;T;M;03;NA-T
-NT-M-04;ny løs fastmark på tørrlagt ferskvannsbunn;T;M;04;NA-T
-NT-M-05;ny løs fastmark på drenert våtmark;T;M;05;NA-T
-NT-M-06;sterkt endret skogsmark;T;M;06;NA-T
-NT-N-01;blomsterbed og annen hyppig bearbeidet mark;T;N;01;NA-T
-NT-N-02;blomsterenger, usprøytete vegkanter og liknende med semi-naturlig hevdpreg;T;N;02;NA-T
-NT-N-03;Vegkanter, plener, parker og liknende uten semi-naturlig hevdpreg;T;N;03;NA-T
-NT-O-01;åker;T;O;01;NA-T
-NT-O-02;oppdyrket mark med semi-naturlig engpreg;T;O;02;NA-T
-NT-O-03;oppdyrket varig eng;T;O;03;NA-T
-NT-O-04;upløyd jordbruksmark med intensivt hevdpreg;T;O;04;NA-T
-NV-A-01;åpen jordvannsmyr;V;A;01;NA-V
-NV-B-01;myr- og sumpskogsmark;V;B;01;NA-V
-NV-C-01;åpen nedbørsmyr;V;C;01;NA-V
-NV-C-02;torvmarkskilde;V;C;02;NA-V
-NV-C-03;grunnkilde;V;C;03;NA-V
-NV-C-04;våt- og kildesnøleie;V;C;04;NA-V
-NV-C-05;permafrost-våtmark;V;C;05;NA-V
-NV-E-01;oppfrysingsvåtmark;V;E;01;NA-V
-NV-F-01;nedbørsmyr-skogsmark;V;F;01;NA-V
-NV-F-02;strandsumpskogsmark;V;F;02;NA-V
-NV-G-01;ny naturgitt torvmark;V;G;01;NA-V
-NV-G-02;ny naturgitt grunn våtmark;V;G;02;NA-V
-NV-I-01;klart endret våtmarksskogsmark;V;I;01;NA-V
-NV-K-01;slåttemyr;V;K;01;NA-V
-NV-K-02;semi-naturlig våteng;V;K;02;NA-V
-NV-M-01;sterkt endret torvmark;V;M;01;NA-V
-NV-M-02;ny torvmark på tidligere ferskvannsbunn;V;M;02;NA-V
-NV-M-03;ny torvmark på menneskebetinget forsumpet fastmark;V;M;03;NA-V
-NV-M-04;sterkt endret, ikke torvproduserende våtmark;V;M;04;NA-V
-NV-M-05;ny grunn våtmark på tidligere ferskvannsbunn;V;M;05;NA-V
-NV-M-06;ny grunn våtmark på menneskebetinget forsumpet fastmark;V;M;06;NA-V
-NV-O-01;sterkt tråkkpreget våtmark;V;O;01;NA-V
-TA-0-01;gjenvoksningsmyr;A;0;01;TM-A
-TA-0-02;flatmyr;A;0;02;TM-A
-TB-0-01;slakmyr;B;0;01;TM-B
-TB-0-02;gjennomstrømningsmyr;B;0;02;TM-B
-TB-0-03;bakkemyr;B;0;03;TM-B
-TB-0-04;flarkmyr;B;0;04;TM-B
-TB-0-05;strengmyr;B;0;05;TM-B
-TC-0-01;torvkilde;C;0;01;TM-C
-TD-0-01;innsjøflommyr;D;0;01;TM-D
-TD-0-02;elveflommyr;D;0;02;TM-D
-TD-0-03;saltflommyr;D;0;03;TM-D
-TE-0-01;øyblandingsmyr;E;0;01;TM-E
-TE-0-02;palsmyr;E;0;02;TM-E
-TE-0-03;strengblandingsmyr;E;0;03;TM-E
-TF-0-01;mellomstillingsmyr;F;0;01;TM-F
-TG-0-01;terrengdekkende myr;G;0;01;TM-G
-TH-0-01;atlantisk høgmyr;H;0;01;TM-H
-TH-0-02;kanthøgmyr;H;0;02;TM-H
-TH-0-03;platåhøgmyr;H;0;03;TM-H
-TH-0-04;konsentrisk høgmyr;H;0;04;TM-H
-TH-0-05;skogshøgmyr;H;0;05;TM-H
-TH-0-06;eksentrisk høgmyr;H;0;06;TM-H
+HTKode;Hovedtypenavn;Hovedtypegruppe;Prosedyrekategori;Hovedtype;HTGKode
+NA-TN02;blomsterenger, usprøytete vegkanter og liknende med semi-naturlig hevdpreg;T;N;02;NA-T
+NA-TN03;Vegkanter, plener, parker og liknende uten semi-naturlig hevdpreg;T;N;03;NA-T
+NA-TO01;åker;T;O;01;NA-T
+NA-VM03;ny torvmark på menneskebetinget forsumpet fastmark;V;M;03;NA-V
+NA-VM04;sterkt endret, ikke torvproduserende våtmark;V;M;04;NA-V
+NA-VM05;ny grunn våtmark på tidligere ferskvannsbunn;V;M;05;NA-V
+NA-VM06;ny grunn våtmark på menneskebetinget forsumpet fastmark;V;M;06;NA-V
+NA-VO01;sterkt tråkkpreget våtmark;V;O;01;NA-V
+NA-LA03;afotisk innsjøbunn;L;A;03;NA-L
+NA-MA06;afotisk saltvanns-sedimentbunn;M;A;06;NA-M
+NA-TE01;sanddynemark;T;E;01;NA-T
+NA-OA01;fast elvebunn;O;A;01;NA-O
+NA-TA01;nakent berg;T;A;01;NA-T
+NA-MA02;eufotisk fast saltvannsbunn;M;A;02;NA-M
+NA-OA02;elvesedimentbunn;O;A;02;NA-O
+NA-LA02;eufotisk innsjø-sedimentbunn;L;A;02;NA-L
+NA-TK01;semi-naturlig eng;T;K;01;NA-T
+NA-VA01;åpen jordvannsmyr;V;A;01;NA-V
+NA-LM04;innsjøbunn preget av kronisk fysisk forstyrrelse;L;M;04;NA-L
+NA-TG01;nakne løsmasser;T;G;01;NA-T
+NA-MA03;afotisk fast saltvannsbunn;M;A;03;NA-M
+NA-MA04;fjærebelte-sedimentbunn;M;A;04;NA-M
+NA-MA05;eufotisk saltvanns-sedimentbunn;M;A;05;NA-M
+NA-MB01;marin helofyttsump;M;B;01;NA-M
+NA-MB02;saltvanns-undervannseng;M;B;02;NA-M
+NA-MB03;korallrev;M;B;03;NA-M
+NA-MC01;fast brakkvanns-fjærebeltebunn;M;C;01;NA-M
+NA-MC02;fast brakkvannsbunn;M;C;02;NA-M
+NA-MC03;littoralbassengbunn;M;C;03;NA-M
+NA-MC04;brakkvanns-sedimentbunn;M;C;04;NA-M
+NA-MC05;marine grotter og overheng;M;C;05;NA-M
+NA-MC06;kald havkilde;M;C;06;NA-M
+NA-MC07;varm havkilde;M;C;07;NA-M
+NA-MC08;marint bunnsystem preget av oksygenmangel;M;C;08;NA-M
+NA-MC09;havisbunn;M;C;09;NA-M
+NA-MC10;havis-underside;M;C;10;NA-M
+NA-MF01;brakkvanns-undervannseng;M;F;01;NA-M
+NA-MJ01;taretrålingsbunn;M;J;01;NA-M
+NA-MM01;sterkt endret eller ny marin bunn;M;M;01;NA-M
+NA-MM02;sterkt endret marin bunn preget av kronisk kjemisk påvirkning;M;M;02;NA-M
+NA-LA01;eufotisk fast innsjøbunn;L;A;01;NA-L
+NA-LB01;helofytt-ferskvannssump;L;B;01;NA-L
+NA-LB02;innsjø-undervannseng;L;B;02;NA-L
+NA-LC01;myrtorv-innsjøbunn;L;C;01;NA-L
+NA-LC02;dy- og gytjebunn i innsjø;L;C;02;NA-L
+NA-LC03;innsjøbunn som består av grovt organisk materiale;L;C;03;NA-L
+NA-LC04;innsjøbunn preget av oksygenmangel;L;C;04;NA-L
+NA-LC05;innsjø-isbunn;L;C;05;NA-L
+NA-LC06;innsjø-sedimentbunn betinget av naturlig gjødsling;L;C;06;NA-L
+NA-LG01;ny innsjøbunn;L;G;01;NA-L
+NA-LJ01;klart endret innsjøbunn preget av næringsstoff-overbelastning;L;J;01;NA-L
+NA-LM01;ny sterkt endret innsjøbunn;L;M;01;NA-L
+NA-LM02;ny innsjøbunn med opphav i elvebunn;L;M;02;NA-L
+NA-LM03;ny innsjøbunn med opphav i våtmarkssystemer;L;M;03;NA-L
+NA-LM05;innsjøbunn preget av kronisk fysiskalsk-kjemisk påvirkning;L;M;05;NA-L
+NA-OC01;ferskvannskildebunn;O;C;01;NA-O
+NA-OC02;varm ferskvannskildebunn;O;C;02;NA-O
+NA-OC03;dy- og gytjebunn i elv;O;C;03;NA-O
+NA-OG01;ny elvebunn;O;G;01;NA-O
+NA-OM01;elvebunn preget av kronisk fysisk forstyrrelse;O;M;01;NA-O
+NA-OM02;elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;O;M;02;NA-O
+NA-TA02;åpen grunnlendt mark;T;A;02;NA-T
+NA-TA03;arktisk-alpin hei og leside;T;A;03;NA-T
+NA-TA04;arktisk-alpin grasmark;T;A;04;NA-T
+NA-TB01;fastmarksskogsmark;T;B;01;NA-T
+NA-TC01;strandberg;T;C;01;NA-T
+NA-TC02;grotte og overheng;T;C;02;NA-T
+NA-TC03;løsmasse-strand;T;C;03;NA-T
+NA-TC04;saltanrikningsmark;T;C;04;NA-T
+NA-TC05;strandeng;T;C;05;NA-T
+NA-TC06;fuglefjell-eng;T;C;06;NA-T
+NA-TC07;fugletopp;T;C;07;NA-T
+NA-TC08;snøleie;T;C;08;NA-T
+NA-TD01;rasmark;T;D;01;NA-T
+NA-TD02;flomskredmark;T;D;02;NA-T
+NA-TD03;rasmarkeng;T;D;03;NA-T
+NA-TD04;fosse-eng;T;D;04;NA-T
+NA-TD05;naturlig beitebetinget eng;T;D;05;NA-T
+NA-TD06;rabbe;T;D;06;NA-T
+NA-TE02;aktiv skredmark;T;E;02;NA-T
+NA-TE03;åpen flomfastmark;T;E;03;NA-T
+NA-TE04;langvarig oversvømt flommark;T;E;04;NA-T
+NA-TE05;oppfrysingsmark;T;E;05;NA-T
+NA-TE06;marin driftvoll;T;E;06;NA-T
+NA-TE07;ferskvannsdriftvoll;T;E;07;NA-T
+NA-TE08;flommarkseng;T;E;08;NA-T
+NA-TE09;isinnfrysingsmark;T;E;09;NA-T
+NA-TF01;sand- og dyneskogsmark;T;F;01;NA-T
+NA-TF02;flomskogsmark;T;F;02;NA-T
+NA-TH01;avskoget hei og eng;T;H;01;NA-T
+NA-TI01;klart endret skogsmark;T;I;01;NA-T
+NA-TK02;semi-naturlig strandeng;T;K;02;NA-T
+NA-TK03;kystlynghei;T;K;03;NA-T
+NA-TL01;ny eng med semi-naturlig preg;T;L;01;NA-T
+NA-TM01;hard sterkt endret fastmark;T;M;01;NA-T
+NA-TM02;ny hard fastmark på tørrlagt ferskvannsbunn;T;M;02;NA-T
+NA-TM03;løs sterkt endret fastmark;T;M;03;NA-T
+NA-TM04;ny løs fastmark på tørrlagt ferskvannsbunn;T;M;04;NA-T
+NA-TM05;ny løs fastmark på drenert våtmark;T;M;05;NA-T
+NA-TM06;sterkt endret skogsmark;T;M;06;NA-T
+NA-TN01;blomsterbed og annen hyppig bearbeidet mark;T;N;01;NA-T
+NA-TO02;oppdyrket mark med semi-naturlig engpreg;T;O;02;NA-T
+NA-TO03;oppdyrket varig eng;T;O;03;NA-T
+NA-TO04;upløyd jordbruksmark med intensivt hevdpreg;T;O;04;NA-T
+NA-VB01;myr- og sumpskogsmark;V;B;01;NA-V
+NA-VC01;åpen nedbørsmyr;V;C;01;NA-V
+NA-VC02;torvmarkskilde;V;C;02;NA-V
+NA-VC03;grunnkilde;V;C;03;NA-V
+NA-VC04;våt- og kildesnøleie;V;C;04;NA-V
+NA-VC05;permafrost-våtmark;V;C;05;NA-V
+NA-VE01;oppfrysingsvåtmark;V;E;01;NA-V
+NA-VF01;nedbørsmyr-skogsmark;V;F;01;NA-V
+NA-VF02;strandsumpskogsmark;V;F;02;NA-V
+NA-VG01;ny naturgitt torvmark;V;G;01;NA-V
+NA-VG02;ny naturgitt grunn våtmark;V;G;02;NA-V
+NA-VI01;klart endret våtmarksskogsmark;V;I;01;NA-V
+NA-VK01;slåttemyr;V;K;01;NA-V
+NA-VK02;semi-naturlig våteng;V;K;02;NA-V
+NA-VM01;sterkt endret torvmark;V;M;01;NA-V
+NA-VM02;ny torvmark på tidligere ferskvannsbunn;V;M;02;NA-V
+NA-IA01;snø og isflater;I;A;01;NA-I
+NA-SA01;eufotiske havvannmassesystemer sør for iskanten;S;A;01;NA-S
+NA-SC01;afotiske havvannmassesystemer;S;C;01;NA-S
+NA-SC02;eufotiske fjordvannmassesystemer;S;C;02;NA-S
+NA-SC03;afotiske sirkulerende fjordvannmassesystemer;S;C;03;NA-S
+NA-SC04;marine vannmassesystemer preget av oksygenmangel;S;C;04;NA-S
+NA-SC05;marine vannmassesystemer i poller og littoralbasseng;S;C;05;NA-S
+NA-SC06;marine vannmassesystemer nær og nord for iskanten;S;C;06;NA-S
+NA-SC07;marine vannmassesystemer på polar havis;S;C;07;NA-S
+NA-SM01;nye marine vannmassesystemer;S;M;01;NA-S
+NA-SM02;marine vannmassesystemer preget av kronisk fysisk påvirkning;S;M;02;NA-S
+NA-SM03;marine vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;S;M;03;NA-S
+NA-FA01;lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;01;NA-F
+NA-FA02;ikke lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;02;NA-F
+NA-FB01;lagdelte, fullsirkulerende innsjø-vannmassesystemer;F;B;01;NA-F
+NA-FB02;ikke lagdelte innsjø-vannmassesystemer;F;B;02;NA-F
+NA-FB03;elvevannmassesystemer;F;B;03;NA-F
+NA-FC01;bresjø-vannmassesystemer;F;C;01;NA-F
+NA-FC02;grottesjø-vannmassesystemer;F;C;02;NA-F
+NA-FC03;limniske vannmassesystemer preget av naturlig gjødsling;F;C;03;NA-F
+NA-FC04;innsjø-vannmassesystemer preget av oksygenmangel;F;C;04;NA-F
+NA-FC05;limniske vannmassesystemer på isoverflate;F;C;05;NA-F
+NA-FM01;nye innsjø-vannmassesystemer;F;M;01;NA-F
+NA-FM02;innsjø-vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;F;M;02;NA-F
+NA-FM03;innsjø-vannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;03;NA-F
+NA-FM04;elvevannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;F;M;04;NA-F
+NA-FM05;elvevannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;05;NA-F
+NA-MA01;fast saltvanns-fjærebeltebunn;M;A;01;NA-M
+NA-OB01;elve-undervannseng;O;B;01;NA-O
+FL-A01;breelvdelta;A;0;01;FL-A
+FL-A02;esker;A;0;02;FL-A
+FL-A03;gjel;A;0;03;FL-A
+FL-A04;kame;A;0;04;FL-A
+FL-A05;kameterrasse;A;0;05;FL-A
+FL-A06;sandur;A;0;06;FL-A
+FL-A07;bresjødelta;A;0;07;FL-A
+FL-A08;spylefelt;A;0;08;FL-A
+FL-A09;spylerenne;A;0;09;FL-A
+FL-A10;tunneldal;A;0;10;FL-A
+FL-B01;korallrev;B;0;01;FL-B
+FL-C01;flomkanal fra bresjøtapping;C;0;01;FL-C
+FL-C02;flombanke fra bresjøtapping;C;0;02;FL-C
+FL-C03;flomdyne fra bresjøtapping;C;0;03;FL-C
+FL-C04;oppskyllingsnivå fra bresjøtapping;C;0;04;FL-C
+FL-C05;bresjøstrandlinje;C;0;05;FL-C
+FL-D01;elvebanke;D;0;01;FL-D
+FL-D02;elvedelta;D;0;02;FL-D
+FL-D03;meanderbue;D;0;03;FL-D
+FL-D04;ravine i bresjøsediment;D;0;04;FL-D
+FL-D05;leirravine;D;0;05;FL-D
+FL-D06;ravine i morene;D;0;06;FL-D
+FL-D07;elveskrent;D;0;07;FL-D
+FL-D08;elveslette;D;0;08;FL-D
+FL-D09;V-dal;D;0;09;FL-D
+FL-D10;elvevifte;D;0;10;FL-D
+FL-D11;elvevoll;D;0;11;FL-D
+FL-E01;aksedal;E;0;01;FL-E
+FL-E02;forkastningsrygg;E;0;02;FL-E
+FL-E03;forkastningstrinn;E;0;03;FL-E
+FL-E04;sprekkekløft og sprekkedal;E;0;04;FL-E
+FL-F01;iskile;F;0;01;FL-F
+FL-F02;pingo;F;0;02;FL-F
+FL-F03;steinbre;F;0;03;FL-F
+FL-F04;strukturmark;F;0;04;FL-F
+FL-F05;sigejordstunge;F;0;05;FL-F
+FL-F06;termokarst;F;0;06;FL-F
+FL-G01;doline;G;0;01;FL-G
+FL-G02;karstgrotte;G;0;02;FL-G
+FL-G03;karstdekke;G;0;03;FL-G
+FL-G04;polje;G;0;04;FL-G
+FL-G05;sinterterrasse;G;0;05;FL-G
+FL-G06;sokkelstein;G;0;06;FL-G
+FL-G07;tafone;G;0;07;FL-G
+FL-G08;tor;G;0;08;FL-G
+FL-H01;botn;H;0;01;FL-H
+FL-H02;de Geer-morene;H;0;02;FL-H
+FL-H03;dødisgrop;H;0;03;FL-H
+FL-H04;drumlin;H;0;04;FL-H
+FL-H05;egg;H;0;05;FL-H
+FL-H06;flyttblokk;H;0;06;FL-H
+FL-H07;flute;H;0;07;FL-H
+FL-H08;dalsidesva;H;0;08;FL-H
+FL-H09;fjord;H;0;09;FL-H
+FL-H10;glasitektonisk grop og haug;H;0;10;FL-H
+FL-H11;grunningssonekile;H;0;11;FL-H
+FL-H12;hengende dal;H;0;12;FL-H
+FL-H13;isfjellgrop;H;0;13;FL-H
+FL-H14;iskjernemorene;H;0;14;FL-H
+FL-H15;isfjellpløyespor;H;0;15;FL-H
+FL-H16;isskuringsstripe;H;0;16;FL-H
+FL-H17;jettegryte;H;0;17;FL-H
+FL-H18;knaus og hale;H;0;18;FL-H
+FL-H19;megaskala glasial lineasjon;H;0;19;FL-H
+FL-H20;morenehaug;H;0;20;FL-H
+FL-H21;murtoo-morene;H;0;21;FL-H
+FL-H22;plastisk form;H;0;22;FL-H
+FL-H23;randmorene;H;0;23;FL-H
+FL-H24;rogenmorene;H;0;24;FL-H
+FL-H25;rundsva;H;0;25;FL-H
+FL-H26;sprekkefyllrygg;H;0;26;FL-H
+FL-H27;tind;H;0;27;FL-H
+FL-H28;traumunningsvifte;H;0;28;FL-H
+FL-H29;U-dal;H;0;29;FL-H
+FL-H30;veikimorene;H;0;30;FL-H
+FL-I01;brenningsgrotte;I;0;01;FL-I
+FL-I02;kystklippe;I;0;02;FL-I
+FL-I03;krumodde;I;0;03;FL-I
+FL-I04;kystrestfjell;I;0;04;FL-I
+FL-I05;leirslette;I;0;05;FL-I
+FL-I06;rauk;I;0;06;FL-I
+FL-I07;revle;I;0;07;FL-I
+FL-I08;strandflate;I;0;08;FL-I
+FL-I09;strandlinje;I;0;09;FL-I
+FL-I10;strandvoll;I;0;10;FL-I
+FL-I11;tidevannsslette;I;0;11;FL-I
+FL-I12;tombolo;I;0;12;FL-I
+FL-J01;benk;J;0;01;FL-J
+FL-J02;cuesta;J;0;02;FL-J
+FL-J03;hogback;J;0;03;FL-J
+FL-J04;platåfjell;J;0;04;FL-J
+FL-K01;dekkerestfjell;K;0;01;FL-K
+FL-K02;foldeås;K;0;02;FL-K
+FL-K03;kalkrygg;K;0;03;FL-K
+FL-L01;flomskredformer;L;0;01;FL-L
+FL-L02;fjellskredformer;L;0;02;FL-L
+FL-L03;jordpyramide;L;0;03;FL-L
+FL-L04;jordskredformer;L;0;04;FL-L
+FL-L05;leirskredgrop;L;0;05;FL-L
+FL-L06;steinsprangblokk;L;0;06;FL-L
+FL-L07;snøskredformer;L;0;07;FL-L
+FL-L08;talus;L;0;08;FL-L
+FL-L09;talusvoll;L;0;09;FL-L
+FL-L10;undersjøiske skredformer;L;0;10;FL-L
+FL-M01;havbunnskanal;M;0;01;FL-M
+FL-M02;konturitt;M;0;02;FL-M
+FL-M03;havbunnssedimentbanke;M;0;03;FL-M
+FL-M04;strømgrop;M;0;04;FL-M
+FL-M05;sedimentbølge;M;0;05;FL-M
+FL-M06;havbunnsstrømrenne;M;0;06;FL-M
+FL-M07;havbunnsstrømningsspor;M;0;07;FL-M
+FL-N01;diapir;N;0;01;FL-N
+FL-N02;gasshydrateksplosjonskrater;N;0;02;FL-N
+FL-N03;gasshydratpingo;N;0;03;FL-N
+FL-N04;pockmark;N;0;04;FL-N
+FL-N05;slamvulkan;N;0;05;FL-N
+FL-O01;deflasjonsgrop;O;0;01;FL-O
+FL-O02;flygesanddyne;O;0;02;FL-O
+FL-P01;hydrotermisk haug;P;0;01;FL-P
+FL-P02;hydrotermisk skorstein;P;0;02;FL-P
+FL-P03;lavastrøm;P;0;03;FL-P
+FL-P04;lavatunnel;P;0;04;FL-P
+FL-P05;undervannsfjell;P;0;05;FL-P
+FL-P06;vulkankjegle;P;0;06;FL-P
+FL-P07;vulkankrater;P;0;07;FL-P
+FL-P08;vulkanspalte;P;0;08;FL-P
+EL-A01;elveløp i fast fjell med foss;A;0;01;EL-A
+EL-A02;elveløp i fast fjell uten foss;A;0;02;EL-A
+EL-A03;elveløp i karstfjell;A;0;03;EL-A
+EL-B01;stein- og blokkdominert fluvialt elveløp med kaskade- eller trappetrinnsmorfologi;B;0;01;EL-B
+EL-B02;fluvialt elveløp med jevn, grus- og steindominert bunn;B;0;02;EL-B
+EL-B03;fluvialt elveløp med kulp-strykmorfologi;B;0;03;EL-B
+EL-B04;enkelt fluvialt elveløp med jevn, sand- og/eller finmaterialdominert bunn;B;0;04;EL-B
+EL-C01;stein- og blokkdominert glasifluvialt elveløp med kaskade- eller trappetrinnsmorfologi;C;0;01;EL-C
+EL-C02;glasifluvialt elveløp med jevn, grus- og steindominert bunn;C;0;02;EL-C
+EL-C03;glasifluvialt elveløp med kulp-strykmorfologi;C;0;03;EL-C
+EL-D01;elveløp gjennom leire;D;0;01;EL-D
+EL-D02;enkelt elveløp i torv;D;0;02;EL-D
+EL-D03;enkelt elveløp gjennom torv, med sedimentbunn;D;0;03;EL-D
+EL-E01;elveprosesspreget kompleks elvemunning i innsjø;E;0;01;EL-E
+EL-E02;bølgeprosesspreget kompleks elvemunning i innsjø;E;0;02;EL-E
+EL-E03;bølgeprosesspreget kompleks elvemunning i saltvann;E;0;03;EL-E
+EL-E04;tidevannspreget elvemunning;E;0;04;EL-E
+EL-F01;elveløp med klart endret hydromorfologi;F;0;01;EL-F
+EL-G01;kunstige elveløp og elveløp med sterkt endret hydromorfologi;G;0;01;EL-G
+IB-A01;basseng i avsnørt havbukt;A;0;01;IB-A
+IB-A02;basseng betinget av strukturgeologiske prosesser;A;0;02;IB-A
+IB-B01;jord- og steinskredbasseng;B;0;01;IB-B
+IB-B02;leirskredbasseng;B;0;02;IB-B
+IB-C01;basseng på bre;C;0;01;IB-C
+IB-C02;basseng med terskel av breis;C;0;02;IB-C
+IB-D01;fjordsjøbasseng;D;0;01;IB-D
+IB-D02;U-dalsbasseng;D;0;02;IB-D
+IB-D03;skålbasseng;D;0;03;IB-D
+IB-D04;botnbasseng;D;0;04;IB-D
+IB-D05;løsmassedemt dalbasseng;D;0;05;IB-D
+IB-D06;torvdemt skålbasseng;D;0;06;IB-D
+IB-E01;morenebasseng;E;0;01;IB-E
+IB-E02;basseng i breelv-sedimenter;E;0;02;IB-E
+IB-F01;termokarst-basseng;F;0;01;IB-F
+IB-F02;pingo-basseng;F;0;02;IB-F
+IB-G01;karstbasseng;G;0;01;IB-G
+IB-G02;kalkgrottebasseng;G;0;02;IB-G
+IB-G03;kalksinterbasseng;G;0;03;IB-G
+IB-G04;sprekkedal-basseng;G;0;04;IB-G
+IB-H01;V-dalsbasseng;H;0;01;IB-H
+IB-I01;basseng avsnørt fra innsjø;I;0;01;IB-I
+IB-I02;basseng avsnørt fra sideelv;I;0;02;IB-I
+IB-I03;deltabankebasseng;I;0;03;IB-I
+IB-I04;elveslettebasseng;I;0;04;IB-I
+IB-I05;kroksjø-basseng;I;0;05;IB-I
+IB-I06;innersving-basseng;I;0;06;IB-I
+IB-I07;yttersving-basseng;I;0;07;IB-I
+IB-I08;bakevje-basseng;I;0;08;IB-I
+IB-I09;trestammedemt basseng;I;0;09;IB-I
+IB-J01;dynetrau-basseng;J;0;01;IB-J
+IB-K01;strandvoll-basseng;K;0;01;IB-K
+IB-L01;flarkgjøl-basseng;L;0;01;IB-L
+IB-L02;høljegjøl-basseng;L;0;02;IB-L
+IB-M01;beverdam;M;0;01;IB-M
+IB-N01;reguleringsbasseng;N;0;01;IB-N
+IB-N02;sedimentbunn-basseng;N;0;02;IB-N
+IB-N03;fastfjellsbasseng;N;0;03;IB-N
+IB-N04;basseng i nytt materiale;N;0;04;IB-N
+TM-A01;gjenvoksningsmyr;A;0;01;TM-A
+TM-A02;flatmyr;A;0;02;TM-A
+TM-B01;slakmyr;B;0;01;TM-B
+TM-B02;gjennomstrømningsmyr;B;0;02;TM-B
+TM-B03;bakkemyr;B;0;03;TM-B
+TM-B04;flarkmyr;B;0;04;TM-B
+TM-B05;strengmyr;B;0;05;TM-B
+TM-C01;torvkilde;C;0;01;TM-C
+TM-D01;innsjøflommyr;D;0;01;TM-D
+TM-D02;elveflommyr;D;0;02;TM-D
+TM-D03;saltflommyr;D;0;03;TM-D
+TM-E01;øyblandingsmyr;E;0;01;TM-E
+TM-E02;palsmyr;E;0;02;TM-E
+TM-E03;strengblandingsmyr;E;0;03;TM-E
+TM-F01;mellomstillingsmyr;F;0;01;TM-F
+TM-G01;terrengdekkende myr;G;0;01;TM-G
+TM-H01;atlantisk høgmyr;H;0;01;TM-H
+TM-H02;kanthøgmyr;H;0;02;TM-H
+TM-H03;platåhøgmyr;H;0;03;TM-H
+TM-H04;konsentrisk høgmyr;H;0;04;TM-H
+TM-H05;skogshøgmyr;H;0;05;TM-H
+TM-H06;eksentrisk høgmyr;H;0;06;TM-H
+BM-A01;brekappe;A;0;01;BM-A
+BM-A02;sammensatt bre;A;0;02;BM-A
+BM-A03;utløpsbre;A;0;03;BM-A
+BM-A04;dalbre;A;0;04;BM-A
+BM-A05;botnbre;A;0;05;BM-A
+BM-A06;dalsidebre;A;0;06;BM-A
+BM-A07;regenerert bre;A;0;07;BM-A
+BM-A08;isfonn;A;0;08;BM-A
+BM-A09;steinbre med bre-opphav;A;0;09;BM-A
+MV-A01;kystvann;A;0;01;MV-A
+MV-A02;atlantisk vann;A;0;02;MV-A
+MV-A03;intermediært vann;A;0;03;MV-A
+MV-A04;dyphavsvann;A;0;04;MV-A
+MV-A05;arktisk vann;A;0;05;MV-A
+MV-B01;tidevannsbetinget fullsirkulerende fjordvann;B;0;01;MV-B
+MV-B02;øvre fjordvannlag med estuarin sirkulasjon;B;0;02;MV-B
+MV-B03;stabilisert varmt intermediært fjordvann;B;0;03;MV-B
+MV-B04;fjord-dypvann dannet fra atlantisk vann;B;0;04;MV-B
+MV-B05;fjord-dypvann dannet fra kystvann;B;0;05;MV-B
+MV-B06;stabilisert kaldt fjord-dypvann;B;0;06;MV-B
+MV-B07;stabilisert iskaldt fjord-dypvann;B;0;07;MV-B
+LA-I01;innlandsås- og fjellandskap;I;0;01;LA-I
+LA-I02;innlandsdallandskap;I;0;02;LA-I
+LA-I03;innlandsslettelandskap;I;0;03;LA-I
+LA-K01;kystås- og kystfjellandskap;K;0;01;LA-K
+LA-K02;fjordlandskap;K;0;02;LA-K
+LA-K03;kystslettelandskap;K;0;03;LA-K
+LA-M01;marine ås- og fjellandskap;M;0;01;LA-M
+LA-M02;marine dallandskap;M;0;02;LA-M
+LA-M03;marine sletter;M;0;03;LA-M
+NK-C01;varmkildekompleks;C;C;01;NK-C
+NK-C02;ferskvannskildekompleks;C;C;02;NK-C
+NK-C03;ferskvanns- og våtmarkskildekompleks;C;C;03;NK-C
+NK-C04;torvkildekompleks;C;C;04;NK-C
+NK-C05;grunnkildekompleks;C;C;05;NK-C
+NK-C06;fuglefjellkompleks;C;C;06;NK-C
+NK-C07;saltpannekompleks;C;C;07;NK-C
+NK-C08;snøleiekompleks;C;C;08;NK-C
+NK-D01;flomskredkompleks;D;D;01;NK-D
+NK-D02;rasmarkskompleks;D;D;02;NK-D
+NK-D03;fossesprutkompleks;D;D;03;NK-D
+NK-E01;sanddynekompleks;E;E;01;NK-E
+NK-E02;skredmarkskompleks;E;E;02;NK-E
+NK-E03;flommarkskompleks;E;E;03;NK-E
+LI-MS01;hardbunn i marine systemer;MS;0;01;LI-MS
+LI-MS02;bløtbunn i marine systemer;MS;0;02;LI-MS
+LI-MS03;biogene karbonatsubstrater fra døde organismer i marine systemer;MS;0;03;LI-MS
+LI-MS04;levende organismer med karbonatsubstrater i marine systemer;MS;0;04;LI-MS
+LI-MS05;levende marine planter;MS;0;05;LI-MS
+LI-MS06;levende marine dyr;MS;0;06;LI-MS
+LI-MS07;dødt plantemateriale i marine systemer;MS;0;07;LI-MS
+LI-MS08;døde dyr i marine systemer;MS;0;08;LI-MS
+LI-MS09;syntetiske livsmedier i marine systemer;MS;0;09;LI-MS
+LI-MU01;substratfrie livsmedier i marine systemer;MU;0;01;LI-MU
+LI-FS01;hardbunn i ferskvann;FS;0;01;LI-FS
+LI-FS02;bløtbunn i ferskvann;FS;0;02;LI-FS
+LI-FS03;levende ferskvannsplanter;FS;0;03;LI-FS
+LI-FS04;levende ferskvannsdyr;FS;0;04;LI-FS
+LI-FS05;dødt organisk materiale i ferskvann;FS;0;05;LI-FS
+LI-FS06;syntetiske livsmedier i ferskvann;FS;0;06;LI-FS
+LI-FU01;substratfrie livsmedier i ferskvann;FU;0;01;LI-FU
+LI-TS01;grovere uorganiske substrater på land;TS;0;01;LI-TS
+LI-TS02;finere uorganiske substrater på land;TS;0;02;LI-TS
+LI-TS03;organisk jord;TS;0;03;LI-TS
+LI-TS04;levende, ikke forvedete planter på land;TS;0;04;LI-TS
+LI-TS05;bladverk, nåleverk og reproduktive deler av levende forvedete planter på land;TS;0;05;LI-TS
+LI-TS06;ved-livsmedier;TS;0;06;LI-TS
+LI-TS07;lav og markboende sopp;TS;0;07;LI-TS
+LI-TS08;levende dyr og dyrebo;TS;0;08;LI-TS
+LI-TS09;dødt plantemateriale;TS;0;09;LI-TS
+LI-TS10;dødt animalsk materiale;TS;0;10;LI-TS
+LI-TS11;dyremøkk og fuglegjødsel;TS;0;11;LI-TS
+LI-TS12;syntetiske livsmedier på land;TS;0;12;LI-TS
+LI-TU01;snø og is på land;TU;0;01;LI-TU
+LI-TU02;luft;TU;0;02;LI-TU

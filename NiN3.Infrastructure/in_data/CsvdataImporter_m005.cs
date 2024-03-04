@@ -12,7 +12,7 @@ namespace NiN3.Infrastructure.in_data
         public string Kode { get; set; }
 
         public string Kortkode { get; set; }
-        public string Navn { get; set; }
+        public string? Navn { get; set; }
 
         internal static CsvdataImporter_m005 ParseRow(string row)
         {
