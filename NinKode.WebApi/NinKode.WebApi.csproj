@@ -9,12 +9,25 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiN.Database\NiN.Database.csproj" />
+    <ProjectReference Include="..\NiN3.Infrastructure\NiN3.Infrastructure.csproj" />
     <ProjectReference Include="..\NinKode.Common\NinKode.Common.csproj" />
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="nin2prod.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NiN3.WebApi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="nin3kodeapi.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
