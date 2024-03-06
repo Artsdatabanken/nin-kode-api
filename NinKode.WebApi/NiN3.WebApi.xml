@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+	<assembly>
+		<name>NiN3.WebApi</name>
+	</assembly>
+	<members>
+		<!-- CONTROLLERS -->
+		<member name="M:NiN3.WebApi.Controllers.TypeApiController.HentKlasse(string,System.String)">
+			<summary>
+				Sample endpoint for Swagger documentation
+			</summary>
+			<param name="kortkode">kortkoden for en typeklasse-objekt (Type, Hovedtypegruppe, Hovedtype, Grunntype, Kartleggingsenhet)</param>
+			<param name="kortnavn">kortnavnet for en typeklasse-objekt (Type, Hovedtypegruppe, Hovedtype, Grunntype, Kartleggingsenhet)</param>
+		</member>
+		<!-- CLASSES AND ENUMS -->
+		<member name="T:NiN3.Core.Models.Enums.EcosystnivaaEnum">
+			<summary>
+				Possible values for Ecosystnivå:
+
+				Default = ""<br />
+				A = Abiotisk<br />
+				B = Biotisk<br />
+				C = Økodiversitet
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.TypekategoriEnum">
+			<summary>
+				Possible values for Typekategori:
+
+				Default = ""<br />
+				LI = Livsmedium<br />
+				LV = Landformvariasjon<br />
+				MV = Marine vannmasser<br />
+				PE = Primært økodiversitetsnivå<br />
+				SE = Sekundært økodiversitetsnivå
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.Typekategori2Enum">
+			<summary>
+				Possible values for Typekategori2:
+
+				Default = ""<br />
+				BM = Bremassiv<br />
+				EL = Elveløp<br />
+				FL = Landformer i fast fjell og løsmasser<br />
+				IB = Innsjøbasseng<br />
+				LA = Landskapstype<br />
+				NA = Natursystem<br />
+				NK = Naturkompleks<br />
+				TM = Torvmarksmassiv
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.Typekategori3Enum">
+			<summary>
+				Possible values for Typekategori3:
+
+				Default = ""<br />
+				VM = Vannmassesystemer<br />
+				MB = Mark- og bunnsystemer
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.ProsedyrekategoriEnum">
+			<summary>
+				Possible values for Prosedyrekategori:
+
+				Default = ""<br />
+				A = Normal variasjonsbredde. Variasjon i artssammensetning ikke betinget av strukturerende artsgruppe. Lite endret system.<br />
+				B = Normal variasjonsbredde. Variasjon i artssammensetning betinget av strukturerende artsgruppe. Lite endret system.<br />
+				C = Spesiell variasjonsbredde. Variasjon i artssammensetning ikke betinget av strukturerende artsgruppe. Lite endret system. Preget av miljøstress.<br />
+				D = Spesiell variasjonsbredde. Variasjon i artssammensetning ikke betinget av strukturerende artsgruppe. Lite endret system. Preget av aktiv regulerende forstyrrelse .<br />
+				E = Spesiell variasjonsbredde. Variasjon i artssammensetning betinget av strukturerende artsgruppe. Lite endret system. Preget av aktiv destabiliserende forstyrrelse.<br />
+				F = Spesiell variasjonsbredde. Variasjon i artssammensetning betinget av strukturerende artsgruppe. Lite endret system. Preget av aktiv regulerende forstyrrelse .<br />
+				G = Spesiell variasjonsbredde. Ny mark eller bunn . Klart endret system. Preget av historisk forstyrrelse.<br />
+				H = Spesiell variasjonsbredde. Variasjon i artssammensetning betinget av bortfall av strukturerende artsgruppe. Klart endret system. Uten preg av hevd.<br />
+				I = Spesiell variasjonsbredde. Variasjon i artssammensetning betinget av strukturerende artsgruppe. Klart endret system. Uten preg av hevd.<br />
+				J = Spesiell variasjonsbredde. Klart endret system. Hevdpreget. Uten jordbruksproduksjon.<br />
+				K = Spesiell variasjonsbredde. Klart endret system. Hevdpreget. Semi-naturlig system. Med historisk dybde.<br />
+				L = Spesiell variasjonsbredde. Klart endret system. Hevdpreget. Semi-naturlig system. Uten historisk dybde.<br />
+				M = Spesiell variasjonsbredde. Ny mark eller bunn . Sterkt endret system. Uten preg av hevd.<br />
+				N = Spesiell variasjonsbredde. Sterkt endret system. Hevdpreget. Uten jordbruksproduksjon.<br />
+				O = Spesiell variasjonsbredde. Sterkt endret system. Hevdpreget. Jordbruksmark.
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.MaalestokkEnum">
+			<summary>
+				Possible values for Maalestokk:
+
+				Default = ""<br />
+				M005 = Kartleggingsenhet tilpasset 1:5000<br />
+				M010 = Kartleggingsenhet tilpasset 1:10 000<br />
+				M020 = Kartleggingsenhet tilpasset 1:20 000<br />
+				M050 = Kartleggingsenhet tilpasset 1:50 000<br />
+				M100 = Kartleggingsenhet tilpasset 1:100 000
+			</summary>
+
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.VariabelgruppeEnum">
+			<summary>
+				Possible values for Variabelgruppe:
+
+				Default = ""<br />
+				EE = Elveløpsegenskaper <br />
+				SB = Skogbruksrelaterte egenskaper <br />
+				DL = Liggende død ved (læger) <br />
+				W = Artsforekomst/-mengde <br />
+				AG = Artsgruppesammensetning <br />
+				AR = Relativ del-artsgruppesammensetning <br />
+				BO = Naturgitte breobjekter <br />
+				EB = Elvebanker <br />
+				EO = Andre naturgitte elveløpsobjekter <br />
+				IO = Naturgitte innsjøobjekter <br />
+				TA = Torvmarksmassiv: Myrsegment <br />
+				TB = Torvmarksmassiv: Myrstruktur <br />
+				TC = Torvmarksmassiv: Mikrostruktur <br />
+				SE = Skogegenskaper <br />
+				IE = Innsjøbassengegenskaper <br />
+				GE = Generelle egenskaper <br />
+				GT = Generelle terrengegenskaper <br />
+				HE = Havegenskaper <br />
+				BE = Bremassivegenskaper <br />
+				OE = Menneskeskapt objekt i elv <br />
+				OI = Menneskeskapt objekt i innsjø eller til havs <br />
+				OT = Menneskeskapt terrestrisk objekt <br />
+				SU = Suksesjonsrelaterte egenskaper <br />
+				JB = Jordbruksrelaterte egenskaper <br />
+				DG = Stående død ved (gadder) <br />
+				DR = Relativ sammensetning av død ved <br />
+				TE = Generelle treegenskaper <br />
+				TG = Gammelt tre <br />
+				TL = Tre med spesielt livsmedium <br />
+				TM = Trær med gitt minstestørrelse <br />
+				TS = Trær med gitt størrelse <br />
+				FA = Fremmedartsegenskaper
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.VariabeltypeEnum">
+			<summary>
+				Possible values for Variabeltype:
+
+
+				Default = ""<br />
+				FE = Enkel, ikke-ordnet faktorvariabel <br />
+				FK = Kompleks, ikke-ordnet faktorvariabel <br />
+				GE = Enkel gradient <br />
+				GK = Kompleks gradient
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.VariabelkategoriEnum">
+			<summary>
+				Possible values for Variabelkategori:
+
+				Default = ""<br />
+				M = Menneskebetinget <br />
+				N = Naturgitt
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.Variabelkategori2Enum">
+			<summary>
+				Possible values for Variabelkategori2:
+
+				Default = ""<br />
+				AD = Artssammensetningsdynamikk <br />
+				BE = Bergarter <br />
+				KM = Korttidsmiljøvariabel <br />
+				LM = Lokal miljøvariabel <br />
+				LO = Landform-objekter <br />
+				MD = Miljødynamikk <br />
+				MO = Menneskeskapt objekt <br />
+				NO = Naturgitt objekt <br />
+				RA = Romlig artsfordelingsmønster <br />
+				RM = Regional miljøvariabel <br />
+				RS = Romlig strukturvariasjon <br />
+				SA = Strukturerende og funksjonelle artsgrupper <br />
+				TF = Terrengformvariasjon <br />
+				VS = Vertikal struktur
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.MaaleskalatypeEnum">
+			<summary>
+				Possible values for MaaleskalatypeEnum:
+
+				Default = ""<br />
+				B = Binær <br />
+				D = Telleskala, observert antall <br />
+				D0 = Telleskala, observert antall <br />
+				D1a = Telleskala, observert antall <br />
+				D1b = Telleskala, observert antall <br />
+				K = Kontinuerlig, observert verdi <br />
+				P = Generisk måleskala for andelsvariabel <br />
+				P6a = Generisk måleskala for andelsvariabel <br />
+				P6c = Generisk måleskala for andelsvariabel <br />
+				P9a = Prosentskala <br />
+				Pnm = Generisk måleskala for andelsvariabel, der n angir trinn om m angir variant <br />
+				SI = Variabelspesifikk, ikke-ordnet faktorverdi <br />
+				SO = Variabelspesifikk, ordnet faktorverdi <br />
+				T = Tetthetsskala, 2-logaritmisk <br />
+				T0 = Tetthetsskala, 2-logaritmisk <br />
+				T1a = Tetthetsskala, 2-logaritmisk <br />
+				T1b = Tetthetsskala, 2-logaritmisk <br />
+				T1c = Tetthetsskala, 2-logaritmisk
+			</summary>
+
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.EnhetEnum">
+			<summary>
+				Possible values for EnhetEnum:
+
+				Default = ""<br />
+				B = Binær <br />
+				G = Grader <br />
+				OA = Observert antall <br />
+				P = Prosent <br />
+				T = Tetthet <br />
+				U = Ukjent, ikke angitt <br />
+				VSI = Variabelspesifikk trinndeling, ikke-ordnet faktorvariabel <br />
+				VSO = Variabelspesifikk trinndeling, ordnet faktorvariabel
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.KlasseEnum">
+			<summary>
+				Possible values for KlasseEnum:
+
+				Default = ""<br />
+				T = Type <br />
+				HTG = Hovedtypegruppe <br />
+				HT = Hovedtype <br />
+				GT = Grunntype <br />
+				KE = Kartleggingsenhet <br />
+				V = Variabel <br />
+				VN = Variabelnavn <br />
+				ALL = All
+			</summary>
+		</member>
+		<member name="T:NiN3.Core.Models.Enums.SearchMethodEnum">
+			<summary>
+				Possible values for SearchMethodEnum:
+
+				Default = ""<br />
+				SW = Starts with <br />
+				C = Contains 
+			</summary>
+		</member>
+	</members>
+</doc>
