@@ -1,0 +1,37 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- staging
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(staging)'
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: 'Dockerhub'
+        repository: 'artsdatabanken/nin-kode-api'
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
+        tags: '$(tag)'
+    - task: Docker@2
+      displayName: Publish image
+      inputs:
+        containerRegistry: 'Dockerhub'
+        repository: 'artsdatabanken/nin-kode-api'
+        command: 'push'
+        tags: '$(tag)'
