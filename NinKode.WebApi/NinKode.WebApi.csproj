@@ -20,13 +20,13 @@
     <ProjectReference Include="..\NinKode.Database\NinKode.Database.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="nin2prod.db">
+    <None Update="databases\nin2prod.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="NiN3.WebApi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="nin3kodeapi.db">
+    <None Update="databases\nin3kodeapi.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

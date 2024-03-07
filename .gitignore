@@ -356,3 +356,7 @@ MigrationBackup/
 .vs/
 NinKode.WebApi/nin2prod.db-wal
 NinKode.WebApi/nin2prod.db-shm
+NinKode.WebApi/databases/nin2prod.db-wal
+NinKode.WebApi/databases/nin2prod.db-shm
+NinKode.WebApi/databases/nin3kodeapi.db-shm
+NinKode.WebApi/databases/nin3kodeapi.db-wal
