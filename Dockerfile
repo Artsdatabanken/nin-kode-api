@@ -24,8 +24,6 @@ FROM base AS final
 RUN groupadd -r --gid 1007 dockerrunner && useradd -r -g dockerrunner dockerrunner
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY --from=databases /app/databases .
-COPY --from=report_data /app/report_data .
 RUN chown -R dockerrunner:dockerrunner /app/databases
 USER dockerrunner
 ENTRYPOINT ["dotnet", "NinKode.WebApi.dll"]
