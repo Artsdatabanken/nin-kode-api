@@ -66,11 +66,11 @@ var app = builder.Build();
 //app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
 
 app.MapControllers();
-//if (app.Environment.IsStaging() || app.Environment.IsProduction())
-//{ 
+if (app.Environment.IsStaging() || app.Environment.IsProduction())
+{ 
     app.Use(async (context, next) =>
     {
-        if (context.Request.Path == "/")
+        if (context.Request.Path == "/index.html")
         {
             context.Response.Headers.Add("env", app.Environment.EnvironmentName);
             context.Response.Redirect("/swagger/index.html");
@@ -79,7 +79,8 @@ app.MapControllers();
 
         await next();
     });
-//}
+}
+
 app.ConfigureSwagger();
 
 app.UseProblemDetails();
