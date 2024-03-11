@@ -73,7 +73,7 @@ if (app.Environment.IsStaging() || app.Environment.IsProduction())
         if (context.Request.Path == "/index.html")
         {
             context.Response.Headers.Add("env", app.Environment.EnvironmentName);
-            context.Response.Redirect("/swagger/index.html");
+            context.Response.Redirect("/swagger/index.html", permanent: true);
             return;
         }
 
