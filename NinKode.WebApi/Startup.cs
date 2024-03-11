@@ -63,10 +63,23 @@ builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails 
 var app = builder.Build();
 
 // redirect homepage to swagger ui
-app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
+//app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
 
 app.MapControllers();
+//if (app.Environment.IsStaging() || app.Environment.IsProduction())
+//{ 
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Path == "/")
+        {
+            context.Response.Headers.Add("env", app.Environment.EnvironmentName);
+            context.Response.Redirect("/swagger/index.html");
+            return;
+        }
 
+        await next();
+    });
+//}
 app.ConfigureSwagger();
 
 app.UseProblemDetails();

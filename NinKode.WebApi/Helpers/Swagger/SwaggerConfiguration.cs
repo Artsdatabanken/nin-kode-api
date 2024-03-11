@@ -39,7 +39,7 @@ public static class SwaggerConfiguration
                 options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
                     description.GroupName.ToUpperInvariant());
             }
-
+            options.RoutePrefix = string.Empty;
             options.DisplayRequestDuration();
         });
     }
