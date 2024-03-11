@@ -23,6 +23,15 @@ public static class SwaggerConfiguration
 
         app.UseSwaggerUI(options =>
         {
+            //turn of syntaxhighlight in swagger for better responsetime
+            if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+            {
+                options.ConfigObject.AdditionalItems["syntaxHighlight"] = new Dictionary<string, object>
+                {
+                    ["activated"] = false
+                };
+            }
+
             var descriptions = versionDescriptionProvider.ApiVersionDescriptions.Reverse().ToList();
 
             foreach (var description in descriptions)
@@ -31,7 +40,6 @@ public static class SwaggerConfiguration
                     description.GroupName.ToUpperInvariant());
             }
 
-            options.RoutePrefix = string.Empty;
             options.DisplayRequestDuration();
         });
     }

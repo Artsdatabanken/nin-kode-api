@@ -62,15 +62,8 @@ builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails 
 
 var app = builder.Build();
 
-//turn of syntaxhighlight in swagger for better responsetime
-if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(config => config.ConfigObject.AdditionalItems["syntaxHighlight"] = new Dictionary<string, object>
-    {
-        ["activated"] = false
-    });
-}
+// redirect homepage to swagger ui
+app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
 
 app.MapControllers();
 
