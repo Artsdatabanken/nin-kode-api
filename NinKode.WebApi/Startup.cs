@@ -63,7 +63,7 @@ builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails 
 var app = builder.Build();
 
 // redirect homepage to swagger ui
-//app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
+app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
 
 app.MapControllers();
 
