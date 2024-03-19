@@ -56,4 +56,5 @@ stages:
           
           # Restart the Azure App Service
           Restart-AzWebApp -ResourceGroupName 'adb-prod-ninkapi-rg' -Name 'adb-prod-ninkapi-as'
+        AzurePowerShellVersion: 'LatestVersion'
         preferredAzurePowerShellVersion: 'LatestVersion'
