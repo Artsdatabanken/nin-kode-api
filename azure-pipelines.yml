@@ -50,7 +50,6 @@ stages:
         ScriptType: 'InlineScript'
         Inline: |
           Install-Module -Name Az
-          Update-Module -Name Az
           # Connect to Azure
           Connect-AzAccount
           
