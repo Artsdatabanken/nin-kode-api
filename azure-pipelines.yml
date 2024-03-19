@@ -49,10 +49,11 @@ stages:
         azureSubscription: 'prod-deploy-code'
         ScriptType: 'InlineScript'
         Inline: |
-          Install-Module -Name Az -RequiredVersion 5.7.0
+          Install-Module -Name Az
           Update-Module -Name Az
           # Connect to Azure
           Connect-AzAccount
-
+          
           # Restart the Azure App Service
           Restart-AzWebApp -ResourceGroupName 'adb-prod-ninkapi-rg' -Name 'adb-prod-ninkapi-as'
+        preferredAzurePowerShellVersion: 'latest'
