@@ -49,7 +49,8 @@ stages:
         azureSubscription: 'prod-deploy-code'
         ScriptType: 'InlineScript'
         Inline: |
-          Install-Module -Name Az -AllowClobber -Scope CurrentUser
+          Install-Module -Name Az -RequiredVersion 5.7.0
+          Update-Module -Name Az
           # Connect to Azure
           Connect-AzAccount
 
