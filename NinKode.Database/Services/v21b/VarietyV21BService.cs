@@ -70,7 +70,7 @@
             //if (string.IsNullOrWhiteSpace(dbName)) throw new Exception($"Missing \"{RavenDbKeyName}\"");
             //if (string.IsNullOrWhiteSpace(dbUrl)) throw new Exception($"Missing \"{RavenDbKeyUrl}\"");
 
-            _variations_v21BjsonFileStr = configuration.GetValue("variations21BJson", "");
+            _variations_v21BjsonFileStr = configuration.GetValue("variations21BJson", "CsvFiles\\SOSINiNVariations_v21B.json");
             Console.WriteLine(_variations_v21BjsonFileStr);
             //_store = new DocumentStore
             //{

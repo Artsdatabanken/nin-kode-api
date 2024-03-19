@@ -41,7 +41,7 @@
             }
 
             var services = new ServiceCollection();
-            services.AddDbContext<NiNDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<NiNDbContext>(options => options.UseSqlite(connectionString));
             _serviceProvider = services.BuildServiceProvider();
 
             var arguments = args.Select(x => x.ToLowerInvariant().Trim()).ToList();
@@ -371,7 +371,7 @@
             }
 
             Console.WriteLine("Migrating database");
-
+            dbContext.Database.EnsureCreated();
             dbContext.Database.Migrate();
 
             Console.WriteLine("Migrate database - ok");
@@ -458,9 +458,29 @@
 
             Console.WriteLine("Finished building database");
 
+            VacuumSqlLite();
+
             Stopwatch.Stop();
 
             Console.WriteLine($"Total time: {Stopwatch.ElapsedMilliseconds / 1000.0:N} seconds");
+        }
+
+        private static void VacuumSqlLite()
+        {
+            var dbContext = _serviceProvider.GetService<NiNDbContext>();
+            if (dbContext == null)
+            {
+                throw new Exception("Could not find DbContext");
+            }
+            using (Microsoft.Data.Sqlite.SqliteConnection connection = (Microsoft.Data.Sqlite.SqliteConnection)dbContext.Database.GetDbConnection())
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = "VACUUM";
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                Microsoft.Data.Sqlite.SqliteConnection.ClearPool(connection);
+            }
         }
 
         private static void Import(IEnumerable<string> arguments, bool allowUpdate = false)

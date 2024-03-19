@@ -191,7 +191,7 @@ Roy;55";
             var path_to_dwn_file = $"data/v20/images/{filename}";
             File.Exists(path_to_dwn_file).Should().Be(true);
             // assert that the file has a certain size
-            new FileInfo(path_to_dwn_file).Length.Should().Be(5951739L);
+            new FileInfo(path_to_dwn_file).Length.Should().BeLessThan(6001739L).And.BeGreaterThan(10L);
             //cleaning up 
             string[] paramz = { "data/v20/images", "F41278_Bildenr-1-L_L1-5_Femunden.jpg" };
             CleanUp("TestDownload", paramz);

@@ -1,17 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile></DocumentationFile>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="6.0.1" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\NiN.Database\NiN.Database.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.1" />
+  </ItemGroup>
 </Project>
