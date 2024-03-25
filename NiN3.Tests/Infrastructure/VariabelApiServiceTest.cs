@@ -139,5 +139,17 @@ namespace NiN3.Tests.Infrastructure
             Assert.Equal(3, variabelnavn_KM_AH.Konverteringer.Count);
         }
 
+        [Fact]
+        public void TestFetchTrinnForVariabelnavn_VS_SS_W()
+        {
+            var service = GetPrepearedVariabelApiService();
+            var versjon = "3.0";
+            var variabelnavn_VS_SS_W = service.GetVariabelnavnByKortkode("VS-SS_W", "3.0");
+            Assert.NotNull(variabelnavn_VS_SS_W);
+            var vt = variabelnavn_VS_SS_W.Variabeltrinn;
+            Assert.Equal(1, variabelnavn_VS_SS_W.Variabeltrinn.Count);
+            Assert.Equal(16, vt.First().Trinn.Count);
+        }
+
     }
 }

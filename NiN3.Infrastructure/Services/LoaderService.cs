@@ -136,7 +136,7 @@ namespace NiN.Infrastructure.Services
             LoadVariabelnavn();
             LoadMaaleskala();
             LoadTrinn();
-            MakeMaalestokkMappingForVariabelnavn();
+            MakeMaaleskalaMappingForVariabelnavn();
 
             LoadGrunntypeVariabeltrinnMapping();
             LoadHovedtypeVariabeltrinnMapping();
@@ -902,9 +902,9 @@ namespace NiN.Infrastructure.Services
             }
         }
 
-        public void MakeMaalestokkMappingForVariabelnavn()
+        public void MakeMaaleskalaMappingForVariabelnavn()
         {
-            WriteToFile("\n\n********  MakeMaalestokkMappingForVariabelnavn");
+            WriteToFile("\n\n********  MakeMaaleskalaMappingForVariabelnavn");
             var variabelnavn_maaleskalaList = CsvdataImporter_Variabelnavn_maaleskala.ProcessCSV("in_data/csvfiles/variabelnavn_maaleskala_mapping.csv");
             foreach (var vm in variabelnavn_maaleskalaList)
             {
@@ -912,6 +912,9 @@ namespace NiN.Infrastructure.Services
                 var variabelnavn = _context.Variabelnavn.FirstOrDefault(vn => vn.Kode == vm.VaribelnavnKode);
                 // find maaleskala by navn
                 var maaleskala = _context.Maaleskala.FirstOrDefault(m => m.MaaleskalaNavn == vm.Maaleskalanavn);
+                if (vm.Maaleskalanavn == "SS-SO") {
+                    Console.WriteLine("hepp");  
+                }
 
                 if (maaleskala != null && variabelnavn != null)
                 {

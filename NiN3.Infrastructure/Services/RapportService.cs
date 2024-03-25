@@ -99,13 +99,16 @@ namespace NiN3.Infrastructure.Services
             return kodeoversiktDtoList;
         }
 
-        public string MakeKodeoversiktCSV(string versjon) {
+        public string MakeKodeoversiktCSV(string versjon, string separator=";") {
             var kodeoversiktDtoList = GetKodeSummary(versjon);
             var csv = new StringBuilder();
-            csv.AppendLine("Klasse;Navn;Kortkode;Langkode");
+            csv.AppendLine($"Klasse{separator}Navn{separator}Kortkode{separator}Langkode");
             foreach (var kodeoversiktDto in kodeoversiktDtoList)
             {
-                var newLine = $"{kodeoversiktDto.Klasse};{kodeoversiktDto.Navn};{kodeoversiktDto.Kortkode};{kodeoversiktDto.Langkode}";
+                if (separator == ",") {
+                    kodeoversiktDto.Navn = "\"" + kodeoversiktDto.Navn.Replace("\"", "\"\"") + "\"";
+                }
+                var newLine = $"{kodeoversiktDto.Klasse}{separator}{kodeoversiktDto.Navn}{separator}{kodeoversiktDto.Kortkode}{separator}{kodeoversiktDto.Langkode}";
                 csv.AppendLine(newLine);
             }
             return csv.ToString();

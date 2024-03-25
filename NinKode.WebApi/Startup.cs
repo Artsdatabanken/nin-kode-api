@@ -9,7 +9,14 @@ using NinKode.WebApi.Helpers;
 using NinKode.WebApi.Helpers.Swagger;
 using System.Text.Json.Serialization;
 using System.Xml.Linq;
+using System.Globalization;
+using System.Text;
 
+// setting culture for application to Norwegian
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+var culture = new CultureInfo("nb-NO");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -82,5 +89,6 @@ app.Use(async (context, next) =>
 app.ConfigureSwagger();
 
 app.UseProblemDetails();
+
 
 app.Run();
