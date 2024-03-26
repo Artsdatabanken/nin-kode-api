@@ -138,7 +138,7 @@ namespace NiN3.Tests.Infrastructure
             Assert.NotNull(variabelnavn_KM_AH);
             Assert.Equal(3, variabelnavn_KM_AH.Konverteringer.Count);
         }
-
+        
         [Fact]
         public void TestFetchTrinnForVariabelnavn_VS_SS_W()
         {
