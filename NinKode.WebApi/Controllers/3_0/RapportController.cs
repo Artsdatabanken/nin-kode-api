@@ -75,7 +75,7 @@ namespace NiN3.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetRapportData()
         {
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "report_data", "nin3_0.xlsx");
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "report_data/3_0", "nin3_0.xlsx");
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "nin3_0.xlsx");
         }

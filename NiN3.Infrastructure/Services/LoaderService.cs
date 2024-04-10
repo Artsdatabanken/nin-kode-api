@@ -66,21 +66,6 @@ namespace NiN.Infrastructure.Services
         }
 
 
-        /*
-        public List<dynamic> Tabelldata(string tablename)
-        {
-            // write a switch that gets records based on tablename possible options are "Type, Hovedtypegruppe and Hovedtype"
-            string res = "";
-            dynamic rs = new List<dynamic>();
-            //FormattableString sql = $"SELECT * FROM [{tablename}]";
-            //var result = _context.Database.FromRaw(sql);'
-            string typeName = "NiN3.Core.Model.{tablename}";
-            System.Type type = System.Type.GetType(typeName);
-            var result = _context.Set<dynamic>).FromSql($"select * from {tablename}").ToList();
-            return (List<object>)result;
-        }
-        */
-
         public IEnumerable<Versjon> HentDomener()
         {
             return _context.Versjon.OrderBy(c => c.Navn).ToList();
@@ -453,7 +438,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE(M005): {kl_ht.m005kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE(M005): {kl_ht.m005kode}");
                 }
             }
             _context.SaveChanges();
@@ -537,7 +522,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE (M020): {kl_ht.m020kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M020): {kl_ht.m020kode}");
                 }
             }
             _context.SaveChanges();
@@ -620,7 +605,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE (M050): {kl_ht.m050kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M050): {kl_ht.m050kode}");
                 }
             }
             _context.SaveChanges();
@@ -912,9 +897,6 @@ namespace NiN.Infrastructure.Services
                 var variabelnavn = _context.Variabelnavn.FirstOrDefault(vn => vn.Kode == vm.VaribelnavnKode);
                 // find maaleskala by navn
                 var maaleskala = _context.Maaleskala.FirstOrDefault(m => m.MaaleskalaNavn == vm.Maaleskalanavn);
-                if (vm.Maaleskalanavn == "SS-SO") {
-                    Console.WriteLine("hepp");  
-                }
 
                 if (maaleskala != null && variabelnavn != null)
                 {
@@ -996,7 +978,7 @@ namespace NiN.Infrastructure.Services
                 else
                 {
                     var msg = $@"Could not find one of the following:
-                    hovedtype: {hovedtypeVariabeltrinn.hovedtype_kode},maaleskala: {hovedtypeVariabeltrinn.varkode2}-SO or {hovedtypeVariabeltrinn.varkode2}-SI,trinn: {hovedtypeVariabeltrinn.trinn}";
+                    hovedtype: {hovedtypeVariabeltrinn.hovedtype_kode}[{hovedtype.Navn}], maaleskala: {hovedtypeVariabeltrinn.varkode2}-SO or {hovedtypeVariabeltrinn.varkode2}-SI,trinn: {hovedtypeVariabeltrinn.trinn}";
                     WriteToFile(msg);
                 }
             }
