@@ -42,6 +42,8 @@ stages:
         Inline: |
           # Connect to Azure
           Connect-AzAccount
-
+          
           # Restart the Azure App Service
           Restart-AzWebApp -ResourceGroupName 'adb-test-ninkapi-rg' -Name 'adb-test-ninkapi-as'
+        errorActionPreference: 'silentlyContinue'
+        azurePowerShellVersion: 'LatestVersion'
