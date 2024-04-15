@@ -414,7 +414,7 @@ namespace NiN3.Infrastructure.Mapping
         public KodeDto MapKode(String kode, String? langkode = null, bool fortyper = true)
         {
             var typeOrVar = fortyper ? "typer" : "variabler";
-            //var _root_url = "https://nin-kode-api.artsdatabanken.no/v3.0";
+            var _root_url = "https://nin-kode-api.artsdatabanken.no";
             var kodeDto = new KodeDto()
             {
                 Id = kode,
@@ -506,6 +506,7 @@ namespace NiN3.Infrastructure.Mapping
             var kode = trinn.Verdi;
             var TrinnDto = new TrinnDto()
             {
+                Langkode = trinn.Langkode,
                 Beskrivelse = trinn.Beskrivelse,
                 Verdi = verdi,
                 Kode = kode,

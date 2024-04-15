@@ -364,14 +364,14 @@ namespace NiN3.Tests.Infrastructure
         {
             var inmemorydb = GetInMemoryDb();
             var numOfTrinn = inmemorydb.Trinn.Count();
-            Assert.Equal(1024, numOfTrinn);
+            Assert.Equal(1023, numOfTrinn);
         }
 
 
         [Fact]
         public void TestLoadTrinn_NH_B() {
             var inmemorydb = GetInMemoryDb();
-            var trinnNhB = inmemorydb.Trinn.Where(trinn => trinn.Verdi == "NH_B").FirstOrDefault();
+            var trinnNhB = inmemorydb.Trinn.Where(trinn => trinn.Verdi == "RM-NH_B").FirstOrDefault();
             var bMaaleskala = inmemorydb.Maaleskala.Where(m=> m.MaaleskalaNavn == "B").FirstOrDefault();
             Assert.Equal(2, bMaaleskala.Trinn.Count);//Checking that Binær-måleskala is loaded and has its trinn
             Assert.Equal("Barentshavet og polhavet", trinnNhB.Beskrivelse);
@@ -555,7 +555,5 @@ namespace NiN3.Tests.Infrastructure
                 .ToList();
             Assert.Equal(267, konvertering.Count);
         }
-
-
     }
 }

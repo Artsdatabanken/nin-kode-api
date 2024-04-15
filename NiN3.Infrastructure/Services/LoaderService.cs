@@ -869,6 +869,7 @@ namespace NiN.Infrastructure.Services
 
                 var trinn = new Trinn()
                 {
+                    Langkode = t.Langkode,
                     Verdi = t.Trinn,
                     Beskrivelse = t.Trinnverdi,
                     Maaleskala = maaleskala

@@ -12,6 +12,7 @@ namespace NiN3.Infrastructure.in_data
 
         //public string VNKortkode { get; set; }
         //public MaaleskalatypeEnum MaaleskalatypeEnum { get; set; }
+        public string? Langkode { get; set; }
         public string Maaleskalanavn { get; set; }
         public string Trinnverdi { get; set; }
         public string Trinn { get; set; }
@@ -22,9 +23,10 @@ namespace NiN3.Infrastructure.in_data
             {
                 //VNKortkode = columns[0],
                 //MaaleskalatypeEnum = EnumUtil.ParseEnum<MaaleskalatypeEnum>(columns[1]),
-                Maaleskalanavn = columns[2],
-                Trinnverdi = columns[1],
-                Trinn = columns[0]
+                Maaleskalanavn = columns[3],
+                Trinnverdi = columns[2],
+                Trinn = columns[1],
+                Langkode = columns[0]
             };
         }
 

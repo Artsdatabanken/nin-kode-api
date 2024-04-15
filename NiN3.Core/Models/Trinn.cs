@@ -13,6 +13,7 @@ namespace NiN3.Core.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // added attribute to auto-generate Id
         public int Id { get; set; }
+        public string? Langkode { get; set; }
         public string Beskrivelse { get; set; }
         public string Verdi { get; set; }
 

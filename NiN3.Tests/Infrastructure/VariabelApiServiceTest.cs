@@ -108,7 +108,7 @@ namespace NiN3.Tests.Infrastructure
             var rootUrl = _configuration.GetValue<string>("root_url");
             var definisjon = variabel_B_N.Kode.Definisjon.Replace(rootUrl, "");
             //evaluate rest of url without rootUrl-part of it
-            Assert.Equal("/v3.0/variabler/kodeforVariabel/B-N", definisjon);
+            Assert.Equal("https://nin-kode-api.artsdatabanken.no/v3.0/variabler/kodeforVariabel/B-N", definisjon);
         }
 
 
