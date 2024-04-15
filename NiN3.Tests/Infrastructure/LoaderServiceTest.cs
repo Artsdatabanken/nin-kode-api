@@ -553,7 +553,7 @@ namespace NiN3.Tests.Infrastructure
             var versjon = db.Versjon.Where(v => v.Navn == "3.0").FirstOrDefault();
             var konvertering = db.Konvertering.Where(k => k.Klasse == KlasseEnum.VN && k.Versjon == versjon)
                 .ToList();
-            Assert.Equal(119, konvertering.Count);
+            Assert.Equal(267, konvertering.Count);
         }
 
 
