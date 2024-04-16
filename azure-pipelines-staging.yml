@@ -49,7 +49,7 @@ stages:
         azurePowerShellVersion: 'LatestVersion'
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: '$(Build.BinariesDirectory)/NinKode.WebApi/databases'
+        rootFolderOrFile: '$(Build.BinariesDirectory)/*/NinKode.WebApi/databases'
         includeRootFolder: false
         archiveType: 'zip'
         archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
