@@ -47,9 +47,11 @@ stages:
           Restart-AzWebApp -ResourceGroupName 'adb-test-ninkapi-rg' -Name 'adb-test-ninkapi-as'
         errorActionPreference: 'silentlyContinue'
         azurePowerShellVersion: 'LatestVersion'
-    - task: PublishBuildArtifacts@1
+    - task: ArchiveFiles@2
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)/NinKode.WebApi/databases'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
+        rootFolderOrFile: '$(Build.BinariesDirectory)/NinKode.WebApi/databases'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
 
