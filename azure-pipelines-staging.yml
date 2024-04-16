@@ -47,5 +47,5 @@ stages:
           Restart-AzWebApp -ResourceGroupName 'adb-test-ninkapi-rg' -Name 'adb-test-ninkapi-as'
         errorActionPreference: 'silentlyContinue'
         azurePowerShellVersion: 'LatestVersion'
-    - script: ls -la $(Build.SourcesDirectory)
+    - script: ls -la $(Build.SourcesDirectory)/NinKode.WebApi
 
