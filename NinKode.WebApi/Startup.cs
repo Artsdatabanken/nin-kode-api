@@ -23,7 +23,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-}); 
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 // ef core database
 var connectionString = builder.Configuration.GetConnectionString("Default");
@@ -68,6 +76,8 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails = (_, _) => builder.Environment.IsDevelopment(); });
 
 var app = builder.Build();
+
+app.UseCors();
 
 // redirect homepage to swagger ui
 app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
