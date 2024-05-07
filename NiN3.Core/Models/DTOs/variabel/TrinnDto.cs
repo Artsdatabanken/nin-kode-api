@@ -14,5 +14,6 @@ namespace NiN3.Core.Models.DTOs.variabel
         public string Beskrivelse { get; set; }
 
         public bool Registert { get; set; } = false;
+        public ICollection<KonverteringDto> Konverteringer { get; set; } = new List<KonverteringDto>();
     }
 }

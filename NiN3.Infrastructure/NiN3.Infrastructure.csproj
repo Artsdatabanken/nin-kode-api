@@ -26,6 +26,9 @@
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="in_data\CsvDataImporter_Endringslogg.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="in_data\CsvdataImporter_m005.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
@@ -43,6 +46,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="in_data\csvfiles\endringslogg.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="in_data\csvfiles\grunntyper.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -71,6 +77,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="in_data\csvfiles\konvertering_htg_v30.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="in_data\csvfiles\konvertering_trinn_v30.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="in_data\csvfiles\konvertering_vn_v30.csv">

@@ -19,6 +19,8 @@ namespace NiN3.WebApi.Controllers
         private readonly IVariabelApiService _variabelApiService;
         private readonly IConfiguration _configuration;
         private string _versjon = "3.0";
+        //private string _versjon = ApiVersion.ToString();
+        
 
         public VariabelApiController(IVariabelApiService variabelApiService, IConfiguration configuration)
         {
@@ -92,7 +94,7 @@ namespace NiN3.WebApi.Controllers
         [ProducesResponseType(typeof(IEnumerable<MaaleskalaDto>), StatusCodes.Status200OK)]
         public IActionResult HentMaaleskala([Required] string maaleskalaNavn = "BK-SI")
         {
-            var maaleskalaDto = _variabelApiService.GetMaaleskalaByMaaleskalanavn(maaleskalaNavn);
+            var maaleskalaDto = _variabelApiService.GetMaaleskalaByMaaleskalanavn(maaleskalaNavn, _versjon);
             if (maaleskalaDto != null)
             {
                 return Ok(maaleskalaDto);

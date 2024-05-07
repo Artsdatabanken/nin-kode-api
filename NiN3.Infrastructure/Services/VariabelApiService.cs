@@ -79,6 +79,7 @@ namespace NiN3.Infrastructure.Services
 
         public VariabelnavnDto GetVariabelnavnByKortkode(string kode, string versjon)
         {
+            var versjonObj = _context.Versjon.FirstOrDefault(v => v.Navn == versjon);
             var exists = _context.Variabelnavn.Any(vn => vn.Kode == kode && vn.Versjon.Navn == versjon);
             if (!exists) return null;
             Variabelnavn variabelnavn = _context.Variabelnavn.Where(v => v.Kode == kode && v.Versjon.Navn == versjon)
@@ -99,6 +100,15 @@ namespace NiN3.Infrastructure.Services
                 .Include(k => k.Versjon).Include(k => k.ForrigeVersjon)
                 .AsNoTracking()
                 .ToList();
+                //Get konverteringer for each trinn
+                foreach (var trinn in variabelnavn.VariabelnavnMaaleskala.SelectMany(m => m.Maaleskala.Trinn))
+                {
+                    trinn.Konverteringer = _context.Konvertering.Where(k => k.Kode == trinn.Verdi && k.Versjon.Id == versjonObj.Id)
+                    .Include(k => k.Versjon)
+                    .Include(k => k.ForrigeVersjon)
+                    .AsNoTracking()
+                    .ToList();
+                }
             }
             VariabelnavnDto variabelnavnDto = variabelnavn != null ? NiNkodeMapper.Instance.Map(variabelnavn) : null;
             // Sort Trinn by Verdi here
@@ -109,15 +119,26 @@ namespace NiN3.Infrastructure.Services
             return variabelnavnDto;
         }
 
-        public MaaleskalaDto GetMaaleskalaByMaaleskalanavn(string maaleskalanavn) {
+        public MaaleskalaDto GetMaaleskalaByMaaleskalanavn(string maaleskalanavn, string versjon)
+        {
+            var versjonObj = _context.Versjon.FirstOrDefault(v => v.Navn == versjon);
             var exists = _context.Maaleskala.Any(ms => ms.MaaleskalaNavn == maaleskalanavn);
             if (!exists) return null;
             var maaleskala = _context.Maaleskala.Where(m => m.MaaleskalaNavn == maaleskalanavn)
                 .Include(maaleskala => maaleskala.Trinn)
                 .FirstOrDefault();
+            foreach (var trinn in maaleskala.Trinn)
+            {
+                trinn.Konverteringer = _context.Konvertering.Where(k => k.Kode == trinn.Verdi && k.Versjon.Id == versjonObj.Id)
+                    .Include(k => k.Versjon)
+                    .Include(k => k.ForrigeVersjon)
+                    .AsNoTracking()
+                    .ToList();
+            }
+
             var maaleskalaDto = maaleskala != null ? NiNkodeMapper.Instance.Map(maaleskala) : null;
             maaleskalaDto.Trinn = maaleskalaDto.Trinn.OrderBy(t => t.Verdi).ToList();
-            return maaleskalaDto;            
+            return maaleskalaDto;
         }
     }
 }

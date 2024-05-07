@@ -215,7 +215,7 @@ namespace NiN3.Tests.Infrastructure
             //S-C-01
             TypeApiService service = GetPrepearedTypeApiService();
             var hovedtype = service.GetHovedtypeByKortkode("NA-SC01", "3.0");
-            Assert.Equal(2, hovedtype.Variabeltrinn.Count());
+            Assert.Equal(1, hovedtype.Variabeltrinn.Count());
         }
 
         [Fact]

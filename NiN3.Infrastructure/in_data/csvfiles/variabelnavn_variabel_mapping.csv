@@ -1,10 +1,11 @@
 Langkode;Kortkode;3 ABC;4 NM;Variabelkategori2;Variabeltype;Variabelgruppe;Variabelnavn_kode;Variabelnavn_navn;Variabel_kode
 NiN-3.0-V-A-N-LM-GK-W-KA-W;LM-KA;A;N;LM;GK;W;KA;kalkinnhold;A-N
 NiN-3.0-V-A-N-LM-GE-EE-EH-W;LM-EH;A;N;LM;GE;EE;EH;elveløpshelning;A-N
-NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;semi-naturlig hevdregime;A-M
+NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;hevdregime;A-M
 NiN-3.0-V-A-M-KM-FE-SB-HS-W;KM-HS;A;M;KM;FE;SB;HS;lukket selektiv hogst;A-M
 NiN-3.0-V-A-N-NO-GE-DL-L3-W;NO-L3;A;N;NO;GE;DL;L3;alle lite nedbrutte lauvtrelæger med middels dimensjon;A-N
-NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
+NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm-P6c;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
+NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm-B;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
 NiN-3.0-V-B-N-SA-GE-AG-TT-W;SA-TT;B;N;SA;GE;AG;TT;total tresjiktsdekning;B-N
 NiN-3.0-V-B-N-SA-GE-AR-AB-W;SA-AB;B;N;SA;GE;AR;AB;bartreandel;B-N
 NiN-3.0-V-B-N-SA-FE-AR-AD-W;SA-AD;B;N;SA;FE;AR;AD;dominansutforming av tresjiktet;B-N
@@ -62,7 +63,7 @@ NiN-3.0-V-A-N-RM-GK-W-SE-W;RM-SE;A;N;RM;GK;W;SE;bioklimatiske seksjoner;A-N
 NiN-3.0-V-A-N-RM-GK-W-SO-W;RM-SO;A;N;RM;GK;W;SO;bioklimatiske soner;A-N
 NiN-3.0-V-A-N-RM-GK-W-VP-W;RM-VP;A;N;RM;GK;W;VP;våtmarkspreg;A-N
 NiN-3.0-V-A-N-RM-GK-W-YK-W;RM-YK;A;N;RM;GK;W;YK;indre-ytre kyst;A-N
-NiN-3.0-V-A-N-LM-FK-W-BK-W;LM-BK;A;N;LM;FK;W;BK;berggrunn med avvikende kjemisk sammensetnig;A-N
+NiN-3.0-V-A-N-LM-FK-W-BK-W;LM-BK;A;N;LM;FK;W;BK;berggrunn med avvikende kjemisk sammensetning;A-N
 NiN-3.0-V-A-N-LM-FK-W-DK-W;LM-DK;A;N;LM;FK;W;DK;dominerende kornstørrelse;A-N
 NiN-3.0-V-A-N-LM-FK-W-FK-W;LM-FK;A;N;LM;FK;W;FK;ferskvann med avvikende kjemisk sammensetning;A-N
 NiN-3.0-V-A-N-LM-FK-W-HV-W;LM-HV;A;N;LM;FK;W;HV;hav-vannmasser;A-N
@@ -113,7 +114,7 @@ NiN-3.0-V-A-N-LM-GK-W-RU-W;LM-RU;A;N;LM;GK;W;RU;rasmark;A-N
 NiN-3.0-V-A-N-LM-GK-W-SA-W;LM-SA;A;N;LM;GK;W;SA;marin salinitet;A-N
 NiN-3.0-V-A-N-LM-GK-W-SE-W;LM-SE;A;N;LM;GK;W;SE;sedimentbasert forstyrrelse;A-N
 NiN-3.0-V-A-N-LM-GK-W-SF-W;LM-SF;A;N;LM;GK;W;SF;saltanriking av mark i fjærebeltet;A-N
-NiN-3.0-V-A-N-LM-GK-W-SM-W;LM-SM;A;N;LM;GK;W;SM;vannforkomststørrelse;A-N
+NiN-3.0-V-A-N-LM-GK-W-SM-W;LM-SM;A;N;LM;GK;W;SM;vannforekomststørrelse;A-N
 NiN-3.0-V-A-N-LM-GK-W-SS-W;LM-SS;A;N;LM;GK;W;SS;sandstabilisering;A-N
 NiN-3.0-V-A-N-LM-GK-W-SU-W;LM-SU;A;N;LM;GK;W;SU;skredutsatthet;A-N
 NiN-3.0-V-A-N-LM-GK-W-SV-W;LM-SV;A;N;LM;GK;W;SV;snødekkebetinget vekstsesongreduksjon;A-N
@@ -186,7 +187,7 @@ NiN-3.0-V-A-M-MO-GE-OE-VI-W;MO-VI;A;M;MO;GE;OE;VI;kunstig vanninnløp;A-M
 NiN-3.0-V-A-M-MO-GE-OE-VU-W;MO-VU;A;M;MO;GE;OE;VU;kunstig vannuttak;A-M
 NiN-3.0-V-A-M-MO-GE-OI-II-W;MO-II;A;M;MO;GE;OI;II;frittstående fast installasjon i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-IL-W;MO-IL;A;M;MO;GE;OI;IL;konsentrasjon av små, løse objekter i vann;A-M
-NiN-3.0-V-A-M-MO-GE-OI-IM-W;MO-IM;A;M;MO;GE;OI;IM;massiv fast installasjon i innsjø eller til havs;A-M
+NiN-3.0-V-A-M-MO-GE-OT-SH-W;MO-IM;A;M;MO;GE;OI;IM;massiv fast installasjon i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-IS-W;MO-IS;A;M;MO;GE;OI;IS;stort, løst objekt i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-MA-W;MO-MA;A;M;MO;GE;OI;MA;innsjømagasin;A-M
 NiN-3.0-V-A-M-MO-GE-OI-ME-W;MO-ME;A;M;MO;GE;OI;ME;merder og andre flytende innretninger;A-M
@@ -218,13 +219,14 @@ NiN-3.0-V-A-M-MO-GE-OT-VL-W;MO-VL;A;M;MO;GE;OT;VL;veg etc. uten fast dekke;A-M
 NiN-3.0-V-A-M-RM-GK-W-AI-W;RM-AI;A;M;RM;GK;W;AI;arealbruksintensitet;A-M
 NiN-3.0-V-A-M-RM-GK-W-JP-W;RM-JP;A;M;RM;GK;W;JP;jordbrukspreg;A-M
 NiN-3.0-V-A-M-LM-FK-W-BM-W;LM-BM;A;M;LM;FK;W;BM;biologisk menneskepåvirkning av vann-natur;A-M
+NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;semi-naturlig hevdregime;A-M
 NiN-3.0-V-A-M-LM-FK-W-MK-W;LM-MK;A;M;LM;FK;W;MK;fysikalsk-kjemisk menneskepåvirkning av vann-natur;A-M
 NiN-3.0-V-A-M-LM-FK-W-MS-W;LM-MS;A;M;LM;FK;W;MS;kategorier av endret skogsmark på fastmark;A-M
 NiN-3.0-V-A-M-LM-FK-W-MT-W;LM-MT;A;M;LM;FK;W;MT;fysisk menneskepåvirket fastmark;A-M
 NiN-3.0-V-A-M-LM-FK-W-MV-W;LM-MV;A;M;LM;FK;W;MV;fysisk menneskepåvirket våtmark;A-M
 NiN-3.0-V-A-M-LM-FK-W-MY-W;LM-MY;A;M;LM;FK;W;MY;fysisk menneskepåvirkete bunnsubstrater;A-M
-NiN-3.0-V-A-M-LM-FE-SU-KP-W;LM-KP;A;M;LM;FE;SU;KP;inngrep som utløser endringsgjeld og initierer langsom suksesjon;A-M
-NiN-3.0-V-A-M-LM-FE-SU-KR-W;LM-KR;A;M;LM;FE;SU;KR;reversert inngrep som utløser endringsgjeld og initierer langsom suksesjon;A-M
+NiN-3.0-V-A-M-LM-FE-SU-KP-W;LM-KP;A;M;LM;FE;SU;KP;menneskepåvirkning som utløser endringsgjeld og initierer langvarig suksesjon;A-M
+NiN-3.0-V-A-M-LM-FE-SU-KR-W;LM-KR;A;M;LM;FE;SU;KR;reversert menneskepåvirkning som utløser endringsgjeld og initierer langvarig suksesjon;A-M
 NiN-3.0-V-A-M-LM-GK-W-HA-W;LM-HA;A;M;LM;GK;W;HA;åpning av tresjiktet;A-M
 NiN-3.0-V-A-M-LM-GK-W-HG-W;LM-HG;A;M;LM;GK;W;HG;gjødslingsintensitet;A-M
 NiN-3.0-V-A-M-LM-GK-W-HH-W;LM-HH;A;M;LM;GK;W;HH;høstingsintensitet;A-M
@@ -239,8 +241,8 @@ NiN-3.0-V-A-M-KM-FE-SB-HI-W;KM-HI;A;M;KM;FE;SB;HI;intermediær hogst;A-M
 NiN-3.0-V-A-M-KM-FE-SB-HY-W;KM-HY;A;M;KM;FE;SB;HY;åpen foryngelseshogst;A-M
 NiN-3.0-V-A-M-KM-FE-SB-SF-W;KM-SF;A;M;KM;FE;SB;SF;skogforyngelsestiltak;A-M
 NiN-3.0-V-A-M-KM-FE-SB-UM-W;KM-UM;A;M;KM;FE;SB;UM;metode for uttak av trevirke;A-M
-NiN-3.0-V-A-M-KM-FE-SU-KP-W;KM-KP;A;M;KM;FE;SU;KP;mindre gjennomgripende menneskepåvirkning som utløser endringsgjeld og initierer rask suksesjon;A-M
-NiN-3.0-V-A-M-KM-FE-SU-KR-W;KM-KR;A;M;KM;FE;SU;KR;reversert menneskepåvirkning som utløser endringsgjeld og rask suksesjon;A-M
+NiN-3.0-V-A-M-KM-FE-SU-KP-W;KM-KP;A;M;KM;FE;SU;KP;mindre gjennomgripende menneskepåvirkning som utløser endringsgjeld og initierer kortvarig suksesjon;A-M
+NiN-3.0-V-A-M-KM-FE-SU-KR-W;KM-KR;A;M;KM;FE;SU;KR;reversert menneskepåvirkning som utløser endringsgjeld og kortvarig suksesjon;A-M
 NiN-3.0-V-A-M-KM-GE-GE-OB-W;KM-OB;A;M;KM;GE;GE;OB;overbeskatning;A-M
 NiN-3.0-V-A-M-KM-GE-GE-SE-W;KM-SE;A;M;KM;GE;GE;SE;slitasjebetinget erosjon;A-M
 NiN-3.0-V-A-M-KM-GE-GE-TK-W;KM-TK;A;M;KM;GE;GE;TK;ferdsel med tunge kjøretøy;A-M
@@ -290,20 +292,20 @@ NiN-3.0-V-B-N-NO-GE-DG-G6-W;NO-G6;B;N;NO;GE;DG;G6;all stående dødved av bartr�
 NiN-3.0-V-B-N-NO-GE-DG-G7-W;NO-G7;B;N;NO;GE;DG;G7;all stående dødved av boreale lauvtrær med stor dimensjon;B-N
 NiN-3.0-V-B-N-NO-GE-DG-G8-W;NO-G8;B;N;NO;GE;DG;G8;all stående dødved av edellauvtrær med stor dimensjon;B-N
 NiN-3.0-V-B-N-NO-GE-DG-GT-W;NO-GT;B;N;NO;GE;DG;GT;all stående dødved;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L0-W;NO-L0;B;N;NO;GE;DL;L0;alle læger med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L01-W;NO-L01;B;N;NO;GE;DL;L01;alle lite nedbrutte læger av bartrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L02-W;NO-L02;B;N;NO;GE;DL;L02;alle lite nedbrutte læger av bartrær med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L03-W;NO-L03;B;N;NO;GE;DL;L03;alle lite nedbrutte læger av boreale lauvtrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L04-W;NO-L04;B;N;NO;GE;DL;L04;alle lite nedbrutte læger av boreale lauvtrær med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L05-W;NO-L05;B;N;NO;GE;DL;L05;alle lite nedbrutte læger av edellauvtrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L06-W;NO-L06;B;N;NO;GE;DL;L06;alle lite nedbrutte læger av edellauvtrær med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L07-W;NO-L07;B;N;NO;GE;DL;L07;alle læger med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L08-W;NO-L08;B;N;NO;GE;DL;L08;alle sterkt nedbrutte læger av bartrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L09-W;NO-L09;B;N;NO;GE;DL;L09;alle sterkt nedbrutte læger av bartrær med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L10-W;NO-L10;B;N;NO;GE;DL;L10;alle sterkt nedbrutte læger av boreale lauvtrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L11-W;NO-L11;B;N;NO;GE;DL;L11;alle sterkt nedbrutte læger av boreale lauvtrær med stor dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L12-W;NO-L12;B;N;NO;GE;DL;L12;alle sterkt nedbrutte læger av edellauvtrær med middels dimensjon;B-N
-NiN-3.0-V-B-N-NO-GE-DL-L13-W;NO-L13;B;N;NO;GE;DL;L13;alle sterkt nedbrutte læger av edellauvtrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L01-W;NO-L01;B;N;NO;GE;DL;L01;alle læger med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L02-W;NO-L02;B;N;NO;GE;DL;L02;alle lite nedbrutte læger av bartrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L03-W;NO-L03;B;N;NO;GE;DL;L03;alle lite nedbrutte læger av bartrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L04-W;NO-L04;B;N;NO;GE;DL;L04;alle lite nedbrutte læger av boreale lauvtrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L05-W;NO-L05;B;N;NO;GE;DL;L05;alle lite nedbrutte læger av boreale lauvtrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L06-W;NO-L06;B;N;NO;GE;DL;L06;alle lite nedbrutte læger av edellauvtrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L07-W;NO-L07;B;N;NO;GE;DL;L07;alle lite nedbrutte læger av edellauvtrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L08-W;NO-L08;B;N;NO;GE;DL;L08;alle læger med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L09-W;NO-L09;B;N;NO;GE;DL;L09;alle sterkt nedbrutte læger av bartrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L10-W;NO-L10;B;N;NO;GE;DL;L10;alle sterkt nedbrutte læger av bartrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L11-W;NO-L11;B;N;NO;GE;DL;L11;alle sterkt nedbrutte læger av boreale lauvtrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L12-W;NO-L12;B;N;NO;GE;DL;L12;alle sterkt nedbrutte læger av boreale lauvtrær med stor dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L13-W;NO-L13;B;N;NO;GE;DL;L13;alle sterkt nedbrutte læger av edellauvtrær med middels dimensjon;B-N
+NiN-3.0-V-B-N-NO-GE-DL-L14-W;NO-L14;B;N;NO;GE;DL;L14;alle sterkt nedbrutte læger av edellauvtrær med stor dimensjon;B-N
 NiN-3.0-V-B-N-NO-GE-DL-LI-W;NO-LI;B;N;NO;GE;DL;LI;alle lite nedbrutte læger;B-N
 NiN-3.0-V-B-N-NO-GE-DL-LS-W;NO-LS;B;N;NO;GE;DL;LS;alle sterkt nedbrutte læger;B-N
 NiN-3.0-V-B-N-NO-GE-DL-LT-W;NO-LT;B;N;NO;GE;DL;LT;alle læger;B-N
@@ -361,8 +363,9 @@ NiN-3.0-V-B-M-RA-GE-JB-BD-W;RA-BD-S;B;M;RA;GE;JB;BD;menneskebetingete beitedyr;B
 NiN-3.0-V-B-M-AD-GK-W-IE-W;AD-IE;B;M;AD;GK;W;IE;suksesjonsstadium;B-M
 NiN-3.0-V-B-M-AD-GK-W-KU-W;AD-KU;B;M;AD;GK;W;KU;kystlyngheias utviklingsfaser;B-M
 NiN-3.0-V-B-M-AD-GK-W-ST-W;AD-ST;B;M;AD;GK;W;ST;suksesjon på tresatt mark;B-M
-NiN-3.0-V-B-M-AD-GK-W-TE-W;AD-TE;B;M;AD;GK;W;TE;forventet endringsgjeld etter inngrep;B-M
+NiN-3.0-V-B-M-AD-GK-W-TE-W;AD-TE;B;M;AD;GK;W;TE;forventet endringsgjeld etter påvirkning (suksesjonslengde);B-M
 NiN-3.0-V-B-M-AD-GE-FA-FA-W;AD-FA;B;M;AD;GE;FA;FA;fremmedartsantall;B-M
 NiN-3.0-V-B-M-AD-GE-FA-FD-W;AD-FD;B;M;AD;GE;FA;FD;relativ fremmedartsdekning;B-M
 NiN-3.0-V-B-M-AD-GE-FA-FR-W;AD-FR;B;M;AD;GE;FA;FR;relativ fremmedartsandel;B-M
+NiN-3.0-V-B-M-VS-GE-SE-SS-W;VS-SS;B;M;VS;GE;SE;SS;sjiktning i skog;B-M
 NiN-3.0-V-B-M-VS-GE-SE-SS-W;VS-SS_W;B;M;VS;GE;SE;SS;sjiktning i skog;B-M

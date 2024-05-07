@@ -16,7 +16,7 @@ namespace NiN3.Core.Models
         public string? Langkode { get; set; }
         public string Beskrivelse { get; set; }
         public string Verdi { get; set; }
-
         public Maaleskala Maaleskala { get; set; }
+        public ICollection<Konvertering> Konverteringer { get; set; } = new List<Konvertering>();
     }
 }
