@@ -72,31 +72,6 @@ namespace NiN.Infrastructure.Services
         }
 
 
-        //public bool OpprettInitDbAsync()
-        public bool OpprettInitDb()
-        {
-            LoadType_HTG_Mappings();
-            LoadHtg_Ht_Gt_Mappings();
-            try
-            {
-                LoadTypeData();
-                _logger.LogInformation("Import of Types. Done");
-                LoadHovedtypeGruppeData();
-                _logger.LogInformation("Import of HTGdata. Done");
-                LoadHovedtypeData();
-                _logger.LogInformation("Import of HTdata. Done");
-
-                LoadGrunntypedata();
-                _logger.LogInformation("Import of GTdata. Done");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error importing data from csv ; " + ex.Message);
-            }
-            return true;
-        }
-
-
         public void load_all_data()
         {
             try { 
@@ -888,7 +863,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    Console.WriteLine(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
+                    WriteToFile(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
                 }
                 _context.SaveChanges();
             }
@@ -916,7 +891,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    Console.WriteLine($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
+                    WriteToFile($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
                 }
                 // create VariabelnavnMaaleskala object
                 // add to db

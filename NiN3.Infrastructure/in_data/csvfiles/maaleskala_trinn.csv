@@ -1,5 +1,4 @@
 Langkode;Trinn;Trinnverdi;MåleskalaNavn
-NiN-3.0-V-A-N-RM-GK-W-AD)-f;RM-AD)_f;Klart kontinental seksjon;AD)-SO
 NiN-3.0-V-B-N-SA-FE-AR-AD-E;SA-AD_E;Edellauvtrær er eneste treslagsgruppe som tilfredsstiller definisjonen av relativ samdominant;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-BE;SA-AD_BE;Bartrær og edellauvtrær er relative samdominanter;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-BL;SA-AD_BL;Bartrær og boreale lauvtrær er relative samdominanter;AD-SI
@@ -22,16 +21,17 @@ NiN-3.0-V-B-N-SA-FE-AR-AD-V2;SA-AD_V2;Pil og vier er relative dominanter: ingen 
 NiN-3.0-V-B-N-SA-FE-AR-AD-L;SA-AD_L;Boreale lauvtrær er eneste treslagsgruppe som tilfredsstiller definisjonen av relativ samdominant;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-B2;SA-AD_B2;Bartrær er relative dominanter: ingen med-dominerende treslagsgrupper;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-LV;SA-AD_LV;Boreale lauvtrær og pil og vier er relative samdominanter;AD-SI
-NiN-3.0-V-B-N-SA-FE-AR-AD-L2B;SA-AD_L2B;Boreale lauvtrær er relative dominanter: bartrær er med-dominerende treslagsgruppe;AD-SI
-NiN-3.0-V-B-N-SA-FE-AR-AD-EV;SA-AD_EV;Edellauvtrær og pil og vier er relative samdominanter;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-L2V;SA-AD_L2V;Boreale lauvtrær er relative dominanter: pil og vier er med-dominerende treslagsgruppe;AD-SI
+NiN-3.0-V-B-N-SA-FE-AR-AD-EV;SA-AD_EV;Edellauvtrær og pil og vier er relative samdominanter;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-0;SA-AD_0;Skogsmark uten tresjikt;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-L2E;SA-AD_L2E;Boreale lauvtrær er relative dominanter: edellauvtrær er med-dominerende treslagsgruppe;AD-SI
+NiN-3.0-V-B-N-SA-FE-AR-AD-L2B;SA-AD_L2B;Boreale lauvtrær er relative dominanter: bartrær er med-dominerende treslagsgruppe;AD-SI
+NiN-3.0-V-A-N-RM-GK-W-AD-f;RM-AD_f;Klart kontinental seksjon;AD-SO
 NiN-3.0-V-A-M-KM-GE-JB-AG-y;KM-AG_y;Overgjødsling;AG-SO
 NiN-3.0-V-A-M-KM-GE-JB-AG-4;KM-AG_4;Intensiv gjødsling;AG-SO
-NiN-3.0-V-A-M-KM-GE-JB-AG-1;KM-AG_1;Svært lett gjødsling;AG-SO
-NiN-3.0-V-A-M-KM-GE-JB-AG-2;KM-AG_2;Lett gjødsling;AG-SO
 NiN-3.0-V-A-M-KM-GE-JB-AG-0;KM-AG_0;Uten spor etter gjødsling;AG-SO
+NiN-3.0-V-A-M-KM-GE-JB-AG-2;KM-AG_2;Lett gjødsling;AG-SO
+NiN-3.0-V-A-M-KM-GE-JB-AG-1;KM-AG_1;Svært lett gjødsling;AG-SO
 NiN-3.0-V-A-M-KM-GE-JB-AG-3;KM-AG_3;Middels intensiv gjødsling;AG-SO
 NiN-3.0-V-A-M-KM-GE-JB-AH-0;KM-AH_0;Uten preg av høsting;AH-SO
 NiN-3.0-V-A-M-KM-GE-JB-AH-1;KM-AH_1;Lav utnyttingsgrad;AH-SO

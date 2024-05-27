@@ -9,7 +9,7 @@ namespace NiN3.Infrastructure.Services
         public IEnumerable<Versjon> HentDomener();
 
         //bool OpprettInitDbAsync();
-        bool OpprettInitDb();
+        //bool OpprettInitDb();
         //void DoMigrations();
 
         List<string> Tabeller();
