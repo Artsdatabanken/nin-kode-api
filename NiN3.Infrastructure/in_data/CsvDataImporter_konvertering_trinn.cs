@@ -1,8 +1,13 @@
 ﻿using NiN3.Core.Models.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace NiN3.Infrastructure.in_data
 {
-    internal class CsvDataImporter_konvertering_variabelnavn
+    public class CsvDataImporter_konvertering_trinn
     {
         KlasseEnum Klasse { get; set; }
         public String Kode { get; set; }
@@ -14,11 +19,10 @@ namespace NiN3.Infrastructure.in_data
 
         public string Versjon { get; set; }
         public String? Url { get; set; }
-
-        internal static CsvDataImporter_konvertering_variabelnavn ParseRow(string row)
+        internal static CsvDataImporter_konvertering_trinn ParseRow(string row)
         {
             var columns = row.Split(';');
-            return new CsvDataImporter_konvertering_variabelnavn()
+            return new CsvDataImporter_konvertering_trinn()
             {
                 Klasse = KlasseEnum.VN,
                 Kode = columns[0],
@@ -30,12 +34,12 @@ namespace NiN3.Infrastructure.in_data
                 Url = columns[5]
             };
         }
-        public static List<CsvDataImporter_konvertering_variabelnavn> ProcessCSV(string path)
+        public static List<CsvDataImporter_konvertering_trinn> ProcessCSV(string path)
         {
             return System.IO.File.ReadAllLines(path)
                 .Skip(1)
                 .Where(row => row.Length > 0)
-                .Select(CsvDataImporter_konvertering_variabelnavn.ParseRow).ToList();
+                .Select(CsvDataImporter_konvertering_trinn.ParseRow).ToList();
         }
     }
 }

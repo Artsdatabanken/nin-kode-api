@@ -23,7 +23,7 @@ namespace NiN3.Infrastructure.in_data
                 grunntype_kode = columns[0],
                 varkode2 = columns[1],
                 trinn = columns[2],
-                variabelnavnKode = columns[4] != "" ? columns[4] : null
+                variabelnavnKode = columns[3] != "" ? columns[3] : null
 
             };
         }

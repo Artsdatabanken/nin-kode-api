@@ -46,6 +46,7 @@ namespace NiN3.Infrastructure.DbContexts
         public DbSet<HovedtypeVariabeltrinn> HovedtypeVariabeltrinn { get; set; }
 
         /* For rapportservice and convenience */
+        public DbSet<Endringslogg> Endringslogg { get; set; }
         public DbSet<AlleKortkoder> AlleKortkoder { get; set; }
         public DbSet<Enumoppslag> Enumoppslag { get; set; }
         public DbSet<SearchResult> AlleLangkoderView { get; set; }
