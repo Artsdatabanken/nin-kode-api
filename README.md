@@ -1,7 +1,7 @@
 # nin-kode-api
 Gå til url for å bli redirigert til swagger-dokumentasjonen.
 
-## [NiN3 Wiki](https://github.com/Artsdatabanken/nin-kode-api/wiki/NiN-3-kodeapi)
+## [NiN3 Wiki](https://github.com/Artsdatabanken/nin-kode-api/wiki)
 
 ## Drift
 https://nin-kode-api.artsdatabanken.no/
