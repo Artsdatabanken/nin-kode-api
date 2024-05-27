@@ -7,10 +7,10 @@ using NiN3.Infrastructure.Services;
 using NinKode.WebApi.Filters;
 using NinKode.WebApi.Helpers;
 using NinKode.WebApi.Helpers.Swagger;
-using System.Text.Json.Serialization;
-using System.Xml.Linq;
 using System.Globalization;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Xml.Linq;
 
 // setting culture for application to Norwegian
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);

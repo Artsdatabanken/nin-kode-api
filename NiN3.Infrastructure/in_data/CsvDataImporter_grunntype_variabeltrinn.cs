@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NiN3.Infrastructure.in_data
+﻿namespace NiN3.Infrastructure.in_data
 {
     public class CsvDataImporter_grunntype_variabeltrinn
     {

@@ -38,9 +38,6 @@
     <Compile Update="in_data\CsvdataImporter_m005_hovedtype_mapping.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
-    <Compile Update="in_data\CsvDataImporter_typeklasser_langkode.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Update="in_data\CsvdataImporter_Type_Htg_mapping.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

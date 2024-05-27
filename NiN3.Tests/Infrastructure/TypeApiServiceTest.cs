@@ -13,9 +13,6 @@ namespace NiN3.Tests.Infrastructure
     [Collection("Sequential")]
     public class TypeApiServiceTest
     {
-
-
-
         private IMapper _mapper;
         private ILogger<TypeApiService> _logger;
         private NiN3DbContext inmemorydb;

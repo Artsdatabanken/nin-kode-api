@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
-using NiN3.Infrastructure.Services;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
 using NiN3.Core.Models.DTOs.variabel;
+using NiN3.Infrastructure.Services;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace NiN3.WebApi.Controllers
 {

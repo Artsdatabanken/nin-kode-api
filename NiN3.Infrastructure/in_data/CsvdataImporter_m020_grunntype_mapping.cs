@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
-namespace NiN3.Infrastructure.in_data
+﻿namespace NiN3.Infrastructure.in_data
 {
     public class CsvdataImporter_m020_grunntype_mapping
     {

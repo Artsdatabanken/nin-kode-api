@@ -1,20 +1,12 @@
 ﻿using AutoMapper;
+using ClosedXML.Excel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs.rapport;
 using NiN3.Infrastructure.DbContexts;
-using NiN3.Infrastructure.in_data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NiN3.Core.Models;
-using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.Mapping;
-//using OfficeOpenXml;
-using ClosedXML.Excel;
+using System.Text;
 
 namespace NiN3.Infrastructure.Services
 {

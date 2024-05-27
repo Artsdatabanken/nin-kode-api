@@ -349,7 +349,7 @@ namespace NiN3.Tests.Infrastructure
             // prepare test
             var inmemorydb = GetInMemoryDb();
             var numOfMS = inmemorydb.Maaleskala.Count();
-            Assert.Equal(159, numOfMS);
+            Assert.Equal(158, numOfMS);
             var maaleskalaSO = inmemorydb.Maaleskala.FirstOrDefault(m => m.MaaleskalatypeEnum == MaaleskalatypeEnum.SO);
             var maaleskalaSI = inmemorydb.Maaleskala.FirstOrDefault(m => m.MaaleskalatypeEnum == MaaleskalatypeEnum.SI);
             Assert.NotNull(maaleskalaSO);

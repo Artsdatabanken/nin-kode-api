@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NiN3.Infrastructure.Services;
-using System.Globalization;
-using OfficeOpenXml;
-using System.IO;
 
 //using Swashbuckle.AspNetCore.Annotations;
 using System.Text;
