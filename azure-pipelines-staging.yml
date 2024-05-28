@@ -3,11 +3,24 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- staging
-
-resources:
-- repo: self
+  branches:
+    include:
+      - staging
+    exclude:
+      - master
+      - main
+  paths:
+    exclude:
+      - README.md
+      
+steps:
+- checkout: self
   lfs: true
+
+- script: |
+   git lfs fetch
+   git lfs pull
+  displayName: git-lfs
 
 variables:
   tag: 'staging'
