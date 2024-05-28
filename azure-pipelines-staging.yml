@@ -14,7 +14,7 @@ trigger:
       - README.md
       
 resources:
-- checkout: self
+- repo: self
   lfs: true
 
 variables:
