@@ -1,8 +1,7 @@
-﻿using NiN3.Core.Models.Enums;
-using NiN3.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using NiN3.Core.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace NiN3.Core.Models

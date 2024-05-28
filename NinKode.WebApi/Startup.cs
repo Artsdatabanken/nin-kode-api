@@ -7,16 +7,31 @@ using NiN3.Infrastructure.Services;
 using NinKode.WebApi.Filters;
 using NinKode.WebApi.Helpers;
 using NinKode.WebApi.Helpers.Swagger;
+using System.Globalization;
+using System.Text;
 using System.Text.Json.Serialization;
 using System.Xml.Linq;
 
+// setting culture for application to Norwegian
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+var culture = new CultureInfo("nb-NO");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-}); 
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 // ef core database
 var connectionString = builder.Configuration.GetConnectionString("Default");
@@ -62,6 +77,8 @@ builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails 
 
 var app = builder.Build();
 
+app.UseCors();
+
 // redirect homepage to swagger ui
 app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
 
@@ -82,5 +99,6 @@ app.Use(async (context, next) =>
 app.ConfigureSwagger();
 
 app.UseProblemDetails();
+
 
 app.Run();

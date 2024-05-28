@@ -1,7 +1,6 @@
 ﻿
 using NiN3.Core.Models.Enums;
 using System.ComponentModel;
-using System.Xml.Serialization;
 
 namespace NiN3.Tests.Test.core
 {

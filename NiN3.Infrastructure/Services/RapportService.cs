@@ -1,20 +1,12 @@
 ﻿using AutoMapper;
+using ClosedXML.Excel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs.rapport;
 using NiN3.Infrastructure.DbContexts;
-using NiN3.Infrastructure.in_data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NiN3.Core.Models;
-using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.Mapping;
-//using OfficeOpenXml;
-using ClosedXML.Excel;
+using System.Text;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -99,13 +91,16 @@ namespace NiN3.Infrastructure.Services
             return kodeoversiktDtoList;
         }
 
-        public string MakeKodeoversiktCSV(string versjon) {
+        public string MakeKodeoversiktCSV(string versjon, string separator=";") {
             var kodeoversiktDtoList = GetKodeSummary(versjon);
             var csv = new StringBuilder();
-            csv.AppendLine("Klasse;Navn;Kortkode;Langkode");
+            csv.AppendLine($"Klasse{separator}Navn{separator}Kortkode{separator}Langkode");
             foreach (var kodeoversiktDto in kodeoversiktDtoList)
             {
-                var newLine = $"{kodeoversiktDto.Klasse};{kodeoversiktDto.Navn};{kodeoversiktDto.Kortkode};{kodeoversiktDto.Langkode}";
+                if (separator == ",") {
+                    kodeoversiktDto.Navn = "\"" + kodeoversiktDto.Navn.Replace("\"", "\"\"") + "\"";
+                }
+                var newLine = $"{kodeoversiktDto.Klasse}{separator}{kodeoversiktDto.Navn}{separator}{kodeoversiktDto.Kortkode}{separator}{kodeoversiktDto.Langkode}";
                 csv.AppendLine(newLine);
             }
             return csv.ToString();

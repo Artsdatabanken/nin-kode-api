@@ -1,8 +1,5 @@
 ﻿using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
-using System;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace NiN3.Infrastructure.Services
 {

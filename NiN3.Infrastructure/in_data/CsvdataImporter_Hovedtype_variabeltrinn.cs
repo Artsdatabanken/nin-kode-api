@@ -1,12 +1,4 @@
-﻿using DocumentFormat.OpenXml.Packaging;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NiN3.Infrastructure.in_data
+﻿namespace NiN3.Infrastructure.in_data
 {
     public class CsvdataImporter_Hovedtype_variabeltrinn
     {

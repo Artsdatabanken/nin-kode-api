@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NiN3.Core.Models.DTOs.type;
+﻿using NiN3.Core.Models.DTOs.type;
 using NiN3.Core.Models.DTOs.variabel;
 
 namespace NiN3.Core.Models.DTOs

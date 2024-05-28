@@ -1,19 +1,15 @@
-﻿using NiN3.Core.Models.DTOs;
+﻿using Microsoft.Extensions.Configuration;
 using NiN3.Core.Models;
-using NiN3.Core.Models.Enums;
-using System.Data;
-using System.ComponentModel;
-using Microsoft.Extensions.Configuration;
+using NiN3.Core.Models.DTOs;
+using NiN3.Core.Models.DTOs.rapport;
+using NiN3.Core.Models.DTOs.search;
 using NiN3.Core.Models.DTOs.type;
 using NiN3.Core.Models.DTOs.variabel;
-using System.Collections.Concurrent;
-using System;
-using System.ComponentModel.DataAnnotations;
-using NiN3.Core.Models.DTOs.rapport;
+using NiN3.Core.Models.Enums;
 using System.Collections;
+using System.Collections.Concurrent;
+using System.Data;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using NiN3.Core.Models.DTOs.search;
 
 namespace NiN3.Infrastructure.Mapping
 {
@@ -286,13 +282,6 @@ namespace NiN3.Infrastructure.Mapping
             return grunntypedto;
         }
 
-        /*
-        //put together new list of variabeltrinn
-        foreach (var m in distinctMaaleskalas) { 
-          var variabeltrinn = grunntype.GrunntypeVariabeltrinn.FirstOrDefault(vt => vt.Maaleskala.Id == m.Id);
-          variabeltrinnList.Add(new Variabeltrinn() { Maaleskala = m, Variabelnavn = variabeltrinn.Variabelnavn });
-        }*/
-
 
         //for each trinn find maaleskala for trinn and add (map)trinndto
 
@@ -327,58 +316,7 @@ namespace NiN3.Infrastructure.Mapping
             return variabeltrinnDto;
         }
 
-
-        /*
-        public TrinnForType MapForType(Trinn trinn) { 
-            var trinnForType = new TrinnForType()
-            {
-                Id = trinn.Id,
-                Verdi = trinn.Verdi,
-                Beskrivelse = trinn.Beskrivelse,
-                //Registrert = trinn.Registrert,
-            };
-            return trinnForType;
-        }*/
-
-        /*
-        public TrinnForTypeDto Map(TrinnForType trinnForType)
-        { 
-            var trinnForTypeDto = new TrinnForTypeDto()
-            {
-                Verdi = trinnForType.Verdi,
-                Beskrivelse = trinnForType.Beskrivelse,
-                Registrert = trinnForType.Registrert,
-            };
-            return trinnForTypeDto;
-        }*/
-
-        /*
-        /// <summary>
-        /// Maps a Grunntype object to a GrunntypeDto object.
-        /// </summary>
-        /// <param name="grunntype">The Grunntype object to be mapped.</param>
-        /// <returns>A GrunntypeDto object with the mapped values.</returns>
-        public GrunntypeDto Map(Grunntype grunntype)
-        {
-            var grunntypedto = new GrunntypeDto()
-            {
-                Navn = grunntype.Navn,
-                Kategori = "Grunntype",
-                Kode = MapKode(grunntype.Kode, grunntype.Langkode)
-            };
-            //for each maaleskala make a list of maaleskalaDto
-            if (grunntype.GrunntypeVariabeltrinn.Any())
-            {
-                
-                var maaleskalas = grunntype.GrunntypeVariabeltrinn.Select(g => g.Maaleskala).Distinct().ToList();
-
-            }
-
-            
-
-            //for each trinn find maaleskala for trinn and add (map)trinndto
-            return grunntypedto;
-        }*/
+ 
 
         /// <summary>
         /// Maps a Kartleggingsenhet object to a KartleggingsenhetDto object.
@@ -414,7 +352,7 @@ namespace NiN3.Infrastructure.Mapping
         public KodeDto MapKode(String kode, String? langkode = null, bool fortyper = true)
         {
             var typeOrVar = fortyper ? "typer" : "variabler";
-            //var _root_url = "https://nin-kode-api.artsdatabanken.no/v3.0";
+            var _root_url = "https://nin-kode-api.artsdatabanken.no";
             var kodeDto = new KodeDto()
             {
                 Id = kode,
@@ -506,11 +444,17 @@ namespace NiN3.Infrastructure.Mapping
             var kode = trinn.Verdi;
             var TrinnDto = new TrinnDto()
             {
+                Langkode = trinn.Langkode,
                 Beskrivelse = trinn.Beskrivelse,
                 Verdi = verdi,
                 Kode = kode,
                 Registert = registert
             };
+            //mapping konvertering
+            foreach (var konv in trinn.Konverteringer)
+            {
+                TrinnDto.Konverteringer.Add(Map(konv));
+            }
             return TrinnDto;
         }
 

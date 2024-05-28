@@ -1,12 +1,12 @@
-Typekategori2;Hovedtypegruppe;Hovedtypegruppenavn;Typekategori3;Kode
-NA;T;fastmarkssystemer;MB;NA-T
-NA;V;våtmarkssystemer;MB;NA-V
-NA;L;innsjøbunnsystemer;MB;NA-L
-NA;M;marine bunnsystemer;MB;NA-M
-NA;O;elvebunnsystemer;MB;NA-O
-NA;I;snø- og issystemer;MB;NA-I
-NA;S;marine vannmassesystemer;VM;NA-S
-NA;F;limniske vannmassesystemer;VM;NA-F
+Typekategori2;Hovedtypegruppe;Hovedtypegruppenavn;Typekategori3;HTGKode
+BM;A;bremassiv;0;BM-A
+EL;A;elveløp i fast fjell;0;EL-A
+EL;B;elveløp preget av fluviale prosesser;0;EL-B
+EL;C;elveløp preget av glasiale og fluviale prosesser;0;EL-C
+EL;D;elveløp i og gjennom kohesive sedimenter;0;EL-D
+EL;E;kompleks elvemunning;0;EL-E
+EL;F;elveløp med klart endret hydromorfologi;0;EL-F
+EL;G;kunstige elveløp og elveløp med sterkt endret hydromorfologi;0;EL-G
 FL;A;breelvlandformer;0;FL-A
 FL;B;biogene landformer;0;FL-B
 FL;C;bresjølandformer;0;FL-C
@@ -23,13 +23,6 @@ FL;M;havstrømlandformer;0;FL-M
 FL;N;utstrømningslandformer;0;FL-N
 FL;O;vindlandformer;0;FL-O
 FL;P;vulkanske landformer;0;FL-P
-EL;A;elveløp i fast fjell;0;EL-A
-EL;B;elveløp preget av fluviale prosesser;0;EL-B
-EL;C;elveløp preget av glasiale og fluviale prosesser;0;EL-C
-EL;D;elveløp i og gjennom kohesive sedimenter;0;EL-D
-EL;E;kompleks elvemunning;0;EL-E
-EL;F;elveløp med klart endret hydromorfologi;0;EL-F
-EL;G;kunstige elveløp og elveløp med sterkt endret hydromorfologi;0;EL-G
 IB;A;basseng formet av jordas indre prosesser;0;IB-A
 IB;B;massetransport-basseng;0;IB-B
 IB;C;bredemt basseng;0;IB-C
@@ -44,26 +37,33 @@ IB;K;basseng formet av kystprosesser;0;IB-K
 IB;L;basseng i torv;0;IB-L
 IB;M;basseng formet av dyrs aktiviteter;0;IB-M
 IB;N;basseng formet av mennesker;0;IB-N
+LA;I;innlandslandskap;0;LA-I
+LA;K;kystlandskap;0;LA-K
+LA;M;marine landskap;0;LA-M
+0;FS;substrat i ferskvann;0;LI-FS
+0;FU;substratfrie livsmedier i ferskvann;0;LI-FU
+0;MS;substrat i marine systemer;0;LI-MS
+0;MU;substratfrie livsmedier i marine systemer;0;LI-MU
+0;TS;substrat på land;0;LI-TS
+0;TU;substratfrie livsmedier på land;0;LI-TU
+0;A;hav-vannmasser;0;MV-A
+0;B;fjordvannmasser;0;MV-B
+NA;F;limniske vannmassesystemer;VM;NA-F
+NA;I;snø- og issystemer;MB;NA-I
+NA;L;innsjøbunnsystemer;MB;NA-L
+NA;M;marine bunnsystemer;MB;NA-M
+NA;O;elvebunnsystemer;MB;NA-O
+NA;S;marine vannmassesystemer;VM;NA-S
+NA;T;fastmarkssystemer;MB;NA-T
+NA;V;våtmarkssystemer;MB;NA-V
+NK;C;naturkompleks betinget av miljøstress;0;NK-C
+NK;D;naturkompleks betinget av regulerende forstyrrelse;0;NK-D
+NK;E;naturkompleks betinget av destabiliserende forstyrrelse;0;NK-E
 TM;A;topogene torvmassiv;0;TM-A
 TM;B;soligene torvmassiv;0;TM-B
 TM;C;kildetorvmassiv;0;TM-C
 TM;D;flommyrtorvmassiv;0;TM-D
 TM;E;blandingsmyrtorvmassiv;0;TM-E
 TM;F;mellomstillingsmassiv;0;TM-F
-TM;G;ombrogent ikke-hvelvet torvmassiv;0;TM-G
+TM;G;terrengdekkende massiv;0;TM-G
 TM;H;høgmyrmassiv;0;TM-H
-BM;A;bremassiv;0;BM-A
-0;A;hav-vannmasser;0;MV-A
-0;B;fjordvannmasser;0;MV-B
-LA;I;innlandslandskap;0;LA-I
-LA;K;kystlandskap;0;LA-K
-LA;M;marine landskap;0;LA-M
-NK;C;naturkompleks betinget av miljøstress;0;NK-C
-NK;D;naturkompleks betinget av regulerende forstyrrelse;0;NK-D
-NK;E;naturkompleks betinget av destabiliserende forstyrrelse;0;NK-E
-0;MS;substrat i marine systemer;0;LI-MS
-0;MU;substratfrie livsmedier i marine systemer;0;LI-MU
-0;FS;substrat i ferskvann;0;LI-FS
-0;FU;substratfrie livsmedier i ferskvann;0;LI-FU
-0;TS;substrat på land;0;LI-TS
-0;TU;substratfrie livsmedier på land;0;LI-TU

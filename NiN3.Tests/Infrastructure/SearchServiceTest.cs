@@ -1,6 +1,5 @@
 ﻿
 using AutoMapper;
-using Castle.Core.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -9,11 +8,6 @@ using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.Mapping;
 using NiN3.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NiN3.Tests.Infrastructure
 {

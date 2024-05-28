@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NiN3.Infrastructure.in_data
+﻿namespace NiN3.Infrastructure.in_data
 {
     public class CsvDataImporter_grunntype_variabeltrinn
     {
@@ -23,7 +16,7 @@ namespace NiN3.Infrastructure.in_data
                 grunntype_kode = columns[0],
                 varkode2 = columns[1],
                 trinn = columns[2],
-                variabelnavnKode = columns[4] != "" ? columns[4] : null
+                variabelnavnKode = columns[3] != "" ? columns[3] : null
 
             };
         }

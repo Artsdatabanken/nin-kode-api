@@ -1,11 +1,6 @@
 ﻿using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
 using NiN3.Core.Models.DTOs.variabel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -17,6 +12,6 @@ namespace NiN3.Infrastructure.Services
         public VariabelDto GetVariabelByKortkode(string kode, string versjon);
 
         public VariabelnavnDto GetVariabelnavnByKortkode(string kode, string versjon);
-        public MaaleskalaDto GetMaaleskalaByMaaleskalanavn(string maaleskalanavn);
+        public MaaleskalaDto GetMaaleskalaByMaaleskalanavn(string maaleskalanavn, string versjon);
     }
 }

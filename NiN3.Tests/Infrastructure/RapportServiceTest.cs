@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NiN.Infrastructure.Services;
-using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.Mapping;
 using NiN3.Infrastructure.Services;
@@ -70,8 +69,8 @@ namespace NiN3.Tests.Infrastructure
             var result = service.GetKodeSummary("3.0");
             Assert.NotNull(result);
             var kartleggingsenheter = result.Where(result => result.Klasse == "Kartleggingsenhet").ToList();
-            Assert.Equal(1296, kartleggingsenheter.Count);//test for #133
-            Assert.Equal(3576, result.Count);
+            Assert.Equal(1290, kartleggingsenheter.Count);//test for #133
+            Assert.Equal(3572, result.Count);
         }
     }
 }

@@ -1,13 +1,13 @@
-﻿using NiN3.Core.Models;
-using NiN3.Infrastructure.in_data;
-//using Type = NiN3.Core.Models.Type;
+﻿//using Type = NiN3.Core.Models.Type;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using NiN3KodeAPI.in_data;
-using NiN3.Infrastructure.Services;
-using NiN3.Infrastructure.DbContexts;
+using Microsoft.Extensions.Logging;
+using NiN3.Core.Models;
 using NiN3.Core.Models.Enums;
+using NiN3.Infrastructure.DbContexts;
+using NiN3.Infrastructure.in_data;
+using NiN3.Infrastructure.Services;
+using NiN3KodeAPI.in_data;
 using System.Text;
 //using NiN3.Infrastructure.in_data.csvfiles;
 
@@ -37,7 +37,6 @@ namespace NiN.Infrastructure.Services
             }
         }
 
-        //private List<CsvDataImporter_typeklasser_langkode> Langkoder_typeklasser;
         private readonly Dictionary<string, dynamic> EntitiesTypeDict = new Dictionary<string, dynamic>();
 
         public LoaderService(IConfiguration configuration, NiN3DbContext context, ILogger<LoaderService> logger)
@@ -45,7 +44,6 @@ namespace NiN.Infrastructure.Services
             _context = context;
             _logger = logger;
             _conf = configuration;
-            LoadTypeklasser_langkoder();
         }
 
         private bool HasTable(string tableName)
@@ -66,102 +64,69 @@ namespace NiN.Infrastructure.Services
         }
 
 
-        /*
-        public List<dynamic> Tabelldata(string tablename)
-        {
-            // write a switch that gets records based on tablename possible options are "Type, Hovedtypegruppe and Hovedtype"
-            string res = "";
-            dynamic rs = new List<dynamic>();
-            //FormattableString sql = $"SELECT * FROM [{tablename}]";
-            //var result = _context.Database.FromRaw(sql);'
-            string typeName = "NiN3.Core.Model.{tablename}";
-            System.Type type = System.Type.GetType(typeName);
-            var result = _context.Set<dynamic>).FromSql($"select * from {tablename}").ToList();
-            return (List<object>)result;
-        }
-        */
-
         public IEnumerable<Versjon> HentDomener()
         {
             return _context.Versjon.OrderBy(c => c.Navn).ToList();
         }
 
 
-        //public bool OpprettInitDbAsync()
-        public bool OpprettInitDb()
-        {
-            LoadType_HTG_Mappings();
-            LoadHtg_Ht_Gt_Mappings();
-            try
-            {
-                LoadTypeData();
-                _logger.LogInformation("Import of Types. Done");
-                LoadHovedtypeGruppeData();
-                _logger.LogInformation("Import of HTGdata. Done");
-                LoadHovedtypeData();
-                _logger.LogInformation("Import of HTdata. Done");
-
-                LoadGrunntypedata();
-                _logger.LogInformation("Import of GTdata. Done");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error importing data from csv ; " + ex.Message);
-            }
-            return true;
-        }
-
-
         public void load_all_data()
         {
+            try { 
+                SeedLookupData();
+                LoadTypeData();
+                LoadType_HTG_Mappings();
+                LoadHovedtypeGruppeData();
+                LoadHovedtypegruppeHovedoekosystemer();
+                LoadHtg_Ht_Gt_Mappings();
+                LoadHovedtypeData();
+                LoadGrunntypedata();
+                LoadKartleggingsenhet_m005();
+                LoadKartleggingsenhet_M005_Grunntype();
+                LoadKartleggingsenhet_M005_hovedtype();
+                LoadKartleggingsenhet_m020();
+                LoadKartleggingsenhet_M020_Grunntype();
+                LoadKartleggingsenhet_M020_hovedtype();
+                LoadKartleggingsenhet_M050();
+                LoadKartleggingsenhet_M050_Grunntype();
+                LoadKartleggingsenhet_M050_Hovedtype();
+                LoadVariabel();
+                LoadVariabelnavn();
+                LoadMaaleskala();
+                LoadTrinn();
+                MakeMaaleskalaMappingForVariabelnavn();
 
-            SeedLookupData();
-            LoadTypeData();
-            LoadType_HTG_Mappings();
-            LoadHovedtypeGruppeData();
-            LoadHovedtypegruppeHovedoekosystemer();
-            LoadHtg_Ht_Gt_Mappings();
-            LoadHovedtypeData();
-            LoadGrunntypedata();
-            LoadKartleggingsenhet_m005();
-            LoadKartleggingsenhet_M005_Grunntype();
-            LoadKartleggingsenhet_M005_hovedtype();
-            LoadKartleggingsenhet_m020();
-            LoadKartleggingsenhet_M020_Grunntype();
-            LoadKartleggingsenhet_M020_hovedtype();
-            LoadKartleggingsenhet_M050();
-            LoadKartleggingsenhet_M050_Grunntype();
-            LoadKartleggingsenhet_M050_Hovedtype();
-            LoadVariabel();
-            LoadVariabelnavn();
-            LoadMaaleskala();
-            LoadTrinn();
-            MakeMaalestokkMappingForVariabelnavn();
+                LoadGrunntypeVariabeltrinnMapping();
+                LoadHovedtypeVariabeltrinnMapping();
+                LoadKonverteringHovedtypegruppe();
+                LoadKonverteringHovedtype();
+                LoadKonverteringGrunntype();
+                LoadKonverteringVariabelnavn();
+                LoadKonverteringTrinn();
 
-            LoadGrunntypeVariabeltrinnMapping();
-            LoadHovedtypeVariabeltrinnMapping();
-            LoadKonverteringHovedtypegruppe();
-            LoadKonverteringHovedtype();
-            LoadKonverteringGrunntype();
-            LoadKonverteringVariabelnavn();
+                // ** Reports ** //
+                LoadEndringslogg();
+                LoadAlleKortkoder();
+                LoadEnumoppslag();
+                _context.SaveChanges();
 
-            // ** Reports ** //
-            LoadAlleKortkoder();
-            LoadEnumoppslag();
-            _context.SaveChanges();
-
-            // ** Views, for overview/insight ** //
-            CreateMaaleskalaView();
-            CreateGrunntypeVariabeltrinnView();
-            CreateHovedtypeVariabeltrinnView();
-            CreateSjekkUnikeHovedklasserView();
-            CreateHovedtypeKleView();
-            CreateAlleLangkoderView();
-            CreateDuplikateLangkoderView();
-            CreateDBInfoTable();
-            SetBuildTimeInDb_infoTable();
-
-            WriteToFile($"END: loading is FINISHED :) (Log is written to {logpath})");
+                // ** Views, for overview/insight ** //
+                CreateMaaleskalaView();
+                CreateGrunntypeVariabeltrinnView();
+                CreateHovedtypeVariabeltrinnView();
+                CreateSjekkUnikeHovedklasserView();
+                CreateHovedtypeKleView();
+                CreateAlleLangkoderView();
+                CreateDuplikateLangkoderView();
+                CreateDBInfoTable();
+                SetBuildTimeInDb_infoTable();
+                WriteToFile($"END: loading is FINISHED :) (Log is written to {logpath})");
+            }
+            catch(Exception ex)
+            {
+                WriteToFile($"Error: {ex.Message}");
+                WriteToFile($"Error: Loading did not finish!!");
+            }
         }
 
         // Rewritten code with comments
@@ -173,8 +138,6 @@ namespace NiN.Infrastructure.Services
         {
             // Create an instance of the CsvdataImporter_Type_Htg_mapping class
             csvdataImporter_Type_Htg_Mappings = CsvdataImporter_Type_Htg_mapping.ProcessCSV("in_data/csvfiles/type_htg_mapping.csv");
-            // Log a message to indicate that the Type_HTG_Mapping has been loaded
-            //_logger.LogInformation("Type_HTG_Mapping lastet");
         }
 
         /// <summary>
@@ -182,12 +145,8 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadHtg_Ht_Gt_Mappings()
         {
-            // Create an instance of the CsvdataImporter_htg_ht_gt_mapping class
-            //csvdataImporter_Htg_Ht_Gt_Mappings = CsvdataImporter_htg_ht_gt_mapping.ProcessCSV("in_data/htg_ht_gt_mapping.csv");
             csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings = CsvdataImporter_hovedtypegruppe_hovedtype_mapping.ProcessCSV("in_data/csvfiles/hovedtypegruppe_hovedtype_mapping.csv");
             csvdataImporter_Hovedtype_Grunntype_Mappings = CsvdataImporter_hovedtype_grunntype_mapping.ProcessCSV("in_data/csvfiles/hovedtype_grunntype_mapping.csv");
-            // Log a message to indicate that the Htg_Ht_Gt_Mapping has been loaded
-            //_logger.LogInformation("Htg_Ht_Gt_Mapping lastet");
         }
 
 
@@ -196,7 +155,6 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void SeedLookupData()
         {
-            //List<Versjon> domenes = new List<Versjon>(); //TODO: delete if all tests ok
             _context.Add(new Versjon() { Navn = "3.0" }); // current version
             _context.Add(new Versjon() { Navn = "2.3" });  // for 'konvertering' purposeshttps://open.spotify.com/playlist/46twe0c8AJIV3SKxBxqwxd
             _context.SaveChanges();
@@ -212,12 +170,10 @@ namespace NiN.Infrastructure.Services
                 var typer = CsvdataImporter_Type.ProcessCSV("in_data/csvfiles/type.csv");
                 foreach (var type in typer)
                 {
-                    //var langkodeForType 
                     var t = new NiN3.Core.Models.Type()
                     {
                         Navn = type.Typekategori2!=null?EnumUtil.ToDescriptionBlankIfNull(type.Typekategori2): EnumUtil.ToDescriptionBlankIfNull(type.Typekategori),
                         Kode = type.Kode,
-                        //Langkode = langkodeForType,
                         Ecosystnivaa = type.Ecosystnivaa,
                         Typekategori = type.Typekategori,
                         Typekategori2 = type.Typekategori2,
@@ -287,26 +243,29 @@ namespace NiN.Infrastructure.Services
                 var domene = Versjon;// todo-sat: get this from config or even better, get from request parameter -value.
                 foreach (var ht in hovedtyper)
                 {
-                    var psk = ht.Prosedyrekategori;
-                    var htg_ht = csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings.FirstOrDefault(s => s.Hovedtype_kode == ht.Kode); // finn hovedtypegruppe koden gitt hovedtypekode fra mapping HTG<>HT
-                    var hovedtypegruppe = _context.Hovedtypegruppe.FirstOrDefault(s => s.Kode == htg_ht.Hovedtypegruppe_kode);
-                    //fetching type-parent for hovedtype via hovedtypegruppe
-                    NiN3.Core.Models.Type? type = _context.Type.FirstOrDefault(s => s.Kode == hovedtypegruppe.Type.Kode);
-                    //var langkode_grunntype = Langkoder_typeklasser.FirstOrDefault(s => s.kode_hovedtype == ht.Kode);
-                    //var langkodeForType = 
-                    var hovedtype = new Hovedtype()
+                    try
                     {
-                        //Id = Guid.NewGuid(),
-                        Kode = ht.Kode,
-                        //Langkode = langkodeForType,
-                        Hovedtypegruppe = hovedtypegruppe,
-                        Versjon = domene,
-                        Delkode = ht.Hovedtype,
-                        Navn = ht.Hovedtypenavn,
-                        Prosedyrekategori = ht.Prosedyrekategori
-                    };
-                    hovedtype.Langkode = LangkodeForTypeObject(TypeklasseTypeEnum.HT, ht.Kode, type, hovedtype);
-                    _context.Add(hovedtype);
+                        var psk = ht.Prosedyrekategori;
+                        var htg_ht = csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings.FirstOrDefault(s => s.Hovedtype_kode == ht.Kode); // finn hovedtypegruppe koden gitt hovedtypekode fra mapping HTG<>HT
+                        var hovedtypegruppe = _context.Hovedtypegruppe.FirstOrDefault(s => s.Kode == htg_ht.Hovedtypegruppe_kode);
+                        //fetching type-parent for hovedtype via hovedtypegruppe
+                        NiN3.Core.Models.Type? type = _context.Type.FirstOrDefault(s => s.Kode == hovedtypegruppe.Type.Kode);
+                        var hovedtype = new Hovedtype()
+                        {
+                            Kode = ht.Kode,
+                            Hovedtypegruppe = hovedtypegruppe,
+                            Versjon = domene,
+                            Delkode = ht.Hovedtype,
+                            Navn = ht.Hovedtypenavn,
+                            Prosedyrekategori = ht.Prosedyrekategori
+                        };
+                        hovedtype.Langkode = LangkodeForTypeObject(TypeklasseTypeEnum.HT, ht.Kode, type, hovedtype);
+                        _context.Add(hovedtype);
+                    }
+                    catch (Exception ex)
+                    {
+                        WriteToFile($"Error: problem persisting hovedtype: {ht.Kode}:{ht.Hovedtypenavn}, msg:{ex.Message}, {ex.InnerException?.Message}");
+                    }
                 }
                 _context.SaveChanges();
             }
@@ -334,18 +293,14 @@ namespace NiN.Infrastructure.Services
                     var ht_gt = csvdataImporter_Hovedtype_Grunntype_Mappings.FirstOrDefault(s => s.Grunntype_kode == gt.Kode); 
                     var hovedtype = ht_gt!=null?_context.Hovedtype.FirstOrDefault(s => s.Kode == ht_gt.Hovedtype_kode):null;                    
                     var hovedtypegruppe = hovedtype!=null?_context.Hovedtypegruppe.FirstOrDefault(s => s.Kode == hovedtype.Hovedtypegruppe.Kode):null;
-                    //var hovedtypegruppe = _context.hovedtypegruppe.FirstOrDefault(s => s.Kode == htg_ht.Hovedtypegruppe_kode);//htg_ht.Hove
                     if (ht_gt != null && hovedtype != null && hovedtypegruppe != null)
                     {
                         var grunntype = new Grunntype()
                         {
-                            /* Id = Guid.NewGuid(), */
                             Kode = gt.Kode,
-                            //Langkode = gt.Langkode,
                             Navn = gt.Grunntypenavn,
                             Versjon = domene,
                             Delkode = gt.Grunntype,
-                            //Hovedtypegruppe = hovedtypegruppe,
                             Hovedtype = hovedtype,
                             Prosedyrekategori = gt.Prosedyrekategori
                         };
@@ -366,15 +321,6 @@ namespace NiN.Infrastructure.Services
             {
                 WriteToFile("Objecttype <<Grunntype>> allready has data!");
             }
-        }
-
-        /// <summary>
-        /// Loads data for Type object if not already present in the database.
-        /// </summary>
-        private void LoadTypeklasser_langkoder()
-        {
-            WriteToFile("\n\n********  LoadTypeklasser_langkoder");
-            //Langkoder_typeklasser = CsvDataImporter_typeklasser_langkode.ProcessCSV("in_data/csvfiles/typeklasser_langkode_mapping.csv");
         }
 
 
@@ -453,7 +399,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE(M005): {kl_ht.m005kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE(M005): {kl_ht.m005kode}");
                 }
             }
             _context.SaveChanges();
@@ -537,7 +483,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE (M020): {kl_ht.m020kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M020): {kl_ht.m020kode}");
                 }
             }
             _context.SaveChanges();
@@ -620,7 +566,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}' and KLE (M050): {kl_ht.m050kode}");
+                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M050): {kl_ht.m050kode}");
                 }
             }
             _context.SaveChanges();
@@ -849,7 +795,6 @@ namespace NiN.Infrastructure.Services
                 };
                 _context.Add(variabel);
             }
-
             _context.SaveChanges();
         }
 
@@ -884,6 +829,7 @@ namespace NiN.Infrastructure.Services
 
                 var trinn = new Trinn()
                 {
+                    Langkode = t.Langkode,
                     Verdi = t.Trinn,
                     Beskrivelse = t.Trinnverdi,
                     Maaleskala = maaleskala
@@ -896,15 +842,15 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    Console.WriteLine(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
+                    WriteToFile(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
                 }
                 _context.SaveChanges();
             }
         }
 
-        public void MakeMaalestokkMappingForVariabelnavn()
+        public void MakeMaaleskalaMappingForVariabelnavn()
         {
-            WriteToFile("\n\n********  MakeMaalestokkMappingForVariabelnavn");
+            WriteToFile("\n\n********  MakeMaaleskalaMappingForVariabelnavn");
             var variabelnavn_maaleskalaList = CsvdataImporter_Variabelnavn_maaleskala.ProcessCSV("in_data/csvfiles/variabelnavn_maaleskala_mapping.csv");
             foreach (var vm in variabelnavn_maaleskalaList)
             {
@@ -924,7 +870,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    Console.WriteLine($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
+                    WriteToFile($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
                 }
                 // create VariabelnavnMaaleskala object
                 // add to db
@@ -993,7 +939,7 @@ namespace NiN.Infrastructure.Services
                 else
                 {
                     var msg = $@"Could not find one of the following:
-                    hovedtype: {hovedtypeVariabeltrinn.hovedtype_kode},maaleskala: {hovedtypeVariabeltrinn.varkode2}-SO or {hovedtypeVariabeltrinn.varkode2}-SI,trinn: {hovedtypeVariabeltrinn.trinn}";
+                    hovedtype: {hovedtypeVariabeltrinn.hovedtype_kode}[{hovedtype.Navn}], maaleskala: {hovedtypeVariabeltrinn.varkode2}-SO or {hovedtypeVariabeltrinn.varkode2}-SI,trinn: {hovedtypeVariabeltrinn.trinn}";
                     WriteToFile(msg);
                 }
             }
@@ -1056,7 +1002,7 @@ namespace NiN.Infrastructure.Services
             WriteToFile("\n\n********  LoadKonverteringGrunntype");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
-            var gtKonvList = CsvDataImporter_konvertering_hovedtype.ProcessCSV("in_data/csvfiles/konvertering_gt_v30.csv");
+            var gtKonvList = CsvdataImporter_konvertering_grunntype.ProcessCSV("in_data/csvfiles/konvertering_gt_v30.csv");
             foreach (var gtk in gtKonvList)
             {
                 //var htg = _context.Hovedtypegruppe.FirstOrDefault(h => h.Kode == htk.Kode);
@@ -1081,7 +1027,7 @@ namespace NiN.Infrastructure.Services
             WriteToFile("\n\n********  LoadKonverteringVariabelnavn");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
-            var vnKonvList = CsvDataImporter_konvertering_hovedtype.ProcessCSV("in_data/csvfiles/konvertering_vn_v30.csv");
+            var vnKonvList = CsvDataImporter_konvertering_variabelnavn.ProcessCSV("in_data/csvfiles/konvertering_vn_v30.csv");
             foreach (var vnk in vnKonvList)
             {
                 //var htg = _context.Hovedtypegruppe.FirstOrDefault(h => h.Kode == htk.Kode);
@@ -1101,8 +1047,49 @@ namespace NiN.Infrastructure.Services
             _context.SaveChanges();
         }
 
+        public void LoadKonverteringTrinn() { 
+            WriteToFile("\n\n********  LoadKonverteringTrinn");
+            var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
+            var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
+            var trinnKonvList = CsvDataImporter_konvertering_trinn.ProcessCSV("in_data/csvfiles/konvertering_trinn_v30.csv");
+            foreach (var trk in trinnKonvList)
+            {
+                //var htg = _context.Hovedtypegruppe.FirstOrDefault(h => h.Kode == htk.Kode);
+                var konvert = new Konvertering()
+                {
+                    Klasse = KlasseEnum.VT,
+                    Kode = trk.Kode,
+                    ForrigeKode = trk.ForrigeKode,
+                    ForrigeVersjon = forrigeVersjon,
+                    Versjon = versjon,
+                    Url = trk.Url,
+                    FoelsomhetsPresisjon = trk.FoelsomhetsPresisjon,
+                    Spesifiseringsevne = trk.Spesifiseringsevne
+                };
+                _context.Add(konvert);
+            }
+            _context.SaveChanges();
+        }
+
 
         /********* Loadings for RapportService *********/
+        public void LoadEndringslogg()
+        {
+            WriteToFile("\n\n********  LoadEndringslogg");
+            var endringsloggList = CsvDataImporter_Endringslogg.ProcessCSV("in_data/csvfiles/endringslogg.csv");
+            foreach (var el in endringsloggList)
+            {
+                var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == el.versjon);
+                var endringslogg = new Endringslogg()
+                {
+                    Tidspunkt = el.tidspunkt,
+                    Beskrivelse = el.beskrivelse,
+                    Versjon = this.Versjon
+                };
+                _context.Add(endringslogg);
+            }
+            _context.SaveChanges();
+        }
 
         public void LoadAlleKortkoder()
         {
