@@ -49,4 +49,16 @@ stages:
         repository: 'artsdatabanken/nin-kode-api'
         command: 'push'
         tags: '$(tag)'
+    - task: AzurePowerShell@5
+      inputs:
+        azureSubscription: 'test-deploy-code'
+        ScriptType: 'InlineScript'
+        Inline: |
+          # Connect to Azure
+          Connect-AzAccount
+          
+          # Restart the Azure App Service
+          Restart-AzWebApp -ResourceGroupName 'adb-test-ninkapi-rg' -Name 'adb-test-ninkapi-as'
+        errorActionPreference: 'silentlyContinue'
+        azurePowerShellVersion: 'LatestVersion'
 
