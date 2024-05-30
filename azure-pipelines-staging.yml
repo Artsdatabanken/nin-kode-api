@@ -13,28 +13,10 @@ trigger:
     exclude:
       - README.md
       
-resources:
-- repo: self
-  lfs: true
-
 variables:
   tag: 'staging'
 
 jobs:
-- job: FetchLFSFiles
-  displayName: Fetch LFS files
-  pool:
-    vmImage: ubuntu-latest
-  steps:
-  - task: CmdLine@2
-    displayName: Fetch LFS files
-    inputs:
-      script: |
-        git lfs version
-        git lfs fetch origin --all
-        git lfs pull
-        ls -l NinKode.WebApi/databases
-        git lfs status
 - job: BuildAndPublish
   displayName: Build and publish Docker image
   pool:
