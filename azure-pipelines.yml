@@ -17,16 +17,7 @@ trigger:
 variables:
   tag: 'latest'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: Docker@2jobs:
+jobs:
 - job: BuildAndPublish
   displayName: Build and publish Docker image
   pool:
@@ -49,17 +40,4 @@ stages:
       repository: 'artsdatabanken/nin-kode-api'
       command: 'push'
       tags: '$(tag)'
-      displayName: Build an image
-      inputs:
-        containerRegistry: 'Dockerhub'
-        repository: 'artsdatabanken/nin-kode-api'
-        command: 'build'
-        Dockerfile: '**/Dockerfile'
-        tags: '$(tag)'
-    - task: Docker@2
-      displayName: Publish image
-      inputs:
-        containerRegistry: 'Dockerhub'
-        repository: 'artsdatabanken/nin-kode-api'
-        command: 'push'
-        tags: '$(tag)'
+
