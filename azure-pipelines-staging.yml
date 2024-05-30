@@ -35,12 +35,12 @@ jobs:
         git lfs pull
         ls -l NinKode.WebApi/databases
         git lfs status
-
 - job: BuildAndPublish
   displayName: Build and publish Docker image
   pool:
     vmImage: ubuntu-latest
   steps:
+  - checkout: None
   - task: Docker@2
     displayName: Build an image
     inputs:

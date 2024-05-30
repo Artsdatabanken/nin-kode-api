@@ -21,7 +21,6 @@ RUN dotnet build "NinKode.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "NinKode.WebApi.csproj" -c Release -o /app/publish
-COPY NinKode.WebApi/databases/ /app/publish/databases/
 RUN ls -l /app/publish 
 RUN ls -l /app/publish/databases
 
