@@ -73,6 +73,7 @@ namespace NiN3.Tests.Infrastructure
             Assert.Equal(3585, result.Count);
         }
 
+
         [Fact]
         public void TestGetDataDate()
         {
