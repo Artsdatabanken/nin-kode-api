@@ -73,7 +73,7 @@ NiN-3.0-T-C-PE-NA-MB-LM01-M005-05;kalkrik ny innsjø-sedimentbunn;LM01-M005-05
 NiN-3.0-T-C-PE-NA-MB-LM02-M005-01;kalkfattig ny innsjøbunn fra elvebunn;LM02-M005-01
 NiN-3.0-T-C-PE-NA-MB-LM02-M005-02;kalkrik ny innsjøbunn fra elvebunn;LM02-M005-02
 NiN-3.0-T-C-PE-NA-MB-LM03-M005-01;kalkfattig ny innsjøbunn fra våtmarkssystemer;LM03-M005-01
-NiN-3.0-T-C-PE-NA-MB-LM03-M005-01;kalkrik ny innsjøbunn fra våtmarkssystemer;LM03-M005-01
+NiN-3.0-T-C-PE-NA-MB-LM03-M005-02;kalkrik ny innsjøbunn fra våtmarkssystemer;LM03-M005-02
 NiN-3.0-T-C-PE-NA-MB-LM04-M005-01;kalkfattig kronisk fysisk forstyrret innsjøbunn;LM04-M005-01
 NiN-3.0-T-C-PE-NA-MB-LM04-M005-02;kalkrik kronisk fysisk forstyrret innsjøbunn;LM04-M005-02
 NiN-3.0-T-C-PE-NA-MB-LM04-M005-03;reguleringssone i innsjø;LM04-M005-03
@@ -323,14 +323,14 @@ NiN-3.0-T-C-PE-NA-MB-TB01-M005-01;blåbærskog;TB01-M005-01
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-02;lågurtskog;TB01-M005-02
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-03;frisk kalkskog;TB01-M005-03
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-04;bærlyngskog;TB01-M005-04
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-04;lyngskog;TB01-M005-04
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-04;lavskog;TB01-M005-04
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-05;lav-lågurtskog;TB01-M005-05
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-05;bærlyng-lågurtskog;TB01-M005-05
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-05;lyng-lågurtskog;TB01-M005-05
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-06;kalk-lavskog;TB01-M005-06
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-06;kalk-bærlyngskog;TB01-M005-06
-NiN-3.0-T-C-PE-NA-MB-TB01-M005-06;kalk-lyngskog;TB01-M005-06
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-07;lyngskog;TB01-M005-07
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-08;lyng-lågurtskog;TB01-M005-08
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-09;kalk-lyngskog;TB01-M005-09
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-10;lavskog;TB01-M005-10
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-11;lav-lågurtskog;TB01-M005-11
+NiN-3.0-T-C-PE-NA-MB-TB01-M005-12;kalk-lavskog;TB01-M005-12
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-13;blåbærfuktskog;TB01-M005-13
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-14;storbregneskog;TB01-M005-14
 NiN-3.0-T-C-PE-NA-MB-TB01-M005-15;høgstaudeskog;TB01-M005-15
@@ -602,7 +602,7 @@ NiN-3.0-T-C-PE-NA-MB-VB01-M005-03;sterkt intermediær til litt kalkrik kildesump
 NiN-3.0-T-C-PE-NA-MB-VB01-M005-04;klart kalkrik kildesumpskogsmark, myr- og sumpskogsmark;VB01-M005-04
 NiN-3.0-T-C-PE-NA-MB-VC01-M005-01;nedbørsmyr-mykmatte og fastmatte;VC01-M005-01
 NiN-3.0-T-C-PE-NA-MB-VC01-M005-02;nedbørsmyr-tuenivå;VC01-M005-02
-NiN-3.0-T-C-PE-NA-MB-VC01-M005-02;rabbepreget nedbørsmyr-myrtue på permafrost;VC01-M005-02
+NiN-3.0-T-C-PE-NA-MB-VC01-M005-04;rabbepreget nedbørsmyr-myrtue på permafrost;VC01-M005-04
 NiN-3.0-T-C-PE-NA-MB-VC02-M005-01;litt kalkfattig til svakt intermediær svak eller ustabil torvmarkskilde;VC02-M005-01
 NiN-3.0-T-C-PE-NA-MB-VC02-M005-02;sterkt intermediær til litt kalkrik torvmarkskilde;VC02-M005-02
 NiN-3.0-T-C-PE-NA-MB-VC02-M005-03;temmelig til ekstremt kalkrik torvmarkskilde;VC02-M005-03

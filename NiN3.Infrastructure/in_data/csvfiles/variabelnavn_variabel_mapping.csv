@@ -1,7 +1,7 @@
 Langkode;Kortkode;3 ABC;4 NM;Variabelkategori2;Variabeltype;Variabelgruppe;Variabelnavn_kode;Variabelnavn_navn;Variabel_kode
 NiN-3.0-V-A-N-LM-GK-W-KA-W;LM-KA;A;N;LM;GK;W;KA;kalkinnhold;A-N
 NiN-3.0-V-A-N-LM-GE-EE-EH-W;LM-EH;A;N;LM;GE;EE;EH;elveløpshelning;A-N
-NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;hevdregime;A-M
+NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;semi-naturlig hevdregime;A-M
 NiN-3.0-V-A-M-KM-FE-SB-HS-W;KM-HS;A;M;KM;FE;SB;HS;lukket selektiv hogst;A-M
 NiN-3.0-V-A-N-NO-GE-DL-L3-W;NO-L3;A;N;NO;GE;DL;L3;alle lite nedbrutte lauvtrelæger med middels dimensjon;A-N
 NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm-P6c;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
@@ -187,7 +187,7 @@ NiN-3.0-V-A-M-MO-GE-OE-VI-W;MO-VI;A;M;MO;GE;OE;VI;kunstig vanninnløp;A-M
 NiN-3.0-V-A-M-MO-GE-OE-VU-W;MO-VU;A;M;MO;GE;OE;VU;kunstig vannuttak;A-M
 NiN-3.0-V-A-M-MO-GE-OI-II-W;MO-II;A;M;MO;GE;OI;II;frittstående fast installasjon i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-IL-W;MO-IL;A;M;MO;GE;OI;IL;konsentrasjon av små, løse objekter i vann;A-M
-NiN-3.0-V-A-M-MO-GE-OT-SH-W;MO-IM;A;M;MO;GE;OI;IM;massiv fast installasjon i innsjø eller til havs;A-M
+NiN-3.0-V-A-M-MO-GE-OI-IM-W;MO-IM;A;M;MO;GE;OI;IM;massiv fast installasjon i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-IS-W;MO-IS;A;M;MO;GE;OI;IS;stort, løst objekt i innsjø eller til havs;A-M
 NiN-3.0-V-A-M-MO-GE-OI-MA-W;MO-MA;A;M;MO;GE;OI;MA;innsjømagasin;A-M
 NiN-3.0-V-A-M-MO-GE-OI-ME-W;MO-ME;A;M;MO;GE;OI;ME;merder og andre flytende innretninger;A-M
@@ -219,7 +219,6 @@ NiN-3.0-V-A-M-MO-GE-OT-VL-W;MO-VL;A;M;MO;GE;OT;VL;veg etc. uten fast dekke;A-M
 NiN-3.0-V-A-M-RM-GK-W-AI-W;RM-AI;A;M;RM;GK;W;AI;arealbruksintensitet;A-M
 NiN-3.0-V-A-M-RM-GK-W-JP-W;RM-JP;A;M;RM;GK;W;JP;jordbrukspreg;A-M
 NiN-3.0-V-A-M-LM-FK-W-BM-W;LM-BM;A;M;LM;FK;W;BM;biologisk menneskepåvirkning av vann-natur;A-M
-NiN-3.0-V-A-M-LM-FK-W-HR-W;LM-HR;A;M;LM;FK;W;HR;semi-naturlig hevdregime;A-M
 NiN-3.0-V-A-M-LM-FK-W-MK-W;LM-MK;A;M;LM;FK;W;MK;fysikalsk-kjemisk menneskepåvirkning av vann-natur;A-M
 NiN-3.0-V-A-M-LM-FK-W-MS-W;LM-MS;A;M;LM;FK;W;MS;kategorier av endret skogsmark på fastmark;A-M
 NiN-3.0-V-A-M-LM-FK-W-MT-W;LM-MT;A;M;LM;FK;W;MT;fysisk menneskepåvirket fastmark;A-M
