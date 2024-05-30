@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using ClosedXML.Excel;
+using DocumentFormat.OpenXml.InkML;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
@@ -22,6 +24,12 @@ namespace NiN3.Infrastructure.Services
         {
             _context = context;
             _logger = logger;
+        }
+
+        public string GetDataDate()
+        {
+            var result = _context.Database.SqlQuery<string>($"SELECT Verdi from [db_info]").ToList();
+            return result.First(); // Return null if no value is found
         }
 
         public List<KodeoversiktDto> GetKodeSummary(string versjon)
@@ -106,38 +114,6 @@ namespace NiN3.Infrastructure.Services
             return csv.ToString();
         }
 
-        /* using EPPlus: 
-                public byte[] MakeKodeoversiktXlsx(string versjon)
-                {
-                    var kodeoversiktDtoList = GetKodeSummary(versjon);
-
-                    using (var package = new ExcelPackage())
-                    {
-                        var worksheet = package.Workbook.Worksheets.Add("Kodeoversikt");
-
-                        // Set the headers
-                        worksheet.Cells[1, 1].Value = "Klasse";
-                        worksheet.Cells[1, 2].Value = "Navn";
-                        worksheet.Cells[1, 3].Value = "Kortkode";
-                        worksheet.Cells[1, 4].Value = "Langkode";
-
-                        // Fill the rows with data
-                        int i = 2;
-                        foreach (var kodeoversiktDto in kodeoversiktDtoList)
-                        {
-                            worksheet.Cells[i, 1].Value = kodeoversiktDto.Klasse;
-                            worksheet.Cells[i, 2].Value = kodeoversiktDto.Navn;
-                            worksheet.Cells[i, 3].Value = kodeoversiktDto.Kortkode;
-                            worksheet.Cells[i, 4].Value = kodeoversiktDto.Langkode;
-                            i++;
-                        }
-
-                        // Save the spreadsheet
-                        var stream = new MemoryStream();
-                        package.SaveAs(stream);
-                        return stream.ToArray();
-                    }
-                }*/
         public byte[] MakeKodeoversiktXlsx(string versjon)
         {
             var kodeoversiktDtoList = GetKodeSummary(versjon);
