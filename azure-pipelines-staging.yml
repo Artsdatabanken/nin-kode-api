@@ -32,6 +32,7 @@ jobs:
       script: |
         git lfs fetch origin --all
         ls -l NinKode.WebApi/databases
+        git lfs status
 
 - job: BuildAndPublish
   displayName: Build and publish Docker image
