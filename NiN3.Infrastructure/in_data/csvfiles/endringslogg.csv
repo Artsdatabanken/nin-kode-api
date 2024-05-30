@@ -1,8 +1,8 @@
 Versjon;Tidspunkt;Beskrivelse
 3.0;20231213;Endepunkt:kodeForGrunntype: Grunntype.Variabeltrinn uten trinn gir Error (feilretting)(prev. #223)
 3.0;20231213;Trinn:Stor bokstav i navn (prev. #219)
-3.0;20230108;Endpunkt: kodeForKartleggin1gsenhet, http500-feil (prev. #226)
-3.0;20230108;Kartleggingsenheter: M020 manglet navn (prev. #240)
+3.0;20240108;Endpunkt: kodeForKartleggin1gsenhet, http500-feil (prev. #226)
+3.0;20240108;Kartleggingsenheter: M020 manglet navn (prev. #240)
 3.0;20240226;Endring av kortkoder og langkoder for hovedtyper og grunntyper(prev. #261)
 3.0;20240410;Grunntype-variabeltrinn, 2 manglet pga skrivefeil(PD_* endret til PF_*)(prev. #82)
 3.0;20240410;Fjernet duplikat trinn KA-a (måleskala: KA-SO/Variabelnavn:LM-KA)(#66)

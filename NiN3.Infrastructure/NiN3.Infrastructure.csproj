@@ -5,6 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="in_data\csvfiles\.ipynb_checkpoints\hovedtyper-checkpoint.json" />
+    <Content Include="in_data\csvfiles\.ipynb_checkpoints\hovedtyper_series-checkpoint.json" />
+    <Content Include="in_data\csvfiles\.ipynb_checkpoints\htg_ht_gt_mapping-checkpoint.json" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
     <PackageReference Include="Azure.Identity" Version="1.11.0" />
@@ -21,9 +26,19 @@
     <ProjectReference Include="..\NiN3.Core\NiN3.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="in_data\csvfiles\debug\" />
     <Folder Include="in_data\v30\" />
     <Folder Include="Migrations\" />
     <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\grunntyper-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\hovedtyper-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\m005-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\m005_grunntype_mapping-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\m005_gt_mapping-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\typer-checkpoint.csv" />
+    <None Include="in_data\csvfiles\.ipynb_checkpoints\type_htg-checkpoint.csv" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="in_data\CsvDataImporter_Endringslogg.cs">
