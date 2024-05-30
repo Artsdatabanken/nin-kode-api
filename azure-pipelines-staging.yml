@@ -40,7 +40,8 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   steps:
-  - checkout: None
+  - checkout: self
+    lfs: true
   - task: Docker@2
     displayName: Build an image
     inputs:
