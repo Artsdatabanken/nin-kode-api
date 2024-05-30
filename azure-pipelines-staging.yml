@@ -30,6 +30,7 @@ jobs:
     displayName: Fetch LFS files
     inputs:
       script: |
+        git lfs version
         git lfs fetch origin --all
         ls -l NinKode.WebApi/databases
         git lfs status
