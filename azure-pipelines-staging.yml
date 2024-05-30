@@ -31,6 +31,7 @@ jobs:
     inputs:
       script: |
         git lfs fetch origin --all
+        ls -l /app/publish/databases
 
 - job: BuildAndPublish
   displayName: Build and publish Docker image
