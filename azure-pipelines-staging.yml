@@ -3,48 +3,39 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- staging
-
-resources:
-- repo: self
-
+  branches:
+    include:
+      - staging
+    exclude:
+      - master
+      - main
+  paths:
+    exclude:
+      - README.md
+      
 variables:
   tag: 'staging'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        containerRegistry: 'Dockerhub'
-        repository: 'artsdatabanken/nin-kode-api'
-        command: 'build'
-        Dockerfile: '**/Dockerfile'
-        tags: '$(tag)'
-    - task: Docker@2
-      displayName: Publish image
-      inputs:
-        containerRegistry: 'Dockerhub'
-        repository: 'artsdatabanken/nin-kode-api'
-        command: 'push'
-        tags: '$(tag)'
-    - task: AzurePowerShell@5
-      inputs:
-        azureSubscription: 'test-deploy-code'
-        ScriptType: 'InlineScript'
-        Inline: |
-          # Connect to Azure
-          Connect-AzAccount
-          
-          # Restart the Azure App Service
-          Restart-AzWebApp -ResourceGroupName 'adb-test-ninkapi-rg' -Name 'adb-test-ninkapi-as'
-        errorActionPreference: 'silentlyContinue'
-        azurePowerShellVersion: 'LatestVersion'
-
+jobs:
+- job: BuildAndPublish
+  displayName: Build and publish Docker image
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - checkout: self
+    lfs: true
+  - task: Docker@2
+    displayName: Build an image
+    inputs:
+      containerRegistry: 'Dockerhub'
+      repository: 'artsdatabanken/nin-kode-api'
+      command: 'build'
+      Dockerfile: '**/Dockerfile'
+      tags: '$(tag)'
+  - task: Docker@2
+    displayName: Publish image
+    inputs:
+      containerRegistry: 'Dockerhub'
+      repository: 'artsdatabanken/nin-kode-api'
+      command: 'push'
+      tags: '$(tag)'
