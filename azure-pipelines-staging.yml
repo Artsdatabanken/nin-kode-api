@@ -39,3 +39,9 @@ jobs:
       repository: 'artsdatabanken/nin-kode-api'
       command: 'push'
       tags: '$(tag)'
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: 'test-deploy-code'
+      scriptType: 'ps'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az webapp restart --name adb-test-ninkapi-as --resource-group adb-test-ninkapi-rg'
