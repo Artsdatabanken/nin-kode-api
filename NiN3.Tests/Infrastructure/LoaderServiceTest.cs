@@ -80,7 +80,7 @@ namespace NiN3.Tests.Infrastructure
             var loader = new LoaderService(null, inmemorydb, new Mock<ILogger<LoaderService>>().Object);
             loader.SeedLookupData();
             loader.LoadHtg_Ht_Gt_Mappings();
-            loader.csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings.Count.Should().Be(443);
+            loader.csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings.Count.Should().Be(429);
             //loader.csvdataImporter_Hovedtype_Grunntype_Mappings.Count.Should().Be(1901); //20240220
             loader.csvdataImporter_Hovedtype_Grunntype_Mappings.Count.Should().Be(1401);
         }
@@ -207,7 +207,7 @@ namespace NiN3.Tests.Infrastructure
             //Answer: 
             //var firstHGD = inmemorydb.Hovedtypegruppe.OrderBy(x => x.Kode).First();
             Assert.NotNull(hovedtypegruppe);
-            Assert.Equal(24, hovedtypegruppe.Hovedtyper.Count);
+            Assert.Equal(23, hovedtypegruppe.Hovedtyper.Count);
         }
 
         // Rewritten code with comments
@@ -261,7 +261,7 @@ namespace NiN3.Tests.Infrastructure
             Assert.Equal(654, num005M);//647 before #175
             Assert.Equal(646, num005MHT);
             Assert.Equal(123, numHTM005);
-            Assert.Equal(443, numHT);
+            Assert.Equal(429, numHT);
         }
 
         [Fact]
@@ -418,7 +418,7 @@ namespace NiN3.Tests.Infrastructure
             var inmemorydb = GetInMemoryDb();
             //service.LoadAlleKortkoder();
             var numOfKortkoder = inmemorydb.AlleKortkoder.Count();
-            Assert.Equal(3585, numOfKortkoder);//3557 before #175
+            Assert.Equal(3571, numOfKortkoder);//3557 before #175
             var kortkode = inmemorydb.AlleKortkoder.Where(x => x.Kortkode == "IB-F").FirstOrDefault();            
             Assert.NotNull(kortkode);
             Assert.Equal("IB-F", kortkode.Kortkode);
