@@ -75,5 +75,12 @@ namespace NiN3.WebApi.Controllers
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "nin3_0.xlsx");
         }
+
+        [HttpGet("dataDateTime")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetDataDate()
+        {
+            return Ok(_rapportService.GetDataDate());
+        }
     }
 }

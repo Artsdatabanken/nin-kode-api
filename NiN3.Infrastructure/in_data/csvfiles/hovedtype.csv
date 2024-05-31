@@ -406,20 +406,20 @@ NA-VM04;sterkt endret, ikke torvproduserende våtmark;V;M;04;NA-V
 NA-VM05;ny grunn våtmark på tidligere ferskvannsbunn;V;M;05;NA-V
 NA-VM06;ny grunn våtmark på menneskebetinget forsumpet fastmark;V;M;06;NA-V
 NA-VO01;sterkt tråkkpreget våtmark;V;O;01;NA-V
-NK-001;varmkildekompleks;0;C;01;NK-0
-NK-001;sanddynekompleks;0;E;01;NK-0
-NK-001;flomskredkompleks;0;D;01;NK-0
-NK-002;ferskvannskildekompleks;0;C;02;NK-0
-NK-002;rasmarkskompleks;0;D;02;NK-0
-NK-002;skredmarkskompleks;0;E;02;NK-0
-NK-003;fossesprutkompleks;0;D;03;NK-0
-NK-003;ferskvanns- og våtmarkskildekompleks;0;C;03;NK-0
-NK-003;flommarkskompleks;0;E;03;NK-0
-NK-004;torvkildekompleks;0;C;04;NK-0
-NK-005;grunnkildekompleks;0;C;05;NK-0
-NK-006;fuglefjellkompleks;0;C;06;NK-0
-NK-007;saltpannekompleks;0;C;07;NK-0
-NK-008;snøleiekompleks;0;C;08;NK-0
+NK-C01;varmkildekompleks;C;C;01;NK-C
+NK-C02;ferskvannskildekompleks;C;C;02;NK-C
+NK-C03;ferskvanns- og våtmarkskildekompleks;C;C;03;NK-C
+NK-C04;torvkildekompleks;C;C;04;NK-C
+NK-C05;grunnkildekompleks;C;C;05;NK-C
+NK-C06;fuglefjellkompleks;C;C;06;NK-C
+NK-C07;saltpannekompleks;C;C;07;NK-C
+NK-C08;snøleiekompleks;C;C;08;NK-C
+NK-D01;flomskredkompleks;D;D;01;NK-D
+NK-D02;rasmarkskompleks;D;D;02;NK-D
+NK-D03;fossesprutkompleks;D;D;03;NK-D
+NK-E01;sanddynekompleks;E;E;01;NK-E
+NK-E02;skredmarkskompleks;E;E;02;NK-E
+NK-E03;flommarkskompleks;E;E;03;NK-E
 TM-A01;gjenvoksningsmyr;A;0;01;TM-A
 TM-A02;flatmyr;A;0;02;TM-A
 TM-B01;slakmyr;B;0;01;TM-B

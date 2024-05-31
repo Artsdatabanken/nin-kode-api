@@ -447,320 +447,329 @@ NiN-3.0-V-A-N-LM-GK-W-JV-e;LM-JV_e;Svært sterkt jordvarmeinfluert;JV-SO
 NiN-3.0-V-A-N-LM-GK-W-JV-y;LM-JV_y;Disruptiv jordvarmeinnflytelse;JV-SO
 ;*;*;K
 NiN-3.0-V-A-N-LM-GK-W-KA-a;LM-KA_a;Svært kalkfattig;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-c;LM-KA_c;Litt kalkfattig;KA-SO
 NiN-3.0-V-A-N-LM-GK-W-KA-d;LM-KA_d;Svakt intermediær;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-e;LM-KA_e;Sterkt intermediær;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-f;LM-KA_f;Litt kalkrik;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-g;LM-KA_g;Temmelig kalkrik;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-h;LM-KA_h;Svært kalkrik;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KA-i;LM-KA_i;Ekstremt kalkrik;KA-SO
 NiN-3.0-V-A-N-LM-GK-W-KA-j;LM-KA_j;Ekstremt kalkrik og saltanriket;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-i;LM-KA_i;Ekstremt kalkrik;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-h;LM-KA_h;Svært kalkrik;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-g;LM-KA_g;Temmelig kalkrik;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-f;LM-KA_f;Litt kalkrik;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-e;LM-KA_e;Sterkt intermediær;KA-SO
+NiN-3.0-V-A-N-LM-GK-W-KA-c;LM-KA_c;Litt kalkfattig;KA-SO
 NiN-3.0-V-A-N-LM-GK-W-KA-b;LM-KA_b;Temmelig kalkfattig;KA-SO
-NiN-3.0-V-A-N-LM-GK-W-KI-d;LM-KI_d;Svak kilde;KI-SO
-NiN-3.0-V-A-N-LM-GK-W-KI-c;LM-KI_c;Svært klart kildevannspåvirket;KI-SO
-NiN-3.0-V-A-N-LM-GK-W-KI-a;LM-KI_a;Litt kildevannspåvirket;KI-SO
-NiN-3.0-V-A-N-LM-GK-W-KI-0;LM-KI_0;Ikke kildevannspåvirket;KI-SO
 NiN-3.0-V-A-N-LM-GK-W-KI-y;LM-KI_y;Stabil kilde;KI-SO
 NiN-3.0-V-A-N-LM-GK-W-KI-e;LM-KI_e;Ustabil kilde;KI-SO
+NiN-3.0-V-A-N-LM-GK-W-KI-d;LM-KI_d;Svak kilde;KI-SO
 NiN-3.0-V-A-N-LM-GK-W-KI-b;LM-KI_b;Klart kildevannspåvirket;KI-SO
-NiN-3.0-V-A-M-LM-FE-SU-KP-KF;LM-KP_KF;Opphørt vedlikehold av hard sterkt endret fastmark;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KI;LM-KP_KI;Endret vannføringsregime i elv;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KH;LM-KP_KH;Redusert vannføring i elv;KP-SI
+NiN-3.0-V-A-N-LM-GK-W-KI-0;LM-KI_0;Ikke kildevannspåvirket;KI-SO
+NiN-3.0-V-A-N-LM-GK-W-KI-c;LM-KI_c;Svært klart kildevannspåvirket;KI-SO
+NiN-3.0-V-A-N-LM-GK-W-KI-a;LM-KI_a;Litt kildevannspåvirket;KI-SO
 NiN-3.0-V-A-M-LM-FE-SU-KP-KB;LM-KP_KB;Opphør av bruk av kystlynghei;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KC;LM-KP_KC;Opphør av bruk av semi-naturlig eng og strandeng;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KD;LM-KP_KD;Opphør av bruk av sterkt endret jordbruksmark;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KE;LM-KP_KE;Opphørt vedlikehold av løs sterkt endret fastmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KA;LM-KP_KA;Opphør av tiltak som holder boreal hei og eng åpen;KP-SI
 NiN-3.0-V-A-M-KM-FE-SU-KP-KE;KM-KP_KE;Mindre påvirkning fra miljøgifter, eutrofiering og annen forurensning;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KG;LM-KP_KG;Drenering av våtmark;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KU;LM-KP_KU;Annen menneskepåvirkning som initierer langvarig suksesjon;KP-SI
+NiN-3.0-V-A-M-KM-FE-SU-KP-KU;KM-KP_KU;Annen menneskepåvirkning som initierer kortvarig suksesjon;KP-SI
 NiN-3.0-V-A-M-LM-FE-SU-KP-KO;LM-KP_KO;Eutrofiering og annen forurensning;KP-SI
 NiN-3.0-V-A-M-LM-FE-SU-KP-KN;LM-KP_KN;Gjennomgripende bunnforstyrrelse på lite endret saltvanns- eller ferskvannsbunn;KP-SI
 NiN-3.0-V-A-M-LM-FE-SU-KP-KM;LM-KP_KM;Gjennomgripende markforstyrrelse på lite endret fastmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KL;LM-KP_KL;Neddemming av fastmark eller våtmark;KP-SI
 NiN-3.0-V-A-M-LM-FE-SU-KP-KK;LM-KP_KK;Endret vannføringsregime i innsjø;KP-SI
 NiN-3.0-V-A-M-LM-FE-SU-KP-KJ;LM-KP_KJ;Senket vannstand i innsjø;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KL;LM-KP_KL;Neddemming av fastmark eller våtmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KI;LM-KP_KI;Endret vannføringsregime i elv;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KH;LM-KP_KH;Redusert vannføring i elv;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KG;LM-KP_KG;Drenering av våtmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KF;LM-KP_KF;Opphørt vedlikehold av hard sterkt endret fastmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KE;LM-KP_KE;Opphørt vedlikehold av løs sterkt endret fastmark;KP-SI
+NiN-3.0-V-A-M-KM-FE-SU-KP-KA;KM-KP_KA;Endring av jordbrukspraksis;KP-SI
 NiN-3.0-V-A-M-KM-FE-SU-KP-KB;KM-KP_KB;Mindre drenering av våtmark;KP-SI
 NiN-3.0-V-A-M-KM-FE-SU-KP-KC;KM-KP_KC;Mindre endring av vannføring i elv;KP-SI
 NiN-3.0-V-A-M-KM-FE-SU-KP-KD;KM-KP_KD;Mindre endring av vannstandsvekslinger i innsjø;KP-SI
-NiN-3.0-V-A-M-KM-FE-SU-KP-KU;KM-KP_KU;Annen menneskepåvirkning som initierer kortvarig suksesjon;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KP-KA;LM-KP_KA;Opphør av tiltak som holder boreal hei og eng åpen;KP-SI
-NiN-3.0-V-A-M-KM-FE-SU-KP-KA;KM-KP_KA;Endring av jordbrukspraksis;KP-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KD;LM-KR_KD;Restaureringsforsøk på hard sterkt endret fastmark;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KG;LM-KR_KG;Restaureringsforsøk i elv med regulert vannføringsregime;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KH;LM-KR_KH;Restaureringsforsøk i innsjø med regulert vannstandvekslingsregime;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KI;LM-KR_KI;Restaureringsforøk på mark og bunn som er sterkt endret på grunn av eutrofiering og annen forurensning;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KU;LM-KR_KU;Annen reversert menneskepåvirkning som initierer langvarig suksesjon;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KF;LM-KR_KF;Restaureringsforsøk i torvtak;KR-SI
-NiN-3.0-V-A-M-KM-FE-SU-KR-KC;KM-KR_KC;Restaureringsforsøk i elv med mindre regulert vannføringsregime;KR-SI
-NiN-3.0-V-A-M-KM-FE-SU-KR-KE;KM-KR_KE;Restaureringsforøk på mark og bunn som er påvirket av miljøgifter, eutrofiering og annen forurensning;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KD;LM-KP_KD;Opphør av bruk av sterkt endret jordbruksmark;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KC;LM-KP_KC;Opphør av bruk av semi-naturlig eng og strandeng;KP-SI
+NiN-3.0-V-A-M-LM-FE-SU-KP-KU;LM-KP_KU;Annen menneskepåvirkning som initierer langvarig suksesjon;KP-SI
 NiN-3.0-V-A-M-KM-FE-SU-KR-KD;KM-KR_KD;Restaureringsforsøk i innsjø med mindre regulert vannstandvekslingsregime;KR-SI
+NiN-3.0-V-A-M-KM-FE-SU-KR-KE;KM-KR_KE;Restaureringsforøk på mark og bunn som er påvirket av miljøgifter, eutrofiering og annen forurensning;KR-SI
+NiN-3.0-V-A-M-KM-FE-SU-KR-KC;KM-KR_KC;Restaureringsforsøk i elv med mindre regulert vannføringsregime;KR-SI
+NiN-3.0-V-A-M-KM-FE-SU-KR-KA;KM-KR_KA;Gjenopptakelse av tidligere jordbrukspraksis;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KU;LM-KR_KU;Annen reversert menneskepåvirkning som initierer langvarig suksesjon;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KI;LM-KR_KI;Restaureringsforøk på mark og bunn som er sterkt endret på grunn av eutrofiering og annen forurensning;KR-SI
+NiN-3.0-V-A-M-KM-FE-SU-KR-KU;KM-KR_KU;Annen reversert menneskepåvirkning som initierer kortvarig suksesjon;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KH;LM-KR_KH;Restaureringsforsøk i innsjø med regulert vannstandvekslingsregime;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KG;LM-KR_KG;Restaureringsforsøk i elv med regulert vannføringsregime;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KF;LM-KR_KF;Restaureringsforsøk i torvtak;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KE;LM-KR_KE;Restaureringsforsøk på drenert våtmark;KR-SI
+NiN-3.0-V-A-M-LM-FE-SU-KR-KD;LM-KR_KD;Restaureringsforsøk på hard sterkt endret fastmark;KR-SI
 NiN-3.0-V-A-M-LM-FE-SU-KR-KC;LM-KR_KC;Restaureringsforsøk på løs sterkt endret fastmark;KR-SI
 NiN-3.0-V-A-M-LM-FE-SU-KR-KB;LM-KR_KB;Gjenopptatt beiting eller slått, eventuelt også rydding, på sterkt endret jordbruksmark i gjengroing;KR-SI
 NiN-3.0-V-A-M-KM-FE-SU-KR-KB;KM-KR_KB;Restaureringsforsøk på drenert våtmark;KR-SI
-NiN-3.0-V-A-M-KM-FE-SU-KR-KA;KM-KR_KA;Gjenopptakelse av tidligere jordbrukspraksis;KR-SI
-NiN-3.0-V-A-M-KM-FE-SU-KR-KU;KM-KR_KU;Annen reversert menneskepåvirkning som initierer kortvarig suksesjon;KR-SI
 NiN-3.0-V-A-M-LM-FE-SU-KR-KA;LM-KR_KA;Gjenopptatt beiting eller slått, eventuelt også rydding, på semi-naturlig jordbruksmark i gjengroing;KR-SI
-NiN-3.0-V-A-M-LM-FE-SU-KR-KE;LM-KR_KE;Restaureringsforsøk på drenert våtmark;KR-SI
-NiN-3.0-V-A-N-LM-FK-W-KT-A;LM-KT_A;Vann- og gassførende kald havkilde;KT-SI
 NiN-3.0-V-A-N-LM-FK-W-KT-B;LM-KT_B;Mudderførende kald havkilde;KT-SI
-NiN-3.0-V-B-M-AD-GK-W-KU-c;AD-KU_c;Moden fase;KU-SO
+NiN-3.0-V-A-N-LM-FK-W-KT-A;LM-KT_A;Vann- og gassførende kald havkilde;KT-SI
 NiN-3.0-V-B-M-AD-GK-W-KU-a;AD-KU_a;Pionérfase;KU-SO
+NiN-3.0-V-B-M-AD-GK-W-KU-c;AD-KU_c;Moden fase;KU-SO
 NiN-3.0-V-B-M-AD-GK-W-KU-d;AD-KU_d;Degenereringsfase;KU-SO
 NiN-3.0-V-B-M-AD-GK-W-KU-b;AD-KU_b;Byggefase;KU-SO
 NiN-3.0-V-A-N-RM-GK-W-KY-b;RM-KY_b;Innland;KY-SO
 NiN-3.0-V-A-N-RM-GK-W-KY-0;RM-KY_0;Med kystlinje;KY-SO
 NiN-3.0-V-A-N-RM-GK-W-KY-a;RM-KY_a;Kystnær;KY-SO
-NiN-3.0-V-A-N-MD-GE-BE-LH -0;MD-LH _0;Ved dagens kystlinje;LH-SO
 NiN-3.0-V-A-N-MD-GE-BE-LH -1;MD-LH _1;Mellom dagens kystlinje og øvre marine grense;LH-SO
 NiN-3.0-V-A-N-MD-GE-BE-LH -y;MD-LH _y;Ved øvre marine grense;LH-SO
+NiN-3.0-V-A-N-MD-GE-BE-LH -0;MD-LH _0;Ved dagens kystlinje;LH-SO
+NiN-3.0-V-A-N-LM-FK-W-LT-G;LM-LT_G;Flomskredmateriale;LT-SI
+NiN-3.0-V-A-N-LM-FK-W-LT-F;LM-LT_F;Massetransportert materiale;LT-SI
+NiN-3.0-V-A-N-LM-FK-W-LT-E;LM-LT_E;Konsoliderte marine bresedimenter;LT-SI
+NiN-3.0-V-A-N-LM-FK-W-LT-D;LM-LT_D;Resente breavsetninger;LT-SI
 NiN-3.0-V-A-N-LM-FK-W-LT-0;LM-LT_0;Løsmasser uten spesifisert opphav;LT-SI
 NiN-3.0-V-A-N-LM-FK-W-LT-A;LM-LT_A;Stedegent forvitringsmateriale;LT-SI
 NiN-3.0-V-A-N-LM-FK-W-LT-B;LM-LT_B;Gamle breavsetninger;LT-SI
 NiN-3.0-V-A-N-LM-FK-W-LT-C;LM-LT_C;Løsmasser formet av strandprosesser;LT-SI
-NiN-3.0-V-A-N-LM-FK-W-LT-D;LM-LT_D;Resente breavsetninger;LT-SI
-NiN-3.0-V-A-N-LM-FK-W-LT-F;LM-LT_F;Massetransportert materiale;LT-SI
-NiN-3.0-V-A-N-LM-FK-W-LT-E;LM-LT_E;Konsoliderte marine bresedimenter;LT-SI
-NiN-3.0-V-A-N-LM-FK-W-LT-G;LM-LT_G;Flomskredmateriale;LT-SI
-NiN-3.0-V-A-N-MD-GE-EE-MB-5;MD-MB_5;Klart sedimentasjonsdominert;MB-SO
-NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-MB_2;Erosjonsdominert;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-4;MD-MB_4;Sedimentasjonsdominert;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-3;MD-MB_3;Balansert erosjon-sedimentasjonsdynamikk;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-1;MD-MB_1;Klart erosjonsdominert;MB-SO
-NiN-3.0-V-A-N-LM-GK-W-MF-b;LM-MF_b;Svakt myrkantpreg;MF-SO
+NiN-3.0-V-A-N-MD-GE-EE-MB-5;MD-MB_5;Klart sedimentasjonsdominert;MB-SO
+NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-MB_2;Erosjonsdominert;MB-SO
 NiN-3.0-V-A-N-LM-GK-W-MF-d;LM-MF_d;Sterkt myrflatepreg;MF-SO
 NiN-3.0-V-A-N-LM-GK-W-MF-c;LM-MF_c;Svakt myrflatepreg;MF-SO
+NiN-3.0-V-A-N-LM-GK-W-MF-b;LM-MF_b;Svakt myrkantpreg;MF-SO
 NiN-3.0-V-A-N-LM-GK-W-MF-a;LM-MF_a;Sterkt myrkantpreg;MF-SO
-NiN-3.0-V-A-M-KM-FE-GE-MG-KF;KM-MG_KF;Næringsstoffoverbelastning;MG-SI
-NiN-3.0-V-A-M-KM-FE-GE-MG-KI;KM-MG_KI;Forsuring;MG-SI
-NiN-3.0-V-A-M-KM-FE-GE-MG-KE;KM-MG_KE;Organisk belastning;MG-SI
-NiN-3.0-V-A-M-KM-FE-GE-MG-KU;KM-MG_KU;Annen forurensning;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-K0;KM-MG_K0;Ingen;MG-SI
-NiN-3.0-V-A-M-KM-FE-GE-MG-KA;KM-MG_KA;Biocider;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-KB;KM-MG_KB;Organiske miljøgifter;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-KC;KM-MG_KC;Olje og andre petroleumsprodukter;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-KD;KM-MG_KD;Radioaktiv forurensning;MG-SI
+NiN-3.0-V-A-M-KM-FE-GE-MG-KE;KM-MG_KE;Organisk belastning;MG-SI
+NiN-3.0-V-A-M-KM-FE-GE-MG-KF;KM-MG_KF;Næringsstoffoverbelastning;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-KG;KM-MG_KG;Tungmetaller og andre uorganiske miljøgifter;MG-SI
 NiN-3.0-V-A-M-KM-FE-GE-MG-KH;KM-MG_KH;Saltbelastning;MG-SI
-NiN-3.0-V-A-M-LM-FK-W-MK-C;LM-MK_C;Saltbelastning;MK-SI
-NiN-3.0-V-A-M-LM-FK-W-MK-H;LM-MK_H;Gassovermetning;MK-SI
-NiN-3.0-V-A-M-LM-FK-W-MK-B;LM-MK_B;Organiske miljøgifter;MK-SI
-NiN-3.0-V-A-M-LM-FK-W-MK-D;LM-MK_D;Organisk belastning;MK-SI
+NiN-3.0-V-A-M-KM-FE-GE-MG-KI;KM-MG_KI;Forsuring;MG-SI
+NiN-3.0-V-A-M-KM-FE-GE-MG-KU;KM-MG_KU;Annen forurensning;MG-SI
+NiN-3.0-V-A-M-KM-FE-GE-MG-KA;KM-MG_KA;Biocider;MG-SI
 NiN-3.0-V-A-M-LM-FK-W-MK-E;LM-MK_E;Næringsstoffoverbelastning;MK-SI
-NiN-3.0-V-A-M-LM-FK-W-MK-F;LM-MK_F;Forsuring;MK-SI
+NiN-3.0-V-A-M-LM-FK-W-MK-D;LM-MK_D;Organisk belastning;MK-SI
 NiN-3.0-V-A-M-LM-FK-W-MK-G;LM-MK_G;Temperaturregimeendringer;MK-SI
+NiN-3.0-V-A-M-LM-FK-W-MK-H;LM-MK_H;Gassovermetning;MK-SI
 NiN-3.0-V-A-M-LM-FK-W-MK-A;LM-MK_A;Tungmetaller og andre uorganiske miljøgifter;MK-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-I;LM-MS_I;Mellomsuksesjonsstadium fra fastmark som ikke er skogsmark;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MK-B;LM-MK_B;Organiske miljøgifter;MK-SI
+NiN-3.0-V-A-M-LM-FK-W-MK-C;LM-MK_C;Saltbelastning;MK-SI
+NiN-3.0-V-A-M-LM-FK-W-MK-F;LM-MK_F;Forsuring;MK-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-J;LM-MS_J;Mellomsuksesjonsstadium fra klart (eller lite) endret skogsmark;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-A;LM-MS_A;Grøftet fastmark;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-B;LM-MS_B;Markforstyrrelse;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-C;LM-MS_C;Kjemisk forstyrrelse;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-D;LM-MS_D;Gjentatt hogstpåvirket;MS-SI
 NiN-3.0-V-A-M-LM-FK-W-MS-H;LM-MS_H;Treslagsskifte innen lauvskog eller barskog;MS-SI
 NiN-3.0-V-A-M-LM-FK-W-MS-G;LM-MS_G;Treslagsskifte fra barskog til lauvskog;MS-SI
+NiN-3.0-V-A-M-LM-FK-W-MS-I;LM-MS_I;Mellomsuksesjonsstadium fra fastmark som ikke er skogsmark;MS-SI
 NiN-3.0-V-A-M-LM-FK-W-MS-F;LM-MS_F;Treslagsskifte fra lauvskog til barskog;MS-SI
 NiN-3.0-V-A-M-LM-FK-W-MS-E;LM-MS_E;Treslagsskifte til fremmed treslag;MS-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-D;LM-MS_D;Gjentatt hogstpåvirket;MS-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-J;LM-MS_J;Mellomsuksesjonsstadium fra klart (eller lite) endret skogsmark;MS-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-B;LM-MS_B;Markforstyrrelse;MS-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-A;LM-MS_A;Grøftet fastmark;MS-SI
-NiN-3.0-V-A-M-LM-FK-W-MS-C;LM-MS_C;Kjemisk forstyrrelse;MS-SI
-NiN-3.0-V-A-N-RM-GK-W-MS-a;RM-MS_a;Nordsjøen og skagerrak;MS-SO
-NiN-3.0-V-A-N-RM-GK-W-MS-b;RM-MS_b;Norskehavet sør;MS-SO
-NiN-3.0-V-A-N-RM-GK-W-MS-c;RM-MS_c;Norskehavet midt;MS-SO
-NiN-3.0-V-A-N-RM-GK-W-MS-d;RM-MS_d;Norskehavet nord og barentshavet sør;MS-SO
 NiN-3.0-V-A-N-RM-GK-W-MS-e;RM-MS_e;Grønlandshavet øst, barentshavet nord og polhavet;MS-SO
-NiN-3.0-V-A-M-LM-FK-W-MT-K;LM-MT_K;Løs fastmark på tørrlagt innsjøbunn;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-E;LM-MT_E;Løst, lite modifisert substrat;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-I;LM-MT_I;Konsolidert løst, sterkt modifisert eller syntetisk substrat;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-H;LM-MT_H;Fint organisk avfall;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-J;LM-MT_J;Ikke-konsolidert løst, sterkt modifisert eller syntetisk substrat;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-G;LM-MT_G;Grovt organisk avfall;MT-SI
+NiN-3.0-V-A-N-RM-GK-W-MS-d;RM-MS_d;Norskehavet nord og barentshavet sør;MS-SO
+NiN-3.0-V-A-N-RM-GK-W-MS-c;RM-MS_c;Norskehavet midt;MS-SO
+NiN-3.0-V-A-N-RM-GK-W-MS-b;RM-MS_b;Norskehavet sør;MS-SO
+NiN-3.0-V-A-N-RM-GK-W-MS-a;RM-MS_a;Nordsjøen og skagerrak;MS-SO
 NiN-3.0-V-A-M-LM-FK-W-MT-F;LM-MT_F;Løst, lite modifisert substrat preget av kjemisk påvirkning;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-D;LM-MT_D;Hard fastmark på tørrlagt elvebunn;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-C;LM-MT_C;Hard fastmark på tørrlagt innsjøbunn;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-E;LM-MT_E;Løst, lite modifisert substrat;MT-SI
 NiN-3.0-V-A-M-LM-FK-W-MT-N;LM-MT_N;Fastmark på nedbørsmyrtorv;MT-SI
 NiN-3.0-V-A-M-LM-FK-W-MT-M;LM-MT_M;Fastmark på jordvannsmyrtorv;MT-SI
 NiN-3.0-V-A-M-LM-FK-W-MT-L;LM-MT_L;Fastmark på tørrlagt elvebunn;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MT-B;LM-MT_B;Hard sterkt endret fastmark på sterkt modifisert eller syntetisk substrat;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-K;LM-MT_K;Løs fastmark på tørrlagt innsjøbunn;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-J;LM-MT_J;Ikke-konsolidert løst, sterkt modifisert eller syntetisk substrat;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-I;LM-MT_I;Konsolidert løst, sterkt modifisert eller syntetisk substrat;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-H;LM-MT_H;Fint organisk avfall;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-G;LM-MT_G;Grovt organisk avfall;MT-SI
 NiN-3.0-V-A-M-LM-FK-W-MT-A;LM-MT_A;Hard sterkt endret fastmark på lite modifisert substrat;MT-SI
-NiN-3.0-V-A-M-LM-FK-W-MV-G;LM-MV_G;Tilplanting av, eller treslagsskifte i våtmark;MV-SI
-NiN-3.0-V-A-M-LM-FK-W-MV-A;LM-MV_A;Grøftet torvmark;MV-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-B;LM-MT_B;Hard sterkt endret fastmark på sterkt modifisert eller syntetisk substrat;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-D;LM-MT_D;Hard fastmark på tørrlagt elvebunn;MT-SI
+NiN-3.0-V-A-M-LM-FK-W-MT-C;LM-MT_C;Hard fastmark på tørrlagt innsjøbunn;MT-SI
 NiN-3.0-V-A-M-LM-FK-W-MV-B;LM-MV_B;Torvtak;MV-SI
-NiN-3.0-V-A-M-LM-FK-W-MV-C;LM-MV_C;Ny våtmark med opphav i innsjøbunn;MV-SI
-NiN-3.0-V-A-M-LM-FK-W-MV-D;LM-MV_D;Ny våtmark med opphav i elvebunn;MV-SI
 NiN-3.0-V-A-M-LM-FK-W-MV-F;LM-MV_F;Sterkt endret, ikke-torvproduserende grunn våtmark;MV-SI
+NiN-3.0-V-A-M-LM-FK-W-MV-G;LM-MV_G;Tilplanting av, eller treslagsskifte i våtmark;MV-SI
+NiN-3.0-V-A-M-LM-FK-W-MV-D;LM-MV_D;Ny våtmark med opphav i elvebunn;MV-SI
 NiN-3.0-V-A-M-LM-FK-W-MV-E;LM-MV_E;Ny våtmark med opphav i fastmark;MV-SI
-NiN-3.0-V-A-M-LM-FK-W-MY-D;LM-MY_D;Ny innsjøbunn med opphav i elvebunn;MY-SI
-NiN-3.0-V-A-M-LM-FK-W-MY-E;LM-MY_E;Ny innsjøbunn med opphav i ikke-torvproduserende våtmark;MY-SI
-NiN-3.0-V-A-M-LM-FK-W-MY-F;LM-MY_F;Ny innsjøbunn med opphav i torvproduserende våtmark;MY-SI
+NiN-3.0-V-A-M-LM-FK-W-MV-A;LM-MV_A;Grøftet torvmark;MV-SI
+NiN-3.0-V-A-M-LM-FK-W-MV-C;LM-MV_C;Ny våtmark med opphav i innsjøbunn;MV-SI
 NiN-3.0-V-A-M-LM-FK-W-MY-G;LM-MY_G;Vannføringsendring;MY-SI
-NiN-3.0-V-A-M-LM-FK-W-MY-B;LM-MY_B;Nytt fast sterkt modifisert eller syntetisk substrat;MY-SI
+NiN-3.0-V-A-M-LM-FK-W-MY-F;LM-MY_F;Ny innsjøbunn med opphav i torvproduserende våtmark;MY-SI
+NiN-3.0-V-A-M-LM-FK-W-MY-E;LM-MY_E;Ny innsjøbunn med opphav i ikke-torvproduserende våtmark;MY-SI
+NiN-3.0-V-A-M-LM-FK-W-MY-D;LM-MY_D;Ny innsjøbunn med opphav i elvebunn;MY-SI
 NiN-3.0-V-A-M-LM-FK-W-MY-C;LM-MY_C;Ny løs sedimentbunn;MY-SI
+NiN-3.0-V-A-M-LM-FK-W-MY-B;LM-MY_B;Nytt fast sterkt modifisert eller syntetisk substrat;MY-SI
 NiN-3.0-V-A-M-LM-FK-W-MY-A;LM-MY_A;Ny fastbunn;MY-SI
 NiN-3.0-V-A-N-LM-GK-W-NB-b;LM-NB_b;Klart preg av ville dyrs beiting;NB-SO
-NiN-3.0-V-A-N-LM-GK-W-NB-c;LM-NB_c;Sterkt preg av ville dyrs beiting;NB-SO
-NiN-3.0-V-A-N-LM-GK-W-NB-0;LM-NB_0;Uten preg av ville dyrs beiting;NB-SO
 NiN-3.0-V-A-N-LM-GK-W-NB-a;LM-NB_a;Litt preg av ville dyrs beiting;NB-SO
+NiN-3.0-V-A-N-LM-GK-W-NB-0;LM-NB_0;Uten preg av ville dyrs beiting;NB-SO
+NiN-3.0-V-A-N-LM-GK-W-NB-c;LM-NB_c;Sterkt preg av ville dyrs beiting;NB-SO
 NiN-3.0-V-A-N-LM-GK-W-NE-0;LM-NE_0;Uten naturlig eutrofiering;NE-SO
 NiN-3.0-V-A-N-LM-GK-W-NE-a;LM-NE_a;Naturlig eutrofiert;NE-SO
-NiN-3.0-V-A-N-KM-FE-GE-NF-KD;KM-NF_KD;Lyng-, lav- og skogbrann;NF-SI
-NiN-3.0-V-A-N-KM-FE-GE-NF-KH;KM-NF_KH;Frostbetinget forstyrrelse;NF-SI
 NiN-3.0-V-A-N-KM-FE-GE-NF-KU;KM-NF_KU;Annen naturgitt forstryrrelse;NF-SI
-NiN-3.0-V-A-N-KM-FE-GE-NF-KG;KM-NF_KG;Flom- og annen fuktighetsrelatert forstyrrelse;NF-SI
-NiN-3.0-V-A-N-KM-FE-GE-NF-KF;KM-NF_KF;Tørkebetinget forstyrrelse;NF-SI
 NiN-3.0-V-A-N-KM-FE-GE-NF-KE;KM-NF_KE;Vindrelatert forstyrrelse;NF-SI
-NiN-3.0-V-A-N-KM-FE-GE-NF-KC;KM-NF_KC;Soppangrep;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-K0;KM-NF_K0;Ingen observerbar forstyrrelse;NF-SI
 NiN-3.0-V-A-N-KM-FE-GE-NF-KA;KM-NF_KA;Forstyrrelse betinget av dyrs aktivitet;NF-SI
 NiN-3.0-V-A-N-KM-FE-GE-NF-KB;KM-NF_KB;Insektangrep;NF-SI
-NiN-3.0-V-A-N-KM-FE-GE-NF-K0;KM-NF_K0;Ingen observerbar forstyrrelse;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-KC;KM-NF_KC;Soppangrep;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-KD;KM-NF_KD;Lyng-, lav- og skogbrann;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-KG;KM-NF_KG;Flom- og annen fuktighetsrelatert forstyrrelse;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-KH;KM-NF_KH;Frostbetinget forstyrrelse;NF-SI
+NiN-3.0-V-A-N-KM-FE-GE-NF-KF;KM-NF_KF;Tørkebetinget forstyrrelse;NF-SI
+NiN-3.0-V-A-N-LM-GK-W-NG-a;LM-NG_a;Litt naturlig gjødslingspreget;NG-SO
+NiN-3.0-V-A-N-LM-GK-W-NG-y;LM-NG_y;Disruptivt naturlig overgjødslet;NG-SO
 NiN-3.0-V-A-N-LM-GK-W-NG-d;LM-NG_d;Svært sterkt naturlig gjødslingspreget;NG-SO
 NiN-3.0-V-A-N-LM-GK-W-NG-b;LM-NG_b;Klart naturlig gjødslingspreget;NG-SO
-NiN-3.0-V-A-N-LM-GK-W-NG-a;LM-NG_a;Litt naturlig gjødslingspreget;NG-SO
-NiN-3.0-V-A-N-LM-GK-W-NG-0;LM-NG_0;Uten preg av naturlig gjødsling;NG-SO
 NiN-3.0-V-A-N-LM-GK-W-NG-c;LM-NG_c;Sterkt naturlig gjødslingspreget;NG-SO
-NiN-3.0-V-A-N-LM-GK-W-NG-y;LM-NG_y;Disruptivt naturlig overgjødslet;NG-SO
+NiN-3.0-V-A-N-LM-GK-W-NG-0;LM-NG_0;Uten preg av naturlig gjødsling;NG-SO
 NiN-3.0-V-A-N-RM-FK-W-NH-B;RM-NH_B;Grønlandshavet, norskehavet og barentshavet øst for den midtatlantiske ryggen;NH-SI
 NiN-3.0-V-A-N-RM-FK-W-NH-A;RM-NH_A;Grønlandshavet vest for den midtatlantiske ryggen;NH-SI
-NiN-3.0-V-A-N-LM-GK-W-NT-0;LM-NT_0;Uten preg av næringstilførselstillegg;NT-SO
-NiN-3.0-V-A-N-LM-GK-W-NT-a;LM-NT_a;Litt preget av næringstilførselstillegg;NT-SO
 NiN-3.0-V-A-N-LM-GK-W-NT-b;LM-NT_b;Klart preget av næringstilførselstillegg;NT-SO
+NiN-3.0-V-A-N-LM-GK-W-NT-a;LM-NT_a;Litt preget av næringstilførselstillegg;NT-SO
 NiN-3.0-V-A-N-LM-GK-W-NT-c;LM-NT_c;Sterkt preget av næringstilførselstillegg;NT-SO
+NiN-3.0-V-A-N-LM-GK-W-NT-0;LM-NT_0;Uten preg av næringstilførselstillegg;NT-SO
 NiN-3.0-V-A-M-KM-GE-GE-OB-0;KM-OB_0;Uten sikre tegn på overbeskatning;OB-SO
 NiN-3.0-V-A-M-KM-GE-GE-OB-1;KM-OB_1;Tydelig overbeskatning;OB-SO
 NiN-3.0-V-A-M-KM-GE-GE-OB-2;KM-OB_2;Klart preg av overbeskatning;OB-SO
 NiN-3.0-V-A-M-KM-GE-GE-OB-y;KM-OB_y;Sterk overbeskatning;OB-SO
-NiN-3.0-V-A-N-LM-GK-W-OF-0;LM-OF_0;Stabil jord;OF-SO
 NiN-3.0-V-A-N-LM-GK-W-OF-a;LM-OF_a;Litt oppfrysingspreget;OF-SO
-NiN-3.0-V-A-N-LM-GK-W-OF-b;LM-OF_b;Klart oppfrysingspreget;OF-SO
-NiN-3.0-V-A-N-LM-GK-W-OF-c;LM-OF_c;Sterkt oppfrysingspreget;OF-SO
 NiN-3.0-V-A-N-LM-GK-W-OF-d;LM-OF_d;Svært sterkt oppfrysingspreget;OF-SO
 NiN-3.0-V-A-N-LM-GK-W-OF-y;LM-OF_y;Disruptivt oppfrysingspreget;OF-SO
-NiN-3.0-V-A-N-LM-GK-W-OM-y;LM-OM_y;Oksygenfritt;OM-SO
-NiN-3.0-V-A-N-LM-GK-W-OM-0;LM-OM_0;Oksisk;OM-SO
+NiN-3.0-V-A-N-LM-GK-W-OF-0;LM-OF_0;Stabil jord;OF-SO
+NiN-3.0-V-A-N-LM-GK-W-OF-b;LM-OF_b;Klart oppfrysingspreget;OF-SO
+NiN-3.0-V-A-N-LM-GK-W-OF-c;LM-OF_c;Sterkt oppfrysingspreget;OF-SO
 NiN-3.0-V-A-N-LM-GK-W-OM-a;LM-OM_a;Periodisk oksygenmangel;OM-SO
 NiN-3.0-V-A-N-LM-GK-W-OM-b;LM-OM_b;Periodisk oksygenfritt;OM-SO
+NiN-3.0-V-A-N-LM-GK-W-OM-0;LM-OM_0;Oksisk;OM-SO
+NiN-3.0-V-A-N-LM-GK-W-OM-y;LM-OM_y;Oksygenfritt;OM-SO
 NiN-3.0-V-A-N-LM-GK-W-OR-0;LM-OR_0;Ikke overrislet;OR-SO
 NiN-3.0-V-A-N-LM-GK-W-OR-a;LM-OR_a;Tidvis overrislet;OR-SO
-NiN-3.0-V-A-N-LM-GK-W-OR-c;LM-OR_c;Oftest overrislet;OR-SO
 NiN-3.0-V-A-N-LM-GK-W-OR-b;LM-OR_b;Ofte overrislet;OR-SO
+NiN-3.0-V-A-N-LM-GK-W-OR-c;LM-OR_c;Oftest overrislet;OR-SO
 NiN-3.0-V-A-N-LM-GK-W-OR-y;LM-OR_y;Ferskvannsbunn;OR-SO
-NiN-3.0-V-A-N-LM-FK-W-OV-0;LM-OV_0;Ikke langvarig oversvømmelse;OV-SI
 NiN-3.0-V-A-N-LM-FK-W-OV-A;LM-OV_A;Langvarig oversvømmelse, eventuelt også innfrysing i is;OV-SI
-;3;50-100;P4
-;2;25-50;P4
-;1;0-25;P4
+NiN-3.0-V-A-N-LM-FK-W-OV-0;LM-OV_0;Ikke langvarig oversvømmelse;OV-SI
 ;0;0;P4
-;4;50-100;P5
-;2;12,5-25;P5
-;1;0-12,5;P5
+;1;0-25;P4
+;2;25-50;P4
+;3;50-100;P4
 ;0;0;P5
+;2;12,5-25;P5
 ;3;25-50;P5
-;0;0;P6a
-;1;0-6,25;P6a
-;2;6,25-12,5;P6a
-;4;25-50;P6a
-;5;50-100;P6a
+;4;50-100;P5
+;1;0-12,5;P5
 ;3;12,5-25;P6a
-;0;0;P6b
+;2;6,25-12,5;P6a
+;1;0-6,25;P6a
+;5;50-100;P6a
+;4;25-50;P6a
+;0;0;P6a
 ;1;0-12,5;P6b
+;0;0;P6b
 ;2;12,5-25;P6b
 ;3;25-50;P6b
 ;4;50-75;P6b
 ;5;75-100;P6b
 ;5;80–100;P6c
 ;4;37,5–80;P6c
-;3;12,5–37,5;P6c
-;2;3,125–12,5;P6c
-;1;0–3,125;P6c
 ;0;0;P6c
-;0;0;P7
+;1;0–3,125;P6c
+;2;3,125–12,5;P6c
+;3;12,5–37,5;P6c
+;2;6,25-12,5;P7
 ;1;0-6,25;P7
 ;3;12,5-25;P7
 ;4;25-50;P7
-;2;6,25-12,5;P7
-;6;75-100;P7
+;0;0;P7
 ;5;50-75;P7
-;6;50-75;P8
-;5;25-50;P8
-;4;12,5-25;P8
+;6;75-100;P7
 ;7;75-100;P8
-;2;3,125-6,25;P8
 ;1;0-3,125;P8
-;0;0;P8
+;2;3,125-6,25;P8
 ;3;6,25-12,5;P8
-;2;3.125–6,25;P9a
-;3;6,25–12,5;P9a
-;4;12,5–25;P9a
+;4;12,5-25;P8
+;5;25-50;P8
+;6;50-75;P8
+;0;0;P8
 ;5;25–50;P9a
-;6;50–75;P9a
-;7;75–90;P9a
+;4;12,5–25;P9a
+;3;6,25–12,5;P9a
 ;0;0;P9a
 ;1;0–3,125;P9a
+;6;50–75;P9a
 ;8;90–100;P9a
+;2;3.125–6,25;P9a
+;7;75–90;P9a
+;4;10–25;P9b
+;0;0;P9b
+;5;25–50;P9b
+;2;2,5–5;P9b
+;7;75–90;P9b
+;8;90–100;P9b
+;1;0–2,5;P9b
+;6;50–75;P9b
+;3;5–10;P9b
 NiN-3.0-V-A-N-LM-FK-W-PF-A;LM-PF_A;Permafrost med tynt aktivt lag;PF-SI
 NiN-3.0-V-A-N-LM-FK-W-PF-0;LM-PF_0;Uten permafrost;PF-SI
-NiN-3.0-V-A-N-RM-FK-W-PI-B;RM-PI_B;Under polar havis;PI-SI
-NiN-3.0-V-A-N-RM-FK-W-PI-A;RM-PI_A;Iskantkontaktsonen;PI-SI
 NiN-3.0-V-A-N-RM-FK-W-PI-0;RM-PI_0;Uten iskantkontakt;PI-SI
+NiN-3.0-V-A-N-RM-FK-W-PI-A;RM-PI_A;Iskantkontaktsonen;PI-SI
+NiN-3.0-V-A-N-RM-FK-W-PI-B;RM-PI_B;Under polar havis;PI-SI
 NiN-3.0-V-A-N-TF-GK-W-RA-a;TF-RA_a;Svakt dalformet;RA-SO
 NiN-3.0-V-A-N-TF-GK-W-RA-b;TF-RA_b;Slakt til småkupert;RA-SO
 NiN-3.0-V-A-N-TF-GK-W-RA-c;TF-RA_c;Middels kupert;RA-SO
 NiN-3.0-V-A-N-TF-GK-W-RA-d;TF-RA_d;Markert kupert;RA-SO
 NiN-3.0-V-A-N-TF-GK-W-RA-e;TF-RA_e;Tindepreget;RA-SO
+NiN-3.0-V-A-N-TF-GK-W-RD-a;TF-RD_a;Åpent;RD-SO
+NiN-3.0-V-A-N-TF-GK-W-RD-b;TF-RD_b;Relativt åpent;RD-SO
 NiN-3.0-V-A-N-TF-GK-W-RD-c;TF-RD_c;Nedskåret;RD-SO
 NiN-3.0-V-A-N-TF-GK-W-RD-d;TF-RD_d;Dypt nedskåret;RD-SO
-NiN-3.0-V-A-N-TF-GK-W-RD-b;TF-RD_b;Relativt åpent;RD-SO
-NiN-3.0-V-A-N-TF-GK-W-RD-a;TF-RD_a;Åpent;RD-SO
 NiN-3.0-V-A-N-TF-GK-W-RK-c;TF-RK_c;Bratte åser, restfjell, klipper og stup;RK-SO
 NiN-3.0-V-A-N-TF-GK-W-RK-b;TF-RK_b;Middels kupert;RK-SO
 NiN-3.0-V-A-N-TF-GK-W-RK-a;TF-RK_a;Slakt;RK-SO
-NiN-3.0-V-A-N-LM-GK-W-RU-y;LM-RU_y;Disruptivt rasutsatt;RU-SO
-NiN-3.0-V-A-N-LM-GK-W-RU-d;LM-RU_d;Svært sterkt rasutsatt;RU-SO
-NiN-3.0-V-A-N-LM-GK-W-RU-c;LM-RU_c;Sterkt rasutsatt;RU-SO
+NiN-3.0-V-A-N-LM-GK-W-RU-0;LM-RU_0;Ikke rasutsatt;RU-SO
 NiN-3.0-V-A-N-LM-GK-W-RU-a;LM-RU_a;Litt rasutsatt;RU-SO
 NiN-3.0-V-A-N-LM-GK-W-RU-b;LM-RU_b;Temmelig rasutsatt;RU-SO
-NiN-3.0-V-A-N-LM-GK-W-RU-0;LM-RU_0;Ikke rasutsatt;RU-SO
+NiN-3.0-V-A-N-LM-GK-W-RU-c;LM-RU_c;Sterkt rasutsatt;RU-SO
+NiN-3.0-V-A-N-LM-GK-W-RU-d;LM-RU_d;Svært sterkt rasutsatt;RU-SO
+NiN-3.0-V-A-N-LM-GK-W-RU-y;LM-RU_y;Disruptivt rasutsatt;RU-SO
+NiN-3.0-V-A-N-LM-GK-W-SA-e;LM-SA_e;Brakt;SA-SO
+NiN-3.0-V-A-N-LM-GK-W-SA-h;LM-SA_h;Normalsalt;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SA-z;LM-SA_z;Saltanriket;SA-SO
+NiN-3.0-V-A-N-LM-GK-W-SA-g;LM-SA_g;Nesten normalsalt;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SA-0;LM-SA_0;Fersk;SA-SO
-NiN-3.0-V-A-N-LM-GK-W-SA-a;LM-SA_a;Saltpåvirket ferskvann;SA-SO
+NiN-3.0-V-A-N-LM-GK-W-SA-f;LM-SA_f;Temmelig salt;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SA-b;LM-SA_b;Ultrabrakt;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SA-c;LM-SA_c;Svært brakt;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SA-d;LM-SA_d;Klart brakt;SA-SO
-NiN-3.0-V-A-N-LM-GK-W-SA-e;LM-SA_e;Brakt;SA-SO
-NiN-3.0-V-A-N-LM-GK-W-SA-f;LM-SA_f;Temmelig salt;SA-SO
-NiN-3.0-V-A-N-LM-GK-W-SA-g;LM-SA_g;Nesten normalsalt;SA-SO
-NiN-3.0-V-A-N-LM-GK-W-SA-h;LM-SA_h;Normalsalt;SA-SO
-NiN-3.0-V-A-N-RM-GK-W-SE-c;RM-SE_c;Svakt oseanisk seksjon;SE-SO
-NiN-3.0-V-A-N-RM-GK-W-SE-b;RM-SE_b;Klart oseanisk seksjon;SE-SO
-NiN-3.0-V-A-N-RM-GK-W-SE-a;RM-SE_a;Sterkt oseanisk seksjon;SE-SO
-NiN-3.0-V-A-N-LM-GK-W-SE-y;LM-SE_y;Disruptivt sedimentasjonsforstyrrelsespreget;SE-SO
-NiN-3.0-V-A-N-LM-GK-W-SE-b;LM-SE_b;Sterkt sedimentasjonsforstyrrelsespreget;SE-SO
-NiN-3.0-V-A-N-LM-GK-W-SE-a;LM-SE_a;Temmelig sedimentasjonsforstyrrelsespreget;SE-SO
+NiN-3.0-V-A-N-LM-GK-W-SA-a;LM-SA_a;Saltpåvirket ferskvann;SA-SO
 NiN-3.0-V-A-N-LM-GK-W-SE-0;LM-SE_0;Uten sedimentasjonsforstyrrelsespreg;SE-SO
-NiN-3.0-V-A-N-RM-GK-W-SE-d;RM-SE_d;Overgangsseksjon;SE-SO
+NiN-3.0-V-A-N-LM-GK-W-SE-a;LM-SE_a;Temmelig sedimentasjonsforstyrrelsespreget;SE-SO
+NiN-3.0-V-A-N-LM-GK-W-SE-b;LM-SE_b;Sterkt sedimentasjonsforstyrrelsespreget;SE-SO
+NiN-3.0-V-A-N-RM-GK-W-SE-a;RM-SE_a;Sterkt oseanisk seksjon;SE-SO
 NiN-3.0-V-A-N-RM-GK-W-SE-e;RM-SE_e;Svakt kontinental seksjon;SE-SO
-NiN-3.0-V-A-M-KM-FE-SB-SF-K0;KM-SF_K0;Uten spor etter skogforyngelsestiltak;SF-SI
+NiN-3.0-V-A-N-RM-GK-W-SE-d;RM-SE_d;Overgangsseksjon;SE-SO
+NiN-3.0-V-A-N-RM-GK-W-SE-b;RM-SE_b;Klart oseanisk seksjon;SE-SO
+NiN-3.0-V-A-N-RM-GK-W-SE-c;RM-SE_c;Svakt oseanisk seksjon;SE-SO
+NiN-3.0-V-A-N-LM-GK-W-SE-y;LM-SE_y;Disruptivt sedimentasjonsforstyrrelsespreget;SE-SO
 NiN-3.0-V-A-M-KM-FE-SB-SF-KB;KM-SF_KB;Planting/såing;SF-SI
+NiN-3.0-V-A-M-KM-FE-SB-SF-K0;KM-SF_K0;Uten spor etter skogforyngelsestiltak;SF-SI
 NiN-3.0-V-A-M-KM-FE-SB-SF-KA;KM-SF_KA;Markberedning;SF-SI
+NiN-3.0-V-A-N-LM-GK-W-SF-y;LM-SF_y;Disruptivt saltanriket;SF-SO
 NiN-3.0-V-A-N-LM-GK-W-SF-0;LM-SF_0;Normalsalt;SF-SO
 NiN-3.0-V-A-N-LM-GK-W-SF-a;LM-SF_a;Litt saltanriket;SF-SO
 NiN-3.0-V-A-N-LM-GK-W-SF-b;LM-SF_b;Sterkt saltanriket;SF-SO
-NiN-3.0-V-A-N-LM-GK-W-SF-y;LM-SF_y;Disruptivt saltanriket;SF-SO
-NiN-3.0-V-A-N-LM-GE-EE-SI-0;LM-SI_0;Rett;SI-SO
-NiN-3.0-V-A-N-LM-GE-EE-SI-1;LM-SI_1;Svakt sinuøs;SI-SO
 NiN-3.0-V-A-N-LM-GE-EE-SI-2;LM-SI_2;Sinuøs;SI-SO
 NiN-3.0-V-A-N-LM-GE-EE-SI-4;LM-SI_4;Sterkt meandrerende;SI-SO
 NiN-3.0-V-A-N-LM-GE-EE-SI-3;LM-SI_3;Meandrerende;SI-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-z;LM-SM_z;Temporær vannforekomst;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-i;LM-SM_i;Liten pytt;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-g;LM-SM_g;Dam;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-f;LM-SM_f;Lite tjern;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-e;LM-SM_e;Stort tjern;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-d;LM-SM_d;Liten sjø;SM-SO
+NiN-3.0-V-A-N-LM-GE-EE-SI-0;LM-SI_0;Rett;SI-SO
+NiN-3.0-V-A-N-LM-GE-EE-SI-1;LM-SI_1;Svakt sinuøs;SI-SO
 NiN-3.0-V-A-N-LM-GK-W-SM-c;LM-SM_c;Middels stor sjø;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-b;LM-SM_b;Stor sjø;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-0;LM-SM_0;Hav;SM-SO
-NiN-3.0-V-A-N-LM-GK-W-SM-h;LM-SM_h;Stor pytt;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-d;LM-SM_d;Liten sjø;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-e;LM-SM_e;Stort tjern;SM-SO
 NiN-3.0-V-A-N-LM-GK-W-SM-a;LM-SM_a;Fjord;SM-SO
-NiN-3.0-V-A-N-LM-FK-W-SN-A;LM-SN_A;Varig snø;SN-SI
+NiN-3.0-V-A-N-LM-GK-W-SM-g;LM-SM_g;Dam;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-h;LM-SM_h;Stor pytt;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-i;LM-SM_i;Liten pytt;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-z;LM-SM_z;Temporær vannforekomst;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-0;LM-SM_0;Hav;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-b;LM-SM_b;Stor sjø;SM-SO
+NiN-3.0-V-A-N-LM-GK-W-SM-f;LM-SM_f;Lite tjern;SM-SO
 NiN-3.0-V-A-N-LM-FK-W-SN-B;LM-SN_B;Jevn breoverflate;SN-SI
-NiN-3.0-V-A-N-LM-FK-W-SN-D;LM-SN_D;Polar havis-overside;SN-SI
 NiN-3.0-V-A-N-LM-FK-W-SN-C;LM-SN_C;Kryokonitt-preget breoverflate;SN-SI
+NiN-3.0-V-A-N-LM-FK-W-SN-D;LM-SN_D;Polar havis-overside;SN-SI
+NiN-3.0-V-A-N-LM-FK-W-SN-A;LM-SN_A;Varig snø;SN-SI
 NiN-3.0-V-A-N-LM-FK-W-SO-B;LM-SO_B;Nan;SO-SI
 NiN-3.0-V-A-N-LM-FK-W-SO-0;LM-SO_0;Uspesifiserte løsmasser;SO-SI
 NiN-3.0-V-A-N-LM-FK-W-SO-A;LM-SO_A;Marine leirsedimenter;SO-SI
@@ -784,246 +793,246 @@ NiN-3.0-V-B-M-VS-GE-SE-SS-2;VS-SS_2;Tosjiktet;SS-SO
 NiN-3.0-V-B-M-VS-GE-SE-SS-3;VS-SS_3;Flersjiktet;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-i;LM-SS_i;Dynehei;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-j;LM-SS_j;Tresatt dyne;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-h;LM-SS_h;Brun og etablert dyne;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-k;LM-SS_k;Tresatt semistabilisert sand;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-d;LM-SS_d;Hvit og ustabil dyne;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-y;LM-SS_y;Sanddominert stabil fastmark;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-a;LM-SS_a;Naken flyvesand;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-k;LM-SS_k;Tresatt semistabilisert sand;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-0;LM-SS_0;Sanddominert bunn;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-h;LM-SS_h;Brun og etablert dyne;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-g;LM-SS_g;Brun og temmelig etablert dyne;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-f;LM-SS_f;Grå og stabilisert dyne;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-e;LM-SS_e;Grå og svakt stabilisert dyne;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-d;LM-SS_d;Hvit og ustabil dyne;SS-SO
+NiN-3.0-V-A-N-LM-GK-W-SS-a;LM-SS_a;Naken flyvesand;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-c;LM-SS_c;Primærdyne;SS-SO
 NiN-3.0-V-A-N-LM-GK-W-SS-b;LM-SS_b;Embryonaldyne;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-g;LM-SS_g;Brun og temmelig etablert dyne;SS-SO
-NiN-3.0-V-A-N-LM-GK-W-SS-0;LM-SS_0;Sanddominert bunn;SS-SO
-NiN-3.0-V-A-N-LM-FK-W-ST-J;LM-ST_J;Driftmateriale;ST-SI
-NiN-3.0-V-A-N-LM-FK-W-ST-I;LM-ST_I;Fastbunn og bergsubstrat;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-G;LM-ST_G;Grovt organisk materiale;ST-SI
+NiN-3.0-V-A-N-LM-FK-W-ST-F;LM-ST_F;Dy og gytje;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-E;LM-ST_E;Myrtorv;ST-SI
+NiN-3.0-V-A-N-LM-FK-W-ST-J;LM-ST_J;Driftmateriale;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-D;LM-ST_D;Korallgrus;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-C;LM-ST_C;Svampspikelbunn;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-B;LM-ST_B;Ruglbunn;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-A;LM-ST_A;Skjellsand;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-0;LM-ST_0;Overveiende uorganisk substrat;ST-SI
 NiN-3.0-V-A-N-LM-FK-W-ST-H;LM-ST_H;Konsolidert leire;ST-SI
-NiN-3.0-V-A-N-LM-FK-W-ST-F;LM-ST_F;Dy og gytje;ST-SI
-NiN-3.0-V-B-M-AD-GK-W-ST-0;AD-ST_0;Tre- og buskløs fase;ST-SO
-NiN-3.0-V-B-M-AD-GK-W-ST-a;AD-ST_a;Foryngelsesskog;ST-SO
-NiN-3.0-V-B-M-AD-GK-W-ST-b;AD-ST_b;Ungskog;ST-SO
+NiN-3.0-V-A-N-LM-FK-W-ST-I;LM-ST_I;Fastbunn og bergsubstrat;ST-SI
 NiN-3.0-V-B-M-AD-GK-W-ST-c;AD-ST_c;Yngre skog;ST-SO
 NiN-3.0-V-B-M-AD-GK-W-ST-d;AD-ST_d;Eldre skog;ST-SO
-NiN-3.0-V-B-M-AD-GK-W-ST-e;AD-ST_e;Gammel skog;ST-SO
-NiN-3.0-V-B-M-AD-GK-W-ST-f;AD-ST_f;Fleraldret skog med kohortdynamikk;ST-SO
+NiN-3.0-V-B-M-AD-GK-W-ST-a;AD-ST_a;Foryngelsesskog;ST-SO
+NiN-3.0-V-B-M-AD-GK-W-ST-b;AD-ST_b;Ungskog;ST-SO
 NiN-3.0-V-B-M-AD-GK-W-ST-y;AD-ST_y;Skog med småskaladynamikk;ST-SO
-NiN-3.0-V-A-N-LM-GK-W-SU-0;LM-SU_0;Ikke skredutsatt;SU-SO
-NiN-3.0-V-A-N-LM-GK-W-SU-a;LM-SU_a;Litt skredutsatt;SU-SO
+NiN-3.0-V-B-M-AD-GK-W-ST-f;AD-ST_f;Fleraldret skog med kohortdynamikk;ST-SO
+NiN-3.0-V-B-M-AD-GK-W-ST-e;AD-ST_e;Gammel skog;ST-SO
+NiN-3.0-V-B-M-AD-GK-W-ST-0;AD-ST_0;Tre- og buskløs fase;ST-SO
 NiN-3.0-V-A-N-LM-GK-W-SU-b;LM-SU_b;Klart skredutsatt;SU-SO
-NiN-3.0-V-A-N-LM-GK-W-SU-c;LM-SU_c;Sterkt skredutsatt;SU-SO
-NiN-3.0-V-A-N-LM-GK-W-SU-d;LM-SU_d;Svært sterkt skredutsatt;SU-SO
+NiN-3.0-V-A-N-LM-GK-W-SU-a;LM-SU_a;Litt skredutsatt;SU-SO
+NiN-3.0-V-A-N-LM-GK-W-SU-0;LM-SU_0;Ikke skredutsatt;SU-SO
 NiN-3.0-V-A-N-LM-GK-W-SU-y;LM-SU_y;Disruptivt skredutsatt;SU-SO
+NiN-3.0-V-A-N-LM-GK-W-SU-d;LM-SU_d;Svært sterkt skredutsatt;SU-SO
+NiN-3.0-V-A-N-LM-GK-W-SU-c;LM-SU_c;Sterkt skredutsatt;SU-SO
 NiN-3.0-V-A-N-LM-GK-W-SV-0;LM-SV_0;Uten snødekkebetinget vekstsesongreduksjon;SV-SO
-NiN-3.0-V-A-N-LM-GK-W-SV-c;LM-SV_c;Seint snøleie;SV-SO
+NiN-3.0-V-A-N-LM-GK-W-SV-a;LM-SV_a;Tidlig moderat snøleie;SV-SO
 NiN-3.0-V-A-N-LM-GK-W-SV-b;LM-SV_b;Moderat snøleie;SV-SO
 NiN-3.0-V-A-N-LM-GK-W-SV-d;LM-SV_d;Svært seint snøleie;SV-SO
-NiN-3.0-V-A-N-LM-GK-W-SV-e;LM-SV_e;Ekstremt snøleie;SV-SO
-NiN-3.0-V-A-N-LM-GK-W-SV-f;LM-SV_f;Svært ekstremt snøleie;SV-SO
-NiN-3.0-V-A-N-LM-GK-W-SV-g;LM-SV_g;Vegetasjonsfritt snøleie;SV-SO
 NiN-3.0-V-A-N-LM-GK-W-SV-y;LM-SV_y;Permanent snø- og isdekt mark;SV-SO
-NiN-3.0-V-A-N-LM-GK-W-SV-a;LM-SV_a;Tidlig moderat snøleie;SV-SO
-;12;>32–64;T0
-;13;>64–128;T0
-;11;>16–32;T0
-;15;>256;T0
-;10;>8–16;T0
-;14;>128–256;T0
-;0;0;T0
+NiN-3.0-V-A-N-LM-GK-W-SV-e;LM-SV_e;Ekstremt snøleie;SV-SO
+NiN-3.0-V-A-N-LM-GK-W-SV-g;LM-SV_g;Vegetasjonsfritt snøleie;SV-SO
+NiN-3.0-V-A-N-LM-GK-W-SV-f;LM-SV_f;Svært ekstremt snøleie;SV-SO
+NiN-3.0-V-A-N-LM-GK-W-SV-c;LM-SV_c;Seint snøleie;SV-SO
 ;1;0–1/32;T0
-;8;>2–4;T0
-;3;1/16–1/8;T0
-;4;1/8–1/4;T0
 ;2;1/32–1/16;T0
+;0;0;T0
+;3;1/16–1/8;T0
+;11;>16–32;T0
 ;5;1/4–1/2;T0
-;6;1/2–1;T0
+;4;1/8–1/4;T0
+;15;>256;T0
+;14;>128–256;T0
+;13;>64–128;T0
+;12;>32–64;T0
 ;9;>4–8;T0
+;10;>8–16;T0
+;8;>2–4;T0
 ;7;>1–2;T0
-;2;>1–2;T1a
-;1;>0–1;T1a
-;0;0;T1a
-;9;>128–256;T1a
-;8;>64–128;T1a
-;7;>32–64;T1a
-;5;>8–16;T1a
-;3;>2–4;T1a
-;4;>4–8;T1a
+;6;1/2–1;T0
 ;6;>16–32;T1a
+;8;>64–128;T1a
+;1;>0–1;T1a
+;9;>128–256;T1a
 ;10;>256;T1a
+;5;>8–16;T1a
+;4;>4–8;T1a
+;3;>2–4;T1a
+;2;>1–2;T1a
+;7;>32–64;T1a
+;0;0;T1a
+;0;0;T1b
+;1;>0–1;T1b
+;6;>256;T1b
+;5;>64–256;T1b
 ;4;>16–64;T1b
 ;3;>4–16;T1b
-;5;>64–256;T1b
-;6;>256;T1b
 ;2;>1–4;T1b
-;1;>0–1;T1b
-;0;0;T1b
-;0;0;T1c
-;1;0–1/32;T1c
-;2;1/32–1/16;T1c
-;3;1/16–1/8;T1c
-;7;>1–2;T1c
 ;5;1/4–1/2;T1c
+;4;1/8–1/4;T1c
+;3;1/16–1/8;T1c
+;1;0–1/32;T1c
+;0;0;T1c
 ;6;1/2–1;T1c
+;2;1/32–1/16;T1c
 ;8;>2–4;T1c
 ;9;>4–8;T1c
-;10;>8–16;T1c
-;11;>16–32;T1c
-;12;>32–64;T1c
-;13;>64–128;T1c
-;14;>128–256;T1c
 ;15;>256;T1c
-;4;1/8–1/4;T1c
-NiN-3.0-V-B-M-AD-GK-W-TE-g;AD-TE_g;Mer enn full artsutskifting;TE-SO
-NiN-3.0-V-B-M-AD-GK-W-TE-f;AD-TE_f;Full artsutskifting;TE-SO
+;7;>1–2;T1c
+;13;>64–128;T1c
+;12;>32–64;T1c
+;11;>16–32;T1c
+;14;>128–256;T1c
+;10;>8–16;T1c
 NiN-3.0-V-B-M-AD-GK-W-TE-e;AD-TE_e;Temmelig stor endringsgjeld;TE-SO
-NiN-3.0-V-B-M-AD-GK-W-TE-d;AD-TE_d;Vesentlig endringsgjeld;TE-SO
-NiN-3.0-V-B-M-AD-GK-W-TE-c;AD-TE_c;Betydelig endringsgjeld;TE-SO
+NiN-3.0-V-B-M-AD-GK-W-TE-f;AD-TE_f;Full artsutskifting;TE-SO
+NiN-3.0-V-B-M-AD-GK-W-TE-g;AD-TE_g;Mer enn full artsutskifting;TE-SO
 NiN-3.0-V-B-M-AD-GK-W-TE-y;AD-TE_y;Mye mer enn full artsutskifting;TE-SO
-NiN-3.0-V-B-M-AD-GK-W-TE-a;AD-TE_a;Ubetydelig endringsgjeld;TE-SO
+NiN-3.0-V-B-M-AD-GK-W-TE-d;AD-TE_d;Vesentlig endringsgjeld;TE-SO
 NiN-3.0-V-B-M-AD-GK-W-TE-0;AD-TE_0;Ingen endringsgjeld;TE-SO
+NiN-3.0-V-B-M-AD-GK-W-TE-c;AD-TE_c;Betydelig endringsgjeld;TE-SO
+NiN-3.0-V-B-M-AD-GK-W-TE-a;AD-TE_a;Ubetydelig endringsgjeld;TE-SO
 NiN-3.0-V-B-M-AD-GK-W-TE-b;AD-TE_b;Observerbar endringsgjeld;TE-SO
-NiN-3.0-V-A-N-LM-GK-W-TF-0;LM-TF_0;Permanent vanndekket;TF-SO
-NiN-3.0-V-A-N-LM-GK-W-TF-a;LM-TF_a;Periodevis tørrlagt;TF-SO
 NiN-3.0-V-A-N-LM-GK-W-TF-y;LM-TF_y;Oftest eller alltid tørrlagt (ikke vannforekomst);TF-SO
 NiN-3.0-V-A-N-LM-GK-W-TF-b;LM-TF_b;Ofte tørrlagt;TF-SO
-NiN-3.0-V-A-N-LM-GK-W-TH-y;LM-TH_y;Terskel over flomålet (middel spring høyvann);TH-SO
-NiN-3.0-V-A-N-LM-GK-W-TH-d;LM-TH_d;Terskel i tidevannsbeltet (mellom middel spring lavvann og middel spring høyvann);TH-SO
+NiN-3.0-V-A-N-LM-GK-W-TF-a;LM-TF_a;Periodevis tørrlagt;TF-SO
+NiN-3.0-V-A-N-LM-GK-W-TF-0;LM-TF_0;Permanent vanndekket;TF-SO
 NiN-3.0-V-A-N-LM-GK-W-TH-c;LM-TH_c;Terskel over sprangsjiktet;TH-SO
+NiN-3.0-V-A-N-LM-GK-W-TH-d;LM-TH_d;Terskel i tidevannsbeltet (mellom middel spring lavvann og middel spring høyvann);TH-SO
+NiN-3.0-V-A-N-LM-GK-W-TH-y;LM-TH_y;Terskel over flomålet (middel spring høyvann);TH-SO
 NiN-3.0-V-A-N-LM-GK-W-TH-b;LM-TH_b;Terskel under sprangsjiktet;TH-SO
 NiN-3.0-V-A-N-LM-GK-W-TH-a;LM-TH_a;Dyp terskel;TH-SO
 NiN-3.0-V-A-N-LM-GK-W-TH-0;LM-TH_0;Åpent hav;TH-SO
+NiN-3.0-V-A-N-LM-GK-W-TO-0;LM-TO_0;Jevn overflate;TO-SO
 NiN-3.0-V-A-N-LM-GK-W-TO-b;LM-TO_b;Sterkt tuet overflate;TO-SO
 NiN-3.0-V-A-N-LM-GK-W-TO-a;LM-TO_a;Svakt tuet overflate;TO-SO
-NiN-3.0-V-A-N-LM-GK-W-TO-0;LM-TO_0;Jevn overflate;TO-SO
-NiN-3.0-V-A-N-TF-FE-GT-TP-I;TF-TP_I;Skulder;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-J;TF-TP_J;Rygg;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-G;TF-TP_G;Konveks skråning;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-F;TF-TP_F;Slett skråning;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-H;TF-TP_H;Framspring;TP-SI
 NiN-3.0-V-A-N-TF-FE-GT-TP-E;TF-TP_E;Konkav skråning;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-C;TF-TP_C;Dalbunn;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-B;TF-TP_B;Søkk;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-F;TF-TP_F;Slett skråning;TP-SI
+NiN-3.0-V-B-N-AD-GK-W-TP-0;AD-TP_0;Minimal torvproduksjon;TP-SI
 NiN-3.0-V-A-N-TF-FE-GT-TP-D;TF-TP_D;Skråningsfot;TP-SI
 NiN-3.0-V-A-N-TF-FE-GT-TP-L;TF-TP_L;Flate;TP-SI
 NiN-3.0-V-A-N-TF-FE-GT-TP-K;TF-TP_K;Topp;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-J;TF-TP_J;Rygg;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-G;TF-TP_G;Konveks skråning;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-A;TF-TP_A;Grop;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-I;TF-TP_I;Skulder;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-C;TF-TP_C;Dalbunn;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-B;TF-TP_B;Søkk;TP-SI
+NiN-3.0-V-A-N-TF-FE-GT-TP-H;TF-TP_H;Framspring;TP-SI
 NiN-3.0-V-B-N-AD-GK-W-TP-a;AD-TP_a;Middels torvproduserede evne;TP-SI
 NiN-3.0-V-B-N-AD-GK-W-TP-b;AD-TP_b;Stor torvproduserende evne;TP-SI
-NiN-3.0-V-B-N-AD-GK-W-TP-0;AD-TP_0;Minimal torvproduksjon;TP-SI
-NiN-3.0-V-A-N-TF-FE-GT-TP-A;TF-TP_A;Grop;TP-SI
-NiN-3.0-V-A-N-LM-GK-W-TU-c;LM-TU_c;Turbid;TU-SO
 NiN-3.0-V-A-N-LM-GK-W-TU-b;LM-TU_b;Klart turbid;TU-SO
-NiN-3.0-V-A-N-LM-GK-W-TU-a;LM-TU_a;Litt turbid;TU-SO
-NiN-3.0-V-A-N-LM-GK-W-TU-0;LM-TU_0;Klar;TU-SO
+NiN-3.0-V-A-N-LM-GK-W-TU-c;LM-TU_c;Turbid;TU-SO
 NiN-3.0-V-A-N-LM-GK-W-TU-y;LM-TU_y;Svært turbid;TU-SO
+NiN-3.0-V-A-N-LM-GK-W-TU-0;LM-TU_0;Klar;TU-SO
+NiN-3.0-V-A-N-LM-GK-W-TU-a;LM-TU_a;Litt turbid;TU-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-y;LM-TV_y;Varig tørrlagt;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-l;LM-TV_l;Epilitoralbeltet;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-k;LM-TV_k;Øvre supralitoral / bølgesprutbeltet /  øvre tuenivå;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-c;LM-TV_c;Nederste geolitoral / nederste landstrandbelte / nedre mykmatte;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-j;LM-TV_j;Midtre supralitoral / øvre bølgeslagsbelte / midtre tuenivå;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-i;LM-TV_i;Nedre supralitoral / nedre bølgeslagsbelte / nedre tuenivå;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-b;LM-TV_b;Øvre hydrolitoral;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-a;LM-TV_a;Nedre hydrolitoral;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-0;LM-TV_0;Sublitoral;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-h;LM-TV_h;Øverste geolitoral / øverste landstrandbelte / øverste fastmatte;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-e;LM-TV_e;Nederste midtre geolitoral / nederste midtre landstrandbelte / nederste fastmatte;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-f;LM-TV_f;Øverste midtre geolitoral / øverste midtre landstrandbelte / nedre fastmatte;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-d;LM-TV_d;Nedre geolitoral / nedre landstrandbelte / øvre mykmatte;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-c;LM-TV_c;Nederste geolitoral / nederste landstrandbelte / nedre mykmatte;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-a;LM-TV_a;Nedre hydrolitoral;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-0;LM-TV_0;Sublitoral;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-TV-g;LM-TV_g;Øvre geolitoral / øvre landstrandbelte / øvre fastmatte;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-TV-b;LM-TV_b;Øvre hydrolitoral;TV-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-b;LM-UE_b;Svært lite uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-f;LM-UE_f;Klart uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-c;LM-UE_c;Temmelig lite uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-d;LM-UE_d;Intermediært uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-e;LM-UE_e;Temmelig uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UE-a;LM-UE_a;Minimalt uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-d;LM-TV_d;Nedre geolitoral / nedre landstrandbelte / øvre mykmatte;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-i;LM-TV_i;Nedre supralitoral / nedre bølgeslagsbelte / nedre tuenivå;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-k;LM-TV_k;Øvre supralitoral / bølgesprutbeltet /  øvre tuenivå;TV-SO
+NiN-3.0-V-A-N-LM-GK-W-TV-l;LM-TV_l;Epilitoralbeltet;TV-SO
 NiN-3.0-V-A-N-LM-GK-W-UE-g;LM-UE_g;Svært uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-f;LM-UE_f;Klart uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-e;LM-UE_e;Temmelig uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-d;LM-UE_d;Intermediært uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-c;LM-UE_c;Temmelig lite uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-b;LM-UE_b;Svært lite uttørkingseksponert;UE-SO
+NiN-3.0-V-A-N-LM-GK-W-UE-a;LM-UE_a;Minimalt uttørkingseksponert;UE-SO
 NiN-3.0-V-A-N-LM-GK-W-UE-0;LM-UE_0;Ikke uttørkingseksponert;UE-SO
-NiN-3.0-V-A-N-LM-GK-W-UF-e;LM-UF_e;Litt tørkeutsatt;UF-SO
 NiN-3.0-V-A-N-LM-GK-W-UF-d;LM-UF_d;Intermediær;UF-SO
+NiN-3.0-V-A-N-LM-GK-W-UF-e;LM-UF_e;Litt tørkeutsatt;UF-SO
+NiN-3.0-V-A-N-LM-GK-W-UF-f;LM-UF_f;Temmelig tørkeutsatt;UF-SO
+NiN-3.0-V-A-N-LM-GK-W-UF-g;LM-UF_g;Svært tørkeutsatt;UF-SO
 NiN-3.0-V-A-N-LM-GK-W-UF-c;LM-UF_c;Litt frisk;UF-SO
+NiN-3.0-V-A-N-LM-GK-W-UF-h;LM-UF_h;Ekstremt tørkeutsatt;UF-SO
 NiN-3.0-V-A-N-LM-GK-W-UF-b;LM-UF_b;Temmelig frisk;UF-SO
 NiN-3.0-V-A-N-LM-GK-W-UF-a;LM-UF_a;Frisk;UF-SO
-NiN-3.0-V-A-N-LM-GK-W-UF-g;LM-UF_g;Svært tørkeutsatt;UF-SO
-NiN-3.0-V-A-N-LM-GK-W-UF-f;LM-UF_f;Temmelig tørkeutsatt;UF-SO
-NiN-3.0-V-A-N-LM-GK-W-UF-h;LM-UF_h;Ekstremt tørkeutsatt;UF-SO
-NiN-3.0-V-A-M-KM-FE-SB-UM-KB;KM-UM_KB;Uttak av hogstavfall og stubber;UM-SI
-NiN-3.0-V-A-M-KM-FE-SB-UM-KD;KM-UM_KD;Uttak med hauglegging av hogstavfall;UM-SI
-NiN-3.0-V-A-M-KM-FE-SB-UM-KA;KM-UM_KA;Uttak av hogstavfall;UM-SI
 NiN-3.0-V-A-M-KM-FE-SB-UM-K0;KM-UM_K0;Intet uttak;UM-SI
+NiN-3.0-V-A-M-KM-FE-SB-UM-KA;KM-UM_KA;Uttak av hogstavfall;UM-SI
+NiN-3.0-V-A-M-KM-FE-SB-UM-KB;KM-UM_KB;Uttak av hogstavfall og stubber;UM-SI
 NiN-3.0-V-A-M-KM-FE-SB-UM-KC;KM-UM_KC;Uttak bare av tømmer;UM-SI
-NiN-3.0-V-A-N-RS-GE-GE-US-8;RS-US_8;Kontinental eller global skala;US-SO
-NiN-3.0-V-A-N-RS-GE-GE-US-7;RS-US_7;Grov regional skala;US-SO
-NiN-3.0-V-A-N-RS-GE-GE-US-6;RS-US_6;Middels regional skala;US-SO
-NiN-3.0-V-A-N-RS-GE-GE-US-5;RS-US_5;Fin regional skala;US-SO
+NiN-3.0-V-A-M-KM-FE-SB-UM-KD;KM-UM_KD;Uttak med hauglegging av hogstavfall;UM-SI
 NiN-3.0-V-A-N-RS-GE-GE-US-4;RS-US_4;Grov lokal skala;US-SO
 NiN-3.0-V-A-N-RS-GE-GE-US-2;RS-US_2;Fin lokal skala;US-SO
-NiN-3.0-V-A-N-RS-GE-GE-US-1;RS-US_1;Mikroskala;US-SO
 NiN-3.0-V-A-N-RS-GE-GE-US-3;RS-US_3;Middels lokal skala;US-SO
-NiN-3.0-V-B-N-AD-FK-W-UT-0;AD-UT_0;Balanse mellom trofiske nivåer;UT-SI
+NiN-3.0-V-A-N-RS-GE-GE-US-1;RS-US_1;Mikroskala;US-SO
+NiN-3.0-V-A-N-RS-GE-GE-US-5;RS-US_5;Fin regional skala;US-SO
+NiN-3.0-V-A-N-RS-GE-GE-US-6;RS-US_6;Middels regional skala;US-SO
+NiN-3.0-V-A-N-RS-GE-GE-US-7;RS-US_7;Grov regional skala;US-SO
+NiN-3.0-V-A-N-RS-GE-GE-US-8;RS-US_8;Kontinental eller global skala;US-SO
 NiN-3.0-V-B-N-AD-FK-W-UT-A;AD-UT_A;Alternativ stabil artssammensetning;UT-SI
-NiN-3.0-V-A-N-LM-GE-EE-VA-3;LM-VA_3;Stor bekk;VA-SO
-NiN-3.0-V-A-N-LM-GE-EE-VA-2;LM-VA_2;Liten bekk;VA-SO
+NiN-3.0-V-B-N-AD-FK-W-UT-0;AD-UT_0;Balanse mellom trofiske nivåer;UT-SI
 NiN-3.0-V-A-N-LM-GE-EE-VA-4;LM-VA_4;Liten elv;VA-SO
-NiN-3.0-V-A-N-LM-GE-EE-VA-5;LM-VA_5;Mellomstor elv;VA-SO
 NiN-3.0-V-A-N-LM-GE-EE-VA-7;LM-VA_7;Stor elv;VA-SO
 NiN-3.0-V-A-N-LM-GE-EE-VA-1;LM-VA_1;Svært liten bekk;VA-SO
+NiN-3.0-V-A-N-LM-GE-EE-VA-2;LM-VA_2;Liten bekk;VA-SO
 NiN-3.0-V-A-N-LM-GE-EE-VA-6;LM-VA_6;Temmelig stor elv;VA-SO
+NiN-3.0-V-A-N-LM-GE-EE-VA-5;LM-VA_5;Mellomstor elv;VA-SO
+NiN-3.0-V-A-N-LM-GE-EE-VA-3;LM-VA_3;Stor bekk;VA-SO
 NiN-3.0-V-B-N-AD-FK-W-VD-A;AD-VD_A;Stabilisert kortskuddsvegetasjon;VD-SI
 NiN-3.0-V-B-N-AD-FK-W-VD-0;AD-VD_0;Uten differensiert vegetasjon;VD-SI
-NiN-3.0-V-B-N-SA-GK-W-VE-d;SA-VE_d;Bart fjell og nakne løsmasser over skoggrensa;VE-SO
-NiN-3.0-V-B-N-SA-GK-W-VE-c;SA-VE_c;Hei og eng over skoggrensa;VE-SO
 NiN-3.0-V-B-N-SA-GK-W-VE-b;SA-VE_b;Åpen hei og eng under skoggrensa;VE-SO
+NiN-3.0-V-B-N-SA-GK-W-VE-d;SA-VE_d;Bart fjell og nakne løsmasser over skoggrensa;VE-SO
 NiN-3.0-V-B-N-SA-GK-W-VE-a;SA-VE_a;Skog eller potensiell skog;VE-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-h;LM-VF_h;Ekstremt eksponert / ekstremt sterk energi;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-g;LM-VF_g;Svært eksponert / svært sterk energi;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-0;LM-VF_0;Mimimal vannforstyrrelsesintensitet / stille vann;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-d;LM-VF_d;Svakt eksponert / moderat energi;VF-SO
+NiN-3.0-V-B-N-SA-GK-W-VE-c;SA-VE_c;Hei og eng over skoggrensa;VE-SO
 NiN-3.0-V-A-N-LM-GK-W-VF-c;LM-VF_c;Litt beskyttet / litt svak energi;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-f;LM-VF_f;Temmelig eksponert / temmelig sterk energi;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-e;LM-VF_e;Litt eksponert / litt sterk energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-h;LM-VF_h;Ekstremt eksponert / ekstremt sterk energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-0;LM-VF_0;Mimimal vannforstyrrelsesintensitet / stille vann;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-a;LM-VF_a;Svært beskyttet / svært svak energi;VF-SO
 NiN-3.0-V-A-N-LM-GK-W-VF-b;LM-VF_b;Temmelig beskyttet / temmelig svak energi;VF-SO
 NiN-3.0-V-A-N-LM-GK-W-VF-y;LM-VF_y;Disruptivt eksponert / disruptiv energi;VF-SO
-NiN-3.0-V-A-N-LM-GK-W-VF-a;LM-VF_a;Svært beskyttet / svært svak energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-d;LM-VF_d;Svakt eksponert / moderat energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-e;LM-VF_e;Litt eksponert / litt sterk energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-f;LM-VF_f;Temmelig eksponert / temmelig sterk energi;VF-SO
+NiN-3.0-V-A-N-LM-GK-W-VF-g;LM-VF_g;Svært eksponert / svært sterk energi;VF-SO
 NiN-3.0-V-A-N-LM-GK-W-VI-a;LM-VI_a;Temmelig sterkt vindpreget;VI-SO
-NiN-3.0-V-A-N-LM-GK-W-VI-y;LM-VI_y;Disruptiv vindutsatthet;VI-SO
-NiN-3.0-V-A-N-LM-GK-W-VI-0;LM-VI_0;Uten vindpreg;VI-SO
 NiN-3.0-V-A-N-LM-GK-W-VI-b;LM-VI_b;Sterkt vindpreget;VI-SO
 NiN-3.0-V-A-N-LM-GK-W-VI-c;LM-VI_c;Svært sterkt vindpreget;VI-SO
-NiN-3.0-V-A-N-LM-GK-W-VM-0;LM-VM_0;Veldrenert;VM-SO
-NiN-3.0-V-A-N-LM-GK-W-VM-a;LM-VM_a;Vekselfuktig;VM-SO
-NiN-3.0-V-A-N-LM-GK-W-VM-b;LM-VM_b;Temmelig fuktig;VM-SO
-NiN-3.0-V-A-N-LM-GK-W-VM-c;LM-VM_c;Fuktig;VM-SO
+NiN-3.0-V-A-N-LM-GK-W-VI-y;LM-VI_y;Disruptiv vindutsatthet;VI-SO
+NiN-3.0-V-A-N-LM-GK-W-VI-0;LM-VI_0;Uten vindpreg;VI-SO
 NiN-3.0-V-A-N-LM-GK-W-VM-z;LM-VM_z;Våt;VM-SO
+NiN-3.0-V-A-N-LM-GK-W-VM-c;LM-VM_c;Fuktig;VM-SO
+NiN-3.0-V-A-N-LM-GK-W-VM-b;LM-VM_b;Temmelig fuktig;VM-SO
+NiN-3.0-V-A-N-LM-GK-W-VM-a;LM-VM_a;Vekselfuktig;VM-SO
+NiN-3.0-V-A-N-LM-GK-W-VM-0;LM-VM_0;Veldrenert;VM-SO
 NiN-3.0-V-A-N-RM-GK-W-VP-b;RM-VP_b;Sterkt våtmarkspreget;VP-SO
-NiN-3.0-V-A-N-RM-GK-W-VP-0;RM-VP_0;Uten våtmarkspreg;VP-SO
 NiN-3.0-V-A-N-RM-GK-W-VP-a;RM-VP_a;Klart våtmarkspreget;VP-SO
-NiN-3.0-V-A-N-LM-GK-W-VS-c;LM-VS_c;Fossetåkepreg;VS-SO
-NiN-3.0-V-A-N-LM-GK-W-VS-e;LM-VS_e;Fosseregnpreg;VS-SO
-NiN-3.0-V-A-N-LM-GK-W-VS-b;LM-VS_b;Fossestøvpreg;VS-SO
-NiN-3.0-V-A-N-LM-GK-W-VS-a;LM-VS_a;Fosserøykpreg;VS-SO
-NiN-3.0-V-A-N-LM-GK-W-VS-0;LM-VS_0;Uten vannsprutpåvirkning;VS-SO
+NiN-3.0-V-A-N-RM-GK-W-VP-0;RM-VP_0;Uten våtmarkspreg;VP-SO
 NiN-3.0-V-A-N-LM-GK-W-VS-d;LM-VS_d;Fosseyrpreg;VS-SO
 NiN-3.0-V-A-N-LM-GK-W-VS-y;LM-VS_y;Ferskvannssystem;VS-SO
+NiN-3.0-V-A-N-LM-GK-W-VS-e;LM-VS_e;Fosseregnpreg;VS-SO
+NiN-3.0-V-A-N-LM-GK-W-VS-a;LM-VS_a;Fosserøykpreg;VS-SO
+NiN-3.0-V-A-N-LM-GK-W-VS-b;LM-VS_b;Fossestøvpreg;VS-SO
+NiN-3.0-V-A-N-LM-GK-W-VS-c;LM-VS_c;Fossetåkepreg;VS-SO
+NiN-3.0-V-A-N-LM-GK-W-VS-0;LM-VS_0;Uten vannsprutpåvirkning;VS-SO
 NiN-3.0-V-A-N-LM-FK-W-VT-E;LM-VT_E;Nedbørvann;VT-SI
 NiN-3.0-V-A-N-LM-FK-W-VT-D;LM-VT_D;Havvann;VT-SI
-NiN-3.0-V-A-N-LM-FK-W-VT-0;LM-VT_0;Jordvann;VT-SI
-NiN-3.0-V-A-N-LM-FK-W-VT-A;LM-VT_A;Innsjøvann;VT-SI
-NiN-3.0-V-A-N-LM-FK-W-VT-B;LM-VT_B;Elvevann;VT-SI
 NiN-3.0-V-A-N-LM-FK-W-VT-C;LM-VT_C;Kildevann;VT-SI
-NiN-3.0-V-A-N-RM-GK-W-YK-d;RM-YK_d;Svært eksponert ytre kyst;YK-SO
+NiN-3.0-V-A-N-LM-FK-W-VT-B;LM-VT_B;Elvevann;VT-SI
+NiN-3.0-V-A-N-LM-FK-W-VT-A;LM-VT_A;Innsjøvann;VT-SI
+NiN-3.0-V-A-N-LM-FK-W-VT-0;LM-VT_0;Jordvann;VT-SI
 NiN-3.0-V-A-N-RM-GK-W-YK-c;RM-YK_c;Eksponert ytre kyst;YK-SO
+NiN-3.0-V-A-N-RM-GK-W-YK-d;RM-YK_d;Svært eksponert ytre kyst;YK-SO
 NiN-3.0-V-A-N-RM-GK-W-YK-b;RM-YK_b;Middels eksponert kyst;YK-SO
 NiN-3.0-V-A-N-RM-GK-W-YK-a;RM-YK_a;Skjermet indre kyst;YK-SO
 NiN-3.0-V-A-N-RM-GK-W-YK-0;RM-YK_0;Svært skjermet indre kyst;YK-SO
 NiN-3.0-V-B-N-SA-FE-AR--E2B;SA-_E2B;Edellauvtrær dominerer, bartrær meddominerende;nan-SI
 NiN-3.0-V-B-N-AD-FK-W-ØD-A;AD-ØD_A;Økologisk differensiert mark med rabbepreg;ØD-SI
-NiN-3.0-V-B-N-AD-FK-W-ØD-B;AD-ØD_B;Økologisk differensiert mark med fjellhei-, leside- eller grasmarkspreg;ØD-SI
-NiN-3.0-V-B-N-AD-FK-W-ØD-C;AD-ØD_C;Økologisk differensiert mark med snøleiepreg;ØD-SI
-NiN-3.0-V-B-N-AD-FK-W-ØD-E;AD-ØD_E;Økologisk differensiert mark med kildepreg;ØD-SI
 NiN-3.0-V-B-N-AD-FK-W-ØD-0;AD-ØD_0;Udifferensiert mark;ØD-SI
 NiN-3.0-V-B-N-AD-FK-W-ØD-D;AD-ØD_D;Økologisk differensiert mark med skogsmarkspreg;ØD-SI
+NiN-3.0-V-B-N-AD-FK-W-ØD-E;AD-ØD_E;Økologisk differensiert mark med kildepreg;ØD-SI
+NiN-3.0-V-B-N-AD-FK-W-ØD-C;AD-ØD_C;Økologisk differensiert mark med snøleiepreg;ØD-SI
+NiN-3.0-V-B-N-AD-FK-W-ØD-B;AD-ØD_B;Økologisk differensiert mark med fjellhei-, leside- eller grasmarkspreg;ØD-SI

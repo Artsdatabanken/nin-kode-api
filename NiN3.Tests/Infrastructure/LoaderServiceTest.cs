@@ -240,11 +240,11 @@ namespace NiN3.Tests.Infrastructure
             var num005MGT = inmemorydb.Kartleggingsenhet_Grunntype.Where(x => x.Kartleggingsenhet.Maalestokk == MaalestokkEnum.M005).Select(x=>x.Kartleggingsenhet).Distinct().Count();            
             Assert.Equal(654, num005M);
             Assert.Equal(646, num005MGT);
-            var M005_TC01_M005_02 = inmemorydb.Kartleggingsenhet.Where(x => x.Kode == "TC01-M005-02").FirstOrDefault();
-            Assert.NotNull(M005_TC01_M005_02);
-            Assert.Equal(MaalestokkEnum.M005, M005_TC01_M005_02.Maalestokk);
-            var KLE_GT = inmemorydb.Kartleggingsenhet_Grunntype.Where(x => x.Kartleggingsenhet == M005_TC01_M005_02).ToList();
-            Assert.Equal(1, KLE_GT.Count());
+            var M005_TC01_M005_01 = inmemorydb.Kartleggingsenhet.Where(x => x.Kode == "TC01-M005-01").FirstOrDefault();
+            Assert.NotNull(M005_TC01_M005_01);
+            Assert.Equal(MaalestokkEnum.M005, M005_TC01_M005_01.Maalestokk);
+            var KLE_GT = inmemorydb.Kartleggingsenhet_Grunntype.Where(x => x.Kartleggingsenhet == M005_TC01_M005_01).ToList();
+            Assert.Equal(4, KLE_GT.Count());
         }
 
         [Fact]
@@ -261,7 +261,7 @@ namespace NiN3.Tests.Infrastructure
             Assert.Equal(654, num005M);//647 before #175
             Assert.Equal(646, num005MHT);
             Assert.Equal(123, numHTM005);
-            Assert.Equal(429, numHT);
+            Assert.Equal(443, numHT);
         }
 
         [Fact]
@@ -291,7 +291,7 @@ namespace NiN3.Tests.Infrastructure
             //Fetch number of KLE_M005 that has GT
             var num020MGT = inmemorydb.Kartleggingsenhet_Grunntype.Where(x => x.Kartleggingsenhet.Maalestokk == MaalestokkEnum.M020).Select(x => x.Kartleggingsenhet).Distinct().Count();
             Assert.Equal(396, num020M);
-            Assert.Equal(391, num020MGT);
+            Assert.Equal(390, num020MGT);
         }
 
         [Fact]
@@ -330,7 +330,7 @@ namespace NiN3.Tests.Infrastructure
             var numOfVN = VariabelnavnList.Count();
             var firstVN = VariabelnavnList.OrderBy(x => x.Kode).First();
             Assert.NotNull(firstVN);
-            Assert.Equal(370, numOfVN);
+            Assert.Equal(369, numOfVN);
             Assert.True(firstVN.Kode == "AD-FA");
             Assert.True(firstVN.Navn == "Fremmedartsantall");
             Assert.True(firstVN.Variabelkategori2.ToString() == "AD");
@@ -349,7 +349,7 @@ namespace NiN3.Tests.Infrastructure
             // prepare test
             var inmemorydb = GetInMemoryDb();
             var numOfMS = inmemorydb.Maaleskala.Count();
-            Assert.Equal(158, numOfMS);
+            Assert.Equal(159, numOfMS);
             var maaleskalaSO = inmemorydb.Maaleskala.FirstOrDefault(m => m.MaaleskalatypeEnum == MaaleskalatypeEnum.SO);
             var maaleskalaSI = inmemorydb.Maaleskala.FirstOrDefault(m => m.MaaleskalatypeEnum == MaaleskalatypeEnum.SI);
             Assert.NotNull(maaleskalaSO);
@@ -362,7 +362,7 @@ namespace NiN3.Tests.Infrastructure
         {
             var inmemorydb = GetInMemoryDb();
             var numOfTrinn = inmemorydb.Trinn.Count();
-            Assert.Equal(1028, numOfTrinn);
+            Assert.Equal(1037, numOfTrinn);
         }
 
 
@@ -375,23 +375,6 @@ namespace NiN3.Tests.Infrastructure
             Assert.Equal("Grønlandshavet, norskehavet og barentshavet øst for den midtatlantiske ryggen", trinnNhB.Beskrivelse);
             Assert.Equal(MaaleskalatypeEnum.SI, trinnNhB.Maaleskala.MaaleskalatypeEnum);
         }
-
-        /*
-        [Fact]
-        public void TestMakeMaaleskalaMappingForVariabelnavn() {
-            var inmemorydb = GetInMemoryDb();
-
-            var vn_LO_KA = inmemorydb.Variabelnavn.Where(x => x.Kode == "LO-KA").FirstOrDefault();
-            Assert.NotNull(vn_LO_KA);
-            Assert.Equal("LO-KA", vn_LO_KA.Kode);
-            Assert.Equal(2, vn_LO_KA.VariabelnavnMaaleskala.Count);
-            var maaleskalasInVn = vn_LO_KA.VariabelnavnMaaleskala.Select(x => x.Maaleskala).OrderBy(x => x.MaaleskalaNavn).ToList();
-            Assert.Equal(2, maaleskalasInVn.Count);
-            Assert.Equal("D0", maaleskalasInVn[0].MaaleskalaNavn);
-            Assert.Equal(11, maaleskalasInVn[0].Trinn.Count);
-            Assert.Equal("T0", maaleskalasInVn[1].MaaleskalaNavn);
-            Assert.Equal(16, maaleskalasInVn[1].Trinn.Count);
-        }*/ //Endret i regneark
 
         [Fact]
         public void TestFetchTrinnFromVariabelnavn()
@@ -406,10 +389,6 @@ namespace NiN3.Tests.Infrastructure
            
             
             Assert.Equal(1, variabelnavn.VariabelnavnMaaleskala.Count);
-            /*Assert.Equal("marine bioklimatiske soner", trinnMapping.Variabelnavn.Navn);
-            Assert.Equal("MS-a", trinnMapping.Trinn.Navn);
-            Assert.Equal("Nordsjøen og Skagerrak", trinnMapping.Trinn.Verdi);
-            Assert.Equal(MaaleskalatypeEnum.SO, trinnMapping.Variabeltrinn.MaaleskalatypeEnum);*/
         }
 
         [Fact]
@@ -439,7 +418,7 @@ namespace NiN3.Tests.Infrastructure
             var inmemorydb = GetInMemoryDb();
             //service.LoadAlleKortkoder();
             var numOfKortkoder = inmemorydb.AlleKortkoder.Count();
-            Assert.Equal(3572, numOfKortkoder);//3557 before #175
+            Assert.Equal(3585, numOfKortkoder);//3557 before #175
             var kortkode = inmemorydb.AlleKortkoder.Where(x => x.Kortkode == "IB-F").FirstOrDefault();            
             Assert.NotNull(kortkode);
             Assert.Equal("IB-F", kortkode.Kortkode);
@@ -468,7 +447,7 @@ namespace NiN3.Tests.Infrastructure
             var numOfVariabelAllekortkoder = inmemorydb.AlleKortkoder.Count(x => x.TypeKlasseEnum == KlasseEnum.V);
             var numOfVariabelnavnAllekortkoder = inmemorydb.AlleKortkoder.Count(x => x.TypeKlasseEnum == KlasseEnum.VN);
             Assert.Equal(4, numOfVariabelAllekortkoder);
-            Assert.Equal(370,numOfVariabelnavnAllekortkoder);
+            Assert.Equal(369,numOfVariabelnavnAllekortkoder);
         }
 
         [Fact]
@@ -507,9 +486,6 @@ namespace NiN3.Tests.Infrastructure
         [Fact]
         public void TestLoadKonvertering_hovedtypegruppe() { 
             var db = GetInMemoryDb();
-            //var loader = new LoaderService(null, db, new Mock<ILogger<LoaderService>>().Object);
-            //loader.SeedLookupData();
-            //loader.LoadKonverteringHovedtypegruppe();
             var versjon = db.Versjon.Where(v => v.Navn == "3.0").FirstOrDefault();
             var konvertering = db.Konvertering.Where(k => k.Klasse == KlasseEnum.HTG && k.Versjon ==versjon)
                 .ToList();
@@ -519,9 +495,6 @@ namespace NiN3.Tests.Infrastructure
         [Fact]
         public void TestLoadKonvertering_hovedtype() {
             var db = GetInMemoryDb();
-            //var loader = new LoaderService(null, db, new Mock<ILogger<LoaderService>>().Object);
-            //loader.SeedLookupData();
-            //loader.LoadKonverteringHovedtype();
             var versjon = db.Versjon.Where(v => v.Navn == "3.0").FirstOrDefault();
             var konvertering = db.Konvertering.Where(k => k.Klasse == KlasseEnum.HT && k.Versjon == versjon)
                 .ToList();
@@ -533,9 +506,6 @@ namespace NiN3.Tests.Infrastructure
         [Fact]
         public void TestLoadKonvertering_grunntype() {
             var db = GetInMemoryDb();
-            //var loader = new LoaderService(null, db, new Mock<ILogger<LoaderService>>().Object);
-            //loader.SeedLookupData();
-            //loader.LoadKonverteringGrunntype();
             var versjon = db.Versjon.Where(v => v.Navn == "3.0").FirstOrDefault();
             var konvertering = db.Konvertering.Where(k => k.Klasse == KlasseEnum.GT && k.Versjon == versjon)
                 .ToList();
@@ -546,9 +516,6 @@ namespace NiN3.Tests.Infrastructure
         public void TestLoadKonvertering_variabelnavn()
         {
             var db = GetInMemoryDb();
-            //var loader = new LoaderService(null, db, new Mock<ILogger<LoaderService>>().Object);
-            //loader.SeedLookupData();
-            //loader.LoadKonverteringVariabelnavn();
             var versjon = db.Versjon.Where(v => v.Navn == "3.0").FirstOrDefault();
             var konvertering = db.Konvertering.Where(k => k.Klasse == KlasseEnum.VN && k.Versjon == versjon)
                 .ToList();
