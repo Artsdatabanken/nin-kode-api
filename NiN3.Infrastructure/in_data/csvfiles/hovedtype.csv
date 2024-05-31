@@ -200,16 +200,13 @@ LA-K03;kystslettelandskap;K;0;03;LA-K
 LA-M01;marine ås- og fjellandskap;M;0;01;LA-M
 LA-M02;marine dallandskap;M;0;02;LA-M
 LA-M03;marine sletter;M;0;03;LA-M
-LI-FS0;-;FS;0;0;LI-FS
 LI-FS01;hardbunn i ferskvann;FS;0;01;LI-FS
 LI-FS02;bløtbunn i ferskvann;FS;0;02;LI-FS
 LI-FS03;levende ferskvannsplanter;FS;0;03;LI-FS
 LI-FS04;levende ferskvannsdyr;FS;0;04;LI-FS
 LI-FS05;dødt organisk materiale i ferskvann;FS;0;05;LI-FS
 LI-FS06;syntetiske livsmedier i ferskvann;FS;0;06;LI-FS
-LI-FU0;-;FU;0;0;LI-FU
 LI-FU01;substratfrie livsmedier i ferskvann;FU;0;01;LI-FU
-LI-MS0;-;MS;0;0;LI-MS
 LI-MS01;hardbunn i marine systemer;MS;0;01;LI-MS
 LI-MS02;bløtbunni marine systemer;MS;0;02;LI-MS
 LI-MS03;biogene karbonatsubstrater fra døde organismer i marine systemer;MS;0;03;LI-MS
@@ -219,9 +216,7 @@ LI-MS06;levende marine dyr;MS;0;06;LI-MS
 LI-MS07;dødt plantemateriale i marine systemer;MS;0;07;LI-MS
 LI-MS08;døde dyr i marine systemer;MS;0;08;LI-MS
 LI-MS09;syntetiske livsmedier i marine systemer;MS;0;09;LI-MS
-LI-MU0;-;MU;0;0;LI-MU
 LI-MU01;substratfrie livsmedier i marine systemer;MU;0;01;LI-MU
-LI-TS0;-;TS;0;0;LI-TS
 LI-TS01;grovere uorganiske substrater på land;TS;0;01;LI-TS
 LI-TS02;finere uorganiske substrater på land;TS;0;02;LI-TS
 LI-TS03;organisk jord;TS;0;03;LI-TS
@@ -234,7 +229,6 @@ LI-TS09;dødt plantemateriale;TS;0;09;LI-TS
 LI-TS10;dødt animalsk materiale;TS;0;10;LI-TS
 LI-TS11;dyremøkk og fuglegjødsel;TS;0;11;LI-TS
 LI-TS12;syntetiske livsmedier på land;TS;0;12;LI-TS
-LI-TU0;-;TU;0;0;LI-TU
 LI-TU01;snø og is på land;TU;0;01;LI-TU
 LI-TU02;luft;TU;0;02;LI-TU
 MV-A01;kystvann;A;0;01;MV-A
@@ -249,7 +243,6 @@ MV-B04;fjord-dypvann dannet fra atlantisk vann;B;0;04;MV-B
 MV-B05;fjord-dypvann dannet fra kystvann;B;0;05;MV-B
 MV-B06;stabilisert kaldt fjord-dypvann;B;0;06;MV-B
 MV-B07;stabilisert iskaldt fjord-dypvann;B;0;07;MV-B
-NA-F00;-;F;0;0;NA-F
 NA-FA01;lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;01;NA-F
 NA-FA02;ikke lagdelte, fullsirkulerende, naturlig fisketomme innsjø-vannmassesystemer;F;A;02;NA-F
 NA-FB01;lagdelte, fullsirkulerende innsjø-vannmassesystemer;F;B;01;NA-F
@@ -265,9 +258,7 @@ NA-FM02;innsjø-vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirknin
 NA-FM03;innsjø-vannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;03;NA-F
 NA-FM04;elvevannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;F;M;04;NA-F
 NA-FM05;elvevannmassesystemer preget av introduksjon eller bortfall av strukturerende organismer;F;M;05;NA-F
-NA-I00;-;I;0;0;NA-I
 NA-IA01;snø og isflater;I;A;01;NA-I
-NA-L00;-;L;0;0;NA-L
 NA-LA01;eufotisk fast innsjøbunn;L;A;01;NA-L
 NA-LA02;eufotisk innsjø-sedimentbunn;L;A;02;NA-L
 NA-LA03;afotisk innsjøbunn;L;A;03;NA-L
@@ -286,7 +277,6 @@ NA-LM02;ny innsjøbunn med opphav i elvebunn;L;M;02;NA-L
 NA-LM03;ny innsjøbunn med opphav i våtmarkssystemer;L;M;03;NA-L
 NA-LM04;innsjøbunn preget av kronisk fysisk forstyrrelse;L;M;04;NA-L
 NA-LM05;innsjøbunn preget av kronisk fysikalsk-kjemisk påvirkning;L;M;05;NA-L
-NA-M00;-;M;0;0;NA-M
 NA-MA01;fast saltvanns-fjærebeltebunn;M;A;01;NA-M
 NA-MA02;eufotisk fast saltvannsbunn;M;A;02;NA-M
 NA-MA03;afotisk fast saltvannsbunn;M;A;03;NA-M
@@ -310,7 +300,6 @@ NA-MF01;brakkvanns-undervannseng;M;F;01;NA-M
 NA-MJ01;taretrålingsbunn;M;J;01;NA-M
 NA-MM01;sterkt endret eller ny marin bunn;M;M;01;NA-M
 NA-MM02;sterkt endret marin bunn preget av kronisk kjemisk påvirkning;M;M;02;NA-M
-NA-O00;-;O;0;0;NA-O
 NA-OA01;fast elvebunn;O;A;01;NA-O
 NA-OA02;elvesedimentbunn;O;A;02;NA-O
 NA-OB01;elve-undervannseng;O;B;01;NA-O
@@ -320,7 +309,6 @@ NA-OC03;dy- og gytjebunn i elv;O;C;03;NA-O
 NA-OG01;ny elvebunn;O;G;01;NA-O
 NA-OM01;elvebunn preget av kronisk fysisk forstyrrelse;O;M;01;NA-O
 NA-OM02;elvebunn preget av kronisk fysikalsk-kjemisk påvirkning;O;M;02;NA-O
-NA-S00;-;S;0;0;NA-S
 NA-SA01;eufotiske havvannmassesystemer;S;A;01;NA-S
 NA-SC01;afotiske havvannmassesystemer;S;C;01;NA-S
 NA-SC02;eufotiske fjordvannmassesystemer;S;C;02;NA-S
@@ -332,7 +320,6 @@ NA-SC07;marine vannmassesystemer på polar havis;S;C;07;NA-S
 NA-SM01;nye marine vannmassesystemer;S;M;01;NA-S
 NA-SM02;marine vannmassesystemer preget av kronisk fysisk påvirkning;S;M;02;NA-S
 NA-SM03;marine vannmassesystemer preget av kronisk fysikalsk-kjemisk påvirkning;S;M;03;NA-S
-NA-T00;-;T;0;0;NA-T
 NA-TA01;nakent berg;T;A;01;NA-T
 NA-TA02;åpen grunnlendt mark;T;A;02;NA-T
 NA-TA03;arktisk-alpin hei og leside;T;A;03;NA-T
@@ -383,7 +370,6 @@ NA-TO01;åker;T;O;01;NA-T
 NA-TO02;oppdyrket mark med semi-naturlig engpreg;T;O;02;NA-T
 NA-TO03;oppdyrket varig eng;T;O;03;NA-T
 NA-TO04;upløyd jordbruksmark med intensivt hevdpreg;T;O;04;NA-T
-NA-V00;-;V;0;0;NA-V
 NA-VA01;åpen jordvannsmyr;V;A;01;NA-V
 NA-VB01;myr- og sumpskogsmark;V;B;01;NA-V
 NA-VC01;åpen nedbørsmyr;V;C;01;NA-V
