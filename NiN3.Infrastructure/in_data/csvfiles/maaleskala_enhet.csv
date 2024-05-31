@@ -1,5 +1,4 @@
 Måleskala;Enhet;MåleskalaNavn
-nan;;nan-nan
 SO;VSO;KA-SO
 SI;VSI;HS-SI
 SI;VSI;nan-SI
@@ -12,6 +11,7 @@ SO;VSO;IP-SO
 SO;VSO;KY-SO
 SO;VSO;MS-SO
 SO;VSO;SE-SO
+SO;VSO;AD-SO
 SO;VSO;SO-SO
 SO;VSO;VP-SO
 SO;VSO;YK-SO
@@ -154,6 +154,7 @@ P6b;P;P6b
 P7;P;P7
 P8;P;P8
 P9a;P;P9a
+P9b;P;P9b
 P6c;P;P6c
 B;B;B
 K;OA;K

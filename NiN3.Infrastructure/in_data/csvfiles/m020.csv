@@ -98,7 +98,7 @@ NiN-3.0-T-C-PE-NA-MB-MA06-M020-05;finmaterialfattig til noe rik uorganisk sedime
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-06;finmaterialrik til -dominert dy- og gytjebunn i intermediært vann;MA06-M020-06
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-07;finmaterialfattig til noe rik uorganisk sedimentbunn i dyphavsvann;MA06-M020-07
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-08;finmaterialrik til -dominert dy- og gytjebunn i dyphavsvann;MA06-M020-08
-NiN-3.0-T-C-PE-NA-MB-MA06-M020-09;afotisk finmaterialfattig til noe -rik uorganisk sedimentbunn i arktisk vann;MA06-M020-09
+NiN-3.0-T-C-PE-NA-MB-MA06-M020-09;afotisk finmaterialfattig til noe rik uorganisk sedimentbunn i arktisk vann;MA06-M020-09
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-10;afotisk finmaterialrik til -dominert dy- og gytjebunn i arktisk vann;MA06-M020-10
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-11;afotisk saltvannsbunn av konsolidert leire;MA06-M020-11
 NiN-3.0-T-C-PE-NA-MB-MA06-M020-12;overveiende uorganisk dyphavsvannssedimentbunn med abyssal næringstilførselsreduksjon;MA06-M020-12
@@ -113,17 +113,18 @@ NiN-3.0-T-C-PE-NA-MB-MC01-M020-02;ekstrembrakk fast fjærebeltebunn;MC01-M020-02
 NiN-3.0-T-C-PE-NA-MB-MC02-M020-01;godt beskyttet fast brakkvannsbunn og bergvegg ovenfor rødalgebeltet;MC02-M020-01
 NiN-3.0-T-C-PE-NA-MB-MC02-M020-02;eksponert fast brakkvannsbunn og bergvegg i eufotisk sone;MC02-M020-02
 NiN-3.0-T-C-PE-NA-MB-MC02-M020-03;bunn preget av trådalger i ekstrem-brakt vann ovenfor rødalgebeltet;MC02-M020-03
-NiN-3.0-T-C-PE-NA-MB-MC02-M020-04;eksponert fast bunn i ekstrem-brakt vann ovenfor rødalgebeltet;MC02-M020-04
+NiN-3.0-T-C-PE-NA-MB-MC02-M020-04;eksponert fastbunn i ekstrem-brakt vann ovenfor rødalgebeltet;MC02-M020-04
 NiN-3.0-T-C-PE-NA-MB-MC03-M020-01;permanent littoralbassengbunn i geolittoral;MC03-M020-01
 NiN-3.0-T-C-PE-NA-MB-MC03-M020-02;permanent litoralbassengbunn i supralittoral;MC03-M020-02
 NiN-3.0-T-C-PE-NA-MB-MC03-M020-03;temporært litoralbassengbunn i supralittoral;MC03-M020-03
 NiN-3.0-T-C-PE-NA-MB-MC04-M020-01;nokså brakk finmaterialfattig og noe rik bunn av uorganisk substrat;MC04-M020-01
-NiN-3.0-T-C-PE-NA-MB-MC04-M020-02;ekstrembrakk moderat kalkrik dy- og gytjebunn;MC04-M020-02
+NiN-3.0-T-C-PE-NA-MB-MC04-M020-02;nokså brakk finmaterialrik bunn av uorganisk substrat;MC04-M020-02
 NiN-3.0-T-C-PE-NA-MB-MC04-M020-03;ekstrembrakk finmaterialfattig og noe rik bunn av uorganisk substrat;MC04-M020-03
 NiN-3.0-T-C-PE-NA-MB-MC04-M020-04;ekstrembrakk finmaterialrik bunn av uorganisk substrat;MC04-M020-04
-NiN-3.0-T-C-PE-NA-MB-MC04-M020-05;ekstrembrakk vært kalkrik dy- og gytjebunn;MC04-M020-05
-NiN-3.0-T-C-PE-NA-MB-MC04-M020-06;brakkvannsbunn preget av disruptiv sedimentasjon;MC04-M020-06
-NiN-3.0-T-C-PE-NA-MB-MC04-M020-07;nokså brakk finmaterialrik bunn av uorganisk substrat;MC04-M020-07
+NiN-3.0-T-C-PE-NA-MB-MC04-M020-05;nokså brakk dy- og gytjebunn;MC04-M020-05
+NiN-3.0-T-C-PE-NA-MB-MC04-M020-06;ekstrembrakk moderat kalkrik dy- og gytjebunn;MC04-M020-06
+NiN-3.0-T-C-PE-NA-MB-MC04-M020-07;ekstrembrakk svært kalkrik dy- og gytjebunn;MC04-M020-07
+NiN-3.0-T-C-PE-NA-MB-MC04-M020-08;brakkvannsbunn preget av disruptiv sedimentasjon;MC04-M020-08
 NiN-3.0-T-C-PE-NA-MB-MC05-M020-01;marine grotter og overheng i øvre sjøkantbelte;MC05-M020-01
 NiN-3.0-T-C-PE-NA-MB-MC05-M020-02;marine grotter og overheng under øvre sjøkantbelte;MC05-M020-02
 NiN-3.0-T-C-PE-NA-MB-MC06-M020-01;vann- og gassførende kald havkilde i atlantisk vann;MC06-M020-01
@@ -144,13 +145,13 @@ NiN-3.0-T-C-PE-NA-MB-MC10-M020-01;havis-underside;MC10-M020-01
 NiN-3.0-T-C-PE-NA-MB-MF01-M020-01;undervannseng i nokså brakt vann;MF01-M020-01
 NiN-3.0-T-C-PE-NA-MB-MF01-M020-02;undervannseng i ekstrembrakt vann;MF01-M020-02
 NiN-3.0-T-C-PE-NA-MB-MJ01-M020-01;taretrålingsbunn;MJ01-M020-01
-NiN-3.0-T-C-PE-NA-MB-MM01-M020-01;sterkt endret eller ny fast marin bunn og -berg i øvre sjøkantbelte;MM01-M020-01
-NiN-3.0-T-C-PE-NA-MB-MM01-M020-02;sterkt endret eller ny fast marin bunn og -berg i nedre sjøkantbelte til rødalgebeltet;MM01-M020-02
-NiN-3.0-T-C-PE-NA-MB-MM01-M020-03;sterkt endret eller ny fast marin bunn og -berg i afotisk sone;MM01-M020-03
+NiN-3.0-T-C-PE-NA-MB-MM01-M020-01;sterkt endret eller ny marin fastbunn i øvre sjøkantbelte;MM01-M020-01
+NiN-3.0-T-C-PE-NA-MB-MM01-M020-02;sterkt endret eller ny marin fastbunn i nedre sjøkantbelte til rødalgebeltet;MM01-M020-02
+NiN-3.0-T-C-PE-NA-MB-MM01-M020-03;sterkt endret eller ny marin fastbunn i afotisk sone;MM01-M020-03
 NiN-3.0-T-C-PE-NA-MB-MM01-M020-04;sterkt endret eller ny uorganisk marin bunn;MM01-M020-04
-NiN-3.0-T-C-PE-NA-MB-MM01-M020-05;sterkt endret eller ny marin bunn av dy og gyttje;MM01-M020-05
-NiN-3.0-T-C-PE-NA-MB-MM02-M020-01;sterkt endret fast marin bunn og -berg preget av kronisk kjemisk påvirkning;MM02-M020-01
-NiN-3.0-T-C-PE-NA-MB-MM02-M020-02;sterkt endret marin bunn av uorganisk substtrat preget av kronisk kjemisk påvirkning;MM02-M020-02
+NiN-3.0-T-C-PE-NA-MB-MM01-M020-05;sterkt endret eller ny marin bunn av dy og gytje;MM01-M020-05
+NiN-3.0-T-C-PE-NA-MB-MM02-M020-01;sterkt endret marin fastbunn preget av kronisk kjemisk påvirkning;MM02-M020-01
+NiN-3.0-T-C-PE-NA-MB-MM02-M020-02;sterkt endret marin bunn av uorganisk substrat preget av kronisk kjemisk påvirkning;MM02-M020-02
 NiN-3.0-T-C-PE-NA-MB-OA01-M020-01;ekstremt kalkfattig fastbunn i klar elv;OA01-M020-01
 NiN-3.0-T-C-PE-NA-MB-OA01-M020-02;svært kalkfattig fastbunn i klar elv;OA01-M020-02
 NiN-3.0-T-C-PE-NA-MB-OA01-M020-03;noe kalkfattig fastbunn i klar elv;OA01-M020-03
@@ -174,10 +175,8 @@ NiN-3.0-T-C-PE-NA-MB-OA02-M020-12;utstrømspåvirket noe kalkfattig til kalkrik 
 NiN-3.0-T-C-PE-NA-MB-OA02-M020-13;turbid elvesedimentbunn;OA02-M020-13
 NiN-3.0-T-C-PE-NA-MB-OB01-M020-01;kalkfattig undervannseng i elv;OB01-M020-01
 NiN-3.0-T-C-PE-NA-MB-OB01-M020-02;kalkrik undervannseng i elv;OB01-M020-02
-NiN-3.0-T-C-PE-NA-MB-OC01-M020-01;kalkfattig svak ferskvannskildebunn;OC01-M020-01
-NiN-3.0-T-C-PE-NA-MB-OC01-M020-02;kalkfattig sterk ferskvannskildebunn;OC01-M020-02
-NiN-3.0-T-C-PE-NA-MB-OC01-M020-03;kalkrik sterk ferskvannskildebunn;OC01-M020-03
-NiN-3.0-T-C-PE-NA-MB-OC01-M020-04;kalkrik svak ferskvannskildebunn;OC01-M020-04
+NiN-3.0-T-C-PE-NA-MB-OC01-M020-01;svak ferskvannskildebunn;OC01-M020-01
+NiN-3.0-T-C-PE-NA-MB-OC01-M020-02;sterk ferskvannskildebunn;OC01-M020-02
 NiN-3.0-T-C-PE-NA-MB-OC02-M020-01;silt- til steinbunn i varm ferskvannskilde;OC02-M020-01
 NiN-3.0-T-C-PE-NA-MB-OC02-M020-02;stein- til storblokket bunn i varm ferskvannskilde;OC02-M020-02
 NiN-3.0-T-C-PE-NA-MB-OC02-M020-03;svovelpåvirket bunn i varm ferskvannskilde;OC02-M020-03
@@ -201,7 +200,7 @@ NiN-3.0-T-C-PE-NA-MB-TA03-M020-03;temmelig til ekstremt kalkrik leside;TA03-M020
 NiN-3.0-T-C-PE-NA-MB-TA03-M020-04;kalkfattig fjell-lavhei og -lynghei;TA03-M020-04
 NiN-3.0-T-C-PE-NA-MB-TA03-M020-05;intermediær til litt kalkrik fjell-lavhei og -lynghei;TA03-M020-05
 NiN-3.0-T-C-PE-NA-MB-TA03-M020-06;temmelig til ekstremt kalkrik fjell-lavhei og -lynghei;TA03-M020-06
-NiN-3.0-T-C-PE-NA-MB-TA03-M020-07;saltanriket fjell-lavhei og -lynghei;TA03-M020-07
+NiN-3.0-T-C-PE-NA-MB-TA03-M020-07;saltanriket ekstremrik fjell-lavhei og -lynghei;TA03-M020-07
 NiN-3.0-T-C-PE-NA-MB-TA04-M020-01;kalkfattig arktisk-alpin grasmark;TA04-M020-01
 NiN-3.0-T-C-PE-NA-MB-TA04-M020-02;intermediær til litt kalkrik arktisk-alpin grasmark;TA04-M020-02
 NiN-3.0-T-C-PE-NA-MB-TA04-M020-03;temmelig til ekstremt kalkrik arktisk-alpin grasmark;TA04-M020-03
@@ -256,7 +255,7 @@ NiN-3.0-T-C-PE-NA-MB-TD05-M020-02;klart kalkrik naturlig beitebetinget eng;TD05-
 NiN-3.0-T-C-PE-NA-MB-TD06-M020-01;kalkfattig rabbe;TD06-M020-01
 NiN-3.0-T-C-PE-NA-MB-TD06-M020-02;intermediær til litt kalkrik rabbe;TD06-M020-02
 NiN-3.0-T-C-PE-NA-MB-TD06-M020-03;klart kalkrik rabbe;TD06-M020-03
-NiN-3.0-T-C-PE-NA-MB-TD06-M020-04;saltanriket rabbe;TD06-M020-04
+NiN-3.0-T-C-PE-NA-MB-TD06-M020-04;saltanriket ekstremrik rabbe;TD06-M020-04
 NiN-3.0-T-C-PE-NA-MB-TE01-M020-01;embryonal- primær- og hvit dyne;TE01-M020-01
 NiN-3.0-T-C-PE-NA-MB-TE01-M020-02;grå og brun dyne;TE01-M020-02
 NiN-3.0-T-C-PE-NA-MB-TE01-M020-03;primær og hvit innlandsdyne;TE01-M020-03
@@ -272,7 +271,7 @@ NiN-3.0-T-C-PE-NA-MB-TE05-M020-01;kalkfattig oppfrysingsmark;TE05-M020-01
 NiN-3.0-T-C-PE-NA-MB-TE05-M020-02;intermediær til litt kalkrik oppfrysingsmark;TE05-M020-02
 NiN-3.0-T-C-PE-NA-MB-TE05-M020-03;sterkt kalkrik oppfrysingsmark;TE05-M020-03
 NiN-3.0-T-C-PE-NA-MB-TE06-M020-01;marin driftvoll;TE06-M020-01
-NiN-3.0-T-C-PE-NA-MB-TE07-M020-01;feskvannsdriftvoll;TE07-M020-01
+NiN-3.0-T-C-PE-NA-MB-TE07-M020-01;ferskvannsdriftvoll;TE07-M020-01
 NiN-3.0-T-C-PE-NA-MB-TE08-M020-01;intermediær til litt kalkrik flommarkseng;TE08-M020-01
 NiN-3.0-T-C-PE-NA-MB-TE08-M020-02;klart kalkrik flommarkseng;TE08-M020-02
 NiN-3.0-T-C-PE-NA-MB-TE09-M020-01;kalkfattig isinnfrysingsmark;TE09-M020-01
@@ -315,9 +314,9 @@ NiN-3.0-T-C-PE-NA-MB-TK01-M020-01;kalkfattig semi-naturlig eng med åpent tresji
 NiN-3.0-T-C-PE-NA-MB-TK01-M020-02;svakt kalkrik semi-naturlig eng med åpent tresjikt;TK01-M020-02
 NiN-3.0-T-C-PE-NA-MB-TK01-M020-03;klart kalkrik semi-naturlig eng med åpent tresjikt;TK01-M020-03
 NiN-3.0-T-C-PE-NA-MB-TK01-M020-04;kalkfattig åpen semi-naturlig eng;TK01-M020-04
-NiN-3.0-T-C-PE-NA-MB-TK01-M020-06;svakt kalkrik åpen semi-naturlig eng;TK01-M020-06
+NiN-3.0-T-C-PE-NA-MB-TK01-M020-05;svakt kalkrik åpen semi-naturlig eng;TK01-M020-05
+NiN-3.0-T-C-PE-NA-MB-TK01-M020-06;klart kalkrik åpen semi-naturlig eng;TK01-M020-06
 NiN-3.0-T-C-PE-NA-MB-TK01-M020-07;kalkrik åpen semi-naturlig eng på stabilisert sand;TK01-M020-07
-NiN-3.0-T-C-PE-NA-MB-TK01-M020-08;klart kalkrik åpen semi-naturlig eng;TK01-M020-08
 NiN-3.0-T-C-PE-NA-MB-TK02-M020-01;semi-naturlig strandeng;TK02-M020-01
 NiN-3.0-T-C-PE-NA-MB-TK03-M020-01;kalkfattig bakli-hei og kystlynghei;TK03-M020-01
 NiN-3.0-T-C-PE-NA-MB-TK03-M020-02;intermediær til litt kalkrik bakli-hei og kystlynghei;TK03-M020-02
@@ -332,11 +331,11 @@ NiN-3.0-T-C-PE-NA-MB-TM02-M020-01;ny hard fastmark på tørrlagt innsjøbunn;TM0
 NiN-3.0-T-C-PE-NA-MB-TM02-M020-02;ny hard fastmark på tørrlagt elvebunn;TM02-M020-02
 NiN-3.0-T-C-PE-NA-MB-TM03-M020-01;sterkt endret fastmark med dekke av jord eller blandet sediment;TM03-M020-01
 NiN-3.0-T-C-PE-NA-MB-TM03-M020-02;sterkt endret fastmark med dekke av leire til grus;TM03-M020-02
-NiN-3.0-T-C-PE-NA-MB-TM03-M020-03;sterkt endret fastmark av fint organisk avfall;TM03-M020-03
-NiN-3.0-T-C-PE-NA-MB-TM03-M020-04;sterkt endret fastmark av grovt organisk avfall;TM03-M020-04
-NiN-3.0-T-C-PE-NA-MB-TM03-M020-05;sterkt endret fastmark av  løst, sterkt modifisert eller syntetisk substrat;TM03-M020-05
-NiN-3.0-T-C-PE-NA-MB-TM03-M020-06;sterkt endret fastmark av ikke-konsolidert løst, sterkt modifisert eller syntetisk substrat;TM03-M020-06
-NiN-3.0-T-C-PE-NA-MB-TM03-M020-07;sterkt endret fastmark av substrat preget av kjemisk påvirkning;TM03-M020-07
+NiN-3.0-T-C-PE-NA-MB-TM03-M020-04;sterkt endret fastmark av substrat preget av kjemisk påvirkning;TM03-M020-04
+NiN-3.0-T-C-PE-NA-MB-TM03-M020-05;sterkt endret fastmark av grovt organisk avfall;TM03-M020-05
+NiN-3.0-T-C-PE-NA-MB-TM03-M020-06;sterkt endret fastmark av fint organisk avfall;TM03-M020-06
+NiN-3.0-T-C-PE-NA-MB-TM03-M020-07;sterkt endret fastmark av  løst, sterkt modifisert eller syntetisk substrat;TM03-M020-07
+NiN-3.0-T-C-PE-NA-MB-TM03-M020-08;sterkt endret fastmark av ikke-konsolidert løst, sterkt modifisert eller syntetisk substrat;TM03-M020-08
 NiN-3.0-T-C-PE-NA-MB-TM04-M020-01;ny løs fastmark på tørrlagt innsjøbunn;TM04-M020-01
 NiN-3.0-T-C-PE-NA-MB-TM04-M020-02;ny løs fastmark på tørrlagt elvebunn;TM04-M020-02
 NiN-3.0-T-C-PE-NA-MB-TM05-M020-01;ny løs fastmark på drenert våtmark;TM05-M020-01
@@ -367,10 +366,10 @@ NiN-3.0-T-C-PE-NA-MB-VC04-M020-02;sterkt kalkrikt våtsnøleie og kildepåvirket
 NiN-3.0-T-C-PE-NA-MB-VC04-M020-03;kalkfattig til litt rikt sent våtsnøleie og kilde-utgaver av snøleie;VC04-M020-03
 NiN-3.0-T-C-PE-NA-MB-VC04-M020-04;sterkt kalkrikt sent våtsnøleie og kilde-utgaver av snøleie;VC04-M020-04
 NiN-3.0-T-C-PE-NA-MB-VC05-M020-01;permafrost-våtmark;VC05-M020-01
-NiN-3.0-T-C-PE-NA-MB-VE01-M020-01;kalkfattig til litt rik oppfrysingsvåtmark;VE01-M020-01
+NiN-3.0-T-C-PE-NA-MB-VE01-M020-01;kalkfattig til litt kalkrik oppfrysingsvåtmark;VE01-M020-01
 NiN-3.0-T-C-PE-NA-MB-VE01-M020-02;temmelig til ekstremt kalkrik oppfrysingsvåtmark;VE01-M020-02
 NiN-3.0-T-C-PE-NA-MB-VF01-M020-01;nedbørsmyr-skogsmark;VF01-M020-01
-NiN-3.0-T-C-PE-NA-MB-VF02-M020-01;intermediær til litt rik innsjø-strandsumpskogsmark;VF02-M020-01
+NiN-3.0-T-C-PE-NA-MB-VF02-M020-01;intermediær til litt kalkrik innsjø-strandsumpskogsmark;VF02-M020-01
 NiN-3.0-T-C-PE-NA-MB-VF02-M020-02;kalkrik innsjø-strandsumpskogsmark;VF02-M020-02
 NiN-3.0-T-C-PE-NA-MB-VF02-M020-03;kalkrik saltpåvirket hav-strandsumpskogsmark;VF02-M020-03
 NiN-3.0-T-C-PE-NA-MB-VG01-M020-01;ny naturgitt torvmark med jordvannstilførsel eller kildepreg;VG01-M020-01

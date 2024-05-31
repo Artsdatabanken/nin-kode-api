@@ -41,19 +41,6 @@ namespace NiN3.Tests.Infrastructure
             return service;
         }
 
-        /*
-        private static NiN3DbContext GetInMemoryDb()
-        {
-            var connection = new SqliteConnection("DataSource=:memory:");
-            connection.Open();
-            var options = new DbContextOptionsBuilder<NiN3DbContext>()
-            .UseSqlite(connection)
-            .Options;
-            var context = new NiN3DbContext(options);
-            context.Database.EnsureCreated();
-            return context;
-        }*/
-
         public IConfiguration CreateConfiguration()
         {
             _configuration = new ConfigurationBuilder()
@@ -108,7 +95,7 @@ namespace NiN3.Tests.Infrastructure
             var rootUrl = _configuration.GetValue<string>("root_url");
             var definisjon = variabel_B_N.Kode.Definisjon.Replace(rootUrl, "");
             //evaluate rest of url without rootUrl-part of it
-            Assert.Equal("/v3.0/variabler/kodeforVariabel/B-N", definisjon);
+            Assert.Equal("https://nin-kode-api.artsdatabanken.no/v3.0/variabler/kodeforVariabel/B-N", definisjon);
         }
 
 
@@ -123,7 +110,7 @@ namespace NiN3.Tests.Infrastructure
         public void GetMaaleskalaByMaaleskalanavn() { 
             var service = GetPrepearedVariabelApiService();
             var versjon = "3.0";
-            var result = service.GetMaaleskalaByMaaleskalanavn("BK-SI");
+            var result = service.GetMaaleskalaByMaaleskalanavn("BK-SI", versjon);
             Assert.NotNull(result);
             Assert.Equal("BK-SI", result.MaaleskalaNavn);
             Assert.True(result.Trinn.Count==5);
@@ -138,6 +125,52 @@ namespace NiN3.Tests.Infrastructure
             Assert.NotNull(variabelnavn_KM_AH);
             Assert.Equal(3, variabelnavn_KM_AH.Konverteringer.Count);
         }
+        
+        [Fact]
+        public void TestFetchTrinnForVariabelnavn_VS_SS_W()
+        {
+            var service = GetPrepearedVariabelApiService();
+            var versjon = "3.0";
+            var variabelnavn_VS_SS_W = service.GetVariabelnavnByKortkode("VS-SS_W", "3.0");
+            Assert.NotNull(variabelnavn_VS_SS_W);
+            var vt = variabelnavn_VS_SS_W.Variabeltrinn;
+            Assert.Equal(1, variabelnavn_VS_SS_W.Variabeltrinn.Count);
+            Assert.Equal(16, vt.First().Trinn.Count);
+        }
 
+        [Fact]
+        public void TestTrinnAndKonverteringViaGetMaaleskala() 
+        { 
+            var service = GetPrepearedVariabelApiService();
+            var versjon = "3.0";
+            var maaleskala = service.GetMaaleskalaByMaaleskalanavn("BA-SO", versjon);
+            Assert.NotNull(maaleskala);
+            var trinn_RM_BA_0 = maaleskala.Trinn.Where(x => x.Kode == "RM-BA_0").FirstOrDefault();
+            Assert.NotNull(trinn_RM_BA_0);
+            Assert.Equal(1, trinn_RM_BA_0.Konverteringer.Count);
+            var konvertering = trinn_RM_BA_0.Konverteringer.First();
+            Assert.Equal("RM-BA_0", konvertering.Kode);
+            Assert.Equal("6KE·1", konvertering.ForrigeKode);
+            Assert.Equal("2.3", konvertering.ForrigeVersjon);
+        }
+
+        [Fact]
+        public void TestTrinnAndKonverteringViaGetVariabelnavn()
+        {
+            var service = GetPrepearedVariabelApiService();
+            var versjon = "3.0";
+            var variabelnavn = service.GetVariabelnavnByKortkode("LM-HM", versjon);
+            Assert.NotNull(variabelnavn);
+            var maaleskala = variabelnavn.Variabeltrinn.Where(vt => vt.MaaleskalaNavn == "HM-SO").FirstOrDefault();
+            Assert.NotNull(maaleskala);
+            var trinn_LM_HM_0 = maaleskala.Trinn.Where(x => x.Kode == "LM-HM_0").FirstOrDefault();
+            Assert.NotNull(trinn_LM_HM_0);
+            // Check konvertering for this trinn
+            Assert.Equal(1, trinn_LM_HM_0.Konverteringer.Count);
+            var konvertering = trinn_LM_HM_0.Konverteringer.First();
+            Assert.Equal("LM-HM_0", konvertering.Kode);
+            Assert.Equal("HI·0ab", konvertering.ForrigeKode);
+            Assert.Equal("2.3", konvertering.ForrigeVersjon);
+        }
     }
 }

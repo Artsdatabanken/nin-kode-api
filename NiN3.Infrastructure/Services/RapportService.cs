@@ -1,20 +1,14 @@
 ﻿using AutoMapper;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.InkML;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs.rapport;
 using NiN3.Infrastructure.DbContexts;
-using NiN3.Infrastructure.in_data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NiN3.Core.Models;
-using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.Mapping;
-//using OfficeOpenXml;
-using ClosedXML.Excel;
+using System.Text;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -30,6 +24,12 @@ namespace NiN3.Infrastructure.Services
         {
             _context = context;
             _logger = logger;
+        }
+
+        public string GetDataDate()
+        {
+            var result = _context.Database.SqlQuery<string>($"SELECT Verdi from [db_info]").ToList();
+            return result.First(); // Return null if no value is found
         }
 
         public List<KodeoversiktDto> GetKodeSummary(string versjon)
@@ -99,50 +99,21 @@ namespace NiN3.Infrastructure.Services
             return kodeoversiktDtoList;
         }
 
-        public string MakeKodeoversiktCSV(string versjon) {
+        public string MakeKodeoversiktCSV(string versjon, string separator=";") {
             var kodeoversiktDtoList = GetKodeSummary(versjon);
             var csv = new StringBuilder();
-            csv.AppendLine("Klasse;Navn;Kortkode;Langkode");
+            csv.AppendLine($"Klasse{separator}Navn{separator}Kortkode{separator}Langkode");
             foreach (var kodeoversiktDto in kodeoversiktDtoList)
             {
-                var newLine = $"{kodeoversiktDto.Klasse};{kodeoversiktDto.Navn};{kodeoversiktDto.Kortkode};{kodeoversiktDto.Langkode}";
+                if (separator == ",") {
+                    kodeoversiktDto.Navn = "\"" + kodeoversiktDto.Navn.Replace("\"", "\"\"") + "\"";
+                }
+                var newLine = $"{kodeoversiktDto.Klasse}{separator}{kodeoversiktDto.Navn}{separator}{kodeoversiktDto.Kortkode}{separator}{kodeoversiktDto.Langkode}";
                 csv.AppendLine(newLine);
             }
             return csv.ToString();
         }
 
-        /* using EPPlus: 
-                public byte[] MakeKodeoversiktXlsx(string versjon)
-                {
-                    var kodeoversiktDtoList = GetKodeSummary(versjon);
-
-                    using (var package = new ExcelPackage())
-                    {
-                        var worksheet = package.Workbook.Worksheets.Add("Kodeoversikt");
-
-                        // Set the headers
-                        worksheet.Cells[1, 1].Value = "Klasse";
-                        worksheet.Cells[1, 2].Value = "Navn";
-                        worksheet.Cells[1, 3].Value = "Kortkode";
-                        worksheet.Cells[1, 4].Value = "Langkode";
-
-                        // Fill the rows with data
-                        int i = 2;
-                        foreach (var kodeoversiktDto in kodeoversiktDtoList)
-                        {
-                            worksheet.Cells[i, 1].Value = kodeoversiktDto.Klasse;
-                            worksheet.Cells[i, 2].Value = kodeoversiktDto.Navn;
-                            worksheet.Cells[i, 3].Value = kodeoversiktDto.Kortkode;
-                            worksheet.Cells[i, 4].Value = kodeoversiktDto.Langkode;
-                            i++;
-                        }
-
-                        // Save the spreadsheet
-                        var stream = new MemoryStream();
-                        package.SaveAs(stream);
-                        return stream.ToArray();
-                    }
-                }*/
         public byte[] MakeKodeoversiktXlsx(string versjon)
         {
             var kodeoversiktDtoList = GetKodeSummary(versjon);
