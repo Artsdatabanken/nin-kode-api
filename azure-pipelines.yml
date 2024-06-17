@@ -14,6 +14,9 @@ trigger:
     exclude:
       - README.md
 
+# no PR triggers
+pr: none
+
 variables:
   tag: 'latest'
 
