@@ -114,6 +114,23 @@ namespace NiN3.Infrastructure.Services
             return csv.ToString();
         }
 
+        public string MakeKartleggingsoversiktCSV(string versjon, string separator = ";")
+        {
+            var kodeoversiktDtoList = GetKodeSummary(versjon).Where(x=>x.Klasse == "Kartleggingsenhet");
+            var csv = new StringBuilder();
+            csv.AppendLine($"Title{separator}GUID{separator}Tags{separator}LiteralTags{separator}LiteralValue");
+            foreach (var kodeoversiktDto in kodeoversiktDtoList)
+            {
+                if (separator == ",")
+                {
+                    kodeoversiktDto.Navn = "\"" + kodeoversiktDto.Navn.Replace("\"", "\"\"") + "\"";
+                }
+                var newLine = $"{kodeoversiktDto.Navn}{separator}urn:nbic:{kodeoversiktDto.Langkode}{separator}NiN|NIN3|Kartleggingsenhet{separator}Code{separator}{kodeoversiktDto.Langkode}";
+                csv.AppendLine(newLine);
+            }
+            return csv.ToString();
+        }
+
         public byte[] MakeKodeoversiktXlsx(string versjon)
         {
             var kodeoversiktDtoList = GetKodeSummary(versjon);

@@ -7,6 +7,7 @@ NiN-3.0-V-A-N-NO-GE-DL-L3-W;NO-L3;A;N;NO;GE;DL;L3;alle lite nedbrutte lauvtrelæ
 NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm-P6c;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
 NiN-3.0-V-B-N-RA-GE-W-MB-W;RA-MB-JUNIcomm-B;B;N;RA;GE;W;MB;mark- og bunnlevende art;B-N
 NiN-3.0-V-B-N-SA-GE-AG-TT-W;SA-TT;B;N;SA;GE;AG;TT;total tresjiktsdekning;B-N
+NiN-3.0-V-B-N-SA-FE-AR-AA-W;SA-AA;B;N;SA;FE;AR;AA;naturgitt dominerende treslagsgruppe;B-N
 NiN-3.0-V-B-N-SA-GE-AR-AB-W;SA-AB;B;N;SA;GE;AR;AB;bartreandel;B-N
 NiN-3.0-V-B-N-SA-FE-AR-AD-W;SA-AD;B;N;SA;FE;AR;AD;dominansutforming av tresjiktet;B-N
 NiN-3.0-V-A-N-LO-GE-BO-BH-W;LO-BH;A;N;LO;GE;BO;BH;slukhull på bre;A-N
@@ -255,6 +256,8 @@ NiN-3.0-V-A-M-KM-GE-SE-DA-W;KM-DA;A;M;KM;GE;SE;DA;dødvedandel;A-M
 NiN-3.0-V-A-M-KM-GE-SE-DV-W;KM-DV;A;M;KM;GE;SE;DV;dødvedvariasjon;A-M
 NiN-3.0-V-B-N-SA-FK-W-FS-W;SA-FS;B;N;SA;FK;W;FS;fiskesamfunnskompleksitet;B-N
 NiN-3.0-V-B-N-SA-GK-W-VE-W;SA-VE;B;N;SA;GK;W;VE;vegetasjonsdekke;B-N
+NiN-3.0-V-B-N-SA-FE-AR-FA-W;SA-FA;B;N;SA;FE;AR;FA;naturgitt dominerende algegruppe;B-N
+NiN-3.0-V-B-N-SA-FE-AR-HA-W;SA-HA;B;N;SA;FE;AR;HA;naturgitt dominerende stasjonær megafauna;B-N
 NiN-3.0-V-B-N-SA-GE-AG-AG-W;SA-AG;B;N;SA;GE;AG;AG;dekning av gjenveksttrær;B-N
 NiN-3.0-V-B-N-SA-GE-AG-AO-W;SA-AO;B;N;SA;GE;AG;AO;dekning av overstandere;B-N
 NiN-3.0-V-B-N-SA-GE-AG-AT-W;SA-AT;B;N;SA;GE;AG;AT;tresjiktsdekning;B-N

@@ -34,6 +34,19 @@ namespace NiN3.WebApi.Controllers
             return File(result, "text/csv; charset=utf-8", "kodeoversikt.csv");            
         }
 
+        [HttpGet("drupalimport")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public IActionResult Drupalimport()
+        {
+            string kodeoversiktcsv = _rapportService.MakeKartleggingsoversiktCSV("3.0", '\t'.ToString());
+            byte[] csvBytes = Encoding.UTF8.GetBytes(kodeoversiktcsv);
+            byte[] bom = Encoding.UTF8.GetPreamble();
+            //byte[] bom = Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).GetPreamble();
+            var result = bom.Concat(csvBytes).ToArray();
+            return File(result, "text/csv; charset=utf-8", "drupalimport_kartleggingsenheter.csv");
+        }
+
         /*
         [HttpGet("kodeoversiktExcel")]
         [ProducesResponseType(StatusCodes.Status200OK)]

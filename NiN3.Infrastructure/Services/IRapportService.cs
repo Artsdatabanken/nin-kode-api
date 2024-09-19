@@ -6,6 +6,8 @@ namespace NiN3.Infrastructure.Services
     {
         public List<KodeoversiktDto> GetKodeSummary(string versjon);
         public string MakeKodeoversiktCSV(string versjon, string separator=";");
+
+        public string MakeKartleggingsoversiktCSV(string versjon, string separator = ";");
         public byte[] MakeKodeoversiktXlsx(string versjon);
 
         public string GetDataDate();
