@@ -88,7 +88,7 @@ while (run)
             if (db == null)
             {
                 Console.WriteLine($"Running choice 'wipe'");
-                var filename = config.GetValue<string>("buildtDBFilePath");
+                var filename = config.GetValue<string>("builtDBFilePath");
                 //var droptablesquery = $"drop table if exists Domene Grunntype";
                 FileInfo fi = new FileInfo(filename);
                 if (fi.Exists)
