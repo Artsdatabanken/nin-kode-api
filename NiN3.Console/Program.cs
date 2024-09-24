@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN.Infrastructure.Services;
@@ -20,8 +21,19 @@ void LoadDB()
     db = new NiN3DbContext(optionsBuilder.Options);
     db.Database.EnsureCreated();
 }
-var buildtDbFileName = config.GetValue<string>("bildtDbFileName");
-var buildtDbFileFullPath = config.GetValue<string>("buildtDBFilePath");
+var builtDbFileName = config.GetValue<string>("builtDbFileName");
+var builtDbFileFullPath = config.GetValue<string>("builtDBFilePath");
+
+
+
+string buildWebApiDbPath() 
+{
+    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
+    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
+    return $"{rootFolder}{relativeWebApiPath}";
+};
+
+
 using var loggerFactory = LoggerFactory.Create(builder =>
 {
     builder
@@ -72,7 +84,6 @@ while (run)
             break;
         case "exit":
             return;
-            break;
         case "wipe":
             if (db == null)
             {
@@ -94,18 +105,19 @@ while (run)
             break;
         case "copy":
             var arr = config.GetConnectionString("Extract").Split("=");
-            var sourcepath = buildtDbFileFullPath;
-            var path = config.GetValue<string>("webapiDBpath");
+            var sourcepath = builtDbFileFullPath;
+            //var path = config.GetValue<string>("webapiDBpath");
+            var webApiDbPath = buildWebApiDbPath();
             try
             {
                 using (var sourceStream = new FileStream(sourcepath, FileMode.Open))
                 {
-                    using (var destinationStream = new FileStream(path, FileMode.Create))
+                    using (var destinationStream = new FileStream(webApiDbPath, FileMode.Create))
                     {
                         sourceStream.CopyTo(destinationStream);
                     }
                 }
-                Console.WriteLine($"Copied new db file to webproject ({path})");
+                Console.WriteLine($"Copied new db file to webproject ({webApiDbPath})");
             }
             catch (Exception ex)
             {
@@ -113,14 +125,15 @@ while (run)
             };
             break;
         case "info":
-            var sourcedbpath = buildtDbFileFullPath;
-            var webdbpath = config.GetValue<string>("webapiDBpath");
+            var sourcedbpath = builtDbFileFullPath;
+            //var webdbpath = config.GetValue<string>("webapiDBpath");
+            var webApiPath = buildWebApiDbPath();
 
             var sourceInfo = new FileInfo(sourcedbpath);
             sourceInfo.Refresh();
             Console.WriteLine($"Changed time of source db file: {sourceInfo.LastWriteTime}");
 
-            var webInfo = new FileInfo(webdbpath);
+            var webInfo = new FileInfo(webApiPath);
             webInfo.Refresh();
             Console.WriteLine($"Changed time of web db file: {webInfo.LastWriteTime}");
             break;
