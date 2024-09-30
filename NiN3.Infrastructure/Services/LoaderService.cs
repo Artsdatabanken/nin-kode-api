@@ -9,6 +9,7 @@ using NiN3.Infrastructure.in_data;
 using NiN3.Infrastructure.Services;
 using NiN3KodeAPI.in_data;
 using System.Text;
+
 //using NiN3.Infrastructure.in_data.csvfiles;
 
 namespace NiN.Infrastructure.Services
@@ -22,7 +23,8 @@ namespace NiN.Infrastructure.Services
         public List<CsvdataImporter_hovedtypegruppe_hovedtype_mapping> csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings { get; set; }
         public List<CsvdataImporter_hovedtype_grunntype_mapping> csvdataImporter_Hovedtype_Grunntype_Mappings { get; set; }   
         public List<CsvdataImporter_Type_Htg_mapping> csvdataImporter_Type_Htg_Mappings { get; set; }
-        string logpath = @"C:\temp\nin3LoaderLogg_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".log";
+
+        string logpath = $"{Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName)}\\NiN3.Console\\temp\\nin3LoaderLogg_{DateTime.Now.ToString("yyyyMMddHHmmss")}.log";
         public List<NiN3.Core.Models.Type> _typer { get; set; }
 
         private Versjon? _versjon;
@@ -124,7 +126,7 @@ namespace NiN.Infrastructure.Services
             }
             catch(Exception ex)
             {
-                WriteToFile($"Error: {ex.Message}");
+                WriteToFile($"Error: {ex.InnerException}");
                 WriteToFile($"Error: Loading did not finish!!");
             }
         }

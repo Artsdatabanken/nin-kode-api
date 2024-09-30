@@ -27,11 +27,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="temp\nin3kodeapi.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="in_data\" />
+    <Folder Include="Temp\" />
   </ItemGroup>
 </Project>

@@ -14,25 +14,29 @@ IConfiguration config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
-void LoadDB()
+string builtDbFileFullPath()
 {
-    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
-    optionsBuilder.UseSqlite(config.GetConnectionString("Extract"));
-    db = new NiN3DbContext(optionsBuilder.Options);
-    db.Database.EnsureCreated();
-}
-var builtDbFileName = config.GetValue<string>("builtDbFileName");
-var builtDbFileFullPath = config.GetValue<string>("builtDBFilePath");
+    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
+    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
+    return $"{dbRootPath}{relativeDbPath}";
+};
 
-
-
-string buildWebApiDbPath() 
+string buildWebApiDbPath()
 {
     var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
     var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
     return $"{rootFolder}{relativeWebApiPath}";
 };
 
+void LoadDB()
+{
+    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
+    var connectionString = builtDbFileFullPath();
+    optionsBuilder.UseSqlite($"Data Source={connectionString}");
+    db = new NiN3DbContext(optionsBuilder.Options);
+    var test = db.Database.EnsureCreated();
+}
+var builtDbFileName = config.GetValue<string>("builtDbFileName");
 
 using var loggerFactory = LoggerFactory.Create(builder =>
 {
@@ -44,8 +48,6 @@ using var loggerFactory = LoggerFactory.Create(builder =>
 });
 ILogger logger = loggerFactory.CreateLogger<Program>();
 ILogger<LoaderService> _logger = loggerFactory.CreateLogger<LoaderService>();
-
-
 
 // api klient
 var run = true;
@@ -65,11 +67,17 @@ while (run)
             break;
         case "makeDB":
             // ensure db is created
-            LoadDB();
-            //db.Database.EnsureCreated();
-            // run loader
-            var loader = new LoaderService(config, db, _logger);
-            loader.load_all_data();
+            try
+            {
+                LoadDB();
+                // run loader
+                var loader = new LoaderService(config, db, _logger);
+                loader.load_all_data();
+            }
+            catch (Exception e)
+            { 
+                Console.WriteLine(e.InnerException);
+            };
             //..optimize file/indexes and flush pool to disk
             using (Microsoft.Data.Sqlite.SqliteConnection connection = (Microsoft.Data.Sqlite.SqliteConnection)db.Database.GetDbConnection())
             {
@@ -88,7 +96,7 @@ while (run)
             if (db == null)
             {
                 Console.WriteLine($"Running choice 'wipe'");
-                var filename = config.GetValue<string>("builtDBFilePath");
+                var filename = builtDbFileFullPath();
                 //var droptablesquery = $"drop table if exists Domene Grunntype";
                 FileInfo fi = new FileInfo(filename);
                 if (fi.Exists)
@@ -104,9 +112,7 @@ while (run)
             //File.Delete(filename);
             break;
         case "copy":
-            var arr = config.GetConnectionString("Extract").Split("=");
-            var sourcepath = builtDbFileFullPath;
-            //var path = config.GetValue<string>("webapiDBpath");
+            var sourcepath = builtDbFileFullPath();
             var webApiDbPath = buildWebApiDbPath();
             try
             {
@@ -125,8 +131,7 @@ while (run)
             };
             break;
         case "info":
-            var sourcedbpath = builtDbFileFullPath;
-            //var webdbpath = config.GetValue<string>("webapiDBpath");
+            var sourcedbpath = builtDbFileFullPath();
             var webApiPath = buildWebApiDbPath();
 
             var sourceInfo = new FileInfo(sourcedbpath);
