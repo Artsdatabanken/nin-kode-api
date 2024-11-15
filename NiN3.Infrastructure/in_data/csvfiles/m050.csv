@@ -11,7 +11,7 @@ NiN-3.0-T-C-PE-NA-MB-LA02-M050-02;noe kalkfattig innsjø-sedimentbunn av silt ti
 NiN-3.0-T-C-PE-NA-MB-LA02-M050-03;moderat kalkrik innsjø-sedimentbunn av silt til stein i strandkant og plantebeltet;LA02-M050-03
 NiN-3.0-T-C-PE-NA-MB-LA02-M050-04;svært kalkrik innsjø-sedimentbunn av silt til stein i strandkant og plantebeltet;LA02-M050-04
 NiN-3.0-T-C-PE-NA-MB-LA02-M050-05;kalkrik innsjø-sedimentbunn av leire i strandkant og karplantebelte;LA02-M050-05
-NiN-3.0-T-C-PE-NA-MB-LA02-M050-06;turbid innsjø-sedimentbunn;LA02-M050-06
+NiN-3.0-T-C-PE-NA-MB-LA02-M050-07;turbid innsjø-sedimentbunn;LA02-M050-07
 NiN-3.0-T-C-PE-NA-MB-LA03-M050-01;svært kalkfattig afotisk innsjøbunn;LA03-M050-01
 NiN-3.0-T-C-PE-NA-MB-LA03-M050-02;noe kalkfattig afotisk innsjøbunn;LA03-M050-02
 NiN-3.0-T-C-PE-NA-MB-LA03-M050-03;kalkrik afotisk innsjøbunn;LA03-M050-03
@@ -36,7 +36,7 @@ NiN-3.0-T-C-PE-NA-MB-LM01-M050-01;ny sterkt endret innsjøbunn;LM01-M050-01
 NiN-3.0-T-C-PE-NA-MB-LM02-M050-01;kalkfattig ny innsjøbunn fra elvebunn;LM02-M050-01
 NiN-3.0-T-C-PE-NA-MB-LM02-M050-02;kalkrik ny innsjøbunn fra elvebunn;LM02-M050-02
 NiN-3.0-T-C-PE-NA-MB-LM03-M050-01;kalkfattig ny innsjøbunn fra våtmarkssystemer;LM03-M050-01
-NiN-3.0-T-C-PE-NA-MB-LM03-M050-02;kalkrik ny innsjøbunn fra våtmarkssystemer;LM03-M050-02
+NiN-3.0-T-C-PE-NA-MB-LM03-M050-01;kalkrik ny innsjøbunn fra våtmarkssystemer;LM03-M050-01
 NiN-3.0-T-C-PE-NA-MB-LM04-M050-01;kalkfattig kronisk fysisk forstyrret innsjøbunn;LM04-M050-01
 NiN-3.0-T-C-PE-NA-MB-LM04-M050-02;kalkrik kronisk fysisk forstyrret innsjøbunn;LM04-M050-02
 NiN-3.0-T-C-PE-NA-MB-LM05-M050-01;kronisk kjemisk påvirket innsjøbunn;LM05-M050-01
@@ -200,9 +200,9 @@ NiN-3.0-T-C-PE-NA-MB-TM02-M050-01;ny hard fastmark på tørrlagt innsjøbunn;TM0
 NiN-3.0-T-C-PE-NA-MB-TM02-M050-02;ny hard fastmark på tørrlagt elvebunn;TM02-M050-02
 NiN-3.0-T-C-PE-NA-MB-TM03-M050-01;sterkt endret fastmark med dekke av jord eller blandet sediment;TM03-M050-01
 NiN-3.0-T-C-PE-NA-MB-TM03-M050-02;sterkt endret fastmark med dekke av leire til grus;TM03-M050-02
-NiN-3.0-T-C-PE-NA-MB-TM03-M050-03;sterkt endret fastmark av substrat preget av kjemisk påvirkning;TM03-M050-03
-NiN-3.0-T-C-PE-NA-MB-TM03-M050-04;sterkt endret fastmark av organisk avfall;TM03-M050-04
-NiN-3.0-T-C-PE-NA-MB-TM03-M050-05;sterkt endret fastmark av løst, sterkt modifisert eller syntetisk substrat;TM03-M050-05
+NiN-3.0-T-C-PE-NA-MB-TM03-M050-02;sterkt endret fastmark av substrat preget av kjemisk påvirkning;TM03-M050-02
+NiN-3.0-T-C-PE-NA-MB-TM03-M050-02;sterkt endret fastmark av organisk avfall;TM03-M050-02
+NiN-3.0-T-C-PE-NA-MB-TM03-M050-04;sterkt endret fastmark av løst, sterkt modifisert eller syntetisk substrat;TM03-M050-04
 NiN-3.0-T-C-PE-NA-MB-TM04-M050-01;ny løs fastmark på tørrlagt innsjøbunn;TM04-M050-01
 NiN-3.0-T-C-PE-NA-MB-TM04-M050-02;ny løs fastmark på tørrlagt elvebunn;TM04-M050-02
 NiN-3.0-T-C-PE-NA-MB-TM05-M050-01;ny løs fastmark på drenert våtmark;TM05-M050-01
