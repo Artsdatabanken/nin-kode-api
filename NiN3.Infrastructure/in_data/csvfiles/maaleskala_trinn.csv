@@ -41,8 +41,8 @@ NiN-3.0-V-A-M-KM-FE-SB-HI-KE;KM-HI_KE;Gjentatt rydningshogst;HI-SI
 NiN-3.0-V-A-M-KM-FE-SB-HI-KU;KM-HI_KU;Uspesifisert intermediær hogst;HI-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-K0;KM-HS_K0;Uten tydelige spor etter lukket selektiv hogst;HS-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-KA;KM-HS_KA;Bledningshogst;HS-SI
-NiN-3.0-V-A-M-KM-FE-SB-HS-KB;KM-HS_KB;Dimensjonshogst;HS-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-KB;KM-HS_KB;Plukkhogst;HS-SI
+NiN-3.0-V-A-M-KM-FE-SB-HS-KB;KM-HS_KB;Dimensjonshogst;HS-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-KC;KM-HS_KC;Plukkhogst;HS-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-KU;KM-HS_KU;Uspesifisert lukket selektiv hogst;HS-SI
 NiN-3.0-V-A-M-KM-FE-SB-HS-U;KM-HS_U;Uspesifisert lukket selektiv hogst;HS-SI
@@ -705,11 +705,11 @@ NiN-3.0-V-A-N-MD-FE-EE-FR-K4;MD-FR_K4;Brefelt-flomregime;FR-SO
 NiN-3.0-V-A-N-MD-GE-BE-LH -0;MD-LH _0;Ved dagens kystlinje;LH-SO
 NiN-3.0-V-A-N-MD-GE-BE-LH -1;MD-LH _1;Mellom dagens kystlinje og øvre marine grense;LH-SO
 NiN-3.0-V-A-N-MD-GE-BE-LH -y;MD-LH _y;Ved øvre marine grense;LH-SO
-NiN-3.0-V-A-N-MD-GE-EE-MB-1;MD-BD_0;Kald bre;BD-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-1;MD-MB_1;Klart erosjonsdominert;MB-SO
-NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-BD_1;Bre med kalde og tempererte deler;BD-SO
+NiN-3.0-V-A-N-MD-GE-EE-MB-1;MD-BD_0;Kald bre;BD-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-MB_2;Erosjonsdominert;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-BD_y;Temperert bre;BD-SO
+NiN-3.0-V-A-N-MD-GE-EE-MB-2;MD-BD_1;Bre med kalde og tempererte deler;BD-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-3;MD-MB_3;Balansert erosjon-sedimentasjonsdynamikk;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-4;MD-MB_4;Sedimentasjonsdominert;MB-SO
 NiN-3.0-V-A-N-MD-GE-EE-MB-5;MD-MB_5;Klart sedimentasjonsdominert;MB-SO
@@ -858,6 +858,10 @@ NiN-3.0-V-B-N-AD-GK-W-TP-0;AD-TP_0;Minimal torvproduksjon;TP-SI
 NiN-3.0-V-B-N-AD-GK-W-TP-a;AD-TP_a;Middels torvproduserede evne;TP-SI
 NiN-3.0-V-B-N-AD-GK-W-TP-b;AD-TP_b;Stor torvproduserende evne;TP-SI
 NiN-3.0-V-B-N-SA-FE-AR--E2B;SA-_E2B;Edellauvtrær dominerer, bartrær meddominerende;nan-SI
+NiN-3.0-V-B-N-SA-FE-AR-AA-A;SA-AA_A;Bartredominans;AA-SI
+NiN-3.0-V-B-N-SA-FE-AR-AA-B;SA-AA_B;Edellauvtredominans;AA-SI
+NiN-3.0-V-B-N-SA-FE-AR-AA-C;SA-AA_C;Dominans av boreale lauvtrær;AA-SI
+NiN-3.0-V-B-N-SA-FE-AR-AA-D;SA-AA_D;Dominans av pil og vier;AA-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-0;SA-AD_0;Skogsmark uten tresjikt;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-B;SA-AD_B;Bartrær er eneste treslagsgruppe som tilfredsstiller definisjonen av relativ samdominant;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-B2;SA-AD_B2;Bartrær er relative dominanter: ingen med-dominerende treslagsgrupper;AD-SI
@@ -885,6 +889,17 @@ NiN-3.0-V-B-N-SA-FE-AR-AD-V2;SA-AD_V2;Pil og vier er relative dominanter: ingen 
 NiN-3.0-V-B-N-SA-FE-AR-AD-V2B;SA-AD_V2B;Pil og vier er relative dominanter: bartrær er med-dominerende treslagsgruppe;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-V2E;SA-AD_V2E;Pil og vier er relative dominanter: edellauvtrær er med-dominerende treslagsgruppe;AD-SI
 NiN-3.0-V-B-N-SA-FE-AR-AD-V2L;SA-AD_V2L;Pil og vier er relative dominanter: boreale lauvtrær er med-dominerende treslagsgruppe;AD-SI
+NiN-3.0-V-B-N-SA-FE-AR-FA-0;SA-FA_0;Ingen eller annen;FA-SI
+NiN-3.0-V-B-N-SA-FE-AR-FA-A;SA-FA_A;Fingertare(skog);FA-SI
+NiN-3.0-V-B-N-SA-FE-AR-FA-B;SA-FA_B;Rugl(bunn);FA-SI
+NiN-3.0-V-B-N-SA-FE-AR-FA-C;SA-FA_C;Stortare(skog);FA-SI
+NiN-3.0-V-B-N-SA-FE-AR-FA-D;SA-FA_D;Sukkertare(skog);FA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-0;SA-HA_0;Ingen eller annen;HA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-A;SA-HA_A;Dominans av blåskjell;HA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-B;SA-HA_B;Dominans av sjøfjær og annen gravende megafauna;HA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-C;SA-HA_C;Hornkoralldominans;HA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-D;SA-HA_D;Dominans av o-skjell;HA-SI
+NiN-3.0-V-B-N-SA-FE-AR-HA-E;SA-HA_E;Svampdominans;HA-SI
 NiN-3.0-V-B-N-SA-FK-W-FS-0;SA-FS_0;Naturlig fisketom vannforekomst;FS-SI
 NiN-3.0-V-B-N-SA-FK-W-FS-A;SA-FS_A;Enkelt fiskesamfunn;FS-SI
 NiN-3.0-V-B-N-SA-FK-W-FS-B;SA-FS_B;Moderat komplekst fiskesamfunn;FS-SI
