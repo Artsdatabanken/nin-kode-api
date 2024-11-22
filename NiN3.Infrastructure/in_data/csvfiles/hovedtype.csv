@@ -131,7 +131,7 @@ FL-L07;snøskredformer;L;0;07;FL-L
 FL-L08;talus;L;0;08;FL-L
 FL-L09;talusvoll;L;0;09;FL-L
 FL-L10;undersjøiske skredformer;L;0;10;FL-L
-FL-M01;havbunnskanal;M;0;01;FL-M
+FL-M01;havbunnskanal;M;|;01;FL-M
 FL-M02;konturitt;M;0;02;FL-M
 FL-M03;havbunnssedimentbanke;M;0;03;FL-M
 FL-M04;strømgrop;M;0;04;FL-M
