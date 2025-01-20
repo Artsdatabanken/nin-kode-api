@@ -265,8 +265,8 @@ namespace NiN3.Infrastructure.Mapping
                 var trinnIds = grunntype.GrunntypeVariabeltrinn != null && grunntype.GrunntypeVariabeltrinn.Any(gtvt => gtvt.Trinn != null)
                 ? grunntype.GrunntypeVariabeltrinn.Where(gtvt => gtvt.Trinn != null).Select(gtvt => gtvt.Trinn.Id).ToList()
                 : new List<int>();
-                var variabelnavn = grunntype.GrunntypeVariabeltrinn.Any() ? grunntype.GrunntypeVariabeltrinn.Select(vt => vt.Variabelnavn).ToList() : new List<Variabelnavn?>();
-                Parallel.ForEach(grunntype.GrunntypeVariabeltrinn.ToList(), vt => variabeltrinnBag.Add(Map(vt, trinnIds)));
+                var variabelnavn = grunntype.GrunntypeVariabeltrinn.Any(gtvt => gtvt.Trinn != null) ? grunntype.GrunntypeVariabeltrinn.Where(gtvt => gtvt.Trinn != null).Select(vt => vt.Variabelnavn).ToList() : new List<Variabelnavn?>();
+                Parallel.ForEach(grunntype.GrunntypeVariabeltrinn.Where(gtvt => gtvt.Trinn != null).ToList(), vt => variabeltrinnBag.Add(Map(vt, trinnIds)));
                 grunntypedto.Variabeltrinn = variabeltrinnBag.ToList();
                 
                 grunntypedto.Variabeltrinn = grunntypedto.Variabeltrinn//TODO: Lazy solution to duplicate MaaleskalaDto objects inside VariabeltrinnCollection, please improve
