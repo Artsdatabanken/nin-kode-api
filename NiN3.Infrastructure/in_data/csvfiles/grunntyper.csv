@@ -555,7 +555,7 @@ NiN-3.0-T-C-PE-NA-MB-MA04-07;M;A;04;07;finmaterialfattig overveiende uorganisk m
 NiN-3.0-T-C-PE-NA-MB-MA04-08;M;A;04;08;finmaterialfattig overveiende uorganisk marin grusbunn i øvre hydrolittoral til midtre geolittoral;MA04-08
 NiN-3.0-T-C-PE-NA-MB-MA04-09;M;A;04;09;finmaterialfattig overveiende uorganisk marin steinbunn i øvre hydrolittoral til midtre geolittoral;MA04-09
 NiN-3.0-T-C-PE-NA-MB-MA04-10;M;A;04;10;noe finmaterialrik overveiende uorganisk marin sand- til grusbunn i øvre hydrolittoral til midtre geolittoral;MA04-10
-NiN-3.0-T-C-PE-NA-MB-MA04-11;M;A;04;11;finmaterialfattig skjellsand-ruglbunn i hydrolittoral;MA04-11
+NiN-3.0-T-C-PE-NA-MB-MA04-11;M;A;04;11;finmaterialfattig skjellsand- og ruglbunn i hydrolittoral;MA04-11
 NiN-3.0-T-C-PE-NA-MB-MA04-12;M;A;04;12;fjærebeltebunn av konsolidert leire;MA04-12
 NiN-3.0-T-C-PE-NA-MB-MA05-01;M;A;05;01;finmaterialfattig overveiende uorganisk saltvanns-sandbunn ovenfor rødalgebeltet;MA05-01
 NiN-3.0-T-C-PE-NA-MB-MA05-02;M;A;05;02;finmaterialfattig overveiende uorganisk saltvanns-grusbunn ovenfor rødalgebeltet;MA05-02
@@ -831,46 +831,46 @@ NiN-3.0-T-C-PE-NA-MB-TA01-17;T;A;01;17;svært lite uttørkingseksponert ekstremt
 NiN-3.0-T-C-PE-NA-MB-TA01-18;T;A;01;18;nokså lite uttørkingseksponert ekstremt kalkrik bergvegg;TA01-18
 NiN-3.0-T-C-PE-NA-MB-TA01-19;T;A;01;19;nokså uttørkingseksponert ekstremt kalkrik bergvegg;TA01-19
 NiN-3.0-T-C-PE-NA-MB-TA01-20;T;A;01;20;svært uttørkingseksponert ekstremt kalkrik bergvegg;TA01-20
-NiN-3.0-T-C-PE-NA-MB-TA01-21;T;A;01;21;svært lite uttørkingseksponert svært kalkfattig berg;TA01-21
-NiN-3.0-T-C-PE-NA-MB-TA01-22;T;A;01;22;nokså lite uttørkingseksponert svært kalkfattig berg;TA01-22
-NiN-3.0-T-C-PE-NA-MB-TA01-23;T;A;01;23;nokså uttørkingseksponert svært kalkfattig berg;TA01-23
-NiN-3.0-T-C-PE-NA-MB-TA01-24;T;A;01;24;svært uttørkingseksponert svært kalkfattig berg;TA01-24
-NiN-3.0-T-C-PE-NA-MB-TA01-25;T;A;01;25;svært lite uttørkingseksponert noe kalkfattig berg;TA01-25
-NiN-3.0-T-C-PE-NA-MB-TA01-26;T;A;01;26;nokså lite uttørkingseksponert noe kalkfattig berg;TA01-26
-NiN-3.0-T-C-PE-NA-MB-TA01-27;T;A;01;27;nokså uttørkingseksponert noe kalkfattig berg;TA01-27
-NiN-3.0-T-C-PE-NA-MB-TA01-28;T;A;01;28;svært uttørkingseksponert noe kalkfattig berg;TA01-28
-NiN-3.0-T-C-PE-NA-MB-TA01-29;T;A;01;29;svært lite uttørkingseksponert noe kalkrikt iblant overrislet berg;TA01-29
-NiN-3.0-T-C-PE-NA-MB-TA01-30;T;A;01;30;nokså lite uttørkingseksponert noe kalkrikt iblant overrislet berg;TA01-30
-NiN-3.0-T-C-PE-NA-MB-TA01-31;T;A;01;31;nokså uttørkingseksponert noe kalkrikt iblant overrislet berg;TA01-31
-NiN-3.0-T-C-PE-NA-MB-TA01-32;T;A;01;32;svært uttørkingseksponert noe kalkrikt iblant overrislet berg;TA01-32
-NiN-3.0-T-C-PE-NA-MB-TA01-33;T;A;01;33;svært lite uttørkingseksponert klart kalkrikt berg;TA01-33
-NiN-3.0-T-C-PE-NA-MB-TA01-34;T;A;01;34;nokså lite uttørkingseksponert klart kalkrikt berg;TA01-34
-NiN-3.0-T-C-PE-NA-MB-TA01-35;T;A;01;35;nokså uttørkingseksponert klart kalkrikt berg;TA01-35
-NiN-3.0-T-C-PE-NA-MB-TA01-36;T;A;01;36;svært uttørkingseksponert klart kalkrikt berg;TA01-36
-NiN-3.0-T-C-PE-NA-MB-TA01-37;T;A;01;37;svært lite uttørkingseksponert ekstremt kalkrikt berg;TA01-37
-NiN-3.0-T-C-PE-NA-MB-TA01-38;T;A;01;38;nokså lite uttørkingseksponert ekstremt kalkrikt berg;TA01-38
-NiN-3.0-T-C-PE-NA-MB-TA01-39;T;A;01;39;nokså uttørkingseksponert ekstremt kalkrikt berg;TA01-39
-NiN-3.0-T-C-PE-NA-MB-TA01-40;T;A;01;40;svært uttørkingseksponert ekstremt kalkrikt berg;TA01-40
-NiN-3.0-T-C-PE-NA-MB-TA01-21;T;A;01;41;lite uttørkingseksponert svært kalkfattig tidvis til ofte overrislet bergknaus;TA01-41
-NiN-3.0-T-C-PE-NA-MB-TA01-22;T;A;01;42;nokså uttørkingseksponert svært kalkfattig tidvis til ofte overrislet bergknaus;TA01-42
-NiN-3.0-T-C-PE-NA-MB-TA01-23;T;A;01;43;svært uttørkingseksponert svært kalkfattig tidvis til ofte overrislet bergknaus;TA01-43
-NiN-3.0-T-C-PE-NA-MB-TA01-24;T;A;01;44;lite uttørkingseksponert noe kalkfattig tidvis til ofte overrislet bergknaus;TA01-44
-NiN-3.0-T-C-PE-NA-MB-TA01-25;T;A;01;45;nokså uttørkingseksponert noe kalkfattig tidvis til ofte overrislet bergknaus;TA01-45
-NiN-3.0-T-C-PE-NA-MB-TA01-26;T;A;01;46;svært uttørkingseksponert noe kalkfattig tidvis til ofte overrislet bergknaus;TA01-46
-NiN-3.0-T-C-PE-NA-MB-TA01-27;T;A;01;47;lite uttørkingseksponert noe kalkrik tidvis til ofte overrislet bergknaus;TA01-47
-NiN-3.0-T-C-PE-NA-MB-TA01-28;T;A;01;48;nokså uttørkingseksponert noe kalkrik tidvis til ofte overrislet bergknaus;TA01-48
-NiN-3.0-T-C-PE-NA-MB-TA01-29;T;A;01;49;svært uttørkingseksponert noe kalkrik tidvis til ofte overrislet bergknaus;TA01-49
-NiN-3.0-T-C-PE-NA-MB-TA01-30;T;A;01;50;lite uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet bergknaus;TA01-50
-NiN-3.0-T-C-PE-NA-MB-TA01-31;T;A;01;51;nokså uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet bergknaus;TA01-51
-NiN-3.0-T-C-PE-NA-MB-TA01-32;T;A;01;52;svært uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet bergknaus;TA01-52
-NiN-3.0-T-C-PE-NA-MB-TA01-33;T;A;01;53;lite uttørkingseksponert svært kalkfattig oftest overrislet bergknaus;TA01-53
-NiN-3.0-T-C-PE-NA-MB-TA01-34;T;A;01;54;nokså til svært uttørkingseksponert svært kalkfattig oftest overrislet bergknaus;TA01-54
-NiN-3.0-T-C-PE-NA-MB-TA01-35;T;A;01;55;lite uttørkingseksponert noe kalkfattig oftest overrislet bergknaus;TA01-55
-NiN-3.0-T-C-PE-NA-MB-TA01-36;T;A;01;56;nokså til svært uttørkingseksponert noe kalkfattig oftest overrislet bergknaus;TA01-56
-NiN-3.0-T-C-PE-NA-MB-TA01-37;T;A;01;57;lite uttørkingseksponert noe kalkrik oftest overrislet bergknaus;TA01-57
-NiN-3.0-T-C-PE-NA-MB-TA01-38;T;A;01;58;nokså til svært uttørkingseksponert kalkrik oftest overrislet bergknaus;TA01-58
-NiN-3.0-T-C-PE-NA-MB-TA01-39;T;A;01;59;lite uttørkingseksponert klart til ekstremt kalkrik oftest overrislet bergknaus;TA01-59
-NiN-3.0-T-C-PE-NA-MB-TA01-40;T;A;01;60;nokså til svært uttørkingseksponert klart til ekstremt kalkrik oftest overrislet bergknaus;TA01-60
+NiN-3.0-T-C-PE-NA-MB-TA01-21;T;A;01;21;svært lite uttørkingseksponert svært kalkfattig bergknaus;TA01-21
+NiN-3.0-T-C-PE-NA-MB-TA01-22;T;A;01;22;nokså lite uttørkingseksponert svært kalkfattig bergknaus;TA01-22
+NiN-3.0-T-C-PE-NA-MB-TA01-23;T;A;01;23;nokså uttørkingseksponert svært kalkfattig bergknaus;TA01-23
+NiN-3.0-T-C-PE-NA-MB-TA01-24;T;A;01;24;svært uttørkingseksponert svært kalkfattig bergknaus;TA01-24
+NiN-3.0-T-C-PE-NA-MB-TA01-25;T;A;01;25;svært lite uttørkingseksponert noe kalkfattig bergknaus;TA01-25
+NiN-3.0-T-C-PE-NA-MB-TA01-26;T;A;01;26;nokså lite uttørkingseksponert noe kalkfattig bergknaus;TA01-26
+NiN-3.0-T-C-PE-NA-MB-TA01-27;T;A;01;27;nokså uttørkingseksponert noe kalkfattig bergknaus;TA01-27
+NiN-3.0-T-C-PE-NA-MB-TA01-28;T;A;01;28;svært uttørkingseksponert noe kalkfattig bergknaus;TA01-28
+NiN-3.0-T-C-PE-NA-MB-TA01-29;T;A;01;29;svært lite uttørkingseksponert noe kalkrikt bergknaus;TA01-29
+NiN-3.0-T-C-PE-NA-MB-TA01-30;T;A;01;30;nokså lite uttørkingseksponert noe kalkrikt bergknaus;TA01-30
+NiN-3.0-T-C-PE-NA-MB-TA01-31;T;A;01;31;nokså uttørkingseksponert noe kalkrikt bergknaus;TA01-31
+NiN-3.0-T-C-PE-NA-MB-TA01-32;T;A;01;32;svært uttørkingseksponert noe kalkrikt bergknaus;TA01-32
+NiN-3.0-T-C-PE-NA-MB-TA01-33;T;A;01;33;svært lite uttørkingseksponert klart kalkrikt bergknaus;TA01-33
+NiN-3.0-T-C-PE-NA-MB-TA01-34;T;A;01;34;nokså lite uttørkingseksponert klart kalkrikt bergknaus;TA01-34
+NiN-3.0-T-C-PE-NA-MB-TA01-35;T;A;01;35;nokså uttørkingseksponert klart kalkrikt bergknaus;TA01-35
+NiN-3.0-T-C-PE-NA-MB-TA01-36;T;A;01;36;svært uttørkingseksponert klart kalkrikt bergknaus;TA01-36
+NiN-3.0-T-C-PE-NA-MB-TA01-37;T;A;01;37;svært lite uttørkingseksponert ekstremt kalkrikt bergknaus;TA01-37
+NiN-3.0-T-C-PE-NA-MB-TA01-38;T;A;01;38;nokså lite uttørkingseksponert ekstremt kalkrikt bergknaus;TA01-38
+NiN-3.0-T-C-PE-NA-MB-TA01-39;T;A;01;39;nokså uttørkingseksponert ekstremt kalkrikt bergknaus;TA01-39
+NiN-3.0-T-C-PE-NA-MB-TA01-40;T;A;01;40;svært uttørkingseksponert ekstremt kalkrikt bergknaus;TA01-40
+NiN-3.0-T-C-PE-NA-MB-TA01-41;T;A;01;41;lite uttørkingseksponert svært kalkfattig tidvis til ofte overrislet berg;TA01-41
+NiN-3.0-T-C-PE-NA-MB-TA01-42;T;A;01;42;nokså uttørkingseksponert svært kalkfattig tidvis til ofte overrislet berg;TA01-42
+NiN-3.0-T-C-PE-NA-MB-TA01-43;T;A;01;43;svært uttørkingseksponert svært kalkfattig tidvis til ofte overrislet berg;TA01-43
+NiN-3.0-T-C-PE-NA-MB-TA01-44;T;A;01;44;lite uttørkingseksponert noe kalkfattig tidvis til ofte overrislet berg;TA01-44
+NiN-3.0-T-C-PE-NA-MB-TA01-45;T;A;01;45;nokså uttørkingseksponert noe kalkfattig tidvis til ofte overrislet berg;TA01-45
+NiN-3.0-T-C-PE-NA-MB-TA01-46;T;A;01;46;svært uttørkingseksponert noe kalkfattig tidvis til ofte overrislet berg;TA01-46
+NiN-3.0-T-C-PE-NA-MB-TA01-47;T;A;01;47;lite uttørkingseksponert noe kalkrik tidvis til ofte overrislet berg;TA01-47
+NiN-3.0-T-C-PE-NA-MB-TA01-48;T;A;01;48;nokså uttørkingseksponert noe kalkrik tidvis til ofte overrislet berg;TA01-48
+NiN-3.0-T-C-PE-NA-MB-TA01-49;T;A;01;49;svært uttørkingseksponert noe kalkrik tidvis til ofte overrislet berg;TA01-49
+NiN-3.0-T-C-PE-NA-MB-TA01-50;T;A;01;50;lite uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet berg;TA01-50
+NiN-3.0-T-C-PE-NA-MB-TA01-51;T;A;01;51;nokså uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet berg;TA01-51
+NiN-3.0-T-C-PE-NA-MB-TA01-52;T;A;01;52;svært uttørkingseksponert klart til ekstremt kalkrik tidvis til ofte overrislet berg;TA01-52
+NiN-3.0-T-C-PE-NA-MB-TA01-53;T;A;01;53;lite uttørkingseksponert svært kalkfattig oftest overrislet berg;TA01-53
+NiN-3.0-T-C-PE-NA-MB-TA01-54;T;A;01;54;nokså til svært uttørkingseksponert svært kalkfattig oftest overrislet berg;TA01-54
+NiN-3.0-T-C-PE-NA-MB-TA01-55;T;A;01;55;lite uttørkingseksponert noe kalkfattig oftest overrislet berg;TA01-55
+NiN-3.0-T-C-PE-NA-MB-TA01-56;T;A;01;56;nokså til svært uttørkingseksponert noe kalkfattig oftest overrislet berg;TA01-56
+NiN-3.0-T-C-PE-NA-MB-TA01-57;T;A;01;57;lite uttørkingseksponert noe kalkrik oftest overrislet berg;TA01-57
+NiN-3.0-T-C-PE-NA-MB-TA01-58;T;A;01;58;nokså til svært uttørkingseksponert noe kalkrik oftest overrislet berg;TA01-58
+NiN-3.0-T-C-PE-NA-MB-TA01-59;T;A;01;59;lite uttørkingseksponert kalkrik oftest overrislet berg;TA01-59
+NiN-3.0-T-C-PE-NA-MB-TA01-60;T;A;01;60;nokså til svært uttørkingseksponert kalkrik oftest overrislet berg;TA01-60
 NiN-3.0-T-C-PE-NA-MB-TA01-61;T;A;01;61;svært kalkfattig flombeltebergknaus;TA01-61
 NiN-3.0-T-C-PE-NA-MB-TA01-62;T;A;01;62;svært kalkfattig flombeltebergvegg;TA01-62
 NiN-3.0-T-C-PE-NA-MB-TA01-63;T;A;01;63;noe kalkfattig flombeltebergknaus;TA01-63
@@ -948,7 +948,7 @@ NiN-3.0-T-C-PE-NA-MB-TC02-01;T;C;02;01;knapt uttørkingseksponert kalkfattig ove
 NiN-3.0-T-C-PE-NA-MB-TC02-02;T;C;02;02;knapt uttørkingseksponert intermediært til litt kalkrikt overheng;TC02-02
 NiN-3.0-T-C-PE-NA-MB-TC02-03;T;C;02;03;knapt uttørkingseksponert sterkt kalkrikt overheng;TC02-03
 NiN-3.0-T-C-PE-NA-MB-TC02-04;T;C;02;04;kalkfattig til litt kalkrik grotte;TC02-04
-NiN-3.0-T-C-PE-NA-MB-TC02-05;T;C;02;05;karstgrotte og overheng;TC02-05
+NiN-3.0-T-C-PE-NA-MB-TC02-05;T;C;02;05;kalkgrotte;TC02-05
 NiN-3.0-T-C-PE-NA-MB-TC02-06;T;C;02;06;indre dyp grotte;TC02-06
 NiN-3.0-T-C-PE-NA-MB-TC02-07;T;C;02;07;uttørkingseksponert kalkfattig overheng;TC02-07
 NiN-3.0-T-C-PE-NA-MB-TC02-08;T;C;02;08;uttørkingseksponert intermediært til litt kalkrikt overheng;TC02-08
@@ -1304,7 +1304,7 @@ NiN-3.0-T-C-PE-NA-MB-VA01-16;V;A;01;16;temmelig kalkrik øvre fastmatte;VA01-16
 NiN-3.0-T-C-PE-NA-MB-VA01-17;V;A;01;17;ekstremt kalkrik mykmatte;VA01-17
 NiN-3.0-T-C-PE-NA-MB-VA01-18;V;A;01;18;ekstremt kalkrik nedre fastmatte;VA01-18
 NiN-3.0-T-C-PE-NA-MB-VA01-19;V;A;01;19;ekstremt kalkrik øvre fastmatte;VA01-19
-NiN-3.0-T-C-PE-NA-MB-VA01-20;V;A;01;20;temmelig til ekstremt kalkrikt nedre tuenivå i myrkant;VA01-20
+NiN-3.0-T-C-PE-NA-MB-VA01-20;V;A;01;20;temmelig til ekstremt kalkrikt nedre tuenivå;VA01-20
 NiN-3.0-T-C-PE-NA-MB-VA01-21;V;A;01;21;temmelig til svært kalkfattig mattenivå i myrkant;VA01-21
 NiN-3.0-T-C-PE-NA-MB-VA01-22;V;A;01;22;temmelig til svært kalkfattig tuenivå i myrkant;VA01-22
 NiN-3.0-T-C-PE-NA-MB-VA01-23;V;A;01;23;litt kalkfattig til svakt intermediært mattenivå i myrkant;VA01-23

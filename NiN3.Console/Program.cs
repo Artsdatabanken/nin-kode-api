@@ -93,10 +93,13 @@ while (run)
         case "exit":
             return;
         case "wipe":
+        Console.WriteLine($"Database object state is null: {db == null}");
             if (db == null)
             {
                 Console.WriteLine($"Running choice 'wipe'");
                 var filename = builtDbFileFullPath();
+                Console.WriteLine($"Database file path: {filename}");
+
                 //var droptablesquery = $"drop table if exists Domene Grunntype";
                 FileInfo fi = new FileInfo(filename);
                 if (fi.Exists)
