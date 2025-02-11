@@ -119,7 +119,7 @@ NiN-3.0-T-C-PE-NA-MB-MA04-M005-06;finmaterialfattig uorganisk marin sandbunn i �
 NiN-3.0-T-C-PE-NA-MB-MA04-M005-07;finmaterialfattig uorganisk marin grusbunn i øvre vannstrandbelte til marint landstrandbelte;MA04-M005-07
 NiN-3.0-T-C-PE-NA-MB-MA04-M005-08;finmaterialfattig uorganisk marin steinbunn i øvre vannstrandbelte til midtre landstrandbelte;MA04-M005-08
 NiN-3.0-T-C-PE-NA-MB-MA04-M005-09;noe finmaterialrik uorganisk marin sand- og grusbunn i øvre vannstrandbelte til midtre landstrandbelte;MA04-M005-09
-NiN-3.0-T-C-PE-NA-MB-MA04-M005-10;finmaterialfattig skjellsand-ruglbunn i hydrolittoral;MA04-M005-10
+NiN-3.0-T-C-PE-NA-MB-MA04-M005-10;finmaterialfattig skjellsand- og ruglbunn i hydrolittoral;MA04-M005-10
 NiN-3.0-T-C-PE-NA-MB-MA04-M005-11;fjærebeltebunn av konsolidert leire;MA04-M005-11
 NiN-3.0-T-C-PE-NA-MB-MA05-M005-01;finmaterialfattig uorganisk saltvanns-sandbunn ovenfor rødalgebeltet;MA05-M005-01
 NiN-3.0-T-C-PE-NA-MB-MA05-M005-02;finmaterialfattig uorganisk saltvanns-grusbunn ovenfor rødalgebeltet;MA05-M005-02
@@ -278,19 +278,29 @@ NiN-3.0-T-C-PE-NA-MB-OM01-M005-02;kalkrik kronisk fysisk forstyrret elvebunn;OM0
 NiN-3.0-T-C-PE-NA-MB-OM01-M005-03;turbid minstevannførings-strekning i elv;OM01-M005-03
 NiN-3.0-T-C-PE-NA-MB-OM02-M005-01;kronisk kjemisk påvirket elvebunn;OM02-M005-01
 NiN-3.0-T-C-PE-NA-MB-OM02-M005-02;kronisk forsuret elvebunn;OM02-M005-02
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-01;lite uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-01
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-02;uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-02
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-03;lite uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-03
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-04;uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-04
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-05;lite uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-05
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-06;uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-06
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-07;lite uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-07
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-08;uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-08
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-09;lite uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-09
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-10;uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-10
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-11;kalkfattig snøleieberg;TA01-M005-11
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-12;kalkrikt snøleieberg;TA01-M005-12
-NiN-3.0-T-C-PE-NA-MB-TA01-M005-13;fuglestein og fugleberg;TA01-M005-13
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-01;svært lite uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-01
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-02;nokså lite uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-02
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-03;nokså uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-03
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-04;svært uttørkingseksponert svært kalkfattig nakent berg;TA01-M005-04
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-05;svært lite uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-05
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-06;nokså lite uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-06
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-07;nokså uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-07
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-08;svært uttørkingseksponert noe kalkfattig nakent berg;TA01-M005-08
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-09;svært lite uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-09
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-10;nokså lite uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-10
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-11;nokså uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-11
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-12;svært uttørkingseksponert noe kalkrikt nakent berg;TA01-M005-12
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-13;svært lite uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-13
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-14;nokså lite uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-14
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-15;nokså uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-15
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-16;svært uttørkingseksponert klart kalkrikt nakent berg;TA01-M005-16
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-17;svært lite uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-17
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-18;nokså lite uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-18
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-19;nokså uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-19
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-20;svært uttørkingseksponert ekstremt kalkrikt nakent berg;TA01-M005-20
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-21;kalkfattig snøleieberg;TA01-M005-21
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-22;kalkrikt snøleieberg;TA01-M005-22
+NiN-3.0-T-C-PE-NA-MB-TA01-M005-23;fuglestein og fugleberg;TA01-M005-23
 NiN-3.0-T-C-PE-NA-MB-TA02-M005-01;kalkfattig åpen grunnlendt lyngmark;TA02-M005-01
 NiN-3.0-T-C-PE-NA-MB-TA02-M005-02;intermediær til litt kalkrik åpen grunnlendt lyngmark;TA02-M005-02
 NiN-3.0-T-C-PE-NA-MB-TA02-M005-03;temmelig til ekstremt kalkrik åpen grunnlendt lyngmark;TA02-M005-03
@@ -344,7 +354,7 @@ NiN-3.0-T-C-PE-NA-MB-TC02-M005-01;knapt uttørkingseksponert kalkfattig overheng
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-02;knapt uttørkingseksponert intermediært og litt kalkrikt overheng;TC02-M005-02
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-03;knapt uttørkingseksponert sterkt kalkrikt overheng;TC02-M005-03
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-04;kalkfattig til litt kalkrik grotte;TC02-M005-04
-NiN-3.0-T-C-PE-NA-MB-TC02-M005-05;karstgrotte og overheng;TC02-M005-05
+NiN-3.0-T-C-PE-NA-MB-TC02-M005-05;kalkgrotte;TC02-M005-05
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-06;uttørkingseksponert kalkfattig overheng;TC02-M005-06
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-07;uttørkingseksponert intermediært og litt kalkrikt overheng;TC02-M005-07
 NiN-3.0-T-C-PE-NA-MB-TC02-M005-08;uttørkingseksponert sterkt kalkrikt overheng;TC02-M005-08

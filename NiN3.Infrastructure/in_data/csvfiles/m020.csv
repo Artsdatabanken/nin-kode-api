@@ -188,9 +188,14 @@ NiN-3.0-T-C-PE-NA-MB-OM01-M020-02;kalkrik kronisk fysisk forstyrret elvebunn;OM0
 NiN-3.0-T-C-PE-NA-MB-OM01-M020-03;turbid minstevannførings-strekning i elv;OM01-M020-03
 NiN-3.0-T-C-PE-NA-MB-OM02-M020-01;kronisk kjemisk påvirket elvebunn;OM02-M020-01
 NiN-3.0-T-C-PE-NA-MB-OM02-M020-02;kronisk forsuret elvebunn;OM02-M020-02
-NiN-3.0-T-C-PE-NA-MB-TA01-M020-01;svært til noe kalkfattig nakent berg;TA01-M020-01
-NiN-3.0-T-C-PE-NA-MB-TA01-M020-02;noe kalkrikt nakent berg;TA01-M020-02
-NiN-3.0-T-C-PE-NA-MB-TA01-M020-03;klart til ekstremt kalkrikt nakent berg;TA01-M020-03
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-01;lite uttørkingseksponert svært til noe kalkfattig nakent berg;TA01-M020-01
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-02;uttørkingseksponert svært til noe kalkfattig nakent berg;TA01-M020-02
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-03;lite uttørkingseksponert noe kalkrikt nakent berg;TA01-M020-03
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-04;uttørkingseksponert noe kalkrikt nakent berg;TA01-M020-04
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-05;lite uttørkingseksponert kalkrikt nakent berg;TA01-M020-05
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-06;uttørkingseksponert kalkrikt nakent berg;TA01-M020-06
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-07;kalkfattig snøleieberg;TA01-M020-07
+NiN-3.0-T-C-PE-NA-MB-TA01-M020-08;kalkrikt snøleieberg;TA01-M020-08
 NiN-3.0-T-C-PE-NA-MB-TA02-M020-01;kalkfattig åpen grunnlendt mark;TA02-M020-01
 NiN-3.0-T-C-PE-NA-MB-TA02-M020-02;intermediær til litt kalkrik åpen grunnlendt mark;TA02-M020-02
 NiN-3.0-T-C-PE-NA-MB-TA02-M020-03;temmelig til ekstremt kalkrik åpen grunnlendt mark;TA02-M020-03
