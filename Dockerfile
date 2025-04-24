@@ -3,9 +3,9 @@
 # FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
-RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /usr/lib/ssl/openssl.cnf
-EXPOSE 8000
+#RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
+#RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /usr/lib/ssl/openssl.cnf
+EXPOSE 8000 2222
 ENV ASPNETCORE_URLS="http://+:8000"
 
 # FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
@@ -28,6 +28,15 @@ FROM base AS final
 RUN groupadd -r --gid 1007 dockerrunner && useradd -r -g dockerrunner dockerrunner
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY sshd_config /etc/ssh/
+COPY entrypoint.sh ./
+# Start and enable SSH
+RUN apk add openssh \
+    && echo "root:Docker!" | chpasswd \
+    && chmod +x ./entrypoint.sh \
+    && cd /etc/ssh/ \
+    && ssh-keygen -A
+
 RUN chown -R dockerrunner:dockerrunner /app/databases
 USER dockerrunner
-ENTRYPOINT ["dotnet", "NinKode.WebApi.dll"]
+ENTRYPOINT [ "./entrypoint.sh" ]
