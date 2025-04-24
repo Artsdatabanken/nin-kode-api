@@ -28,14 +28,16 @@ FROM base AS final
 RUN groupadd -r --gid 1007 dockerrunner && useradd -r -g dockerrunner dockerrunner
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY sshd_config /etc/ssh/
+
 COPY entrypoint.sh ./
+
 # Start and enable SSH
-RUN apk add openssh \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends dialog \
+    && apt-get install -y --no-install-recommends openssh-server \
     && echo "root:Docker!" | chpasswd \
-    && chmod +x ./entrypoint.sh \
-    && cd /etc/ssh/ \
-    && ssh-keygen -A
+    && chmod u+x ./entrypoint.sh
+COPY sshd_config /etc/ssh/
 
 RUN chown -R dockerrunner:dockerrunner /app/databases
 USER dockerrunner
