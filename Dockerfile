@@ -15,14 +15,10 @@ COPY ["NinKode.WebApi/NinKode.WebApi.csproj", "NinKode.WebApi/"]
 RUN dotnet restore "NinKode.WebApi/NinKode.WebApi.csproj"
 COPY . .
 WORKDIR "/src/NinKode.WebApi"
-RUN ls -l
-RUN ls -l databases
 RUN dotnet build "NinKode.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "NinKode.WebApi.csproj" -c Release -o /app/publish
-RUN ls -l /app/publish 
-RUN ls -l /app/publish/databases
 
 FROM base AS final
 RUN groupadd -r --gid 1007 dockerrunner && useradd -r -g dockerrunner dockerrunner
@@ -39,6 +35,4 @@ RUN apt-get update \
     && chmod u+x ./entrypoint.sh
 COPY sshd_config /etc/ssh/
 
-RUN chown -R dockerrunner:dockerrunner /app/databases
-USER dockerrunner
 ENTRYPOINT [ "./entrypoint.sh" ]
