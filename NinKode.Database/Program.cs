@@ -13,9 +13,7 @@
     using NinKode.Database.Model.common;
     using NinKode.Database.Services.v22;
     using Raven.Abstractions.Data;
-    using Raven.Abstractions.Indexing;
-    using Raven.Client;
-    using Raven.Client.Document;
+    using Raven.Client.Documents.Indexes;
     using Raven.Json.Linq;
 
     internal class Program
@@ -87,42 +85,42 @@
             switch (args[0].ToLowerInvariant())
             {
                 case "delete":
-                    DeleteDocuments();
+                    //DeleteDocuments();
                     break;
                 case "import":
-                    ImportCsvIntoRavenDb();
+                    //ImportCsvIntoRavenDb();
                     break;
                 case "convert":
-                    ConvertDocuments();
-                    ConvertVariasjonerDocuments();
+                   // ConvertDocuments();
+                    //ConvertVariasjonerDocuments();
                     break;
                 case "reset":
-                    ImportCsvIntoRavenDb();
-                    ConvertDocuments();
-                    ConvertVariasjonerDocuments();
+                    //ImportCsvIntoRavenDb();
+                   // ConvertDocuments();
+                   // ConvertVariasjonerDocuments();
                     break;
             }
             stopWatch.Stop();
 
             Thread.Sleep(10);
-            Log2Console($"\n{AnyDocuments()} documents", true);
+            //Log2Console($"\n{AnyDocuments()} documents", true);
 
             Log2Console($"\nCommand executed in {stopWatch.Elapsed.TotalSeconds:##.00} seconds", true);
         }
 
-        private static void CopyToServer()
+       /* private static void CopyToServer()
         {
             var store = GetStore();
 
             store.Initialize(true);
 
-            var serverStore = new DocumentStore
+            var serverStore = new Raven.Client.Documents.DocumentStore
             {
-                Url = "http://it-webadb01.it.ntnu.no:8180",
-                DefaultDatabase = _dbName
+                Urls = new[] { "http://it-webadb01.it.ntnu.no:8180" },
+                Database = _dbName
                 //MaxNumberOfCachedRequests = 9999
             };
-            serverStore.Initialize(true);
+            serverStore.Initialize();
 
 
             using var session = store.OpenSession();
@@ -142,9 +140,9 @@
                     RavenJObject.Parse($"{{'Raven-Entity-Name': '{name}'}}"),
                     enumerator.Current.Key);
             }
-        }
+        }*/
 
-        private static void ConvertVariasjonerDocuments()
+      /*  private static void ConvertVariasjonerDocuments()
         {
             Log2Console("Starting variasjoner-import", true);
 
@@ -153,14 +151,16 @@
             using var store = GetStore();
             using var session = store.OpenSession();
 
-            RavenQueryStatistics stats;
-            session.Query<object>(PrimaryIndex).Statistics(out stats).Take(0).ToArray();
+            var query = session.Query<object>(PrimaryIndex);
+            var stats = new Raven.Client.Documents.Session.QueryStatistics();
+            query.Statistics(out stats).Take(0).ToList();
+
             Log2Console($"{stats.TotalResults} documents", true);
 
             var importVariasjonService = new ImportVariasjonService(Log2Console);
 
             importVariasjonService.Import(store);
-        }
+        }*/
 
         private static Miljovariabel GetMiljovariabler()
         {
@@ -181,50 +181,51 @@
             return null;
         }
 
-        private static void ConvertDocuments()
-        {
-            DeleteByIndex("NaturTypes/ByKode");
+        //private static void ConvertDocuments()
+        //{
+        //    DeleteByIndex("NaturTypes/ByKode");
             
-            using var store = GetStore();
-            using var session = store.OpenSession();
+        //    using var store = GetStore();
+        //    using var session = store.OpenSession();
 
-            //var query = session.Query<object>(PrimaryIndex).Take(9999).ToList();
-            var count = 0;
+        //    //var query = session.Query<object>(PrimaryIndex).Take(9999).ToList();
+        //    var count = 0;
 
-            RavenQueryStatistics stats;
-            session.Query<object>(PrimaryIndex).Statistics(out stats).Take(0).ToArray();
-            Log2Console($"{stats.TotalResults} documents", true);
+        //    var query = session.Query<object>(PrimaryIndex);
+        //    var stats = new Raven.Client.Documents.Session.QueryStatistics();
+        //    query.Statistics(out stats).Take(0).ToList();
+        //    Log2Console($"{stats.TotalResults} documents", true);
 
-            //var test = session.Advanced.DocumentStore.DatabaseCommands.Query(PrimaryIndex,new IndexQuery
-            //{
-            //    k
-            //})
+        //    //var test = session.Advanced.DocumentStore.DatabaseCommands.Query(PrimaryIndex,new IndexQuery
+        //    //{
+        //    //    k
+        //    //})
 
-            //Console.ReadLine();
+        //    //Console.ReadLine();
 
-            // Create root elements
-            var importNaturtypeService = new ImportNaturtypeService(_configuration, Log2Console);
+        //    // Create root elements
+        //    var importNaturtypeService = new ImportNaturtypeService(_configuration, Log2Console);
 
-            importNaturtypeService.Import(store, GetMiljovariabler(), "NA");
+        //    importNaturtypeService.Import(store, GetMiljovariabler(), "NA");
             
-            //var documents = session.Advanced.DocumentStore.DatabaseCommands.GetDocuments(count, 5, false);
-            //while (documents.Length > 0)
-            //{
-            //    foreach (var document in documents)
-            //    {
-            //        var data = document.DataAsJson;
-            //        Log2Console($"{++count:#0000} key: '{document.Key}' docId: '{data["docId"]}'", true);
-            //    }
-            //    return;
+        //    //var documents = session.Advanced.DocumentStore.DatabaseCommands.GetDocuments(count, 5, false);
+        //    //while (documents.Length > 0)
+        //    //{
+        //    //    foreach (var document in documents)
+        //    //    {
+        //    //        var data = document.DataAsJson;
+        //    //        Log2Console($"{++count:#0000} key: '{document.Key}' docId: '{data["docId"]}'", true);
+        //    //    }
+        //    //    return;
 
-            //    documents = session.Advanced.DocumentStore.DatabaseCommands.GetDocuments(count, 100, true);
-            //}
+        //    //    documents = session.Advanced.DocumentStore.DatabaseCommands.GetDocuments(count, 100, true);
+        //    //}
 
-            //var docs = result.Results;
+        //    //var docs = result.Results;
 
-        }
+        //}
 
-        private static DocumentStore GetStore()
+       /* private static DocumentStore GetStore()
         {
             var store = new DocumentStore
             {
@@ -235,282 +236,284 @@
             store.Initialize(true);
             
             return store;
-        }
+        }*/
 
-        private static int AnyDocuments()
+       /* private static int AnyDocuments()
         {
             Thread.Sleep(100);
 
             using var store = GetStore();
             using var session = store.OpenSession();
-            
-            session
-                .Query<object>(PrimaryIndex)
+
+            // Query with statistics
+            var query = session.Query<object>(PrimaryIndex)
                 .Customize(x => x.WaitForNonStaleResults(TimeSpan.FromSeconds(5)));
 
-            RavenQueryStatistics stats;
-            session.Query<object>(PrimaryIndex).Statistics(out stats).Take(0).ToArray();
+            var stats = new Raven.Client.Documents.Session.QueryStatistics();
+            query.Statistics(out stats).Take(0).ToList();
 
-            return stats.TotalResults;
-        }
-        
-        private static void DeleteByIndex(string indexName)
-        {
-            using var store = GetStore();
-            if (!GetIndexes(store).Contains(indexName)) return;
+            return (int)stats.TotalResults;
+        }*/
+
+
+ //       private static void DeleteByIndex(string indexName)
+ //       {
+ //           using var store = GetStore();
+ //           if (!GetIndexes(store).Contains(indexName)) return;
             
-            using var session = store.OpenSession();
+ //           using var session = store.OpenSession();
 
-            session.Advanced.DocumentStore.DatabaseCommands.DeleteByIndex(indexName, new IndexQuery());
-            session.Advanced.DocumentStore.DatabaseCommands.DeleteIndex(indexName);
-            session.SaveChanges();
+ //           session.Advanced.DocumentStore.DatabaseCommands.DeleteByIndex(indexName, new IndexQuery());
+ //           session.Advanced.DocumentStore.DatabaseCommands.DeleteIndex(indexName);
+ //           session.SaveChanges();
 
-            Log2Console($"Deleted {indexName} and documents", true);
-            Thread.Sleep(200);
-        }
+ //           Log2Console($"Deleted {indexName} and documents", true);
+ //           Thread.Sleep(200);
+ //       }
 
-        private static void DeleteDocuments()
-        {
-            Log2Console("Deleting files...", true);
-            Thread.Sleep(100);
+ //       private static void DeleteDocuments()
+ //       {
+ //           Log2Console("Deleting files...", true);
+ //           Thread.Sleep(100);
 
-            using var store = GetStore();
-            using var session = store.OpenSession();
+ //           using var store = GetStore();
+ //           using var session = store.OpenSession();
             
-            session
-                .Query<object>(PrimaryIndex)
-                .Customize(x => x.WaitForNonStaleResults(TimeSpan.FromSeconds(505)));
+ //var query = session.Query<object>(PrimaryIndex)
+ //       .Customize(x => x.WaitForNonStaleResults(TimeSpan.FromSeconds(5)));
 
-            RavenQueryStatistics stats;
-            session.Query<object>(PrimaryIndex).Statistics(out stats).Take(0).ToArray();
+ //   var stats = new Raven.Client.Documents.Session.QueryStatistics();
+ //   query.Statistics(out stats).Take(0).ToList();
 
-            session.Advanced.DocumentStore.DatabaseCommands.DeleteByIndex(PrimaryIndex,
-                new IndexQuery());
-            foreach (var indexName in GetIndexes(store))
-            {
-                Log2Console($"Deleting index: {indexName}", true);
-                session.Advanced.DocumentStore.DatabaseCommands.DeleteIndex(indexName);
-            }
-            session.SaveChanges();
+ //           session.Advanced.DocumentStore.DatabaseCommands.DeleteByIndex(PrimaryIndex,
+ //               new IndexQuery());
+ //           foreach (var indexName in GetIndexes(store))
+ //           {
+ //               Log2Console($"Deleting index: {indexName}", true);
+ //               session.Advanced.DocumentStore.DatabaseCommands.DeleteIndex(indexName);
+ //           }
+ //           session.SaveChanges();
 
-            Log2Console($"Deleted {stats.TotalResults} documents", true);
-        }
+ //           Log2Console($"Deleted {stats.TotalResults} documents", true);
+ //       }
 
-        private static IEnumerable<string> GetIndexes(IDocumentStore store)
+       /* private static IEnumerable<string> GetIndexes(IDocumentStore store)
         {
             return store.DatabaseCommands
                 .GetIndexNames(0, int.MaxValue)
                 .Where(x => !x.Equals(PrimaryIndex, StringComparison.OrdinalIgnoreCase));
-        }
+        }*/
 
-        private static void ImportCsvIntoRavenDb()
-        {
-            Log2Console($"Starting import", true);
+        //private static void ImportCsvIntoRavenDb()
+        //{
+        //    Log2Console($"Starting import", true);
 
-            var stopWatch = new Stopwatch();
-            stopWatch.Start();
+        //    var stopWatch = new Stopwatch();
+        //    stopWatch.Start();
 
-            _keyMapping = new Dictionary<string, IList<string>>
-            {
-                {"0_type_Grunntype", new List<string> { "Nivå&Sammensatt_Kode", "Nivå&Hovedtype_kode"}},
-                {"0_type_LKM hovedtypetrinn", new List<string> { "Trinn1&LKM kategori", "HT"}},
-                {"0_type_NiN definisjon hovedtyper", new List<string> {"HTK"}},
-                {"1_variasjon_Beskrivelsessystem", new List<string> {"Nivå 1 Kode&Nivå 2 kode"}},
-                {"1_variasjon_Artssammensetning", new List<string> {"Sammensatt_kode|Besys1&Nivå 1 kode&Nivå 2 kode"}},
-                {"1_variasjon_Geologisk sammensetning", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Landform", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Menneskeskapte objekt", new List<string> {"Nivå2_kode&Trinn&Nivå 3 kode|Sammensatt_kode"}},
-                {"1_variasjon_Naturgitte objekt", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Regional naturvariasjon", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Romlig strukturvariasjon", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Terrengformvariasjon", new List<string> {"Sammensatt_kode"}},
-                {"1_variasjon_Tilstandsvariasjon", new List<string> {"Sammensatt_kode"}},
-                {"2_type_Kartleggingsenheter 1-2500", new List<string> {"Sammensatt_kode"}},
-                {"2_type_Kartleggingsenheter 1-5000", new List<string> {"Sammensatt_kode", "Nivå|Hovedtype_kode"}},
-                {"2_type_Kartleggingsenheter 1-10000", new List<string> {"Sammensatt_kode"}},
-                {"2_type_Kartleggingsenheter 1-20000", new List<string> {"Sammensatt_kode"}}
-            };
+        //    _keyMapping = new Dictionary<string, IList<string>>
+        //    {
+        //        {"0_type_Grunntype", new List<string> { "Nivå&Sammensatt_Kode", "Nivå&Hovedtype_kode"}},
+        //        {"0_type_LKM hovedtypetrinn", new List<string> { "Trinn1&LKM kategori", "HT"}},
+        //        {"0_type_NiN definisjon hovedtyper", new List<string> {"HTK"}},
+        //        {"1_variasjon_Beskrivelsessystem", new List<string> {"Nivå 1 Kode&Nivå 2 kode"}},
+        //        {"1_variasjon_Artssammensetning", new List<string> {"Sammensatt_kode|Besys1&Nivå 1 kode&Nivå 2 kode"}},
+        //        {"1_variasjon_Geologisk sammensetning", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Landform", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Menneskeskapte objekt", new List<string> {"Nivå2_kode&Trinn&Nivå 3 kode|Sammensatt_kode"}},
+        //        {"1_variasjon_Naturgitte objekt", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Regional naturvariasjon", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Romlig strukturvariasjon", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Terrengformvariasjon", new List<string> {"Sammensatt_kode"}},
+        //        {"1_variasjon_Tilstandsvariasjon", new List<string> {"Sammensatt_kode"}},
+        //        {"2_type_Kartleggingsenheter 1-2500", new List<string> {"Sammensatt_kode"}},
+        //        {"2_type_Kartleggingsenheter 1-5000", new List<string> {"Sammensatt_kode", "Nivå|Hovedtype_kode"}},
+        //        {"2_type_Kartleggingsenheter 1-10000", new List<string> {"Sammensatt_kode"}},
+        //        {"2_type_Kartleggingsenheter 1-20000", new List<string> {"Sammensatt_kode"}}
+        //    };
 
-            // need to delete all files if there is documents in the database
-            var docCount = AnyDocuments();
-            if (docCount > 0)
-            {
-                Log2Console($"Database has {docCount} documents", true);
-                DeleteDocuments();
-            }
+        //    // need to delete all files if there is documents in the database
+        //    var docCount = AnyDocuments();
+        //    if (docCount > 0)
+        //    {
+        //        Log2Console($"Database has {docCount} documents", true);
+        //        DeleteDocuments();
+        //    }
 
-            using (var store = GetStore())
-            {
-                var path = Assembly.GetExecutingAssembly().Location;
-                path = path.Substring(0, path.IndexOf("bin\\", StringComparison.Ordinal));
-                path = Path.Combine(path, "db");
+        //    using (var store = GetStore())
+        //    {
+        //        var path = Assembly.GetExecutingAssembly().Location;
+        //        path = path.Substring(0, path.IndexOf("bin\\", StringComparison.Ordinal));
+        //        path = Path.Combine(path, "db");
 
-                var i = 0;
-                foreach (var filename in Directory.EnumerateFiles(path))
-                {
-                    if (filename.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) continue;
-                    if (true)
-                    {
-                        var name = filename.Substring(filename.LastIndexOf("\\", StringComparison.Ordinal) + 1);
-                        name = name.Substring(0, name.IndexOf(".csv", StringComparison.OrdinalIgnoreCase));
+        //        var i = 0;
+        //        foreach (var filename in Directory.EnumerateFiles(path))
+        //        {
+        //            if (filename.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) continue;
+        //            if (true)
+        //            {
+        //                var name = filename.Substring(filename.LastIndexOf("\\", StringComparison.Ordinal) + 1);
+        //                name = name.Substring(0, name.IndexOf(".csv", StringComparison.OrdinalIgnoreCase));
 
-                        var docType = name;
-                        //if (docType.StartsWith("0_type_")) docType = $"Naturtype_{docType.Substring("0_type_".Length)}".Replace(" ", "_");
-                        //else if (docType.StartsWith("2_type_")) docType = $"Naturtype_{docType.Substring("2_type_".Length)}".Replace(" ", "_");
-                        //else if (docType.StartsWith("1_variasjon_")) docType = $"Variasjon_{docType.Substring("1_variasjon_".Length)}".Replace(" ", "_");
-                        var prefix = docType;
-                        if (prefix.StartsWith("0_type_") || prefix.StartsWith("2_type_"))
-                            prefix = $"_Naturtype_{prefix.Substring("2_type_".Length)}".Replace(" ", "_");
-                        else if (prefix.StartsWith("1_variasjon_"))
-                            prefix = $"_Variasjon_{prefix.Substring("1_variasjon_".Length)}".Replace(" ", "_");
+        //                var docType = name;
+        //                //if (docType.StartsWith("0_type_")) docType = $"Naturtype_{docType.Substring("0_type_".Length)}".Replace(" ", "_");
+        //                //else if (docType.StartsWith("2_type_")) docType = $"Naturtype_{docType.Substring("2_type_".Length)}".Replace(" ", "_");
+        //                //else if (docType.StartsWith("1_variasjon_")) docType = $"Variasjon_{docType.Substring("1_variasjon_".Length)}".Replace(" ", "_");
+        //                var prefix = docType;
+        //                if (prefix.StartsWith("0_type_") || prefix.StartsWith("2_type_"))
+        //                    prefix = $"_Naturtype_{prefix.Substring("2_type_".Length)}".Replace(" ", "_");
+        //                else if (prefix.StartsWith("1_variasjon_"))
+        //                    prefix = $"_Variasjon_{prefix.Substring("1_variasjon_".Length)}".Replace(" ", "_");
 
-                        if (docType.StartsWith("0_type_") || docType.StartsWith("2_type_")) docType = $"Naturtype_{i}";
-                        else if (docType.StartsWith("1_variasjon_")) docType = $"Variasjon_{i}";
+        //                if (docType.StartsWith("0_type_") || docType.StartsWith("2_type_")) docType = $"Naturtype_{i}";
+        //                else if (docType.StartsWith("1_variasjon_")) docType = $"Variasjon_{i}";
                         
-                        ImportFileIntoRavenDb(store, filename, name, docType, prefix.Replace("-", "_"));
-                    }
+        //                ImportFileIntoRavenDb(store, filename, name, docType, prefix.Replace("-", "_"));
+        //            }
 
-                    i++;
-                }
-            }
+        //            i++;
+        //        }
+        //    }
 
-            stopWatch.Stop();
+        //    stopWatch.Stop();
 
-            docCount = AnyDocuments();
-            Log2Console($"\nImported {docCount} documents", true);
+        //    docCount = AnyDocuments();
+        //    Log2Console($"\nImported {docCount} documents", true);
 
-            Log2Console($"\nImport done in {stopWatch.Elapsed.TotalSeconds:##.00} seconds", true);
-        }
+        //    Log2Console($"\nImport done in {stopWatch.Elapsed.TotalSeconds:##.00} seconds", true);
+        //}
 
-        private static void ImportFileIntoRavenDb(IDocumentStore store, string path, string name, string docType, string prefix)
-        {
-            //// ignore målestokk-files
-            //if (name.StartsWith("1_", StringComparison.Ordinal)) return;
+        //private static void ImportFileIntoRavenDb(IDocumentStore store, string path, string name, string docType, string prefix)
+        //{
+        //    //// ignore målestokk-files
+        //    //if (name.StartsWith("1_", StringComparison.Ordinal)) return;
 
-            Log2Console($"Importing {name} ({docType})", true);
+        //    Log2Console($"Importing {name} ({docType})", true);
 
-            string[] keys = { "" };
-            var elements = new Dictionary<string, IList<string>>();
-            var lines = File.ReadAllLines(path);
+        //    string[] keys = { "" };
+        //    var elements = new Dictionary<string, IList<string>>();
+        //    var lines = File.ReadAllLines(path);
 
-            var separator = '\t';
-            for (var i = 0; i < lines.Length; i++)
-            {
-                if (i == 0)
-                {
-                    if (!NoLog) Log2Console($"{i:#0000}:\t{lines[i]}");
-                    keys = lines[i].Split(separator);
-                    continue;
-                }
+        //    var separator = '\t';
+        //    for (var i = 0; i < lines.Length; i++)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            if (!NoLog) Log2Console($"{i:#0000}:\t{lines[i]}");
+        //            keys = lines[i].Split(separator);
+        //            continue;
+        //        }
 
-                var line = lines[i].Split(separator);
-                var j = 0;
-                foreach (var element in line)
-                {
-                    if (j < keys.Length)
-                    {
-                        if (elements.ContainsKey(keys[j]))
-                        {
-                            elements[keys[j]].Add(element);
-                        }
-                        else
-                        {
-                            elements.Add(keys[j], new List<string> {element});
-                        }
-                    }
+        //        var line = lines[i].Split(separator);
+        //        var j = 0;
+        //        foreach (var element in line)
+        //        {
+        //            if (j < keys.Length)
+        //            {
+        //                if (elements.ContainsKey(keys[j]))
+        //                {
+        //                    elements[keys[j]].Add(element);
+        //                }
+        //                else
+        //                {
+        //                    elements.Add(keys[j], new List<string> {element});
+        //                }
+        //            }
 
-                    j++;
-                }
+        //            j++;
+        //        }
 
-                if (!NoLog) Log2Console($"{i:#0000}:\t{lines[i]}");
-            }
+        //        if (!NoLog) Log2Console($"{i:#0000}:\t{lines[i]}");
+        //    }
 
-            if (!NoLog) Log2Console("done");
+        //    if (!NoLog) Log2Console("done");
 
-            using (var bulk = store.BulkInsert(null, new BulkInsertOptions{OverwriteExisting = false}))
-            {
-                var usedKeys = new Dictionary<string, string>();
-                var firstElement = elements.FirstOrDefault();
-                for (var i = 0; i < firstElement.Value.Count; ++i)
-                {
-                    var typePrefix = "";
-                    var documentname = GetDocName(i, elements, _keyMapping[name]);// elements.ContainsKey(keyMapping[name]) ? elements[keyMapping[name]][i] : "";
-                    var dictionary = new Dictionary<string, object>();
-                    var t = 0;
-                    while (usedKeys.ContainsKey(documentname))
-                    {
-                        // illegalkey
-                        typePrefix = "_duplicate";
-                        if (!documentname.Contains("_duplicate", StringComparison.OrdinalIgnoreCase))
-                            documentname += "_duplicate";
-                        else
-                        {
-                            if (!documentname.EndsWith("_duplicate", StringComparison.OrdinalIgnoreCase))
-                            {
-                                documentname = documentname.Substring(0, documentname.Length - 2);
-                            }
-                            documentname += $"_{t}";
-                            t++;
-                        }
-                    }
-                    usedKeys.Add(documentname, $"{i}");
+        //    using (var bulk = store.BulkInsert(null, new BulkInsertOptions{OverwriteExisting = false}))
+        //    {
+        //        var usedKeys = new Dictionary<string, string>();
+        //        var firstElement = elements.FirstOrDefault();
+        //        for (var i = 0; i < firstElement.Value.Count; ++i)
+        //        {
+        //            var typePrefix = "";
+        //            var documentname = GetDocName(i, elements, _keyMapping[name]);// elements.ContainsKey(keyMapping[name]) ? elements[keyMapping[name]][i] : "";
+        //            var dictionary = new Dictionary<string, object>();
+        //            var t = 0;
+        //            while (usedKeys.ContainsKey(documentname))
+        //            {
+        //                // illegalkey
+        //                typePrefix = "_duplicate";
+        //                if (!documentname.Contains("_duplicate", StringComparison.OrdinalIgnoreCase))
+        //                    documentname += "_duplicate";
+        //                else
+        //                {
+        //                    if (!documentname.EndsWith("_duplicate", StringComparison.OrdinalIgnoreCase))
+        //                    {
+        //                        documentname = documentname.Substring(0, documentname.Length - 2);
+        //                    }
+        //                    documentname += $"_{t}";
+        //                    t++;
+        //                }
+        //            }
+        //            usedKeys.Add(documentname, $"{i}");
 
-                    dictionary.Add("docId", documentname);
+        //            dictionary.Add("docId", documentname);
 
-                    var j = 0;
-                    foreach (var element in elements)
-                    {
-                        //if (element.Key.Equals("sammensatt_kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
-                        ////else if (element.Key.Equals("sammensatt-kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
-                        //else if (element.Key.Equals("sammensatt kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
-                        //else if (element.Key.Equals("sammensat kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
-                        //if (element.Key.Equals("hovedtype_kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
-                        //else if (element.Key.Equals("hovedtype-kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
-                        //else if (element.Key.Equals("hovedtype kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
-                        ////else if (element.Key.Equals("trinn1", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
-                        var key = element.Key;
-                        //if (string.IsNullOrEmpty(element.Key)) key = $"{Guid.NewGuid()}";
-                        if (string.IsNullOrEmpty(element.Key)) key = $"col_{j}";
-                        var value = i >= element.Value.Count ? "" : element.Value[i];
-                        dictionary.Add(key, value);
-                        j++;
-                    }
-                    dictionary.Add("DTG_Timestamp", DateTime.Now);
-                    dictionary.Add("DTG_Ticks", DateTime.Now.Ticks);
+        //            var j = 0;
+        //            foreach (var element in elements)
+        //            {
+        //                //if (element.Key.Equals("sammensatt_kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
+        //                ////else if (element.Key.Equals("sammensatt-kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
+        //                //else if (element.Key.Equals("sammensatt kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
+        //                //else if (element.Key.Equals("sammensat kode", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrEmpty(element.Value[i])) documentname = $"{name}/{element.Value[i]}";
+        //                //if (element.Key.Equals("hovedtype_kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
+        //                //else if (element.Key.Equals("hovedtype-kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
+        //                //else if (element.Key.Equals("hovedtype kode", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
+        //                ////else if (element.Key.Equals("trinn1", StringComparison.OrdinalIgnoreCase)) documentname = $"{name}/{element.Value[i]}";
+        //                var key = element.Key;
+        //                //if (string.IsNullOrEmpty(element.Key)) key = $"{Guid.NewGuid()}";
+        //                if (string.IsNullOrEmpty(element.Key)) key = $"col_{j}";
+        //                var value = i >= element.Value.Count ? "" : element.Value[i];
+        //                dictionary.Add(key, value);
+        //                j++;
+        //            }
+        //            dictionary.Add("DTG_Timestamp", DateTime.Now);
+        //            dictionary.Add("DTG_Ticks", DateTime.Now.Ticks);
 
-                    var ravenDocument = RavenJObject.FromObject(dictionary);
-                    if (string.IsNullOrEmpty(documentname))
-                    {
-                        var ravenMetadata = RavenJObject.Parse($"{{'Raven-Entity-Name': 'illegal{prefix}'}}");
-                        bulk.Store(ravenDocument, ravenMetadata, $"{docType}/a_{Guid.NewGuid()}");
-                    }
-                    else
-                    {
-                        var ravenMetadata = RavenJObject.Parse($"{{'Raven-Entity-Name': '{prefix}{typePrefix}'}}");
-                        bulk.Store(ravenDocument, ravenMetadata, $"{docType}/{documentname}");
-                    }
-                }
-            }
+        //            var ravenDocument = RavenJObject.FromObject(dictionary);
+        //            if (string.IsNullOrEmpty(documentname))
+        //            {
+        //                var ravenMetadata = RavenJObject.Parse($"{{'Raven-Entity-Name': 'illegal{prefix}'}}");
+        //                bulk.Store(ravenDocument, ravenMetadata, $"{docType}/a_{Guid.NewGuid()}");
+        //            }
+        //            else
+        //            {
+        //                var ravenMetadata = RavenJObject.Parse($"{{'Raven-Entity-Name': '{prefix}{typePrefix}'}}");
+        //                bulk.Store(ravenDocument, ravenMetadata, $"{docType}/{documentname}");
+        //            }
+        //        }
+        //    }
 
-            try
-            {
-                Log2Console($"Creating index: {prefix}", true);
-                store.DatabaseCommands.PutIndex(
-                    $"{prefix}/ByKode",
-                    new IndexDefinition
-                    {
-                        Map = $"from doc in docs.{prefix}\nselect new\n{{\n\tdocId = doc.docId\n}}"
-
-                    }
-                );
-            }
-            catch (Exception e)
-            {
-                Log2Console(e, true);
-                Log2Console("Press <enter> to continue...", true);
-                Console.ReadLine();
-            }
-        }
+        //    try
+        //    {
+        //        Log2Console($"Creating index: {prefix}", true);
+        //        store.DatabaseCommands.PutIndex(
+        //            $"{prefix}/ByKode",
+        //            new IndexDefinition
+        //            {
+        //                Maps = new HashSet<string>
+        //                    {
+        //                      $"from doc in docs.{prefix} select new {{ docId = doc.docId }}"
+        //                    }
+        //            }
+        //        );
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Log2Console(e, true);
+        //        Log2Console("Press <enter> to continue...", true);
+        //        Console.ReadLine();
+        //    }
+        //}
 
         private static string GetDocName(int i, IDictionary<string, IList<string>> elements, IEnumerable<string> keys)
         {
