@@ -6,6 +6,7 @@
     using NinKode.Database.Model.v22;
     using Raven.Abstractions.Data;
     using Raven.Client;
+    using Raven.Client.Documents.Session;
     using Raven.Json.Linq;
 
     public class ImportVariasjonService
@@ -18,28 +19,28 @@
             _logCallback = logCallback;
         }
 
-        public void Import(IDocumentStore store)
-        {
-            var variasjoner = new Dictionary<string, VariasjonV22>();
+        //public void Import(IDocumentStore store)
+        //{
+        //    var variasjoner = new Dictionary<string, VariasjonV22>();
             
-            using var session = store.OpenSession();
-            var indexes = GetIndexes(session.Advanced.DocumentStore).ToList();
+        //    using var session = store.OpenSession();
+        //    var indexes = GetIndexes(session.Advanced.DocumentStore).ToList();
 
-            ProcessBeskrivelsessystem(ref variasjoner, session, indexes);
-            ProcessArtssammensetning(ref variasjoner, session, indexes);
-            ProcessGeologisksammensetning(ref variasjoner, session, indexes);
-            ProcessLandform(ref variasjoner, session, indexes);
-            ProcessMenneskeskapt(ref variasjoner, session, indexes);
-            ProcessNaturgitt(ref variasjoner, session, indexes);
-            ProcessRegional(ref variasjoner, session, indexes);
-            ProcessRomlig(ref variasjoner, session, indexes);
-            ProcessTerrengform(ref variasjoner, session, indexes);
-            ProcessTilstand(ref variasjoner, session, indexes);
+        //    ProcessBeskrivelsessystem(ref variasjoner, session, indexes);
+        //    ProcessArtssammensetning(ref variasjoner, session, indexes);
+        //    ProcessGeologisksammensetning(ref variasjoner, session, indexes);
+        //    ProcessLandform(ref variasjoner, session, indexes);
+        //    ProcessMenneskeskapt(ref variasjoner, session, indexes);
+        //    ProcessNaturgitt(ref variasjoner, session, indexes);
+        //    ProcessRegional(ref variasjoner, session, indexes);
+        //    ProcessRomlig(ref variasjoner, session, indexes);
+        //    ProcessTerrengform(ref variasjoner, session, indexes);
+        //    ProcessTilstand(ref variasjoner, session, indexes);
 
-            FixChildrenAndParents(variasjoner);
+        //    FixChildrenAndParents(variasjoner);
 
-            SaveVariasjoner(store, variasjoner);
-        }
+        //    SaveVariasjoner(store, variasjoner);
+        //}
 
         #region private methods
         
@@ -634,26 +635,26 @@
             }
         }
 
-        private static void SaveVariasjoner(IDocumentStore store, IDictionary<string, VariasjonV22> variasjoner)
-        {
-            using var bulk = store.BulkInsert(null, new BulkInsertOptions { OverwriteExisting = true });
+        //private static void SaveVariasjoner(IDocumentStore store, IDictionary<string, VariasjonV22> variasjoner)
+        //{
+        //    using var bulk = store.BulkInsert(null, new BulkInsertOptions { OverwriteExisting = true });
 
-            foreach (var variasjon in variasjoner)
-            {
-                bulk.Store(
-                    RavenJObject.FromObject(variasjon.Value),
-                    RavenJObject.Parse("{'Raven-Entity-Name': 'Variasjons'}"),
-                    $"Variasjon/{variasjon.Value.Kode.Replace(" ", "_")}"
-                );
-            }
-        }
+        //    foreach (var variasjon in variasjoner)
+        //    {
+        //        bulk.Store(
+        //            RavenJObject.FromObject(variasjon.Value),
+        //            RavenJObject.Parse("{'Raven-Entity-Name': 'Variasjons'}"),
+        //            $"Variasjon/{variasjon.Value.Kode.Replace(" ", "_")}"
+        //        );
+        //    }
+        //}
 
-        private static IEnumerable<string> GetIndexes(IDocumentStore store)
-        {
-            return store.DatabaseCommands
-                .GetIndexNames(0, int.MaxValue)
-                .Where(x => !x.Equals(PrimaryIndex, StringComparison.OrdinalIgnoreCase));
-        }
+        //private static IEnumerable<string> GetIndexes(IDocumentStore store)
+        //{
+        //    return store.DatabaseCommands
+        //        .GetIndexNames(0, int.MaxValue)
+        //        .Where(x => !x.Equals(PrimaryIndex, StringComparison.OrdinalIgnoreCase));
+        //}
 
         private void Log2Console(string arg, bool force = false)
         {

@@ -1,9 +1,8 @@
 ﻿namespace NinKode.Database.Model.v22
 {
+    using Newtonsoft.Json;
     using System;
     using System.Text.Json.Serialization;
-    using Raven.Imports.Newtonsoft.Json;
-
     public class BeskrivelsesSystem
     {
         [JsonProperty("docId")]
