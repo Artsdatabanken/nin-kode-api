@@ -13,8 +13,6 @@
     using NinKode.Database.Model.v2;
     using NinKode.Database.Model.v21;
     using Raven.Abstractions.Indexing;
-    using Raven.Client.Document;
-    using Raven.Client.Linq;
 
     public class CodeV21Service : ICodeV21Service
     {
