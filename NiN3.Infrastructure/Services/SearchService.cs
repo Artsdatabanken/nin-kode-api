@@ -25,7 +25,6 @@ namespace NiN3.Infrastructure.Services
             {
                 case KlasseEnum.T:
                     // Implementation logic for Value1
-                    // SQL query to retrieve data from the database using the NiN3DbContext
                     resultlist = _context.AlleLangkoderView
                         .Where(x => x.Klasse == "Type" && EF.Functions.Like(x.Navn, $"{searchTermQ}"))
                         .Select(x => new SearchResult
@@ -108,6 +107,17 @@ namespace NiN3.Infrastructure.Services
                             Navn = x.Navn
                         })
                         .ToList();
+                    break;
+                case KlasseEnum.VT:
+                    resultlist = _context.AlleLangkoderView
+                        .Where(x => x.Klasse == "Variabeltrinn" && EF.Functions.Like(x.Navn, $"{searchTermQ}"))
+                        .Select(x => new SearchResult
+                        {
+                            Klasse = x.Klasse,
+                            Kode = x.Kode,
+                            Langkode = x.Langkode,
+                            Navn = x.Navn
+                        }).ToList();
                     break;
                 case KlasseEnum.ALL:
                     // Implementation logic for Value3
