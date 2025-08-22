@@ -54,5 +54,23 @@ namespace NiN3.Tests.Infrastructure
             var result2 = service.SimpleSearch("limnisk", KlasseEnum.ALL, SearchMethodEnum.C);
             Assert.Equal(7, result2.Count);
         }
+
+        [Theory]
+        [InlineData(KlasseEnum.T, 0)]
+        [InlineData(KlasseEnum.HTG, 3)]
+        [InlineData(KlasseEnum.HT, 27)]
+        [InlineData(KlasseEnum.GT, 42)]
+        [InlineData(KlasseEnum.KE, 55)]
+        [InlineData(KlasseEnum.V, 0)]
+        [InlineData(KlasseEnum.VN, 2)]
+        [InlineData(KlasseEnum.VT, 0)]
+        [InlineData(KlasseEnum.ALL, 129)]
+        public void SimpleSearchExpectedResultsTest(KlasseEnum klasseEnum, int expectedResults)
+        {
+            var service = GetPrepearedSearchService();
+            var resultContainsMyrT = service.SimpleSearch("myr", klasseEnum, SearchMethodEnum.C);
+            Assert.Equal(expectedResults, resultContainsMyrT.Count);
+        }
+
     }
 }
