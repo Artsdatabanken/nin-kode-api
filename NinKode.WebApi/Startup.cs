@@ -1,4 +1,6 @@
+using Azure.Identity;
 using Hellang.Middleware.ProblemDetails;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using NiN.Database;
@@ -19,6 +21,11 @@ CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
+
+if (!builder.Environment.IsDevelopment())
+{
+    builder.Services.AddApplicationInsightsTelemetry();
+}
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
