@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.in_data;
 using NiN3.Infrastructure.Mapping;
@@ -194,21 +195,127 @@ namespace NiN3.Infrastructure.Services
             return gtd;
         }
 
-
-        public KartleggingsenhetDto GetKartleggingsenhetByKortkode(string kode, string versjon)
+        public KartleggingsenhetDto? GetKartleggingsenhetByKortkode(string kode, string versjon, bool includeHierarchy= false)
         {
-            var kartleggingsenhet = _context.Kartleggingsenhet.Where(k => k.Kode == kode && k.Versjon.Navn == versjon)
-                .Include(k => k.Versjon)
-                //.Include(kartleggingsenhet => kartleggingsenhet.Grunntyper)
-                .AsNoTracking()
-                .FirstOrDefault();
-            if (kartleggingsenhet != null) { 
-            kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg=> kg.Kartleggingsenhet == kartleggingsenhet)
-                .Select(kg=> kg.Grunntype)
+            IQueryable<Kartleggingsenhet> kartleggingsenhetQuery = _context.Kartleggingsenhet.Where(k => k.Kode.StartsWith(kode) && k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (includeHierarchy)
+            {
+                try
+                {
+                    kartleggingsenhetQuery = kartleggingsenhetQuery
+                        .Include(k => k.Parent)
+                        .Include(k => k.Children);
+                }
+                catch (System.InvalidOperationException)
+                {
+                    _logger?.LogWarning("Hierarchy columns not available in database schema. Please recreate the database.");
+                }
+            }
+
+            var kartleggingsenheter = kartleggingsenhetQuery
                 .AsNoTracking()
                 .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
             }
-            return kartleggingsenhet != null ? NiNkodeMapper.Instance.Map(kartleggingsenhet) : null;
+
+            var firstKartleggingsenhet = kartleggingsenheter.FirstOrDefault();
+            return firstKartleggingsenhet != null ? NiNkodeMapper.Instance.Map(firstKartleggingsenhet, includeHierarchy) : null;
+        }
+
+         public IEnumerable<KartleggingsenhetDto> GetAllKartleggingsenheterByKortkode(string kode, string versjon, bool includeHierarchy)
+        {
+            IQueryable<Kartleggingsenhet> kartleggingsenhetQuery = _context.Kartleggingsenhet.Where(k => k.Kode.StartsWith(kode) && k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (includeHierarchy)
+            {
+                try
+                {
+                    kartleggingsenhetQuery = kartleggingsenhetQuery
+                        .Include(k => k.Parent)
+                        .Include(k => k.Children);
+                }
+                catch (System.InvalidOperationException)
+                {                    
+                    _logger?.LogWarning("Hierarchy columns not available in database schema. Please recreate the database.");
+                }
+            }
+
+            var kartleggingsenheter = kartleggingsenhetQuery
+                .AsNoTracking()
+                .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
+            }
+            
+            return kartleggingsenheter.Select(k => NiNkodeMapper.Instance.Map(k, includeHierarchy)).ToList();
+        }
+
+        public IEnumerable<KartleggingsenhetDto> GetKartleggingsenheter(string versjon, string scale, bool includeHierarchy, int page, int pageSize)
+        {
+            IQueryable<Kartleggingsenhet> query = _context.Kartleggingsenhet
+                .Where(k => k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (!string.IsNullOrEmpty(scale))
+            {
+                var maalestokk = ParseScale(scale);
+                if (maalestokk.HasValue)
+                {
+                    query = query.Where(k => k.Maalestokk == maalestokk.Value);
+                }
+            }
+
+            if (includeHierarchy)
+            {
+                query = query.Include(k => k.Parent).Include(k => k.Children);
+            }
+
+            var kartleggingsenheter = query
+                .OrderBy(k => k.Langkode)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .AsNoTracking()
+                .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype
+                    .Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
+            }
+
+            return kartleggingsenheter.Select(k => NiNkodeMapper.Instance.Map(k, includeHierarchy)).ToList();
+        }
+
+        private MaalestokkEnum? ParseScale(string scale)
+        {
+            if (string.IsNullOrEmpty(scale)) return null;
+
+            return scale.ToUpper() switch
+            {
+                "M005" or "1:5000" => MaalestokkEnum.M005,
+                "M010" or "1:10000" => MaalestokkEnum.M010,
+                "M020" or "1:20000" => MaalestokkEnum.M020,
+                "M050" or "1:50000" => MaalestokkEnum.M050,
+                "M100" or "1:100000" => MaalestokkEnum.M100,
+                _ => null
+            };
         }
     }
 }
