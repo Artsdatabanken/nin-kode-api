@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NiN3.Infrastructure.Services;
-using System.Globalization;
-using OfficeOpenXml;
-using System.IO;
 
 //using Swashbuckle.AspNetCore.Annotations;
 using System.Text;
@@ -36,6 +32,19 @@ namespace NiN3.WebApi.Controllers
             //byte[] bom = Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).GetPreamble();
             var result = bom.Concat(csvBytes).ToArray();
             return File(result, "text/csv; charset=utf-8", "kodeoversikt.csv");            
+        }
+
+        [HttpGet("drupalimport")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public IActionResult Drupalimport()
+        {
+            string kodeoversiktcsv = _rapportService.MakeKartleggingsoversiktCSV("3.0", '\t'.ToString());
+            byte[] csvBytes = Encoding.UTF8.GetBytes(kodeoversiktcsv);
+            byte[] bom = Encoding.UTF8.GetPreamble();
+            //byte[] bom = Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).GetPreamble();
+            var result = bom.Concat(csvBytes).ToArray();
+            return File(result, "text/csv; charset=utf-8", "drupalimport_kartleggingsenheter.csv");
         }
 
         /*
@@ -78,6 +87,13 @@ namespace NiN3.WebApi.Controllers
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "report_data/3_0", "nin3_0.xlsx");
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "nin3_0.xlsx");
+        }
+
+        [HttpGet("dataDateTime")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetDataDate()
+        {
+            return Ok(_rapportService.GetDataDate());
         }
     }
 }

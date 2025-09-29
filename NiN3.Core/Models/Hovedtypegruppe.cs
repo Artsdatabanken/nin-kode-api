@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NiN3.Core.Models.Enums;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

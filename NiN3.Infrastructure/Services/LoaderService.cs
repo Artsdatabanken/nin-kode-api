@@ -1,14 +1,15 @@
-﻿using NiN3.Core.Models;
-using NiN3.Infrastructure.in_data;
-//using Type = NiN3.Core.Models.Type;
+﻿//using Type = NiN3.Core.Models.Type;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using NiN3KodeAPI.in_data;
-using NiN3.Infrastructure.Services;
-using NiN3.Infrastructure.DbContexts;
+using Microsoft.Extensions.Logging;
+using NiN3.Core.Models;
 using NiN3.Core.Models.Enums;
+using NiN3.Infrastructure.DbContexts;
+using NiN3.Infrastructure.in_data;
+using NiN3.Infrastructure.Services;
+using NiN3KodeAPI.in_data;
 using System.Text;
+
 //using NiN3.Infrastructure.in_data.csvfiles;
 
 namespace NiN.Infrastructure.Services
@@ -22,7 +23,8 @@ namespace NiN.Infrastructure.Services
         public List<CsvdataImporter_hovedtypegruppe_hovedtype_mapping> csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings { get; set; }
         public List<CsvdataImporter_hovedtype_grunntype_mapping> csvdataImporter_Hovedtype_Grunntype_Mappings { get; set; }   
         public List<CsvdataImporter_Type_Htg_mapping> csvdataImporter_Type_Htg_Mappings { get; set; }
-        string logpath = @"C:\temp\nin3LoaderLogg_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".log";
+
+        string logpath = $"{Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName)}\\NiN3.Console\\temp\\nin3LoaderLogg_{DateTime.Now.ToString("yyyyMMddHHmmss")}.log";
         public List<NiN3.Core.Models.Type> _typer { get; set; }
 
         private Versjon? _versjon;
@@ -37,7 +39,6 @@ namespace NiN.Infrastructure.Services
             }
         }
 
-        //private List<CsvDataImporter_typeklasser_langkode> Langkoder_typeklasser;
         private readonly Dictionary<string, dynamic> EntitiesTypeDict = new Dictionary<string, dynamic>();
 
         public LoaderService(IConfiguration configuration, NiN3DbContext context, ILogger<LoaderService> logger)
@@ -45,7 +46,6 @@ namespace NiN.Infrastructure.Services
             _context = context;
             _logger = logger;
             _conf = configuration;
-            LoadTypeklasser_langkoder();
         }
 
         private bool HasTable(string tableName)
@@ -127,7 +127,7 @@ namespace NiN.Infrastructure.Services
             }
             catch(Exception ex)
             {
-                WriteToFile($"Error: {ex.Message}");
+                WriteToFile($"Error: {ex.InnerException}");
                 WriteToFile($"Error: Loading did not finish!!");
             }
         }
@@ -141,8 +141,6 @@ namespace NiN.Infrastructure.Services
         {
             // Create an instance of the CsvdataImporter_Type_Htg_mapping class
             csvdataImporter_Type_Htg_Mappings = CsvdataImporter_Type_Htg_mapping.ProcessCSV("in_data/csvfiles/type_htg_mapping.csv");
-            // Log a message to indicate that the Type_HTG_Mapping has been loaded
-            //_logger.LogInformation("Type_HTG_Mapping lastet");
         }
 
         /// <summary>
@@ -150,12 +148,8 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadHtg_Ht_Gt_Mappings()
         {
-            // Create an instance of the CsvdataImporter_htg_ht_gt_mapping class
-            //csvdataImporter_Htg_Ht_Gt_Mappings = CsvdataImporter_htg_ht_gt_mapping.ProcessCSV("in_data/htg_ht_gt_mapping.csv");
             csvdataImporter_Hovedtypegruppe_Hovedtype_Mappings = CsvdataImporter_hovedtypegruppe_hovedtype_mapping.ProcessCSV("in_data/csvfiles/hovedtypegruppe_hovedtype_mapping.csv");
             csvdataImporter_Hovedtype_Grunntype_Mappings = CsvdataImporter_hovedtype_grunntype_mapping.ProcessCSV("in_data/csvfiles/hovedtype_grunntype_mapping.csv");
-            // Log a message to indicate that the Htg_Ht_Gt_Mapping has been loaded
-            //_logger.LogInformation("Htg_Ht_Gt_Mapping lastet");
         }
 
 
@@ -164,7 +158,6 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void SeedLookupData()
         {
-            //List<Versjon> domenes = new List<Versjon>(); //TODO: delete if all tests ok
             _context.Add(new Versjon() { Navn = "3.0" }); // current version
             _context.Add(new Versjon() { Navn = "2.3" });  // for 'konvertering' purposeshttps://open.spotify.com/playlist/46twe0c8AJIV3SKxBxqwxd
             _context.SaveChanges();
@@ -180,12 +173,10 @@ namespace NiN.Infrastructure.Services
                 var typer = CsvdataImporter_Type.ProcessCSV("in_data/csvfiles/type.csv");
                 foreach (var type in typer)
                 {
-                    //var langkodeForType 
                     var t = new NiN3.Core.Models.Type()
                     {
                         Navn = type.Typekategori2!=null?EnumUtil.ToDescriptionBlankIfNull(type.Typekategori2): EnumUtil.ToDescriptionBlankIfNull(type.Typekategori),
                         Kode = type.Kode,
-                        //Langkode = langkodeForType,
                         Ecosystnivaa = type.Ecosystnivaa,
                         Typekategori = type.Typekategori,
                         Typekategori2 = type.Typekategori2,
@@ -305,7 +296,6 @@ namespace NiN.Infrastructure.Services
                     var ht_gt = csvdataImporter_Hovedtype_Grunntype_Mappings.FirstOrDefault(s => s.Grunntype_kode == gt.Kode); 
                     var hovedtype = ht_gt!=null?_context.Hovedtype.FirstOrDefault(s => s.Kode == ht_gt.Hovedtype_kode):null;                    
                     var hovedtypegruppe = hovedtype!=null?_context.Hovedtypegruppe.FirstOrDefault(s => s.Kode == hovedtype.Hovedtypegruppe.Kode):null;
-                    //var hovedtypegruppe = _context.hovedtypegruppe.FirstOrDefault(s => s.Kode == htg_ht.Hovedtypegruppe_kode);//htg_ht.Hove
                     if (ht_gt != null && hovedtype != null && hovedtypegruppe != null)
                     {
                         var grunntype = new Grunntype()
@@ -334,15 +324,6 @@ namespace NiN.Infrastructure.Services
             {
                 WriteToFile("Objecttype <<Grunntype>> allready has data!");
             }
-        }
-
-        /// <summary>
-        /// Loads data for Type object if not already present in the database.
-        /// </summary>
-        private void LoadTypeklasser_langkoder()
-        {
-            WriteToFile("\n\n********  LoadTypeklasser_langkoder");
-            //Langkoder_typeklasser = CsvDataImporter_typeklasser_langkode.ProcessCSV("in_data/csvfiles/typeklasser_langkode_mapping.csv");
         }
 
 

@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "NiN3.Console"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

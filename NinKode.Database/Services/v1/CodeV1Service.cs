@@ -12,8 +12,6 @@
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v1;
     using Raven.Abstractions.Indexing;
-    using Raven.Client.Document;
-    using Raven.Client.Linq;
 
     public class CodeV1Service : ICodeV1Service
     {

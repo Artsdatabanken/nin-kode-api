@@ -10,9 +10,6 @@
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v1;
     using NinKode.Database.Model.v2;
-    using Raven.Abstractions.Indexing;
-    using Raven.Client.Document;
-    using Raven.Client.Linq;
     using System.IO;
     using System.Text.Json;
 

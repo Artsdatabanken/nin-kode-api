@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN.Infrastructure.Services;
@@ -13,15 +14,30 @@ IConfiguration config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
+string builtDbFileFullPath()
+{
+    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
+    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
+    return $"{dbRootPath}{relativeDbPath}";
+};
+
+string buildWebApiDbPath()
+{
+    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
+    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
+    return $"{rootFolder}{relativeWebApiPath}";
+};
+
 void LoadDB()
 {
     var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
-    optionsBuilder.UseSqlite(config.GetConnectionString("Extract"));
+    var connectionString = builtDbFileFullPath();
+    optionsBuilder.UseSqlite($"Data Source={connectionString}");
     db = new NiN3DbContext(optionsBuilder.Options);
-    db.Database.EnsureCreated();
+    var test = db.Database.EnsureCreated();
 }
-var buildtDbFileName = config.GetValue<string>("bildtDbFileName");
-var buildtDbFileFullPath = config.GetValue<string>("buildtDBFilePath");
+var builtDbFileName = config.GetValue<string>("builtDbFileName");
+
 using var loggerFactory = LoggerFactory.Create(builder =>
 {
     builder
@@ -32,8 +48,6 @@ using var loggerFactory = LoggerFactory.Create(builder =>
 });
 ILogger logger = loggerFactory.CreateLogger<Program>();
 ILogger<LoaderService> _logger = loggerFactory.CreateLogger<LoaderService>();
-
-
 
 // api klient
 var run = true;
@@ -53,11 +67,17 @@ while (run)
             break;
         case "makeDB":
             // ensure db is created
-            LoadDB();
-            //db.Database.EnsureCreated();
-            // run loader
-            var loader = new LoaderService(config, db, _logger);
-            loader.load_all_data();
+            try
+            {
+                LoadDB();
+                // run loader
+                var loader = new LoaderService(config, db, _logger);
+                loader.load_all_data();
+            }
+            catch (Exception e)
+            { 
+                Console.WriteLine(e.InnerException);
+            };
             //..optimize file/indexes and flush pool to disk
             using (Microsoft.Data.Sqlite.SqliteConnection connection = (Microsoft.Data.Sqlite.SqliteConnection)db.Database.GetDbConnection())
             {
@@ -72,12 +92,14 @@ while (run)
             break;
         case "exit":
             return;
-            break;
         case "wipe":
+        Console.WriteLine($"Database object state is null: {db == null}");
             if (db == null)
             {
                 Console.WriteLine($"Running choice 'wipe'");
-                var filename = config.GetValue<string>("buildtDBFilePath");
+                var filename = builtDbFileFullPath();
+                Console.WriteLine($"Database file path: {filename}");
+
                 //var droptablesquery = $"drop table if exists Domene Grunntype";
                 FileInfo fi = new FileInfo(filename);
                 if (fi.Exists)
@@ -93,19 +115,18 @@ while (run)
             //File.Delete(filename);
             break;
         case "copy":
-            var arr = config.GetConnectionString("Extract").Split("=");
-            var sourcepath = buildtDbFileFullPath;
-            var path = config.GetValue<string>("webapiDBpath");
+            var sourcepath = builtDbFileFullPath();
+            var webApiDbPath = buildWebApiDbPath();
             try
             {
                 using (var sourceStream = new FileStream(sourcepath, FileMode.Open))
                 {
-                    using (var destinationStream = new FileStream(path, FileMode.Create))
+                    using (var destinationStream = new FileStream(webApiDbPath, FileMode.Create))
                     {
                         sourceStream.CopyTo(destinationStream);
                     }
                 }
-                Console.WriteLine($"Copied new db file to webproject ({path})");
+                Console.WriteLine($"Copied new db file to webproject ({webApiDbPath})");
             }
             catch (Exception ex)
             {
@@ -113,14 +134,14 @@ while (run)
             };
             break;
         case "info":
-            var sourcedbpath = buildtDbFileFullPath;
-            var webdbpath = config.GetValue<string>("webapiDBpath");
+            var sourcedbpath = builtDbFileFullPath();
+            var webApiPath = buildWebApiDbPath();
 
             var sourceInfo = new FileInfo(sourcedbpath);
             sourceInfo.Refresh();
             Console.WriteLine($"Changed time of source db file: {sourceInfo.LastWriteTime}");
 
-            var webInfo = new FileInfo(webdbpath);
+            var webInfo = new FileInfo(webApiPath);
             webInfo.Refresh();
             Console.WriteLine($"Changed time of web db file: {webInfo.LastWriteTime}");
             break;

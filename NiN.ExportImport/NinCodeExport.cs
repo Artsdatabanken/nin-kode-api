@@ -3,11 +3,11 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.IO;
+    using System.IO.Compression;
     using System.Linq;
     using System.Text;
     using CsvHelper;
     using CsvHelper.Configuration;
-    using Ionic.Zip;
     using Microsoft.EntityFrameworkCore;
     using NiN.Database;
     using NiN.Database.Models.Code;
@@ -160,16 +160,19 @@
                 }
             }
 
-            var zipFile = new ZipFile();
             var outputStream = new MemoryStream();
 
-            foreach (var (key, stream) in streams)
+            using (var zipArchive = new ZipArchive(outputStream, ZipArchiveMode.Create, true))
             {
-                stream.Seek(0, SeekOrigin.Begin);
-                zipFile.AddEntry($"{key}_v{_version}.csv", stream);
-            }
+                foreach (var (key, stream) in streams)
+                {
+                    stream.Seek(0, SeekOrigin.Begin);
+                    var zipEntry = zipArchive.CreateEntry($"{key}_v{_version}.csv");
 
-            zipFile.Save(outputStream);
+                    using var entryStream = zipEntry.Open();
+                    stream.CopyTo(entryStream);
+                }
+            }
 
             return outputStream;
         }

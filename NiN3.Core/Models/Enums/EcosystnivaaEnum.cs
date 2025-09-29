@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Reflection.PortableExecutable;
 using System.Runtime.Serialization;
 
 namespace NiN3.Core.Models.Enums

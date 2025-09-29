@@ -1,5 +1,4 @@
 ﻿using NiN3.Core.Models.Enums;
-using NiN3.Core.Models;
 
 namespace NiN3KodeAPI.in_data
 {

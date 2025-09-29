@@ -1,4 +1,6 @@
+using Azure.Identity;
 using Hellang.Middleware.ProblemDetails;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using NiN.Database;
@@ -7,10 +9,10 @@ using NiN3.Infrastructure.Services;
 using NinKode.WebApi.Filters;
 using NinKode.WebApi.Helpers;
 using NinKode.WebApi.Helpers.Swagger;
-using System.Text.Json.Serialization;
-using System.Xml.Linq;
 using System.Globalization;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Xml.Linq;
 
 // setting culture for application to Norwegian
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -20,10 +22,23 @@ CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
 
+if (!builder.Environment.IsDevelopment())
+{
+    builder.Services.AddApplicationInsightsTelemetry();
+}
+
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-}); 
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policyBuilder =>
+    {
+        policyBuilder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 // ef core database
 var connectionString = builder.Configuration.GetConnectionString("Default");
@@ -68,6 +83,8 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddProblemDetails(options => { options.IncludeExceptionDetails = (_, _) => builder.Environment.IsDevelopment(); });
 
 var app = builder.Build();
+
+app.UseCors();
 
 // redirect homepage to swagger ui
 app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));

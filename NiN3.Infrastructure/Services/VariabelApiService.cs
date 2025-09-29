@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using DocumentFormat.OpenXml.EMMA;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs;
@@ -9,11 +7,6 @@ using NiN3.Core.Models.DTOs.type;
 using NiN3.Core.Models.DTOs.variabel;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -25,12 +18,6 @@ namespace NiN3.Infrastructure.Services
         private ILogger<VariabelApiService> logger;
         private IMapper _mapper;
 
-        /*public VariabelApiService(NiN3DbContext context, ILogger<VariabelApiService> logger)
-        {
-            _context = context;
-            _logger = logger;
-
-        }*/
         public VariabelApiService(NiN3DbContext context, ILogger<VariabelApiService> logger)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));

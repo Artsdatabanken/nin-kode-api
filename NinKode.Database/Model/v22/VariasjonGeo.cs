@@ -2,7 +2,7 @@
 {
     using System;
     using System.Text.Json.Serialization;
-    using Raven.Imports.Newtonsoft.Json;
+    using Newtonsoft.Json;
 
     public class VariasjonGeo
     {

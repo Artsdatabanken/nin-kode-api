@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Microsoft.Identity.Client;
 using NiN3.Core.Models.Enums;
-using NiN3KodeAPI.in_data;
 
 namespace NiN3.Infrastructure.in_data
 {
