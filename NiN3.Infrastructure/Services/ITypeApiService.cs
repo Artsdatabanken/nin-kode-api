@@ -1,5 +1,6 @@
 ﻿using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -14,5 +15,6 @@ namespace NiN3.Infrastructure.Services
         public KartleggingsenhetDto? GetKartleggingsenhetByKortkode(string kode, string versjon, bool includeHierarchy);
         public IEnumerable<KartleggingsenhetDto> GetAllKartleggingsenheterByKortkode(string kode, string versjon, bool includeHierarchy);
         public IEnumerable<KartleggingsenhetDto> GetKartleggingsenheter(string versjon, string scale, bool includeHierarchy, int page, int pageSize);
+        public KortkodeLangkodeResponseDto GetLangkoderFromKortkoder(string[] kortkoder, HovedområdeEnum hovedområde, int versjon);
     }
 }

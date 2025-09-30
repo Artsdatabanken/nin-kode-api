@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.Services;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -197,6 +198,40 @@ namespace NiN3.WebApi.Controllers
             return validScales.Contains(scale, StringComparer.OrdinalIgnoreCase);
         }
 
+        /// <summary>
+        /// Konverterer en array av kortkoder til tilsvarende langkoder for et spesifikt hovedområde
+        /// </summary>       
+        [HttpGet]
+        [Route("konverter-kortkoder")]
+        [ProducesResponseType(typeof(KortkodeLangkodeResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult KonverterKortkoder(
+            [FromQuery] HovedområdeEnum hovedområde, 
+            [FromQuery] string kortkoder,
+            [FromQuery] int versjonId = 3)
+        {
+            if (string.IsNullOrWhiteSpace(kortkoder))
+            {
+                return BadRequest("Parameter 'kortkoder' må angis som kommaseparert liste (f.eks. 'LA01-M005-13')");
+            }
 
+            var kortkodeListe = kortkoder.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(k => k.Trim())
+                .Where(k => !string.IsNullOrEmpty(k))
+                .ToArray();
+
+            if (!kortkodeListe.Any())
+            {
+                return BadRequest("Minst én kortkode må angis");
+            }
+
+            if (!Enum.IsDefined(typeof(HovedområdeEnum), hovedområde))
+            {
+                return BadRequest($"Ugyldig hovedområde. Gyldige verdier: {string.Join(", ", Enum.GetNames<HovedområdeEnum>())}");
+            }          
+            
+            var result = _typeApiService.GetLangkoderFromKortkoder(kortkodeListe, hovedområde, versjonId);
+            return Ok(result);
+        }
     }
 }

@@ -317,5 +317,89 @@ namespace NiN3.Infrastructure.Services
                 _ => null
             };
         }
+
+     
+        public KortkodeLangkodeResponseDto GetLangkoderFromKortkoder(string[] kortkoder, HovedområdeEnum hovedområde, int versjon)
+        {
+            var response = new KortkodeLangkodeResponseDto();
+
+            switch (hovedområde)
+            {
+                case HovedområdeEnum.Grunntype:
+                    response = GetLangkoderForGrunntyper(kortkoder, versjon);
+                    break;
+                case HovedområdeEnum.Kartleggingsenhet:
+                    response = GetLangkoderForKartleggingsenheter(kortkoder, versjon);
+                    break;
+                default:                   
+                    response.IkkeFunnet.AddRange(kortkoder);
+                    break;
+            }
+
+            return response;
+        }
+
+        /// <summary>
+        /// Generic helper method for converting kortkoder to langkoder using a selector function
+        /// </summary>
+        private KortkodeLangkodeResponseDto ProcessKortkoder<T>(
+            IEnumerable<T> entities, 
+            string[] kortkoder,
+            Func<T, string> kodeSelector,
+            Func<T, string> langkodeSelector,
+            Func<T, string> navnSelector)
+        {
+            var response = new KortkodeLangkodeResponseDto();
+
+            // Create dictionary for fast lookup
+            var entityDict = entities.ToDictionary(kodeSelector, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var kortkode in kortkoder)
+            {
+                if (entityDict.TryGetValue(kortkode, out var entity))
+                {
+                    response.Mappings.Add(new KortkodeLangkodeMappingDto
+                    {
+                        Kortkode = kodeSelector(entity),
+                        Langkode = langkodeSelector(entity) ?? string.Empty,
+                        Navn = navnSelector(entity) ?? string.Empty
+                    });
+                }
+                else
+                {
+                    response.IkkeFunnet.Add(kortkode);
+                }
+            }
+
+            return response;
+        }
+       
+
+        private KortkodeLangkodeResponseDto GetLangkoderForGrunntyper(string[] kortkoder, int versjon)
+        {
+            var grunntyper = _context.Grunntype
+                .Where(gt => gt.Versjon.Id == versjon && kortkoder.Contains(gt.Kode))
+                .AsNoTracking()
+                .ToList();
+
+            return ProcessKortkoder(grunntyper, kortkoder,
+                gt => gt.Kode,
+                gt => gt.Langkode,
+                gt => gt.Navn ?? string.Empty);
+        }
+
+        private KortkodeLangkodeResponseDto GetLangkoderForKartleggingsenheter(string[] kortkoder, int versjon)
+        {
+            var kartleggingsenheter = _context.Kartleggingsenhet
+                .Where(k => k.Versjon.Id == versjon && kortkoder.Contains(k.Kode))
+                .AsNoTracking()
+                .ToList();
+
+            return ProcessKortkoder(kartleggingsenheter, kortkoder,
+                k => k.Kode,
+                k => k.Langkode,
+                k => k.Navn ?? string.Empty);
+        }
+
     }
 }
