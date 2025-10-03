@@ -15,6 +15,7 @@ namespace NiN3.Core.Models.Enums
         /// Dette er det ENESTE alternativet som gjør noe annerledes enn substrengsøk.
         /// </summary>
         [Description("StartsWith - Søk etter termer som begynner med søkestrengen")]
+        SW = 0,
         
         /// <summary>
         /// Søk etter termer som inneholder søkestrengen hvor som helst (substrengsøk).
