@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.Services;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -48,7 +50,7 @@ namespace NiN3.WebApi.Controllers
         public async Task<IActionResult> GetAllAsync()
         {
             var versjon = await _typeApiService.AllCodesAsync("3.0");
-            Response.Headers.Add("Cache-Control", "max-age=3600");
+            Response.Headers["Cache-Control"] = "max-age=3600";
             return Ok(versjon);
         }
 
@@ -148,14 +150,89 @@ namespace NiN3.WebApi.Controllers
         [HttpGet]
         [Route("kodeforKartleggingsenhet/{kortkode}")]
         [ProducesResponseType(typeof(IEnumerable<KartleggingsenhetDto>), StatusCodes.Status200OK)]
-        public IActionResult hentkodeForKartleggingsenhet([Required] string kortkode = "LA01-M005-13")
+        public IActionResult hentkodeForKartleggingsenhet([Required] string kortkode = "LA01-M005-13", [FromQuery] bool includeHierarchy = false)
         {
-            var kartleggingsenhet = _typeApiService.GetKartleggingsenhetByKortkode(kortkode, _versjon);
+            var kartleggingsenhet = _typeApiService.GetKartleggingsenhetByKortkode(kortkode, _versjon, includeHierarchy);
             if (kartleggingsenhet != null)
             {
                 return Ok(kartleggingsenhet);
             }
             return NotFound("Ugyldig kortkode");
+        }
+
+        [HttpGet]
+        [Route("kodeforKartleggingsenhet/{kortkode}/hierarchy")]
+        [ProducesResponseType(typeof(KartleggingsenhetDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult HentKodeForKartleggingsenhetWithHierarchy([Required] string kortkode = "LA01-M005-13")
+        {
+            var kartleggingsenhet = _typeApiService.GetAllKartleggingsenheterByKortkode(kortkode, _versjon, true);
+            if (kartleggingsenhet != null)
+            {
+                return Ok(kartleggingsenhet);
+            }
+            return NotFound("Ugyldig kortkode");
+        }
+
+        [HttpGet]
+        [Route("kartleggingsenheter")]
+        [ProducesResponseType(typeof(IEnumerable<KartleggingsenhetDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetKartleggingsenheter(
+            [FromQuery] string scale = null,
+            [FromQuery] bool includeHierarchy = false,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 100)
+        {
+            if (!string.IsNullOrEmpty(scale) && !IsValidScale(scale))
+            {
+                return BadRequest($"Invalid scale. Valid values are: M005, M010, M020, M050, M100 (or 1:5000, 1:10000, 1:20000, 1:50000, 1:100000)");
+            }
+
+            var kartleggingsenheter = _typeApiService.GetKartleggingsenheter(_versjon, scale, includeHierarchy, page, pageSize);
+            return Ok(kartleggingsenheter);
+        }
+
+        private bool IsValidScale(string scale)
+        {
+            var validScales = new[] { "M005", "M010", "M020", "M050", "M100", "1:5000", "1:10000", "1:20000", "1:50000", "1:100000" };
+            return validScales.Contains(scale, StringComparer.OrdinalIgnoreCase);
+        }
+
+        /// <summary>
+        /// Konverterer en array av kortkoder til tilsvarende langkoder for et spesifikt hovedområde
+        /// </summary>       
+        [HttpGet]
+        [Route("konverter-kortkoder")]
+        [ProducesResponseType(typeof(KortkodeLangkodeResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult KonverterKortkoder(
+            [FromQuery][Required] HovedområdeEnum hovedområde,
+            [FromQuery] string kortkoder,
+            [FromQuery][Required] VersjonEnum versjonId = VersjonEnum.V3)
+        {
+            if (string.IsNullOrWhiteSpace(kortkoder))
+            {
+                return BadRequest("Parameter 'kortkoder' må angis som kommaseparert liste (f.eks. 'LA01-M005-13')");
+            }
+
+            var kortkodeListe = kortkoder.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(k => k.Trim())
+                .Where(k => !string.IsNullOrEmpty(k))
+                .ToArray();
+
+            if (!kortkodeListe.Any())
+            {
+                return BadRequest("Minst én kortkode må angis");
+            }
+
+            if (!Enum.IsDefined(typeof(HovedområdeEnum), hovedområde))
+            {
+                return BadRequest($"Ugyldig hovedområde. Gyldige verdier: {string.Join(", ", Enum.GetNames<HovedområdeEnum>())}");
+            }
+
+            var result = _typeApiService.GetLangkoderFromKortkoder(kortkodeListe, hovedområde, (int)versjonId);
+            return Ok(result);
         }
     }
 }

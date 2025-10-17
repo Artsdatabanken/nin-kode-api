@@ -1,5 +1,6 @@
 ﻿using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 
 namespace NiN3.Infrastructure.Services
 {
@@ -7,12 +8,13 @@ namespace NiN3.Infrastructure.Services
     {
         public Task<VersjonDto> AllCodesAsync(string versjon);
         public KlasseDto GetTypeklasse(string kortkode, string versjon);
-
         public TypeDto GetTypeByKortkode(string kortkode, string versjon);
         public HovedtypegruppeDto GetHovedtypegruppeByKortkode(string kode, string versjon);
-
         public HovedtypeDto GetHovedtypeByKortkode(string kode, string versjon);
         public GrunntypeDto GetGrunntypeByKortkode(string kode, string versjon);
-        public KartleggingsenhetDto GetKartleggingsenhetByKortkode(string kode, string versjon);
+        public KartleggingsenhetDto? GetKartleggingsenhetByKortkode(string kode, string versjon, bool includeHierarchy);
+        public IEnumerable<KartleggingsenhetDto> GetAllKartleggingsenheterByKortkode(string kode, string versjon, bool includeHierarchy);
+        public IEnumerable<KartleggingsenhetDto> GetKartleggingsenheter(string versjon, string scale, bool includeHierarchy, int page, int pageSize);
+        public KortkodeLangkodeResponseDto GetLangkoderFromKortkoder(string[] kortkoder, HovedområdeEnum hovedområde, int versjon);
     }
 }

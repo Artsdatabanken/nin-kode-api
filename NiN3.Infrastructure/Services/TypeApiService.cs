@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
+using NiN3.Core.Models.Enums;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.in_data;
 using NiN3.Infrastructure.Mapping;
@@ -194,21 +195,211 @@ namespace NiN3.Infrastructure.Services
             return gtd;
         }
 
-
-        public KartleggingsenhetDto GetKartleggingsenhetByKortkode(string kode, string versjon)
+        public KartleggingsenhetDto? GetKartleggingsenhetByKortkode(string kode, string versjon, bool includeHierarchy= false)
         {
-            var kartleggingsenhet = _context.Kartleggingsenhet.Where(k => k.Kode == kode && k.Versjon.Navn == versjon)
-                .Include(k => k.Versjon)
-                //.Include(kartleggingsenhet => kartleggingsenhet.Grunntyper)
-                .AsNoTracking()
-                .FirstOrDefault();
-            if (kartleggingsenhet != null) { 
-            kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg=> kg.Kartleggingsenhet == kartleggingsenhet)
-                .Select(kg=> kg.Grunntype)
+            IQueryable<Kartleggingsenhet> kartleggingsenhetQuery = _context.Kartleggingsenhet.Where(k => k.Kode.StartsWith(kode) && k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (includeHierarchy)
+            {
+                try
+                {
+                    kartleggingsenhetQuery = kartleggingsenhetQuery
+                        .Include(k => k.Parent)
+                        .Include(k => k.Children);
+                }
+                catch (System.InvalidOperationException)
+                {
+                    _logger?.LogWarning("Hierarchy columns not available in database schema. Please recreate the database.");
+                }
+            }
+
+            var kartleggingsenheter = kartleggingsenhetQuery
                 .AsNoTracking()
                 .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
             }
-            return kartleggingsenhet != null ? NiNkodeMapper.Instance.Map(kartleggingsenhet) : null;
+
+            var firstKartleggingsenhet = kartleggingsenheter.FirstOrDefault();
+            return firstKartleggingsenhet != null ? NiNkodeMapper.Instance.Map(firstKartleggingsenhet, includeHierarchy) : null;
         }
+
+         public IEnumerable<KartleggingsenhetDto> GetAllKartleggingsenheterByKortkode(string kode, string versjon, bool includeHierarchy)
+        {
+            IQueryable<Kartleggingsenhet> kartleggingsenhetQuery = _context.Kartleggingsenhet.Where(k => k.Kode.StartsWith(kode) && k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (includeHierarchy)
+            {
+                try
+                {
+                    kartleggingsenhetQuery = kartleggingsenhetQuery
+                        .Include(k => k.Parent)
+                        .Include(k => k.Children);
+                }
+                catch (System.InvalidOperationException)
+                {                    
+                    _logger?.LogWarning("Hierarchy columns not available in database schema. Please recreate the database.");
+                }
+            }
+
+            var kartleggingsenheter = kartleggingsenhetQuery
+                .AsNoTracking()
+                .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype.Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
+            }
+            
+            return kartleggingsenheter.Select(k => NiNkodeMapper.Instance.Map(k, includeHierarchy)).ToList();
+        }
+
+        public IEnumerable<KartleggingsenhetDto> GetKartleggingsenheter(string versjon, string scale, bool includeHierarchy, int page, int pageSize)
+        {
+            IQueryable<Kartleggingsenhet> query = _context.Kartleggingsenhet
+                .Where(k => k.Versjon.Navn == versjon)
+                .Include(k => k.Versjon);
+
+            if (!string.IsNullOrEmpty(scale))
+            {
+                var maalestokk = ParseScale(scale);
+                if (maalestokk.HasValue)
+                {
+                    query = query.Where(k => k.Maalestokk == maalestokk.Value);
+                }
+            }
+
+            if (includeHierarchy)
+            {
+                query = query.Include(k => k.Parent).Include(k => k.Children);
+            }
+
+            var kartleggingsenheter = query
+                .OrderBy(k => k.Langkode)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .AsNoTracking()
+                .ToList();
+
+            foreach (var kartleggingsenhet in kartleggingsenheter)
+            {
+                kartleggingsenhet.Grunntyper = _context.Kartleggingsenhet_Grunntype
+                    .Where(kg => kg.Kartleggingsenhet == kartleggingsenhet)
+                    .Select(kg => kg.Grunntype)
+                    .AsNoTracking()
+                    .ToList();
+            }
+
+            return kartleggingsenheter.Select(k => NiNkodeMapper.Instance.Map(k, includeHierarchy)).ToList();
+        }
+
+        private MaalestokkEnum? ParseScale(string scale)
+        {
+            if (string.IsNullOrEmpty(scale)) return null;
+
+            return scale.ToUpper() switch
+            {
+                "M005" or "1:5000" => MaalestokkEnum.M005,
+                "M010" or "1:10000" => MaalestokkEnum.M010,
+                "M020" or "1:20000" => MaalestokkEnum.M020,
+                "M050" or "1:50000" => MaalestokkEnum.M050,
+                "M100" or "1:100000" => MaalestokkEnum.M100,
+                _ => null
+            };
+        }
+
+     
+        public KortkodeLangkodeResponseDto GetLangkoderFromKortkoder(string[] kortkoder, HovedområdeEnum hovedområde, int versjon)
+        {
+            var response = new KortkodeLangkodeResponseDto();
+
+            switch (hovedområde)
+            {
+                case HovedområdeEnum.Grunntype:
+                    response = GetLangkoderForGrunntyper(kortkoder, versjon);
+                    break;
+                case HovedområdeEnum.Kartleggingsenhet:
+                    response = GetLangkoderForKartleggingsenheter(kortkoder, versjon);
+                    break;
+                default:                   
+                    response.IkkeFunnet.AddRange(kortkoder);
+                    break;
+            }
+
+            return response;
+        }
+
+        /// <summary>
+        /// Generic helper method for converting kortkoder to langkoder using a selector function
+        /// </summary>
+        private KortkodeLangkodeResponseDto ProcessKortkoder<T>(
+            IEnumerable<T> entities, 
+            string[] kortkoder,
+            Func<T, string> kodeSelector,
+            Func<T, string> langkodeSelector,
+            Func<T, string> navnSelector)
+        {
+            var response = new KortkodeLangkodeResponseDto();
+
+            // Create dictionary for fast lookup
+            var entityDict = entities.ToDictionary(kodeSelector, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var kortkode in kortkoder)
+            {
+                if (entityDict.TryGetValue(kortkode, out var entity))
+                {
+                    response.Mappings.Add(new KortkodeLangkodeMappingDto
+                    {
+                        Kortkode = kodeSelector(entity),
+                        Langkode = langkodeSelector(entity) ?? string.Empty,
+                        Navn = navnSelector(entity) ?? string.Empty
+                    });
+                }
+                else
+                {
+                    response.IkkeFunnet.Add(kortkode);
+                }
+            }
+
+            return response;
+        }
+       
+
+        private KortkodeLangkodeResponseDto GetLangkoderForGrunntyper(string[] kortkoder, int versjon)
+        {
+            var grunntyper = _context.Grunntype
+                .Where(gt => gt.Versjon.Id == versjon && kortkoder.Contains(gt.Kode))
+                .AsNoTracking()
+                .ToList();
+
+            return ProcessKortkoder(grunntyper, kortkoder,
+                gt => gt.Kode,
+                gt => gt.Langkode,
+                gt => gt.Navn ?? string.Empty);
+        }
+
+        private KortkodeLangkodeResponseDto GetLangkoderForKartleggingsenheter(string[] kortkoder, int versjon)
+        {
+            var kartleggingsenheter = _context.Kartleggingsenhet
+                .Where(k => k.Versjon.Id == versjon && kortkoder.Contains(k.Kode))
+                .AsNoTracking()
+                .ToList();
+
+            return ProcessKortkoder(kartleggingsenheter, kortkoder,
+                k => k.Kode,
+                k => k.Langkode,
+                k => k.Navn ?? string.Empty);
+        }
+
     }
 }

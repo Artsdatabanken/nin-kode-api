@@ -16,6 +16,9 @@ namespace NiN3.Infrastructure.DbContexts
             /********* SEEDING moved to loader service***********/
             modelBuilder.Entity<SearchResult>().HasNoKey().HasIndex(sr => sr.Navn);
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Kartleggingsenhet>().HasOne(e => e.Parent).WithMany(e => e.Children)
+               .HasForeignKey(e => e.ParentId);
         }
 
         // TYPER
