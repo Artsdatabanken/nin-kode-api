@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using NiN3.Core.Models;
 using NiN3.Core.Models.DTOs;
 using NiN3.Core.Models.DTOs.type;
 using NiN3.Core.Models.Enums;
@@ -49,7 +50,7 @@ namespace NiN3.WebApi.Controllers
         public async Task<IActionResult> GetAllAsync()
         {
             var versjon = await _typeApiService.AllCodesAsync("3.0");
-            Response.Headers.Add("Cache-Control", "max-age=3600");
+            Response.Headers["Cache-Control"] = "max-age=3600";
             return Ok(versjon);
         }
 
@@ -206,9 +207,9 @@ namespace NiN3.WebApi.Controllers
         [ProducesResponseType(typeof(KortkodeLangkodeResponseDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult KonverterKortkoder(
-            [FromQuery] HovedområdeEnum hovedområde, 
+            [FromQuery][Required] HovedområdeEnum hovedområde,
             [FromQuery] string kortkoder,
-            [FromQuery] int versjonId = 3)
+            [FromQuery][Required] VersjonEnum versjonId = VersjonEnum.V3)
         {
             if (string.IsNullOrWhiteSpace(kortkoder))
             {
@@ -228,9 +229,9 @@ namespace NiN3.WebApi.Controllers
             if (!Enum.IsDefined(typeof(HovedområdeEnum), hovedområde))
             {
                 return BadRequest($"Ugyldig hovedområde. Gyldige verdier: {string.Join(", ", Enum.GetNames<HovedområdeEnum>())}");
-            }          
-            
-            var result = _typeApiService.GetLangkoderFromKortkoder(kortkodeListe, hovedområde, versjonId);
+            }
+
+            var result = _typeApiService.GetLangkoderFromKortkoder(kortkodeListe, hovedområde, (int)versjonId);
             return Ok(result);
         }
     }
