@@ -36,7 +36,7 @@ namespace NiN3.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult SimpleSearch(
-            [FromQuery, Required] 
+            [FromQuery] 
             string searchTerm,            
             [FromQuery] 
             KlasseEnum klasseEnum = KlasseEnum.ALL,            
@@ -44,14 +44,7 @@ namespace NiN3.WebApi.Controllers
             SearchMethodEnum searchMethodEnum = SearchMethodEnum.C)
         {
             try
-            {
-                if (string.IsNullOrWhiteSpace(searchTerm))
-                {
-                    return BadRequest(new { 
-                        error = "Søketerm kan ikke være tom", 
-                        message = "Vennligst oppgi en gyldig søketerm" 
-                    });
-                }
+            {                
                 var results = _searchService.SimpleSearch(searchTerm, klasseEnum, searchMethodEnum);
 
                 return Ok(results);
