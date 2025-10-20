@@ -33,7 +33,7 @@ public class ExpectedNotFoundTelemetryInitializer : ITelemetryInitializer
 
                 requestTelemetry.Context.Operation.SyntheticSource = "ExpectedBusinessLogic";
                 
-                _logger.LogInformation("Processed expected 404 for URL: {Url}", requestTelemetry.Url?.AbsolutePath);
+                _logger?.LogInformation("Processed expected 404 for URL: {Url}", requestTelemetry.Url?.AbsolutePath);
             }
         }
     }

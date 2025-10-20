@@ -25,7 +25,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (!builder.Environment.IsDevelopment())
 {
-    builder.Services.ConfigureApplicationInsights(builder.Configuration);
+    builder.Services.AddApplicationInsightsTelemetry();
+    builder.Services.Configure<TelemetryConfiguration>(telemetryConfiguration =>
+    {
+        var telemetryInitializer = new ExpectedNotFoundTelemetryInitializer(null);
+        telemetryConfiguration.TelemetryInitializers.Add(telemetryInitializer);
+    });
 }
 
 builder.Services.AddControllers().AddJsonOptions(options =>
