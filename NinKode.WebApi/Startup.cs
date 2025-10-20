@@ -25,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (!builder.Environment.IsDevelopment())
 {
-    builder.Services.AddApplicationInsightsTelemetry();
+    builder.Services.ConfigureApplicationInsights();
 }
 
 builder.Services.AddControllers().AddJsonOptions(options =>
