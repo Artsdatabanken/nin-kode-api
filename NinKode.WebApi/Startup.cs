@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using NiN.Database;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.Services;
+using NinKode.WebApi.ApplicationInsights;
 using NinKode.WebApi.Filters;
 using NinKode.WebApi.Helpers;
 using NinKode.WebApi.Helpers.Swagger;
@@ -95,7 +96,7 @@ app.Use(async (context, next) =>
 {
     if (context.Request.Path == "/index.html")
     {
-        context.Response.Headers.Add("env", app.Environment.EnvironmentName);
+        context.Response.Headers["env"] = app.Environment.EnvironmentName;
         context.Response.Redirect("/swagger/index.html", permanent: true);
         return;
     }
