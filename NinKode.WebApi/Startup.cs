@@ -1,5 +1,6 @@
 using Azure.Identity;
 using Hellang.Middleware.ProblemDetails;
+using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using NiN.Database;
@@ -21,8 +22,10 @@ CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Application Insights temporarily removed to troubleshoot pipeline issues
-// TODO: Re-implement 404 filtering when pipeline is stable
+if (!builder.Environment.IsDevelopment())
+{
+    builder.Services.AddApplicationInsightsTelemetry();
+}
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -92,7 +95,7 @@ app.Use(async (context, next) =>
 {
     if (context.Request.Path == "/index.html")
     {
-        context.Response.Headers["env"] = app.Environment.EnvironmentName;
+        context.Response.Headers.Add("env", app.Environment.EnvironmentName);
         context.Response.Redirect("/swagger/index.html", permanent: true);
         return;
     }
