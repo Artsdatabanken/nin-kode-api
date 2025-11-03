@@ -24,7 +24,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (!builder.Environment.IsDevelopment())
 {
-    builder.Services.AddApplicationInsightsTelemetry();
+    builder.Services.AddApplicationInsightsTelemetry();    
+    builder.Services.AddSingleton<ITelemetryInitializer, TelemetryInitializer>();
 }
 
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -95,7 +96,7 @@ app.Use(async (context, next) =>
 {
     if (context.Request.Path == "/index.html")
     {
-        context.Response.Headers.Add("env", app.Environment.EnvironmentName);
+        context.Response.Headers["env"] = app.Environment.EnvironmentName;
         context.Response.Redirect("/swagger/index.html", permanent: true);
         return;
     }

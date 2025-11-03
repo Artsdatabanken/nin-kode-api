@@ -17,9 +17,17 @@ namespace NiN3.Infrastructure.Services
             _context = context;
         }
         public List<SearchResultDto> SimpleSearch(string searchTerm, KlasseEnum klasseEnum, SearchMethodEnum searchMethodEnum)
-        {
+        {           
+            // Håndter standardverdier - viktig for API-brukbarhet
+            if (klasseEnum == KlasseEnum.Default)
+                klasseEnum = KlasseEnum.ALL;
+            
+            if (searchMethodEnum == SearchMethodEnum.Default)
+                searchMethodEnum = SearchMethodEnum.C;
 
             var resultlist = new List<SearchResult>();
+            
+            // Kun SW (StartsWith) oppfører seg annerledes - alt annet er substring-søk
             var searchTermQ = searchMethodEnum == SearchMethodEnum.SW ? searchTerm + "%" : "%" + searchTerm + "%";
             switch (klasseEnum)
             {
