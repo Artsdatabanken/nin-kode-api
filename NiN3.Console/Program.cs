@@ -4,39 +4,26 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN.Infrastructure.Services;
 using NiN3.Infrastructure.DbContexts;
+
+using NLog.Config;
+using NLog.Extensions.Logging;
+
 using Sharprompt;
 // See https://aka.ms/new-console-template for more information
 
-//IConfiguration config;
+// IConfiguration config;
 NiN3DbContext db = null;
 
 IConfiguration config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
-string builtDbFileFullPath()
-{
-    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
-    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
-    return $"{dbRootPath}{relativeDbPath}";
-};
 
-string buildWebApiDbPath()
-{
-    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
-    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
-    return $"{rootFolder}{relativeWebApiPath}";
-};
-
-void LoadDB()
-{
-    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
-    var connectionString = builtDbFileFullPath();
-    optionsBuilder.UseSqlite($"Data Source={connectionString}");
-    db = new NiN3DbContext(optionsBuilder.Options);
-    var test = db.Database.EnsureCreated();
-}
 var builtDbFileName = config.GetValue<string>("builtDbFileName");
+string logpath = $"{Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName)}\\NiN3.Console\\temp\\nin3LoaderLogg_{DateTime.Now.ToString("yyyyMMddHHmmss")}.log";
+
+
+AddNlogFileLoggerConfig();
 
 using var loggerFactory = LoggerFactory.Create(builder =>
 {
@@ -44,7 +31,8 @@ using var loggerFactory = LoggerFactory.Create(builder =>
         .AddFilter("Microsoft", LogLevel.Warning)
         .AddFilter("System", LogLevel.Warning)
         .AddFilter("NonHostConsoleApp.Program", LogLevel.Debug)
-        .AddConsole();
+        .AddConsole()
+        .AddNLog(); // Use NLog for logging to file - Information to error level
 });
 ILogger logger = loggerFactory.CreateLogger<Program>();
 ILogger<LoaderService> _logger = loggerFactory.CreateLogger<LoaderService>();
@@ -63,7 +51,7 @@ while (run)
     switch (input)
     {
         case "help":
-            Console.WriteLine(meny);
+            logger.LogInformation(meny);
             break;
         case "makeDB":
             // ensure db is created
@@ -73,10 +61,11 @@ while (run)
                 // run loader
                 var loader = new LoaderService(config, db, _logger);
                 loader.load_all_data();
+                logger.LogInformation($"END: loading is FINISHED :) (Log is written to {logpath})");
             }
             catch (Exception e)
-            { 
-                Console.WriteLine(e.InnerException);
+            {
+                logger.LogError(e.InnerException.Message);
             };
             //..optimize file/indexes and flush pool to disk
             using (Microsoft.Data.Sqlite.SqliteConnection connection = (Microsoft.Data.Sqlite.SqliteConnection)db.Database.GetDbConnection())
@@ -88,29 +77,29 @@ while (run)
                 connection.Close();
                 Microsoft.Data.Sqlite.SqliteConnection.ClearPool(connection);
             }
-            Console.WriteLine($"Created new db file (temporary database based on current model and csv-files)");
+            logger.LogInformation($"Created new db file (temporary database based on current model and csv-files)");
             break;
         case "exit":
             return;
         case "wipe":
-        Console.WriteLine($"Database object state is null: {db == null}");
+        logger.LogInformation($"Database object state is null: {db == null}");
             if (db == null)
             {
-                Console.WriteLine($"Running choice 'wipe'");
+                logger.LogInformation($"Running choice 'wipe'");
                 var filename = builtDbFileFullPath();
-                Console.WriteLine($"Database file path: {filename}");
+                logger.LogInformation($"Database file path: {filename}");
 
                 //var droptablesquery = $"drop table if exists Domene Grunntype";
                 FileInfo fi = new FileInfo(filename);
                 if (fi.Exists)
                 {
                     fi.Delete();
-                    Console.WriteLine($"Deleted temporary db file ({filename}), you can now run 'makeDB' to create fresh dbfile");
+                    logger.LogInformation($"Deleted temporary db file ({filename}), you can now run 'makeDB' to create fresh dbfile");
                 }
             }
             else
             {
-                Console.WriteLine("Cannot delete db file while in use");
+                logger.LogInformation("Cannot delete db file while in use");
             }
             //File.Delete(filename);
             break;
@@ -126,11 +115,11 @@ while (run)
                         sourceStream.CopyTo(destinationStream);
                     }
                 }
-                Console.WriteLine($"Copied new db file to webproject ({webApiDbPath})");
+                logger.LogInformation($"Copied new db file to webproject ({webApiDbPath})");
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                logger.LogInformation(ex.ToString());
             };
             break;
         case "info":
@@ -139,15 +128,58 @@ while (run)
 
             var sourceInfo = new FileInfo(sourcedbpath);
             sourceInfo.Refresh();
-            Console.WriteLine($"Changed time of source db file: {sourceInfo.LastWriteTime}");
+            logger.LogInformation($"Changed time of source db file: {sourceInfo.LastWriteTime}");
 
             var webInfo = new FileInfo(webApiPath);
             webInfo.Refresh();
-            Console.WriteLine($"Changed time of web db file: {webInfo.LastWriteTime}");
+            logger.LogInformation($"Changed time of web db file: {webInfo.LastWriteTime}");
             break;
         default:
-            Console.WriteLine("No knows command, options:");
-            Console.WriteLine(meny);
+            logger.LogInformation("No knows command, options:");
+            logger.LogInformation(meny);
             break;
     }
+}
+
+return;
+
+string builtDbFileFullPath()
+{
+    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
+    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
+    var dbFileFullPath = $"{dbRootPath}{relativeDbPath}";
+    var dbDirectory = Path.GetDirectoryName(dbFileFullPath);
+    Directory.CreateDirectory(dbDirectory);
+    return dbFileFullPath;
+}
+
+string buildWebApiDbPath()
+{
+    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
+    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
+    return $"{rootFolder}{relativeWebApiPath}";
+}
+
+void LoadDB()
+{
+    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
+    var connectionString = builtDbFileFullPath();
+    optionsBuilder.UseSqlite($"Data Source={connectionString}");
+    db = new NiN3DbContext(optionsBuilder.Options);
+    var test = db.Database.EnsureCreated();
+}
+
+LoggingConfiguration AddNlogFileLoggerConfig()
+{
+    var loggingConfiguration = new NLog.Config.LoggingConfiguration();
+
+    // Targets where to log to: File and Console
+    var logfile = new NLog.Targets.FileTarget("logfile") { FileName = logpath };
+
+    // Rules for mapping loggers to targets
+    loggingConfiguration.AddRule(NLog.LogLevel.Info, NLog.LogLevel.Error, logfile);
+
+    // Apply config           
+    NLog.LogManager.Configuration = loggingConfiguration;
+    return loggingConfiguration;
 }

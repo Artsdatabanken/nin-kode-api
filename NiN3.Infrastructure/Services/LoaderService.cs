@@ -24,7 +24,7 @@ namespace NiN.Infrastructure.Services
         public List<CsvdataImporter_hovedtype_grunntype_mapping> csvdataImporter_Hovedtype_Grunntype_Mappings { get; set; }   
         public List<CsvdataImporter_Type_Htg_mapping> csvdataImporter_Type_Htg_Mappings { get; set; }
 
-        string logpath = $"{Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName)}\\NiN3.Console\\temp\\nin3LoaderLogg_{DateTime.Now.ToString("yyyyMMddHHmmss")}.log";
+        //string logpath = $"{Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName)}\\NiN3.Console\\temp\\nin3LoaderLogg_{DateTime.Now.ToString("yyyyMMddHHmmss")}.log";
         public List<NiN3.Core.Models.Type> _typer { get; set; }
 
         private Versjon? _versjon;
@@ -122,12 +122,11 @@ namespace NiN.Infrastructure.Services
                 CreateDuplikateLangkoderView();
                 CreateDBInfoTable();
                 SetBuildTimeInDb_infoTable();
-                WriteToFile($"END: loading is FINISHED :) (Log is written to {logpath})");
             }
             catch(Exception ex)
             {
-                WriteToFile($"Error: {ex.InnerException}");
-                WriteToFile($"Error: Loading did not finish!!");
+                _logger.LogError($"Error: {ex.InnerException}");
+                _logger.LogInformation($"Error: Loading did not finish!!");
             }
         }
 
@@ -165,7 +164,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadTypeData()
         {
-            WriteToFile("\n\n********  LoadTypeData");
+            this._logger.LogInformation("\n\n********  LoadTypeData");
             var tbls = Tabeller();
             if (_context.Type.Count() == 0)
             {
@@ -188,7 +187,7 @@ namespace NiN.Infrastructure.Services
             }
             else
             {
-                WriteToFile("Objecttype <<Type>> allready has data!");
+                this._logger.LogInformation("Objecttype <<Type>> allready has data!");
             }
         }
 
@@ -198,7 +197,7 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadHovedtypeGruppeData()
         {
-            WriteToFile("\n\n********  LoadHovedtypeGruppeData");
+            this._logger.LogInformation("\n\n********  LoadHovedtypeGruppeData");
             //q: fetch typer from _context
             var typer = _context.Type.ToList();
             var htg_count = _context.Hovedtypegruppe.Count();
@@ -229,7 +228,7 @@ namespace NiN.Infrastructure.Services
             }
             else
             {
-                WriteToFile("Objecttype <<Hovedtypegruppe>> allready has data!");
+                this._logger.LogInformation("Objecttype <<Hovedtypegruppe>> allready has data!");
             }
         }
 
@@ -238,7 +237,7 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadHovedtypeData()
         {
-            WriteToFile("\n\n********  LoadHovedtypeData");
+            this._logger.LogInformation("\n\n********  LoadHovedtypeData");
             if (_context.Hovedtype.Count() == 0)
             {
                 var hovedtyper = CsvdataImporter_Hovedtype.ProcessCSV("in_data/csvfiles/hovedtype.csv");
@@ -266,14 +265,14 @@ namespace NiN.Infrastructure.Services
                     }
                     catch (Exception ex)
                     {
-                        WriteToFile($"Error: problem persisting hovedtype: {ht.Kode}:{ht.Hovedtypenavn}, msg:{ex.Message}, {ex.InnerException?.Message}");
+                        this._logger.LogInformation($"Error: problem persisting hovedtype: {ht.Kode}:{ht.Hovedtypenavn}, msg:{ex.Message}, {ex.InnerException?.Message}");
                     }
                 }
                 _context.SaveChanges();
             }
             else
             {
-                WriteToFile("Objecttype <<Hovedtype>> allready has data!");
+                this._logger.LogInformation("Objecttype <<Hovedtype>> allready has data!");
             }
         }
 
@@ -283,7 +282,7 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadGrunntypedata()
         {
-            WriteToFile("\n\n********  LoadGrunntypedata");
+            this._logger.LogInformation("\n\n********  LoadGrunntypedata");
             if (_context.Grunntype.Count() == 0)
             {
                 //todo-sat: do impl. 
@@ -314,21 +313,21 @@ namespace NiN.Infrastructure.Services
                     else {
                         var htkode = hovedtype != null ? hovedtype.Kode : "";
                         var htgkode = hovedtypegruppe != null ? hovedtypegruppe.Kode : "";
-                        WriteToFile($"Grunntype: Relations missing; grunntype:{gt.Kode}, hovedtype:{htkode}, hovedtypegruppe: {htgkode}, grunntype not added!");
+                        this._logger.LogInformation($"Grunntype: Relations missing; grunntype:{gt.Kode}, hovedtype:{htkode}, hovedtypegruppe: {htgkode}, grunntype not added!");
                     }
                 }
                 _context.SaveChanges();
             }
             else
             {
-                WriteToFile("Objecttype <<Grunntype>> allready has data!");
+                this._logger.LogInformation("Objecttype <<Grunntype>> allready has data!");
             }
         }
 
 
         public void LoadKartleggingsenhet_m005()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_m005");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_m005");
             var m005list = CsvdataImporter_m005.ProcessCSV("in_data/csvfiles/m005.csv");
             // If M005 table is empty
             if (_context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M005).Count() == 0)
@@ -350,7 +349,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M005_Grunntype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M005_Grunntype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M005_Grunntype");
             var m005list = _context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M005).ToList();
             var gtList = _context.Grunntype.ToList();
             var m005_gtList = CsvdataImporter_m005_grunntype_mapping.ProcessCSV("in_data/csvfiles/m005_grunntype_mapping.csv");
@@ -368,7 +367,7 @@ namespace NiN.Infrastructure.Services
                     _context.Add(kl_gt_obj);
                 }
                 else {
-                    WriteToFile($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE: {kl_gt.m005kode}");
+                    this._logger.LogInformation($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE: {kl_gt.m005kode}");
                 }
                 //Find M005
             }
@@ -377,7 +376,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M005_hovedtype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M005_hovedtype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M005_hovedtype");
             //Getting csv with unique combinations of Hovedtype.kortkode and m050.Langkode
             var m005_gtList = CsvdataImporter_m005_hovedtype_mapping.ProcessCSV("in_data/csvfiles/m005_hovedtype_mapping.csv");
             var hovedtypeList = _context.Hovedtype.ToList();
@@ -401,7 +400,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE(M005): {kl_ht.m005kode}");
+                    this._logger.LogInformation($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE(M005): {kl_ht.m005kode}");
                 }
             }
             _context.SaveChanges();
@@ -409,7 +408,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_m020()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_m020");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_m020");
             var m020list = CsvdataImporter_m020.ProcessCSV("in_data/csvfiles/m020.csv");
             // If M005 table is empty
             if (_context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M020).Count() == 0)
@@ -433,7 +432,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M020_Grunntype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M020_Grunntype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M020_Grunntype");
             var m020list = _context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M020).ToList();
             var gtList = _context.Grunntype.ToList();
             var m020_gtList = CsvdataImporter_m020_grunntype_mapping.ProcessCSV("in_data/csvfiles/m020_grunntype_mapping.csv");
@@ -453,7 +452,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE(M020): {kl_gt.m020kode}");
+                    this._logger.LogInformation($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE(M020): {kl_gt.m020kode}");
                 }
             }
             _context.SaveChanges();
@@ -461,7 +460,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M020_hovedtype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M020_hovedtype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M020_hovedtype");
             //Getting csv with unique combinations of Hovedtype.kortkode and m050.Langkode
             var m020_gtList = CsvDataImporter_m020_hovedtype_mapping.ProcessCSV("in_data/csvfiles/m020_hovedtype_mapping.csv");
             var hovedtypeList = _context.Hovedtype.ToList();
@@ -485,7 +484,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M020): {kl_ht.m020kode}");
+                    this._logger.LogInformation($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M020): {kl_ht.m020kode}");
                 }
             }
             _context.SaveChanges();
@@ -493,7 +492,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M050()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M050");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M050");
             var m050list = CsvdataImporter_m050.ProcessCSV("in_data/csvfiles/m050.csv");
             if (_context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M050).Count() == 0)
             {
@@ -516,7 +515,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M050_Grunntype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M050_Grunntype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M050_Grunntype");
             var m050list = _context.Kartleggingsenhet.Where(k => k.Maalestokk == NiN3.Core.Models.Enums.MaalestokkEnum.M050).ToList();
             var gtList = _context.Grunntype.ToList();
             var m050_gtList = CsvdataImporter_m050_grunntype_mapping.ProcessCSV("in_data/csvfiles/m050_grunntype_mapping.csv");
@@ -536,7 +535,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE (M050): {kl_gt.m050kode}");
+                    this._logger.LogInformation($"Cant find both GT:'{kl_gt.Grunntype_kode}' and KLE (M050): {kl_gt.m050kode}");
                 }
             }
             _context.SaveChanges();
@@ -544,7 +543,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKartleggingsenhet_M050_Hovedtype()
         {
-            WriteToFile("\n\n********  LoadKartleggingsenhet_M050_Hovedtype");
+            this._logger.LogInformation("\n\n********  LoadKartleggingsenhet_M050_Hovedtype");
             //Getting csv with unique combinations of Hovedtype.kortkode and m050.Langkode
             var m050_gtList = CsvdataImporter_m050_hovedtype_mapping.ProcessCSV("in_data/csvfiles/m050_hovedtype_mapping.csv");
             var hovedtypeList = _context.Hovedtype.ToList();
@@ -568,7 +567,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M050): {kl_ht.m050kode}");
+                    this._logger.LogInformation($"Cant find both HT:'{kl_ht.Hovedtype_kode}'[{ht?.Navn}] and KLE (M050): {kl_ht.m050kode}");
                 }
             }
             _context.SaveChanges();
@@ -584,7 +583,7 @@ namespace NiN.Infrastructure.Services
         /// </summary>
         public void LoadHovedtypegruppeHovedoekosystemer()
         {
-            WriteToFile("\n\n********  LoadHovedtypegruppeHovedoekosystemer");
+            this._logger.LogInformation("\n\n********  LoadHovedtypegruppeHovedoekosystemer");
             //Setting Hovedoekosystem for hovedtypegrupper that is part of the Natursystem and Livsmedium type (skip other hovedtypegrupper)
             var hovedtypegrupper = _context.Hovedtypegruppe
                 .Where(h => h.Type.Navn.Contains("Natursystem") || h.Type.Navn.Contains("Livsmedium"))
@@ -746,7 +745,7 @@ namespace NiN.Infrastructure.Services
         //load variabel 
         public List<Variabel> LoadVariabel()
         {
-            WriteToFile("\n\n********  LoadVariabel");
+            this._logger.LogInformation("\n\n********  LoadVariabel");
             //parse csv file
             var variabelList = CsvDataImporter_Variabel.ProcessCSV("in_data/csvfiles/variabel.csv");
             var loadedVariabels = new List<Variabel>();
@@ -775,7 +774,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadVariabelnavn()
         {
-            WriteToFile("\n\n********  LoadVariabelnavn");
+            this._logger.LogInformation("\n\n********  LoadVariabelnavn");
             //parse csv file
             var variabelList = CsvdataImporter_Variabelnavn.ProcessCSV("in_data/csvfiles/variabelnavn_variabel_mapping.csv");
             var loadedVariabelnavn = new List<Variabelnavn>();
@@ -802,7 +801,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadMaaleskala()
         {
-            WriteToFile("\n\n********  LoadMaaleskala");
+            this._logger.LogInformation("\n\n********  LoadMaaleskala");
             var MaaleskalaList = CsvdataImporter_maaleskala_enhet.ProcessCSV("in_data/csvfiles/maaleskala_enhet.csv");
             foreach (var m in MaaleskalaList)
             {
@@ -819,7 +818,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadTrinn()
         {
-            WriteToFile("\n\n********  LoadTrinn");
+            this._logger.LogInformation("\n\n********  LoadTrinn");
             //TODO: change lookup on maaleskala with maaleskalanavn instead of enum
             //Loop csvdata and add trinn to trinn-class/db
             var trinnList = CsvDataImporter_MaaleskalaTrinn.ProcessCSV("in_data/csvfiles/maaleskala_trinn.csv");
@@ -844,7 +843,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
+                    this._logger.LogInformation(t.Maaleskalanavn + " not found " + $"trinn was {t.Trinn}: {t.Trinnverdi}");
                 }
                 _context.SaveChanges();
             }
@@ -852,7 +851,7 @@ namespace NiN.Infrastructure.Services
 
         public void MakeMaaleskalaMappingForVariabelnavn()
         {
-            WriteToFile("\n\n********  MakeMaaleskalaMappingForVariabelnavn");
+            this._logger.LogInformation("\n\n********  MakeMaaleskalaMappingForVariabelnavn");
             var variabelnavn_maaleskalaList = CsvdataImporter_Variabelnavn_maaleskala.ProcessCSV("in_data/csvfiles/variabelnavn_maaleskala_mapping.csv");
             foreach (var vm in variabelnavn_maaleskalaList)
             {
@@ -872,7 +871,7 @@ namespace NiN.Infrastructure.Services
                 }
                 else
                 {
-                    WriteToFile($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
+                    this._logger.LogInformation($"Maaleskala or Variabelnavn not found for vn: {vm.VaribelnavnKode}, ms: {vm.Maaleskalanavn}");
                 }
                 // create VariabelnavnMaaleskala object
                 // add to db
@@ -883,7 +882,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadGrunntypeVariabeltrinnMapping()
         {
-            WriteToFile("\n\n********  LoadGrunndataVariabeltrinnMapping");
+            this._logger.LogInformation("\n\n********  LoadGrunndataVariabeltrinnMapping");
             var grunntypeVariabeltrinnList = CsvDataImporter_grunntype_variabeltrinn.ProcessCSV("in_data/csvfiles/grunntype_variabeltrinn_mapping.csv");
             foreach (var grunntypeVariabeltrinn in grunntypeVariabeltrinnList)
             {
@@ -909,7 +908,7 @@ namespace NiN.Infrastructure.Services
                 {
                     var msg = $@"Could not find one of the following:
                     grunntype: {grunntypeVariabeltrinn.grunntype_kode}, maaleskala: {grunntypeVariabeltrinn.varkode2}-SO or {grunntypeVariabeltrinn.varkode2}-SI, trinn: {grunntypeVariabeltrinn.trinn}";
-                    WriteToFile(msg);
+                    this._logger.LogInformation(msg);
                 }
             }
             _context.SaveChanges();
@@ -917,7 +916,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadHovedtypeVariabeltrinnMapping()
         {
-            WriteToFile("\n\n********  LoadHovedtypeVariabeltrinnMapping");
+            this._logger.LogInformation("\n\n********  LoadHovedtypeVariabeltrinnMapping");
             var hovedtypeVariabeltrinnList = CsvdataImporter_Hovedtype_variabeltrinn.ProcessCSV("in_data/csvfiles/hovedtype_variabeltrinn_mapping.csv");
             foreach (var hovedtypeVariabeltrinn in hovedtypeVariabeltrinnList)
             {
@@ -942,14 +941,14 @@ namespace NiN.Infrastructure.Services
                 {
                     var msg = $@"Could not find one of the following:
                     hovedtype: {hovedtypeVariabeltrinn.hovedtype_kode}[{hovedtype.Navn}], maaleskala: {hovedtypeVariabeltrinn.varkode2}-SO or {hovedtypeVariabeltrinn.varkode2}-SI,trinn: {hovedtypeVariabeltrinn.trinn}";
-                    WriteToFile(msg);
+                    this._logger.LogInformation(msg);
                 }
             }
         }
 
         public void LoadKonverteringHovedtypegruppe()
         {
-            WriteToFile("\n\n********  LoadKonverteringHovedtypegruppe");
+            this._logger.LogInformation("\n\n********  LoadKonverteringHovedtypegruppe");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
             var htgKonvList = CsvDataImporter_konvertering_hovedtypegruppe.ProcessCSV("in_data/csvfiles/konvertering_htg_v30.csv");
@@ -975,7 +974,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKonverteringHovedtype()
         {
-            WriteToFile("\n\n********  LoadKonverteringHovedtype");
+            this._logger.LogInformation("\n\n********  LoadKonverteringHovedtype");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
             var htKonvList = CsvDataImporter_konvertering_hovedtype.ProcessCSV("in_data/csvfiles/konvertering_ht_v30.csv");
@@ -1001,7 +1000,7 @@ namespace NiN.Infrastructure.Services
 
         public void LoadKonverteringGrunntype()
         {
-            WriteToFile("\n\n********  LoadKonverteringGrunntype");
+            this._logger.LogInformation("\n\n********  LoadKonverteringGrunntype");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
             var gtKonvList = CsvdataImporter_konvertering_grunntype.ProcessCSV("in_data/csvfiles/konvertering_gt_v30.csv");
@@ -1026,7 +1025,7 @@ namespace NiN.Infrastructure.Services
 
 
         public void LoadKonverteringVariabelnavn() {
-            WriteToFile("\n\n********  LoadKonverteringVariabelnavn");
+            this._logger.LogInformation("\n\n********  LoadKonverteringVariabelnavn");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
             var vnKonvList = CsvDataImporter_konvertering_variabelnavn.ProcessCSV("in_data/csvfiles/konvertering_vn_v30.csv");
@@ -1050,7 +1049,7 @@ namespace NiN.Infrastructure.Services
         }
 
         public void LoadKonverteringTrinn() { 
-            WriteToFile("\n\n********  LoadKonverteringTrinn");
+            this._logger.LogInformation("\n\n********  LoadKonverteringTrinn");
             var forrigeVersjon = _context.Versjon.FirstOrDefault(v => v.Navn == "2.3");
             var versjon = _context.Versjon.FirstOrDefault(v => v.Navn == "3.0");
             var trinnKonvList = CsvDataImporter_konvertering_trinn.ProcessCSV("in_data/csvfiles/konvertering_trinn_v30.csv");
@@ -1077,7 +1076,7 @@ namespace NiN.Infrastructure.Services
         /********* Loadings for RapportService *********/
         public void LoadEndringslogg()
         {
-            WriteToFile("\n\n********  LoadEndringslogg");
+            this._logger.LogInformation("\n\n********  LoadEndringslogg");
             var endringsloggList = CsvDataImporter_Endringslogg.ProcessCSV("in_data/csvfiles/endringslogg.csv");
             foreach (var el in endringsloggList)
             {
@@ -1387,32 +1386,6 @@ public void CreateDuplikateLangkoderView() {
         {
             var sql = @"INSERT INTO db_info (Tittel, Verdi) VALUES ('Opprettet', strftime('%Y%m%d_%H%M%S', 'now', 'localtime'))";
             _context.Database.ExecuteSqlRaw(sql);
-        }
-
-        //function that receives string and writes to file on C:\temp
-        public void WriteToFile(string text)
-        {
-            Console.WriteLine(text);
-            //getstring from current datetime in format yyyyMMddHHmmss
-            //string datetime = DateTime.Now.ToString("yyyyMMddHHmmss");            
-            // This text is added only once to the file.
-            if (!File.Exists(logpath))
-            {
-                // Create a file to write to.
-                using (StreamWriter sw = File.CreateText(logpath))
-                {
-                    sw.WriteLine(text);
-                }
-            }
-            else
-            {
-                // This text is always added, making the file longer over time
-                // if it is not deleted.
-                using (StreamWriter sw = File.AppendText(logpath))
-                {
-                    sw.WriteLine(text);
-                }
-            }   
         }
     }
 }
