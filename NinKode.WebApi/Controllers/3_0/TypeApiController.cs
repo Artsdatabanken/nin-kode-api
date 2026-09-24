@@ -45,9 +45,9 @@ namespace NiN3.WebApi.Controllers
         //[OutputCache(Duration = 0/*_cacheDuration*/)]// 24 timer // almost no use in serverside-cache here,
         //browser side rendering is the penalty here
         [ProducesResponseType(typeof(IEnumerable<VersjonDto>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync(string typeName = null)
         {
-            var versjon = await _typeApiService.AllCodesAsync("3.0");
+            var versjon = await _typeApiService.AllCodesAsync("3.0",typeName);
             Response.Headers.Add("Cache-Control", "max-age=3600");
             return Ok(versjon);
         }
