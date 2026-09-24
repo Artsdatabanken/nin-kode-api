@@ -33,31 +33,45 @@ namespace NiN3.Infrastructure.Services
         /// Retrieves all codes for a given version.
         /// </summary>
         /// <param name="versjon">The version to retrieve codes for.</param>
+        /// <param name="typename">The name of type to filter result.</param>
         /// <returns>A VersjonDto containing all codes for the given version.</returns>
-        public async Task<VersjonDto> AllCodesAsync(string versjon)
+        public async Task<VersjonDto> AllCodesAsync(string versjon, string typename)
         {
             var mapper = NiNkodeMapper.Instance;
-            //var typer =  await _context.Type.ToListAsync();
-           
-            Versjon version = await _context.Versjon.Where(v => v.Navn == versjon)
-                .Include(v => v.Typer.OrderBy(t => t.Langkode))
-                .ThenInclude(type => type.Hovedtypegrupper.OrderBy(htg => htg.Langkode))
-                .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedtyper.OrderBy(ht => ht.Langkode))
-                .ThenInclude(hovedtype => hovedtype.Grunntyper.OrderBy(t => t.Langkode))
-                .Include(v => v.Typer)
-                .ThenInclude(type => type.Hovedtypegrupper)
-                .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedtyper)
-                .ThenInclude(hovedtype => hovedtype.Hovedtype_Kartleggingsenheter)
-                .ThenInclude(Hovedtype_Kartleggingsenheter => Hovedtype_Kartleggingsenheter.Kartleggingsenhet)
-                .ThenInclude(kartleggingsenhet => kartleggingsenhet.Grunntyper)
-                .Include(v => v.Typer.OrderBy(t => t.Langkode))
-                .ThenInclude(type => type.Hovedtypegrupper.OrderBy(htg => htg.Langkode))
-                .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedoekosystemer)
+            var query = _context.Versjon
                 .AsNoTracking()
-                .FirstAsync();
+                .AsSplitQuery();   
+            
+            if (!string.IsNullOrEmpty(typename))
+            {
+                query = query.Include(v => v.Typer.Where(t => t.Navn == typename).OrderBy(t => t.Langkode))
+                .ThenInclude(type => type.Hovedtypegrupper.OrderBy(htg => htg.Langkode))
+                    .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedtyper.OrderBy(ht => ht.Langkode))
+                    .ThenInclude(hovedtype => hovedtype.Grunntyper.OrderBy(t => t.Langkode));
 
-            return mapper.Map(version);
-            //return _mapper.Map<VersjonDto>(version);
+            }
+            else
+            {
+                query = query.Include(v => v.Typer.OrderBy(t => t.Langkode))
+                    .ThenInclude(type => type.Hovedtypegrupper.OrderBy(htg => htg.Langkode))
+                    .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedtyper.OrderBy(ht => ht.Langkode))
+                    .ThenInclude(hovedtype => hovedtype.Grunntyper.OrderBy(t => t.Langkode));
+
+            }
+
+            Versjon version = await query
+                .Include(v => v.Typer)
+                    .ThenInclude(type => type.Hovedtypegrupper)
+                    .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedtyper)
+                    .ThenInclude(hovedtype => hovedtype.Hovedtype_Kartleggingsenheter)
+                    .ThenInclude(Hovedtype_Kartleggingsenheter => Hovedtype_Kartleggingsenheter.Kartleggingsenhet)
+                    .ThenInclude(kartleggingsenhet => kartleggingsenhet.Grunntyper)
+                .Include(v => v.Typer)
+                    .ThenInclude(type => type.Hovedtypegrupper)
+                    .ThenInclude(hovedtypegruppe => hovedtypegruppe.Hovedoekosystemer)
+                .FirstAsync(v => v.Navn == versjon);
+
+            return mapper.Map(version);    
         }
 
         public TypeDto GetTypeByKortkode(string kode, string versjon) {

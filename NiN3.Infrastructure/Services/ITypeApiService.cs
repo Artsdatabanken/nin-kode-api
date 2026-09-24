@@ -5,7 +5,7 @@ namespace NiN3.Infrastructure.Services
 {
     public interface ITypeApiService
     {
-        public Task<VersjonDto> AllCodesAsync(string versjon);
+        public Task<VersjonDto> AllCodesAsync(string versjon, string typeName);
         public KlasseDto GetTypeklasse(string kortkode, string versjon);
 
         public TypeDto GetTypeByKortkode(string kortkode, string versjon);
