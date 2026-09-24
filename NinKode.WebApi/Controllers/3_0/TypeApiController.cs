@@ -48,7 +48,7 @@ namespace NiN3.WebApi.Controllers
         public async Task<IActionResult> GetAllAsync(string typeName = null)
         {
             var versjon = await _typeApiService.AllCodesAsync("3.0",typeName);
-            //Response.Headers.Add("Cache-Control", "max-age=3600");
+            Response.Headers.Add("Cache-Control", "max-age=3600");
             return Ok(versjon);
         }
 
