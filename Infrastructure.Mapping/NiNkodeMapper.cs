@@ -74,7 +74,7 @@ namespace NiN3.Infrastructure.Mapping
             }*/
             if (versjon.Typer?.Count > 0)
             {
-                var typerList = versjon.Typer //.AsParallel()
+                var typerList = versjon.Typer //.AsParallel() Trengs det???????
                     .Select(Map)
                     .OrderBy(t => t.Kode.Id)
                     .ToList();
