@@ -45,9 +45,9 @@ namespace NiN3.WebApi.Controllers
         //[OutputCache(Duration = 0/*_cacheDuration*/)]// 24 timer // almost no use in serverside-cache here,
         //browser side rendering is the penalty here
         [ProducesResponseType(typeof(IEnumerable<VersjonDto>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync(string typeName = null)
         {
-            var versjon = await _typeApiService.AllCodesAsync("3.0");
+            var versjon = await _typeApiService.AllCodesAsync("3.0",typeName);
             Response.Headers.Add("Cache-Control", "max-age=3600");
             return Ok(versjon);
         }
@@ -148,14 +148,55 @@ namespace NiN3.WebApi.Controllers
         [HttpGet]
         [Route("kodeforKartleggingsenhet/{kortkode}")]
         [ProducesResponseType(typeof(IEnumerable<KartleggingsenhetDto>), StatusCodes.Status200OK)]
-        public IActionResult hentkodeForKartleggingsenhet([Required] string kortkode = "LA01-M005-13")
+        public IActionResult hentkodeForKartleggingsenhet([Required] string kortkode = "LA01-M005-13", [FromQuery] bool includeHierarchy = false)
         {
-            var kartleggingsenhet = _typeApiService.GetKartleggingsenhetByKortkode(kortkode, _versjon);
+            var kartleggingsenhet = _typeApiService.GetKartleggingsenhetByKortkode(kortkode, _versjon, includeHierarchy);
             if (kartleggingsenhet != null)
             {
                 return Ok(kartleggingsenhet);
             }
             return NotFound("Ugyldig kortkode");
         }
+
+        [HttpGet]
+        [Route("kodeforKartleggingsenhet/{kortkode}/hierarchy")]
+        [ProducesResponseType(typeof(KartleggingsenhetDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult HentKodeForKartleggingsenhetWithHierarchy([Required] string kortkode = "LA01-M005-13")
+        {
+            var kartleggingsenhet = _typeApiService.GetAllKartleggingsenheterByKortkode(kortkode, _versjon, true);
+            if (kartleggingsenhet != null)
+            {
+                return Ok(kartleggingsenhet);
+            }
+            return NotFound("Ugyldig kortkode");
+        }
+
+        [HttpGet]
+        [Route("kartleggingsenheter")]
+        [ProducesResponseType(typeof(IEnumerable<KartleggingsenhetDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetKartleggingsenheter(
+            [FromQuery] string scale = null,
+            [FromQuery] bool includeHierarchy = false,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 100)
+        {
+            if (!string.IsNullOrEmpty(scale) && !IsValidScale(scale))
+            {
+                return BadRequest($"Invalid scale. Valid values are: M005, M010, M020, M050, M100 (or 1:5000, 1:10000, 1:20000, 1:50000, 1:100000)");
+            }
+
+            var kartleggingsenheter = _typeApiService.GetKartleggingsenheter(_versjon, scale, includeHierarchy, page, pageSize);
+            return Ok(kartleggingsenheter);
+        }
+
+        private bool IsValidScale(string scale)
+        {
+            var validScales = new[] { "M005", "M010", "M020", "M050", "M100", "1:5000", "1:10000", "1:20000", "1:50000", "1:100000" };
+            return validScales.Contains(scale, StringComparer.OrdinalIgnoreCase);
+        }
+
+
     }
 }

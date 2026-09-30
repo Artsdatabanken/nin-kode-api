@@ -14,5 +14,7 @@ namespace NiN3.Core.Models.DTOs.type
         //public string Kode { get; set; }
         //public string Kortkode { get; set; }
         public ICollection<GrunntypeDto> Grunntyper { get; set; } = new List<GrunntypeDto>();
+        public KartleggingsenhetDto? Parent { get; set; }
+        public ICollection<KartleggingsenhetDto> Children { get; set; } = new List<KartleggingsenhetDto>();
     }
 }
