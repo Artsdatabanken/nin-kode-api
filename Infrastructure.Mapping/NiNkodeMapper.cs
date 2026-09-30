@@ -72,19 +72,17 @@ namespace NiN3.Infrastructure.Mapping
                 Parallel.ForEach(versjon.Typer, t => typerBag.Add(Map(t)));
                 versjonDto.Typer = typerBag.ToList().OrderBy(t => t.Kode.Id).ToList();
             }*/
-            if (versjon.Typer != null && versjon.Typer.Any())
+            if (versjon.Typer?.Count > 0)
             {
-                var typerList = versjon.Typer.AsParallel()
-                    .Select(t => Map(t))
+                var typerList = versjon.Typer //.AsParallel() Trengs det???????
+                    .Select(Map)
                     .OrderBy(t => t.Kode.Id)
                     .ToList();
                 versjonDto.Typer = typerList;
             }
 
-
-
             // Create a ConcurrentBag for mapped Variabler
-            if (versjon.Variabler != null && versjon.Variabler.Any())
+            if (versjon.Variabler?.Count > 0)
             {
                 var variablerBag = new ConcurrentBag<VariabelDto>();
                 Parallel.ForEach(versjon.Variabler, v => variablerBag.Add(Map(v)));
