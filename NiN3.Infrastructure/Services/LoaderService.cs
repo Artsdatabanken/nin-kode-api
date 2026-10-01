@@ -83,13 +83,14 @@ namespace NiN.Infrastructure.Services
                 LoadHtg_Ht_Gt_Mappings();
                 LoadHovedtypeData();
                 LoadGrunntypedata();
+                LoadKartleggingsenhet_M050();
+                LoadKartleggingsenhet_m020();
                 LoadKartleggingsenhet_m005();
+                EstablishKartleggingsenhetHierarchy();
                 LoadKartleggingsenhet_M005_Grunntype();
                 LoadKartleggingsenhet_M005_hovedtype();
-                LoadKartleggingsenhet_m020();
                 LoadKartleggingsenhet_M020_Grunntype();
                 LoadKartleggingsenhet_M020_hovedtype();
-                LoadKartleggingsenhet_M050();
                 LoadKartleggingsenhet_M050_Grunntype();
                 LoadKartleggingsenhet_M050_Hovedtype();
                 LoadVariabel();
@@ -511,6 +512,191 @@ namespace NiN.Infrastructure.Services
                 }
                 _context.SaveChanges();
             }
+        }
+
+        /// <summary>
+        /// Establishes parent-child relationships between kartleggingsenheter based on hierarchical codes
+        /// M050 -> M020 -> M005 hierarchy
+        /// </summary>
+        public void EstablishKartleggingsenhetHierarchy()
+        {
+            WriteToFile("\n\n********  EstablishKartleggingsenhetHierarchy");           
+            var allKartleggingsenheter = _context.Kartleggingsenhet.ToList();
+            var m050Items = allKartleggingsenheter.Where(k => k.Maalestokk == MaalestokkEnum.M050).ToList();
+            var m020Items = allKartleggingsenheter.Where(k => k.Maalestokk == MaalestokkEnum.M020).ToList();
+            var m005Items = allKartleggingsenheter.Where(k => k.Maalestokk == MaalestokkEnum.M005).ToList();
+
+            if (m050Items.Any()) 
+            {
+                WriteToFile($"Sample M050 codes: {string.Join(", ", m050Items.Take(3).Select(i => i.Kode))}");
+                WriteToFile($"Sample M050 langkodes: {string.Join(", ", m050Items.Take(3).Select(i => i.Langkode))}");
+            }
+            if (m020Items.Any()) 
+            {
+                WriteToFile($"Sample M020 codes: {string.Join(", ", m020Items.Take(3).Select(i => i.Kode))}");
+                WriteToFile($"Sample M020 langkodes: {string.Join(", ", m020Items.Take(3).Select(i => i.Langkode))}");
+            }
+            if (m005Items.Any()) 
+            {
+                WriteToFile($"Sample M005 codes: {string.Join(", ", m005Items.Take(3).Select(i => i.Kode))}");
+                WriteToFile($"Sample M005 langkodes: {string.Join(", ", m005Items.Take(3).Select(i => i.Langkode))}");
+            }
+
+            int hierarchyUpdates = 0;
+
+            foreach (var m020Item in m020Items)
+            {
+                var potentialParent = m050Items.FirstOrDefault(m050 => 
+                    ShouldBeChild(m020Item, m050));
+                
+                if (potentialParent != null)
+                {
+                    m020Item.ParentId = potentialParent.Id;
+                    hierarchyUpdates++;
+                    WriteToFile($"Set parent for {m020Item.Kode} [{m020Item.Navn}] -> {potentialParent.Kode} [{potentialParent.Navn}]");
+                }
+                else
+                {                  
+                    var baseCode = ExtractBaseCode(m020Item);
+                    var potentialParents = m050Items.Where(m050 => ExtractBaseCode(m050) == baseCode).ToList();
+                    if (potentialParents.Any())
+                    {
+                        WriteToFile($"DEBUG: {m020Item.Kode} has matching base code parents but hierarchy check failed: {string.Join(", ", potentialParents.Select(p => p.Kode))}");
+                    }
+                    else
+                    {
+                        WriteToFile($"DEBUG: No M050 parent found with matching base code for {m020Item.Kode} (base: {baseCode})");
+                    }
+                }
+            }
+
+            foreach (var m005Item in m005Items)
+            {
+                var potentialParent = m020Items.FirstOrDefault(m020 => 
+                    ShouldBeChild(m005Item, m020));
+                
+                if (potentialParent != null)
+                {
+                    m005Item.ParentId = potentialParent.Id;
+                    hierarchyUpdates++;
+                    WriteToFile($"Set parent for {m005Item.Kode} [{m005Item.Navn}] -> {potentialParent.Kode} [{potentialParent.Navn}]");
+                }
+                else
+                {
+                    var baseCode = ExtractBaseCode(m005Item);
+                    var potentialParents = m020Items.Where(m020 => ExtractBaseCode(m020) == baseCode).ToList();
+                    if (potentialParents.Any())
+                    {
+                        WriteToFile($"DEBUG: {m005Item.Kode} has matching base code parents but hierarchy check failed: {string.Join(", ", potentialParents.Select(p => p.Kode))}");
+                    }
+                    else
+                    {
+                        WriteToFile($"DEBUG: No M020 parent found with matching base code for {m005Item.Kode} (base: {baseCode})");
+                    }
+                }
+            }
+
+            WriteToFile($"Total hierarchy relationships established: {hierarchyUpdates}");
+            _context.SaveChanges();
+        }
+     
+        private string ExtractBaseCode(Kartleggingsenhet kartleggingsenhet)
+        {
+            if (kartleggingsenhet == null) return string.Empty;
+
+            var baseFromKode = ExtractBaseCodeFromString(kartleggingsenhet.Kode);
+            if (!string.IsNullOrEmpty(baseFromKode))
+            {
+                return baseFromKode;
+            }
+            
+            return ExtractBaseCodeFromString(kartleggingsenhet.Langkode);
+        }
+        
+        /// <summary>
+        /// Extracts the base code from a code string for hierarchy matching
+        /// Examples: 
+        /// - "MA03-M020-03" -> "MA03"
+        /// - "NiN-3.0-T-C-PE-NA-MB-VC01-M005-03" -> "VC01" 
+        /// - "IA01-M005-01" -> "IA01"
+        /// </summary>
+        private string ExtractBaseCodeFromString(string code)
+        {
+            if (string.IsNullOrEmpty(code)) return string.Empty;
+            
+            var parts = code.Split('-');
+            
+            // Handle the common pattern like "MA03-M020-03" or "MA04-M020-01"
+            if (parts.Length >= 3 && parts[1].StartsWith("M0"))
+            {
+                return parts[0]; // Return "MA03", "MA04", etc.
+            }
+            
+            // Handle long format codes like "NiN-3.0-T-C-PE-NA-MB-VC01-M005-03"
+            if (parts.Length >= 8)
+            {
+                // Look for the part just before the scale (M005, M020, M050)
+                for (int i = 0; i < parts.Length - 1; i++)
+                {
+                    if (parts[i + 1].StartsWith("M0"))
+                    {
+                        return parts[i]; // Return the part before the scale
+                    }
+                }
+                // Fallback: return part at index 7 if pattern doesn't match
+                if (parts.Length > 7) return parts[7];
+            }
+            // Handle short format codes like "IA01-M005-01"
+            else if (parts.Length >= 2)
+            {
+                return parts[0]; // Return the first part (e.g., "IA01", "LA01", etc.)
+            }
+            
+            return code;
+        }
+
+        /// <summary>
+        /// Determines if a child kartleggingsenhet should be a child of a parent based on code patterns
+        /// More sophisticated matching than just base code - considers hierarchical granularity
+        /// </summary>
+        private bool ShouldBeChild(Kartleggingsenhet potentialChild, Kartleggingsenhet potentialParent)
+        {
+            if (potentialChild == null || potentialParent == null) return false;
+            
+            var childBaseCode = ExtractBaseCode(potentialChild);
+            var parentBaseCode = ExtractBaseCode(potentialParent);
+            
+            // Must have same base code pattern
+            if (childBaseCode != parentBaseCode) return false;
+            
+            // Parent must be at a higher (less detailed) scale - higher enum values are less detailed
+            // M005 (0) < M020 (2) < M050 (3), so parent should have higher enum value
+            if (potentialParent.Maalestokk <= potentialChild.Maalestokk) return false;
+            
+            // For hierarchy to be valid, we need direct parent-child relationship
+            // M005 -> M020, M020 -> M050
+            if (potentialChild.Maalestokk == MaalestokkEnum.M005 && potentialParent.Maalestokk != MaalestokkEnum.M020)
+                return false;
+            if (potentialChild.Maalestokk == MaalestokkEnum.M020 && potentialParent.Maalestokk != MaalestokkEnum.M050)
+                return false;
+            
+            // Additional logic: check if names are compatible or child is more specific
+            if (!string.IsNullOrEmpty(potentialChild.Navn) && !string.IsNullOrEmpty(potentialParent.Navn))
+            {
+                // If parent name is contained in child name, it's likely a valid hierarchy
+                var parentNameWords = potentialParent.Navn.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                var childNameLower = potentialChild.Navn.ToLower();
+                
+                // Check if most parent name words appear in child name
+                var matchingWords = parentNameWords.Count(word => childNameLower.Contains(word));
+                if (matchingWords >= parentNameWords.Length * 0.6) // 60% word match threshold
+                {
+                    return true;
+                }
+            }
+            
+            // Fallback: if base codes match and scale is appropriate, assume hierarchy
+            return true;
         }
 
 

@@ -15,6 +15,7 @@
     <PackageReference Include="EPPlus" Version="8.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="6.0.3" />
     <PackageReference Include="Sharprompt" Version="3.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">

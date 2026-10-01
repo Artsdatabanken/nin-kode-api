@@ -4,38 +4,21 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using NiN.Infrastructure.Services;
 using NiN3.Infrastructure.DbContexts;
+
+using NLog.Config;
+using NLog.Extensions.Logging;
+
 using Sharprompt;
 // See https://aka.ms/new-console-template for more information
 
-//IConfiguration config;
+// IConfiguration config;
 NiN3DbContext db = null;
 
 IConfiguration config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
 
-string builtDbFileFullPath()
-{
-    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
-    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
-    return $"{dbRootPath}{relativeDbPath}";
-};
 
-string buildWebApiDbPath()
-{
-    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
-    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
-    return $"{rootFolder}{relativeWebApiPath}";
-};
-
-void LoadDB()
-{
-    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
-    var connectionString = builtDbFileFullPath();
-    optionsBuilder.UseSqlite($"Data Source={connectionString}");
-    db = new NiN3DbContext(optionsBuilder.Options);
-    var test = db.Database.EnsureCreated();
-}
 var builtDbFileName = config.GetValue<string>("builtDbFileName");
 
 using var loggerFactory = LoggerFactory.Create(builder =>
@@ -44,7 +27,8 @@ using var loggerFactory = LoggerFactory.Create(builder =>
         .AddFilter("Microsoft", LogLevel.Warning)
         .AddFilter("System", LogLevel.Warning)
         .AddFilter("NonHostConsoleApp.Program", LogLevel.Debug)
-        .AddConsole();
+        .AddConsole()
+        .AddNLog();
 });
 ILogger logger = loggerFactory.CreateLogger<Program>();
 ILogger<LoaderService> _logger = loggerFactory.CreateLogger<LoaderService>();
@@ -150,4 +134,32 @@ while (run)
             Console.WriteLine(meny);
             break;
     }
+}
+
+return;
+
+string builtDbFileFullPath()
+{
+    var relativeDbPath = config.GetValue<string>("builtDBFilePath");
+    var dbRootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName);
+    var dbFileFullPath = $"{dbRootPath}{relativeDbPath}";
+    var dbDirectory = Path.GetDirectoryName(dbFileFullPath);
+    Directory.CreateDirectory(dbDirectory);
+    return dbFileFullPath;
+}
+
+string buildWebApiDbPath()
+{
+    var relativeWebApiPath = config.GetValue<string>("webapiDBpath");
+    var rootFolder = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName);
+    return $"{rootFolder}{relativeWebApiPath}";
+}
+
+void LoadDB()
+{
+    var optionsBuilder = new DbContextOptionsBuilder<NiN3DbContext>();
+    var connectionString = builtDbFileFullPath();
+    optionsBuilder.UseSqlite($"Data Source={connectionString}");
+    db = new NiN3DbContext(optionsBuilder.Options);
+    var test = db.Database.EnsureCreated();
 }
