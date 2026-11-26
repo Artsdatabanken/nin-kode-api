@@ -1,0 +1,26 @@
+{
+  "scenarioId": "dotnet-version-upgrade",
+  "operationId": "475b02ad-ea88-44b0-9667-b86de216e587",
+  "description": "Upgrade .NET projects to newer .NET versions, including guidance on current release status, support lifecycle (LTS/STS), and recommended upgrade targets.",
+  "startTime": "2026-11-26T11:48:39.7508638Z",
+  "lastUpdateTime": "2026-11-26T12:55:20.9778175Z",
+  "properties": {
+    "taskStates": {
+      "01-prerequisites": "Completed",
+      "02-central-package-management": "Completed",
+      "03-upgrade-solution": "InProgress",
+      "03.01-framework-package-transition": "Completed",
+      "03.02-leaf-project-compatibility": "Completed",
+      "03.03-intermediate-project-compatibility": "Completed",
+      "03.04-host-test-compatibility": "Completed",
+      "04-ravendb-replacement": "Completed",
+      "05-solution-validation": "Completed"
+    },
+    "UpgradeTargetFramework": "net11.0",
+    "orphanedTaskIds": [
+      "03.04-host-test-compatibility",
+      "03.01-framework-package-transition"
+    ]
+  },
+  "folderPath": ""
+}

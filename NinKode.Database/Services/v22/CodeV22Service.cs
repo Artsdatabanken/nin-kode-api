@@ -12,7 +12,6 @@
     using NinKode.Database.Extension;
     using NinKode.Database.Model.v21b;
     using NinKode.Database.Model.v22;
-    using Raven.Abstractions.Indexing;
 
     public class CodeV22Service : ICodeV22Service
     {

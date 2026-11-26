@@ -4,10 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using NinKode.Database.Model.v22;
-    using Raven.Abstractions.Data;
     using Raven.Client;
     using Raven.Client.Documents.Session;
-    using Raven.Json.Linq;
 
     public class ImportVariasjonService
     {

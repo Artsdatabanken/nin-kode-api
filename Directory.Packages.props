@@ -1,0 +1,48 @@
+<Project>
+  <PropertyGroup>
+	<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+	<ItemGroup>
+	<PackageVersion Include="AutoMapper" Version="14.0.0" />
+	<PackageVersion Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.4.0" />
+	<PackageVersion Include="Azure.Identity" Version="1.21.0" />
+	<PackageVersion Include="Azure.Security.KeyVault.Secrets" Version="4.7.0" />
+	<PackageVersion Include="ClosedXML" Version="0.104.2" />
+	<PackageVersion Include="coverlet.collector" Version="6.0.4" />
+	<PackageVersion Include="CsvHelper" Version="33.0.1" />
+	<PackageVersion Include="EPPlus" Version="8.7.3" />
+	<PackageVersion Include="FluentAssertions" Version="8.2.0" />
+	<PackageVersion Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
+	<PackageVersion Include="HtmlAgilityPack" Version="1.12.1" />
+	<PackageVersion Include="Json.Net" Version="1.0.33" />
+	<PackageVersion Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.23.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Abstractions" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Proxies" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="11.0.0" />
+	<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+	<PackageVersion Include="Moq" Version="4.20.72" />
+	<PackageVersion Include="NaturalSort.Extension" Version="4.3.0" />
+	<PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+	<PackageVersion Include="NLog.Extensions.Logging" Version="6.0.3" />
+	<PackageVersion Include="RavenDB.Client" Version="7.0.2" />
+	<PackageVersion Include="Sharprompt" Version="3.0.0" />
+	<PackageVersion Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+	<PackageVersion Include="System.Data.SqlClient" Version="4.9.0" />
+	<PackageVersion Include="xunit" Version="2.9.3" />
+	<PackageVersion Include="xunit.runner.visualstudio" Version="3.1.0" />
+  </ItemGroup>
+</Project>

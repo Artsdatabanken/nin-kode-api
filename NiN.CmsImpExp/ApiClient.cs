@@ -582,14 +582,15 @@ public class ApiClient
     /// <param name="image">object of class NinImage, metadata about the image</param>
     /// <param name="dwn_path">path to parent folder of the downloaded image file</param>
     public void Download(int nin_version, NinImage image) {
-        using (var client = new WebClient())
+        var dwn_path = Config.Image_path;
+        CreatePathIfNotExist(dwn_path);
+        var num = image.ReferenceId.Replace("Nodes/", "");
+        var prop_num = image.PropertyId.Replace("Nodes/", "");
+        var path = $"{dwn_path}/{prop_num}_{num}_{image.Title}";
+        using (var imageStream = _httpClient.GetStreamAsync(image.Url).GetAwaiter().GetResult())
+        using (var fileStream = File.Create(path))
         {
-            var dwn_path = Config.Image_path;
-            CreatePathIfNotExist(dwn_path);
-            var num = image.ReferenceId.Replace("Nodes/", "");
-            var prop_num = image.PropertyId.Replace("Nodes/", "");
-            var path = $"{dwn_path}/{prop_num}_{num}_{image.Title}";
-            client.DownloadFile(image.Url, path);
+            imageStream.CopyTo(fileStream);
         }
     }
 

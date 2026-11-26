@@ -11,7 +11,6 @@
     using Raven.Client.Documents;
     using Raven.Client.Documents.BulkInsert;
     using Raven.Client.Documents.Session;
-    using Raven.Json.Linq;
 
     public class ImportNaturtypeService
     {
