@@ -10,7 +10,9 @@ namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
     [ApiController]
-    [Route("v{version:apiVersion}/typer"), Tags("Typekoder")]
+    [Route("v{version:apiVersion}/typer")]
+    [Route("v{version:apiVersion}/2026/typer")]
+    [Tags("Typekoder")]
     public class TypeApiController : Controller
     {
         private readonly ITypeApiService _typeApiService;

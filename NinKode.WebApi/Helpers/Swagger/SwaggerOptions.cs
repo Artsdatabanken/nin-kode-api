@@ -9,6 +9,8 @@ namespace NinKode.WebApi.Helpers.Swagger;
 
 public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
 {
+    internal const string Edition2026DocumentName = "v3.0-2026";
+
     private readonly IApiVersionDescriptionProvider _provider;
 
     public SwaggerOptions(IApiVersionDescriptionProvider provider) => _provider = provider;
@@ -19,6 +21,33 @@ public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
         {
             options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
         }
+
+        options.SwaggerDoc(Edition2026DocumentName, CreateInfoForEdition2026());
+        options.DocInclusionPredicate((documentName, apiDescription) =>
+        {
+            var relativePath = apiDescription.RelativePath;
+
+            if (string.IsNullOrWhiteSpace(relativePath))
+            {
+                return false;
+            }
+
+            var isEdition2026Path = relativePath.StartsWith("v3.0/2026/", StringComparison.OrdinalIgnoreCase);
+
+            if (documentName == Edition2026DocumentName)
+            {
+                return string.Equals(apiDescription.GroupName, "v3.0", StringComparison.OrdinalIgnoreCase)
+                    && isEdition2026Path;
+            }
+
+            if (string.Equals(documentName, "v3.0", StringComparison.OrdinalIgnoreCase))
+            {
+                return string.Equals(apiDescription.GroupName, documentName, StringComparison.OrdinalIgnoreCase)
+                    && !isEdition2026Path;
+            }
+
+            return string.Equals(apiDescription.GroupName, documentName, StringComparison.OrdinalIgnoreCase);
+        });
     }
 
     private static OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
@@ -37,5 +66,16 @@ public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
         }
 
         return info;
+    }
+
+    private static OpenApiInfo CreateInfoForEdition2026()
+    {
+        return new OpenApiInfo
+        {
+            Title = "NinKode API",
+            Version = "3.0/2026",
+            Description =
+                $"<i>BuildTime: {NorwayDateTime.Convert(File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location)):yyyy-MM-dd HH:mm:ss}</i>"
+        };
     }
 }

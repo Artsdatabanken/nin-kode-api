@@ -39,6 +39,9 @@ public static class SwaggerConfiguration
                 options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
                     description.GroupName.ToUpperInvariant());
             }
+
+            options.SwaggerEndpoint($"/swagger/{SwaggerOptions.Edition2026DocumentName}/swagger.json",
+                "V3.0/2026");
             options.RoutePrefix = "swagger";
             options.DisplayRequestDuration();
         });

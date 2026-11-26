@@ -10,7 +10,9 @@ namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
     [ApiController]
-    [Route("v{version:apiVersion}/variabler"), Tags("Variabelkoder")]
+    [Route("v{version:apiVersion}/variabler")]
+    [Route("v{version:apiVersion}/2026/variabler")]
+    [Tags("Variabelkoder")]
     public class VariabelApiController : Controller
     {
 

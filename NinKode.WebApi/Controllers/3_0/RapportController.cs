@@ -8,8 +8,9 @@ namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
     [ApiController]
-    //[Route("v3.0/rapporter"), Tags("Rapporter")]
-    [Route("v{version:apiVersion}/rapporter"), Tags("Rapporter")]
+    [Route("v{version:apiVersion}/rapporter")]
+    [Route("v{version:apiVersion}/2026/rapporter")]
+    [Tags("Rapporter")]
     public class RapportController : ControllerBase
     {
         private readonly IRapportService _rapportService;
