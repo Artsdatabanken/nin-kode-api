@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using NinKode.Common.Utilities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;

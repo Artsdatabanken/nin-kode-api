@@ -2,7 +2,7 @@ using Azure.Identity;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using NiN.Database;
 using NiN3.Infrastructure.DbContexts;
 using NiN3.Infrastructure.Services;
