@@ -16,5 +16,9 @@ namespace NiN3.Core.Models
         public MaalestokkEnum Maalestokk { get; set; }
         public ICollection<Grunntype> Grunntyper { get; set; } = new List<Grunntype>();
         public Versjon Versjon { get; set; }
+        public int? ParentId { get; set; }
+        public Kartleggingsenhet Parent { get; set; }
+        public ICollection<Kartleggingsenhet> Children { get; set; }
+
     }
 }

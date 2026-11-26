@@ -5,14 +5,14 @@ namespace NiN3.Infrastructure.Services
 {
     public interface ITypeApiService
     {
-        public Task<VersjonDto> AllCodesAsync(string versjon);
+        public Task<VersjonDto> AllCodesAsync(string versjon, string typeName);
         public KlasseDto GetTypeklasse(string kortkode, string versjon);
-
         public TypeDto GetTypeByKortkode(string kortkode, string versjon);
         public HovedtypegruppeDto GetHovedtypegruppeByKortkode(string kode, string versjon);
-
         public HovedtypeDto GetHovedtypeByKortkode(string kode, string versjon);
         public GrunntypeDto GetGrunntypeByKortkode(string kode, string versjon);
-        public KartleggingsenhetDto GetKartleggingsenhetByKortkode(string kode, string versjon);
+        public KartleggingsenhetDto? GetKartleggingsenhetByKortkode(string kode, string versjon, bool includeHierarchy);
+        public IEnumerable<KartleggingsenhetDto> GetAllKartleggingsenheterByKortkode(string kode, string versjon, bool includeHierarchy);
+        public IEnumerable<KartleggingsenhetDto> GetKartleggingsenheter(string versjon, string scale, bool includeHierarchy, int page, int pageSize);
     }
 }

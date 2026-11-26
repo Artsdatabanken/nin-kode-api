@@ -72,19 +72,17 @@ namespace NiN3.Infrastructure.Mapping
                 Parallel.ForEach(versjon.Typer, t => typerBag.Add(Map(t)));
                 versjonDto.Typer = typerBag.ToList().OrderBy(t => t.Kode.Id).ToList();
             }*/
-            if (versjon.Typer != null && versjon.Typer.Any())
+            if (versjon.Typer?.Count > 0)
             {
-                var typerList = versjon.Typer.AsParallel()
-                    .Select(t => Map(t))
+                var typerList = versjon.Typer //.AsParallel() Trengs det???????
+                    .Select(Map)
                     .OrderBy(t => t.Kode.Id)
                     .ToList();
                 versjonDto.Typer = typerList;
             }
 
-
-
             // Create a ConcurrentBag for mapped Variabler
-            if (versjon.Variabler != null && versjon.Variabler.Any())
+            if (versjon.Variabler?.Count > 0)
             {
                 var variablerBag = new ConcurrentBag<VariabelDto>();
                 Parallel.ForEach(versjon.Variabler, v => variablerBag.Add(Map(v)));
@@ -325,6 +323,16 @@ namespace NiN3.Infrastructure.Mapping
         /// <returns>A newly created KartleggingsenhetDto object</returns>
         public KartleggingsenhetDto Map(Kartleggingsenhet kartleggingsenhet)
         {
+            return Map(kartleggingsenhet, false);
+        }
+
+       
+        /// </summary>
+        /// <param name="kartleggingsenhet">The object to map</param>
+        /// <param name="includeHierarchy">Whether to include parent-child relationships</param>
+        /// <returns>A newly created KartleggingsenhetDto object</returns>
+        public KartleggingsenhetDto Map(Kartleggingsenhet kartleggingsenhet, bool includeHierarchy)
+        {
             var kartleggingsenhetdto = new KartleggingsenhetDto()
             {
                 Navn = kartleggingsenhet.Navn,
@@ -339,6 +347,22 @@ namespace NiN3.Infrastructure.Mapping
             var grunntyperBag = new ConcurrentBag<GrunntypeDto>();
             Parallel.ForEach(kartleggingsenhet.Grunntyper.ToList(), g => grunntyperBag.Add(Map(g)));
             kartleggingsenhetdto.Grunntyper = grunntyperBag.ToList();
+           
+            if (includeHierarchy)
+            {
+                if (kartleggingsenhet.Parent != null)
+                {
+                    kartleggingsenhetdto.Parent = Map(kartleggingsenhet.Parent, false);
+                }
+
+                if (kartleggingsenhet.Children != null && kartleggingsenhet.Children.Any())
+                {
+                    var childrenBag = new ConcurrentBag<KartleggingsenhetDto>();
+                    Parallel.ForEach(kartleggingsenhet.Children.ToList(), child => 
+                        childrenBag.Add(Map(child, false)));
+                    kartleggingsenhetdto.Children = childrenBag.ToList();
+                }
+            }
 
             return kartleggingsenhetdto;
         }

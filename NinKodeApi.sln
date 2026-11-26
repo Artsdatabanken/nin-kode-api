@@ -45,6 +45,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN3.Infrastructure.Mapping", "Infrastructure.Mapping\NiN3.Infrastructure.Mapping.csproj", "{3682A57C-B7D0-4F49-869F-DBB064DDEA41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FAC2E6B2-0B89-439A-93F7-239D6DB15992}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines-staging.yml = azure-pipelines-staging.yml
+		azure-pipelines.yml = azure-pipelines.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiN3.Tests", "NiN3.Tests\NiN3.Tests.csproj", "{4B7A2F2C-BACC-454A-8EBB-BE962ED68A2A}"
 EndProject

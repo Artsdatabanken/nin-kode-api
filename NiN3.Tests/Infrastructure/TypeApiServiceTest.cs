@@ -65,7 +65,7 @@ namespace NiN3.Tests.Infrastructure
         {
             //rigMapper();
             TypeApiService service = GetPrepearedTypeApiService();
-            var v3allCodes = await service.AllCodesAsync("3.0");
+            var v3allCodes = await service.AllCodesAsync("3.0", string.Empty);
             Assert.Equal("3.0", v3allCodes.Navn);
             Assert.NotNull(v3allCodes);
             Assert.Equal(10, v3allCodes.Typer.Count);
@@ -145,7 +145,7 @@ namespace NiN3.Tests.Infrastructure
         public async Task TestAllCodes_kartleggingsenhet_exist_under_hovedtype_m005()
         {
             var service = GetPrepearedTypeApiService();
-            var v3allCodesTask = service.AllCodesAsync("3.0");
+            var v3allCodesTask = service.AllCodesAsync("3.0", string.Empty);
 
             var v3allCodes = await v3allCodesTask.ConfigureAwait(false);
             var type_C_PE_NA = v3allCodes.Typer.FirstOrDefault(t => t.Kode.Id == "C-PE-NA");
@@ -174,7 +174,7 @@ namespace NiN3.Tests.Infrastructure
             var service = GetPrepearedTypeApiService();
 
             //act
-            var v3allCodes = await service.AllCodesAsync("3.0");
+            var v3allCodes = await service.AllCodesAsync("3.0", string.Empty);
             var type_C_PE_NA = v3allCodes.Typer.FirstOrDefault(t => t.Kode.Id == "C-PE-NA");
             var htg_NA_I = type_C_PE_NA.Hovedtypegrupper.FirstOrDefault(htg => htg.Kode.Id == "NA-I");
             var ht_NA_IA01 = htg_NA_I.Hovedtyper.FirstOrDefault(ht => ht.Kode.Id == "NA-IA01");
