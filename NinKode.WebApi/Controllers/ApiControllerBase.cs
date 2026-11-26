@@ -27,7 +27,7 @@ public abstract class ApiControllerBase<T> : ControllerBase where T : ApiControl
 
     protected string GetVersion()
     {
-        var requestedApiVersion = HttpContext.GetRequestedApiVersion() ?? throw new Exception("ApiVersion is required");
+        var requestedApiVersion = HttpContext.ApiVersioningFeature.RequestedApiVersion ?? throw new Exception("ApiVersion is required");
         var apiVersion = requestedApiVersion.ToString("VVS");
 
         if (apiVersion.EndsWith(".0"))

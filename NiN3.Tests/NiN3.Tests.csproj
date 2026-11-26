@@ -28,11 +28,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="core\in_data\" />
-    <Folder Include="Api\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure.Mapping\NiN3.Infrastructure.Mapping.csproj" />
     <ProjectReference Include="..\NiN3.Core\NiN3.Core.csproj" />
     <ProjectReference Include="..\NiN3.Infrastructure\NiN3.Infrastructure.csproj" />
+    <ProjectReference Include="..\NinKode.WebApi\NinKode.WebApi.csproj" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Asp.Versioning.ApiExplorer;
 
 namespace NinKode.WebApi.Helpers.Swagger;
 

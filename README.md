@@ -13,6 +13,10 @@ https://nin-kode-api.test.artsdatabanken.no/
 
 Populate local database: [Console app readme](./NiN.Console/README.md)
 
+### API version compatibility
+
+The deprecated `2.1b` version remains available in URL paths and the `api-version` query parameter. After the API versioning library migration, malformed version queries return HTTP 400 instead of using the default version. Unsupported URL versions return HTTP 404 rather than 400, and versioning error response details can differ from the previous library.
+
 ### Docker
 
 cd NinKode.WebApi

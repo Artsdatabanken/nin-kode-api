@@ -87,7 +87,7 @@ var app = builder.Build();
 app.UseCors();
 
 // redirect homepage to swagger ui
-app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true));
+app.MapGet("/", (HttpContext context) => context.Response.Redirect("./swagger/index.html", permanent: true)).ExcludeFromDescription();
 
 app.MapControllers();
 
@@ -109,3 +109,5 @@ app.UseProblemDetails();
 
 
 app.Run();
+
+public partial class Program { }
