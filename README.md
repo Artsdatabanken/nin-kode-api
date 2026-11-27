@@ -21,10 +21,12 @@ The 3.0 controllers also accept the `v3.0-v2026` route and expose it in Swagger.
 
 ### Docker
 
-cd NinKode.WebApi
+From the repository root:
 
-docker build -f ./Dockerfile --force-rm -t artsdatabanken/nin-kode-api ..
+```sh
+docker build -f Dockerfile --force-rm -t artsdatabanken/nin-kode-api .
 
 docker run -d -p 5001:8000 artsdatabanken/nin-kode-api
 
 docker push artsdatabanken/nin-kode-api
+```
