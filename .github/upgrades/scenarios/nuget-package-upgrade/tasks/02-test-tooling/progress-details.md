@@ -1,0 +1,6 @@
+# Test tooling upgrade
+
+- Centrally updated Microsoft.NET.Test.Sdk 17.14.1 to 18.12.0, xunit.runner.visualstudio 3.1.0 to 4.0.1 and coverlet.collector 6.0.4 to 10.1.1. AutoMapper remains 14.0.0.
+- Visual Studio solution build succeeded. The Visual Studio adapter discovered and ran the CMS suite: 17 passed. The command-line NiN3 suite ran 80 tests: 62 passed and 18 failed. Counts match the recorded baseline; the earlier validation record does not enumerate failing names, so exact identity is not independently verified here. The current TRX is at `%TEMP%\nin-upgrade-test-results\nin3.trx`.
+- CMS tests with `XPlat Code Coverage` passed 17/17 and produced a Cobertura attachment. Removed the test-created NiN3 log and empty directory.
+- xUnit v3 assessment: the official migration guide requires changing package identity and test projects to executable output, with other runtime behavior changes. Framework targeting is compatible but test and runner behavior has not been validated on v3. Because the existing NiN3 suite has 18 failures and the recorded baseline does not identify them, a safe behavioral comparison for a major framework migration cannot be established. Retained xUnit 2.9.3 for a separate migration after establishing a named failure baseline; no claim of v3 incompatibility is made.
