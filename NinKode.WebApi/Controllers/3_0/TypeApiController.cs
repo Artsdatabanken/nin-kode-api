@@ -9,8 +9,9 @@ using System.ComponentModel.DataAnnotations;
 namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
+    [ApiVersion("3.0-v2026")]
     [ApiController]
-    [Route("v{version:apiVersion}/typer"), Tags("Typekoder")]
+    [Route("{version:regex(^v):apiVersion}/typer"), Tags("Typekoder")]
     public class TypeApiController : Controller
     {
         private readonly ITypeApiService _typeApiService;

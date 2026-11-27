@@ -1,0 +1,18 @@
+{
+  "scenarioId": "nuget-package-upgrade",
+  "operationId": "45b77e58-0eaa-47db-8f5e-9d82a8b6e6a1",
+  "description": "Upgrade one or more NuGet packages from their current version to a target version across a project, several projects, a folder, a solution, or the whole repository. Use when the user wants to bump, update, or upgrade a specific NuGet package (or packages) to a given version or to the latest supported version, detect breaking API changes introduced by the new version, and fix the resulting code. User-initiated \u2014 match the user\u0027s stated package(s) and version intent.\n",
+  "startTime": "2026-11-26T20:03:51.8787777Z",
+  "lastUpdateTime": "2026-11-26T22:42:25.0830013Z",
+  "properties": {
+    "taskStates": {
+      "01-ravendb-client": "Completed",
+      "02-test-tooling": "Completed",
+      "03-api-versioning": "Completed",
+      "04-swashbuckle": "Completed",
+      "05-application-insights": "Completed",
+      "06-solution-validation": "Completed"
+    }
+  },
+  "folderPath": ""
+}

@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace NinKode.WebApi.Helpers.Swagger;
@@ -21,7 +22,7 @@ public class SwaggerDefaultValues : IOperationFilter
     {
         var apiDescription = context.ApiDescription;
 
-        operation.Deprecated |= apiDescription.IsDeprecated();
+        operation.Deprecated |= apiDescription.IsDeprecated;
 
         // REF: https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/1752#issue-663991077
         foreach (var responseType in context.ApiDescription.SupportedResponseTypes)
@@ -56,10 +57,17 @@ public class SwaggerDefaultValues : IOperationFilter
             {
                 // REF: https://github.com/Microsoft/aspnet-api-versioning/issues/429#issuecomment-605402330
                 var json = JsonSerializer.Serialize(description.DefaultValue, description.ModelMetadata.ModelType);
-                parameter.Schema.Default = OpenApiAnyFactory.CreateFromJson(json);
+                if (parameter.Schema is not OpenApiSchema schema)
+                    throw new InvalidOperationException($"Cannot set the default for referenced schema '{parameter.Name}'.");
+                schema.Default = JsonNode.Parse(json);
             }
 
-            parameter.Required |= description.IsRequired;
+            if (description.IsRequired && !parameter.Required)
+            {
+                if (parameter is not OpenApiParameter mutableParameter)
+                    throw new InvalidOperationException($"Cannot mark referenced parameter '{parameter.Name}' as required.");
+                mutableParameter.Required = true;
+            }
         }
     }
 }

@@ -1,0 +1,7 @@
+# API versioning migration attempt
+
+- Replaced deprecated versioning packages with `Asp.Versioning.Mvc` and `Asp.Versioning.Mvc.ApiExplorer` 10.2.1. Internal attributes use `2.1-b`; a parser accepts the historical `2.1b` spelling and version formatting preserves `2.1b` for services and Swagger routes. AutoMapper remains 14.0.0.
+- The full solution build succeeded. The 22 new versioning integration tests passed; CMS tests passed 17/17. NiN3 tests passed 84/102, with 18 failures versus 62/80 in the prior baseline (the 22 added tests passed). The failures involve data expectations and an EF tracking conflict; exact failure-name identity against the previous run was not rechecked.
+- Local runtime checks served legacy code, variety, export, query and Swagger endpoints. All seven Swagger documents matched the saved pre-migration snapshots after excluding the dynamic info description and the top-level tags already introduced by the earlier Swashbuckle upgrade.
+- On 2026-11-26 the user accepted these compatibility differences: malformed `api-version=bad` changed from HTTP 200 with a default version to HTTP 400; unsupported URL versions changed from HTTP 400 to 404 Problem Details. Unsupported and ambiguous query errors retain an error code but move the old detailed message into `innerError.message` rather than `error.message`.
+- Existing warnings include three high-severity AutoMapper advisories, which remain unresolved because the user requested the 14.0.0 pin. A real deployed RavenDB server and production telemetry parity have not been verified.

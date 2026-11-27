@@ -1,17 +1,23 @@
-﻿using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Runtime.Serialization;
+using System.Text.Json.Nodes;
 
 namespace NinKode.WebApi.Filters
 {
     public class EnumSchemaFilter : ISchemaFilter
     {
-        public void Apply(OpenApiSchema model, SchemaFilterContext context)
+        public void Apply(IOpenApiSchema model, SchemaFilterContext context)
         {
             if (context.Type.IsEnum)
             {
-                model.Enum.Clear();
+                var schema = model switch
+                {
+                    OpenApiSchema concrete => concrete,
+                    OpenApiSchemaReference reference when context.SchemaRepository.Schemas.TryGetValue(reference.Reference.Id, out var target) && target is OpenApiSchema concrete => concrete,
+                    _ => null
+                } ?? throw new InvalidOperationException($"Cannot resolve enum schema for {context.Type}.");
+                schema.Enum = new List<JsonNode>();
                 foreach (string enumName in Enum.GetNames(context.Type))
                 {
                     System.Reflection.MemberInfo memberInfo = context.Type.GetMember(enumName).FirstOrDefault(m => m.DeclaringType == context.Type);
@@ -21,7 +27,7 @@ namespace NinKode.WebApi.Filters
                     string label = enumMemberAttribute == null || string.IsNullOrWhiteSpace(enumMemberAttribute.Value)
                      ? enumName
                      : enumMemberAttribute.Value;
-                    model.Enum.Add(new OpenApiString(label));
+                    schema.Enum.Add(JsonValue.Create(label));
                 }
             }
         }

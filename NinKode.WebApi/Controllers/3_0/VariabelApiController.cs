@@ -9,8 +9,9 @@ using System.ComponentModel.DataAnnotations;
 namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
+    [ApiVersion("3.0-v2026")]
     [ApiController]
-    [Route("v{version:apiVersion}/variabler"), Tags("Variabelkoder")]
+    [Route("{version:regex(^v):apiVersion}/variabler"), Tags("Variabelkoder")]
     public class VariabelApiController : Controller
     {
 

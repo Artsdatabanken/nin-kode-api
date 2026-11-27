@@ -1,0 +1,1046 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": ""
+  },
+  "analysisStartTime": "2026-11-26T20:04:03.0064638Z",
+  "analysisEndTime": "2026-11-26T20:04:04.5242887Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 13,
+      "issues": 1,
+      "incidents": 25,
+      "effort": 0
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 0,
+        "Optional": 0,
+        "Potential": 0,
+        "Information": 25
+      },
+      "category": {
+        "Pkg": 25
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "NiN.CmsImpExp\\NiN.CmsImpExp.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN.CmsImpExp",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 7,
+        "numberOfCodeFiles": 7,
+        "linesTotal": 801,
+        "linesOfCode": 801,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "3e945074-6c41-445f-8664-bb982a72bb7a",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN.CmsImpExp\\NiN.CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN.CmsImpExp\\NiN.CmsImpExp.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "16fbc2a7-ad0a-40c4-90f0-c22dd953025d",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027coverlet.collector\u0027 6.0.4; proposed upgrade to 10.1.1.",
+          "projectPath": "NiN.CmsImpExp\\NiN.CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "coverlet.collector, 6.0.4",
+              "protected": "coverlet.collector, 6.0.4"
+            },
+            "kind": "File",
+            "path": "NiN.CmsImpExp\\NiN.CmsImpExp.csproj",
+            "snippet": "coverlet.collector, 6.0.4",
+            "protectedSnippet": "coverlet.collector, 6.0.4",
+            "label": "coverlet.collector 6.0.4",
+            "properties": {
+              "PackageId": "coverlet.collector",
+              "PackageVersion": "6.0.4",
+              "PackageNewVersion": "10.1.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN.Console\\NiN.Console.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN.Console",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 7,
+        "numberOfCodeFiles": 5,
+        "linesTotal": 1885,
+        "linesOfCode": 1781,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "26015f42-6b20-4099-a7f6-2c503f8b2a4f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN.Console\\NiN.Console.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN.Console\\NiN.Console.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN.Database\\NiN.Database.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN.Database",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 26,
+        "numberOfCodeFiles": 26,
+        "linesTotal": 796,
+        "linesOfCode": 796,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "651d5142-addb-4ef8-887d-e604b3b1715f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN.Database\\NiN.Database.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN.Database\\NiN.Database.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN.ExportImport\\NiN.ExportImport.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN.ExportImport",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 10,
+        "numberOfCodeFiles": 10,
+        "linesTotal": 1278,
+        "linesOfCode": 1278,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "e041bfd5-38f6-4634-a843-df907e216ea7",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN.ExportImport\\NiN.ExportImport.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN.ExportImport\\NiN.ExportImport.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN.Test_CmsImpExp",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 6,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 2103,
+        "linesOfCode": 308,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "5bdfbaaf-f639-493f-a1f7-3ddb93cea65d",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.NET.Test.Sdk\u0027 17.14.1; proposed upgrade to 18.12.0.",
+          "projectPath": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NET.Test.Sdk, 17.14.1",
+              "protected": "Microsoft.NET.Test.Sdk, 17.14.1"
+            },
+            "kind": "File",
+            "path": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+            "snippet": "Microsoft.NET.Test.Sdk, 17.14.1",
+            "protectedSnippet": "Microsoft.NET.Test.Sdk, 17.14.1",
+            "label": "Microsoft.NET.Test.Sdk 17.14.1",
+            "properties": {
+              "PackageId": "Microsoft.NET.Test.Sdk",
+              "PackageVersion": "17.14.1",
+              "PackageNewVersion": "18.12.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bd858540-ec37-456e-8109-6651a5c92089",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f2e08d3c-ec2e-4a43-8c02-60c47d1437cd",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027coverlet.collector\u0027 6.0.4; proposed upgrade to 10.1.1.",
+          "projectPath": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "coverlet.collector, 6.0.4",
+              "protected": "coverlet.collector, 6.0.4"
+            },
+            "kind": "File",
+            "path": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+            "snippet": "coverlet.collector, 6.0.4",
+            "protectedSnippet": "coverlet.collector, 6.0.4",
+            "label": "coverlet.collector 6.0.4",
+            "properties": {
+              "PackageId": "coverlet.collector",
+              "PackageVersion": "6.0.4",
+              "PackageNewVersion": "10.1.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f8038168-3e6b-46e9-bf50-11b1edacc8ca",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit\u0027 2.9.3 (included in this upgrade).",
+          "projectPath": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.3",
+              "protected": "xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "NiN.Test_CmsImpExp\\NiN.Test_CmsImpExp.csproj",
+            "snippet": "xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.3",
+            "label": "xunit 2.9.3",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.3",
+              "PackageNewVersion": "2.9.3",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN3.Console\\NiN3.Console.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN3.Console",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 165,
+        "linesOfCode": 165,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "6aff17d3-f4e0-4cf6-b1d0-c71bdf9ad817",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN3.Console\\NiN3.Console.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN3.Console\\NiN3.Console.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN3.Core\\NiN3.Core.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN3.Core",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 60,
+        "numberOfCodeFiles": 60,
+        "linesTotal": 1248,
+        "linesOfCode": 1248,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9284231f-eda5-45eb-82e7-87febb6b8e64",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN3.Core\\NiN3.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN3.Core\\NiN3.Core.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN3.Infrastructure\\NiN3.Infrastructure.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN3.Infrastructure",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 53,
+        "numberOfCodeFiles": 50,
+        "linesTotal": 3617,
+        "linesOfCode": 3617,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9dc73d2a-ce84-4195-bb80-24418a0b2fd3",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN3.Infrastructure\\NiN3.Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN3.Infrastructure\\NiN3.Infrastructure.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "Infrastructure.Mapping\\NiN3.Infrastructure.Mapping.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN3.Infrastructure.Mapping",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 761,
+        "linesOfCode": 761,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "226a9986-d297-408f-99cf-67480db09a8f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "Infrastructure.Mapping\\NiN3.Infrastructure.Mapping.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "Infrastructure.Mapping\\NiN3.Infrastructure.Mapping.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NiN3.Tests\\NiN3.Tests.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NiN3.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 13,
+        "numberOfCodeFiles": 11,
+        "linesTotal": 3232,
+        "linesOfCode": 1437,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "88b8685b-af67-4659-9f40-f53c0a50a26f",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.NET.Test.Sdk\u0027 17.14.1; proposed upgrade to 18.12.0.",
+          "projectPath": "NiN3.Tests\\NiN3.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NET.Test.Sdk, 17.14.1",
+              "protected": "Microsoft.NET.Test.Sdk, 17.14.1"
+            },
+            "kind": "File",
+            "path": "NiN3.Tests\\NiN3.Tests.csproj",
+            "snippet": "Microsoft.NET.Test.Sdk, 17.14.1",
+            "protectedSnippet": "Microsoft.NET.Test.Sdk, 17.14.1",
+            "label": "Microsoft.NET.Test.Sdk 17.14.1",
+            "properties": {
+              "PackageId": "Microsoft.NET.Test.Sdk",
+              "PackageVersion": "17.14.1",
+              "PackageNewVersion": "18.12.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d43f4853-c464-4b33-8dd9-cd353997978d",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NiN3.Tests\\NiN3.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NiN3.Tests\\NiN3.Tests.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "15bd9e9c-6611-4579-82e3-10f42cb853fc",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027coverlet.collector\u0027 6.0.4; proposed upgrade to 10.1.1.",
+          "projectPath": "NiN3.Tests\\NiN3.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "coverlet.collector, 6.0.4",
+              "protected": "coverlet.collector, 6.0.4"
+            },
+            "kind": "File",
+            "path": "NiN3.Tests\\NiN3.Tests.csproj",
+            "snippet": "coverlet.collector, 6.0.4",
+            "protectedSnippet": "coverlet.collector, 6.0.4",
+            "label": "coverlet.collector 6.0.4",
+            "properties": {
+              "PackageId": "coverlet.collector",
+              "PackageVersion": "6.0.4",
+              "PackageNewVersion": "10.1.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "009edb7f-2bfa-49d9-91e7-33eaf90736fd",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit\u0027 2.9.3 (included in this upgrade).",
+          "projectPath": "NiN3.Tests\\NiN3.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.3",
+              "protected": "xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "NiN3.Tests\\NiN3.Tests.csproj",
+            "snippet": "xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.3",
+            "label": "xunit 2.9.3",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.3",
+              "PackageNewVersion": "2.9.3",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NinKode.Common\\NinKode.Common.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NinKode.Common",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 24,
+        "numberOfCodeFiles": 24,
+        "linesTotal": 335,
+        "linesOfCode": 335,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "01e111ca-276f-4111-87de-00687d85f879",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NinKode.Common\\NinKode.Common.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NinKode.Common\\NinKode.Common.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NinKode.Database\\NinKode.Database.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NinKode.Database",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 51,
+        "numberOfCodeFiles": 51,
+        "linesTotal": 6075,
+        "linesOfCode": 6075,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9f51167e-63e6-4d49-93f0-7954a8a4748a",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NinKode.Database\\NinKode.Database.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NinKode.Database\\NinKode.Database.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8a160745-e3b5-4474-a3c7-b7633a4af2b8",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027RavenDB.Client\u0027 7.0.2; proposed upgrade to 7.2.8.",
+          "projectPath": "NinKode.Database\\NinKode.Database.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "RavenDB.Client, 7.0.2",
+              "protected": "RavenDB.Client, 7.0.2"
+            },
+            "kind": "File",
+            "path": "NinKode.Database\\NinKode.Database.csproj",
+            "snippet": "RavenDB.Client, 7.0.2",
+            "protectedSnippet": "RavenDB.Client, 7.0.2",
+            "label": "RavenDB.Client 7.0.2",
+            "properties": {
+              "PackageId": "RavenDB.Client",
+              "PackageVersion": "7.0.2",
+              "PackageNewVersion": "7.2.8",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "NinKode.WebApi",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net11.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 21,
+        "numberOfCodeFiles": 18,
+        "linesTotal": 1051,
+        "linesOfCode": 1010,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "8b10a8b7-f325-4449-a538-100bd644f91e",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Mvc.Versioning\u0027 5.1.0 (included in this upgrade).",
+          "projectPath": "NinKode.WebApi\\NinKode.WebApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Versioning, 5.1.0",
+              "protected": "Microsoft.AspNetCore.Mvc.Versioning, 5.1.0"
+            },
+            "kind": "File",
+            "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Versioning, 5.1.0",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Versioning, 5.1.0",
+            "label": "Microsoft.AspNetCore.Mvc.Versioning 5.1.0",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Versioning",
+              "PackageVersion": "5.1.0",
+              "PackageNewVersion": "5.1.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4b56db70-5a4f-4016-a1a7-2d757b58b139",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer\u0027 5.1.0 (included in this upgrade).",
+          "projectPath": "NinKode.WebApi\\NinKode.WebApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer, 5.1.0",
+              "protected": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer, 5.1.0"
+            },
+            "kind": "File",
+            "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer, 5.1.0",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer, 5.1.0",
+            "label": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer 5.1.0",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer",
+              "PackageVersion": "5.1.0",
+              "PackageNewVersion": "5.1.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9c5c1147-eca1-4c96-b4d1-92a0bd369bb0",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Swashbuckle.AspNetCore\u0027 8.1.1; proposed upgrade to 11.0.1.",
+          "projectPath": "NinKode.WebApi\\NinKode.WebApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Swashbuckle.AspNetCore, 8.1.1",
+              "protected": "Swashbuckle.AspNetCore, 8.1.1"
+            },
+            "kind": "File",
+            "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+            "snippet": "Swashbuckle.AspNetCore, 8.1.1",
+            "protectedSnippet": "Swashbuckle.AspNetCore, 8.1.1",
+            "label": "Swashbuckle.AspNetCore 8.1.1",
+            "properties": {
+              "PackageId": "Swashbuckle.AspNetCore",
+              "PackageVersion": "8.1.1",
+              "PackageNewVersion": "11.0.1",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "fd8c1339-4bcc-46dd-b798-bcf65d81a031",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027Microsoft.ApplicationInsights.AspNetCore\u0027 2.23.0; proposed upgrade to 3.2.0.",
+          "projectPath": "NinKode.WebApi\\NinKode.WebApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0"
+            },
+            "kind": "File",
+            "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.23.0",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.23.0",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.23.0",
+              "PackageNewVersion": "3.2.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "da41ba80-22e5-4005-bd83-6090929050f3",
+          "ruleId": "Pkg.0001",
+          "description": "Project references \u0027xunit.runner.visualstudio\u0027 3.1.0; proposed upgrade to 4.0.1.",
+          "projectPath": "NinKode.WebApi\\NinKode.WebApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.visualstudio, 3.1.0",
+              "protected": "xunit.runner.visualstudio, 3.1.0"
+            },
+            "kind": "File",
+            "path": "NinKode.WebApi\\NinKode.WebApi.csproj",
+            "snippet": "xunit.runner.visualstudio, 3.1.0",
+            "protectedSnippet": "xunit.runner.visualstudio, 3.1.0",
+            "label": "xunit.runner.visualstudio 3.1.0",
+            "properties": {
+              "PackageId": "xunit.runner.visualstudio",
+              "PackageVersion": "3.1.0",
+              "PackageNewVersion": "4.0.1",
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Pkg.0001": {
+      "id": "Pkg.0001",
+      "isFeature": false,
+      "description": "Project references a package included in this upgrade.\n\nThe project references one of the packages being upgraded. This finding records the reference (current and proposed version) so the assessment lists every affected project even when no breaking API changes were detected.",
+      "label": "Project references an upgraded package",
+      "severity": "Information",
+      "effort": 0
+    }
+  }
+}
