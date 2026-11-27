@@ -6,8 +6,9 @@ using NiN3.Infrastructure.Services;
 namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
+    [ApiVersion("3.0-v2026")]
     [ApiController]
-    [Route("v{version:apiVersion}/soek"), Tags("Søk")]
+    [Route("{version:regex(^v):apiVersion}/soek"), Tags("Søk")]
     public class SoekController : ControllerBase
     {
     private readonly ISearchService _searchService;

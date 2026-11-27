@@ -1,0 +1,746 @@
+{
+  "version": 1,
+  "parameters": "",
+  "projects": [
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NinKode.WebApi/NinKode.WebApi.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Hellang.Middleware.ProblemDetails",
+              "requestedVersion": "6.5.1",
+              "resolvedVersion": "6.5.1"
+            },
+            {
+              "id": "Microsoft.ApplicationInsights.AspNetCore",
+              "requestedVersion": "2.23.0",
+              "resolvedVersion": "2.23.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.Versioning",
+              "requestedVersion": "5.1.0",
+              "resolvedVersion": "5.1.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer",
+              "requestedVersion": "5.1.0",
+              "resolvedVersion": "5.1.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "Swashbuckle.AspNetCore",
+              "requestedVersion": "8.1.1",
+              "resolvedVersion": "8.1.1"
+            },
+            {
+              "id": "System.Text.Encoding.CodePages",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NinKode.Common/NinKode.Common.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NinKode.Database/NinKode.Database.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Sqlite",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Binder",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "NaturalSort.Extension",
+              "requestedVersion": "4.3.0",
+              "resolvedVersion": "4.3.0"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "RavenDB.Client",
+              "requestedVersion": "7.0.2",
+              "resolvedVersion": "7.0.2"
+            },
+            {
+              "id": "RavenDB.Database",
+              "requestedVersion": "3.5.9",
+              "resolvedVersion": "3.5.9"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN.Database/NiN.Database.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Proxies",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Sqlite",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Tools",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN.Console/NiN.Console.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Json",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.UserSecrets",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "System.Text.Json",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN.ExportImport/NiN.ExportImport.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "CsvHelper",
+              "requestedVersion": "33.0.1",
+              "resolvedVersion": "33.0.1"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "System.Net.Http",
+              "requestedVersion": "4.3.4",
+              "resolvedVersion": "4.3.4"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN.CmsImpExp/NiN.CmsImpExp.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "coverlet.collector",
+              "requestedVersion": "6.0.4",
+              "resolvedVersion": "6.0.4"
+            },
+            {
+              "id": "CsvHelper",
+              "requestedVersion": "33.0.1",
+              "resolvedVersion": "33.0.1"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "HtmlAgilityPack",
+              "requestedVersion": "1.12.1",
+              "resolvedVersion": "1.12.1"
+            },
+            {
+              "id": "Json.Net",
+              "requestedVersion": "1.0.33",
+              "resolvedVersion": "1.0.33"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "Sharprompt",
+              "requestedVersion": "3.0.0",
+              "resolvedVersion": "3.0.0"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN.Test_CmsImpExp/NiN.Test_CmsImpExp.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "coverlet.collector",
+              "requestedVersion": "6.0.4",
+              "resolvedVersion": "6.0.4"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "FluentAssertions",
+              "requestedVersion": "8.2.0",
+              "resolvedVersion": "8.2.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "17.14.1",
+              "resolvedVersion": "17.14.1"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit",
+              "requestedVersion": "2.9.3",
+              "resolvedVersion": "2.9.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN3.Console/NiN3.Console.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Design",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Tools",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Json",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Console",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "NLog.Extensions.Logging",
+              "requestedVersion": "6.0.3",
+              "resolvedVersion": "6.0.3"
+            },
+            {
+              "id": "Sharprompt",
+              "requestedVersion": "3.0.0",
+              "resolvedVersion": "3.0.0"
+            },
+            {
+              "id": "System.Data.SqlClient",
+              "requestedVersion": "4.9.0",
+              "resolvedVersion": "4.9.0"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN3.Core/NiN3.Core.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN3.Infrastructure/NiN3.Infrastructure.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+              "requestedVersion": "1.4.0",
+              "resolvedVersion": "1.4.0"
+            },
+            {
+              "id": "Azure.Identity",
+              "requestedVersion": "1.13.2",
+              "resolvedVersion": "1.13.2"
+            },
+            {
+              "id": "Azure.Security.KeyVault.Secrets",
+              "requestedVersion": "4.7.0",
+              "resolvedVersion": "4.7.0"
+            },
+            {
+              "id": "ClosedXML",
+              "requestedVersion": "0.104.2",
+              "resolvedVersion": "0.104.2"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Http.Abstractions",
+              "requestedVersion": "2.3.0",
+              "resolvedVersion": "2.3.0"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Sqlite",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Tools",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/Infrastructure.Mapping/NiN3.Infrastructure.Mapping.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Repo/Artsdatabanken/nin-kode-api/NiN3.Tests/NiN3.Tests.csproj",
+      "frameworks": [
+        {
+          "framework": "net9.0",
+          "topLevelPackages": [
+            {
+              "id": "AutoMapper",
+              "requestedVersion": "14.0.0",
+              "resolvedVersion": "14.0.0"
+            },
+            {
+              "id": "coverlet.collector",
+              "requestedVersion": "6.0.4",
+              "resolvedVersion": "6.0.4"
+            },
+            {
+              "id": "EPPlus",
+              "requestedVersion": "8.0.3",
+              "resolvedVersion": "8.0.3"
+            },
+            {
+              "id": "FluentAssertions",
+              "requestedVersion": "8.2.0",
+              "resolvedVersion": "8.2.0"
+            },
+            {
+              "id": "Microsoft.AspNetCore.Mvc.Testing",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.AspNetCore.TestHost",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.EntityFrameworkCore.Abstractions",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration",
+              "requestedVersion": "9.0.4",
+              "resolvedVersion": "9.0.4"
+            },
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "17.14.1",
+              "resolvedVersion": "17.14.1"
+            },
+            {
+              "id": "Moq",
+              "requestedVersion": "4.20.72",
+              "resolvedVersion": "4.20.72"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "requestedVersion": "13.0.3",
+              "resolvedVersion": "13.0.3"
+            },
+            {
+              "id": "xunit",
+              "requestedVersion": "2.9.3",
+              "resolvedVersion": "2.9.3"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.0",
+              "resolvedVersion": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

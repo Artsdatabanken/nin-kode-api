@@ -12,9 +12,7 @@
     using Microsoft.Extensions.Configuration;
     using NinKode.Database.Model.common;
     using NinKode.Database.Services.v22;
-    using Raven.Abstractions.Data;
     using Raven.Client.Documents.Indexes;
-    using Raven.Json.Linq;
 
     internal class Program
     {

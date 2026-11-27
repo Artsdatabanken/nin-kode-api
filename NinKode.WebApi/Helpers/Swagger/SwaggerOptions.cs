@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Asp.Versioning.ApiExplorer;
 using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using NinKode.Common.Utilities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
@@ -17,7 +17,7 @@ public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
         foreach (var description in _provider.ApiVersionDescriptions)
         {
-            options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
+            options.SwaggerDoc(VersionedApiDescriptionCompatibility.PublicGroupName(description.GroupName), CreateInfoForApiVersion(description));
         }
     }
 

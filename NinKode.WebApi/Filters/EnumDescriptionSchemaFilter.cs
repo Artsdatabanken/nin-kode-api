@@ -1,14 +1,14 @@
-﻿using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.ComponentModel;
 using System.Reflection;
+using System.Text.Json.Nodes;
 
 namespace NinKode.WebApi.Filters
 {
     public class EnumDescriptionSchemaFilter : ISchemaFilter
     {
-        public void Apply(OpenApiSchema schema, SchemaFilterContext context)
+        public void Apply(IOpenApiSchema schema, SchemaFilterContext context)
         {
             if (context.Type.IsEnum)
             {
@@ -21,12 +21,12 @@ namespace NinKode.WebApi.Filters
                     var descriptionAttribute = memberInfo[0].GetCustomAttribute<DescriptionAttribute>();
                     var description = descriptionAttribute != null ? descriptionAttribute.Description : enumValue.ToString();
 
-                    if (schema.Enum.Count > 0)
+                    if (schema.Enum is { Count: > 0 })
                     {
                         var enumIndex = (int)enumValue;
                         if (enumIndex >= 0 && enumIndex < schema.Enum.Count)
                         {
-                            schema.Enum[enumIndex] = new OpenApiString(description);
+                            schema.Enum[enumIndex] = JsonValue.Create(description);
                         }
                     }
                 }

@@ -5,7 +5,7 @@ namespace NinKode.WebApi.Controllers.Initial;
 
 [ApiVersion("2.3")]
 [ApiVersion("2.2", Deprecated = true)]
-[ApiVersion("2.1b", Deprecated = true)]
+[ApiVersion("2.1-b", Deprecated = true)]
 [ApiVersion("2.1", Deprecated = true)]
 [ApiVersion("2", Deprecated = true)]
 [ApiVersion("1", Deprecated = true)]
