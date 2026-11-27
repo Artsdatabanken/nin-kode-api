@@ -17,7 +17,7 @@ public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
         foreach (var description in _provider.ApiVersionDescriptions)
         {
-            options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
+            options.SwaggerDoc(VersionedApiDescriptionCompatibility.PublicGroupName(description.GroupName), CreateInfoForApiVersion(description));
         }
     }
 

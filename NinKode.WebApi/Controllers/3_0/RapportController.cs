@@ -7,9 +7,10 @@ using System.Text;
 namespace NiN3.WebApi.Controllers
 {
     [ApiVersion("3.0")]
+    [ApiVersion("3.0-v2026")]
     [ApiController]
     //[Route("v3.0/rapporter"), Tags("Rapporter")]
-    [Route("v{version:apiVersion}/rapporter"), Tags("Rapporter")]
+    [Route("{version:regex(^v):apiVersion}/rapporter"), Tags("Rapporter")]
     public class RapportController : ControllerBase
     {
         private readonly IRapportService _rapportService;

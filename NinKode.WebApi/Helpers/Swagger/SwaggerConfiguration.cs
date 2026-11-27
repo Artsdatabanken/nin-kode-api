@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Asp.Versioning.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace NinKode.WebApi.Helpers.Swagger;
 
@@ -7,6 +8,7 @@ public static class SwaggerConfiguration
 {
     public static void AddSwagger(this IServiceCollection services)
     {
+        services.AddTransient<IApiDescriptionProvider, VersionedApiDescriptionCompatibility>();
         services.AddSwaggerGen(options =>
         {
             var docs = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
@@ -36,8 +38,9 @@ public static class SwaggerConfiguration
 
             foreach (var description in descriptions)
             {
-                options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
-                    description.GroupName.ToUpperInvariant());
+                var groupName = VersionedApiDescriptionCompatibility.PublicGroupName(description.GroupName);
+                options.SwaggerEndpoint($"/swagger/{groupName}/swagger.json",
+                    groupName.ToUpperInvariant());
             }
             options.RoutePrefix = "swagger";
             options.DisplayRequestDuration();
